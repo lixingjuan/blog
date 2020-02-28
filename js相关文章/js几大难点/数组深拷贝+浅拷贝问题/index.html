@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/Blog/favicon.png" />
+    
+
+    <title>
+        
+          js相关文章/js几大难点/数组深拷贝+浅拷贝问题 - 李幸娟的前端博客
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/Blog/css/book.css">
+
+    
+<script src="/Blog/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <a href="/Blog/">
+    <img src="/Blog/favicon.png">
+    <span>李幸娟的前端博客</span>
+  </a>
+</div>
+    <div class="book-menu">
+  <!--
+ * @version: 0.0.1
+ * @Author: lixingjuan <xingjuan.li@hand-china.com>
+ * @Date: 2020-02-28 10:57:23
+ * @copyright: Copyright (c) 2019, Hand
+ -->
+<ul>
+<li><a href="/hexo-theme-book-demo">Home</a></li>
+<li><a href="/hexo-theme-book-demo/changelog">Changelog</a></li>
+</ul>
+<h1 id="js相关文章">js相关文章</h1>
+<h2 id="几大难点">几大难点</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/categories">闭包</a></li>
+<li><a href="/js%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/js%E5%87%A0%E5%A4%A7%E9%9A%BE%E7%82%B9/%E5%BF%AB%E6%8D%B7%E9%94%AE">快捷键</a></li>
+<li><a href="/Dream/jstest/hahh">test</a></li>
+</ul>
+<h1 id="Test">Test</h1>
+<h2 id="hexo-unit-test">hexo-unit-test</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/categories">Categories</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/elements">Elements</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/excerpts">Excerpts</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/gallery-post">Gallery Post</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/hello-world">Hello World</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/images">Images</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/link-post-without-title">Untitled</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/link-post">Link Post</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/long-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/no-title">Untitled</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/tag-plugins">Tag Plugins</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/tags">Tags</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/videos">Videos</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6">中文測試</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88">日本語テスト</a></li>
+</ul>
+<h2 id="bugfix">bugfix</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/test/bugfix/list-test">list test</a></li>
+</ul>
+<h1 id="Demo2">Demo2</h1>
+<ul>
+<li><a href="/hexo-theme-book-demo/demo/menu-realtime">Menu Realtime Demo</a></li>
+</ul>
+<h2 id="Render">Render</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/demo/render/markdown-it-demo">markdown-it demo</a></li>
+<li><a href="/hexo-theme-book-demo/demo/render/katex-demo">katex demo</a></li>
+<li><a href="/hexo-theme-book-demo/demo/render/footnotes-demo">footnotes demo</a></li>
+</ul>
+<h2 id="Lorem-Ipsum">Lorem Ipsum</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/en-demo">English</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/jp-demo">Japanese</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/kr-demo">Korean</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/tc-demo">Traditional Chinese</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/sc-demo">Simplified Chinese</a></li>
+</ul>
+
+</div>
+
+
+<script src="/Blog/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          <div class="book-post">
+  <h2 id="为什么突然想整理下这个？">为什么突然想整理下这个？</h2>
+<ul>
+<li>因为有一天，想新建一个数组a,使他与指定数组b长度一样，并且每个位置都填充{name:’’},然后遍历数组a，使a[index].name===b[index].n</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = []</span><br><span class="line"><span class="keyword">const</span> b = [&#123;<span class="attr">n</span>:<span class="number">1</span>&#125;,&#123;<span class="attr">n</span>:<span class="number">2</span>&#125;]</span><br><span class="line">a.length = b.length</span><br><span class="line">a.fill(&#123;<span class="attr">name</span>:<span class="string">''</span>&#125;)</span><br><span class="line">a.map(<span class="function">(<span class="params">item,index</span>)=&gt;</span>&#123;</span><br><span class="line">    item.name = b[index].n</span><br><span class="line">    <span class="keyword">return</span> item</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>预想结果：a [{name:1},[name:2]]</li>
+<li>实际结果：a [{name:2},{name:2}]</li>
+<li>产生原因：使用fill填充了数组a后，发现a[0]===a[1],也就是说，数组的每一项执行的都是同一个位置</li>
+</ul>
+<h2 id="对比数据类型">对比数据类型</h2>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>引用数据类型</th>
+<th>基本数据类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>包含类型</td>
+<td>对象，数组，函数</td>
+<td>null,undefined,number,string,boolean</td>
+</tr>
+<tr>
+<td>存放位置</td>
+<td>内容存放在堆，栈中存放指针，</td>
+<td>栈内存</td>
+</tr>
+<tr>
+<td>操作</td>
+<td>（按引用访问不严谨）复制对象时操作的是对象的引用，增删属性时候操作的是实际的对象</td>
+<td>操作实际值</td>
+</tr>
+<tr>
+<td>值的可变性</td>
+<td>可以动态增删属性和方法</td>
+<td>不能动态添加属性和方法</td>
+</tr>
+<tr>
+<td>复制变量值</td>
+<td>复制的是指向堆中某个对象的指针</td>
+<td>创建新值并复制原值进行赋值</td>
+</tr>
+<tr>
+<td>比较</td>
+<td>判断是否指针指向相同</td>
+<td>比较值</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="浅拷贝深拷贝的本质">浅拷贝深拷贝的本质</h2>
+<ul>
+<li>拷贝的是’值本身’还是’值的地址’</li>
+<li>对于引用数据类型(数组，对象，函数)而言，保存的是指向内容的指针</li>
+</ul>
+<h2 id="乞丐版实现数组深拷贝">乞丐版实现数组深拷贝</h2>
+<ul>
+<li><code>copyArr = JSON.parse(JSON.stringify(originArr))</code></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [&#123;<span class="attr">name</span>:&#123;<span class="attr">bigName</span>:<span class="string">'xiaoming'</span>&#125;&#125;]</span><br><span class="line"><span class="keyword">const</span> b = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(a))</span><br><span class="line">b[<span class="number">0</span>].name = <span class="number">2</span></span><br><span class="line">a[<span class="number">0</span>].name   <span class="comment">// &#123;bigName: "xiaoming"&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="高级版实现数组深拷贝">高级版实现数组深拷贝</h2>
+<h2 id="这些常见操作都是浅拷贝">这些常见操作都是浅拷贝</h2>
+<blockquote>
+<p>拷贝时，如果属性是基本类型，拷贝的是基本类型值；如果属性是引用类型，拷贝的是内存地址；<br>
+所以如果其中一个对象改变了这个内存地址，就会影响到另一个对象；</p>
+</blockquote>
+<ol>
+<li>arr.slice() (eg.1)</li>
+<li>arr.concat()</li>
+<li>[…arr]</li>
+<li>const arr4 = arr</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">0</span>,&#123;<span class="attr">age</span>:<span class="string">'18'</span>&#125;]</span><br><span class="line"></span><br><span class="line"><span class="comment">// eg.1</span></span><br><span class="line"><span class="keyword">const</span> arr1 = arr.slice(<span class="number">0</span>)</span><br><span class="line"><span class="comment">// 修改复制后的数组中的引用类型</span></span><br><span class="line">arr1[<span class="number">1</span>].age = <span class="number">1</span></span><br><span class="line"><span class="built_in">console</span>.log(arr[<span class="number">1</span>].age) <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<h2 id="相关文章">相关文章</h2>
+<ul>
+<li>掘金：<a href="https://juejin.im/post/59ac1c4ef265da248e75892b" target="_blank" rel="noopener">https://juejin.im/post/59ac1c4ef265da248e75892b</a></li>
+<li><a href="https://juejin.im/post/5d6aa4f96fb9a06b112ad5b1" target="_blank" rel="noopener">https://juejin.im/post/5d6aa4f96fb9a06b112ad5b1</a></li>
+</ul>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/Blog/js/book-post.js"></script>
+
+        </div>
+      </div>
+      <div class="column col-2 hide-lg">
+        <div class="book-post-info">
+  
+    <div class="book-post-meta">
+
+  <div class="author">
+
+    <!-- Author image -->
+    <div class="author-img">
+      
+        <figure
+          class="avatar avatar-lg"
+          data-initial="糯"
+          style="background-color: #3b4351;">
+        </figure>
+      
+    </div>
+
+    <!-- Author title -->
+    <div class="author-title">
+      <div>糯唧唧怪</div>
+      <div>2019-12-08</div>
+    </div>
+  </div>
+
+  
+
+  <div class="divider"></div>
+</div>
+  
+
+  <div class="book-tocbot">
+</div>
+<div class="book-tocbot-menu">
+  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+  <a onclick="go_top()">Back to top</a>
+  <a onclick="go_bottom()">Go to bottom</a>
+</div>
+
+
+<script src="/Blog/js/book-toc.js"></script>
+
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+</body>
+</html>
+
+
+<script src="/Blog/js/book.js"></script>
