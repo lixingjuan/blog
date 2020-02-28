@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/Blog/favicon.png" />
+    
+
+    <title>
+        
+          js相关文章/js几大难点/cross-env 跨平台设置环境变量 - 李幸娟的前端博客
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/Blog/css/book.css">
+
+    
+<script src="/Blog/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <a href="/Blog/">
+    <img src="/Blog/favicon.png">
+    <span>李幸娟的前端博客</span>
+  </a>
+</div>
+    <div class="book-menu">
+  <!--
+ * @version: 0.0.1
+ * @Author: lixingjuan <xingjuan.li@hand-china.com>
+ * @Date: 2020-02-28 10:57:23
+ * @copyright: Copyright (c) 2019, Hand
+ -->
+<ul>
+<li><a href="/hexo-theme-book-demo">Home</a></li>
+<li><a href="/hexo-theme-book-demo/changelog">Changelog</a></li>
+</ul>
+<h1 id="js相关文章">js相关文章</h1>
+<h2 id="几大难点">几大难点</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/categories">闭包</a></li>
+<li><a href="/js%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/js%E5%87%A0%E5%A4%A7%E9%9A%BE%E7%82%B9/%E5%BF%AB%E6%8D%B7%E9%94%AE">快捷键</a></li>
+<li><a href="/Dream/jstest/hahh">test</a></li>
+</ul>
+<h1 id="Test">Test</h1>
+<h2 id="hexo-unit-test">hexo-unit-test</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/categories">Categories</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/elements">Elements</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/excerpts">Excerpts</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/gallery-post">Gallery Post</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/hello-world">Hello World</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/images">Images</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/link-post-without-title">Untitled</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/link-post">Link Post</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/long-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/no-title">Untitled</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/tag-plugins">Tag Plugins</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/tags">Tags</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/videos">Videos</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6">中文測試</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88">日本語テスト</a></li>
+</ul>
+<h2 id="bugfix">bugfix</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/test/bugfix/list-test">list test</a></li>
+</ul>
+<h1 id="Demo2">Demo2</h1>
+<ul>
+<li><a href="/hexo-theme-book-demo/demo/menu-realtime">Menu Realtime Demo</a></li>
+</ul>
+<h2 id="Render">Render</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/demo/render/markdown-it-demo">markdown-it demo</a></li>
+<li><a href="/hexo-theme-book-demo/demo/render/katex-demo">katex demo</a></li>
+<li><a href="/hexo-theme-book-demo/demo/render/footnotes-demo">footnotes demo</a></li>
+</ul>
+<h2 id="Lorem-Ipsum">Lorem Ipsum</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/en-demo">English</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/jp-demo">Japanese</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/kr-demo">Korean</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/tc-demo">Traditional Chinese</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/sc-demo">Simplified Chinese</a></li>
+</ul>
+
+</div>
+
+
+<script src="/Blog/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          <div class="book-post">
+  <h1 id="cross-env">cross-env</h1>
+<h2 id="第二次见的时候-——-Hzero的脚手架">第二次见的时候 —— Hzero的脚手架</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">   &quot;start&quot;: &quot;cross-env node --max_old_space_size&#x3D;8196 scripts&#x2F;start.js&quot;,</span><br><span class="line">   &quot;build&quot;: &quot;npm run lint:fix &amp;&amp; cross-env node --max_old_space_size&#x3D;5100 scripts&#x2F;build.js&quot;,</span><br><span class="line">   &quot;build:analyze&quot;: &quot;npm run lint:fix &amp;&amp; cross-env ANALYZE&#x3D;true node --max_old_space_size&#x3D;8196 scripts&#x2F;build.js&quot;,</span><br><span class="line">   &quot;build:dll&quot;: &quot;webpack --progress --config config&#x2F;webpack.dll.config.js&quot;,</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="第二次见的时候">第二次见的时候</h2>
+<ul>
+<li>umi设置端口号有多种方式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># OS X, Linux</span><br><span class="line">$ PORT&#x3D;3000 umi dev</span><br><span class="line"></span><br><span class="line"># Windows (cmd.exe)</span><br><span class="line">$ set PORT&#x3D;3000&amp;&amp;umi dev</span><br><span class="line"></span><br><span class="line"># Or use cross-env for all platforms</span><br><span class="line">$ yarn add cross-env --dev</span><br><span class="line">$ cross-env PORT&#x3D;3000 umi dev</span><br><span class="line"></span><br><span class="line"># .env</span><br><span class="line">$ echo PORT&#x3D;3000 &gt; .env</span><br></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://umijs.org/zh/guide/env-variables.html#%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE" target="_blank" rel="noopener">umi环境变量设置链接</a></li>
+</ul>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/Blog/js/book-post.js"></script>
+
+        </div>
+      </div>
+      <div class="column col-2 hide-lg">
+        <div class="book-post-info">
+  
+    <div class="book-post-meta">
+
+  <div class="author">
+
+    <!-- Author image -->
+    <div class="author-img">
+      
+        <figure
+          class="avatar avatar-lg"
+          data-initial="糯"
+          style="background-color: #3b4351;">
+        </figure>
+      
+    </div>
+
+    <!-- Author title -->
+    <div class="author-title">
+      <div>糯唧唧怪</div>
+      <div>2019-12-08</div>
+    </div>
+  </div>
+
+  
+
+  <div class="divider"></div>
+</div>
+  
+
+  <div class="book-tocbot">
+</div>
+<div class="book-tocbot-menu">
+  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+  <a onclick="go_top()">Back to top</a>
+  <a onclick="go_bottom()">Go to bottom</a>
+</div>
+
+
+<script src="/Blog/js/book-toc.js"></script>
+
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+</body>
+</html>
+
+
+<script src="/Blog/js/book.js"></script>

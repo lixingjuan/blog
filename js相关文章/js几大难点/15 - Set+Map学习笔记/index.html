@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    
+      <link rel="icon" href="/Blog/favicon.png" />
+    
+
+    <title>
+        
+          js相关文章/js几大难点/15 - Set+Map学习笔记 - 李幸娟的前端博客
+        
+    </title>
+
+    <!-- Spectre.css framework -->
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <!-- theme css & js -->
+    
+<link rel="stylesheet" href="/Blog/css/book.css">
+
+    
+<script src="/Blog/js/book.js"></script>
+
+
+    <!-- tocbot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    
+    <!-- katex -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const zooming = new Zooming()
+    zooming.listen('.book-content img')
+})
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+
+<div class="book-container">
+  <div class="book-sidebar">
+    <div class="book-brand">
+  <a href="/Blog/">
+    <img src="/Blog/favicon.png">
+    <span>李幸娟的前端博客</span>
+  </a>
+</div>
+    <div class="book-menu">
+  <!--
+ * @version: 0.0.1
+ * @Author: lixingjuan <xingjuan.li@hand-china.com>
+ * @Date: 2020-02-28 10:57:23
+ * @copyright: Copyright (c) 2019, Hand
+ -->
+<ul>
+<li><a href="/hexo-theme-book-demo">Home</a></li>
+<li><a href="/hexo-theme-book-demo/changelog">Changelog</a></li>
+</ul>
+<h1 id="js相关文章">js相关文章</h1>
+<h2 id="几大难点">几大难点</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/categories">闭包</a></li>
+<li><a href="/js%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/js%E5%87%A0%E5%A4%A7%E9%9A%BE%E7%82%B9/%E5%BF%AB%E6%8D%B7%E9%94%AE">快捷键</a></li>
+<li><a href="/Dream/jstest/hahh">test</a></li>
+</ul>
+<h1 id="Test">Test</h1>
+<h2 id="hexo-unit-test">hexo-unit-test</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/categories">Categories</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/elements">Elements</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/excerpts">Excerpts</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/gallery-post">Gallery Post</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/hello-world">Hello World</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/images">Images</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/link-post-without-title">Untitled</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/link-post">Link Post</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/long-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam justo turpis, tincidunt ac convallis id.</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/no-title">Untitled</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/tag-plugins">Tag Plugins</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/tags">Tags</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/videos">Videos</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6">中文測試</a></li>
+<li><a href="/hexo-theme-book-demo/test/hexo-unit-test/%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%86%E3%82%B9%E3%83%88">日本語テスト</a></li>
+</ul>
+<h2 id="bugfix">bugfix</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/test/bugfix/list-test">list test</a></li>
+</ul>
+<h1 id="Demo2">Demo2</h1>
+<ul>
+<li><a href="/hexo-theme-book-demo/demo/menu-realtime">Menu Realtime Demo</a></li>
+</ul>
+<h2 id="Render">Render</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/demo/render/markdown-it-demo">markdown-it demo</a></li>
+<li><a href="/hexo-theme-book-demo/demo/render/katex-demo">katex demo</a></li>
+<li><a href="/hexo-theme-book-demo/demo/render/footnotes-demo">footnotes demo</a></li>
+</ul>
+<h2 id="Lorem-Ipsum">Lorem Ipsum</h2>
+<ul>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/en-demo">English</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/jp-demo">Japanese</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/kr-demo">Korean</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/tc-demo">Traditional Chinese</a></li>
+<li><a href="/hexo-theme-book-demo/demo/lorem-ipsum/sc-demo">Simplified Chinese</a></li>
+</ul>
+
+</div>
+
+
+<script src="/Blog/js/book-menu.js"></script>
+
+  </div>
+
+  <div class="off-canvas-content">
+    <div class="columns">
+      <div class="column col-10 col-lg-12">
+        <div class="book-navbar">
+          <!-- For Responsive Layout -->
+
+<header class="navbar">
+  <section class="navbar-section">
+    <a onclick="open_sidebar()">
+      <i class="icon icon-menu"></i>
+    </a>
+  </section>
+</header>
+
+        </div>
+        <div class="book-content">
+          <div class="book-post">
+  <!--
+ * @version: 0.0.1
+ * @Author: lixingjuan <xingjuan.li@hand-china.com>
+ * @Date: 2020-01-16 10:02:19
+ * @copyright: Copyright (c) 2019, Hand
+ -->
+<h2 id="Set">Set</h2>
+<h3 id="性质">性质</h3>
+<ol>
+<li>可接受数组等具有Iterabel接口的数据类型初始化</li>
+<li>不会添加重复的元素（注：Set任务NaN等与NaN，其他判断相等的表现均于全等一致）</li>
+<li>具有add方法,用于添加元素 <code>new Set().add(1)   // Set(1) {1}</code></li>
+<li>向Set添加元素不会发生类型转换</li>
+</ol>
+<h3 id="属性">属性</h3>
+<ol>
+<li>Set.prototype.constructor: 构造函数，默认是Set函数</li>
+<li>Set.prototype.size: 返回Set实例的成员总数</li>
+</ol>
+<h3 id="方法">方法</h3>
+<ol>
+<li>Set.prototype.add(value): 添加某个值，返回Set结构本身；</li>
+<li>Set.prototype.delete(value): 删除某个值，返回一个布尔值表示是删除成功；</li>
+<li>Set.prototype.has(value): 返回一个布尔值，表示该值是否是Set成员；</li>
+<li>Set.prototype.clear(vlaue): 清除所有成员，无返回值；</li>
+<li>Set.prototype.keys(): set结构键值对相等；</li>
+<li>Set.prototype.value(): set结构键值对相等；</li>
+<li>Set.prototype.entries(): set结构键值对相等；</li>
+</ol>
+<h3 id="常见使用">常见使用</h3>
+<ol>
+<li>字符串去重 <code>[...new Set('aabbccdd')].join('')  // 'abcd'</code></li>
+<li>数组去重 <code>[...new Set([1,1,1,2])]    // [1,2] </code></li>
+<li>Set转数组-扩展运算符 <code>[...new Set([1,2,3])]   // [1,2,3]</code></li>
+<li>Set转数组-Array.from <code>Array.from(new Set([1,2,3]))   // [1,2,3]</code></li>
+<li>Set结构使用数组的map,filter方法：<code>[...new Set([1,2,3])].filter(item=&gt;item)</code></li>
+<li>并集：<code>new Set([...a,...b])</code></li>
+<li>交集：<code>new Set([...a].filter(x=&gt;b.has(x)))</code></li>
+<li>差集：<code>new Set([...a].filter(x=&gt;!b.has(x)))</code></li>
+<li>遍历操作中，同步改变原来的Set结构，方法1：<code>let set = new Set([1,2,3]); set = new Set([...set].map(val =&gt; val*2))</code></li>
+<li>遍历操作中，同步改变原来的Set结构，方法2：<code>let set = new Set([1,2,3]); set = new Set(Array.from(set, val =&gt; val*2))</code></li>
+</ol>
+<h2 id="WeakSet">WeakSet</h2>
+<h3 id="性质-v2">性质</h3>
+<ol>
+<li>成员只能是对象；</li>
+<li>垃圾回收机制不考虑weakSet对该对象的引用；</li>
+</ol>
+<h3 id="属性-v2">属性</h3>
+<ol>
+<li>同Set</li>
+</ol>
+<h2 id="Map">Map</h2>
+<h3 id="性质-v3">性质</h3>
+<ol>
+<li>读取未知的键返回 undefined <code>new Map().get()  // undefined</code></li>
+<li>只有对同一个对象的引用（内存地址一样），Map结构才会认为是同一个键, 实际上[‘a’] 是不同的数组实例，指向不同的内存地址<br>
+<code>new Map().set(['a'],666); new Map.get(['a']);  // undefined</code></li>
+<li>Map的set方法返回的还是Map结构返回的还是Map结构，因此可以使用链式写法<br>
+<code>new Map().set('a',1).set('b',2)</code></li>
+</ol>
+<h3 id="属性-v3">属性</h3>
+<ol>
+<li>size, 返回Map成员总数</li>
+<li>Map.prototype.set(key, value)</li>
+<li>Map.prototype.get(key, value)</li>
+<li>Map.prototype.has(key): 返回布尔值，表示某个键是否在某个Map对象之中；</li>
+<li>Map.prototype.delete(key): 删除某个键，返回布尔值，表示是否删除成功；</li>
+<li>Map.prototype.clear(): 无返回值，清除所有成员；</li>
+</ol>
+<h3 id="使用">使用</h3>
+<ol>
+<li>Map转数组 <code>[...new Map([1,2])]</code></li>
+<li>数组转Map <code>new Map([1,2])</code></li>
+</ol>
+
+</div>
+
+
+  <div class="book-comments">
+    
+
+
+
+
+  </div>
+
+
+
+<script src="/Blog/js/book-post.js"></script>
+
+        </div>
+      </div>
+      <div class="column col-2 hide-lg">
+        <div class="book-post-info">
+  
+    <div class="book-post-meta">
+
+  <div class="author">
+
+    <!-- Author image -->
+    <div class="author-img">
+      
+        <figure
+          class="avatar avatar-lg"
+          data-initial="糯"
+          style="background-color: #3b4351;">
+        </figure>
+      
+    </div>
+
+    <!-- Author title -->
+    <div class="author-title">
+      <div>糯唧唧怪</div>
+      <div>2020-01-16</div>
+    </div>
+  </div>
+
+  
+
+  <div class="divider"></div>
+</div>
+  
+
+  <div class="book-tocbot">
+</div>
+<div class="book-tocbot-menu">
+  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
+  <a onclick="go_top()">Back to top</a>
+  <a onclick="go_bottom()">Go to bottom</a>
+</div>
+
+
+<script src="/Blog/js/book-toc.js"></script>
+
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
+</div>
+
+</body>
+</html>
+
+
+<script src="/Blog/js/book.js"></script>
