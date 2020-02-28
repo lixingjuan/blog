@@ -191,7 +191,7 @@ git remote -v
 url = https://rdc.hand-china.com/gitlab/25037/todoList-dva-react.git
 
 # git修改远程仓库地址
-git remote set-url origin [url]
+git remote set-url origin 仓库的url
 
 ```
 
