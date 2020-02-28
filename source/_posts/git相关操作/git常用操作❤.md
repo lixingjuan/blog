@@ -80,6 +80,11 @@ git reflog
 ### 回退版本
 
 ```bash
+# 撤销一次commit到暂存区域
+git reset --soft HEAD^
+
+# 撤销二次commit到暂存区域
+git reset --soft HEAD～2
 
 # 回退到某次提交，并且把commit的内容撤回到暂存区
 git reset --soft e79fcfb 
