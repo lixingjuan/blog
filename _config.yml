@@ -102,7 +102,7 @@ theme: book
 #   type: ""
 deploy:
   type: git
-  repo: https://github.com/lixingjuan/Blog
+  repo: https://github.com/lixingjuan/Blog/dist
   # example, https://github.com/hexojs/hexojs.github.io
   branch: master
 markdown:
