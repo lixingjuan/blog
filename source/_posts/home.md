@@ -1,3 +1,9 @@
+<!--
+ * @version: 0.0.1
+ * @Author: lixingjuan <xingjuan.li@hand-china.com>
+ * @Date: 2020-02-28 10:57:23
+ * @copyright: Copyright (c) 2019, Hand
+ -->
 ---
 title: 'Home'
 comments: false
@@ -7,6 +13,7 @@ comments: false
 
 # Hello
 
+你好，这里是李幸娟博客的首页！！！
 This is the demo of [hexo-theme-book](https://github.com/kaiiiz/hexo-theme-book) :)
 
 ## Contribution
