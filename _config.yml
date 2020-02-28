@@ -13,8 +13,8 @@ timezone: ""
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+url: https://lixingjuan.github.io/Blog/
+root: /Blog
 permalink: :title/
 permalink_defaults:
 pretty_urls:
@@ -98,9 +98,13 @@ theme: book
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+# deploy:
+#   type: ""
 deploy:
-  type: ""
-
+  type: git
+  repo: https://github.com/lixingjuan/Blog
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: master
 markdown:
   render:
     html: true # Doesn't escape HTML content so the tags will appear as html.
