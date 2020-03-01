@@ -1,7 +1,9 @@
-<!--
+/*
  * @version: 0.0.1
  * @Author: lixingjuan <xingjuan.li@hand-china.com>
- * @Date: 2020-02-28 11:18:43
+ * @Date: 2020-03-01 16:59:16
  * @copyright: Copyright (c) 2019, Hand
- -->
-## demo
+ */
+function demo() {
+  console.log("测试");
+}

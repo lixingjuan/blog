@@ -7,7 +7,7 @@
 # BlogBody 
 
 这里是李幸娟博客的主体代码
-博客文章位于仓库 [Blog]()
+博客文章位于仓库 [Blog](https://github.com/kaiiiz/hexo-theme-book-demo)
 
 ## 常用指令
 
@@ -21,3 +21,6 @@ hexo g
 # 上传文章到线上
 hexo d
 ```
+
+1. 使用的主题book
+   - [git地址]()

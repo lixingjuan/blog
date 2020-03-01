@@ -1,9 +1,3 @@
-<!--
- * @version: 0.0.1
- * @Author: lixingjuan <xingjuan.li@hand-china.com>
- * @Date: 2020-02-28 10:57:23
- * @copyright: Copyright (c) 2019, Hand
- -->
 ---
 title: 'Home'
 comments: false
