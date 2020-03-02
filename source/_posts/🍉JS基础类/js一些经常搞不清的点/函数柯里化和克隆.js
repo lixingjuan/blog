@@ -1,24 +1,3 @@
-/*
- * @version: 0.0.1
- * @Author: lixingjuan <xingjuan.li@hand-china.com>
- * @Date: 2020-02-28 19:14:21
- * @copyright: Copyright (c) 2019, Hand
- */
-/* apply,call的使用 */
-// 作用1：可以更方便的传递参数
-Math.max(1, 2, 3);
-Math.max.call(this, [1, 2, 3]);
-// 作用2：扩充作用域
-const color = "red";
-const ooooo = {
-  color: "blue"
-};
-function sayColor() {
-  console.log(this.color);
-}
-console.log(sayColor()); // red
-console.log(sayColor.apply(ooooo)); // red
-
 /* 函数柯里化 */
 // eg.1
 function discount(dis, price) {
@@ -29,6 +8,7 @@ function discount2(dis) {
     return dis * price;
   };
 }
+console.log(discount(0.01, 200));
 const fiveDiscount = discount2(0.05);
 console.log(fiveDiscount(300));
 

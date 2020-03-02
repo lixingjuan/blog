@@ -84,3 +84,7 @@ const generateMenu = _postPosition => {
 };
 
 generateMenu(beginPath);
+
+console.log(process.cwd());
+
+console.log(path.join("a", "b", "c"));

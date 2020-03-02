@@ -7,16 +7,14 @@ comments: false
 
 # Hello
 
-你好，这里是李幸娟博客的首页！！！
-This is the demo of [hexo-theme-book](https://github.com/kaiiiz/hexo-theme-book) :)
+🍉，这里是李幸娟博客的首页！！！:)
 
-## Contribution
+## 本周学习计划
 
-* Feel free to open **issue** in the github repo if you have any suggestions to this theme.
-* Also, you can **pull request** directly if there exist any unsolved bugs.
-
-## Timeline
-
-* 2020/01/24 - v2.0.0 beta testing :fire:
-* 2019/07/03 - Submit this theme to [hexo.io](https://hexo.io/themes/) ([pr#986](https://github.com/hexojs/site/pull/986))
-* 2019/04/28 - For more scalability, I developed this theme for my personal note used
+- [x]  call和apply,bind
+- [ ]  递归，迭代（递归已经明白了）
+- [ ]  函数柯里化
+- [ ]  闭包
+- [ ]  函数的扩展
+- [ ]  lodash深拷贝
+- [ ]  node常用的方法总结一下，不然下次还要去找
