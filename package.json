@@ -7,7 +7,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "start": "concurrently \"node ./../BlogBody/source/_node/index.js\"  \"hexo server\""
+    "start": "node ./../BlogBody/source/_node/index.js && hexo server",
+    "up": "hexo clean && hexo g && hexo d"
   },
   "hexo": {
     "version": "4.2.0"

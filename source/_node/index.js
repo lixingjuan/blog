@@ -85,6 +85,4 @@ const generateMenu = _postPosition => {
 
 generateMenu(beginPath);
 
-console.log(process.cwd());
-
-console.log(path.join("a", "b", "c"));
+console.log(`🍭  启动项目喽～～`);

@@ -1,10 +1,7 @@
-<!--
- * @version: 0.0.1
- * @Author: lixingjuan <xingjuan.li@hand-china.com>
- * @Date: 2020-01-16 10:02:19
- * @copyright: Copyright (c) 2019, Hand
- -->
+# Set和Map
+
 ## Set 
+
 ### 性质
 1. 可接受数组等具有Iterabel接口的数据类型初始化
 2. 不会添加重复的元素（注：Set任务NaN等与NaN，其他判断相等的表现均于全等一致）
@@ -36,7 +33,9 @@
 9. 遍历操作中，同步改变原来的Set结构，方法1：`let set = new Set([1,2,3]); set = new Set([...set].map(val => val*2))`
 10. 遍历操作中，同步改变原来的Set结构，方法2：`let set = new Set([1,2,3]); set = new Set(Array.from(set, val => val*2))`
 
+
 ## WeakSet
+
 ### 性质
 1. 成员只能是对象；
 2. 垃圾回收机制不考虑weakSet对该对象的引用；
@@ -45,6 +44,7 @@
 1. 同Set
 
 ## Map
+
 ### 性质
 1. 读取未知的键返回 undefined `new Map().get()  // undefined`
 2. 只有对同一个对象的引用（内存地址一样），Map结构才会认为是同一个键, 实际上['a'] 是不同的数组实例，指向不同的内存地址

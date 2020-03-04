@@ -1,5 +1,7 @@
 
 # call apply Bind 🌨
+
+
 ## call 和 apply 
 1. 介绍
    - 在你指定的作用域中调用函数
@@ -75,9 +77,13 @@ Math.max.apply(this, [1, 2, 3]);
 
 ```
 
+
+
+
 ## bind
 1. 作用
   - 会创建一个函数的实例，其this 值会被绑定到传给 bind() 函数的值
+  
 2. 举例
 
 ```javascript
@@ -92,4 +98,29 @@ console.log(sayColor());  // 'red'
 // 将 sayColor 的this值，绑定到了 o 上
 console.log(sayColor.bind(o)());  // 'blue'
 
+```
+
+3. 实现一个bind
+
+- 其实bind就是把this 绑定到传入的对象上
+
+```javascript
+/* 使用函数柯里化实现 */
+const bind = function(fn, context) {
+  const args = [].slice.call(arguments, 1);
+  return function() {
+    const _args = args.concat([...arguments]);
+    return fn.apply(context, _args);
+  };
+};
+
+global.name = "ming";
+const person = {
+  name: "hong",
+  sayName: function() {
+    return this.name;
+  }
+};
+console.log(person.sayName());              // "hong" 
+console.log(bind(person.sayName, null)());  // "ming"
 ```

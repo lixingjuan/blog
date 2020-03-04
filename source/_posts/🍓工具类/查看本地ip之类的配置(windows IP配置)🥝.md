@@ -3,7 +3,7 @@
 C:\Users\李幸娟>ipconfig
 
 
-```
+```bash
 Windows IP 配置
 
 

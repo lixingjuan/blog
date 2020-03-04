@@ -27,6 +27,6 @@ $ cross-env PORT=3000 umi dev
 # .env
 $ echo PORT=3000 > .env
 ```
-- <a href="https://umijs.org/zh/guide/env-variables.html#%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE">umi环境变量设置链接</a> 
+- [umi环境变量设置链接](https://umijs.org/zh/guide/env-variables.html#%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE)
 
 

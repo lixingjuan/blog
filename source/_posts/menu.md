@@ -8,17 +8,23 @@
 
 ## js一些经常搞不清的点 
 
-* [callAndApply](/Blog/🍉JS基础类/js一些经常搞不清的点/callAndApply) 
+* [call和Apply和Bind](/Blog/🍉JS基础类/js一些经常搞不清的点/call和Apply和Bind) 
+
+* [js三种遍历](/Blog/🍉JS基础类/js一些经常搞不清的点/js三种遍历) 
+
+* [作用域相关](/Blog/🍉JS基础类/js一些经常搞不清的点/作用域相关) 
+
+* [函数柯里化](/Blog/🍉JS基础类/js一些经常搞不清的点/函数柯里化) 
+
+* [手写promise](/Blog/🍉JS基础类/js一些经常搞不清的点/手写promise) 
+
+* [立即执行函数](/Blog/🍉JS基础类/js一些经常搞不清的点/立即执行函数) 
+
+* [闭包](/Blog/🍉JS基础类/js一些经常搞不清的点/闭包) 
 
 ## js总结 
 
 * [Set+Map学习笔记](/Blog/🍉JS基础类/js总结/Set+Map学习笔记) 
-
-* [[1转正考核PPT](/Blog/🍉JS基础类/js总结/[1转正考核PPT) 
-
-* [[作用域][闭包问题]🍭](/Blog/🍉JS基础类/js总结/[作用域][闭包问题]🍭) 
-
-* [[年中考核]PPT](/Blog/🍉JS基础类/js总结/[年中考核]PPT) 
 
 * [[虚拟DOM][AST语法树][babel编译]](/Blog/🍉JS基础类/js总结/[虚拟DOM][AST语法树][babel编译]) 
 
@@ -28,13 +34,7 @@
 
 * [error](/Blog/🍉JS基础类/js总结/error) 
 
-* [js遍历问题：深度优先+广度优先遍历](/Blog/🍉JS基础类/js总结/js遍历问题：深度优先+广度优先遍历) 
-
 * [price](/Blog/🍉JS基础类/js总结/price) 
-
-* [windows查看进程端口占用问题](/Blog/🍉JS基础类/js总结/windows查看进程端口占用问题) 
-
-* [代码提交格式校验git commit🍉](/Blog/🍉JS基础类/js总结/代码提交格式校验git commit🍉) 
 
 * [作用域相关](/Blog/🍉JS基础类/js总结/作用域相关) 
 
@@ -44,31 +44,37 @@
 
 * [学习文章目录](/Blog/🍉JS基础类/js总结/学习文章目录) 
 
-* [常用正则表达式](/Blog/🍉JS基础类/js总结/常用正则表达式) 
-
 * [快捷键](/Blog/🍉JS基础类/js总结/快捷键) 
+
+* [数组方法和业务场景](/Blog/🍉JS基础类/js总结/数组方法和业务场景) 
 
 * [数组深拷贝+浅拷贝问题](/Blog/🍉JS基础类/js总结/数组深拷贝+浅拷贝问题) 
 
-* [数组类型的ES5&ES6所有方法+实用业务场景](/Blog/🍉JS基础类/js总结/数组类型的ES5&ES6所有方法+实用业务场景) 
-
-* [查看本地ip之类的配置(windows IP配置)🥝](/Blog/🍉JS基础类/js总结/查看本地ip之类的配置(windows IP配置)🥝) 
-
 * [浏览器内核+线程+进程问题](/Blog/🍉JS基础类/js总结/浏览器内核+线程+进程问题) 
-
-* [计算机网络--网络层](/Blog/🍉JS基础类/js总结/计算机网络--网络层) 
 
 <h1 style="color:#448d55;">🍋Node相关</h1> 
 
 * [常用方法总结](/Blog/🍋Node相关/常用方法总结) 
 
+<h1 style="color:#448d55;">🍓工具类</h1> 
+
+## git相关操作 
+
+* [git常用操作❤](/Blog/🍓工具类/git相关操作/git常用操作❤) 
+
+* [代码提交校验](/Blog/🍓工具类/git相关操作/代码提交校验) 
+
+* [查看本地ip之类的配置(windows IP配置)🥝](/Blog/🍓工具类/查看本地ip之类的配置(windows IP配置)🥝) 
+
 <h1 style="color:#448d55;">🍧月技术总结</h1> 
 
 * [feb](/Blog/🍧月技术总结/feb) 
 
-<h1 style="color:#448d55;">🍭工具类</h1> 
+<h1 style="color:#448d55;">🍭计算机网络</h1> 
 
-## git相关操作 
+* [计算机网络--网络层](/Blog/🍭计算机网络/计算机网络--网络层) 
 
-* [git常用操作❤](/Blog/🍭工具类/git相关操作/git常用操作❤) 
+<h1 style="color:#448d55;">🐳JavaScript基础类</h1> 
+
+* [执行上下文+作用域链+闭包](/Blog/🐳JavaScript基础类/执行上下文+作用域链+闭包) 
 
