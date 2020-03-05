@@ -81,46 +81,91 @@ Math.max.apply(this, [1, 2, 3]);
 
 
 ## bind
-1. 作用
-  - 会创建一个函数的实例，其this 值会被绑定到传给 bind() 函数的值
+- bind方法创建一个新的函数，在bind方法被调用时，这个新函数的this被指定为`bind()`的第一个参数，而其余参数作为新函数的参数，供调用时使用
   
-2. 举例
+1. 举例
 
 ```javascript
-
+// eg1.
 global.color = "red";
 let o = { color: "blue" };
 
 function sayColor() {
   return this.color;
 }
-console.log(sayColor());  // 'red'
-// 将 sayColor 的this值，绑定到了 o 上
-console.log(sayColor.bind(o)());  // 'blue'
+sayColor();  // 'red'
+sayColor.bind(o)();  // 'blue'
+
+// eg2. bind() 传递参数
+const foo = {
+  value: 1
+};
+
+const demo = function(name, age) {
+  console.log(this.value);  // 1
+  console.log(this.name);   // undefined
+  console.log(name);        // "nametest"
+  console.log(age);         // 19
+};
+demo.bind(foo, "nametest")(19);
 
 ```
 
-3. 实现一个bind
+> 一个绑定函数也能使用new操作符创建对象，这种行为就像把原函数当作构造器，提供的this值被忽略，同时调用时的参数被当作模拟函数
+- 也就是说，当bind返回的函数当作构造函数的时候，bind时指定的this值会失效，但传入的参数依然生效
+
+```javascript
+const foo = {
+  value: 1
+};
+
+function demo(name, age) {
+  this.job = "programmer";
+  console.log(this.value);   // undefined
+  console.log(name);         // "nameTest2"
+  console.log(age);          // 19
+}
+demo.prototype.friend = "huahua";
+
+const bindName = demo.bind(foo, "nameTest2");
+const newDemo = new bindName(18); 
+
+console.log(newDemo.friend);  // "huahua"
+console.log(newDemo.job);     // "programmer"
+
+```
+使用的new操作符之后，绑定的this已经失效，此时的this指向`bindName`,
+
+1. 实现一个bind
 
 - 其实bind就是把this 绑定到传入的对象上
 
 ```javascript
-/* 使用函数柯里化实现 */
-const bind = function(fn, context) {
-  const args = [].slice.call(arguments, 1);
-  return function() {
-    const _args = args.concat([...arguments]);
-    return fn.apply(context, _args);
-  };
-};
-
-global.name = "ming";
-const person = {
-  name: "hong",
-  sayName: function() {
-    return this.name;
+Function.prototype.bind2 = function(context) {
+  // 如果使用bind的不是函数就抛出错误
+  if (typeof this !== "function") {
+    throw new Error("Function.prototype.bind - what is trying to be bound is not callable");
   }
+
+  var self = this;
+  var args = Array.prototype.slice.call(arguments, 1);
+  var fNOP = function() {};
+
+  var fbound = function() {
+    // 当作为构造函数时，this 指向实例，self 指向绑定函数，因为下面一句 `fbound.prototype = this.prototype;`，已经修改了 fbound.prototype 为 绑定函数的 prototype，此时结果为 true，当结果为 true 的时候，this 指向实例。
+    // 当作为普通函数时，this 指向 window，self 指向绑定函数，此时结果为 false，当结果为 false 的时候，this 指向绑定的 context。
+    self.apply(
+      this instanceof self ? this : context,
+      args.concat(Array.prototype.slice.call(arguments))
+    );
+  };
+
+  fNOP.prototype = this.prototype;
+  // 如果直接修改fbound 的prototype 也会直接修改函数的prototype, 这时可以使用空函数进行中转
+  fbound.prototype = new fNOP();
+
+  return fbound;
 };
-console.log(person.sayName());              // "hong" 
-console.log(bind(person.sayName, null)());  // "ming"
 ```
+
+- [JavaScript深入之bind的模拟实现](https://juejin.im/post/59093b1fa0bb9f006517b906)
