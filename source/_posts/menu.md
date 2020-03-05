@@ -42,8 +42,6 @@
 
 * [price](/Blog/🍉JS基础类/js总结/price) 
 
-* [作用域相关](/Blog/🍉JS基础类/js总结/作用域相关) 
-
 * [前端模块化AMD+CMD规范](/Blog/🍉JS基础类/js总结/前端模块化AMD+CMD规范) 
 
 * [回调函数+异步函数+promise+async,await](/Blog/🍉JS基础类/js总结/回调函数+异步函数+promise+async,await) 
