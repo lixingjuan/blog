@@ -80,6 +80,8 @@ Math.max.apply(this, [1, 2, 3]);
 
 
 
+
+
 ## bind
 - bind方法创建一个新的函数，在bind方法被调用时，这个新函数的this被指定为`bind()`的第一个参数，而其余参数作为新函数的参数，供调用时使用
   
@@ -136,7 +138,39 @@ console.log(newDemo.job);     // "programmer"
 ```
 使用的new操作符之后，绑定的this已经失效，此时的this指向`bindName`,
 
-1. 实现一个bind
+
+
+### 手写bind: 使用基本类型的扩充实现bind
+
+```javascript
+Function.prototype.method = function(name, func) {
+  if (!this.prototype[name]) {
+    this.prototype[name] = func;
+  }
+  return this;
+};
+
+Function.method("bind2", function(context, ...args) {
+  // 这里this 指向 sayName
+  this.apply(context, args);
+});
+
+// 
+const person = {
+  name: "hong",
+  sayName: function() {
+    console.log(this.name);
+  }
+};
+global.name = "ming";
+
+person.sayName(); // "hong"
+person.sayName.bind2(null, 2); // "ming"
+```
+
+
+
+### 手写bind: 函数柯里化实现一个bind
 
 - 其实bind就是把this 绑定到传入的对象上
 
@@ -168,4 +202,12 @@ Function.prototype.bind2 = function(context) {
 };
 ```
 
-- [JavaScript深入之bind的模拟实现](https://juejin.im/post/59093b1fa0bb9f006517b906)
+
+
+
+
+
+- [《javascript高级程序设计-高级技巧》(第5章-Function类型)]
+- [call,apply-MDN]
+- [《JavaScript语言精粹-第四章-扩充基本类型的功能》]
+- [掘金-JavaScript深入之bind的模拟实现](https://juejin.im/post/59093b1fa0bb9f006517b906)
