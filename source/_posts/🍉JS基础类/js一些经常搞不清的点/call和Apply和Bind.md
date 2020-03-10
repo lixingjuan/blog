@@ -63,28 +63,31 @@ console.log(callSum(1, 2));  // 3
 console.log(applySum1(1, 2)); // 3
 console.log(applySum2(1, 2));  // 3
  
-/* bind用法 */
 
 
 ```
 7. 实际应用举例
 
 ```javascript
+/* eg.1 使用apply展开数组 */
+function foo(...args) {
+  console.log(...args);
+}
+foo.apply(null, [2, 3, 4, [5]]);  // 2 3 4 [ 5 ]
 
-/* 通过apply 扩展,使得Math.max可以接收数组作为参数 */
+/* eg.2 通过apply 扩展,使得Math.max可以接收数组作为参数 */
 Math.max(1, 2, 3);
 Math.max.apply(this, [1, 2, 3]);
+
 
 ```
 
 
 
 
-
-
 ## bind
-- bind方法创建一个新的函数，在bind方法被调用时，这个新函数的this被指定为`bind()`的第一个参数，而其余参数作为新函数的参数，供调用时使用
-  
+- bind方法创建一个新的函数，在bind方法被调用时，并且`bind`的第一个参数对象被指定为这个新函数的`this` 的绑定对象，而其余参数作为新函数的参数，供调用时使用
+
 1. 举例
 
 ```javascript
@@ -138,6 +141,19 @@ console.log(newDemo.job);     // "programmer"
 ```
 使用的new操作符之后，绑定的this已经失效，此时的this指向`bindName`,
 
+### bind实现普通的函数柯里化
+ 
+- 因为`bind` 可以返回一个新的函数，并且新函数的第一个参数对象被指定为新函数的`this` 绑定对象，所以`bind`可以对参数柯里化
+  
+```javascript
+function foo(...args) {
+  console.log(...args);
+}
+
+// 使用bind(...)进行柯里化
+var bar = foo.bind(null, 0);
+bar(1, 2, 3, 4); // 0,1,2,3,4
+```
 
 
 ### 手写bind: 使用基本类型的扩充实现bind
