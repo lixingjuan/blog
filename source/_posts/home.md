@@ -11,6 +11,8 @@ comments: false
 
 ## 本周学习计划
 
+- [ ]  整理一下那几个todolist的例子
+- [ ]  看react源码视频
 - [ ]  lodash深拷贝
 - [ ]  从掘金看的深拷贝，怎么处理循环引用问题的
 - [ ]  Object和Map的转换
@@ -28,6 +30,24 @@ comments: false
 - [x]  函数的扩展
 - [x]  node常用的方法总结一下，不然下次还要去找
 - [ ]  看react redux的源码reducer函数，阮一峰的[Redux 入门教程（一）：基本用法](http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html)中说叫readucer的原因是他可以作为数组的reduce方法的参数1？？？？为什么？
+- [ ]  React源码视频里面讲的 `component` 和 `pureComponent` 区别是啥来着？我怎么忘了？好像pure多个啥东西
+- [ ]  我有一个疑问，如果一个组件的子组件触发修改了某条数组，那页面不会重新渲染么？
+- [ ]  我一直都对这个静态类型检测不熟悉
+```javascript
+  static propTypes = {
+    comments: PropTypes.array,
+    onSubmit: PropTypes.func
+  };
+```
+- [ ] 类没有this, 必须使用super才可以访问this? 复习下ES6 class章节
+```javascript
+  constructor() {
+    super();
+    this.state = {
+      username: ""
+    };
+  }
+```
 
 
 ******************************

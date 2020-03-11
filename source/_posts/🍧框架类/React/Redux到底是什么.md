@@ -49,21 +49,19 @@ function listerner(){
 
 ```javascript
 // action types
-// 其实就是一堆常量，表示不停的action的类型
-const ADD_COMMENT = "ADD_COMMENT";
-const INIT_COMMENTS = "INIT_COMMENTS";
-const DELETE_COMMENT = "DELETE_COMMENT";
+// 其实就是一堆常量，表示不同的action的类型
 const ADD_TODO = "ADD_TODO";
 const INIT_TODO = "INIT_TODO";
 
 // action creators
 // TODO: 没感觉 这个action creators有节省多少代码啊？反而还多了
 // 作用就是用户发起了 `dispatch` 看 触发哪个 action creators， 然后就返回一个对象，表示此次 `dispath` 的类型
-export const addComment = comment => {
-  return {
-    type: ADD_COMMENT,
-    comment
-  };
+export const addTodo = todo => {
+  return { type: "ADD_TODO", todo };
+};
+
+export const initTodos = todos => {
+  return { type: "INIT_TODOS", todos };
 };
 
 // reducer函数，用来处理页面 `dispatch` 触发的action creators，然后 reducer函数根据 action creators return出来的 `type` 类型去处理 `state`
@@ -94,10 +92,25 @@ export default function(state, action) {
 3. 在要使用的页面要做的事情
 
 ```javascript
-import {connect} from 'redux'
+import { connect } from 'redux'
+// 把要用到的 action generator 函数引进来，下面 `mapDispatchToProps` 里面要用
+import { addTodo, initTodos } from "../../reducers/todoReducer";
 
 class 组件名字 extends Component {
   ......
+
+  componentDidMount() {
+    // 这里调用的名字是你命的名字 `toInitTodos`
+    this.props.toInitTodos([
+      {
+        text: "你好，我是初始化的第一项todo",
+        uuid: uuid(),
+        checked: false
+      }
+    ]);
+  }
+
+  render()
 }
 
 const mapStateToProps = state => {
@@ -111,14 +124,17 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     // UI组件就可以通过this.props.onSubmit() 向redux 中的reducer 发起dispatch触发reducer函数
-    onSubmit: comment => {
-      dispatch(addComment(comment));
+    toInitTodos: todos => {
+      dispatch(initTodos(todos));
+    },
+    toAddTodo: todo => {
+      dispatch(addTodo(todo));
     }
   };
 };
 
 // 用来给 当前UI组件 和 数据容器 连接起来，这样 redux 的东西就会出现在 this.props 里面
-export default connect(mapStateToProps, mapDispatchToProps)(TodoListRedux);
+export default connect(mapStateToProps, mapDispatchToProps)(组件名字);
 
 
 ```
