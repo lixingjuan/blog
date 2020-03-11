@@ -1,5 +1,6 @@
-# cross-env
-## 第二次见的时候 —— Hzero的脚手架
+# cross-env, 跨平台设置环境变量
+
+## 第一次见的时候 —— Hzero的脚手架
 
 ```
  "scripts": {

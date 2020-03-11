@@ -119,4 +119,5 @@ console.log((10 / 3).integer());
 
 ## 参考文章
 
-- []
+- [《你不知道的Javascript(上)第二部分》]
+- [《JavaScript高级程序设计》]

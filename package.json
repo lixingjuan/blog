@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "start": "node ./../BlogBody/source/_node/index.js && hexo server",
+    "start": "hexo clean && node ./themes/book/node/index.js && hexo server",
     "up": "hexo clean && hexo g && hexo d"
   },
   "hexo": {
