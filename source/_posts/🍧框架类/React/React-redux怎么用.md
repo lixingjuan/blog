@@ -43,9 +43,44 @@ function listerner(){
 
 ## 在create-react-app中的使用流程
 
-1. 在App.js中使用 `<Provider>` 包裹根组件
+1. 在App.js中 
+  
+- store就是保存数据的地方，可以给他堪称一个容器，整个应用只能有一个store
+- 函数`createStore`用来生成store
+  
+```javascript
+// 引入createStore 和reducer函数 , 并且创建创建store
+import { createStore } from "redux";  // 接受一个函数作为参数
+import todosReducer from "./reducers/todoReducer";  // reducer函数
 
-2. 我们需要一个文件，分别定义我们的 action变量、reducer函数、action creators
+const store = createStore(todosReducer)
+```
+
+- 引入Provider, 并且使用它包裹根组件, 使得该应用所有页面均可访问store
+```javascript
+import { Provider } from "react-redux";
+
+// 使用 `<Provider>` 包裹根组件
+export default class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Router>
+          <Switch>
+            {/* <Route path="/" exact render={() => <Redirect to="/TodoList" />} /> */}
+            <Route path="/" exact component={index} />
+            <Route path="/TodoList" component={TodoList} />
+            <Route path="/TodoListRedux" component={TodoListRedux} />
+          </Switch>
+        </Router>
+      </Provider>
+    );
+  }
+}
+
+```
+
+1. 我们需要一个文件，分别定义我们的 action变量、reducer函数、action creators
 
 ```javascript
 // action types

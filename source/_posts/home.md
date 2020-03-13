@@ -12,6 +12,7 @@ comments: false
 ## 本周学习计划
 
 - [ ]  整理一下那几个todolist的例子
+- [ ]  手写react webpack脚手架
 - [ ]  看react源码视频
 - [ ]  lodash深拷贝
 - [ ]  从掘金看的深拷贝，怎么处理循环引用问题的
