@@ -43,20 +43,23 @@ git commit --amend --no-edit
 # 查看本地分支
 git branch
 
+# 查看当前远程分支
+git branch -r
+
+# 查看本地及远程所有分支
+git branch -a 
+
 # 创建本地分支dev
 git branch dev
 
 # 删除本地分支dev
 git branch -d dev
 
+# 推送当前代码到远程指定分支
+git push origin 25037
+
 # 删除远程分支dev
 git push origin -d dev
-
-# 查看当前远程分支
-git branch -r
-
-# 查看远程所有分支
-git branch -a 
 
 # 切换分支到dev
 git checkout dev
@@ -65,10 +68,17 @@ git checkout dev
 git merge dev
 
 # 将本地仓库推送到远程分支
-git push <远程仓库地址> <本地分支>：<远程分支>
+git push origin <本地分支>：<远程分支>
 
 # 本地分支重命名dev->uat
 git branch -m dev uat
+
+# 将本地分支与远程同名分支相关联
+git push --set-upstream origin <本地分支名>
+
+# 将远程指定分支 拉取到 本地指定分支上：
+git pull origin <远程分支名>:<本地分支名>
+
 ```
 
 ### 查看历史commit记录

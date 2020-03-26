@@ -1,11 +1,40 @@
+## 安装
+1. 全局安装
+`npm install eslint --global`
+2. 项目运行在根目录生成 .eslintrc
+`eslint --init`
+
+## 规则
+
+0 或者 off  // 关闭规则
+1 或者 warn  // 警告
+2 或者 error  // 错误
+
+## 常用配置
 ```javascript
 module.exports = {
   root: true,
   env: {
     browser: true,  // 运行环境,浏览器
     node: true, // 运行环境,node
-    es6: true,
+    es6: true, // 该选项会自动设置 ecmaVersion 解析器选项为 6
   },
+  parserOptions: {
+    ecmaVersion: 6, // 默认设置为3，5；可以使用 6、7、8、9 或 10 来指定你想要使用的 ECMAScript 版本，或 2015（相当于6）
+    // sourceType: "module", // ？设置为 "script" (默认) 或 "module"（如果你的代码是 ECMAScript 模块)。
+    ecmaFeatures: {
+      // 使用ECMA的某个特定属性
+      jsx: true
+    }
+  },
+  plugins: ["a-plugin"],
+  overrides: [
+    // 为特定的文件使用特定的解析器
+    {
+      files: ["*.md"],
+      processor: "a-plugin/markdown"
+    }
+  ],
   extends: ["plugin:vue/essential", "eslint:recommended"],
   rules: {
     "no-alert": 0, //禁止使用alert confirm prompt
