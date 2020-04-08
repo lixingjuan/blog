@@ -39,6 +39,15 @@ mysql -uroot
 ## 操作数据库常用指令(在mysql命令行里面输入，都要加分号)
 
 ```bash
+# 启动数据库
+sudo mysql.server start
+
+# 停止数据库服务
+sudo mysql.server stop
+
+# 重启MySQL服务
+sudo mysql.server restart
+
 # 刷新权限
 flush privileges
 

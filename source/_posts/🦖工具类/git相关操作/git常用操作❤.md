@@ -26,6 +26,12 @@ git config user.name '李幸娟'
 
 ```
 
+### 修改git配置
+
+```bash
+# 使git检测大小写
+git config core.ignorecase false
+```
 ### 提交类操作
 
 ```bash
