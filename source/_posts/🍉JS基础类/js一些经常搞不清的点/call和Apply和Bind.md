@@ -33,15 +33,22 @@ const p = {
 p.sayColor();
 
 /* eg.1 作用1：扩充作用域 */
-global.color = "red";
-let o = { color: "blue" };
-function sayColor() {
-  console.log(this.color);
+global.name = "hahahh";
+const a = {
+  name: "lilili"
+};
+const b = {
+  name: "xingxing"
+};
+function sayName() {
+  console.log(this.name);
 }
-sayColor();  // 'red'
-sayColor.call(o);  // 'blue'
-// 理解：
-// 运行sayColor.call(o)的时候，函数的执行环境变了，因为辞职函数体内的this对象指向了o 
+sayName();  // 'hahahh'
+sayName.call(a);  // 'lilili'
+sayName.call(b);  // 'xingxing'
+
+// 运行sayColor.call(a)的时候，函数的执行环境变了，因为此时函数体内的this对象指向了a 
+
 
 /* eg.2 作用2: 更方便的传递参数 */
 function sum(a, b) {
@@ -75,6 +82,9 @@ function foo(...args) {
 }
 foo.apply(null, [2, 3, 4, [5]]);  // 2 3 4 [ 5 ]
 
+
+
+
 /* eg.2 通过apply 扩展,使得Math.max可以接收数组作为参数 */
 Math.max(1, 2, 3);
 Math.max.apply(this, [1, 2, 3]);
@@ -86,12 +96,13 @@ Math.max.apply(this, [1, 2, 3]);
 
 
 ## bind
-- bind方法创建一个新的函数，在bind方法被调用时，并且`bind`的第一个参数对象被指定为这个新函数的`this` 的绑定对象，而其余参数作为新函数的参数，供调用时使用
+- bind方法创建一个新的函数，在bind方法被调用时， `bind`的第一个参数对象被指定为这个新函数的`this` 的绑定对象，而其余参数作为新函数的参数，供调用时使用
 
 1. 举例
 
 ```javascript
-// eg1.
+
+/* eg1. 改变函数的执行作用域 */
 global.color = "red";
 let o = { color: "blue" };
 
@@ -101,11 +112,12 @@ function sayColor() {
 sayColor();  // 'red'
 sayColor.bind(o)();  // 'blue'
 
-// eg2. bind() 传递参数
+
+
+/* eg2. bind() 传递参数 */
 const foo = {
   value: 1
 };
-
 const demo = function(name, age) {
   console.log(this.value);  // 1
   console.log(this.name);   // undefined
@@ -141,6 +153,9 @@ console.log(newDemo.job);     // "programmer"
 ```
 使用的new操作符之后，绑定的this已经失效，此时的this指向`bindName`,
 
+
+
+
 ### bind实现普通的函数柯里化
  
 - 因为`bind` 可以返回一个新的函数，并且新函数的第一个参数对象被指定为新函数的`this` 绑定对象，所以`bind`可以对参数柯里化
@@ -171,7 +186,6 @@ Function.method("bind2", function(context, ...args) {
   this.apply(context, args);
 });
 
-// 
 const person = {
   name: "hong",
   sayName: function() {
