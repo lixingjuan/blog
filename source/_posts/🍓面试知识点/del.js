@@ -1,13 +1,19 @@
-function Foo() {
-  this.name = "bar";
+/*  */
+function add(a, b, c) {
+  console.log(a + b + c);
 }
-Foo.prototype.getName = function() {
-  console.log(this);
-  return this.name + 1;
-};
-let foo = new Foo();
-let getName = foo.getName;
+function curry(fn, ...args) {
+  const length = fn.length;
 
-console.log(foo.getName());
-console.log(getName.call(Foo));
-console.log(Foo.name);
+  return function(..._args) {
+    const finalArr = [...args, ..._args];
+    if (finalArr.length < length) {
+      return curry.call(this, fn, ...finalArr);
+    } else {
+      return fn.apply(this, finalArr);
+    }
+  };
+}
+
+console.log(curry(add, 1)(2)(3));
+console.log(curry(add)(1)(2)(3));
