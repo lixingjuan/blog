@@ -32,3 +32,30 @@ TODO:. 我这边有个疑问，我不运行 `yarn run eject`, 在根目录的 .b
   - 如果你是通过 'antd/dist/antd.css' 引入样式的，改为 antd/dist/antd.less。
 
 ## vue-cli
+
+1. 安装babel-plugin-import `yarn add babel-plugin-import`
+2. 根目录babel.config.js
+```javascript
+  module.exports = {
+	// presets: ["@vue/app", "@vue/cli-plugin-babel/preset"],
+	presets: ["@vue/app"],
+	plugins: [
+		[
+			"import",
+			{
+				libraryName: "ant-design-vue",
+				libraryDirectory: "es",
+				style: true
+			}
+		],
+	]
+};
+
+```
+
+3.  根目录main.js
+
+```javascript
+import { message, notification } from "ant-design-vue";
+Vue.component(Button.name, Button);
+```
