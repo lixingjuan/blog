@@ -1,3 +1,5 @@
+## windows
+
 - win+r
 
 C:\Users\李幸娟>ipconfig

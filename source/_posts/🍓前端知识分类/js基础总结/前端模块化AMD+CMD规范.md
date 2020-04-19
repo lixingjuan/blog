@@ -95,6 +95,7 @@ CommonJS 加载的是一个对象（即module.exports属性），该对象只有
 
 
 ### module.exports使用方法
+
 - 用module.exports定义当前模块对外输出的接口（不推荐直接用exports），
 - 用require加载模块，
 

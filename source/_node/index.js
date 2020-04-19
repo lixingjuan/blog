@@ -15,8 +15,7 @@ const beginPath = `/Users/lixingjuan/Documents/Git_projects/BlogBody/source/_pos
 const firstDepth = beginPath.split("/").length;
 /* 初始字符串 */
 const initialString = `
-* [Home](/Blog)
-* [Changelog](/Blog/changelog)\n\n`;
+* [Home](/Blog)\n\n`;
 
 /**
  * @des 同步清空目录文件
@@ -33,6 +32,13 @@ const writeToMenu = function(title) {
   fs.appendFileSync(menuPosition, `${title} \n\n`, "utf8");
 };
 
+/**
+ * @des 生成分类标题
+ * @param {String} linkOrTitle 用于标示生成 链接还是标题
+ * @param {String} _postPosition 文件/文件夹 位置
+ * @param {String} item 文件名称(带扩展名)
+ * @return:
+ */
 const getTitle = function(linkOrTitle, _postPosition, item) {
   if (linkOrTitle === "link") {
     return `* [${item.slice(0, -3)}](/Blog/${_postPosition.slice(
@@ -43,8 +49,7 @@ const getTitle = function(linkOrTitle, _postPosition, item) {
     switch (postionDepth) {
       case 1:
         return `<h1 style="color:#448d55;">${item}</h1>`;
-      // case 2:
-      //   return `<h2 style="color:#fbc82f;">${item}</h2>`;
+
       default:
         return `${"#".repeat(postionDepth)} ${item}`;
     }
@@ -60,7 +65,10 @@ const generateMenu = _postPosition => {
   const floderArr = fs
     .readdirSync(_postPosition)
     .filter(
-      item => !["menu.md", "temporary.md", ".DS_Store", "changelog.md", "menu2.md"].includes(item)
+      item =>
+        !["menu.md", "home.md", "temporary.md", ".DS_Store", "changelog.md", "menu2.md"].includes(
+          item
+        )
     );
 
   if (floderArr.length) {
@@ -85,4 +93,4 @@ const generateMenu = _postPosition => {
 
 generateMenu(beginPath);
 
-console.log(`🍭  启动项目喽～～`);
+console.log(`🍭  gua,gua,gua, 启动项目喽～～`);
