@@ -3,6 +3,8 @@
 
 <h1 style="color:#448d55;">leetCode</h1> 
 
+* [test](/Blog/leetCode/test) 
+
 * [写给自己](/Blog//写给自己) 
 
 * [理解目录](/Blog//理解目录) 
@@ -12,6 +14,8 @@
 <h1 style="color:#448d55;">🍓前端知识分类</h1> 
 
 ## JS相关类 
+
+* [Class相关](/Blog/🍓前端知识分类/JS相关类/Class相关) 
 
 * [Object](/Blog/🍓前端知识分类/JS相关类/Object) 
 
