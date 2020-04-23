@@ -8,7 +8,7 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "start": "hexo clean && node ./source/_node/index.js && hexo server",
-    "up": "hexo clean && hexo g && hexo d"
+    "up": "hexo clean && node ./source/_node/index.js && hexo g && hexo d"
   },
   "hexo": {
     "version": "4.2.0"

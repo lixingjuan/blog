@@ -1,12 +1,13 @@
 class Person {
-  constructor() {
-    // return this;
-    return Object.create(null);
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  sayName() {
+    // 定义类的方法（`sayName`）的时候，前面不需要加 `function` 关键字，也不需要逗号分隔；
+    console.log(this.name);
   }
 }
-// function Person() {}
-
-const instance1 = new Person();
-
-console.log(instance1 instanceof Person);
-console.log(Person.prototype.isPrototypeOf(instance1));
+const Kris = new Person("Kris", 29);
+console.log(Kris.constructor === Person.prototype.constructor);
