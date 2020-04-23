@@ -278,4 +278,255 @@ console.log(instance1.sayName());   // "sayName"
 
 
 
-## class的this
+### class 与 this
+
+类的方法内部如果有this, 他默认指向类的实例
+
+```javascript
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  sayName() {
+    console.log(this.name);
+    this.sayAge();
+  }
+
+  sayAge() {
+    console.log(this.age);
+  }
+}
+const instance1 = new Person("Tom", 15);
+const instance2 = new Person("Jack", 29);
+
+
+/* class 内的this指向实例 */
++ instance1.sayName();  // 'Tom'  15 
++ instance2.sayName();  // 'Jack' 29
+
+```
+
+若将class内的方法单独提取出来使用的话请注意，会报错
+（关于使用new操作符创建构造函数实例内容详见new内页）
+
+```javascript
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  sayName() {
++   console.log(this);  // TODO: 这里打印是undefined, 按我理解，this应该是执行函数的调用环境的，但是阮一峰的文章讲 =>  因为class内部是严格模式, 所以这里是undefined， 去看下严格模式和this的关系 
+    console.log(this.name);
+  }
+}
+const instance1 = new Person("Tom", 15);
+const { sayName } = instance1;
+
++ sayName();
+```
+
+解决方法1: 在构造函数中使用bind绑定this
+
+```javascript
+class Person {
+  constructor(name, age) {
++   this.sayName = this.sayName.bind(this);
+    this.name = name;
+    this.age = age;
+  }
+
+  sayName() {
+    console.log(this);
+    console.log(this.name);
+  }
+}
+const instance1 = new Person("Tom", 15);
+const { sayName } = instance1;
+
+sayName();  // 'Tom'
+```
+
+
+解决方法2: 使用箭头函数，箭头函数总是查找作用域，this绑定的就是最近一层非箭头函数的this
+
+这样构造函数运行的时候，箭头函数所在的运行环境即实例，则this也指向实例对象
+
+```javascript
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
++ sayName = () => {
+    console.log(this.name);
+  };
+}
+const instance1 = new Person("Tom", 15);
+const { sayName } = instance1;
+
+sayName();
+```
+
+
+### class静态方法
+
+类相当于实例的原型，所有在类中定义的方法，都会被实例继承，如果在一个方法前加上 `static` 关键字，则该方法就不会被实例继承，而是通过类来调用，这就成为 ‘静态方法’。
+
+```javascript
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
++ sayName() {
+    console.log(this.name);
+  }
+
++ static sayAge() {
+    console.log(this.age);
+  }
+}
+const instance1 = new Person("Tom", 15);
++ instance1.sayName();  // 'Tom'
++ instance1.sayAge();   // 报错：TypeError: instance1.sayAge is not a function
+
+Person.sayName();  // 类的调用必须通过new 操作符 报错：TypeError: Person.sayName is not a function,
+Person.sayAge();   // undefined，请注意，这里的this,指向类本身
+
+Person.sayName();  // Person，静态方法可以和非静态方法重名
+```
+
+静态方法虽然不会被实例继承，但是会被子类继承
+非静态方法不会被继承
+
+```javascript
+class Person {
+  sayName() {
+    console.log("hello");
+  }
+
+  static sayHello() {
+    console.log("hello");
+  }
+}
+class JACK extends Person {}
+
+JACK.sayHello();    // 'hello'
+JACK.sayName();     // 报错：TypeError: JACK.sayName is not a function
+```
+
+子类也可以从super对象上调用从父类继承的静态方法，（注意：加static 只有类的静态方法才可以直接通过类调用）
+
+```javascript
+class Person {
+  static sayHello() {
+    console.log("hello");
+  }
+}
+class JACK extends Person {
+  static PersonSayHello() {
++   return super.sayHello();
+  }
+}
+
+JACK.PersonSayHello(); // 'hello'
+```
+
+### 实例属性的新写法
+
+实例属性除了可以定义在 `constructor()` 方法里面的 `this` 上，也可以直接定义在类的最顶层
+实例属性 `state` 与 `sayHello` 的取值位于同一平级，所以不需要加this
+
+```javascript
+class Person {
++ state = 0
+
+  sayHello() {
+    console.log("hello");
+  }
+}
+const instance1 = new Person();
+
++ instance1.state; // 0
+```
+
+
+### 静态属性
+
+目前只能通过在外面赋值
+同静态方法一样，在前面加static生成静态属性的方法仍处于提案阶段
+
+```javascript
+class Person {
+}
+Person.state = 5;
+
+Person.state    // 5
+```
+
+
+### new.target属性
+
+该属性用于判断构造函数是怎么被调用的, 该属性一般用于构造函数中，返回`new`操作符作用于的那个构造函数若构造函数不是通过 `new操作符`或 `Reflect.construct()`调用的， `new.target` 内部会返回 `undefined`
+
+class内部使用该属性，返回当前class
+子类继承弗雷德时候，`new.target`返回子类
+
+```javascript
+/* 在class内部使用new.target */
+class Person {
+  constructor() {
+    console.log(new.target);
+  }
+}
+class Jack extends Person {}
+
++ const PersonInstance = new Person(); // [Function: Person]
++ const instance1 = new Jack(); // [Function: Jack]
++ console.log(instance1); // Jack {}
+```
+
+利用该特点我们可以写出不能独立使用，必须继承后才能使用的类
+
+
+```javascript
+class Person {
+  constructor() {
++    if (new.target === Person) {
++      throw new Error("本类不能独立被调用，只能通过继承方法调用！");
++    }
+  }
+}
+class Jack extends Person {}
+
+const PersonInstance = new Person();  // 抛出错误
+const JackInstance = new Jack();      // 正确被调用
+```
+
+
+在构造函数内部使用`new.target`，始终指向Person本身
+
+```javascript
+function Person() {
+  console.log(new.target);
+}
+
++ Person(); // undefined
++ const PersonInstance = new Person(); // [Function: Person]
+
+/* 通过原型继承方法实现Person子类 */
+Jack.prototype = new Person();  // [Function: Person]
+new Person().constructor = Jack;  
+
+const JackInstance = new Jack();  // [Function: Person]
+```
+
+
+## 参考
+1. [阮一峰的ES6入门 - class基本语法](https://es6.ruanyifeng.com/#docs/class)
