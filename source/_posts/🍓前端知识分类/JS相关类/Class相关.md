@@ -1,8 +1,7 @@
 # Class相关
 
-## 基本语法
 
-### 简介
+## ES6class与ES5构造函数写法对比
 
 Class是通过构造函数方法创建实例的语法糖，本质还是函数 `typeof (class Person{}) === 'function'`;
 新的class写法知识让对象原型的写法更加清晰，更像面向对象编程的语法而已;
@@ -198,8 +197,9 @@ const instance2 = new Person("Merry");
 instance1.__proto__ === instance2.__proto__; // true
 ```
 
-### 取值函数getter 和 存值setter
+## getter和setter
 
+取值函数getter 和 存值函数setter
 与ES5 一样，在类的内部可以使用 get 和 set 关键字，对某个函数设置存值函数和取值函数，拦截该属性的存取行为
 
 ```javascript
@@ -234,7 +234,7 @@ console.log(descriptor);
 // }
 ```
 
-### 表达式
+## 表达式写法
 
 类可以采用表达式的形式定义
 
@@ -278,9 +278,9 @@ console.log(instance1.sayName());   // "sayName"
 
 
 
-### class 与 this
+## class 与 this
 
-类的方法内部如果有this, 他默认指向类的实例
+类的方法内部如果有this, 默认指向类的实例
 
 ```javascript
 class Person {
@@ -373,9 +373,10 @@ sayName();
 ```
 
 
-### class静态方法
+## 静态方法
 
 类相当于实例的原型，所有在类中定义的方法，都会被实例继承，如果在一个方法前加上 `static` 关键字，则该方法就不会被实例继承，而是通过类来调用，这就成为 ‘静态方法’。
+
 
 ```javascript
 class Person {
@@ -396,14 +397,36 @@ const instance1 = new Person("Tom", 15);
 + instance1.sayName();  // 'Tom'
 + instance1.sayAge();   // 报错：TypeError: instance1.sayAge is not a function
 
-Person.sayName();  // 类的调用必须通过new 操作符 报错：TypeError: Person.sayName is not a function,
-Person.sayAge();   // undefined，请注意，这里的this,指向类本身
++ Person.sayName();  // 非静态方法不能通过类直接调用 报错：TypeError: Person.sayName is not a function,
++ Person.sayAge();   // undefined，请注意，这里的this,指向类本身
 
-Person.sayName();  // Person，静态方法可以和非静态方法重名
++ Person.sayName();  // Person，静态方法可以和非静态方法重名，静态方法可以直接通过类调用
 ```
 
-静态方法虽然不会被实例继承，但是会被子类继承
-非静态方法不会被继承
+- 静态属性: 定义在类本身的；
+- 静态方法: 类本身
+- 普通属性: 
+- 普通方法: 类的原型上
+ 
+
+```javascript
+class Person {
+  static age = 18;    // 在类本身
+  height = 164;       // 在类的实例上
+  static sayAge() {}  // 在类本身
+  sayName() {}        // 在类的原型上
+}
+const Jack = new Person();
+
+Object.getOwnPropertyNames(Person);   // [ 'length', 'prototype', 'sayAge', 'name', 'age' ]
+Object.getOwnPropertyNames(Person.prototype)  // [ 'constructor', 'sayName' ]
+Object.getOwnPropertyNames(Jack)              // [ 'height' ]
+```
+
+
+静态方法虽然不会被实例继承（因为继承的本质是继承的父类原型上的方法和属性，静态方法位于父类本身，当然不会被继承）
+但是会被子类继承（子类实际上就是创建了父类的副本）
+非静态方法不会被继承（这个我有点迷惑，难道说，继承的时候，只拷贝了父类本身的属性，而不拷贝父类原型上的属性）
 
 ```javascript
 class Person {
@@ -438,14 +461,14 @@ class JACK extends Person {
 JACK.PersonSayHello(); // 'hello'
 ```
 
-### 实例属性的新写法
+## 实例属性的新写法
 
 实例属性除了可以定义在 `constructor()` 方法里面的 `this` 上，也可以直接定义在类的最顶层
 实例属性 `state` 与 `sayHello` 的取值位于同一平级，所以不需要加this
 
 ```javascript
 class Person {
-+ state = 0
++ state = 0 // 该属性位于类的实例上
 
   sayHello() {
     console.log("hello");
@@ -457,7 +480,7 @@ const instance1 = new Person();
 ```
 
 
-### 静态属性
+## 静态属性
 
 目前只能通过在外面赋值
 同静态方法一样，在前面加static生成静态属性的方法仍处于提案阶段
@@ -471,7 +494,7 @@ Person.state    // 5
 ```
 
 
-### new.target属性
+## new.target属性
 
 该属性用于判断构造函数是怎么被调用的, 该属性一般用于构造函数中，返回`new`操作符作用于的那个构造函数若构造函数不是通过 `new操作符`或 `Reflect.construct()`调用的， `new.target` 内部会返回 `undefined`
 
@@ -527,6 +550,276 @@ new Person().constructor = Jack;
 const JackInstance = new Jack();  // [Function: Person]
 ```
 
+###  class继承
+
+class可以通过 `extends` 关键字实现继承，子类可以继承父类所有的属性和方法
+
+```javascript
+class Person {
+  color = "red";
+}
+class Jack extends Person {
+  sayColor() {
+    console.log(`子类的color是${this.color}`);
+  }
+}
+
+class Nancy extends Person {
++ color = "black";
+
+  sayColor() {
+    console.log(`子类的color是${this.color}`);
+  }
+}
+const JackInstance = new Jack();
+const NancyInstance = new Nancy();
+
++ JackInstance.sayColor();  // 子类的color是red
++ NancyInstance.sayColor(); // 子类的color是black
+
+```
+
+子类的实例同时是父类和子类的实例，这与ES5一致
+TODO: class没有 isPrototypeOf 方法？
+
+```javascript
+class Person {
+  color = "red";
+}
+class Jack extends Person {
+  // constructor() {
+  //   // super();
+  //   // this.color = "black";
+  // }
+}
+
+const JackInstance = new Jack();
+
++ JackInstance instanceof Person;   // true
++ JackInstance instanceof Jack;   // true
++ Person.isPrototypeOf(JackInstance);   // false
+```
+
+Object.getPrototypeOf()可以从子类上获取父类，可以用来判断一个类是否继承了另一个类
+
+```javascript
+Object.getPrototypeOf(Jack) === Person;  // true
+```
+
+### super
+
+用于重塑子类的this, 如果没有显示添加，会被自动添加
+ 
+ES5构造函数的继承，实际上，是先创建子类的实例对象的`this`, 然后将父类的方法添加到`this`上
+ES6class的继承，实际上，是先将父类实例对象的方法和属性添加到`this`上面（所以必须先调用super方法），然后再用子类构造函数修改`this`
+
+```javascript
+class Jack extends Person{
+
+}
+
+// 等同于
+class Jack extends Person{
+  constructor(...args) {
+    super(...args); 
+  }
+}
+```
+
+在constructor函数内部, 必须在调用super()之后使用this, 否则新建子类的实例会报错
+
+```javascript
+class Person {
+  color = "red";
+}
+class Jack extends Person {
+  constructor() {
+    this.color = "black";
+  }
+}
+
++ const JackInstance = new Jack();  // 报错：ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+
+```
+
+super既可以当作函数使用，也可以当做对象使用，这两种时候用法完全不同
+
+**情况一**： super作为函数调用时，代表父类的构造函数。ES6要求，子类的构造函数必须执行一次super()函数
+子类重的super()虽然代表的是父类，但是实际上，返回的却是子类
+相当于 `Person.prototype.constructor.call(this)`
+
+如下可证实，
+`new.target` 指向的是当前正在执行的函数，可以发现，当创建子类实例的时候（super()执行），此时的`new.target` 指向的是子类的构造函数。也就是说，super()内部的this指向的是 `Jack`
+
+```javascript
+class Person {
+  constructor() {
+    console.log(new.target.name);
+  }
+}
+
+class Jack extends Person {
+  constructor() {
+    super();
+    this.color = "black";
+  }
+}
+
++ const PersonInstance = new Person();  // Person
++ const JackInstance = new Jack();      //  Jack
+```
+
+作为函数时，只能用在子类的构造函数中，用在其他地方就会报错
+
+**情况二**：`super` 作为对象时，
+- 在普通方法中，指向**父类的原型对象**，⚠️ 即无法通过`super`访问定义在父类实例上的方法和属性
+- 在静态方法中，指向父类；
+
+// TODO: 静态方法/静态属性是定义在类本身的，而普通方法/普通属性是定义在类的原型上的，我们使用extends 创建类的实例的时候，实际上，是先将父类实例对象的方法和属性添加到`this`上面，在用子类构造函数修改this指向自己，所以，子类是拿不到位于父类本身的属性和方法的
+
+```javascript
+/* super 普通方法中 */
+class Person {
+  height = "164"; // 该属性位于Person实例上
+
+  sayAge() {      // 该属性位于Person.prototype
+    return "25";
+  }
+  static length = "164";
+}
+
+class Jack extends Person {
++ sayAge() {      // 该属性位于Person.prototype
+    return "18";
+  }
+
++ sayHeight() {     // 访问父类实例上的属性
+    console.log(super.height);
+  }
+
++ sayPersonAge() {  // 访问父类原型上的属性
+    console.log(super.sayAge());
+  }
+}
+const JackInstance = new Jack();
+
++ JackInstance.sayHeight();   // undefined
++ JackInstance.sayPersonAge();  // 18
+
+/* 在普通方法中 --- 联合this */
+// ⚠️：ES6 规定，在子类普通方法中通过super调用父类的方法时，方法内部的this指向当前的子类实例。
+class Person {
++  hello = "我是父类";
+
+  sayHello() {
+    return this.hello;
+  }
+}
+
+class Jack extends Person {
++  hello = "我是子类";
+
+  letPersonHello() {
+    console.log(super.sayHello());
+  }
+}
+const JackInstance = new Jack();
+
+JackInstance.letPersonHello();  // '我是子类'
+
+```
+
+
+```javascript
+/* super 在静态方法中 */
+
+class Person {
++ static age = "18";  // static 静态变量只能通过类本身调用，
+
+  sayAge() {
+    return "18";
+  }
+}
+
+class Jack extends Person {
+  constructor() {
+    super();
+  }
+  static sayPersonAge() {   // 访问父类
+    console.log(super.age);
+  }
+
+  static getPersonAge() { // 访问父类的原型
+    console.log(super.sayAge());
+  }
+}
+
++ Jack.sayPersonAge();  // 18，说明此时的super指向的是 Person本身
++ Jack.getPersonAge();  // 报错，TypeError: (intermediate value).sayAge is not a function，因为sayAge是定义在
+```
+
+
+## Mixin模式的实现
+
+Mixin指的是多个对象合成一个新的对象，新对象具有各个组成成员的接口，他的最简单实现乳腺癌
+
+```javascript
+const a = {
+  a: "a"
+};
+const b = {
+  b: "b"
+};
+const c = { ...a, ...b };
+```
+以上代码，c对象是 a对象 和 b对象的合成，具有二者的接口
+
+下面是一个更完备的实现，将多个类的接口’混入‘ (mix in)另一个类
+
+
+```javascript
+function copyProperties(target, source) {
+  for (let key of Reflect.ownKeys(source)) {
+    if (!["constructor", "prototype", "name"].includes(key)) {
+      let desc = Object.getOwnPropertyDescriptor(source, key);
+      Object.defineProperty(target, key, desc);
+    }
+  }
+}
+
+function mix(...mixins) {
+  class Mix {
+    constructor() {
+      for (let mixin of mixins) {
+        copyProperties(this, new mixin()); // 拷贝实例属性
+      }
+    }
+  }
+
+  for (let mixin of mixins) {
+    copyProperties(Mix, mixin); // 拷贝静态属性
+    copyProperties(Mix.prototype, mixin.prototype); // 拷贝原型属性
+  }
+  return Mix;
+}
+
+```
+上面的代码可以将多个对象合成一个类，使用的时候继承这个类即可
+
+```javascript
+class DistributedEdit extends mix(Loggable, Serializable) {
+  // ...
+}
+```
+
+
+
+
+
 
 ## 参考
 1. [阮一峰的ES6入门 - class基本语法](https://es6.ruanyifeng.com/#docs/class)
+2. [阮一峰的ES6入门 - class继承](https://es6.ruanyifeng.com/#docs/class-extends)
+3. Javascript语法精粹
+
+
