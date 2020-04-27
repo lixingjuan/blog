@@ -1,7 +1,7 @@
 # Class相关
 
 
-## ES6class与ES5构造函数写法对比
+## ES6&ES5对比
 
 Class是通过构造函数方法创建实例的语法糖，本质还是函数 `typeof (class Person{}) === 'function'`;
 新的class写法知识让对象原型的写法更加清晰，更像面向对象编程的语法而已;

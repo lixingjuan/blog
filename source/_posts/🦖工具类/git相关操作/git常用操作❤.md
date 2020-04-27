@@ -24,6 +24,12 @@ git config --global user.name '李幸娟'
 # 修改当前项目用户名
 git config user.name '李幸娟'
 
+# 删除本地仓库的远程关联
+git remote rm origin 
+
+# 为本地仓库添加远程仓库
+git remote add origin https://xxx.git 
+
 ```
 
 ### 修改git配置
@@ -49,7 +55,7 @@ git commit --amend --no-edit
 # 查看本地分支
 git branch
 
-# 查看当前远程分支
+# 查看当前分支的所有远程分支
 git branch -r
 
 # 查看本地及远程所有分支
