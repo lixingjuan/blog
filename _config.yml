@@ -104,7 +104,7 @@ deploy:
   type: git
   repo: https://github.com/lixingjuan/Blog
   # example, https://github.com/hexojs/hexojs.github.io
-  branch: master
+  branch: gh-pages
 markdown:
   render:
     html: true # Doesn't escape HTML content so the tags will appear as html.
