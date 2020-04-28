@@ -23,7 +23,13 @@
 
 * [Class相关](/Blog/🍓前端知识分类/JS相关类/Class相关) 
 
+* [Generate](/Blog/🍓前端知识分类/JS相关类/Generate) 
+
 * [Object](/Blog/🍓前端知识分类/JS相关类/Object) 
+
+* [Promise](/Blog/🍓前端知识分类/JS相关类/Promise) 
+
+* [Reflect](/Blog/🍓前端知识分类/JS相关类/Reflect) 
 
 * [Set+Map学习笔记](/Blog/🍓前端知识分类/JS相关类/Set+Map学习笔记) 
 
@@ -50,6 +56,8 @@
 * [执行上下文](/Blog/🍓前端知识分类/JS相关类/执行上下文) 
 
 * [扩充类型的功能](/Blog/🍓前端知识分类/JS相关类/扩充类型的功能) 
+
+* [数组](/Blog/🍓前端知识分类/JS相关类/数组) 
 
 * [数组方法和业务场景](/Blog/🍓前端知识分类/JS相关类/数组方法和业务场景) 
 

@@ -3,6 +3,7 @@ Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量�
 Less 可以运行在 Node 或浏览器端。
 
 # 常见用法
+
 ## 变量
 
 变量可以用作属性值，也可以用作属性名称，也可以从其他地方引用。
@@ -24,74 +25,79 @@ Less 可以运行在 Node 或浏览器端。
 #header{color: #5B83AD;}
 ```
 
-## 变量作为插值
+## 插值
 
-所谓的差值，就是字符串替换。可以用在选择器名称，css属性名，路径，@import，甚至变量名称都可以。
+变量可以作为插值, 就是字符串替换。
+可以用在选择器名称，css属性名，路径，@import，甚至变量名称都可以。
+
 下面以用在选择器为例，其他都是这种规则：
 
+
 ```less
-// Variables
-@my-selector: banner;
-//Usage
-.@{my-selector}{
+/* 用在选择器名称中 */
++ @my-selector: banner;
+
++ .@{my-selector}{
   font-weight: bold;
   line-height: 40px;
   margin: 0 auto;
 }
+
+/* 作为属性 */
+@base-color: green;
+@dark-color: darken(@base-color, 10%);
+ 
+div{
+  background-color: @dark-color;
+}
 ```
 
 需要这种方式`@{my-selector}`使用,需要加上大括号，
-输出结果如下：
-```css
 
+输出结果如下：
+
+```css
 .banner{
   font-weight: bold;
   line-height: 40px;
   margin: 0 auto;
 }
-```
 
-## 变量可以被引用
-
-```less
-// library
-@base-color: green;
-@dark-color: darken(@base-color, 10%);
-// use of library
-@import"library.less";
 div{
-  background-color:@base-color;
+  background-color: darken(green, 10%);
 }
 ```
 
-## 扩展 Extend
 
-基本用法，先看例子
+## 扩展
 
-:extend()，冒号+extend+括号，意思是把.b的规则扩展到.a中去。
+less支持使用Extend语法将一个选择器的所有属性应用到当前选择器中, 类似于继承；
+语法：:extend()，冒号+extend+括号，
 
-```javascript
-.a:extend(.b){}
+```less
+/* extend基本用法 */
+// 将.b的规则扩展到.a中去
+.a:extend(.b){
+  // ...
+}
+
+// 将所有.b匹配的规则都用到.a上
+.a:extend(.b all){
+  // ...
+}
+
 ```
-
-把所有和.b匹配的规则都用到.a上。
-
-```javascript
-.a:extend(.b all){}
-```
-
 
 当然也可以扩展多个,用逗号隔开：
 
 ```javascript
-.a:extend(.b, .c){}
+// 将.b .c 的规则扩展到.a中去
+.a:extend(.b, .c){
+  // ...
+}
 ```
 
-括号里的扩展源也可以用变量代替。基本上所有的选择器规则都可以使用。
-
-具体是否支持还需要尝试和查询文档。
-
-Extend类似于程序语言中的继承。
+括号里的扩展源也可以用变量代替。基本上所有的选择器规则都可以使用；
 
 ## mixin 混入
 
@@ -127,7 +133,7 @@ Extend类似于程序语言中的继承。
 }
 ```
 
-.a();和#b();就是mixin的语法，这个括号可以不加，建议还是最好加上，增加可读性。
+.a();和#b(); 就是mixin的语法，这个括号可以不加，建议还是最好加上，增加可读性。
 
 语法是不是很简单？
 
@@ -139,7 +145,7 @@ Extend类似于程序语言中的继承。
 }
 ```
 
-## mixin可以和函数一样传递参数
+## mixin传参
 
 定义：
 
@@ -175,10 +181,12 @@ div{
 }
 ```
 
-## less结构可以描述父子关系和节点的层次关系
+## & 替代父名
 
+less结构可以描述父子关系和节点的层次关系
 `&` 在less中代表父选择器的代替符号，
-请看下面的例子，
+
+请看下面的例子：
 
 ```less
 .grand{
@@ -221,7 +229,7 @@ div{
 
 仅仅举个例子，需要什么函数，可以自己查询less的文档。
 
-`length()` 用于计算传入变量代表的值的长度。其实用法也很简单。
+`length()` 用于计算传入变量代表的值的长度
 
 ```less
 @list: "banana", "tomato", "potato", "peach";
@@ -229,7 +237,7 @@ div{
 n: length(@list);
 ```
 
-## 引入指令 @import
+## @import
 
 例子
 
@@ -241,17 +249,18 @@ n: length(@list);
 ```
  
 
-## @import可以加选项
+@import可以加选项
 
 语法: `@import (keyword) "filename";`
 
-- reference: 只引用了使用，不输出，比如引用基础less文件
-- inline: 引用，输出，不处理
-- less: 不管什么后缀名，都认为是less文件的方式引入。
-- css: 不管什么后缀，都认为是css文件
-- once: 只引用一次，默认的引入行为
-- multiple: 可以引用多次
-- optional: 找不到引用文件，不会报错，继续编译。
+keyword:
+1. reference: 只引用了使用，不输出，比如引用基础less文件
+2. inline: 引用，输出，不处理
+3. less: 不管什么后缀名，都认为是less文件的方式引入。
+4. css: 不管什么后缀，都认为是css文件
+5. once: 只引用一次，默认的引入行为
+6. multiple: 可以引用多次
+7. optional: 找不到引用文件，不会报错，继续编译。
 
 ## 参考
 
