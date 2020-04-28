@@ -34,6 +34,8 @@ git remote add origin https://xxx.git
 
 ## 修改git配置
 
+解决gitlat忽略大小写的问题
+
 ```bash
 # 使git检测大小写
 git config core.ignorecase false
