@@ -41,21 +41,21 @@ console.log(map);
 - 获取所有成员的遍历器
 
 ```javascript
-console.log(map.entries());
+map.entries();
 // MapIterator {"a" => 1, "b" => 2}
 ```
 
 - 获取键名的遍历器
 
 ```javascript
-console.log(map.keys());
+map.keys();
 // MapIterator {"a", "b"}
 ```
 
 - 获取键值的遍历器
 
 ```javascript
-console.log(map.values()); 
+map.values()) 
 // MapIterator {1, 2}
 
 ```
