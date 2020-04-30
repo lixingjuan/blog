@@ -46,6 +46,9 @@ git config core.ignorecase false
 # 暂存指定文件
 git add <文件名>
 
+# 暂存所有文件
+git add .
+
 # commit时漏提交
 git add missed-file // missed-file 为遗漏提交文件
 git commit --amend --no-edit
@@ -69,10 +72,10 @@ git branch dev
 # 查看本地分支
 git branch
 
-# 查看当前分支的所有远程分支
+# 查看所有远程分支
 git branch -r
 
-# 查看本地及远程所有分支
+# 查看所有本地分支
 git branch -a 
 
 # 查看当前分支状态
@@ -93,7 +96,17 @@ git branch -m dev uat
 ```bash
 # 切换分支到dev
 git checkout dev
+
+# 创建并切换到dev分支
+git checkout -b dev
 ```
+
+<!-- 切换分支2 -->
+<!--  -->
+<!-- ```bash -->
+<!-- # 创建并切换到新的dev分支 -->
+<!-- git switch -c dev -->
+<!-- ``` -->
 
 删除分支
 
