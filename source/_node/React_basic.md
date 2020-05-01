@@ -1,4 +1,6 @@
 # 初识React
+
+
 ## 将组件渲染进指定元素
 ```javascript
 ReactDOM.render(<h1>李幸娟</h1>，document.getElememtById('app'));
@@ -11,6 +13,7 @@ JSX————————————>javascript对象结构——————
     React.js构造 
 ```
            
+
 ## React将虚拟DOM转换为真实DOM的原理
 ```javascript
 function renderM(eleObj, container) {
@@ -38,11 +41,18 @@ function renderM(eleObj, container) {
 renderM(eleObj, window.yl)
 ```
 
-## React是由 React元素和React组件组成
-### React元素 
+
+
+## 元素/组件
+
+React是由 React元素和React组件组成
+
+React元素 
 - 首字母要小写：凡是首字母小写的都会被认为是React元素
 - React 元素是通过js对象描述DOM结构的一种数据结构
-## React组件
+
+
+React组件
 
 1. 组件的首字母大写
 2. 组件定义完之后可以像React元素一样使用
@@ -50,8 +60,12 @@ renderM(eleObj, window.yl)
      - 将对象的属性封装为props
      - 调用组件，得到返回的React元素
      - ReactDOM把React 元素转为真是的DOM元素并且插入目标容器内部
-## React组件两种定义方式
-- ### 方式一：函数，参数是属性对象
+
+
+React组件两种定义方式
+
+**方式一：函数，参数是属性对象**
+
 ```javascript
 let Message = ({msg,id})=>{
     return <h1>{msg}</h1>;
@@ -60,7 +74,8 @@ let Message = ({msg,id})=>{
 render(<Message msg="hello 自定义组件方法1：函数组件" id="5"/>,window.rootContainer)
 ```
 
-- ### 方式二：类，继承自component
+**方式二：类，继承自component**
+
 ```javascript
 // 方法二：用类的方式(需要将Component从React中解构出来,类继承自Component)
 class Clock2 extends Component {
@@ -105,9 +120,9 @@ class Person extends Component{
 }
 render(<Person name="组件属性：李幸娟"/>,window.componentAttr)
 ```
+
 ## 受控组件
 ### 什么是是受控组件？
 ### 
 
 ## 非受控组件
-###

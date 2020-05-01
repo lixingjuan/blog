@@ -237,8 +237,9 @@ Function.prototype.bind2 = function(context) {
 
 
 
+## 参考文章
 
-- [《javascript高级程序设计-高级技巧》(第5章-Function类型)]
-- [call,apply-MDN]
-- [《JavaScript语言精粹-第四章-扩充基本类型的功能》]
-- [掘金-JavaScript深入之bind的模拟实现](https://juejin.im/post/59093b1fa0bb9f006517b906)
+1. [《javascript高级程序设计-高级技巧》(第5章-Function类型)]
+2. [call,apply-MDN]
+3. [《JavaScript语言精粹-第四章-扩充基本类型的功能》]
+4. [掘金-JavaScript深入之bind的模拟实现](https://juejin.im/post/59093b1fa0bb9f006517b906)

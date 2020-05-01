@@ -37,6 +37,10 @@
 
 * [call和Apply和Bind](/Blog/🍓前端知识分类/JS相关类/call和Apply和Bind) 
 
+* [promise2](/Blog/🍓前端知识分类/JS相关类/promise2) 
+
+* [promise手写](/Blog/🍓前端知识分类/JS相关类/promise手写) 
+
 * [this相关](/Blog/🍓前端知识分类/JS相关类/this相关) 
 
 * [作用域相关](/Blog/🍓前端知识分类/JS相关类/作用域相关) 
@@ -52,8 +56,6 @@
 * [原型和原型链](/Blog/🍓前端知识分类/JS相关类/原型和原型链) 
 
 * [回调函数+异步函数+promise+async,await](/Blog/🍓前端知识分类/JS相关类/回调函数+异步函数+promise+async,await) 
-
-* [手写promise](/Blog/🍓前端知识分类/JS相关类/手写promise) 
 
 * [执行上下文](/Blog/🍓前端知识分类/JS相关类/执行上下文) 
 
@@ -96,6 +98,8 @@
 * [README](/Blog/🍓前端知识分类/vue相关类/README) 
 
 * [开发规范](/Blog/🍓前端知识分类/vue相关类/开发规范) 
+
+* [源码-_update](/Blog/🍓前端知识分类/vue相关类/源码-_update) 
 
 * [源码-createElement](/Blog/🍓前端知识分类/vue相关类/源码-createElement) 
 
