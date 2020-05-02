@@ -101,6 +101,8 @@
 
 * [源码-_update](/Blog/🍓前端知识分类/vue相关类/源码-_update) 
 
+* [源码-createComponent](/Blog/🍓前端知识分类/vue相关类/源码-createComponent) 
+
 * [源码-createElement](/Blog/🍓前端知识分类/vue相关类/源码-createElement) 
 
 * [源码-主线](/Blog/🍓前端知识分类/vue相关类/源码-主线) 
@@ -164,8 +166,6 @@
 * [输入URL后发生了什么](/Blog/🍓前端知识分类/网络安全类/输入URL后发生了什么) 
 
 ## 规范相关 
-
-* [前端模块化](/Blog/🍓前端知识分类/规范相关/前端模块化) 
 
 <h1 style="color:#448d55;">🐙leetCode</h1> 
 
