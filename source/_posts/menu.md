@@ -105,6 +105,8 @@
 
 * [源码-createElement](/Blog/🍓前端知识分类/vue相关类/源码-createElement) 
 
+* [源码-patch](/Blog/🍓前端知识分类/vue相关类/源码-patch) 
+
 * [源码-主线](/Blog/🍓前端知识分类/vue相关类/源码-主线) 
 
 * [源码-构建](/Blog/🍓前端知识分类/vue相关类/源码-构建) 
