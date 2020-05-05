@@ -208,3 +208,6 @@ breadthFirst(root);
 
 
 
+## 应用
+
+<!-- 1. 深度优先遍历：vue源码，createComponent的时候，使用的深度优先遍历，将vnode， push进数组，先子后父 -->
