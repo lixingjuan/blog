@@ -265,5 +265,11 @@ git remote set-url origin 仓库的url
 
 ```
 
+## 删除本地缓存
+
+```bash
+git rm -r --cached .
+```
+
 ## 相关文章：
 - 最常见的 Git 问题和操作清单汇总： https://juejin.im/post/5d5d61e96fb9a06ace5254bd
