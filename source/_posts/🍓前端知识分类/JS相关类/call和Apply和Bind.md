@@ -96,6 +96,7 @@ Math.max.apply(this, [1, 2, 3]);
 
 
 ## bind
+
 - bind方法创建一个新的函数，在bind方法被调用时， `bind`的第一个参数对象被指定为这个新函数的`this` 的绑定对象，而其余参数作为新函数的参数，供调用时使用
 
 1. 举例
@@ -152,6 +153,7 @@ console.log(newDemo.friend);  // "huahua"
 console.log(newDemo.job);     // "programmer"
 
 ```
+
 使用的new操作符之后，绑定的this已经失效，此时的this指向`bindName`,
 
 
@@ -172,66 +174,74 @@ bar(1, 2, 3, 4); // 0,1,2,3,4
 ```
 
 
-### 手写bind: 使用基本类型的扩充实现bind
+<!-- ### 手写bind: 使用基本类型的扩充实现bind -->
 
-```javascript
-Function.prototype.method = function(name, func) {
-  if (!this.prototype[name]) {
-    this.prototype[name] = func;
-  }
-  return this;
-};
-
-Function.method("bind2", function(context, ...args) {
-  // 这里this 指向 sayName
-  this.apply(context, args);
-});
-
-const person = {
-  name: "hong",
-  sayName: function() {
-    console.log(this.name);
-  }
-};
-global.name = "ming";
-
-person.sayName(); // "hong"
-person.sayName.bind2(null, 2); // "ming"
-```
+<!-- ```javascript  
+// Function.prototype.method = function(name, func) {
+  // if (!this.prototype[name]) {
+    // this.prototype[name] = func;
+  // }
+  // return this;
+// };
+// 
+// Function.method("bind2", function(context, ...args) {
+  // return () => {
+    // this.apply(context, args);
+  // };
+// });
+  ``` -->
 
 
 
-### 手写bind: 函数柯里化实现一个bind
+### 手写bind
 
-- 其实bind就是把this 绑定到传入的对象上
+bind 的特点
+1. 返回一个新函数；
+2. 参数1为要绑定this的对象，参数2作为新函数的参数；
+3. 可以使用new操作符，创建bind返回的新函数的实例，此时传入的this失效；
 
-```javascript
-Function.prototype.bind2 = function(context) {
-  // 如果使用bind的不是函数就抛出错误
+
+
+```js
+Function.prototype.bind2 = function(context, ...args) {
   if (typeof this !== "function") {
-    throw new Error("Function.prototype.bind - what is trying to be bound is not callable");
+    throw new Error("bind2只能在函数上使用");
   }
+  const self = this;
+  const fNOP = function() {};
 
-  var self = this;
-  var args = Array.prototype.slice.call(arguments, 1);
-  var fNOP = function() {};
-
-  var fbound = function() {
-    // 当作为构造函数时，this 指向实例，self 指向绑定函数，因为下面一句 `fbound.prototype = this.prototype;`，已经修改了 fbound.prototype 为 绑定函数的 prototype，此时结果为 true，当结果为 true 的时候，this 指向实例。
-    // 当作为普通函数时，this 指向 window，self 指向绑定函数，此时结果为 false，当结果为 false 的时候，this 指向绑定的 context。
-    self.apply(
-      this instanceof self ? this : context,
-      args.concat(Array.prototype.slice.call(arguments))
-    );
+  const fbound = function() {
+    // 1. bind 返回的新函数被当作为构造函数使用时，
+    //    self指向绑定函数，this指向实例，则this的指向不需要修改
+    // 2. bind 返回的新函数被当作为普通函数使用时，
+    //    self指向绑定函数，this指向window, 则修改this指向传入的上下文对象
+    self.apply(this instanceof self ? this : context, args);
   };
 
+  // ？？如果直接修改fbound 的prototype 也会直接修改函数的prototype, 这时可以使用空函数进行中转
+  // ？？ 可是不是直接修改了fNOP.prototype么？这样不也影响函数的prototype
   fNOP.prototype = this.prototype;
-  // 如果直接修改fbound 的prototype 也会直接修改函数的prototype, 这时可以使用空函数进行中转
   fbound.prototype = new fNOP();
-
   return fbound;
 };
+
+
+
+const sayName = function(age) {
+  console.log(this.name);
+  this.age = age;
+  console.log(this.age);
+};
+const Person = {
+  name: "lixingjuan"
+};
+
+const sayPersonName = sayName.bind2(Person, 18);
+sayPersonName();
 ```
+
+
+
 
 
 

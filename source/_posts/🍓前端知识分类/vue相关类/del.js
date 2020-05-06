@@ -1,17 +1,25 @@
-/*
- * bind 的特点
- * 1. 返回一个新函数；
- * 2. 参数1为要绑定this的对象，参数2作为新函数的参数；
- * 3. 可以使用new操作符，创建bind返回的新函数的实例；
- */
-
-/* 函数柯里化实现一个bind */
-
-Function.prototype.bind2 = function(context, ...args) {
-  console.log(this);
-  console.log(typeof this);
+Function.prototype.method = function(name, func) {
+  if (!this.prototype[name]) {
+    this.prototype[name] = func;
+  }
+  return this;
 };
-const sayHi = function() {
-  console.log("Hi");
+
+Function.method("bind2", function(context, ...args) {
+  // 这里this 指向 sayName
+  return () => {
+    this.apply(context, args);
+  };
+});
+
+const sayName = function(age) {
+  console.log(this.name);
+  this.age = age;
+  console.log(this.age);
 };
-sayHi.bind2();
+const Person = {
+  name: "lixingjuan"
+};
+
+const sayPersonName = sayName.bind2(Person, 18);
+const a = new sayPersonName();
