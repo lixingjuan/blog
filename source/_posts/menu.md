@@ -39,8 +39,6 @@
 
 * [call和Apply和Bind](/Blog/🍓前端知识分类/JS相关类/call和Apply和Bind) 
 
-* [for和forEach区别](/Blog/🍓前端知识分类/JS相关类/for和forEach区别) 
-
 * [promise2](/Blog/🍓前端知识分类/JS相关类/promise2) 
 
 * [promise手写](/Blog/🍓前端知识分类/JS相关类/promise手写) 
