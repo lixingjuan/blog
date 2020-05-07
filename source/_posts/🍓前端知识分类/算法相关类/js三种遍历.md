@@ -72,7 +72,7 @@ postOrder(root2); // [ 4, 5, 2, 6, 3, 1 ]
 ## 多叉树 广度优先/深度优先遍历
 
 ```javascript
-var root = {
+const root = {
   name: "A",
   children: [
     {
@@ -118,7 +118,7 @@ var root = {
 ### 深度优先遍历
 
 ```javascript
-/* 迭代 */
+/* 递归 */
 const resultArr = [];
 const DepthFirst1 = function(node) {
   if (node) {
@@ -134,7 +134,8 @@ const DepthFirst1 = function(node) {
   return resultArr;
 };
 
-/* 非迭代 */
+
+/* 非递归 */
 const DepthFirst2 = function(node) {
   if (!node) {
     return;
@@ -153,6 +154,7 @@ const DepthFirst2 = function(node) {
   }
   return arr;
 };
+
 DepthFirst1(root);
 DepthFirst2(root);
 // ['A',  'B1', 'C1', 'D1','D2', 'F1', 'F2', 'F3','D3', 'B2', 'C2', 'C3', 'C4', 'B3']
@@ -210,4 +212,4 @@ breadthFirst(root);
 
 ## 应用
 
-<!-- 1. 深度优先遍历：vue源码，createComponent的时候，使用的深度优先遍历，将vnode， push进数组，先子后父 -->
+1. 深度优先遍历：vue源码，createComponent的时候，使用的深度优先遍历，将vnode， push进数组，先子后父
