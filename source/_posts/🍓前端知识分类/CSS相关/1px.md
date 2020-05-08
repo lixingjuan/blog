@@ -34,6 +34,11 @@ div{
   background-color: red;
 }
 
+
+
+
+
+
 /* 边框 */
 div::after{
   content: "";
@@ -41,6 +46,10 @@ div::after{
   display: block;
   border-bottom: 1px green solid; // ？？ 1: 为什么会出现在上面？
 }
+
+
+
+
 
 /* 有圆角边框 */
 .demo5 {
@@ -56,18 +65,34 @@ div::after{
   height: 1rem;
   background-color: #fff;
   border-radius: 30px;
-}
-.demo6::after {
-  content: "";
-  display: block;
-  width: 200%;
-  height: 200%;
   border: 1px solid rgb(212, 18, 238);
-  transform: scale(0.5, 0.5);
+}
+
+
+.border-1px {
   position: relative;
-  top: -50%;
-  left: -50%;
-  border-radius: 30px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    border: 1px solid rgb(212, 18, 238);
+    color: red;
+    height: 200%;
+    transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    pointer-events: none; /* 防止点击触发 */
+    box-sizing: border-box;
+    @media screen and (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) {
+      width: 300%;
+      height: 300%;
+      -webkit-transform: scale(0.33);
+      transform: scale(0.33);
+    }
+  }
 }
 ```
 
@@ -98,7 +123,7 @@ div::after{
         transform: scaleY(0.33);
     }
 }
-``` -->
+``` 
 
 
 
@@ -139,4 +164,30 @@ div::after{
   border-bottom: 1px solid green; 
   transform: scaleY(0.5); 
 } 
- ``` 
+
+.demo5 {
+  width: 80%;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid rgb(212, 18, 238);
+}
+
+.demo6 {
+  width: 80%;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 30px;
+  position: relative;
+}
+.demo6::after {
+  content: "";
+  display: block;
+  width: 200%;
+  height: 200%;
+  border: 1px solid rgb(212, 18, 238);
+  transform: scale(0.5, 0.5);
+  border-radius: 30px;
+  transform-origin: top left;
+}
+ ``` -->
