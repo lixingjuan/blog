@@ -52,23 +52,6 @@ div::after{
 
 
 /* 有圆角边框 */
-.demo5 {
-  width: 80%;
-  height: 1rem;
-  background-color: #fff;
-  border-radius: 30px;
-  border: 1px solid rgb(212, 18, 238);
-}
-
-.demo6 {
-  width: 80%;
-  height: 1rem;
-  background-color: #fff;
-  border-radius: 30px;
-  border: 1px solid rgb(212, 18, 238);
-}
-
-
 .border-1px {
   position: relative;
   &::before {
@@ -76,14 +59,14 @@ div::after{
     position: absolute;
     left: 0;
     top: 0;
-    width: 200%;
-    border: 1px solid rgb(212, 18, 238);
-    color: red;
-    height: 200%;
++   width: 200%;
++   height: 200%;
++   border: 1px solid rgb(212, 18, 238);
++   transform: scale(0.5);
     transform-origin: left top;
-    -webkit-transform-origin: left top;
-    transform: scale(0.5);
     -webkit-transform: scale(0.5);
+    -webkit-transform-origin: left top;
+    color: red;
     pointer-events: none; /* 防止点击触发 */
     box-sizing: border-box;
     @media screen and (min-device-pixel-ratio: 3), (-webkit-min-device-pixel-ratio: 3) {
