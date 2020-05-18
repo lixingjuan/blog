@@ -209,8 +209,19 @@ complement(#cc3) // #33c
 
 ## @import文件
 
-`@import "path/filename.scss";`
+`@import "./filename.scss";`
 
+1. scss 的 @import 不同于 css 的import ,
+css的@import 是运行到的时候才回去加载资源；
+但是scss的import 规则是生成css文件的时候就把相关文件导入进来；
+如果导入的是css 文件，则@import应用的是css的import规则;
+
+2. 若要使被导入的scss文件，不再单独生成css文件，则在命名时前面加上 _ 即可, 引入文件时不用加
+
+```css
+// 当前目录下文件名称 _reset.scss
+@import './reset'
+```
 
 
 

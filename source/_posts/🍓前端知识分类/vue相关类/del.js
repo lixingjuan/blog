@@ -1,25 +1,97 @@
-Function.prototype.method = function(name, func) {
-  if (!this.prototype[name]) {
-    this.prototype[name] = func;
+export function resolveAsyncComponent(
+  factory: Function,
+  baseCtor: Class<Component>,
+  context: Component
+): Class<Component> | void {
+  if (isTrue(factory.error) && isDef(factory.errorComp)) {
+    return factory.errorComp; // ??返回错误组件？
   }
-  return this;
-};
 
-Function.method("bind2", function(context, ...args) {
-  // 这里this 指向 sayName
-  return () => {
-    this.apply(context, args);
-  };
-});
+  if (isDef(factory.resolved)) {
+    return factory.resolved;
+  }
 
-const sayName = function(age) {
-  console.log(this.name);
-  this.age = age;
-  console.log(this.age);
-};
-const Person = {
-  name: "lixingjuan"
-};
+  if (isTrue(factory.loading) && isDef(factory.loadingComp)) {
+    return factory.loadingComp;
+  }
 
-const sayPersonName = sayName.bind2(Person, 18);
-const a = new sayPersonName();
+  if (isDef(factory.contexts)) {
+    // already pending
+    factory.contexts.push(context);
+  } else {
+    const contexts = (factory.contexts = [context]);
+    let sync = true;
+
+    const forceRender = () => {
+      for (let i = 0, l = contexts.length; i < l; i++) {
+        contexts[i].$forceUpdate();
+      }
+    };
+
+    const resolve = once((res: Object | Class<Component>) => {
+      // cache resolved
+      factory.resolved = ensureCtor(res, baseCtor);
+
+      // invoke callbacks only if this is not a synchronous resolve
+      // (async resolves are shimmed as synchronous during SSR)
+      if (!sync) {
+        forceRender();
+      }
+    });
+
+    const reject = once(reason => {
+      process.env.NODE_ENV !== "production" &&
+        warn(
+          `Failed to resolve async component: ${String(factory)}` +
+            (reason ? `\nReason: ${reason}` : "")
+        );
+      if (isDef(factory.errorComp)) {
+        factory.error = true;
+        forceRender();
+      }
+    });
+
+    const res = factory(resolve, reject);
+
+    if (isObject(res)) {
+      if (typeof res.then === "function") {
+        // () => Promise
+        if (isUndef(factory.resolved)) {
+          res.then(resolve, reject);
+        }
+      } else if (isDef(res.component) && typeof res.component.then === "function") {
+        res.component.then(resolve, reject);
+
+        if (isDef(res.error)) {
+          factory.errorComp = ensureCtor(res.error, baseCtor);
+        }
+
+        if (isDef(res.loading)) {
+          factory.loadingComp = ensureCtor(res.loading, baseCtor);
+          if (res.delay === 0) {
+            factory.loading = true;
+          } else {
+            setTimeout(() => {
+              if (isUndef(factory.resolved) && isUndef(factory.error)) {
+                factory.loading = true;
+                forceRender();
+              }
+            }, res.delay || 200);
+          }
+        }
+
+        if (isDef(res.timeout)) {
+          setTimeout(() => {
+            if (isUndef(factory.resolved)) {
+              reject(process.env.NODE_ENV !== "production" ? `timeout (${res.timeout}ms)` : null);
+            }
+          }, res.timeout);
+        }
+      }
+
+      sync = false;
+
+      return factory.loading ? factory.loadingComp : factory.resolved;
+    }
+  }
+}

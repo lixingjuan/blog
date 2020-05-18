@@ -24,8 +24,6 @@ iPhoneX DPR=3
 方法1: 使用 `transform: scaleY(0.5)`
 
 
-
-
 ```css
 /* 分割线 */
 div{
@@ -39,7 +37,7 @@ div{
 
 
 
-/* 边框 */
+/* 单边框 */
 div::after{
   content: "";
   width: 100%;
@@ -89,88 +87,8 @@ div::after{
  
 
 
-<!--方法2: 媒体查询
-
-```css
-/* 2倍屏 */
-@media only screen and (-webkit-min-device-pixel-ratio: 2.0) {
-    .border-bottom::after {
-        -webkit-transform: scaleY(0.5);
-        transform: scaleY(0.5);
-    }
-}
-/* 3倍屏 */
-@media only screen and (-webkit-min-device-pixel-ratio: 3.0) {
-    .border-bottom::after {
-        -webkit-transform: scaleY(0.33);
-        transform: scaleY(0.33);
-    }
-}
-``` 
-
-
-
-```css
-.demo1, 
-.demo2, 
-.demo3, 
-.demo4 { 
-  background-color: red; 
-} 
-
-.demo3, 
-.demo4 { 
-  width: 100%; 
-  height: 1rem; 
-  background-color: #fff; 
-} 
  
-.demo1 { 
-  height: 1px; 
-} 
-.demo2 { 
-  height: 1px; 
-  transform: scaleY(0.5); 
-} 
- 
-.demo3::after { 
-  content: ""; 
-  width: 100%; 
-  display: block; 
-  border-bottom: 1px green solid; 
-} 
- 
-.demo4:after { 
-  content: ""; 
-  width: 100%; 
-  display: block; 
-  border-bottom: 1px solid green; 
-  transform: scaleY(0.5); 
-} 
 
-.demo5 {
-  width: 80%;
-  height: 1rem;
-  background-color: #fff;
-  border-radius: 30px;
-  border: 1px solid rgb(212, 18, 238);
-}
 
-.demo6 {
-  width: 80%;
-  height: 1rem;
-  background-color: #fff;
-  border-radius: 30px;
-  position: relative;
-}
-.demo6::after {
-  content: "";
-  display: block;
-  width: 200%;
-  height: 200%;
-  border: 1px solid rgb(212, 18, 238);
-  transform: scale(0.5, 0.5);
-  border-radius: 30px;
-  transform-origin: top left;
-}
- ``` -->
+
+ 

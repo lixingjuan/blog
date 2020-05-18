@@ -1,3 +1,17 @@
-console.log("this|is|a,Test".split(["|"]));
+const demo = {
+  value: 0,
+  add1: function() {
+    console.log((this.value = this.value + 1));
+    return this;
+  },
+  sub1: function() {
+    console.log((this.value = this.value - 1));
+    return this;
+  }
+};
 
-console.log("this|is|a|Test".split(/\|/)); // ["this", "is", "a", "Test"]
+demo
+  .add1()
+  .add1()
+  .sub1()
+  .sub1();

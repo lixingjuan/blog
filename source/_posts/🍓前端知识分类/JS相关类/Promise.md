@@ -1,61 +1,79 @@
 # Promise对象
 
 
-## 初步认识
+## 基础定义
 
+promise是什么？
 promise是异步编程的解决方案，可以把它理解为一个容器，里面保存着未来才会解决的事情的一个结果,通常是一个异步操作(如发起的网络请求的结果);
-
-
-Promise三种状态：pending、resolved(fulfilled)、rejected;
+Promise有三种状态：pending、resolved(fulfilled)、rejected;
 
 promise有三个特点：
-1. 对象的状不受外界影响=> 只有异步操作的结果可以决定当前是哪一种状态，任何其他操作都无法改变这个状态；
+1. 对象状态不受外界影响，只有异步操作的结果可以决定当前是哪一种状态，任何其他操作都无法改变这个状态；
 2. 一旦状态改变就不会再变; 状态只有两种改变情况：pending=>fulfilled(resolved) 或 pending => rejected
 3. promise新建后即无法取消(无法使用return等手段使其停止)，一定会得出该操作的结果才会结束；
 
 
 
-<!--  -->
-<!-- ### 基本用法 -->
-<!--  -->
-<!-- ## 目标:⭐ -->
-<!-- - 理解 Promise 原理，能手动实现 Promise 源码; -->
-<!-- - 弄懂 Generator 是如何实现异步编程的，即 Promise 与 Generator 与 async 之间的关系; -->
-<!-- - 掌握co的实现方式，能自己实现 co ( Generator 函数的自动执行 ) 的代码; -->
-
-
+ 
 ## .then()
 
 promise.then(onFulfilled, onRejected)
  
-- 参数要求：可选参数，若非函数必须被忽略；
-- 调用时机：必须被作为函数调用（即没有 this 值）；
-- 返回：then 方法必须返回一个 promise 对象,所以then方法支持链式；
+为什么promise 可以使用then方法呢？
+因为promise返回一个新的promise
+
+拓展:
+日常开发如何实现级联？ 
+
+```js
+const demo = {
+  value: 0,
+  add1: function() {
+    console.log((this.value = this.value + 1));
+    return this;
+  },
+  sub1: function() {
+    console.log((this.value = this.value - 1));
+    return this;
+  }
+};
+
+demo
+  .add1()
+  .add1()
+  .sub1()
+  .sub1()
+```
 
 
 
 ## 方法
+
 Promise.all():
-    - 作用：将多个Promise实例包装成一个新的Promise实例；
-    - 使用举例：`const p = Promise.all([p1, p2, p3]);`
-    - 参数：一个具有Iterater接口的数据结构（p1, p2, p3都是promise的实例，若不是，就先调用Promise.resolve方法将参数转为Promise实例在进一步处理）
-    - 特征：p1, p2, p3全resolved时p才resolved，有一个rejected p就rejected
+
+作用：将多个Promise实例包装成一个新的Promise实例；
+使用举例：`const p = Promise.all([p1, p2, p3]);`
+参数：一个具有Iterater接口的数据结构（p1, p2, p3都是promise的实例，若不是，就先调用Promise.resolve方法将参数转为Promise实例在进一步处理）
+特征：p1, p2, p3全resolved时p才resolved，有一个rejected p就rejected
+
+
 
 Promise.race():
-    - 作用：同all()——————>将多个Promise实例包装成一个新的Promise实例；
-    - 区别：p1, p2, p3有一个实例率先改变状态，p的状态就跟着改变
+
+作用：同all()——————>将多个Promise实例包装成一个新的Promise实例；
+区别：p1, p2, p3有一个实例率先改变状态，p的状态就跟着改变
 
 
 Promise.reject():
-    - 作用：返回一个新的 Promise 实例，该实例的状态为rejected,其参数作为后续方法的参数；
+作用：返回一个新的 Promise 实例，该实例的状态为rejected,其参数作为后续方法的参数；
 
 
 Promise.resolve():
-    - 作用：返回一个新的 Promise 实例，该实例的状态为resolved,其参数作为后续方法的参数；
+作用：返回一个新的 Promise 实例，该实例的状态为resolved,其参数作为后续方法的参数；
 
 
 Promise.prototype.then():
-    - 作用：为 Promise 实例添加状态改变时的回调函数。
+作用：为 Promise 实例添加状态改变时的回调函数。
     - 返回：返回的是一个新的Promise实例；
 
 
@@ -65,6 +83,10 @@ Promise.prototype.catch():
 
 Promise.ptototype.finally():
     - 作用：指定不管 Promise 对象最后状态如何，都会执行的操作。
+
+
+
+
 
 
 ## 红绿灯问题
