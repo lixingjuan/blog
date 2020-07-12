@@ -55,6 +55,7 @@ div::after{
   &::before {
     content: "";
     position: absolute;
+    display: block;
     left: 0;
     top: 0;
 +   width: 200%;

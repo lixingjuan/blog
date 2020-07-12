@@ -34,7 +34,7 @@ git remote add origin https://xxx.git
 
 ## 修改git配置
 
-解决gitlat忽略大小写的问题
+解决gitlab忽略大小写的问题
 
 ```bash
 # 使git检测大小写
@@ -81,14 +81,17 @@ git branch -a
 # 查看当前分支状态
 git status
 
+# 当前分支与远程某分支关联
+git push --set-upstream origin feature-finance-apply
 ```
+
+
 
 修改分支
 
 ```bash
 # 本地分支重命名dev->uat
 git branch -m dev uat
-
 ```
 
 切换分支
@@ -108,6 +111,7 @@ git checkout -b dev
 <!-- git switch -c dev -->
 <!-- ``` -->
 
+
 删除分支
 
 ```bash
@@ -116,6 +120,9 @@ git push origin -d dev
 
 # 删除本地dev分支
 git branch -d dev
+
+# 强行删除本地某分支
+git branch -D feat-finance-apply
 ```
 
 推动分支代码
@@ -140,6 +147,10 @@ git push --set-upstream origin <本地分支名>
 
 # 将【远程指定分支】拉取到【本地指定分支】上：
 git pull origin <远程分支名>:<本地分支名>
+
+# 报错：fatal: refusing to merge unrelated histories（两个分支是两个不同的版本，具有不同的提交历史）
+git pull origin master --allow-unrelated-histories
+
 
 ```
 
@@ -171,6 +182,8 @@ git reset --mixed 9dac256
 ```
 
 
+
+
 ## 文件暂存
 
 ```bash
@@ -189,6 +202,7 @@ git stash pop
 
 
 ## 查看git 状态
+
 ```bash
 git status
 # 有改动了之后.未add查看  
@@ -224,6 +238,9 @@ nothing to commit, working tree clean
 
 ```
 
+
+
+
 ## 拉取远程分支代码
 
 ```bash
@@ -235,6 +252,8 @@ git fetch
 git pull
 
 ```
+
+
 
 ## 查看两个分支的代码差异
 
@@ -248,6 +267,8 @@ Git diff dev uat
 # 显示dev和master分支 src/index.js 的详细差异
 Git diff branch1 branch2 src/index.js
 ```
+
+
 
 ## 查看git 仓库的位置
 
@@ -273,3 +294,8 @@ git rm -r --cached .
 
 ## 相关文章：
 - 最常见的 Git 问题和操作清单汇总： https://juejin.im/post/5d5d61e96fb9a06ace5254bd
+
+
+
+## git 设置代码 & 移除
+https://blog.csdn.net/mnbvcxz111123/article/details/53894242 

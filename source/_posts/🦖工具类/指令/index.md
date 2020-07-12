@@ -1,6 +1,8 @@
 
 ## npm切换淘宝源
 
+npx 是node自带的工具，他都能干嘛呢？
+
 ```bash
 # 使用nrm工具切换淘宝源
 npx nrm use taobao
