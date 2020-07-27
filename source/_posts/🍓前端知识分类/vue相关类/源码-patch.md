@@ -141,6 +141,11 @@ Vue.prototype._init = function(options?: Object) {
 
 ```
 
+
+
+
+
+
 这里首先是合并 `options` 的过程有变化， `_isComponent` 为true , 所以走到了 `initComponent` 过程;
 
 如下是 `initInternalComponent` 过程：
@@ -171,6 +176,10 @@ export function initInternalComponent (
   }
 }
 ```
+
+
+
+
 
 
 再看下 `_init` 函数最后执行的代码
@@ -211,6 +220,8 @@ Vue.prototype._render = function (): VNode {
 }
 ```
 
+
+
 此处 =>
 -  `_parentVnode` 即当前节点的 父VNode；
 -  render函数生成 vnode 即当前组件渲染的vnode;
@@ -218,7 +229,13 @@ Vue.prototype._render = function (): VNode {
 
 
 
+
+
+
 我们知道，执行完 `vm._render` 生成 VNode后，接下来就是要执行 `vm._update` 去渲染 VNode, 来看下组件渲染的过程中有哪些需要注意的 =>
+
+
+
 
 ## vm._update过程注意
 
@@ -265,6 +282,9 @@ Vue.prototype._update = function (vnode: VNode, hydrating?: boolean) {
 
 ```
 
+
+
+
 **_update过程几个关键的逻辑：**
 
 1. 注意点1:  `vm._vnode = vnode:` 这个vnode是通过 `vm._render()` 返回的组件渲染VNode, `vm._vnode` 和 `vm.$vnode` 的关系就是一种父子关系，用代码表示即 `vm._vnode.parent === vm.$vnode`
@@ -294,8 +314,12 @@ Vue.prototype._update = function(vnode: VNode, hydrating?: viikean) {
 
 上面代码中的`activeInstance`的作用就是保持当前上下文的 Vue 实例， 他是lifecyle模块的全局变量，定义在是`export let activeInstance: any = null`, 并且在之前我们调用 createComponentInstanceForVnode 方法的时候从`liftcycle` 模块获取， 并且作为参数传入；
 
+
+
 因为实际上 javascript 是一个单线程， Vue 整个初始化是一个深度遍历的过程，在实例化子组件的过程中，他需要知道当前上下文的Vue实例是什么，并把它作为子组件的父Vue实例；
 之前我们提到，对子组件的实例化过程先会调用 `initInternalComponent(vm, options)` 合并 options, 把 parent存储在 vm.$options 中，在 $mount 之前会调用 initLifecycle(vm)方法
+
+
 
 ```js
 /* initLifecycle */
@@ -317,6 +341,8 @@ export function initLifecycle (vm: Component) {
   // ......
 }
 ```
+
+
 
 可以看到， vm.$parent就是用来保留当前 vm的父实例，并且通过parent.$children.push(vm)来把当前的vm存储到父实例的 `$children` 中，在vm._update的过程中，把当前的 vm 赋值给 activeInstance, 同时通过 `const prevActiveInstance = activeInstance` 用 `prevActiveInstance` 保留上一次的 `activeInstance`;
 实际上，`prevActiveInstance` 和当前的 vm 是一个父子关系，当一个vm实例完成他的所有子树的patch或者update过程后，`activeInstance` 会回到他的父实例，这样就完美的保证了`createComponentInstanceForVnode`整个深度遍历过程中，我们在实例化子组件的时候能传入当前子组件的父Vue 实例，并在_init 的过程中，通过 vm.$parent把这个父子关系保留；
@@ -341,6 +367,7 @@ function patch (oldVnode, vnode, hydrating, removeOnly) {
   // ...
 }
 ```
+
 
 这里又回到了本节开始的过程， 之前分析过，负责渲染成DOM的函数是 `createElm`, 注意这里只传了两个参数，所以对应 parentElm 是 undefined, 再来看下他的定义：
 
@@ -420,6 +447,10 @@ function createComponent (vnode, insertedVnodeQueue, parentElm, refElm) {
 在完成组件的整个patch过程后，最后执行insert(parentElm, vnode.elm, refElm) 完成组件的 DOM 插入，
 如果组件 patch 过程中又创建了子组件，那么DOM 的插入顺序是先子后父；
 
+
+
+
+
 ## 总结
 
 到此，一个组件的VNode 如何创建、初始化、渲染的过程学习完毕；
@@ -430,4 +461,3 @@ function createComponent (vnode, insertedVnodeQueue, parentElm, refElm) {
 3. 嵌套组件的插入顺序是先子后父；
 
 
-chess测试测试车司机疯狂世界风口浪尖上看到飞机上看减肥v曾许诺明尼苏达父are剖

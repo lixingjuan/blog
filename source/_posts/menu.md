@@ -1,8 +1,6 @@
 
 * [Home](/Blog)
 
-* [GO](/Blog//GO) 
-
 * [README](/Blog//README) 
 
 * [ToMyself](/Blog//ToMyself) 
@@ -18,6 +16,8 @@
 * [1px](/Blog/🍓前端知识分类/CSS相关类/1px) 
 
 * [Grid速成](/Blog/🍓前端知识分类/CSS相关类/Grid速成) 
+
+* [blur和change](/Blog/🍓前端知识分类/CSS相关类/blur和change) 
 
 * [less速成](/Blog/🍓前端知识分类/CSS相关类/less速成) 
 
@@ -186,6 +186,8 @@
 * [CDN的原理](/Blog/🍓前端知识分类/网络安全类/CDN的原理) 
 
 * [HTTP2.0](/Blog/🍓前端知识分类/网络安全类/HTTP2.0) 
+
+* [cookie为什么不安全](/Blog/🍓前端知识分类/网络安全类/cookie为什么不安全) 
 
 * [前端鉴权](/Blog/🍓前端知识分类/网络安全类/前端鉴权) 
 
