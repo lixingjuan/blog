@@ -7,6 +7,8 @@ this其实是**函数被调用时**发生的绑定，并不是在编写的时候
 this的指向完全取决于函数被调用的位置
 
 
+
+
 ## this绑定四种规则
 
 先找到函数的调用位置，然后判断需要应用下面四条规则中的那一条
@@ -18,14 +20,17 @@ this有四种绑定规则, 优先级依次
 
 
 
+
+
 ### new绑定
 
 
-使用new来调用函数，或者说发生构造函数调用时，会自动执行下面的操作
+使用new来调用函数 (或者说发生构造函数调用时)，会自动执行下面的操作
 1. 创建（或者说构造）一个全新的对象
 2. 这个新对象会被执行 [[原型]] 连接
 3. 这个新对象会被绑定到函数调用的this
 4. 如果函数没有返回其他对象，那么new表达式中的函数调用会自动返回这个新对象
+
 
 
 ```javascript
@@ -132,6 +137,44 @@ Number.prototype.integer = function() {
 };
 console.log((10 / 3).integer());
 ```
+
+
+
+
+
+## 面试真题
+
+ 
+1. 四种具体情况
+   1. 函数是否在new中调用（new 绑定）？如果是的话this绑定的是新创建的对象 `var bar = new Foo()`
+   2. 函数是否通过call、apply(显示绑定) 或者硬绑定调用？ 如果是的话，this绑定的是指定的对象 `var bar = foo.call(obj2)`
+   3. 对象是否在某个上下文对象中调用（隐式绑定）？如果是的话，this绑定的是那个上下文对象 `var bar = obj1.foo()`
+   4. 如果都不是的话，使用默认绑定。如果在严格模式下，就绑定到undefined, 否则绑定到全局对象 `var bar = foo()`
+
+
+
+
+2. 
+```javascript
+window.name = "ByteDance";
+
+function Foo() {
+  this.name = "bar";
+}
+
+Foo.prototype.getName = function() {
+  console.log(this);
+  return this.name + 1;
+};
+
+let foo = new Foo();
+let getName = foo.getName;
+
+console.log(getName()); // 'ByteDance'
+console.log(foo.getName()); // 'bar1'
+console.log(getName.call(Foo)); // 'Foo1'
+```
+
 
 
 ## 参考文章

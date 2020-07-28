@@ -1,45 +1,3 @@
-## vue/react 的key的作用
-
-渲染真实DOM的开销非常大，当我们修改了某个元素，如果直接渲染到DOM上，会引起整个DOM树的重绘和重排，
-
-而diff算法，可以帮助我们只更新那一小块DOM，而不是更新整个DOM
-
-diff算法会根据真实DOM生成一棵 virtual DOM , 当virtual DOM某个节点的数据改变后，会生成一棵新的VNode, 
-然后VNode 和 old VNode 做对比，发现不一样的地方就直接修改在真实DOM上（即调用patch算法，一边比较一边给真实DOM打补丁）
-
-2. virtual DOM 和真实DOM的区别？
-
-```js
-/* 真实DOM */
-<div>
-    <span>
-        222
-    </span>
-</div>
-```
-
-```js
-/* VNode (伪代码) */
-var Vnode = {
-    tag: 'div',
-    children: {
-        tag: 'span',
-        text: '222'
-    }
-}
-```
-
-3. 
-
-
-首先要理解vue框架使用的diff算法， 该算法是就地复用，
-
-
-1. [写 React / Vue 项目时为什么要在列表组件中写 key，其作用是什么](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/1)
-
-
-
-
 ## 数联
 （公司主要做react）
 
@@ -98,3 +56,4 @@ var Vnode = {
 10. 网站安全有没有了解
 11. 深浅拷贝出现原因和的处理方法
 12. key的作用
+

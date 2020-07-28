@@ -40,6 +40,8 @@ git remote add origin https://xxx.git
 # 使git检测大小写
 git config core.ignorecase false
 ```
+
+
 ## 提交类操作
 
 ```bash
@@ -52,6 +54,7 @@ git add .
 # commit时漏提交
 git add missed-file // missed-file 为遗漏提交文件
 git commit --amend --no-edit
+
 
 ```
 
@@ -294,7 +297,7 @@ git rm -r --cached .
 
 ## 相关文章：
 - 最常见的 Git 问题和操作清单汇总： https://juejin.im/post/5d5d61e96fb9a06ace5254bd
-
+- [git merge和git rebase的区别](https://www.jianshu.com/p/6960811ac89c)
 
 
 ## git 设置代码 & 移除
