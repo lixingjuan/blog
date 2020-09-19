@@ -9,6 +9,11 @@ index：Git追踪库，暂存区
 workspace：本地工作区，
 ```
 
+## 清空本地保存的用户名和密码
+```bash
+git config --system --unset credential.helper
+```
+
 ## 查看git信息
 
 ```bash
@@ -16,7 +21,7 @@ workspace：本地工作区，
 git config --global user.name
 
 # 查看邮箱
-git config --global user.email
+git config --global user.email 
 
 # 修改全局用户名
 git config --global user.name '李幸娟'
@@ -162,6 +167,9 @@ git pull origin master --allow-unrelated-histories
 ```bash
 # 查看历史记录
 git reflog
+
+# 查看本地所有已经commit但未push的内容
+git cherry -v
 ```
 
 ## 回退版本
@@ -283,6 +291,9 @@ git remote -v
 # 手动看
 .git>config>
 url = https://rdc.hand-china.com/gitlab/25037/todoList-dva-react.git
+
+# 删除远程仓库
+git remote rm origin
 
 # git修改远程仓库地址
 git remote set-url origin 仓库的url

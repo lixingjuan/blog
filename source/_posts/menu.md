@@ -115,6 +115,8 @@
 
 * [README](/Blog/🍓前端知识分类/vue相关类/README) 
 
+* [key的作用](/Blog/🍓前端知识分类/vue相关类/key的作用) 
+
 * [开发规范](/Blog/🍓前端知识分类/vue相关类/开发规范) 
 
 * [源码-_update](/Blog/🍓前端知识分类/vue相关类/源码-_update) 
@@ -199,13 +201,25 @@
 
 ## 规范相关类 
 
+<h1 style="color:#448d55;">🍬webpack</h1> 
+
+* [antd按需加载](/Blog/🍬webpack/antd按需加载) 
+
+* [babel编译](/Blog/🍬webpack/babel编译) 
+
+* [eslint](/Blog/🍬webpack/eslint) 
+
+* [perttier](/Blog/🍬webpack/perttier) 
+
+* [常用配置](/Blog/🍬webpack/常用配置) 
+
 <h1 style="color:#448d55;">🐖小李的读书笔记</h1> 
 
 * [设计模式](/Blog/🐖小李的读书笔记/设计模式) 
 
-<h1 style="color:#448d55;">🐙leetCode</h1> 
+<h1 style="color:#448d55;">🐳leetCode</h1> 
 
-* [test](/Blog/🐙leetCode/test) 
+* [test](/Blog/🐳leetCode/test) 
 
 <h1 style="color:#448d55;">🦖工具类</h1> 
 
@@ -242,16 +256,4 @@
 * [安装虚拟机](/Blog/🦖工具类/系统操作/安装虚拟机) 
 
 * [查看本地ip之类的配置(windows IP配置)🥝](/Blog/🦖工具类/系统操作/查看本地ip之类的配置(windows IP配置)🥝) 
-
-## 🐳webpack 
-
-* [antd按需加载](/Blog/🦖工具类/🐳webpack/antd按需加载) 
-
-* [babel编译](/Blog/🦖工具类/🐳webpack/babel编译) 
-
-* [eslint](/Blog/🦖工具类/🐳webpack/eslint) 
-
-* [perttier](/Blog/🦖工具类/🐳webpack/perttier) 
-
-* [常用配置](/Blog/🦖工具类/🐳webpack/常用配置) 
 
