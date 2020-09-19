@@ -5,6 +5,8 @@
 
 * [ToMyself](/Blog//ToMyself) 
 
+<h1 style="color:#448d55;">分享会记录</h1> 
+
 * [理解目录](/Blog//理解目录) 
 
 * [知识点目录](/Blog//知识点目录) 
@@ -36,8 +38,6 @@
 * [Class相关](/Blog/🍓前端知识分类/JS相关类/Class相关) 
 
 * [Generate](/Blog/🍓前端知识分类/JS相关类/Generate) 
-
-* [Math](/Blog/🍓前端知识分类/JS相关类/Math) 
 
 * [Object](/Blog/🍓前端知识分类/JS相关类/Object) 
 
@@ -205,21 +205,17 @@
 
 * [antd按需加载](/Blog/🍬webpack/antd按需加载) 
 
-* [babel编译](/Blog/🍬webpack/babel编译) 
-
 * [eslint](/Blog/🍬webpack/eslint) 
 
 * [perttier](/Blog/🍬webpack/perttier) 
-
-* [常用配置](/Blog/🍬webpack/常用配置) 
 
 <h1 style="color:#448d55;">🐖小李的读书笔记</h1> 
 
 * [设计模式](/Blog/🐖小李的读书笔记/设计模式) 
 
-<h1 style="color:#448d55;">🐳leetCode</h1> 
+<h1 style="color:#448d55;">🐙leetCode</h1> 
 
-* [test](/Blog/🐳leetCode/test) 
+<h1 style="color:#448d55;">🐳leetCode</h1> 
 
 <h1 style="color:#448d55;">🦖工具类</h1> 
 
@@ -256,4 +252,6 @@
 * [安装虚拟机](/Blog/🦖工具类/系统操作/安装虚拟机) 
 
 * [查看本地ip之类的配置(windows IP配置)🥝](/Blog/🦖工具类/系统操作/查看本地ip之类的配置(windows IP配置)🥝) 
+
+## 🐳webpack 
 
