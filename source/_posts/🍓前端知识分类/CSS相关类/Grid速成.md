@@ -1,23 +1,20 @@
 # 测试
 
-[效果测试](https://jsbin.com/jepakat/edit?html,css,output)
+[效果测试](https://jsbin.com/piyunuwume/edit?html,css,output)
 
 
 # grid 速成
+
 
 # 容器属性
 
 **display**
 
 ```css
-
 display: grid;
 display: inline-grid;   // 允许grid后紧跟元素，同inline-block
 
 ```
-
-
-
 
 
 
@@ -51,8 +48,15 @@ display: inline-grid;   // 允许grid后紧跟元素，同inline-block
 
 
  
+## 自动生成的行和列的宽度
 
+如果一个容器只有三列, 但是一个项目指定在第五列，则会自动生成一个第四列，该属性则用于指定自动生成的列的宽度；
+若不指定，浏览器则完全按照单元格内容的大小赋予宽度；
 
+```css
+grid-auto-columns: []
+grid-auto-rows: []
+```
 
 
 
@@ -164,9 +168,11 @@ grid-auto-flow: row/column dense; // 某些项目设置位置后，其他项目�
 
 ## 单元格内容位置
 
+设置在父元素上
 
 
-**justify-items**
+
+**justify-items**,
 
 ```css
 justify-items: start | end | center | stretch;

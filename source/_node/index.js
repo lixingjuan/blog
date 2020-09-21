@@ -8,9 +8,9 @@ const fs = require("fs");
 const path = require("path");
 
 /* 菜单位置 */
-const menuPosition = `/Users/lixingjuan/Documents/Git_projects/Blog/source/_posts/menu.md`;
+const menuPosition = `/Users/lixingjuan/Documents/code-Git_Projects/Blog/source/_posts/menu.md`;
 /* 开始遍历的位置 */
-const beginPath = `/Users/lixingjuan/Documents/Git_projects/Blog/source/_posts`;
+const beginPath = `/Users/lixingjuan/Documents/code-Git_Projects/Blog/source/_posts`;
 /* 一级菜单所在的深度 */
 const firstDepth = beginPath.split("/").length;
 /* 初始字符串 */
