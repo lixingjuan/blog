@@ -5,6 +5,12 @@
 
 * [ToMyself](/Blog//ToMyself) 
 
+<h1 style="color:#448d55;">乱七八拉糟</h1> 
+
+* [feb](/Blog/乱七八拉糟/feb) 
+
+* [生活记录](/Blog/乱七八拉糟/生活记录) 
+
 * [理解目录](/Blog//理解目录) 
 
 * [知识点目录](/Blog//知识点目录) 
@@ -45,11 +51,11 @@
 
 * [Set+Map学习笔记](/Blog/🍓前端知识分类/JS相关类/Set+Map学习笔记) 
 
-* [call和Apply和Bind](/Blog/🍓前端知识分类/JS相关类/call和Apply和Bind) 
+* [async](/Blog/🍓前端知识分类/JS相关类/async) 
 
-* [flat](/Blog/🍓前端知识分类/JS相关类/flat) 
+* [flat实现](/Blog/🍓前端知识分类/JS相关类/flat实现) 
 
-* [promise2](/Blog/🍓前端知识分类/JS相关类/promise2) 
+* [for和forEach的区别](/Blog/🍓前端知识分类/JS相关类/for和forEach的区别) 
 
 * [promise手写](/Blog/🍓前端知识分类/JS相关类/promise手写) 
 
@@ -67,7 +73,11 @@
 
 * [原型和原型链](/Blog/🍓前端知识分类/JS相关类/原型和原型链) 
 
-* [回调函数+异步函数+promise+async,await](/Blog/🍓前端知识分类/JS相关类/回调函数+异步函数+promise+async,await) 
+* [合并空值](/Blog/🍓前端知识分类/JS相关类/合并空值) 
+
+* [废弃](/Blog/🍓前端知识分类/JS相关类/废弃) 
+
+* [异步函数的执行顺序问题](/Blog/🍓前端知识分类/JS相关类/异步函数的执行顺序问题) 
 
 * [扩充类型的功能](/Blog/🍓前端知识分类/JS相关类/扩充类型的功能) 
 
@@ -88,6 +98,10 @@
 * [继承相关](/Blog/🍓前端知识分类/JS相关类/继承相关) 
 
 * [闭包相关](/Blog/🍓前端知识分类/JS相关类/闭包相关) 
+
+## TypeScript 
+
+* [ts](/Blog/🍓前端知识分类/TypeScript/ts) 
 
 ## dva相关类 
 
@@ -183,6 +197,8 @@
 
 * [js三种遍历](/Blog/🍓前端知识分类/算法相关类/js三种遍历) 
 
+* [排序](/Blog/🍓前端知识分类/算法相关类/排序) 
+
 ## 网络安全类 
 
 * [CDN的原理](/Blog/🍓前端知识分类/网络安全类/CDN的原理) 
@@ -199,9 +215,9 @@
 
 * [输入URL后发生了什么](/Blog/🍓前端知识分类/网络安全类/输入URL后发生了什么) 
 
-## 规范相关类 
-
 <h1 style="color:#448d55;">🐖小李的读书笔记</h1> 
+
+* [test](/Blog/🐖小李的读书笔记/test) 
 
 * [《Linux操作系统实用教程》](/Blog/🐖小李的读书笔记/《Linux操作系统实用教程》) 
 
@@ -214,6 +230,14 @@
 * [git常用操作❤](/Blog/🦖工具类/git相关操作/git常用操作❤) 
 
 * [代码提交校验](/Blog/🦖工具类/git相关操作/代码提交校验) 
+
+## webpack 
+
+* [antd按需加载](/Blog/🦖工具类/webpack/antd按需加载) 
+
+* [eslint](/Blog/🦖工具类/webpack/eslint) 
+
+* [perttier](/Blog/🦖工具类/webpack/perttier) 
 
 ## 指令 
 
@@ -241,13 +265,5 @@
 
 * [安装虚拟机](/Blog/🦖工具类/系统操作/安装虚拟机) 
 
-* [查看本地ip之类的配置(windows IP配置)🥝](/Blog/🦖工具类/系统操作/查看本地ip之类的配置(windows IP配置)🥝) 
-
-## 🐳webpack 
-
-* [antd按需加载](/Blog/🦖工具类/🐳webpack/antd按需加载) 
-
-* [eslint](/Blog/🦖工具类/🐳webpack/eslint) 
-
-* [perttier](/Blog/🦖工具类/🐳webpack/perttier) 
+* [查看本地ip之类的配置(window)](/Blog/🦖工具类/系统操作/查看本地ip之类的配置(window)) 
 
