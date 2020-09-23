@@ -1,16 +1,10 @@
-/*
- * @version: 0.0.1
- * @Author: lixingjuan <xingjuan.li@hand-china.com>
- * @Date: 2020-03-01 08:59:01
- * @copyright: Copyright (c) 2019, Hand
- */
 const fs = require("fs");
 const path = require("path");
 
 /* 菜单位置 */
-const menuPosition = `/Users/lixingjuan/Documents/code-Git_Projects/Blog/source/_posts/menu.md`;
+const menuPosition = `${path.dirname(__dirname)}/_posts/menu.md`;
 /* 开始遍历的位置 */
-const beginPath = `/Users/lixingjuan/Documents/code-Git_Projects/Blog/source/_posts`;
+const beginPath = `${path.dirname(__dirname)}/_posts`;
 /* 一级菜单所在的深度 */
 const firstDepth = beginPath.split("/").length;
 /* 初始字符串 */
@@ -20,7 +14,7 @@ const initialString = `
 /**
  * @des 同步清空目录文件
  * @param {String} menuPosition 菜单文件所在的位置
- * @param {String} 初始化菜单要写入的文件
+ * @param {String} initialString 初始化菜单要写入的文件
  */
 fs.writeFileSync(menuPosition, initialString);
 
@@ -28,7 +22,7 @@ fs.writeFileSync(menuPosition, initialString);
  * @des 向指定路径写入内容
  * @param {String} title 要写入的内容
  */
-const writeToMenu = function(title) {
+const writeToMenu = function (title) {
   fs.appendFileSync(menuPosition, `${title} \n\n`, "utf8");
 };
 
@@ -39,13 +33,14 @@ const writeToMenu = function(title) {
  * @param {String} item 文件名称(带扩展名)
  * @return:
  */
-const getTitle = function(linkOrTitle, _postPosition, item) {
+const getTitle = function (linkOrTitle, _postPosition, item) {
   if (linkOrTitle === "link") {
     return `* [${item.slice(0, -3)}](/Blog/${_postPosition.slice(
       beginPath.length + 1
     )}/${item.slice(0, -3)})`;
   } else {
-    const postionDepth = (_postPosition + "/" + item).split("/").length - firstDepth;
+    const postionDepth =
+      (_postPosition + "/" + item).split("/").length - firstDepth;
     switch (postionDepth) {
       case 1:
         return `<h1 style="color:#448d55;">${item}</h1>`;
@@ -61,18 +56,23 @@ const getTitle = function(linkOrTitle, _postPosition, item) {
  * @param {String} 要遍历的路径
  * @return:
  */
-const generateMenu = _postPosition => {
+const generateMenu = (_postPosition) => {
   const floderArr = fs
     .readdirSync(_postPosition)
     .filter(
-      item =>
-        !["menu.md", "home.md", "temporary.md", ".DS_Store", "changelog.md", "menu2.md"].includes(
-          item
-        )
+      (item) =>
+        ![
+          "menu.md",
+          "home.md",
+          "temporary.md",
+          ".DS_Store",
+          "changelog.md",
+          "menu2.md",
+        ].includes(item)
     );
 
   if (floderArr.length) {
-    floderArr.map(item => {
+    floderArr.map((item) => {
       // 如果文件前面有 _ 就不遍历
       if (item.split("")[0] === "_") {
         return;

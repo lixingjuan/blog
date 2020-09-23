@@ -1,6 +1,7 @@
 
 ## npm切换淘宝源
 
+npx - 是从npm v5.2.0时引入的一条命令，方便开发者执行本地已安装的可执行工具，不必配置scripts或者全局安装;
 npx 是node自带的工具，他都能干嘛呢？
 
 ```bash
@@ -12,8 +13,24 @@ npx nrm use npm
 ```
 
 
+## node-sass安装慢或失败
 
-## 切换node版本 
+设置npm镜像
+
+```bash
+# 用法1
+SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ npm install node-sass
+
+# 用法2
+npm config set sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
+
+# yarn 的 config 会继承 npm 的 config，所以只用设置 npm 的映射就行，
+# 当然，如果不放心也可以:
+
+yarn config set sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
+```
+
+## 切换node版本
 
 nvm - node.js version management，nodejs的版本管理工具
 
@@ -34,9 +51,3 @@ nvm current
 nvm ls
 ```
 
-## 执行脚本
-npx - 是从npm v5.2.0时引入的一条命令，方便开发者执行本地已安装的可执行工具，不必配置scripts或者全局安装；
-
-```bash
-
-```

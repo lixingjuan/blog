@@ -26,12 +26,16 @@ hexo d
 
 ```
 
+## 环境需求
+
+node 12.x.x
+
 ## Other
 
 1. 使用的主题book
    - [git地址](https://github.com/kaiiiz/hexo-theme-book-demo)
 
- 
+
 
 
 
