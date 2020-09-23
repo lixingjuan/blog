@@ -1,11 +1,5 @@
-```javascript
 
-/*
- * @version: 0.0.1
- * @Author: lixingjuan <xingjuan.li@hand-china.com>
- * @Date: 2020-02-02 08:40:56
- * @copyright: Copyright (c) 2019, Hand
- */
+```javascript
 class MyPromise {
   constructor(executor) {
     // 初始化状态
