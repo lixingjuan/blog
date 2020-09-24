@@ -5,12 +5,6 @@
 
 * [ToMyself](/Blog//ToMyself) 
 
-<h1 style="color:#448d55;">乱七八拉糟</h1> 
-
-* [feb](/Blog/乱七八拉糟/feb) 
-
-* [生活记录](/Blog/乱七八拉糟/生活记录) 
-
 * [理解目录](/Blog//理解目录) 
 
 * [知识点目录](/Blog//知识点目录) 
@@ -43,8 +37,6 @@
 
 * [Generate](/Blog/🍓前端知识分类/JS相关类/Generate) 
 
-* [Object](/Blog/🍓前端知识分类/JS相关类/Object) 
-
 * [Promise](/Blog/🍓前端知识分类/JS相关类/Promise) 
 
 * [Reflect](/Blog/🍓前端知识分类/JS相关类/Reflect) 
@@ -52,6 +44,8 @@
 * [Set+Map学习笔记](/Blog/🍓前端知识分类/JS相关类/Set+Map学习笔记) 
 
 * [async](/Blog/🍓前端知识分类/JS相关类/async) 
+
+* [call和Apply和Bind](/Blog/🍓前端知识分类/JS相关类/call和Apply和Bind) 
 
 * [flat实现](/Blog/🍓前端知识分类/JS相关类/flat实现) 
 
@@ -100,6 +94,8 @@
 * [闭包相关](/Blog/🍓前端知识分类/JS相关类/闭包相关) 
 
 ## TypeScript 
+
+* [index](/Blog/🍓前端知识分类/TypeScript/index) 
 
 * [ts](/Blog/🍓前端知识分类/TypeScript/ts) 
 
@@ -191,7 +187,7 @@
 
 ## 浏览器相关类 
 
-* [浏览器内核+线程+进程问题](/Blog/🍓前端知识分类/浏览器相关类/浏览器内核+线程+进程问题) 
+* [EventLoop](/Blog/🍓前端知识分类/浏览器相关类/EventLoop) 
 
 ## 算法相关类 
 
