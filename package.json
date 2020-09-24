@@ -6,12 +6,12 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server",
+    "hot": "hexo s -g --debug",
     "start": "hexo clean && node ./source/_node/index.js && hexo server",
     "up": "hexo clean && node ./source/_node/index.js && hexo g && hexo d"
   },
   "hexo": {
-    "version": "4.2.1"
+    "version": "4.2.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
