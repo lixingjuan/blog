@@ -1,41 +1,31 @@
-const a = [7, 92, 8, 45, 28];
+let arr = [
+  3,
+  44,
+  38,
+  5,
+  47,
+  15,
+  88,
+  23,
+  21,
+  12,
+  333,
+  218,
+  36,
+  26,
+  27,
+  2,
+  46,
+  4,
+  19,
+  50,
+  48
+];
 
-/* 写法1 */
-// function quickSort(array) {
-//   if (array.length < 2) {
-//     return array;
-//   }
-//   const target = array[0];
-//   let left = [];
-//   let right = [];
-//   for (let i = 1; i < array.length; i++) {
-//     if (array[i] < target) {
-//       left.push(array[i]);
-//     } else {
-//       right.push(array[i]);
-//     }
-//   }
-//   return [...left, target, ...right];
-// }
-function quickSort(array, left, right) {
-  var length = array.length;
-  (left = typeof left === "number" ? left : 0),
-    (right = typeof right === "number" ? right : length - 1);
+const obj = {};
 
-  if (left < right) {
-    var index = left - 1;
-    for (var i = left; i <= right; i++) {
-      if (array[i] <= array[right]) {
-        index++;
-        var temp = array[index];
-        array[index] = array[i];
-        array[i] = temp;
-      }
-    }
-    quickSort(array, left, index - 1);
-    quickSort(array, index + 1, right);
-  }
-  return array;
-}
-
-console.log(quickSort(a));
+Object.defineProperty(obj, "age", {
+  value: 22
+});
+obj.age = 55;
+console.log(obj.age);

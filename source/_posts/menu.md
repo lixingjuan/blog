@@ -5,6 +5,8 @@
 
 * [ToMyself](/Blog//ToMyself) 
 
+* [plan](/Blog//plan) 
+
 * [理解目录](/Blog//理解目录) 
 
 * [知识点目录](/Blog//知识点目录) 

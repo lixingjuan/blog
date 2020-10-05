@@ -1,0 +1,118 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "prettier.printWidth": 80,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "react",
+      "autoFix": true
+    }
+  ],
+  "files.associations": {
+    // tab键自动补全html
+    "*.vue": "vue"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "fcrespo82.markdown-table-formatter",
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": true // 打开markdown文件的智能感知提示，解决markdown文件代码片段不生效问题
+  },
+  "markdown.extension.syntax.plainTheme": true,
+  "vetur.format.defaultFormatter.html": "prettier",
+  // 始终自动更新路径
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  // 代码菜单的位置
+  "workbench.sideBar.location": "left",
+  "search.location": "panel",
+  "editor.suggestSelection": "first", // 默认选择推荐值的第一个
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // "terminal.integrated.shell.osx": "/bin/bash", // 使用单引号代替双引号
+  // "prettier.singleQuote": false,
+  "eslint.enable": true,
+  // 检测文件没有头部注释，自动添加文件头部注释
+  "fileheader.configObj": {
+    "autoAdd": false
+  },
+  "spaced-comment": 2,
+  // 文件头部注释 com + shift + i && com + shift + i
+  "fileheader.customMade": {
+    "": "",
+    "version": "0.0.1",
+    "Author": "lixingjuan <xingjuan.li@hand-china.com>",
+    "Date": "Do not edit",
+    "copyright": "Copyright (c) 2019, Hand"
+  },
+  // 函数注释，com + shift + T && com + shift + T
+  "fileheader.cursorMode": {
+    "des ": "",
+    "param": "",
+    "return": ""
+  },
+  "todohighlight.keywords": [
+    {
+      "text": "TODO:",
+      "color": "#fff",
+      "backgroundColor": "#e16c96",
+      "borderRadius": "5px"
+    },
+    {
+      "text": "todo",
+      "color": "#000",
+      "backgroundColor": "#add5a2",
+      "borderRadius": "2px"
+    },
+    {
+      "text": "SEE-HERE:",
+      "color": "#000",
+      "backgroundColor": "#fa7e23",
+      "borderRadius": "5px"
+    },
+    {
+      "text": "？？",
+      "color": "#fff",
+      "backgroundColor": "#5bae23",
+      "borderRadius": "5px"
+    },
+    {
+      "text": "??",
+      "color": "#fff",
+      "backgroundColor": "#5bae23",
+      "borderRadius": "5px"
+    },
+    {
+      "text": "debugger",
+      "color": "#000",
+      "backgroundColor": "#fcd337",
+      "borderRadius": "5px"
+    }
+  ],
+  "markdown-table-formatter.markdownGrammarScopes": ["markdown", "vue"],
+  "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+  "prettier.semi": true,
+  "debug.node.autoAttach": "off",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "pathAlias.aliasMap": {
+    "@": "${cwd}/src",
+    "comp@": "${cwd}/src/components",
+    "com@": "${cwd}/src/common"
+  },
+  "sync.gist": "824a5807444cb570c9c9cfbf85bed4ed",
+  "eslint.options": {
+    // 这里为你项目中配置的.eslintrc.js文件，
+    // "configFile": ".eslintrc.js",
+    // "spaced-comment": 1
+  }
+}
