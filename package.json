@@ -6,7 +6,7 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "hot": "hexo s -g --debug",
+    "hot": "node ./source/_node/index.js && hexo s -g --debug",
     "start": "hexo clean && node ./source/_node/index.js && hexo server",
     "up": "hexo clean && node ./source/_node/index.js && hexo g && hexo d"
   },

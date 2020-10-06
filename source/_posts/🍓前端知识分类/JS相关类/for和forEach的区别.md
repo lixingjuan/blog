@@ -2,8 +2,9 @@
 const arr = [2, 7, 11, 15];
 ```
 
+# for和forEach区别
 
-1. for循环可以通过return 停止循环的执行，forEach 只能抛出错误来停止
+1. for循环可以通过return/break 停止循环的执行，forEach 只能抛出错误来停止
 
 ```js
 // 可以获得返回值，return也可以停止循环
@@ -53,3 +54,35 @@ console.log(demo()); // undefined
 // Error: arr[i] > 3)
 
 ```
+
+
+# break\continue\return
+
+
+const arr = [1, 2, 3];
+
+break: 完全停止掉循环
+（return 效果相同）
+```js
+for (let index = 0; index < arr.length; index++) {
+  if (arr[index] === 2) {
+    break;
+  }
+  console.log(arr[index]);
+}
+// 1
+```
+
+continue: 停止本次循环，进入下一次
+
+```js
+for (let index = 0; index < arr.length; index++) {
+  if (arr[index] === 2) {
+    continue;
+  }
+  console.log(arr[index]);
+}
+// 1 
+// 3
+```
+
