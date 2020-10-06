@@ -22,7 +22,7 @@ fs.writeFileSync(menuPosition, initialString);
  * @des 向指定路径写入内容
  * @param {String} title 要写入的内容
  */
-const writeToMenu = function (title) {
+const writeToMenu = function(title) {
   fs.appendFileSync(menuPosition, `${title} \n\n`, "utf8");
 };
 
@@ -33,7 +33,7 @@ const writeToMenu = function (title) {
  * @param {String} item 文件名称(带扩展名)
  * @return:
  */
-const getTitle = function (linkOrTitle, _postPosition, item) {
+const getTitle = function(linkOrTitle, _postPosition, item) {
   if (linkOrTitle === "link") {
     return `* [${item.slice(0, -3)}](/Blog/${_postPosition.slice(
       beginPath.length + 1
@@ -56,39 +56,43 @@ const getTitle = function (linkOrTitle, _postPosition, item) {
  * @param {String} 要遍历的路径
  * @return:
  */
-const generateMenu = (_postPosition) => {
-  const floderArr = fs
-    .readdirSync(_postPosition)
-    .filter(
-      (item) =>
-        ![
-          "menu.md",
-          "home.md",
-          "temporary.md",
-          ".DS_Store",
-          "changelog.md",
-          "menu2.md",
-        ].includes(item)
-    );
+const generateMenu = _postPosition => {
+  const floderArr = fs.readdirSync(_postPosition);
+  const afterFilter = floderArr.filter(
+    item =>
+      ![
+        "menu.md",
+        "home.md",
+        "temporary.md",
+        ".DS_Store",
+        "changelog.md",
+        "menu2.md"
+      ].includes(item)
+  );
 
-  if (floderArr.length) {
-    floderArr.map((item) => {
-      // 如果文件前面有 _ 就不遍历
-      if (item.split("")[0] === "_") {
-        return;
-      } else if (item.includes(".md")) {
-        // 如果是文件，就写下名字，return/Blog
-        const link = getTitle("link", _postPosition, item);
-        writeToMenu(link);
-        return;
-      } else if (!item.includes(".")) {
-        // 如果是文件夹，就写下名字，继续迭代
-        const title = getTitle("title", _postPosition, item);
-        writeToMenu(title);
-        generateMenu(path.join(_postPosition, item));
-      }
-    });
+  const afterSort = afterFilter.sort((i, j) => parseInt(i) - parseInt(j));
+
+  if (!afterSort.length) {
+    return;
   }
+
+  afterSort.map(item => {
+    // 以_开头的文件不生成目录
+    if (item.startsWith("_")) {
+      return;
+    }
+
+    // 如果是文件，就写下名字
+    if (item.includes(".md")) {
+      const link = getTitle("link", _postPosition, item);
+      writeToMenu(link);
+    } else if (!item.includes(".")) {
+      // 如果是文件夹，就写下名字，继续递归
+      const title = getTitle("title", _postPosition, item);
+      writeToMenu(title);
+      generateMenu(path.join(_postPosition, item));
+    }
+  });
 };
 
 generateMenu(beginPath);
