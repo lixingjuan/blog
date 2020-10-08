@@ -1,4 +1,4 @@
-## vue/react 的key的作用
+# vue/react 的key的作用
 
 渲染真实DOM的开销非常大，当我们修改了某个元素，如果直接渲染到DOM上，会引起整个DOM树的重绘和重排，
 
@@ -29,17 +29,23 @@ var Vnode = {
 }
 ```
 
-3. vue和react 都是采用diff算法来对比新旧虚拟节点，从而更新节点。在vue的diff函数中，在交叉对比中，当新节点和就节点头尾交叉对比没有结果时，会根据新节点的key去对比旧节点数组中的key，从而找到相应旧节点。 如果没找到就认为是新增节点。而如果没有key, 就会采用遍历查找的方式去找到对应的旧节点。相比而言，map映射的速度更快；
+3. vue和react 都是采用diff算法来对比新旧虚拟节点，从而更新节点。在vue的diff函数中，在交叉对比中，当新节点和就节点头尾交叉对比没有结果时，会根据 ==新节点的key去对比旧节点数组中的key== ，从而找到相应旧节点。 如果没找到就认为是新增节点。而如果没有key, 就会采用遍历查找的方式去找到对应的旧节点。相比而言，map映射的速度更快；
 
 
 
 > key 可以给每一个vnode一个唯一id, 可以使 diff算法 **更快、更准确** 的拿到oldVnode 中的对应的 vnode 节点；
 
-1. 更准确：
-   带key 就不是就地复用了， 在sameNode函数中， `a.key === b.key` 对比中可以避免就地复用的情况。所以会更加准确；
-2. 更快：
-   利用key的唯一性生成map对象来获取对应节点，比遍历更快；
 
+
+# key的作用
+
+1. 更准确： 带key 就不是就地复用了， 在sameNode函数中， `a.key === b.key` 对比中可以避免就地复用的情况。所以会更加准确；
+
+> 什么叫就地复用？ 直接使用该部分DOM，虽然是高效的， 但是只适用于不依赖子组件状态或临时DOM状态（如表单输入值），如例所示，将input框下移，会发现 value 值没有随DOM位置而改变
+>  => [演示地址](https://jsbin.com/numiwog/edit?html,output)
+
+
+2. 更快：利用key的唯一性生成map对象映射来获取对应节点，比遍历更快；如果没有key, 咋通过遍历数组的方式；
 
 
 ```js
@@ -91,7 +97,8 @@ function createKeyToOldIdx (children, beginIdx, endIdx) {
 
 
 
-<!-- 首先要理解vue框架使用的diff算法， -->
+# 参考文章
+
 
 
 1. [写 React / Vue 项目时为什么要在列表组件中写 key，其作用是什么](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/1)

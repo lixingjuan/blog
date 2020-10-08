@@ -224,8 +224,9 @@ console.log((10 / 3).integer());
 
 
 
-## 面试真题
+# 考察题目
 
+## 题一
 
 1. 四种具体情况
    1. 函数是否在new中调用（new 绑定）？如果是的话this绑定的是新创建的对象 `var bar = new Foo()`
@@ -233,10 +234,42 @@ console.log((10 / 3).integer());
    3. 对象是否在某个上下文对象中调用（隐式绑定）？如果是的话，this绑定的是那个上下文对象 `var bar = obj1.foo()`
    4. 如果都不是的话，使用默认绑定。如果在严格模式下，就绑定到undefined, 否则绑定到全局对象 `var bar = foo()`
 
+## 题二
+
+以下代码输出什么？
+
+```js
+function Foo() {
+  Foo.a = function() {
+    console.log(1);
+  };
+  this.a = function() {
+    console.log(2);
+  };
+}
+Foo.prototype.a = function() {
+  console.log(3);
+};
+Foo.a = function() {
+  console.log(4);
+};
+
+Foo.a();
+let obj = new Foo();
+obj.a();
+Foo.a();
+Foo.a();
+
+// 4
+// 2
+// 1
+// 1
+```
 
 
 
-2.
+## 题三
+
 ```javascript
 window.name = "ByteDance";
 

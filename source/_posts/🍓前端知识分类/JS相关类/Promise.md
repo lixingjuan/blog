@@ -178,15 +178,15 @@ Promise.allSettled(myPromiseArray)
 
 5. Promise.prototype.then():
 作用：为 Promise 实例添加状态改变时的回调函数。
-    - 返回：返回的是一个新的Promise实例；
+返回：返回的是一个新的Promise实例；
 
 
 6. Promise.prototype.catch():
-    - 作用：用于指定发生错误时的回调函数，方法是.then(null, rejection)或.then(undefined, rejection)的别名。
+作用：用于指定发生错误时的回调函数，方法是.then(null, rejection)或.then(undefined, rejection)的别名。
 
 
 7. Promise.ptototype.finally():
-    - 作用：指定不管 Promise 对象最后状态如何，都会执行的操作。
+作用：指定不管 Promise 对象最后状态如何，都会执行的操作。
 
 
 
@@ -313,3 +313,6 @@ function Promise2(fn) {
 
 构造函数Promise，接受一个函数fn作为参数，内部定义一个方法then和两个函数resolve和rejecte函数，用于在不同的状态下调用,callbacks存放任务队列。
 
+# 相关文章
+
+1. [Promise 必知必会（十道题）](https://juejin.im/post/6844903509934997511)

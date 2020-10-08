@@ -8,6 +8,26 @@
 
 # 容器属性
 
+
+1. display: grid/inline-grid;
+2. grid-template-rows: 每行行高;
+3. grid-template-columns: 每列列宽;
+4. grid-row-gap: 行与行的间隔（行间距）;
+5. grid-column-gap: 列与列的间隔（列间距）;
+6. grid-gap: grid-column-gap和grid-row-gap的合并简写形式;
+7. grid-template-areas: 定义每个子区域名称
+8. grid-auto-flow: 元素流动方向，默认值是row，即"先行后列"。也可以将它设成column，变成"先列后行";
+9. justify-items：单元格内容的水平位置（左中右）
+10. align-items：单元格内容的垂直位置（上中下）
+11. place-items：align-items属性和justify-items属性的合并简写形式。
+12. justify-content: 整个内容区域在容器里面的水平位置（左中右）
+13. align-content: 整个内容区域的垂直位置（上中下）
+14. grid-auto-rows: 浏览器自动创建的多余网格的行高 (写法同grid-template-rows)
+15. grid-auto-columns: 浏览器自动创建的多余网格的列宽 (写法同grid-template-columns)
+16. grid-template: grid-template-columns、grid-template-rows和grid-template-areas这三个属性的合并简写形式
+17. grid: grid-template-rows、grid-template-columns、grid-template-areas、 grid-auto-rows、grid-auto-columns、grid-auto-flow六个属性的合并简写形式
+
+
 **display**
 
 ```css

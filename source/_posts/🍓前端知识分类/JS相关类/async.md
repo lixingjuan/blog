@@ -233,3 +233,20 @@ const generateCodeFun = async (flagArr) => {
 - js是单线程执行的，也就是一次只能执行一个，所有的异步都是使用同步模拟出来的，这么做的目的就是为了避免由于网络原因造成堵塞，如果一张图片没有请求到，下面不需要网络的函数们也不能加载执行只能干等着，性能非常不好
 - 而await的提出又是为了解决同步代码需要他之前的异步代码的结果提出的
 - 所以只在需要之前的异步函数的情况下使用await，不然岂不是辜负了设计者的良苦用心
+
+
+
+
+
+
+# 异步相关参考文章
+
+
+# 参考文章
+1. 阮一峰ES6： http://es6.ruanyifeng.com/#docs/promise
+2. 阮一峰Javascript异步编程的4种方法：https://www.ruanyifeng.com/blog/2012/12/asynchronous＿javascript.html
+3. 一次性让你懂async/await，解决回调地狱 - https://juejin.im/post/5b1ffff96fb9a01e345ba704
+4. ES6 系列之我们来聊聊 Promise- https://github.com/mqyqingfeng/Blog/issues/98
+5. 浏览器进程？线程？傻傻分不清楚！- https://imweb.io/topic/58e3bfa845e5c13468f567d5
+6. Promise 必知必会（十道题）- https://juejin.im/post/5a04066351882517c416715d#heading-4
+7. 手写Promise - https://juejin.im/post/5b2f02cd5188252b937548ab

@@ -1,10 +1,3 @@
-<!--
- * @version: 0.0.1
- * @Author: lixingjuan <xingjuan.li@hand-china.com>
- * @Date: 2020-02-26 09:16:00
- * @copyright: Copyright (c) 2019, Hand
- -->
-# 看lodash源码的一些总结
 
 ## 位掩码
 
@@ -53,13 +46,9 @@ const userBD_2 = 2 | 8
 ```
 
 
-## 深拷贝整体思路
+ 
 
-## 函数柯里化
-1. 定义
-  - 将多个参数的函数
-2. 实现
-
+ 
 ## lodash比较值是否相等
 1. lodash的写法：
 
