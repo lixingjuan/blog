@@ -95,12 +95,6 @@
 
 * [闭包相关](/Blog/1-前端知识分类/JS相关类/闭包相关) 
 
-## TypeScript 
-
-* [index](/Blog/1-前端知识分类/TypeScript/index) 
-
-* [ts](/Blog/1-前端知识分类/TypeScript/ts) 
-
 ## dva相关类 
 
 * [dva抽离数组路由+动态路由配置方法](/Blog/1-前端知识分类/dva相关类/dva抽离数组路由+动态路由配置方法) 

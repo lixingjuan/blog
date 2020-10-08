@@ -1,5 +1,7 @@
 # new Vue 发生了什么
 
+首先看下Vue构造函数
+
 ```js
 /* src/core/instance/index.js  */
 function Vue (options) {
@@ -18,7 +20,9 @@ lifecycleMixin(Vue)
 renderMixin(Vue)
 ```
 
+
 `this._init` 方法在定义在 `initMixin` 中
+
 
 ```js
 /* src/core/instance/init.js */
