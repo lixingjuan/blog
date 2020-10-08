@@ -1,3 +1,8 @@
+# 实现一个遵循Promise/A+ 规范的Promise
+
+1. 一个promise必须具备三种状态(pending|fulfilled(resolved)|rejected)，当处于pending状态时，可以转移到fulfilled(resolved)状态或rejected状态，处于fulfilled(resolved)状态或rejected状态时，状态不再可变
+2. 一个promise必须有then方法，then方法必须接受两个参数;
+3.  then方法必须返回一个promise
 
 ```javascript
 class MyPromise {
@@ -112,4 +117,66 @@ const a = new MyPromise(() => {
 });
 
 
+```
+
+
+## 简易版
+
+```js
+function MyPromise(executor) {
+  let self = this;
+  self.value = undefined;
+  self.reason = undefined;
+  self.status = "pending"; // 默认promise状态是pending
+
+  function resolve(value) {
+    if (self.status === "pending") {
+      // 保证状态一旦变更，不能再次修改
+      self.value = value;
+      self.status = "resolved"; // 成功状态
+    }
+  }
+
+  function reject(reason) {
+    if (self.status === "pending") {
+      self.reason = reason;
+      self.status = "rejected"; // 失败状态
+    }
+  }
+
+  executor(resolve, reject);
+}
+
+MyPromise.prototype.then = function(onFulfilled, onRejected) {
+  let self = this;
+  if (self.status === "resolved") {
+    setTimeout(function() {
+      onFulfilled(self.value);
+    }, 0);
+  }
+  if (self.status === "rejected") {
+    onRejected(self.reason);
+  }
+};
+
+```
+
+
+测试
+
+```js
+let p = new MyPromise(function(resolve, reject) {
+  console.log("start");
+  resolve("data1");
+});
+
+p.then(
+  v => {
+    console.log("success " + v);
+  },
+  v => {
+    console.log("error " + v);
+  }
+);
+console.log("end");
 ```
