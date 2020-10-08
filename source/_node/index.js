@@ -10,6 +10,8 @@ const firstDepth = beginPath.split("/").length;
 /* 初始字符串 */
 const initialString = `
 * [Home](/Blog)\n\n`;
+/* 匹配一级菜单前缀 1- 2-等 */
+let reg = /^\d-/;
 
 /**
  * @des 同步清空目录文件
@@ -41,9 +43,10 @@ const getTitle = function(linkOrTitle, _postPosition, item) {
   } else {
     const postionDepth =
       (_postPosition + "/" + item).split("/").length - firstDepth;
+
     switch (postionDepth) {
       case 1:
-        return `<h1 style="color:#448d55;">${item}</h1>`;
+        return `<h1 style="color:#448d55;">${item.replace(reg, "")}</h1>`;
 
       default:
         return `${"#".repeat(postionDepth)} ${item}`;
@@ -58,6 +61,7 @@ const getTitle = function(linkOrTitle, _postPosition, item) {
  */
 const generateMenu = _postPosition => {
   const floderArr = fs.readdirSync(_postPosition);
+
   const afterFilter = floderArr.filter(
     item =>
       ![
