@@ -1,6 +1,4 @@
-function isFish(animal) {
-  if (typeof animal.swim === "function") {
-    return true;
-  }
-  return false;
+function test(arg) {
+    console.log(arg.length);
 }
+test(2);
