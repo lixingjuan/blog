@@ -114,5 +114,8 @@
     // 这里为你项目中配置的.eslintrc.js文件，
     // "configFile": ".eslintrc.js",
     // "spaced-comment": 1
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }

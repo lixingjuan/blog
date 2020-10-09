@@ -167,15 +167,15 @@
 
 * [5源码-Vue实例挂载的实现](/Blog/2-框架/Vue/5源码-Vue实例挂载的实现) 
 
-* [6源码-render](/Blog/2-框架/Vue/6源码-render) 
-
 * [6源码-合并配置](/Blog/2-框架/Vue/6源码-合并配置) 
 
-* [7源码-生命周期](/Blog/2-框架/Vue/7源码-生命周期) 
+* [7源码-render](/Blog/2-框架/Vue/7源码-render) 
 
-* [8源码-createElement](/Blog/2-框架/Vue/8源码-createElement) 
+* [8源码-生命周期](/Blog/2-框架/Vue/8源码-生命周期) 
 
 * [9源码-_update](/Blog/2-框架/Vue/9源码-_update) 
+
+* [9源码-createElement](/Blog/2-框架/Vue/9源码-createElement) 
 
 * [9源码-patch](/Blog/2-框架/Vue/9源码-patch) 
 
@@ -231,6 +231,8 @@
 
 * [perttier](/Blog/4-一些工具/webpack/perttier) 
 
+* [webpack热更新原理](/Blog/4-一些工具/webpack/webpack热更新原理) 
+
 ## 指令 
 
 * [MAC-shell](/Blog/4-一些工具/指令/MAC-shell) 
@@ -262,6 +264,4 @@
 * [README](/Blog//README) 
 
 * [ToMyself](/Blog//ToMyself) 
-
-* [知识点目录](/Blog//知识点目录) 
 

@@ -19,13 +19,25 @@ let arr = [
   4,
   19,
   50,
-  48
+  48,
 ];
 
-const obj = {};
+function quickSort(arr) {
+  if (arr.length < 1) {
+    return arr;
+  }
 
-Object.defineProperty(obj, "age", {
-  value: 22
-});
-obj.age = 55;
-console.log(obj.age);
+  let left = [];
+  let right = [];
+  let flag = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > flag) {
+      right.push(arr[i]);
+    } else {
+      left.push(arr[i]);
+    }
+  }
+  return [...quickSort(left), flag, ...quickSort(right)];
+}
+
+console.log(quickSort(arr));
