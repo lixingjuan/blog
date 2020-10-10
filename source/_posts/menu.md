@@ -55,8 +55,6 @@
 
 * [for和forEach的区别](/Blog/1-前端知识分类/JS相关类/for和forEach的区别) 
 
-* [promise手写](/Blog/1-前端知识分类/JS相关类/promise手写) 
-
 * [this相关](/Blog/1-前端知识分类/JS相关类/this相关) 
 
 * [事件委托](/Blog/1-前端知识分类/JS相关类/事件委托) 
@@ -135,22 +133,6 @@
 
 * [常见排序](/Blog/1-前端知识分类/算法相关类/常见排序) 
 
-## 网络和安全类 
-
-* [CDN的原理](/Blog/1-前端知识分类/网络和安全类/CDN的原理) 
-
-* [HTTP2.0](/Blog/1-前端知识分类/网络和安全类/HTTP2.0) 
-
-* [cookie为什么不安全](/Blog/1-前端知识分类/网络和安全类/cookie为什么不安全) 
-
-* [前端鉴权](/Blog/1-前端知识分类/网络和安全类/前端鉴权) 
-
-* [加密算法](/Blog/1-前端知识分类/网络和安全类/加密算法) 
-
-* [计算机网络](/Blog/1-前端知识分类/网络和安全类/计算机网络) 
-
-* [输入URL后发生了什么](/Blog/1-前端知识分类/网络和安全类/输入URL后发生了什么) 
-
 <h1 style="color:#448d55;">框架</h1> 
 
 ## Vue 
@@ -169,33 +151,33 @@
 
 * [6源码-render](/Blog/2-框架/Vue/6源码-render) 
 
-* [7源码-合并配置](/Blog/2-框架/Vue/7源码-合并配置) 
+* [7源码-createElement](/Blog/2-框架/Vue/7源码-createElement) 
 
-* [8源码-生命周期](/Blog/2-框架/Vue/8源码-生命周期) 
+* [8源码-_update](/Blog/2-框架/Vue/8源码-_update) 
 
-* [9源码-_update](/Blog/2-框架/Vue/9源码-_update) 
+* [9源码-createComponent](/Blog/2-框架/Vue/9源码-createComponent) 
 
-* [9源码-createElement](/Blog/2-框架/Vue/9源码-createElement) 
+* [10源码-patch](/Blog/2-框架/Vue/10源码-patch) 
 
-* [9源码-patch](/Blog/2-框架/Vue/9源码-patch) 
+* [11源码-合并配置](/Blog/2-框架/Vue/11源码-合并配置) 
 
-* [9源码-异步组件](/Blog/2-框架/Vue/9源码-异步组件) 
+* [12源码-生命周期](/Blog/2-框架/Vue/12源码-生命周期) 
 
-* [9源码-组件注册](/Blog/2-框架/Vue/9源码-组件注册) 
-
-* [10数据劫持](/Blog/2-框架/Vue/10数据劫持) 
-
-* [10源码-createComponent](/Blog/2-框架/Vue/10源码-createComponent) 
-
-* [11源码-响应式原理](/Blog/2-框架/Vue/11源码-响应式原理) 
-
-* [12对象和数组的处理](/Blog/2-框架/Vue/12对象和数组的处理) 
+* [12源码-组件注册](/Blog/2-框架/Vue/12源码-组件注册) 
 
 * [13源码-nextTick](/Blog/2-框架/Vue/13源码-nextTick) 
 
-* [13源码-依赖收集](/Blog/2-框架/Vue/13源码-依赖收集) 
+* [13源码-异步组件](/Blog/2-框架/Vue/13源码-异步组件) 
 
-* [14源码-派发更新](/Blog/2-框架/Vue/14源码-派发更新) 
+* [14数据劫持](/Blog/2-框架/Vue/14数据劫持) 
+
+* [15源码-响应式原理](/Blog/2-框架/Vue/15源码-响应式原理) 
+
+* [16对象和数组的处理](/Blog/2-框架/Vue/16对象和数组的处理) 
+
+* [17源码-依赖收集](/Blog/2-框架/Vue/17源码-依赖收集) 
+
+* [18源码-派发更新](/Blog/2-框架/Vue/18源码-派发更新) 
 
 * [README](/Blog/2-框架/Vue/README) 
 
@@ -215,53 +197,71 @@
 
 * [设计模式](/Blog/3-小李的读书笔记/设计模式) 
 
+<h1 style="color:#448d55;">网络和安全类</h1> 
+
+* [CDN的原理](/Blog/4-网络和安全类/CDN的原理) 
+
+* [HTTP2.0](/Blog/4-网络和安全类/HTTP2.0) 
+
+* [cookie为什么不安全](/Blog/4-网络和安全类/cookie为什么不安全) 
+
+* [前端鉴权](/Blog/4-网络和安全类/前端鉴权) 
+
+* [加密算法](/Blog/4-网络和安全类/加密算法) 
+
+* [计算机网络](/Blog/4-网络和安全类/计算机网络) 
+
+* [输入URL后发生了什么](/Blog/4-网络和安全类/输入URL后发生了什么) 
+
 <h1 style="color:#448d55;">一些工具</h1> 
 
 ## git相关操作 
 
-* [git常用操作❤](/Blog/4-一些工具/git相关操作/git常用操作❤) 
+* [git常用操作❤](/Blog/5-一些工具/git相关操作/git常用操作❤) 
 
-* [代码提交校验](/Blog/4-一些工具/git相关操作/代码提交校验) 
+* [代码提交校验](/Blog/5-一些工具/git相关操作/代码提交校验) 
 
 ## webpack 
 
-* [antd按需加载](/Blog/4-一些工具/webpack/antd按需加载) 
+* [antd按需加载](/Blog/5-一些工具/webpack/antd按需加载) 
 
-* [eslint](/Blog/4-一些工具/webpack/eslint) 
+* [eslint](/Blog/5-一些工具/webpack/eslint) 
 
-* [perttier](/Blog/4-一些工具/webpack/perttier) 
+* [perttier](/Blog/5-一些工具/webpack/perttier) 
 
-* [webpack热更新原理](/Blog/4-一些工具/webpack/webpack热更新原理) 
+* [webpack热更新原理](/Blog/5-一些工具/webpack/webpack热更新原理) 
 
 ## 指令 
 
-* [MAC-shell](/Blog/4-一些工具/指令/MAC-shell) 
+* [MAC-shell](/Blog/5-一些工具/指令/MAC-shell) 
 
-* [index](/Blog/4-一些工具/指令/index) 
+* [index](/Blog/5-一些工具/指令/index) 
 
-* [tree](/Blog/4-一些工具/指令/tree) 
+* [tree](/Blog/5-一些工具/指令/tree) 
 
 ## 数据库 
 
-* [MySQL常用命令](/Blog/4-一些工具/数据库/MySQL常用命令) 
+* [MySQL常用命令](/Blog/5-一些工具/数据库/MySQL常用命令) 
 
-* [常用SQL](/Blog/4-一些工具/数据库/常用SQL) 
+* [常用SQL](/Blog/5-一些工具/数据库/常用SQL) 
 
 ## 无归类 
 
-* [chrome浏览器跨域设置](/Blog/4-一些工具/无归类/chrome浏览器跨域设置) 
+* [chrome浏览器跨域设置](/Blog/5-一些工具/无归类/chrome浏览器跨域设置) 
 
-* [快捷键](/Blog/4-一些工具/无归类/快捷键) 
+* [快捷键](/Blog/5-一些工具/无归类/快捷键) 
 
 ## 系统操作 
 
-* [cross-env](/Blog/4-一些工具/系统操作/cross-env) 
+* [cross-env](/Blog/5-一些工具/系统操作/cross-env) 
 
-* [安装虚拟机](/Blog/4-一些工具/系统操作/安装虚拟机) 
+* [安装虚拟机](/Blog/5-一些工具/系统操作/安装虚拟机) 
 
-* [查看本地ip之类的配置(window)](/Blog/4-一些工具/系统操作/查看本地ip之类的配置(window)) 
+* [查看本地ip之类的配置(window)](/Blog/5-一些工具/系统操作/查看本地ip之类的配置(window)) 
 
 * [README](/Blog//README) 
 
 * [ToMyself](/Blog//ToMyself) 
+
+* [了解类](/Blog//了解类) 
 

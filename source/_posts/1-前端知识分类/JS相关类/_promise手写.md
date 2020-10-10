@@ -122,42 +122,61 @@ const a = new MyPromise(() => {
 
 ## 简易版
 
+
+
 ```js
-function MyPromise(executor) {
-  let self = this;
-  self.value = undefined;
-  self.reason = undefined;
-  self.status = "pending"; // 默认promise状态是pending
+ 
+class MyPromise {
+  constructor(executor) {
+    this.value = undefined;
+    this.reason = undefined;
+    this.status = "pending"; // 默认promise状态是pending
 
-  function resolve(value) {
-    if (self.status === "pending") {
-      // 保证状态一旦变更，不能再次修改
-      self.value = value;
-      self.status = "resolved"; // 成功状态
+    let resolve = value => {
+      if (this.status === "pending") {
+        // 保证状态一旦变更，不能再次修改
+        this.value = value;
+        this.status = "resolved"; // 成功状态
+      }
+    };
+
+    let reject = reason => {
+      if (this.status === "pending") {
+        this.reason = reason;
+        this.status = "rejected"; // 失败状态
+      }
+    };
+
+    try {
+      executor(resolve, reject);
+    } catch (error) {
+      reject(error);
     }
   }
 
-  function reject(reason) {
-    if (self.status === "pending") {
-      self.reason = reason;
-      self.status = "rejected"; // 失败状态
-    }
+  then(onFulfilled, onRejected) {
+    return new MyPromise(executorThen => {
+      if (this.status === "resolved") {
+        setTimeout(() => {
+          onFulfilled(this.value);
+        }, 0);
+      }
+      if (this.status === "rejected") {
+        setTimeout(() => {
+          onRejected(this.reason);
+        }, 0);
+      }
+      if (this.status === "pending") {
+        try {
+          // 链式调用有点问题
+          executorThen(this.resolve, this.reject);
+        } catch (error) {
+          this.reject(error);
+        }
+      }
+    });
   }
-
-  executor(resolve, reject);
 }
-
-MyPromise.prototype.then = function(onFulfilled, onRejected) {
-  let self = this;
-  if (self.status === "resolved") {
-    setTimeout(function() {
-      onFulfilled(self.value);
-    }, 0);
-  }
-  if (self.status === "rejected") {
-    onRejected(self.reason);
-  }
-};
 
 ```
 

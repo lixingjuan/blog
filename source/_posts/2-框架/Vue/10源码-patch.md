@@ -1,5 +1,8 @@
 # patch
-patch过程把 `VNode` 转换成真正的DOM节点。
+
+VNode 是virtual DOM 的具体实现
+patch过程是 ==把 `VNode` 转换成真正的DOM节点==，
+
 通过之前的分析可知，在通过`createComponet`创建了组件Vnode, 接下来会走到`vm._update`, 执行 `vm.__patch__` 去吧 `VNode` 转换成真正的DOM节点;
 但是针对一个普通的`VNode`节点，`VNode`创建过程有所不同;
 
@@ -9,6 +12,10 @@ patch过程把 `VNode` 转换成真正的DOM节点。
 1. 了解组件 patch 整体流程；
 2. 了解组件 patch 流程中的 `activeInstance`、 `vm.$vnode`(占位符vnode)、`vm._vnode`;
 3. 嵌套组件的插入顺序；
+
+
+
+
 
 ## 回顾createElm
 
@@ -62,6 +69,8 @@ function createComponent(vnode, insertedVnodeQueue, parentElm, refElm){
 ```
 
 在 `createComponent` 中，首先对 `vnode.data` 做了一些判断， 如果 `vnode` 是一个组件 `VNode`, 那么条件就会满足，并且得到 `i` 就是 `init` 钩子函数;
+
+
 
 
 ## 回顾init
@@ -149,6 +158,8 @@ Vue.prototype._init = function(options?: Object) {
 这里首先是合并 `options` 的过程有变化， `_isComponent` 为true , 所以走到了 `initComponent` 过程;
 
 如下是 `initInternalComponent` 过程：
+
+
 
 ## initInternalComponent
 
@@ -454,9 +465,8 @@ function createComponent (vnode, insertedVnodeQueue, parentElm, refElm) {
 ## 总结
 
 到此，一个组件的VNode 如何创建、初始化、渲染的过程学习完毕；
-<!-- 在对组件的实现又一个大概的了解后，接下来学习其中的细节，我们知道，编写一个组件实际上是编写一个 javascript对象，对象的描述就是i各种配置，之前我们提到的在 _init 的最初阶段就执行的就是 merge options 的逻辑，那么接下来学习从源码的角度分合并配置的过程； -->
 
-1. patch的整体流程：createComponent => 子组件初始化(init, createComponentInstanceForVnode, 整个子组件的init过程(合并options,lifecycle初始化等和vue一样的初始化过程)) => 子组件render(生成子组件的渲染vnode) => 子组件patch(渲染子组件的vnode，渲染的过程中如果还有子组件，就递归渲染) 
+1. patch的整体流程：==createComponent== => 子组件初始化(init, createComponentInstanceForVnode, 整个子组件的init过程(合并options,lifecycle初始化等和vue一样的初始化过程)) => 子组件render(生成子组件的渲染vnode) => 子组件patch(渲染子组件的vnode，渲染的过程中如果还有子组件，就递归渲染) 
 2. activeInstance: 当前激活的vm实例（作为parent实例传入）；vm.$vnode: 组件的占位vnode; vm._vnode: 组件的渲染vnode;
 3. 嵌套组件的插入顺序是先子后父；
 
