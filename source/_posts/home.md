@@ -17,6 +17,16 @@ comments: false
 keep hungry, and eat 🥤🐂🍔🍗🍰☕️🍉🍒🍦🍭🌽🍓🍇🥬🥒🥕🥞🧇🥓🥩🍖🌭🍕🥙🌮🥗🥘🍝🍣🍱🍥🍧🍨🧁
 
 
+# 小李的文章收藏
+
+1.  [ ]  [面试资源汇总:很多面经和](https://github.com/abc-club/js-paradise/blob/master/INTERVIEW.md)
+2.  [ ]  [Weekly-FE-Interview](https://github.com/airuikun/Weekly-FE-Interview)
+3.  [ ]  [冴羽的博客:前端基础知识类](https://github.com/mqyqingfeng/Blog)
+4.  [ ]  [fouber的博客:前端进阶知识类](https://github.com/fouber/blog)
+5.  [ ]  [公众号「千古壹号」作者的博客](https://github.com/qianguyihao/Web?utm_source=gold_browser_extension)
+6.  [ ]  [林鑫个人博客](https://github.com/lin-xin/blog)
+
+
 
 
 ## 杂七杂八的
