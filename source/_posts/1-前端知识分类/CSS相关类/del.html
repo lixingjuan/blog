@@ -5,31 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <style>
-      .flex {
-        width: 100%;
-        height: 100%;
+      .parent {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
       }
-      .item {
-        width: calc(100% / 3);
-        box-sizing: border-box;
-        /* padding-bottom: calc(100% / 3); */
-        border: 1px #ccc solid;
+
+      .box {
+        flex: 1 1 150px; /*  flex-grow: 1 ，表示自动延展到最大宽度 */
+        /* flex: 0 1 150px;  No stretching: */
+        margin: 5px;
+      }
+      .green {
+        background-color: green;
       }
     </style>
   </head>
   <body>
-    <div class="flex">
-      <div class="item">item</div>
-      <div class="item">item</div>
-      <div class="item">item</div>
-      <div class="item">item</div>
-      <div class="item">item</div>
-      <div class="item">item</div>
-      <div class="item">item</div>
-      <div class="item">item</div>
-      <div class="item">item</div>
+    <div class="parent white">
+      <div class="box green">1</div>
+      <div class="box green">2</div>
+      <div class="box green">3</div>
     </div>
   </body>
 </html>
+
+j23ijljf kljdfk
