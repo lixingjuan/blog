@@ -1,6 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "eslint.autoFixOnSave": true,
   "prettier.printWidth": 80,
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -40,20 +39,19 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   // "terminal.integrated.shell.osx": "/bin/bash", // 使用单引号代替双引号
   // "prettier.singleQuote": false,
-  "eslint.enable": true,
   // 检测文件没有头部注释，自动添加文件头部注释
   "fileheader.configObj": {
     "autoAdd": false
   },
   "spaced-comment": 2,
   // 文件头部注释 com + shift + i && com + shift + i
-  "fileheader.customMade": {
-    "": "",
-    "version": "0.0.1",
-    "Author": "lixingjuan <xingjuan.li@hand-china.com>",
-    "Date": "Do not edit",
-    "copyright": "Copyright (c) 2019, Hand"
-  },
+  // "fileheader.customMade": {
+  //   "": "",
+  //   "version": "0.0.1",
+  //   "Author": "lixingjuan <xingjuan.li@hand-china.com>",
+  //   "Date": "Do not edit",
+  //   "copyright": "Copyright (c) 2019, Hand"
+  // },
   // 函数注释，com + shift + T && com + shift + T
   "fileheader.cursorMode": {
     "des ": "",
