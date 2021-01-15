@@ -10,8 +10,12 @@
 为什么在开中移动端在CSS中写了1px比实际上1px看起来粗？
 因为UI设计师要求的实际上是指设备的物理像素1px；
 
+
+
 物理像素和逻辑像素的关系：
-`逻辑像素 = 物理像素 * DPR` 
+`逻辑像素(css像素) = 物理像素 * DPR`
+
+
 
 DPR (devicePixelRatio) 设备像素比，默认缩放在100%的情况下，设备像素和CSS像素的比值, 可以使用 `window.devicePixelRatio` 或 媒体查询 `-webkit-min-device-pixel-ratio` 获取， 当然比例多少与设备相关；
 
@@ -87,11 +91,10 @@ div::after{
 
 
 
- 
-
-
- 
 
 
 
- 
+
+
+
+
