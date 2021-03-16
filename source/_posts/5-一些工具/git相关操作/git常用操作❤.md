@@ -21,7 +21,7 @@ git config --system --unset credential.helper
 git config --global user.name
 
 # 查看邮箱
-git config --global user.email 
+git config --global user.email
 
 # 修改全局用户名
 git config --global user.name '李幸娟'
@@ -30,10 +30,10 @@ git config --global user.name '李幸娟'
 git config user.name '李幸娟'
 
 # 删除本地仓库的远程关联
-git remote rm origin 
+git remote rm origin
 
 # 为本地仓库添加远程仓库
-git remote add origin https://xxx.git 
+git remote add origin https://xxx.git
 
 ```
 
@@ -45,6 +45,7 @@ git remote add origin https://xxx.git
 # 使git检测大小写
 git config core.ignorecase false
 ```
+
 
 
 ## 提交类操作
@@ -84,7 +85,7 @@ git branch
 git branch -r
 
 # 查看所有本地分支
-git branch -a 
+git branch -a
 
 # 查看当前分支状态
 git status
@@ -182,7 +183,7 @@ git reset --soft HEAD^
 git reset --soft HEAD～2
 
 # 回退到某次提交，并将commit的内容撤回到暂存区，撤销commit, 不撤销add
-git reset --soft e79fcfb 
+git reset --soft e79fcfb
 
 # 回退到某次提交 => 删除工作空间改动代码,撤销commit,撤销add
 git reset --hard 9dac256
@@ -212,11 +213,22 @@ git stash pop
 ```
 
 
+## 更新submodules
+
+```bash
+# 递归更新
+git submodule update --init --recursive
+
+# 自动化此过程，配置如下命令，之后git都会在拉取后执行git submodule update
+：git pull --recurse-submodules
+
+```
+
 ## 查看git 状态
 
 ```bash
 git status
-# 有改动了之后.未add查看  
+# 有改动了之后.未add查看
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -239,7 +251,7 @@ Changes to be committed:
 
         modified:   README.md
         new file:   git-test.md
-        
+
 # 刚提交完查看
 PS D:\gitLab\git_test> git status
 On branch master
@@ -270,10 +282,10 @@ git pull
 
 ```bash
 # 显示出查看dev和uat所有有差异的文件列表
-Git diff dev uat --stat 
+Git diff dev uat --stat
 
 # 显示出所有有差异的文件的详细差异
-Git diff dev uat 
+Git diff dev uat
 
 # 显示dev和master分支 src/index.js 的详细差异
 Git diff branch1 branch2 src/index.js
@@ -312,4 +324,4 @@ git rm -r --cached .
 
 
 ## git 设置代码 & 移除
-https://blog.csdn.net/mnbvcxz111123/article/details/53894242 
+https://blog.csdn.net/mnbvcxz111123/article/details/53894242

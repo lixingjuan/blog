@@ -1,0 +1,3 @@
+1. [一篇质量蛮高的面经,腾讯，蚂蚁等](https://juejin.cn/post/6939774328858738696?utm_source=gold_browser_extension)
+2. [B站、喜马拉雅、流利说、蜻蜓FM、爱回收等前端面试经历](https://www.javascriptc.com/2774.html)
+3. [B站大佬的很多面经](https://www.ershicimi.com/p/01b2144418bc9ad00988a878e6c3a2e8)
