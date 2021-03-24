@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input value="" id="test" />
+    <button onclick="demo()">点击</button>
+    <h2>我是用户的输入内容</h2>
+
+    <ul id="inputVal"></ul>
+
+    <script>
+      const mockList = [
+        { name: "小李", text: "<script>alert(1);console.log(1)<\/script>" }
+      ];
+      //   function demo() {
+      const aa = document.getElementById("test").value;
+      console.log(aa);
+      constlist = mockList.map(it => {
+        return `<li>${it.name}+${it.text}</li>`;
+      });
+      document.getElementById("inputVal").innerHTML = constlist;
+      //   }
+
+      //   const [, keyword] = window.location.search.split("?keyword=");
+      //   console.log(decodeURI(keyword));
+    </script>
+  </body>
+</html>
