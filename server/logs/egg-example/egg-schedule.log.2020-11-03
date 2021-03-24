@@ -1,0 +1,9 @@
+2020-11-03 04:29:59,774 INFO 47963 [Timer] /Users/lixingjuan/Documents/code-my-projects/Blog/server/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 86400228ms at 2020-11-04 04:30:00.002
+2020-11-03 04:29:59,772 INFO 49250 [Job#16043489997724475209175019283] /Users/lixingjuan/Documents/code-my-projects/Blog/server/node_modules/egg-multipart/app/schedule/clean_tmpdir.js executing by app
+2020-11-03 04:29:59,775 INFO 49250 [Job#16043489997724475209175019283] /Users/lixingjuan/Documents/code-my-projects/Blog/server/node_modules/egg-multipart/app/schedule/clean_tmpdir.js execute succeed, used 2ms. 
+2020-11-04 01:59:37,987 INFO 49250 [Job#16044263779835177208908949344] /Users/lixingjuan/Documents/code-my-projects/Blog/server/node_modules/egg-logrotator/app/schedule/clean_log.js executing by app
+2020-11-04 01:59:37,990 INFO 49250 [Job#16044263779835177208908949344] /Users/lixingjuan/Documents/code-my-projects/Blog/server/node_modules/egg-logrotator/app/schedule/clean_log.js execute succeed, used 3ms. 
+2020-11-04 01:59:37,994 INFO 47963 [Timer] /Users/lixingjuan/Documents/code-my-projects/Blog/server/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 79222013ms at 2020-11-05 00:00:00.007
+2020-11-04 01:59:38,981 INFO 49250 [Job#16044263789805177218868710574] /Users/lixingjuan/Documents/code-my-projects/Blog/server/node_modules/egg-logrotator/app/schedule/rotate_by_file.js executing by app
+2020-11-04 01:59:38,984 INFO 49250 [Job#16044263789805177218868710574] /Users/lixingjuan/Documents/code-my-projects/Blog/server/node_modules/egg-logrotator/app/schedule/rotate_by_file.js execute succeed, used 3ms. 
+2020-11-04 01:59:38,983 INFO 47963 [Timer] /Users/lixingjuan/Documents/code-my-projects/Blog/server/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 79222019ms at 2020-11-05 00:00:01.002

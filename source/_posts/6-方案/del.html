@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const demo = async function() {
+        try {
+          const a = await Promise.reject("错误");
+          console.log(a);
+          console.log(1);
+        } catch (error) {
+          console.log(error);
+        } finally {
+          this.isLoading = false;
+        }
+      };
+      demo();
+    </script>
+  </body>
+</html>

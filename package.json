@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "hexo generate",
+    "dev": "cd server egg-bin dev",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "hot": "node ./source/_node/index.js && hexo s -g --debug",
@@ -18,7 +19,10 @@
     "yarn": "^1.13.0"
   },
   "dependencies": {
-    "drag-and-flex-antd-table": "^0.1.0",
+    "antd": "^4.7.3",
+    "axios": "^0.21.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
     "hexo": "^4.0.0",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
@@ -30,6 +34,8 @@
     "hexo-renderer-scss": "^1.2.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
+    "koa": "^2.13.0",
+    "koa2-cors": "^2.0.6",
     "lodash": "^4.17.20",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-checkbox": "^1.1.0",
@@ -43,5 +49,10 @@
     "markdown-it-regexp": "^0.4.0",
     "markdown-it-sub": "^1.0.0",
     "markdown-it-sup": "^1.0.0"
-  }
+  },
+  "description": "- 这里是李幸娟博客的主体代码 - 博客文章资源位于 `'./source'` 目录下 - 博客文章位于仓库 [Blog](https://github.com/lixingjuan/Blog)",
+  "main": ".eslintrc.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
