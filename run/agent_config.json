@@ -1,0 +1,473 @@
+{
+  "config": {
+    "session": {
+      "maxAge": 86400000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true
+    },
+    "security": {
+      "domainWhiteList": [],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": true,
+        "type": "ctoken",
+        "ignoreJSON": false,
+        "useSession": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "refererWhiteList": []
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true
+      },
+      "methodnoallow": {
+        "enable": true
+      },
+      "noopen": {
+        "enable": true
+      },
+      "nosniff": {
+        "enable": true
+      },
+      "referrerPolicy": {
+        "enable": false,
+        "value": "no-referrer-when-downgrade"
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      },
+      "ssrf": {
+        "ipBlackList": null,
+        "checkAddress": null
+      },
+      "_protocolWhiteListSet": "<Set>"
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null,
+      "templatePath": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-onerror/lib/onerror_page.mustache"
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieDomain": "",
+      "cookieMaxAge": "1y"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-watcher/lib/event-sources/development"
+      }
+    },
+    "customLogger": {
+      "scheduleLogger": {
+        "consoleLevel": "NONE",
+        "file": "egg-schedule.log"
+      }
+    },
+    "schedule": {
+      "directory": []
+    },
+    "multipart": {
+      "mode": "stream",
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": "100kb",
+      "fields": 10,
+      "fileSize": "10mb",
+      "files": 10,
+      "fileExtensions": [],
+      "whitelist": null,
+      "tmpdir": "/var/folders/jh/xz_w6xs94h9djf37tgp8hdpr0000gn/T/egg-multipart-tmp/hexo-site",
+      "cleanSchedule": {
+        "cron": "0 30 4 * * *"
+      }
+    },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false,
+      "overrideIgnore": false
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "hourDelimiter": "-",
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/public/",
+      "dir": "/Users/lixingjuan/Documents/code-my-projects/Blog/app/public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": false,
+      "maxFiles": 1000
+    },
+    "view": {
+      "root": "/Users/lixingjuan/Documents/code-my-projects/Blog/app/view",
+      "cache": false,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "",
+      "mapping": {}
+    },
+    "env": "local",
+    "name": "hexo-site",
+    "keys": "<String len: 0>",
+    "cookies": {},
+    "proxy": false,
+    "maxIpsCount": 0,
+    "maxProxyCount": 0,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "",
+    "pkg": {
+      "name": "hexo-site",
+      "version": "0.0.0",
+      "private": true,
+      "scripts": {
+        "build": "hexo generate",
+        "dev": "egg-bin dev",
+        "clean": "hexo clean",
+        "deploy": "hexo deploy",
+        "hot": "node ./source/_node/index.js && hexo s -g --debug",
+        "start": "hexo clean && node ./source/_node/index.js && hexo server",
+        "up": "hexo clean && node ./source/_node/index.js && hexo g && hexo d"
+      },
+      "hexo": {
+        "version": "4.2.1"
+      },
+      "devDependencies": {
+        "eslint": "^5.16.0",
+        "egg-bin": "^4.15.0",
+        "egg-mock": "^4.0.1",
+        "yarn": "^1.13.0"
+      },
+      "dependencies": {
+        "antd": "^4.7.3",
+        "axios": "^0.21.0",
+        "babel-cli": "^6.26.0",
+        "babel-preset-react-app": "^3.1.2",
+        "egg": "^2.29.1",
+        "egg-view-nunjucks": "^2.2.0",
+        "hexo": "^4.0.0",
+        "hexo-deployer-git": "^2.1.0",
+        "hexo-generator-archive": "^1.0.0",
+        "hexo-generator-category": "^1.0.0",
+        "hexo-generator-index": "^1.0.0",
+        "hexo-generator-tag": "^1.0.0",
+        "hexo-renderer-ejs": "^1.0.0",
+        "hexo-renderer-markdown-it": "^4.1.0",
+        "hexo-renderer-scss": "^1.2.0",
+        "hexo-renderer-stylus": "^1.1.0",
+        "hexo-server": "^1.0.0",
+        "koa": "^2.13.0",
+        "koa2-cors": "^2.0.6",
+        "lodash": "^4.17.20",
+        "markdown-it-abbr": "^1.0.4",
+        "markdown-it-checkbox": "^1.1.0",
+        "markdown-it-container": "^2.0.0",
+        "markdown-it-deflist": "^2.0.3",
+        "markdown-it-emoji": "^1.4.0",
+        "markdown-it-footnote": "^3.0.2",
+        "markdown-it-imsize": "^2.0.1",
+        "markdown-it-ins": "^3.0.0",
+        "markdown-it-mark": "^3.0.0",
+        "markdown-it-regexp": "^0.4.0",
+        "markdown-it-sub": "^1.0.0",
+        "markdown-it-sup": "^1.0.0"
+      },
+      "description": "- 这里是李幸娟博客的主体代码 - 博客文章资源位于 `'./source'` 目录下 - 博客文章位于仓库 [Blog](https://github.com/lixingjuan/Blog)",
+      "main": ".eslintrc.js",
+      "keywords": [],
+      "author": "",
+      "license": "ISC"
+    },
+    "baseDir": "/Users/lixingjuan/Documents/code-my-projects/Blog",
+    "HOME": "/Users/lixingjuan",
+    "rundir": "/Users/lixingjuan/Documents/code-my-projects/Blog/run",
+    "dump": {
+      "ignore": "<Set>"
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 6463>"
+    },
+    "bodyParser": {
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "1mb",
+      "jsonLimit": "1mb",
+      "textLimit": "1mb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      },
+      "onerror": "<Function onerror>"
+    },
+    "logger": {
+      "dir": "/Users/lixingjuan/Documents/code-my-projects/Blog/logs/hexo-site",
+      "encoding": "utf8",
+      "env": "local",
+      "level": "INFO",
+      "consoleLevel": "INFO",
+      "disableConsoleAfterReady": false,
+      "outputJSON": false,
+      "buffer": true,
+      "appLogName": "hexo-site-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
+      "allowDebugAtProd": false,
+      "type": "agent"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheLookupInterval": 10000,
+      "dnsCacheMaxLength": 1000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      }
+    },
+    "meta": {
+      "enable": true,
+      "logging": false
+    },
+    "coreMiddleware": [
+      "meta",
+      "siteFile",
+      "notfound",
+      "bodyParser",
+      "overrideMethod"
+    ],
+    "workerStartTimeout": 600000,
+    "serverTimeout": null,
+    "cluster": {
+      "listen": {
+        "path": "",
+        "port": 7001,
+        "hostname": ""
+      }
+    },
+    "clusterClient": {
+      "maxWaitTime": 60000,
+      "responseTimeout": 60000
+    },
+    "onClientError": null,
+    "coreMiddlewares": "~config~coreMiddleware",
+    "appMiddlewares": [],
+    "appMiddleware": "~config~appMiddlewares"
+  },
+  "plugins": {
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-onerror",
+      "version": "2.1.0"
+    },
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-session",
+      "version": "3.2.0"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-i18n",
+      "version": "2.1.1"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-watcher",
+      "version": "3.1.1"
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [
+        "schedule"
+      ],
+      "env": [],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-multipart",
+      "version": "2.10.3"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-security",
+      "version": "2.8.0"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-development",
+      "version": "2.7.0"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-logrotator",
+      "version": "3.1.0"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-schedule",
+      "version": "3.6.6"
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-static",
+      "version": "2.2.0"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-jsonp",
+      "version": "2.0.0"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg/config/plugin.js",
+      "path": "/Users/lixingjuan/Documents/code-my-projects/Blog/node_modules/egg-view",
+      "version": "2.1.2"
+    }
+  }
+}
