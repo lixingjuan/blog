@@ -323,9 +323,35 @@
 
 * [ToMyself](/Blog//ToMyself) 
 
+<h1 style="color:#448d55;">jianli</h1> 
+
+* [index](/Blog/jianli/index) 
+
 * [了解类](/Blog//了解类) 
 
 * [微信和app导出图片踩坑经历](/Blog//微信和app导出图片踩坑经历) 
 
+<h1 style="color:#448d55;">杂货教程</h1> 
+
+* [markdown支持xmind](/Blog/杂货教程/markdown支持xmind) 
+
 * [面经](/Blog//面经) 
+
+<h1 style="color:#448d55;">面试</h1> 
+
+* [interview-other](/Blog/面试/interview-other) 
+
+* [mine](/Blog/面试/mine) 
+
+* [other-people](/Blog/面试/other-people) 
+
+* [大纲](/Blog/面试/大纲) 
+
+* [文章《如何进阿里》](/Blog/面试/文章《如何进阿里》) 
+
+<h1 style="color:#448d55;">项目复盘</h1> 
+
+* [民生星探-移动端](/Blog/项目复盘/民生星探-移动端) 
+
+* [自动化报告](/Blog/项目复盘/自动化报告) 
 
