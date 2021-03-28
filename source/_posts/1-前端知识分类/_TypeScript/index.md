@@ -14,3 +14,14 @@ function reverse(x: number | string): number | string {
     }
 }
 ```
+
+
+指定对象类型
+
+```typescript
+interface Demo {
+    [key: string]: string;
+}
+```
+
+ 
