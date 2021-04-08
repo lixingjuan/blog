@@ -1,9 +1,9 @@
-# bind
+# 1. bind
 
 > bind方法创建一个新的函数，在bind方法被调用时， `bind`的第一个参数对象被指定为这个新函数的`this` 的绑定对象，而其余参数作为新函数的参数，供调用时使用
 
 
-## 应用举例1
+## 1.1. 应用举例1
 
 ==改变函数的执行作用域==
 
@@ -23,7 +23,7 @@ sayColor.bind(o)();  // 'blue'
 
 
 
-## 应用举例2
+## 1.2. 应用举例2
 
 
 ==bind() 传递参数==
@@ -43,7 +43,7 @@ function demo(name, age) {
 demo.bind(foo, "nametest")(19);
 ```
 
-## 应用举例3: new
+## 1.3. 应用举例3: new
 
 > 一个绑定函数也能使用new操作符创建对象，这种行为就像把原函数当作构造器，提供的this值被忽略，同时调用时的参数被当作模拟函数
 
@@ -65,7 +65,7 @@ function demo(name, age) {
 demo.prototype.friend = "huahua";
 
 const bindName = demo.bind(foo, "nameTest2");
-const newDemo = new bindName(18); 
+const newDemo = new bindName(18);
 
 console.log(newDemo.friend);  // "huahua"
 console.log(newDemo.job);     // "programmer"
@@ -78,12 +78,12 @@ console.log(newDemo.job);     // "programmer"
 
 
 
- 
 
-## bind实现普通的函数柯里化
+
+## 1.4. bind实现普通的函数柯里化
 
 因为`bind` 可以返回一个新的函数，并且新函数的第一个参数对象被指定为新函数的`this` 绑定对象，所以`bind`可以对参数柯里化
-  
+
 
 ```javascript
 function foo(...args) {
@@ -101,10 +101,10 @@ bar(1, 2, 3, 4); // 0,1,2,3,4
 
 
 
-# 手写bind
+# 2. 手写bind
 
 
- 
+
 
 首先回顾下 bind 的特点
 
@@ -112,7 +112,7 @@ bar(1, 2, 3, 4); // 0,1,2,3,4
 2. 参数1为要绑定this的对象，参数2作为新函数的参数；
 3. 可以使用new操作符，创建bind返回的新函数的实例，此时传入的this失效；
 
- 
+
 
 ```js
 Function.prototype.bind2 = function(context, ...args) {
@@ -158,10 +158,10 @@ sayPersonName();
 
 
 
-## 手写bind-1: 基本类型的扩充
+## 2.1. 手写bind-1: 基本类型的扩充
 
 
-```javascript  
+```javascript
 Function.prototype.method = function(name, func) {
   if (!this.prototype[name]) {
     this.prototype[name] = func;
@@ -174,12 +174,12 @@ Function.method("bind2", function(context, ...args) {
     this.apply(context, args);
   };
 });
-``` 
+```
 
 
 
 
-# 参考文章
+# 3. 参考文章
 
 1. [《javascript高级程序设计-高级技巧》(第5章-Function类型)]
 2. [call,apply-MDN]
