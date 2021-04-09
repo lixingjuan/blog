@@ -12,7 +12,7 @@
     "up": "hexo clean && node ./source/_node/index.js && hexo g && hexo d"
   },
   "hexo": {
-    "version": "4.2.0"
+    "version": "4.2.1"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
