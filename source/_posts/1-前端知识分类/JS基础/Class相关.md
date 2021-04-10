@@ -1,7 +1,7 @@
-# Class相关
+# 1. Class相关
 
 
-## ES6&ES5对比
+## 1.1. ES6&ES5对比
 
 Class是通过构造函数方法创建实例的语法糖，本质还是函数 `typeof (class Person{}) === 'function'`;
 新的class写法知识让对象原型的写法更加清晰，更像面向对象编程的语法而已;
@@ -57,10 +57,10 @@ typeof Person === 'function'    // 类的数据类型是函数；
 Person === Person.prototype.constructor； // 类本身就指向构造函数，ES5的  **构造函数Person** 对应ES6的 **类Person的构造方法**
 
 /* 在类的实例上调用方法，实际上就是在调用原型上的方法 */
-Kris.constructor === Person.prototype.constructor;  
+Kris.constructor === Person.prototype.constructor;
 
 ```
- 
+
 
 
 ES5构造函数写法 && ES6class写法对照
@@ -153,7 +153,7 @@ Person(); // TypeError: Class constructor Person cannot be invoked without 'new'
 - 是类的默认方法，一个类必须有 `constructor` 方法，若未显示添加，则javascript引擎会自动为他添加一个空的`constructor`；
 - 通过 `new` 操作符生成 类的实例时，自动调用该方法；
 - `constructor`默认返回对象实例对象（即this）,也可以指定其返回另一个对象，这时，通过 `new` 操作符创建的类的实例对象，并非是类的实例(如下示例)
-  
+
 
 ```javascript
 /* constructor默认返回this */
@@ -197,7 +197,7 @@ const instance2 = new Person("Merry");
 instance1.__proto__ === instance2.__proto__; // true
 ```
 
-## getter和setter
+## 1.2. getter和setter
 
 取值函数getter 和 存值函数setter
 与ES5 一样，在类的内部可以使用 get 和 set 关键字，对某个函数设置存值函数和取值函数，拦截该属性的存取行为
@@ -234,7 +234,7 @@ console.log(descriptor);
 // }
 ```
 
-## 表达式写法
+## 1.3. 表达式写法
 
 类可以采用表达式的形式定义
 
@@ -242,8 +242,8 @@ console.log(descriptor);
 /* 类表达式写法 */
 // 这里的 Me 仅在类内部可用，指代当前类，在外部只能使用Person 引用，使用Me则报错，
 // 若内部没用的话，省略即可 ，如下
-// const Person = class { 
-const Person = class Me { 
+// const Person = class {
+const Person = class Me {
   sayName() {
     return Me.name;
   }
@@ -271,14 +271,14 @@ console.log(instance1.sayName());   // "sayName"
 
 ```
 
-## 严格模式
+## 1.4. 严格模式
 
 类和模块的内部默认严格模式
 类不存在变量提升
 
 
 
-## class 与 this
+## 1.5. class 与 this
 
 类的方法内部如果有this, 默认指向类的实例
 
@@ -303,7 +303,7 @@ const instance2 = new Person("Jack", 29);
 
 
 /* class 内的this指向实例 */
-+ instance1.sayName();  // 'Tom'  15 
++ instance1.sayName();  // 'Tom'  15
 + instance2.sayName();  // 'Jack' 29
 
 ```
@@ -319,7 +319,7 @@ class Person {
   }
 
   sayName() {
-+   console.log(this);  // TODO: 这里打印是undefined, 按我理解，this应该是执行函数的调用环境的，但是阮一峰的文章讲 =>  因为class内部是严格模式, 所以这里是undefined， 去看下严格模式和this的关系 
++   console.log(this);  // TODO: 这里打印是undefined, 按我理解，this应该是执行函数的调用环境的，但是阮一峰的文章讲 =>  因为class内部是严格模式, 所以这里是undefined， 去看下严格模式和this的关系
     console.log(this.name);
   }
 }
@@ -373,7 +373,7 @@ sayName();
 ```
 
 
-## 静态方法
+## 1.6. 静态方法
 
 类相当于实例的原型，所有在类中定义的方法，都会被实例继承，如果在一个方法前加上 `static` 关键字，则该方法就不会被实例继承，而是通过类来调用，这就成为 ‘静态方法’。
 
@@ -405,9 +405,9 @@ const instance1 = new Person("Tom", 15);
 
 - 静态属性: 定义在类本身的；
 - 静态方法: 类本身
-- 普通属性: 
+- 普通属性:
 - 普通方法: 类的原型上
- 
+
 
 ```javascript
 class Person {
@@ -461,7 +461,7 @@ class JACK extends Person {
 JACK.PersonSayHello(); // 'hello'
 ```
 
-## 实例属性的新写法
+## 1.7. 实例属性的新写法
 
 实例属性除了可以定义在 `constructor()` 方法里面的 `this` 上，也可以直接定义在类的最顶层
 实例属性 `state` 与 `sayHello` 的取值位于同一平级，所以不需要加this
@@ -480,7 +480,7 @@ const instance1 = new Person();
 ```
 
 
-## 静态属性
+## 1.8. 静态属性
 
 目前只能通过在外面赋值
 同静态方法一样，在前面加static生成静态属性的方法仍处于提案阶段
@@ -494,7 +494,7 @@ Person.state    // 5
 ```
 
 
-## new.target属性
+## 1.9. new.target属性
 
 该属性用于判断构造函数是怎么被调用的, 该属性一般用于构造函数中，返回`new`操作符作用于的那个构造函数若构造函数不是通过 `new操作符`或 `Reflect.construct()`调用的， `new.target` 内部会返回 `undefined`
 
@@ -545,12 +545,12 @@ function Person() {
 
 /* 通过原型继承方法实现Person子类 */
 Jack.prototype = new Person();  // [Function: Person]
-new Person().constructor = Jack;  
+new Person().constructor = Jack;
 
 const JackInstance = new Jack();  // [Function: Person]
 ```
 
-###  class继承
+###  1.9.1. class继承
 
 class可以通过 `extends` 关键字实现继承，子类可以继承父类所有的属性和方法
 
@@ -606,10 +606,10 @@ Object.getPrototypeOf()可以从子类上获取父类，可以用来判断一个
 Object.getPrototypeOf(Jack) === Person;  // true
 ```
 
-### super
+### 1.9.2. super
 
 用于重塑子类的this, 如果没有显示添加，会被自动添加
- 
+
 ES5构造函数的继承，实际上，是先创建子类的实例对象的`this`, 然后将父类的方法添加到`this`上
 ES6class的继承，实际上，是先将父类实例对象的方法和属性添加到`this`上面（所以必须先调用super方法），然后再用子类构造函数修改`this`
 
@@ -621,7 +621,7 @@ class Jack extends Person{
 // 等同于
 class Jack extends Person{
   constructor(...args) {
-    super(...args); 
+    super(...args);
   }
 }
 ```
@@ -759,7 +759,7 @@ class Jack extends Person {
 ```
 
 
-## Mixin模式的实现
+## 1.10. Mixin模式的实现
 
 Mixin指的是多个对象合成一个新的对象，新对象具有各个组成成员的接口，他的最简单实现乳腺癌
 
@@ -817,7 +817,7 @@ class DistributedEdit extends mix(Loggable, Serializable) {
 
 
 
-## 参考
+## 1.11. 参考
 1. [阮一峰的ES6入门 - class基本语法](https://es6.ruanyifeng.com/#docs/class)
 2. [阮一峰的ES6入门 - class继承](https://es6.ruanyifeng.com/#docs/class-extends)
 3. Javascript语法精粹
