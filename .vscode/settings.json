@@ -104,10 +104,12 @@
   "quicktype.justTypes": true,
   "quicktype.inferDateTimes": true,
   /* paste image 到markdown的路径配置 */
-  // "pasteImage.path": "${projectRoot}/source/images",
-  // "pasteImage.basePath": "${projectRoot}/source/images",
-  // "pasteImage.path": "${currentFileNameWithoutExt}/",
+  "pasteImage.path": "${projectRoot}/source/images",
+  "pasteImage.basePath": "${projectRoot}",
+  // "pasteImage.prefix": "source/images/",
   // "pasteImage.insertPattern": "{% asset_img ${imageFileName} %}",
   /* paste image 默认文件名称, 如果有该设置，则本地预览不行 */
-  // "pasteImage.defaultName":"${currentFileNameWithoutExt}-YY-MM-DD-HH-mm-ss"
+  "pasteImage.defaultName":"${currentFileNameWithoutExt}-YY-MM-DD-HH-mm-ss"
 }
+
+
