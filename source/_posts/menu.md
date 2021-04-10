@@ -99,8 +99,6 @@
 
 * [闭包相关](/Blog/1-前端知识分类/JS基础/闭包相关) 
 
-## canvas 
-
 ## dva相关类 
 
 * [dva抽离数组路由+动态路由配置方法](/Blog/1-前端知识分类/dva相关类/dva抽离数组路由+动态路由配置方法) 
@@ -155,9 +153,13 @@
 
 * [Redux源码阅读总结](/Blog/2-框架/React/Redux源码阅读总结) 
 
+* [diff算法实现crud](/Blog/2-框架/React/diff算法实现crud) 
+
 * [react-dom](/Blog/2-框架/React/react-dom) 
 
 * [react-redux源码](/Blog/2-框架/React/react-redux源码) 
+
+* [react开发中优化点](/Blog/2-框架/React/react开发中优化点) 
 
 * [各个地方的打印](/Blog/2-框架/React/各个地方的打印) 
 
@@ -342,6 +344,14 @@
 <h1 style="color:#448d55;">杂货教程</h1> 
 
 * [markdown支持xmind](/Blog/杂货教程/markdown支持xmind) 
+
+<h1 style="color:#448d55;">知识梳理</h1> 
+
+* [react](/Blog/知识梳理/react) 
+
+* [vue](/Blog/知识梳理/vue) 
+
+* [网络](/Blog/知识梳理/网络) 
 
 * [面经](/Blog//面经) 
 
