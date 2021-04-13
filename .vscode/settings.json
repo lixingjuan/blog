@@ -98,7 +98,7 @@
   "editor.hover.delay": 100,
   "workbench.iconTheme": "vscode-icons",
   "git.autofetch": true,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "workbench.editor.enablePreview": false,
   /* json转为type的配置 */
   "quicktype.justTypes": true,
