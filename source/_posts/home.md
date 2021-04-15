@@ -5,7 +5,33 @@ comments: false
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-# Hello <span style="display: inline-block;">![](images/hello-face.png)</span>
+# HELLO
+
+<div style="position: relative;width: 50%;">
+  <div
+    id="bubble"
+    style="
+      position: absolute;
+      z-index: 200;
+      left: 3rem;
+      top: -2rem;
+      padding: 1rem;
+      font-size: 20px;
+      background: white;
+      border-radius: 12px;
+      border: 3px solid black;
+      width: 5rem;
+      text-align: center
+    "
+  >
+      oh hi!
+  </div>
+
+
+  <span>![](images/hello-face.png)</span>
+</div>
+
+
 
 
 这里是李幸娟博客的首页！！！
