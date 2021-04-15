@@ -1,5 +1,31 @@
 # 1. Class相关
 
+在某些情况下，JavaScript 类初始化的顺序可能会令人惊讶:
+
+```js
+class Base {
+  name = 'base';
+
+  constructor() {
+    console.log(`My name is ${this.name}`);
+  }
+}
+
+class Derived extends Base {
+  name = 'derived';
+}
+
+// Prints "base", not "derived"
+const d = new Derived();
+//
+```
+
+由 JavaScript 定义的类初始化顺序是:
+
+1. 初始化base class 字段;
+2. base class 构造函数运行;
+3. 初始化derived class 字段;
+4. derived class 构造函数运行;
 
 ## 1.1. ES6&ES5对比
 
@@ -821,5 +847,6 @@ class DistributedEdit extends mix(Loggable, Serializable) {
 1. [阮一峰的ES6入门 - class基本语法](https://es6.ruanyifeng.com/#docs/class)
 2. [阮一峰的ES6入门 - class继承](https://es6.ruanyifeng.com/#docs/class-extends)
 3. Javascript语法精粹
+
 
 
