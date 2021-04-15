@@ -3,10 +3,6 @@
 
 <h1 style="color:#448d55;">JavaScript</h1> 
 
-## z方案 
-
-* [图片类型转换](/Blog/1-JavaScript/z方案/图片类型转换) 
-
 ## 专题深入 
 
 * [0.1+0.2](/Blog/1-JavaScript/专题深入/0.1+0.2) 
@@ -53,6 +49,10 @@
 
 * [防抖和节流](/Blog/1-JavaScript/专题深入/防抖和节流) 
 
+## 其他 
+
+* [图片类型转换](/Blog/1-JavaScript/其他/图片类型转换) 
+
 ## 基础知识类 
 
 * [Generate](/Blog/1-JavaScript/基础知识类/Generate) 
@@ -85,9 +85,9 @@
 
 <h1 style="color:#448d55;">框架和库</h1> 
 
-## Deno相关类 
+## Deno 
 
-* [index](/Blog/2-框架和库/Deno相关类/index) 
+* [index](/Blog/2-框架和库/Deno/index) 
 
 ## React 
 
@@ -163,11 +163,11 @@
 
 * [开发规范](/Blog/2-框架和库/Vue/开发规范) 
 
-## dva相关类 
+## dva 
 
-* [dva抽离数组路由+动态路由配置方法](/Blog/2-框架和库/dva相关类/dva抽离数组路由+动态路由配置方法) 
+* [dva抽离数组路由+动态路由配置方法](/Blog/2-框架和库/dva/dva抽离数组路由+动态路由配置方法) 
 
-* [dva的一些点](/Blog/2-框架和库/dva相关类/dva的一些点) 
+* [dva的一些点](/Blog/2-框架和库/dva/dva的一些点) 
 
 ## lodash 
 
