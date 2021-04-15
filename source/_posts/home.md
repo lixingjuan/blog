@@ -7,7 +7,9 @@ comments: false
 
 # Hello
 
-这里是李幸娟博客的首页！！！:)
+
+这里是李幸娟博客的首页！！！ <span style="display: inline-block;">![](Blog/images/hello-face.png)</span>
+
 该博客仅用于日常学习的记录，如有错误或问题请联系我 (邮箱：18236129679@163.com)
 
 
@@ -18,7 +20,6 @@ keep hungry, and eat 🥤🐂🍔🍗🍰☕️🍉🍒🍦🍭🌽🍓🍇🥬�
 
 
 
-# 前端团队技术分享主题
 
 
 
