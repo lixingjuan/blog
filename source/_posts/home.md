@@ -5,7 +5,7 @@ comments: false
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-# HELLO  <span>![](images/hello-face.png)</span>
+# HELLO  <p style="display: inline-block; margin-bottom: 0;">![](images/hello-face.png)</p>
 
 这里是李幸娟博客的首页！！！
 
@@ -23,11 +23,6 @@ comments: false
 
 ![](x-mind/李幸娟-前端汇总.png)
 
-
-<div style="margin: 30px 0;">输出是最好的学习</div>
-
-
-![](x-mind/宝藏.svg)
 
 
 <!--  -->
