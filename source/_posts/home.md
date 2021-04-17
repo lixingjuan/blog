@@ -5,31 +5,7 @@ comments: false
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-# HELLO
-
-<div style="position: relative;width: 50%;">
-  <div
-    id="bubble"
-    style="
-      position: absolute;
-      z-index: 200;
-      left: 3rem;
-      top: -2rem;
-      padding: 1rem;
-      font-size: 20px;
-      background: white;
-      border-radius: 12px;
-      border: 3px solid black;
-      width: 5rem;
-      text-align: center
-    "
-  >
-      oh hi!
-  </div>
-
-
-  <span>![](images/hello-face.png)</span>
-</div>
+# HELLO  <span>![](images/hello-face.png)</span>
 
 
 
@@ -44,7 +20,12 @@ comments: false
 
 
 
-输出是最好的学习
+<div style="margin: 30px 0;">输出是最好的学习</div>
+
+
+![](x-mind/宝藏.svg)
+
+
 <!--  -->
 <!-- # 前端团队技术分享主题 -->
 <!--  -->
@@ -55,7 +36,6 @@ comments: false
 <!-- 1.  [ ]  js精度问题, 为什么产生？解决方法？ -->
 <!-- 2.  [ ]  为什么0.1+0.2 === 0.30000000000000004 -->
 <!-- 3.  [ ]  2.3*100 === 229.99999999999997 -->
-![](x-mind/宝藏.svg)
 
 <!-- {% pullquote mindmap %} -->
 <!-- #主题 -->
