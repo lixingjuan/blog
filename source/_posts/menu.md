@@ -233,52 +233,6 @@
 
 * [常见排序](/Blog/4-其他/基础算法/常见排序) 
 
-## 工具🔧 
-
-### git相关操作 
-
-* [git常用操作❤](/Blog/4-其他/工具🔧/git相关操作/git常用操作❤) 
-
-* [代码提交校验](/Blog/4-其他/工具🔧/git相关操作/代码提交校验) 
-
-### webpack 
-
-* [antd按需加载](/Blog/4-其他/工具🔧/webpack/antd按需加载) 
-
-* [eslint](/Blog/4-其他/工具🔧/webpack/eslint) 
-
-* [perttier](/Blog/4-其他/工具🔧/webpack/perttier) 
-
-* [webpack热更新原理](/Blog/4-其他/工具🔧/webpack/webpack热更新原理) 
-
-### 指令 
-
-* [MAC-shell](/Blog/4-其他/工具🔧/指令/MAC-shell) 
-
-* [index](/Blog/4-其他/工具🔧/指令/index) 
-
-* [tree](/Blog/4-其他/工具🔧/指令/tree) 
-
-### 数据库 
-
-* [MySQL常用命令](/Blog/4-其他/工具🔧/数据库/MySQL常用命令) 
-
-* [常用SQL](/Blog/4-其他/工具🔧/数据库/常用SQL) 
-
-### 无归类 
-
-* [chrome浏览器跨域设置](/Blog/4-其他/工具🔧/无归类/chrome浏览器跨域设置) 
-
-* [快捷键](/Blog/4-其他/工具🔧/无归类/快捷键) 
-
-### 系统操作 
-
-* [cross-env](/Blog/4-其他/工具🔧/系统操作/cross-env) 
-
-* [安装虚拟机](/Blog/4-其他/工具🔧/系统操作/安装虚拟机) 
-
-* [查看本地ip之类的配置(window)](/Blog/4-其他/工具🔧/系统操作/查看本地ip之类的配置(window)) 
-
 ## 方案 
 
 * [Node端通过html导出word](/Blog/4-其他/方案/Node端通过html导出word) 
@@ -392,6 +346,52 @@
 * [冷门属性](/Blog/7-日记/2021/冷门属性) 
 
 * [前端团队技术分享主题](/Blog/7-日记/2021/前端团队技术分享主题) 
+
+<h1 style="color:#448d55;">乱七八糟工具</h1> 
+
+## git相关操作 
+
+* [git常用操作❤](/Blog/8-乱七八糟工具/git相关操作/git常用操作❤) 
+
+* [代码提交校验](/Blog/8-乱七八糟工具/git相关操作/代码提交校验) 
+
+## webpack 
+
+* [antd按需加载](/Blog/8-乱七八糟工具/webpack/antd按需加载) 
+
+* [eslint](/Blog/8-乱七八糟工具/webpack/eslint) 
+
+* [perttier](/Blog/8-乱七八糟工具/webpack/perttier) 
+
+* [webpack热更新原理](/Blog/8-乱七八糟工具/webpack/webpack热更新原理) 
+
+## 指令 
+
+* [MAC-shell](/Blog/8-乱七八糟工具/指令/MAC-shell) 
+
+* [index](/Blog/8-乱七八糟工具/指令/index) 
+
+* [tree](/Blog/8-乱七八糟工具/指令/tree) 
+
+## 数据库 
+
+* [MySQL常用命令](/Blog/8-乱七八糟工具/数据库/MySQL常用命令) 
+
+* [常用SQL](/Blog/8-乱七八糟工具/数据库/常用SQL) 
+
+## 无归类 
+
+* [chrome浏览器跨域设置](/Blog/8-乱七八糟工具/无归类/chrome浏览器跨域设置) 
+
+* [快捷键](/Blog/8-乱七八糟工具/无归类/快捷键) 
+
+## 系统操作 
+
+* [cross-env](/Blog/8-乱七八糟工具/系统操作/cross-env) 
+
+* [安装虚拟机](/Blog/8-乱七八糟工具/系统操作/安装虚拟机) 
+
+* [查看本地ip之类的配置(window)](/Blog/8-乱七八糟工具/系统操作/查看本地ip之类的配置(window)) 
 
 * [README](/Blog//README) 
 
