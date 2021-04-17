@@ -33,11 +33,13 @@
 
 * [函数的执行顺序](/Blog/1-JavaScript/专题深入/函数的执行顺序) 
 
+* [判断数据类型的方式及区别](/Blog/1-JavaScript/专题深入/判断数据类型的方式及区别) 
+
 * [前端模块化规范](/Blog/1-JavaScript/专题深入/前端模块化规范) 
 
 * [加快首屏渲染](/Blog/1-JavaScript/专题深入/加快首屏渲染) 
 
-* [原型和原型链](/Blog/1-JavaScript/专题深入/原型和原型链) 
+* [原型和原型链的理解](/Blog/1-JavaScript/专题深入/原型和原型链的理解) 
 
 * [废弃](/Blog/1-JavaScript/专题深入/废弃) 
 
@@ -45,7 +47,11 @@
 
 * [浏览器](/Blog/1-JavaScript/专题深入/浏览器) 
 
-* [闭包相关](/Blog/1-JavaScript/专题深入/闭包相关) 
+* [跨域产生原因及解决方法](/Blog/1-JavaScript/专题深入/跨域产生原因及解决方法) 
+
+* [输入URL后发生了什么](/Blog/1-JavaScript/专题深入/输入URL后发生了什么) 
+
+* [闭包是什么应用场景](/Blog/1-JavaScript/专题深入/闭包是什么应用场景) 
 
 * [防抖和节流](/Blog/1-JavaScript/专题深入/防抖和节流) 
 
@@ -160,6 +166,8 @@
 * [key的作用](/Blog/2-框架和库/Vue/key的作用) 
 
 * [vue](/Blog/2-框架和库/Vue/vue) 
+
+* [vue的data为什么是函数](/Blog/2-框架和库/Vue/vue的data为什么是函数) 
 
 * [开发规范](/Blog/2-框架和库/Vue/开发规范) 
 
