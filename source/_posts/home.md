@@ -5,7 +5,7 @@ comments: false
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-# HELLO  <span>![](images/hello-face.png)</span>
+# HELLO  <p style="display: inline-block; margin-bottom: 0;">![](images/hello-face.png)</p>
 
 
 
@@ -15,7 +15,7 @@ comments: false
 该博客仅用于日常学习的记录，如有错误或问题请联系我 (邮箱：18236129679@163.com)
 
 
-<img src='/Blog/images/home-banner.svg' />
+<img src='/Blog/images/home-banner.svg'/>
 
 
 
