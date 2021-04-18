@@ -23,7 +23,7 @@ comments: false
 <div style="margin: 30px 0;">输出是最好的学习</div>
 
 
-![](x-mind/宝藏.svg)
+![](x-mind/李幸娟-前端汇总.png)
 
 
 <!--  -->
