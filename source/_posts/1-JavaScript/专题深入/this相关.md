@@ -22,21 +22,145 @@ this其实是 ==函数被调用时== 发生的绑定，并不是在编写的时�
 
 
 
-# this绑定四种规则
 
-先找到函数的调用位置，然后判断需要应用下面四条规则中的那一条
-this有四种绑定规则, 优先级依次
+this 是在运行时进行绑定的，并不是在编写时绑定，调用一个函数将暂停当前函数的执行，传递控制权和参数给新函数。
+除了声明时定义的形式参数，每个函数接收两个附加的参数: this和arguments。参数this 在面向对象编程中非常重要，它的值取决于调用的模式。
 
-1. new绑定：指向实例
-2. 显式绑定：call和apply显式绑定，bind硬绑定
-3. 默认绑定：调用位置是否有上下文对象（看是否被某个对象拥有或者包含），this即指向这个包含他的对象
-4. 隐式绑定：看是否被某个对象拥有或者包含
+# this四种指向
+
+在JavaScript中一共有四种调用模式: **方法调用模式**、**函数调用模式**、**构造器调用模式** 、 **apply调用模式**。这些模式在如何初始化关键参数this 上存在差异。
 
 
+## 方法调用模式
+
+this指向所属对象
+
+当一个的数被保存为对象的一个属性时，我们称它为一个方法。当这个方法被调用时，this被绑定到该对象。
+如果一个调用表达式包含一个属性存取表达式(即一个:点表达式或[subscript]下标表达式)，那么它被当作一一个方法来调用。
+
+```js
+// 创建myObject。 它有一个value属性和一个increment 方法。
+// increment 方法接受一个可选的参数。如果参数不是数字，那么默认使用数字1。
+
+const myObject =
+  value: 0
+  increment: function(){
+    this.value += typeof inc===' number' ? inc : 1;
+  }
+}.
+
+my0bject.increment();
+document.writeln(myObject. value); // 1
+
+//1
+myObject.increment(2) ;
+document.writeln (myObject. value); // 3
+
+```
 
 
 
-## new绑定
+方法可以使用this去访问对象，所以它能从对象中取值或修改该对象。
+this到对象的绑定发生在调用的时候，这个迟绑定使得函数可以对this高度复用，通过this可取得它们所属对象的上下文的方法称为公共方法。
+
+
+this的绑定发生在函数调用时：
+
+```javascript
+function foo() {
+  console.log(this.a);
+}
+const obj = {
+  a: 2,
+  foo: foo
+};
+
+obj.foo();  // 2
+```
+
+
+说函数被调用时，obj对象’拥有‘或者‘包含’它，当函数引用有上下文对象时，隐式绑定规则会把函数调用中的this绑定到这个上下文对象
+
+对象属性引用链中只有最顶层或者最后一层会影响调用位置：
+
+```javascript
+function foo() {
+  console.log(this.a);
+}
+var obj = {
+  a: 2,
+  foo: foo
+};
+var obj2 = {
+  a: 3,
+  obj: obj
+};
+obj2.obj.foo(); // 2
+```
+
+
+
+
+## 函数调用模式
+
+
+
+当一个函数并非一个对象的属性时，那么它被当作个的数来调用:
+
+```js
+var sum = add(3，4) ;// sum的值为7
+```
+
+当函数以此模式调用时，this被绑定到全局对象。这是语言设计上的一个错误, 若设计正确，当内部函数被调用时，this应该仍然绑定到外部函数的this变量。这个设计错误的后果是不能利用内部函数来帮助他工作，因为内部函数的this是绑定在全局的。
+
+通常有两种方法解决该问题
+
+```js
+/* 1. 声明变量，将外部函数的this的变量赋值给该变量 */
+
+// 给myObject增加一一个double方法。
+
+myObject. double = function (){
+
+
+  const that = this;  //解决方法
+  const helper = function (){
+    that.value = add(that.value, that.value);
+  }
+
+  // 以函数的形式调用helper。
+  helper() ;
+}
+
+
+// 以方法的形式调用double
+my0bject.double() ;
+document. writeln (myObject. getValue() ) ; // 6
+
+
+/* 2. 利用箭头函数没有this的特点 */
+
+myObject. double = function (){
+  const helper = () => {
+    that.value = add(this.value, this.value);
+  }
+
+  // 以函数的形式调用helper。
+  helper() ;
+}
+
+
+// 以方法的形式调用double
+my0bject.double() ;
+document. writeln(myObject. getValue() ) ; // 6
+
+```
+
+
+## 构造器调用模式
+
+
+指向实例
 
 
 使用new来调用函数 (或者说发生构造函数调用时)，会自动执行下面的操作
@@ -81,11 +205,75 @@ function Vue (options) {
 如果直接调用， `this` 指向  Vue 本身
 
 
-## 显式绑定
+
+
+
+
+
+
+
+
+
+
+
+
+## apply,call调用模式
 
 - call、apply显式绑定
 - bind, 显示绑定的变种，硬绑定
 
+
+
+因为JavaScript是一门函数式的面向对象编程语言，所以函数可以拥有方法。apply方法让我们构建-个参数数组并用其去调用函数。它也允许我们选择this的值。apply方法接收两个参数。第一个是将被绑定给this的值。第二个就是 一个参数数组。
+
+```js
+const Quo = function(string){
+  this.status = string;
+}
+Quo.prototype.getStatus = function(){
+    return this.status;
+}
+
+
+
+
+// 构造一一个包含两个数字的数组，并将它们相加。
+const array= [3, 4];
+const sum = 0
+
+add.apply(null, array);  // sum值为 7
+
+//构造一个包含status成员的对象。
+const statusObject = {
+  status: 'A-OK'
+}
+
+// statusObject并没有继承自Quo.prototype,但我们可以在 statusObject  调用get_ status方法，尽管statusObject 并没有一个名为getStatus的方法
+
+const status = Quo.prototype.getStatus.apply(statusObject);
+console.log(status);  // 'A-OK'
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 我的疑问
 
 ## 默认绑定
 
@@ -149,77 +337,8 @@ foo(); // undefined
 
 
 
-## 隐式绑定
-
-调用位置是否有上下文对象，或者说是否被某个对象拥有或者包含
-
-```javascript
-function foo() {
-  console.log(this.a);
-}
-var obj = {
-  a: 2,
-  foo: foo
-};
-obj.foo();
-```
-
-无论是直接在obj中定义还是先定义在添加为引用属性，这个函数严格来说都不属于obj对象
-然后调用位置会使obj上下文来引用函数，因此可以说函数被调用时，obj对象’拥有‘或者‘包含’它
-当函数引用有上下文对象时，隐式绑定规则会把函数调用中的this绑定到这个上下文对象
-
-对象属性引用链中只有最顶层或者最后一层会影响调用位置
-
-```javascript
-function foo() {
-  console.log(this.a);
-}
-var obj = {
-  a: 2,
-  foo: foo
-};
-var obj2 = {
-  a: 3,
-  obj: obj
-};
-obj2.obj.foo(); // 2
-```
 
 
-
-
-
-## 优先级
-
-根据优先级来判断函数在某个调用位置应用的是那条规则，按照下面的顺序来进行判断
-
-1. 函数是否在new中调用（new 绑定）？如果是的话this绑定的是新创建的对象 `var bar = new Foo()`
-2. 函数是否通过call、apply(显示绑定) 或者硬绑定调用？ 如果是的话，this绑定的是指定的对象 `var bar = foo.call(obj2)`
-3. 对象是否在某个上下文对象中调用（隐式绑定）？如果是的话，this绑定的是那个上下文对象 `var bar = obj1.foo()`
-4. 如果都不是的话，使用默认绑定。如果在严格模式下，就绑定到undefined, 否则绑定到全局对象 `var bar = foo()`
-
-
-## this绑定的例外规则
-
-### 被忽略的this
-- 如果把null或者undefined作为this的绑定对象传入call、apply或者bind, 这些值在调用时会被忽略，实际上应用的是 **默认绑定规则**
-- 安全的做法，在忽略this绑定时创建一个空对象，作为占位符，对于this的引用都会被限制在这个空对象中，不会对全局产生任何影响
-
-```javascript
-var ø = Object.create(null)
-foo.apply(ø, [2,3])
-```
-
-
-## this和箭头函数
-
-**！！见箭头函数篇**
-
-
-
-
-
-## 我的疑问
 
 按理说this是函数调用时候发生的一次绑定，和函数被调用环境有关，但是在扩充类型的功能《javascript语言精粹-第四章》的时候，也就是给函数原型添加了方法，在函数实例调用该方法时候，这里的this打印出来是 `[Number: 3.3333333333333335]`
 
@@ -234,14 +353,7 @@ console.log((10 / 3).integer());
 
 
 
-# new的原理
 
-new的过程发生了什么？
-
-1. 创建（或者说构造）一个全新的对象；
-2. 这个新对象会被执行 [[原型]] 连接
-3. 这个新对象会被绑定到函数调用的this；
-4. 若函数未返回其他对象，那么new表达式中的函数调用会自动返回这个新对象；
 
 
 
@@ -319,3 +431,4 @@ console.log(getName.call(Foo)); // 'Foo1'
 
 - [《你不知道的Javascript(上)第二部分》]
 - [《JavaScript高级程序设计》]
+- [《JavaScript语言精粹》]
