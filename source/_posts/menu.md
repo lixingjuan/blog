@@ -19,6 +19,8 @@
 
 * [for和forEach的区别](/Blog/1-JavaScript/专题深入/for和forEach的区别) 
 
+* [new的时候发生了什么?](/Blog/1-JavaScript/专题深入/new的时候发生了什么?) 
+
 * [this相关](/Blog/1-JavaScript/专题深入/this相关) 
 
 * [事件委托](/Blog/1-JavaScript/专题深入/事件委托) 
@@ -312,8 +314,6 @@
 * [一些不错的面经](/Blog/6-面试准备/ready/一些不错的面经) 
 
 * [一些总结](/Blog/6-面试准备/ready/一些总结) 
-
-* [大纲](/Blog/6-面试准备/ready/大纲) 
 
 * [执行上下文+作用域链+闭包](/Blog/6-面试准备/ready/执行上下文+作用域链+闭包) 
 
