@@ -341,9 +341,13 @@
 
 * [eslint](/Blog/8-乱七八糟工具/webpack/eslint)
 
+<<<<<<< HEAD
 * [perttier](/Blog/8-乱七八糟工具/webpack/perttier)
 
 * [webpack热更新原理](/Blog/8-乱七八糟工具/webpack/webpack热更新原理)
+=======
+* [执行上下文+作用域链+闭包](/Blog/6-面试准备/ready/执行上下文+作用域链+闭包) 
+>>>>>>> fix: 1.删除多余文章2.完善阿里招前端文章
 
 ## 指令
 
