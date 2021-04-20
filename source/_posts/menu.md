@@ -19,6 +19,8 @@
 
 * [for和forEach的区别](/Blog/1-JavaScript/专题深入/for和forEach的区别) 
 
+* [new的时候发生了什么?](/Blog/1-JavaScript/专题深入/new的时候发生了什么?) 
+
 * [this相关](/Blog/1-JavaScript/专题深入/this相关) 
 
 * [事件委托](/Blog/1-JavaScript/专题深入/事件委托) 
@@ -232,6 +234,8 @@
 * [js三种遍历](/Blog/4-其他/基础算法/js三种遍历) 
 
 * [常见排序](/Blog/4-其他/基础算法/常见排序) 
+
+* [汉诺塔](/Blog/4-其他/基础算法/汉诺塔) 
 
 ## 方案 
 
