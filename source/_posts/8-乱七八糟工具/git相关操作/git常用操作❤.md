@@ -1,5 +1,13 @@
 # git常用操作 🎀
 
+## hexo d失败
+
+```js
+// 取消代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
 ## 基本知识
 
 ```bash
