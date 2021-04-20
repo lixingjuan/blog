@@ -19,7 +19,13 @@
 
 * [for和forEach的区别](/Blog/1-JavaScript/专题深入/for和forEach的区别)
 
+<<<<<<< HEAD
 * [new的时候发生了什么?](/Blog/1-JavaScript/专题深入/new的时候发生了什么?)
+=======
+* [new的时候发生了什么?](/Blog/1-JavaScript/专题深入/new的时候发生了什么?) 
+
+* [this相关](/Blog/1-JavaScript/专题深入/this相关) 
+>>>>>>> fix: 修改了xmind
 
 * [this相关](/Blog/1-JavaScript/专题深入/this相关)
 
@@ -245,7 +251,13 @@
 
 ## 方案
 
+<<<<<<< HEAD
 * [《你不知道的javascript》](/Blog/5-笔记和复盘/读书笔记/《你不知道的javascript》)
+=======
+* [汉诺塔](/Blog/4-其他/基础算法/汉诺塔) 
+
+## 方案 
+>>>>>>> fix: 修改了xmind
 
 * [慕客课程react+ts开发组件](/Blog/5-笔记和复盘/读书笔记/慕客课程react+ts开发组件)
 
