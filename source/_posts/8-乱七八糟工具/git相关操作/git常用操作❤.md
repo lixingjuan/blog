@@ -14,6 +14,20 @@ workspace：本地工作区，
 git config --system --unset credential.helper
 ```
 
+
+## git revert
+
+git reset 是 操作记录向后回退一个，
+git revert 是使用一个新的revert, 抵消掉上一次的 记录
+导致再次执行merge 的时候，这部分代码会丢失
+
+解决方法： revert 掉 此次 revert
+
+```bash
+git revert --no-commit commit号
+git commit -a -m '此处填写正常的commit信息'
+git push
+```
 ## 查看git信息
 
 ```bash
