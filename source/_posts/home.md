@@ -21,6 +21,7 @@ comments: false
 
 
 <div style="margin: 30px 0;">输出是最好的学习</div>
+<div style="margin: 30px 0;">温故而知新</div>
 
 
 ![](x-mind/李幸娟-前端汇总.png)
@@ -46,3 +47,16 @@ comments: false
 <!-- ###二级分支 -->
 <!-- ####三级分支 -->
 <!-- {% endpullquote %} -->
+
+
+站在公司和前端团队的立场对自己的认知
+1. 在公司技术大环境为react的场景下，同时掌握vue和react, 且均具备项目经验
+2. 踏实，态度好，愿意做事情
+3. 对技术热爱
+
+
+
+
+
+
+
