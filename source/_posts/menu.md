@@ -19,13 +19,7 @@
 
 * [for和forEach的区别](/Blog/1-JavaScript/专题深入/for和forEach的区别)
 
-<<<<<<< HEAD
 * [new的时候发生了什么?](/Blog/1-JavaScript/专题深入/new的时候发生了什么?)
-=======
-* [new的时候发生了什么?](/Blog/1-JavaScript/专题深入/new的时候发生了什么?) 
-
-* [this相关](/Blog/1-JavaScript/专题深入/this相关) 
->>>>>>> fix: 修改了xmind
 
 * [this相关](/Blog/1-JavaScript/专题深入/this相关)
 
@@ -53,13 +47,7 @@
 
 * [扩充类型的功能](/Blog/1-JavaScript/专题深入/扩充类型的功能)
 
-<<<<<<< HEAD
 * [浏览器](/Blog/1-JavaScript/专题深入/浏览器)
-=======
-* [继承](/Blog/1-JavaScript/专题深入/继承) 
-
-* [跨域产生原因及解决方法](/Blog/1-JavaScript/专题深入/跨域产生原因及解决方法) 
->>>>>>> fix: 修改svg为png
 
 * [跨域产生原因及解决方法](/Blog/1-JavaScript/专题深入/跨域产生原因及解决方法)
 
@@ -99,13 +87,9 @@
 
 * [立即执行函数](/Blog/1-JavaScript/基础知识类/立即执行函数)
 
-<<<<<<< HEAD
 * [箭头函数](/Blog/1-JavaScript/基础知识类/箭头函数)
 
 <h1 style="color:#448d55;">框架和库</h1>
-=======
-<h1 style="color:#448d55;">框架和库</h1> 
->>>>>>> fix: 修改svg为png
 
 ## Deno
 
@@ -251,13 +235,7 @@
 
 ## 方案
 
-<<<<<<< HEAD
 * [《你不知道的javascript》](/Blog/5-笔记和复盘/读书笔记/《你不知道的javascript》)
-=======
-* [汉诺塔](/Blog/4-其他/基础算法/汉诺塔) 
-
-## 方案 
->>>>>>> fix: 修改了xmind
 
 * [慕客课程react+ts开发组件](/Blog/5-笔记和复盘/读书笔记/慕客课程react+ts开发组件)
 
@@ -307,13 +285,9 @@
 
 ## 2021
 
-<<<<<<< HEAD
 * [2021-0408](/Blog/7-日记/2021/2021-0408)
 
 * [20200103](/Blog/7-日记/2021/20200103)
-=======
-* [民生星探-移动端](/Blog/5-笔记和复盘/项目复盘/民生星探-移动端) 
->>>>>>> fix: 修改svg为png
 
 * [20200118](/Blog/7-日记/2021/20200118)
 
@@ -341,13 +315,9 @@
 
 * [eslint](/Blog/8-乱七八糟工具/webpack/eslint)
 
-<<<<<<< HEAD
 * [perttier](/Blog/8-乱七八糟工具/webpack/perttier)
 
 * [webpack热更新原理](/Blog/8-乱七八糟工具/webpack/webpack热更新原理)
-=======
-* [执行上下文+作用域链+闭包](/Blog/6-面试准备/ready/执行上下文+作用域链+闭包) 
->>>>>>> fix: 1.删除多余文章2.完善阿里招前端文章
 
 ## 指令
 
