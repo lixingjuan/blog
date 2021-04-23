@@ -110,7 +110,8 @@
   // "pasteImage.insertPattern": "{% asset_img ${imageFileName} %}",
   /* paste image 默认文件名称, 如果有该设置，则本地预览不行 */
   "pasteImage.defaultName": "${currentFileNameWithoutExt}-YY-MM-DD-HH-mm-ss",
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "editor.tabSize": 2
 }
 
 
