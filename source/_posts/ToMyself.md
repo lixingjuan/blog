@@ -26,3 +26,16 @@
 > I recognised its social values, I saw its ordered happiness, but a fever in my blood asked for a wilder course. There seemed to me something alarming in such easy delights. In my heart was a desire to live more dangerously. I was not unprepared for jagged rocks and treacherous shoals if I could only have change -- change and the excitement of the unforeseen.
 
 > 我承认这种生活有其社会价值，我明白循规蹈矩未必不是幸福。但血气方刚的我想踏上更为狂野不羁的旅途。我认为我应该提防这些安逸的快乐。我心里渴望过上更危险的生活。 我随时愿意奔赴陡峭的山岭和暗流汹涌的海滩，我要我能拥有改变————改变和意料之外的事物带来的刺激。
+
+## 2021-0420
+
+站在公司和前端团队的立场对自己的认知
+1. 在公司技术大环境为react的场景下，同时掌握vue和react, 且均具备项目经验
+2. 踏实，态度好，愿意做事情
+3. 对技术热爱, 自驱
+
+
+## 2021-04-22
+
+好好学习太重要了，外包员工真的太卑微了…… 28还要经历这些
+实力是选择权和话语权的基础
