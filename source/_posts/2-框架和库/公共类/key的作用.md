@@ -1,10 +1,12 @@
+[key对dom的影响测试地址](https://codesandbox.io/s/blissful-burnell-iusoj?file=/src/index.js)
+
 # vue/react 的key的作用
 
 渲染真实DOM的开销非常大，当我们修改了某个元素，如果直接渲染到DOM上，会引起整个DOM树的重绘和重排，
 
 而diff算法，可以帮助我们只更新那一小块DOM，而不是更新整个DOM
 
-diff算法会根据真实DOM生成一棵 virtual DOM , 当virtual DOM某个节点的数据改变后，会生成一棵新的VNode, 
+diff算法会根据真实DOM生成一棵 virtual DOM , 当virtual DOM某个节点的数据改变后，会生成一棵新的VNode,
 然后VNode 和 old VNode 做对比，发现不一样的地方就直接修改在真实DOM上（即调用patch算法，一边比较一边给真实DOM打补丁）
 
 2. virtual DOM 和真实DOM的区别？
@@ -89,7 +91,7 @@ function createKeyToOldIdx (children, beginIdx, endIdx) {
  function findIdxInOld (node, oldCh, start, end) {
     for (let i = start; i < end; i++) {
       const c = oldCh[i]
-      
+
       if (isDef(c) && sameVnode(node, c)) return i
     }
   }

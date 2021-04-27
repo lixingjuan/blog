@@ -165,9 +165,13 @@
 
 * [key的作用](/Blog/2-框架和库/Vue/key的作用)
 
+<<<<<<< HEAD
 * [vue](/Blog/2-框架和库/Vue/vue)
 
 * [vue的data为什么是函数](/Blog/2-框架和库/Vue/vue的data为什么是函数)
+=======
+* [vue](/Blog/2-框架和库/Vue/vue) 
+>>>>>>> fix: 修改目录名称
 
 * [开发规范](/Blog/2-框架和库/Vue/开发规范)
 
@@ -187,7 +191,13 @@
 
 * [vue和react对比](/Blog/2-框架和库/公共类/vue和react对比)
 
+<<<<<<< HEAD
 * [框架通识](/Blog/2-框架和库/公共类/框架通识)
+=======
+* [key的作用](/Blog/2-框架和库/公共类/key的作用) 
+
+* [vue和react对比](/Blog/2-框架和库/公共类/vue和react对比) 
+>>>>>>> fix: 修改目录名称
 
 <h1 style="color:#448d55;">CSS相关</h1>
 
@@ -309,9 +319,13 @@
 
 * [代码提交校验](/Blog/8-乱七八糟工具/git相关操作/代码提交校验)
 
+<<<<<<< HEAD
 ## webpack
 
 * [antd按需加载](/Blog/8-乱七八糟工具/webpack/antd按需加载)
+=======
+## ready 
+>>>>>>> fix: 修改目录名称
 
 * [eslint](/Blog/8-乱七八糟工具/webpack/eslint)
 
