@@ -4,6 +4,23 @@
 
 
 
+{% pullquote mindmap %}
+#keep-alive
+##实现
+###四种绑定规则
+####new
+####显示绑定
+####默认绑定
+####隐式绑定
+##渲染
+###首次渲染
+###更新渲染
+{% endpullquote %}
+
+
+
+
+
 `<keep-alive>` 本质上是 `vue` 框架实现的组件，通过自定义 render 函数并且利用了插槽;
 `<keep-alive>` 在 created 钩子里定义了 this.cache 和 this.keys，本质上它就是去缓存已经创建过的 vnode;
 获取到 this.$slot.default (即放在`<keep-alive>`获取到的是此处的vnode`</keep-alive>`)
