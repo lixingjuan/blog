@@ -1,11 +1,5 @@
-const hanoi = (disc, A, B, C) => {
-  if(disc > 0){
-    hanoi(disc-1, A, C, B)
-    console.log(`Move disc ${disc} from ${A} to ${C}` )
-    hanoi(disc-1, B, A, C)
-  }
+for (let i = 0;i < 10;i++) {
+  setTimeout(function () {
+    console.log(i)// 10个10
+  }, 1000)
 }
-
-
-
-hanoi(4, 'A','B','C')
