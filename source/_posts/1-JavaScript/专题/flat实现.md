@@ -58,12 +58,12 @@ function flat(arg) {
  * 2. 如果是，则调用reduce, 迭代合并函数
  * @return {Array}
  */
-function flat(arg) {
-  if (!Array.isArray(arg)) {
-    return arg;
+const flat = (arr) => {
+  if (!Array.isArray(arr)) {
+    return arr
   }
 
-  return arg.reduce((tol, cur) => tol.concat(flat2(cur)), []);
+  return arr.reduce((tol, cur) => tol.concat(flat(cur)), [])
 }
 
 console.log(flat(initArr))
