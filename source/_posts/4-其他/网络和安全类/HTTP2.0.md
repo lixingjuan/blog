@@ -5,7 +5,7 @@ HTTP/2 兼容 HTTP1.1, 例如 HTTP METHOD，Status Code, URI ,以及大部分的
 
 HTTP/2 通过以下方法减少 latency, 用来改进页面加载的速度
 1. HTTP header 的压缩，采用HPack算法；
-2. HTTP/2 的 ==Server Push==，非常重要的一个特性。
+2. HTTP/2 的 **Server Push**，非常重要的一个特性。
 3. 请求的pipeline;
 4. 修复在HTTP 1.x的队头阻塞问题;
 5. 在单个TCP连接里多工复用请求;
@@ -35,10 +35,10 @@ TCP
 
 HTTP2.0是SPDY的升级版，具有以下特性
 
-1. ==二进制协议的解析==：HTTP1.x的解析基于文本，HTTP2.0基于 ==二进制==, 基于文本协议的格式解析存在天然缺陷，文本的表现形式有多样性，要做到健壮性考虑的场景必然很多，二进制则不同，只认0和1的组合，基于二进制协议的解析方便且健壮；
-2. ==多路复用，即连接共享==：即每一个request都是用作链接共享机制的，一个request对应一个id, 这样一个连接上可以有多个request, 每个连接的request可以随机的混杂在一起，接收方可以根据request 的id将request再归属到各自不同的服务端请求里；
-3. ==header压缩==：HTTP1.xd的header带有大量信息，而且每次传输都要发送，HTTP2.0使用 ==encoder== 来减少需要传输的header的大小，通讯双方各自 ==cache一份header filed表==，既避免了重复header的传输，又减小了需要传输的大小；（我看有个地方说维护一本字典啥啥的）
-4. ==服务端推送（server push）==：同SPDY一样，HTTP2.0也具有server push 的功能
+1. **二进制协议的解析**：HTTP1.x的解析基于文本，HTTP2.0基于 **二进制**, 基于文本协议的格式解析存在天然缺陷，文本的表现形式有多样性，要做到健壮性考虑的场景必然很多，二进制则不同，只认0和1的组合，基于二进制协议的解析方便且健壮；
+2. **多路复用，即连接共享**：即每一个request都是用作链接共享机制的，一个request对应一个id, 这样一个连接上可以有多个request, 每个连接的request可以随机的混杂在一起，接收方可以根据request 的id将request再归属到各自不同的服务端请求里；
+3. **header压缩**：HTTP1.xd的header带有大量信息，而且每次传输都要发送，HTTP2.0使用 **encoder** 来减少需要传输的header的大小，通讯双方各自 **cache一份header filed表**，既避免了重复header的传输，又减小了需要传输的大小；（我看有个地方说维护一本字典啥啥的）
+4. **服务端推送（server push）**：同SPDY一样，HTTP2.0也具有server push 的功能
 
 
 ## HTTP2.0 的一些关键词
