@@ -69,6 +69,8 @@
 
 * [Generate](/Blog/1-JavaScript/基础知识类/Generate) 
 
+* [Map和Object](/Blog/1-JavaScript/基础知识类/Map和Object) 
+
 * [Proxy](/Blog/1-JavaScript/基础知识类/Proxy) 
 
 * [Reflect](/Blog/1-JavaScript/基础知识类/Reflect) 
@@ -79,6 +81,8 @@
 
 * [bind](/Blog/1-JavaScript/基础知识类/bind) 
 
+* [位掩码](/Blog/1-JavaScript/基础知识类/位掩码) 
+
 * [判断数据类型](/Blog/1-JavaScript/基础知识类/判断数据类型) 
 
 * [合并空值](/Blog/1-JavaScript/基础知识类/合并空值) 
@@ -88,6 +92,8 @@
 * [数组](/Blog/1-JavaScript/基础知识类/数组) 
 
 * [正则](/Blog/1-JavaScript/基础知识类/正则) 
+
+* [比较值相等](/Blog/1-JavaScript/基础知识类/比较值相等) 
 
 * [立即执行函数](/Blog/1-JavaScript/基础知识类/立即执行函数) 
 
@@ -165,8 +171,6 @@
 
 * [18源码-派发更新](/Blog/2-框架和库/Vue/18源码-派发更新) 
 
-* [README](/Blog/2-框架和库/Vue/README) 
-
 * [keep-alive](/Blog/2-框架和库/Vue/keep-alive) 
 
 * [vue](/Blog/2-框架和库/Vue/vue) 
@@ -231,55 +235,61 @@
 
 * [移动端适配](/Blog/3-CSS相关/库&方案/移动端适配) 
 
-<h1 style="color:#448d55;">其他</h1> 
+<h1 style="color:#448d55;">网络和算法和ts</h1> 
 
 ## TypeScript 
 
-* [测试目录结构](/Blog/4-其他/TypeScript/测试目录结构) 
+* [enum](/Blog/4-网络和算法和ts/TypeScript/enum) 
 
-* [画瓢](/Blog/4-其他/TypeScript/画瓢) 
+* [测试目录结构](/Blog/4-网络和算法和ts/TypeScript/测试目录结构) 
+
+* [画瓢](/Blog/4-网络和算法和ts/TypeScript/画瓢) 
 
 ## 基础算法 
 
-* [js三种遍历](/Blog/4-其他/基础算法/js三种遍历) 
+* [js三种遍历](/Blog/4-网络和算法和ts/基础算法/js三种遍历) 
 
-* [常见排序](/Blog/4-其他/基础算法/常见排序) 
+* [大数相加](/Blog/4-网络和算法和ts/基础算法/大数相加) 
 
-* [汉诺塔](/Blog/4-其他/基础算法/汉诺塔) 
+* [常见排序](/Blog/4-网络和算法和ts/基础算法/常见排序) 
+
+* [汉诺塔](/Blog/4-网络和算法和ts/基础算法/汉诺塔) 
 
 ## 方案 
 
-* [Node端通过html导出word](/Blog/4-其他/方案/Node端通过html导出word) 
+* [Node端通过html导出word](/Blog/4-网络和算法和ts/方案/Node端通过html导出word) 
 
-* [导出word](/Blog/4-其他/方案/导出word) 
+* [导出word](/Blog/4-网络和算法和ts/方案/导出word) 
 
 ## 网络和安全类 
 
-* [CDN的原理](/Blog/4-其他/网络和安全类/CDN的原理) 
+* [CDN的原理](/Blog/4-网络和算法和ts/网络和安全类/CDN的原理) 
 
-* [HTTP2.0](/Blog/4-其他/网络和安全类/HTTP2.0) 
+* [HTTP2.0](/Blog/4-网络和算法和ts/网络和安全类/HTTP2.0) 
 
-* [Nginx](/Blog/4-其他/网络和安全类/Nginx) 
+* [Nginx](/Blog/4-网络和算法和ts/网络和安全类/Nginx) 
 
-* [cookie为什么不安全](/Blog/4-其他/网络和安全类/cookie为什么不安全) 
+* [cookie为什么不安全](/Blog/4-网络和算法和ts/网络和安全类/cookie为什么不安全) 
 
-* [get和post区别](/Blog/4-其他/网络和安全类/get和post区别) 
+* [get和post区别](/Blog/4-网络和算法和ts/网络和安全类/get和post区别) 
 
-* [了解类](/Blog/4-其他/网络和安全类/了解类) 
+* [http和https的区别](/Blog/4-网络和算法和ts/网络和安全类/http和https的区别) 
 
-* [前端鉴权](/Blog/4-其他/网络和安全类/前端鉴权) 
+* [了解类](/Blog/4-网络和算法和ts/网络和安全类/了解类) 
 
-* [加密算法](/Blog/4-其他/网络和安全类/加密算法) 
+* [前端鉴权](/Blog/4-网络和算法和ts/网络和安全类/前端鉴权) 
 
-* [常见的网络攻击](/Blog/4-其他/网络和安全类/常见的网络攻击) 
+* [加密算法](/Blog/4-网络和算法和ts/网络和安全类/加密算法) 
 
-* [数据结构](/Blog/4-其他/网络和安全类/数据结构) 
+* [常见的网络攻击](/Blog/4-网络和算法和ts/网络和安全类/常见的网络攻击) 
 
-* [网络](/Blog/4-其他/网络和安全类/网络) 
+* [数据结构](/Blog/4-网络和算法和ts/网络和安全类/数据结构) 
 
-* [计算机网络](/Blog/4-其他/网络和安全类/计算机网络) 
+* [缓存](/Blog/4-网络和算法和ts/网络和安全类/缓存) 
 
-* [输入URL后发生了什么](/Blog/4-其他/网络和安全类/输入URL后发生了什么) 
+* [计算机网络](/Blog/4-网络和算法和ts/网络和安全类/计算机网络) 
+
+* [输入URL后发生了什么](/Blog/4-网络和算法和ts/网络和安全类/输入URL后发生了什么) 
 
 <h1 style="color:#448d55;">笔记和复盘</h1> 
 
@@ -319,27 +329,21 @@
 
 ## ready 
 
+* [list](/Blog/6-面试准备/ready/list) 
+
 * [todo-掘金-俊劫-有赞](/Blog/6-面试准备/ready/todo-掘金-俊劫-有赞) 
 
 * [todo-掘金-慕晨同学-腾讯](/Blog/6-面试准备/ready/todo-掘金-慕晨同学-腾讯) 
-
-* [一个淘宝技术专家写的如何进入阿里](/Blog/6-面试准备/ready/一个淘宝技术专家写的如何进入阿里) 
-
-* [一些不错的面经](/Blog/6-面试准备/ready/一些不错的面经) 
-
-* [一些总结](/Blog/6-面试准备/ready/一些总结) 
 
 * [执行上下文+作用域链+闭包](/Blog/6-面试准备/ready/执行上下文+作用域链+闭包) 
 
 * [文章《如何进阿里》](/Blog/6-面试准备/ready/文章《如何进阿里》) 
 
-* [面经-俊劫-有赞](/Blog/6-面试准备/ready/面经-俊劫-有赞) 
+* [面经list](/Blog/6-面试准备/ready/面经list) 
 
 <h1 style="color:#448d55;">日记</h1> 
 
 ## 2020 
-
-* [20201225](/Blog/7-日记/2020/20201225) 
 
 * [20201231](/Blog/7-日记/2020/20201231) 
 
@@ -363,6 +367,14 @@
 
 <h1 style="color:#448d55;">乱七八糟工具</h1> 
 
+## MAC指令 
+
+* [MAC-shell](/Blog/8-乱七八糟工具/MAC指令/MAC-shell) 
+
+* [index](/Blog/8-乱七八糟工具/MAC指令/index) 
+
+* [tree](/Blog/8-乱七八糟工具/MAC指令/tree) 
+
 ## git相关操作 
 
 * [git常用操作❤](/Blog/8-乱七八糟工具/git相关操作/git常用操作❤) 
@@ -379,19 +391,9 @@
 
 * [webpack热更新原理](/Blog/8-乱七八糟工具/webpack/webpack热更新原理) 
 
-## 指令 
-
-* [MAC-shell](/Blog/8-乱七八糟工具/指令/MAC-shell) 
-
-* [index](/Blog/8-乱七八糟工具/指令/index) 
-
-* [tree](/Blog/8-乱七八糟工具/指令/tree) 
-
 ## 数据库 
 
 * [MySQL常用命令](/Blog/8-乱七八糟工具/数据库/MySQL常用命令) 
-
-* [常用SQL](/Blog/8-乱七八糟工具/数据库/常用SQL) 
 
 ## 无归类 
 
@@ -406,10 +408,4 @@
 * [安装虚拟机](/Blog/8-乱七八糟工具/系统操作/安装虚拟机) 
 
 * [查看本地ip之类的配置(window)](/Blog/8-乱七八糟工具/系统操作/查看本地ip之类的配置(window)) 
-
-* [README](/Blog//README) 
-
-* [ToMyself](/Blog//ToMyself) 
-
-* [like](/Blog//like) 
 

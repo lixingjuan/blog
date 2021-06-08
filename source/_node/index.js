@@ -1,3 +1,7 @@
+/*
+ * @desc: 用于生成 menu
+ */
+
 const fs = require("fs");
 const path = require("path");
 
@@ -67,6 +71,7 @@ const generateMenu = _postPosition => {
       ![
         "menu.md",
         "home.md",
+        "README.md",
         "temporary.md",
         ".DS_Store",
         "changelog.md",
