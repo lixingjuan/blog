@@ -1,7 +1,8 @@
-1. vue的data以函数返回？
-   1. 避免变量共享
+vue的data以函数返回？ - **避免变量共享**
 
-因为js中，引用类型是按引用传递的，在vue的源码中，对data的初始化函数是直接从 vm.option 上直接取了 data 进行响应式处理的
+
+因为js中，引用类型是按引用传递的; <br/>
+在vue的源码中，对data的初始化函数是直接从 vm.option 上直接取了 data 进行响应式处理的
 
 ```js
 export function initState (vm: Component) {
@@ -9,11 +10,13 @@ export function initState (vm: Component) {
   const opts = vm.$options
   if (opts.props) initProps(vm, opts.props)
   if (opts.methods) initMethods(vm, opts.methods)
+
   if (opts.data) {
 +   initData(vm)
   } else {
     observe(vm._data = {}, true /* asRootData */)
   }
+
   if (opts.computed) initComputed(vm, opts.computed)
   if (opts.watch && opts.watch !== nativeWatch) {
     initWatch(vm, opts.watch)

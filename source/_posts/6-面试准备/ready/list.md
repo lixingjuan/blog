@@ -236,10 +236,10 @@ console.log('10')
 69. [ ] 闭包？运行时上下文里面包括什么？
 71. [ ] [浏览器的回流与重绘?](https://juejin.im/post/6844903569087266823)
 72. [ ] [virtual DOM的优势](https://github.com/mqyqingfeng/frontend-interview-question-and-answer/issues/3)
-73. [ ] [一个 tcp 连接能发几个 http 请求](https://github.com/mqyqingfeng/frontend-interview-question-and-answer/issues/1)
-   1. [ ] HTTP1, 只能发一个
-   2. [ ] HTTP1.1, 默认开启Connection: keep-alive，一个TCP连接可以发多个http请求，但是多个请求是串行执行
-   3. [ ] HTTP/2: 引入了多路复用技术 和二进制分帧，同个域名下的请求只需要占用一个 TCP 连接
+73. [x] 一个 tcp 连接能发几个 http 请求
+74. [x] margin 塌陷?
+    1.  [ ] 有没有遇到过其他 css 问题？
+75. [ ] [字节跳动] common.js 和 es6 中模块引入的区别？
 
 
 
