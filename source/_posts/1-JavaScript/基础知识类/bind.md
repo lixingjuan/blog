@@ -1,24 +1,34 @@
-# 1. bind
+# 1. bind的介绍
 
-> bind方法创建一个新的函数，在bind方法被调用时， `bind`的第一个参数对象被指定为这个新函数的`this` 的绑定对象，而其余参数作为新函数的参数，供调用时使用
+> 1. bind方法会创建一个新的函数，在bind被调用时， 这个新函数的this会被指定为 `bind的第一个参数`，而其余参数将作为新函数的参数，供调用时使用;
+> 2. 返回的是一个原函数的拷贝，并拥有 `指定的this值` 和 `初始参数`;
+> 3. 绑定函数自动适应于使用 new 操作符去构造一个由目标函数创建的新实例。当一个绑定函数是用来构建一个值的，原来提供的 this 就会被忽略。不过提供的参数列表仍然会插入到构造函数调用时的参数列表之前。
+
 
 
 ## 1.1. 应用举例1
 
-==改变函数的执行作用域==
+**改变函数的执行作用域**
+
+bind() 函数使得我们可以创建一个函数，不论怎么调用，这个函数都有相同的this
 
 ```javascript
 
-global.color = "red";
-let o = { color: "blue" };
+global.color = "red"; // 浏览器环境则为window
+const blueObj = { color: "blue" };
+const pinkObj = { color: "pink" };
+const blackObj = { color: "black" };
 
 function sayColor() {
-  return this.color;
+  console.log(this.color)
 }
 
 
-sayColor();  // 'red'
-sayColor.bind(o)();  // 'blue'
+sayColor()  // 'red'
+sayColor.bind(blueObj)();  // 'blue'
+pinkObj.sayColor = sayColor
+pinkObj.sayColor()   // pink, 此时this指向pinkObj
+pinkObj.sayColor.bind(blackObj)() // "black", 此时sayColor的this指向 blackObj
 ```
 
 
@@ -26,22 +36,19 @@ sayColor.bind(o)();  // 'blue'
 ## 1.2. 应用举例2
 
 
-==bind() 传递参数==
+**bind() 传递参数**
 
 ```javascript
-const foo = {
-  value: 1
-};
-
-function demo(name, age) {
-  console.log(this.value);  // 1
-  console.log(this.name);   // undefined
-  console.log(name);        // "nametest"
-  console.log(age);         // 19
-};
-
-demo.bind(foo, "nametest")(19);
+const obj = {color: 'red'}
+const sayMessage = (name, age, sex) => {
+    console.log(name)
+    console.log(age)
+    console.log(sex)
+}
+sayMessage.bind(obj,2,3,4,5,6)(7) // 2,3,4
 ```
+
+
 
 ## 1.3. 应用举例3: new
 
@@ -80,19 +87,21 @@ console.log(newDemo.job);     // "programmer"
 
 
 
-## 1.4. bind实现普通的函数柯里化
+## 1.4. 应用举例4: bind实现普通的函数柯里化
 
-因为`bind` 可以返回一个新的函数，并且新函数的第一个参数对象被指定为新函数的`this` 绑定对象，所以`bind`可以对参数柯里化
+> bind()函数可以使一个函数拥有预设的初始参数，当绑定函数被调用时，这些参数会被插入到目标函数的参数列表的开始位置
+> 利用该特性，可以实现一个函数柯里化
+
 
 
 ```javascript
-function foo(...args) {
-  console.log(...args);
+const demoFunc = function(disCount, val) {
+    console.log(val*disCount)
 }
 
-// 使用bind(...)进行柯里化
-var bar = foo.bind(null, 0);
-bar(1, 2, 3, 4); // 0,1,2,3,4
+const disCountFunc = demoFunc.bind(this, 0.3)
+disCountFunc(100)
+disCountFunc(200)
 ```
 
 
@@ -102,7 +111,6 @@ bar(1, 2, 3, 4); // 0,1,2,3,4
 
 
 # 2. 手写bind
-
 
 
 
@@ -116,49 +124,42 @@ bar(1, 2, 3, 4); // 0,1,2,3,4
 
 ```js
 Function.prototype.bind2 = function(context, ...args) {
-  if (typeof this !== "function") {
-    throw new Error("bind2只能在函数上使用");
-  }
+    // 如果被应用的不是函数，则报错
+    if (typeof this !== "function") {
+      throw new Error("bind2只能在函数上使用");
+    }
 
-  const self = this;
-  const fNOP = function() {};
+    // 保存当前的 this
+    const self = this;
 
-  const bound = function(...innerArgs) {
-    // 1. bind 返回的新函数被当作为构造函数使用时，
-    //    self指向绑定函数，this指向实例，则this的指向不需要修改
-    // 2. bind 返回的新函数被当作为普通函数使用时，
-    //    self指向绑定函数，this指向window, 则修改this指向传入的上下文对象
-    self.apply(this instanceof self ? this : context, [...args, ...innerArgs]);
-  };
+    // 创建一个新函数
+    const fNOP = function() {};
 
-  // ？？ 如果直接修改bound 的prototype 也会直接修改函数的prototype, 这时可以使用空函数进行中转
-  // ？？ 可是不是直接修改了fNOP.prototype么？这样不也影响函数的prototype
-  // -- 这个写法来自冴羽的博客
-  fNOP.prototype = this.prototype;
-  bound.prototype = new fNOP();
+    const bound = function(...innerArgs) {
+      // 作为构造函数使用时，this指向创建的实例，即 this instanceof self === true
+      const isUsedByNew = this instanceof self;
+      /**
+       * bind的特性，
+       * 1. 若作为构造函数，则忽略传进来的this指向，不需要修改this
+       * 2. 若作为普通函数，则修改this指向传入的上下文
+       */
+      const newThis = isUsedByNew ? this : context;
+      // 使用apply 函数修改this指向, 并传入参数
+      return self.apply(newThis, [...args, ...innerArgs]);
+    };
 
-  return bound;
+    // ？？ 为什么要做这一步？bound本身不就已经是函数了么？
+    // 如果直接修改bound 的prototype 也会直接修改函数的prototype, 所以使用空函数进行中转
+    fNOP.prototype = this.prototype;
+    bound.prototype = new fNOP();
+
+    return bound;
 };
-
-
-
-const sayName = function(age) {
-  console.log(this.name);
-  this.age = age;
-  console.log(this.age);
-};
-
-const Person = {
-  name: "lixingjuan"
-};
-
-const sayPersonName = sayName.bind2(Person, 18);
-sayPersonName();
 ```
 
 
 
-## 2.1. 手写bind-1: 基本类型的扩充
+## 2.1. 手写bind2: 使用基本类型的扩充基本类型的扩充
 
 
 ```javascript
@@ -181,7 +182,7 @@ Function.method("bind2", function(context, ...args) {
 
 # 3. 参考文章
 
-1. [《javascript高级程序设计-高级技巧》(第5章-Function类型)]
-2. [call,apply-MDN]
-3. [《JavaScript语言精粹-第四章-扩充基本类型的功能》]
-4. [掘金-JavaScript深入之bind的模拟实现](https://juejin.im/post/59093b1fa0bb9f006517b906)
+1. 《javascript高级程序设计-高级技巧》(第5章-Function类型)
+2. call,apply-MDN
+3. 《JavaScript语言精粹-第四章-扩充基本类型的功能》
+4. [掘金-JavaScript深入之bind的模拟实现](https://juejin.cn/post/6844903476623835149)

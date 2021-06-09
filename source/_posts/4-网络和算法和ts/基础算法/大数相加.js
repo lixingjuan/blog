@@ -1,8 +1,11 @@
-```js
 /**
  * js的数字的安全范围
- * 原理和竖式计算一样，有进位就加一
+ * Number.MAX_SAFE_INTEGER
+ * Number.MIN_SAFE_INTEGER
  */
+let valA = "2";
+let valB = "134";
+
 function add(valA, valB) {
     // 取两个数字的最大长度
     let maxLength = Math.max(valA.length, valB.length);
@@ -32,4 +35,5 @@ function add(valA, valB) {
     }
     return sum;
 }
-```
+
+console.log(add(valA, valB));
