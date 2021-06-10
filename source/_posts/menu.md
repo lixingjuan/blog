@@ -179,12 +179,6 @@
 
 * [开发规范](/Blog/2-框架和库/Vue/开发规范) 
 
-## dva 
-
-* [dva抽离数组路由+动态路由配置方法](/Blog/2-框架和库/dva/dva抽离数组路由+动态路由配置方法) 
-
-* [dva的一些点](/Blog/2-框架和库/dva/dva的一些点) 
-
 ## lodash 
 
 * [merge](/Blog/2-框架和库/lodash/merge) 
@@ -214,6 +208,8 @@
 * [flex](/Blog/3-CSS相关/基础/flex) 
 
 * [line-height](/Blog/3-CSS相关/基础/line-height) 
+
+* [margin塌陷](/Blog/3-CSS相关/基础/margin塌陷) 
 
 * [todo-css样式的百分比相对谁](/Blog/3-CSS相关/基础/todo-css样式的百分比相对谁) 
 
@@ -249,6 +245,8 @@
 
 * [js三种遍历](/Blog/4-网络和算法和ts/基础算法/js三种遍历) 
 
+* [两数之和](/Blog/4-网络和算法和ts/基础算法/两数之和) 
+
 * [大数相加](/Blog/4-网络和算法和ts/基础算法/大数相加) 
 
 * [常见排序](/Blog/4-网络和算法和ts/基础算法/常见排序) 
@@ -274,6 +272,8 @@
 * [get和post区别](/Blog/4-网络和算法和ts/网络和安全类/get和post区别) 
 
 * [http和https的区别](/Blog/4-网络和算法和ts/网络和安全类/http和https的区别) 
+
+* [一个 tcp 连接能发几个 http 请求](/Blog/4-网络和算法和ts/网络和安全类/一个 tcp 连接能发几个 http 请求) 
 
 * [了解类](/Blog/4-网络和算法和ts/网络和安全类/了解类) 
 
@@ -328,6 +328,8 @@
 * [mine](/Blog/6-面试准备/be-interviewed/mine) 
 
 ## ready 
+
+* [algorithm-list](/Blog/6-面试准备/ready/algorithm-list) 
 
 * [list](/Blog/6-面试准备/ready/list) 
 

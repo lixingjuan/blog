@@ -12,6 +12,7 @@ const ages = {
 };
 
 const res = merge(users, ages)
+
 console.log(res === users)
 console.log(res === ages)
 ```
