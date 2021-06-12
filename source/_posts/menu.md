@@ -19,7 +19,7 @@
 
 * [for和forEach的区别](/Blog/1-JavaScript/专题/for和forEach的区别) 
 
-* [new的时候发生了什么?](/Blog/1-JavaScript/专题/new的时候发生了什么?) 
+* [new的时候发生了什么](/Blog/1-JavaScript/专题/new的时候发生了什么) 
 
 * [this相关](/Blog/1-JavaScript/专题/this相关) 
 
@@ -223,7 +223,7 @@
 
 * [为什么使用rem?](/Blog/3-CSS相关/库&方案/为什么使用rem?) 
 
-* [实现居中](/Blog/3-CSS相关/库&方案/实现居中) 
+* [实现居中的多种方案](/Blog/3-CSS相关/库&方案/实现居中的多种方案) 
 
 * [容器设置flex高度仍被撑开](/Blog/3-CSS相关/库&方案/容器设置flex高度仍被撑开) 
 
@@ -302,6 +302,8 @@
 * [《Web前端黑客技术揭秘》](/Blog/5-笔记和复盘/读书笔记/《Web前端黑客技术揭秘》) 
 
 * [《你不知道的javascript》](/Blog/5-笔记和复盘/读书笔记/《你不知道的javascript》) 
+
+* [发布-订阅模式](/Blog/5-笔记和复盘/读书笔记/发布-订阅模式) 
 
 * [慕客课程react+ts开发组件](/Blog/5-笔记和复盘/读书笔记/慕客课程react+ts开发组件) 
 
