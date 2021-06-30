@@ -1,265 +1,492 @@
 
 * [Home](/)
 
-<h1 style="color: #ba2f7b">JavaScript基础</h1> 
+<h1 style="color:#448d55;">JavaScript</h1>
 
-* [Class相关](/1-JavaScript基础/Class相关) 
+## 专题
 
-* [EventLoop](/1-JavaScript基础/EventLoop) 
+## 专题
 
-* [Promise](/1-JavaScript基础/Promise) 
+* [0.1+0.2](/1-JavaScript/专题/0.1+0.2)
 
-* [call和apply](/1-JavaScript基础/call和apply) 
+* [Class相关](/1-JavaScript/专题/Class相关)
 
+<<<<<<< HEAD
 * [flat实现三种方案](/1-JavaScript基础/flat实现三种方案) 
+=======
+* [EventLoop](/1-JavaScript/专题/EventLoop)
+>>>>>>> 8810d611 (temp)
 
-* [for和forEach的区别](/1-JavaScript基础/for和forEach的区别) 
+* [Promise](/1-JavaScript/专题/Promise)
 
-* [new的时候发生了什么](/1-JavaScript基础/new的时候发生了什么) 
+* [call和apply](/1-JavaScript/专题/call和apply)
 
-* [reduce](/1-JavaScript基础/reduce) 
+* [flat实现](/1-JavaScript/专题/flat实现)
 
-* [this相关](/1-JavaScript基础/this相关) 
+* [for和forEach的区别](/1-JavaScript/专题/for和forEach的区别)
 
+<<<<<<< HEAD
 * [事件委托](/1-JavaScript基础/事件委托) 
+=======
+* [new的时候发生了什么](/1-JavaScript/专题/new的时候发生了什么)
 
-* [作用域相关](/1-JavaScript基础/作用域相关) 
+* [reduce](/1-JavaScript/专题/reduce)
+>>>>>>> 8810d611 (temp)
 
-* [作用域链](/1-JavaScript基础/作用域链) 
+* [this相关](/1-JavaScript/专题/this相关)
 
-* [函数柯里化](/1-JavaScript基础/函数柯里化) 
+* [todo-跨域](/1-JavaScript/专题/todo-跨域)
 
-* [函数的内部属性](/1-JavaScript基础/函数的内部属性) 
+* [事件委托](/1-JavaScript/专题/事件委托)
 
-* [判断数据类型的方式及区别](/1-JavaScript基础/判断数据类型的方式及区别) 
+* [作用域相关](/1-JavaScript/专题/作用域相关)
 
-* [前端模块化规范](/1-JavaScript基础/前端模块化规范) 
+* [作用域链](/1-JavaScript/专题/作用域链)
 
-* [加快首屏渲染](/1-JavaScript基础/加快首屏渲染) 
+* [函数柯里化](/1-JavaScript/专题/函数柯里化)
 
-* [原型和原型链的理解](/1-JavaScript基础/原型和原型链的理解) 
+* [函数的内部属性](/1-JavaScript/专题/函数的内部属性)
 
+* [函数的执行顺序](/1-JavaScript/专题/函数的执行顺序)
+
+<<<<<<< HEAD
 * [异步编程](/1-JavaScript基础/异步编程) 
 
 * [扩充类型的功能](/1-JavaScript基础/扩充类型的功能) 
+=======
+* [判断数据类型的方式及区别](/1-JavaScript/专题/判断数据类型的方式及区别)
+>>>>>>> 8810d611 (temp)
 
-* [浏览器](/1-JavaScript基础/浏览器) 
+* [前端模块化规范](/1-JavaScript/专题/前端模块化规范)
 
-* [继承](/1-JavaScript基础/继承) 
+* [加快首屏渲染](/1-JavaScript/专题/加快首屏渲染)
 
-* [输入URL后发生了什么](/1-JavaScript基础/输入URL后发生了什么) 
+* [原型和原型链的理解](/1-JavaScript/专题/原型和原型链的理解)
 
-* [进程和线程](/1-JavaScript基础/进程和线程) 
+* [扩充类型的功能](/1-JavaScript/专题/扩充类型的功能)
 
-* [闭包是什么应用场景](/1-JavaScript基础/闭包是什么应用场景) 
+* [浏览器](/1-JavaScript/专题/浏览器)
 
-* [防抖和节流](/1-JavaScript基础/防抖和节流) 
+* [继承](/1-JavaScript/专题/继承)
 
-<h1 style="color: #ba2f7b">CSS相关</h1> 
+* [跨域产生原因及解决方法](/1-JavaScript/专题/跨域产生原因及解决方法)
 
-* [1px](/2-CSS相关/1px) 
+* [输入URL后发生了什么](/1-JavaScript/专题/输入URL后发生了什么)
 
-* [Grid速成](/2-CSS相关/Grid速成) 
+* [进程和线程](/1-JavaScript/专题/进程和线程)
 
-* [bfc](/2-CSS相关/bfc) 
+* [闭包是什么应用场景](/1-JavaScript/专题/闭包是什么应用场景)
 
-* [blur和change](/2-CSS相关/blur和change) 
+* [防抖和节流](/1-JavaScript/专题/防抖和节流)
 
-* [css3动画属性](/2-CSS相关/css3动画属性) 
+## 其他
 
-* [flex](/2-CSS相关/flex) 
+* [图片类型转换](/1-JavaScript/其他/图片类型转换)
 
-* [less速成](/2-CSS相关/less速成) 
+## 基础知识类
 
-* [line-height](/2-CSS相关/line-height) 
+* [Generate](/1-JavaScript/基础知识类/Generate)
 
-* [margin塌陷](/2-CSS相关/margin塌陷) 
+* [Map和Object](/1-JavaScript/基础知识类/Map和Object)
 
-* [scss速成](/2-CSS相关/scss速成) 
+* [Proxy](/1-JavaScript/基础知识类/Proxy)
 
-* [todo-css样式的百分比相对谁](/2-CSS相关/todo-css样式的百分比相对谁) 
+* [Reflect](/1-JavaScript/基础知识类/Reflect)
 
-* [为什么使用rem?](/2-CSS相关/为什么使用rem?) 
+* [Set+Map学习笔记](/1-JavaScript/基础知识类/Set+Map学习笔记)
 
-* [实现居中的四种方案](/2-CSS相关/实现居中的四种方案) 
+* [async](/1-JavaScript/基础知识类/async)
 
-* [容器设置flex高度仍被撑开](/2-CSS相关/容器设置flex高度仍被撑开) 
+* [bind](/1-JavaScript/基础知识类/bind)
 
-* [常见布局](/2-CSS相关/常见布局) 
+* [位掩码](/1-JavaScript/基础知识类/位掩码)
 
-* [移动端适配](/2-CSS相关/移动端适配) 
+* [判断数据类型](/1-JavaScript/基础知识类/判断数据类型)
 
-* [设置元素透明度的方式及其区别](/2-CSS相关/设置元素透明度的方式及其区别) 
+* [合并空值](/1-JavaScript/基础知识类/合并空值)
 
-<h1 style="color: #ba2f7b">Vue源码学习</h1> 
+* [执行上下文](/1-JavaScript/基础知识类/执行上下文)
 
-* [0源码-主线](/3-Vue源码学习/0源码-主线) 
+* [数组](/1-JavaScript/基础知识类/数组)
 
-* [1源码-目录](/3-Vue源码学习/1源码-目录) 
+* [正则](/1-JavaScript/基础知识类/正则)
 
-* [2源码-构建过程](/3-Vue源码学习/2源码-构建过程) 
+* [比较值相等](/1-JavaScript/基础知识类/比较值相等)
 
-* [3源码-数据驱动](/3-Vue源码学习/3源码-数据驱动) 
+* [立即执行函数](/1-JavaScript/基础知识类/立即执行函数)
 
-* [4源码-newVue](/3-Vue源码学习/4源码-newVue) 
+* [箭头函数](/1-JavaScript/基础知识类/箭头函数)
 
-* [5源码-Vue实例挂载的实现](/3-Vue源码学习/5源码-Vue实例挂载的实现) 
+<h1 style="color:#448d55;">测试目录</h1>
 
-* [6源码-render](/3-Vue源码学习/6源码-render) 
+<h1 style="color:#448d55;">框架和库</h1>
 
-* [7源码-createElement](/3-Vue源码学习/7源码-createElement) 
+## Deno
 
-* [8源码-_update](/3-Vue源码学习/8源码-_update) 
+* [index](/2-框架和库/Deno/index)
 
-* [9源码-createComponent](/3-Vue源码学习/9源码-createComponent) 
+## React
 
-* [10源码-patch](/3-Vue源码学习/10源码-patch) 
+* [Fiber](/2-框架和库/React/Fiber)
 
-* [11源码-合并配置](/3-Vue源码学习/11源码-合并配置) 
+* [React-redux怎么用](/2-框架和库/React/React-redux怎么用)
 
-* [12源码-生命周期](/3-Vue源码学习/12源码-生命周期) 
+* [Redux源码阅读总结](/2-框架和库/React/Redux源码阅读总结)
 
-* [12源码-组件注册](/3-Vue源码学习/12源码-组件注册) 
+* [diff算法实现crud](/2-框架和库/React/diff算法实现crud)
 
-* [13源码-nextTick](/3-Vue源码学习/13源码-nextTick) 
+* [react-dom](/2-框架和库/React/react-dom)
 
-* [13源码-异步组件](/3-Vue源码学习/13源码-异步组件) 
+* [react-redux源码](/2-框架和库/React/react-redux源码)
 
-* [14数据劫持](/3-Vue源码学习/14数据劫持) 
+* [react](/2-框架和库/React/react)
 
-* [15源码-响应式原理](/3-Vue源码学习/15源码-响应式原理) 
+* [react开发中优化点](/2-框架和库/React/react开发中优化点)
 
-* [16对象和数组的处理](/3-Vue源码学习/16对象和数组的处理) 
+* [各个地方的打印](/2-框架和库/React/各个地方的打印)
 
-* [17源码-依赖收集](/3-Vue源码学习/17源码-依赖收集) 
+* [读源码的理解](/2-框架和库/React/读源码的理解)
 
-* [18源码-派发更新](/3-Vue源码学习/18源码-派发更新) 
+## Vue
 
-* [keep-alive](/3-Vue源码学习/keep-alive) 
+* [0源码-主线](/2-框架和库/Vue/0源码-主线)
 
-* [miniVue](/3-Vue源码学习/miniVue) 
+* [1源码-目录](/2-框架和库/Vue/1源码-目录)
 
-* [vue](/3-Vue源码学习/vue) 
+* [2源码-构建过程](/2-框架和库/Vue/2源码-构建过程)
 
-* [vue的data为什么是函数](/3-Vue源码学习/vue的data为什么是函数) 
+* [3源码-数据驱动](/2-框架和库/Vue/3源码-数据驱动)
 
-* [开发规范](/3-Vue源码学习/开发规范) 
+* [4源码-newVue](/2-框架和库/Vue/4源码-newVue)
 
-<h1 style="color: #ba2f7b">网络</h1> 
+* [5源码-Vue实例挂载的实现](/2-框架和库/Vue/5源码-Vue实例挂载的实现)
 
-* [CDN的原理](/4-网络/CDN的原理) 
+* [6源码-render](/2-框架和库/Vue/6源码-render)
 
-* [HTTP2.0](/4-网络/HTTP2.0) 
+* [7源码-createElement](/2-框架和库/Vue/7源码-createElement)
 
-* [Nginx](/4-网络/Nginx) 
+* [8源码-_update](/2-框架和库/Vue/8源码-_update)
 
-* [cookie为什么不安全](/4-网络/cookie为什么不安全) 
+* [9源码-createComponent](/2-框架和库/Vue/9源码-createComponent)
 
-* [get和post区别](/4-网络/get和post区别) 
+* [10源码-patch](/2-框架和库/Vue/10源码-patch)
 
-* [http和https的区别](/4-网络/http和https的区别) 
+* [11源码-合并配置](/2-框架和库/Vue/11源码-合并配置)
 
-* [一个tcp连接能发几个http请求](/4-网络/一个tcp连接能发几个http请求) 
+* [12源码-生命周期](/2-框架和库/Vue/12源码-生命周期)
 
-* [了解类](/4-网络/了解类) 
+* [12源码-组件注册](/2-框架和库/Vue/12源码-组件注册)
 
-* [前端鉴权](/4-网络/前端鉴权) 
+* [13源码-nextTick](/2-框架和库/Vue/13源码-nextTick)
 
-* [加密算法](/4-网络/加密算法) 
+* [13源码-异步组件](/2-框架和库/Vue/13源码-异步组件)
 
-* [常见的网络攻击](/4-网络/常见的网络攻击) 
+* [14数据劫持](/2-框架和库/Vue/14数据劫持)
 
-* [数据结构](/4-网络/数据结构) 
+* [15源码-响应式原理](/2-框架和库/Vue/15源码-响应式原理)
 
-* [正向代理反向代理](/4-网络/正向代理反向代理) 
+* [16对象和数组的处理](/2-框架和库/Vue/16对象和数组的处理)
 
-* [缓存](/4-网络/缓存) 
+* [17源码-依赖收集](/2-框架和库/Vue/17源码-依赖收集)
 
-* [计算机网络](/4-网络/计算机网络) 
+* [18源码-派发更新](/2-框架和库/Vue/18源码-派发更新)
 
-* [输入URL后发生了什么](/4-网络/输入URL后发生了什么) 
+* [keep-alive](/2-框架和库/Vue/keep-alive)
 
-<h1 style="color: #ba2f7b">项目复盘</h1> 
+* [vue](/2-框架和库/Vue/vue)
 
-* [工银-自动化报告](/5-项目复盘/工银-自动化报告) 
+* [vue的data为什么是函数](/2-框架和库/Vue/vue的data为什么是函数)
 
-* [民生星探-移动端](/5-项目复盘/民生星探-移动端) 
+* [开发规范](/2-框架和库/Vue/开发规范)
 
-* [腾安基金](/5-项目复盘/腾安基金) 
+## lodash
 
-<h1 style="color: #ba2f7b">面试准备</h1> 
+* [merge](/2-框架和库/lodash/merge)
 
-## Interview-others 
+* [深拷贝](/2-框架和库/lodash/深拷贝)
 
-* [interview-other](/6-面试准备/Interview-others/interview-other) 
+## typescript
 
-* [面试别人的收获](/6-面试准备/Interview-others/面试别人的收获) 
+* [4.3新增方法](/2-框架和库/typescript/4.3新增方法)
 
-* [面试别人的问题](/6-面试准备/Interview-others/面试别人的问题) 
+* [interface-vs-type](/2-框架和库/typescript/interface-vs-type)
 
-## be-interviewed 
+* [一些记录](/2-框架和库/typescript/一些记录)
 
-* [mine](/6-面试准备/be-interviewed/mine) 
+## webpack
 
-## ready 
+* [antd按需加载](/2-框架和库/webpack/antd按需加载)
 
-* [algorithm-list](/6-面试准备/ready/algorithm-list) 
+* [eslint](/2-框架和库/webpack/eslint)
 
-* [list](/6-面试准备/ready/list) 
+## webpack
 
-* [todo-掘金-俊劫-有赞](/6-面试准备/ready/todo-掘金-俊劫-有赞) 
+- [antd 按需加载](/Blog/2-框架和库/webpack/antd按需加载)
 
-* [todo-掘金-慕晨同学-腾讯](/6-面试准备/ready/todo-掘金-慕晨同学-腾讯) 
+- [eslint](/Blog/2-框架和库/webpack/eslint)
 
-* [执行上下文+作用域链+闭包](/6-面试准备/ready/执行上下文+作用域链+闭包) 
+- [perttier](/Blog/2-框架和库/webpack/perttier)
 
-* [文章《如何进阿里》](/6-面试准备/ready/文章《如何进阿里》) 
+- [webpack 性能优化](/Blog/2-框架和库/webpack/webpack性能优化)
 
-* [面经list](/6-面试准备/ready/面经list) 
+- [webpack 热更新原理](/Blog/2-框架和库/webpack/webpack热更新原理)
 
-<h1 style="color: #ba2f7b">日记</h1> 
+## 公共类
 
-## 2020 
+* [webpack性能优化](/2-框架和库/webpack/webpack性能优化)
 
-* [20201231](/7-日记/2020/20201231) 
+* [webpack热更新原理](/2-框架和库/webpack/webpack热更新原理)
 
-## 2021 
+## 公共类
 
-* [2021-0408](/7-日记/2021/2021-0408) 
+* [key的作用](/2-框架和库/公共类/key的作用)
 
-* [20200103](/7-日记/2021/20200103) 
+* [vue和react对比](/2-框架和库/公共类/vue和react对比)
 
-* [20200118](/7-日记/2021/20200118) 
+* [框架通识](/2-框架和库/公共类/框架通识)
 
-* [20200129](/7-日记/2021/20200129) 
+<h1 style="color:#448d55;">CSS相关</h1>
 
-* [20210105](/7-日记/2021/20210105) 
+## 基础
 
-* [冷门属性](/7-日记/2021/冷门属性) 
+* [Grid速成](/3-CSS相关/基础/Grid速成)
 
-* [前端团队技术分享主题](/7-日记/2021/前端团队技术分享主题) 
+* [bfc](/3-CSS相关/基础/bfc)
 
-<h1 style="color: #ba2f7b">TypeScript</h1> 
+* [blur和change](/3-CSS相关/基础/blur和change)
 
-* [enum](/8-TypeScript/enum) 
+* [css3动画属性](/3-CSS相关/基础/css3动画属性)
 
-* [测试目录结构](/8-TypeScript/测试目录结构) 
+* [flex](/3-CSS相关/基础/flex)
 
-* [画瓢](/8-TypeScript/画瓢) 
+* [line-height](/3-CSS相关/基础/line-height)
 
-<h1 style="color: #ba2f7b">算法</h1> 
+* [margin塌陷](/3-CSS相关/基础/margin塌陷)
 
-* [js三种遍历](/9-算法/js三种遍历) 
+* [todo-css样式的百分比相对谁](/3-CSS相关/基础/todo-css样式的百分比相对谁)
 
-* [两数之和](/9-算法/两数之和) 
+* [设置元素透明度的方式及其区别](/3-CSS相关/基础/设置元素透明度的方式及其区别)
 
-* [大数相加](/9-算法/大数相加) 
+## 库&方案
 
-* [常见排序](/9-算法/常见排序) 
+* [1px](/3-CSS相关/库&方案/1px)
 
-* [汉诺塔](/9-算法/汉诺塔) 
+* [less速成](/3-CSS相关/库&方案/less速成)
 
-<h1 style="color: #ba2f7b">非技术类</h1> 
+* [scss速成](/3-CSS相关/库&方案/scss速成)
 
-* [固定性思维和成长性思维](/非技术类/固定性思维和成长性思维) 
+* [为什么使用rem?](/3-CSS相关/库&方案/为什么使用rem?)
 
+* [实现居中的多种方案](/3-CSS相关/库&方案/实现居中的多种方案)
+
+* [容器设置flex高度仍被撑开](/3-CSS相关/库&方案/容器设置flex高度仍被撑开)
+
+* [常见布局](/3-CSS相关/库&方案/常见布局)
+
+* [移动端适配](/3-CSS相关/库&方案/移动端适配)
+
+<h1 style="color:#448d55;">网络和算法和ts</h1>
+
+## TypeScript
+
+* [enum](/4-网络和算法和ts/TypeScript/enum)
+
+* [测试目录结构](/4-网络和算法和ts/TypeScript/测试目录结构)
+
+* [画瓢](/4-网络和算法和ts/TypeScript/画瓢)
+
+## 基础算法
+
+* [js三种遍历](/4-网络和算法和ts/基础算法/js三种遍历)
+
+* [两数之和](/4-网络和算法和ts/基础算法/两数之和)
+
+* [大数相加](/4-网络和算法和ts/基础算法/大数相加)
+
+* [常见排序](/4-网络和算法和ts/基础算法/常见排序)
+
+* [汉诺塔](/4-网络和算法和ts/基础算法/汉诺塔)
+
+## 方案
+
+* [Node端通过html导出word](/4-网络和算法和ts/方案/Node端通过html导出word)
+
+* [导出word](/4-网络和算法和ts/方案/导出word)
+
+## 网络和安全类
+
+- [get 和 post 区别](/Blog/4-网络和算法和ts/网络和安全类/get和post区别)
+
+* [Nginx](/4-网络和算法和ts/网络和安全类/Nginx)
+
+* [cookie为什么不安全](/4-网络和算法和ts/网络和安全类/cookie为什么不安全)
+
+* [get和post区别](/4-网络和算法和ts/网络和安全类/get和post区别)
+
+* [http和https的区别](/4-网络和算法和ts/网络和安全类/http和https的区别)
+
+* [一个 tcp 连接能发几个 http 请求](/4-网络和算法和ts/网络和安全类/一个 tcp 连接能发几个 http 请求)
+
+* [了解类](/4-网络和算法和ts/网络和安全类/了解类)
+
+- [缓存](/4-网络和算法和ts/网络和安全类/缓存)
+
+* [常见的网络攻击](/4-网络和算法和ts/网络和安全类/常见的网络攻击)
+
+* [数据结构](/4-网络和算法和ts/网络和安全类/数据结构)
+
+* [正向代理反向代理](/4-网络和算法和ts/网络和安全类/正向代理反向代理)
+
+* [缓存](/4-网络和算法和ts/网络和安全类/缓存)
+
+* [计算机网络](/4-网络和算法和ts/网络和安全类/计算机网络)
+
+* [输入URL后发生了什么](/4-网络和算法和ts/网络和安全类/输入URL后发生了什么)
+
+<h1 style="color:#448d55;">笔记和复盘</h1>
+
+## 读书笔记
+
+* [《Javascript设计模式与开发实践》](/5-笔记和复盘/读书笔记/《Javascript设计模式与开发实践》)
+
+- [《图解 HTTP》](/Blog/5-笔记和复盘/读书笔记/《图解HTTP》)
+
+- [发布-订阅模式](/Blog/5-笔记和复盘/读书笔记/发布-订阅模式)
+
+* [《Web前端黑客技术揭秘》](/5-笔记和复盘/读书笔记/《Web前端黑客技术揭秘》)
+
+* [《你不知道的javascript》](/5-笔记和复盘/读书笔记/《你不知道的javascript》)
+
+* [《图解HTTP》](/5-笔记和复盘/读书笔记/《图解HTTP》)
+
+* [发布-订阅模式](/5-笔记和复盘/读书笔记/发布-订阅模式)
+
+* [慕客课程react+ts开发组件](/5-笔记和复盘/读书笔记/慕客课程react+ts开发组件)
+
+## 项目复盘
+
+* [工银-自动化报告](/5-笔记和复盘/项目复盘/工银-自动化报告)
+
+* [民生星探-移动端](/5-笔记和复盘/项目复盘/民生星探-移动端)
+
+* [腾安基金](/5-笔记和复盘/项目复盘/腾安基金)
+
+<h1 style="color:#448d55;">面试准备</h1>
+
+## Interview-others
+
+* [interview-other](/6-面试准备/Interview-others/interview-other)
+
+* [面试别人的收获](/6-面试准备/Interview-others/面试别人的收获)
+
+* [面试别人的问题](/6-面试准备/Interview-others/面试别人的问题)
+
+## be-interviewed
+
+* [mine](/6-面试准备/be-interviewed/mine)
+
+## ready
+
+* [algorithm-list](/6-面试准备/ready/algorithm-list)
+
+<<<<<<< HEAD
+<h1 style="color: #ba2f7b">日记</h1>
+=======
+* [list](/6-面试准备/ready/list)
+>>>>>>> b6021e9f (temp)
+
+* [todo-掘金-俊劫-有赞](/6-面试准备/ready/todo-掘金-俊劫-有赞)
+
+* [todo-掘金-慕晨同学-腾讯](/6-面试准备/ready/todo-掘金-慕晨同学-腾讯)
+
+* [执行上下文+作用域链+闭包](/6-面试准备/ready/执行上下文+作用域链+闭包)
+
+* [文章《如何进阿里》](/6-面试准备/ready/文章《如何进阿里》)
+
+* [面经list](/6-面试准备/ready/面经list)
+
+<h1 style="color:#448d55;">日记</h1>
+
+## 2020
+
+* [20201231](/7-日记/2020/20201231)
+
+## 2021
+
+* [2021-0408](/7-日记/2021/2021-0408)
+
+<<<<<<< HEAD
+<h1 style="color: #ba2f7b">TypeScript</h1>
+
+* [enum](/8-TypeScript/enum)
+
+* [测试目录结构](/8-TypeScript/测试目录结构)
+
+* [画瓢](/8-TypeScript/画瓢)
+
+<h1 style="color: #ba2f7b">算法</h1>
+
+* [js三种遍历](/9-算法/js三种遍历)
+
+* [两数之和](/9-算法/两数之和)
+
+* [大数相加](/9-算法/大数相加)
+
+* [常见排序](/9-算法/常见排序)
+
+* [汉诺塔](/9-算法/汉诺塔)
+
+<h1 style="color: #ba2f7b">非技术类</h1>
+=======
+* [20200103](/7-日记/2021/20200103)
+
+* [20200118](/7-日记/2021/20200118)
+
+* [20200129](/7-日记/2021/20200129)
+
+* [20210105](/7-日记/2021/20210105)
+
+* [冷门属性](/7-日记/2021/冷门属性)
+
+* [前端团队技术分享主题](/7-日记/2021/前端团队技术分享主题)
+
+<h1 style="color:#448d55;">乱七八糟工具</h1>
+
+## MAC指令
+
+* [MAC-shell](/8-乱七八糟工具/MAC指令/MAC-shell)
+
+- [代码提交校验](/Blog/8-乱七八糟工具/git相关操作/代码提交校验)
+
+* [tree](/8-乱七八糟工具/MAC指令/tree)
+
+## git相关操作
+
+* [git常用操作❤](/8-乱七八糟工具/git相关操作/git常用操作❤)
+
+* [代码提交校验](/8-乱七八糟工具/git相关操作/代码提交校验)
+
+## 数据库
+
+* [MySQL常用命令](/8-乱七八糟工具/数据库/MySQL常用命令)
+
+## 无归类
+
+* [chrome浏览器跨域设置](/8-乱七八糟工具/无归类/chrome浏览器跨域设置)
+>>>>>>> b6021e9f (temp)
+
+* [快捷键](/8-乱七八糟工具/无归类/快捷键)
+
+## 系统操作
+
+* [cross-env](/8-乱七八糟工具/系统操作/cross-env)
+
+* [安装虚拟机](/8-乱七八糟工具/系统操作/安装虚拟机)
+
+* [查看本地ip之类的配置(window)](/8-乱七八糟工具/系统操作/查看本地ip之类的配置(window))
+
+<h1 style="color:#448d55;">非技术类</h1>
+
+* [固定性思维和成长性思维](/非技术类/固定性思维和成长性思维)
+
+- [查看本地 ip 之类的配置(window)](</Blog/8-乱七八糟工具/系统操作/查看本地ip之类的配置(window)>)
