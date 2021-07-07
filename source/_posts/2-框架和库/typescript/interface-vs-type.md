@@ -32,13 +32,15 @@ const objB: BBB = {
 ```
 
 
-3. 都能混合
+3. 都能被混合
+
 ```ts
 type HighAAA = AAA & { age: number };
 type HighBBB = BBB & { length: number };
 ```
 
-4. 都能继承
+4. 都能被继承
+
 ```ts
 interface ExtendsAAA extends AAA {
   something: "something";
@@ -52,7 +54,7 @@ interface ExtendsBBB extends BBB {
 
 # VS
 
-1: interface 的报错更简洁
+1. interface 的报错更简洁
 
 ```ts
 
@@ -85,9 +87,10 @@ demo2({age: 11})
 ```
 
 
-1. interface 如果是使用名称使用的，接口名称会以其原始形式出现在报错信息里
+2. interface 如果是使用名称使用的，接口名称会以其原始形式出现在报错信息里, type 如果是基本类型，报错不会出现其原始名称
 
 ```ts
+/* interface */
 interface MergeItemInterface {
   age: number
 }
@@ -103,7 +106,7 @@ const a: MergeItemInterface = { age: '2' }
 //
 // Age => 年龄
 //
-// (property) MergeItemInterface.age: number
+// (property) MergeItemInterface.age: number   <------ 这里
 
 const b: TypeMergeItem = { age: '2' }
 //                        ~~~~~~
@@ -112,7 +115,17 @@ const b: TypeMergeItem = { age: '2' }
 //
 // Age => 年龄
 //
-// (property) age: number
+// (property) age: number   <------ 这里
+
+
+/**
+ * type
+ */
+type HHH = string;
+const c: HHH = 1;
+//   ~~~
+//  不能将类型“number”分配给类型“string”。ts(2322)
+//  const c: string
 ```
 
 
