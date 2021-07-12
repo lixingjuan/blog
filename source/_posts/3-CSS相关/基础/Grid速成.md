@@ -9,50 +9,26 @@
 # 容器属性
 
 
-1. display: grid/inline-grid;
-2. grid-template-rows: 每行行高;
-3. grid-template-columns: 每列列宽;
-4. grid-row-gap: 行与行的间隔（行间距）;
-5. grid-column-gap: 列与列的间隔（列间距）;
-6. grid-gap: grid-column-gap和grid-row-gap的合并简写形式;
-7. grid-template-areas: 定义每个子区域名称
-8. grid-auto-flow: 元素流动方向，默认值是row，即"先行后列"。也可以将它设成column，变成"先列后行";
-9. justify-items：单元格内容的水平位置（左中右）
-10. align-items：单元格内容的垂直位置（上中下）
-11. place-items：align-items属性和justify-items属性的合并简写形式。
-12. justify-content: 整个内容区域在容器里面的水平位置（左中右）
-13. align-content: 整个内容区域的垂直位置（上中下）
-14. grid-auto-rows: 浏览器自动创建的多余网格的行高 (写法同grid-template-rows)
-15. grid-auto-columns: 浏览器自动创建的多余网格的列宽 (写法同grid-template-columns)
-16. grid-template: grid-template-columns、grid-template-rows和grid-template-areas这三个属性的合并简写形式
-17. grid: grid-template-rows、grid-template-columns、grid-template-areas、 grid-auto-rows、grid-auto-columns、grid-auto-flow六个属性的合并简写形式
+| 属性                    | 描述                                                                                                                                           |
+|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| `display`               | grid/inline-grid                                                                                                                               |
+| `grid-template-rows`    | 每行行高                                                                                                                                       |
+| `grid-template-columns` | 每列列宽                                                                                                                                       |
+| `grid-row-gap`          | 行与行的间隔（行间距）                                                                                                                         |
+| `grid-column-gap`       | 列与列的间隔（列间距）                                                                                                                         |
+| `grid-gap`              | grid-column-gap和grid-row-gap的合并简写形式                                                                                                    |
+| `grid-template-areas`   | 定义每个子区域名称                                                                                                                             |
+| `grid-auto-flow`        | 元素流动方向，默认row，即"先行后列"。<br> column: "先列后行"                                                                                   |
+| `justify-items`         | 单元格内容的水平位置（左中右）                                                                                                                 |
+| `align-items`           | 单元格内容的垂直位置（上中下）                                                                                                                 |
+| `place-items`           | align-items属性和justify-items属性的合并简写形式。                                                                                             |
+| `justify-content`       | 整个内容区域在容器里面的水平位置（左中右）                                                                                                     |
+| `align-content`         | 整个内容区域的垂直位置（上中下）                                                                                                               |
+| `grid-auto-rows`        | 浏览器自动创建的多余网格的行高 (写法同grid-template-rows)                                                                                      |
+| `grid-auto-columns`     | 浏览器自动创建的多余网格的列宽 (写法同grid-template-columns)                                                                                   |
+| `grid-template`         | grid-template-columns、grid-template-rows和grid-template-areas这三个属性的合并简写形式                                                         |
+| `grid`                  | grid-template-rows<br>grid-template-columns<br>grid-template-areas<br> grid-auto-rows<br>grid-auto-columnsgrid-auto-flow六个属性的合并简写形式 |
 
-
-**display**
-
-```css
-display: grid;
-display: inline-grid;   // 允许grid后紧跟元素，同inline-block
-
-```
-
-
-
-
-## 列宽
-
-**grid-templete-columns**
-
-| name           | 属性值                      | 描述                                                                              |
-|----------------|-----------------------------|-----------------------------------------------------------------------------------|
-| **普通用法**   | :100px 100px;               | 2列, 宽为100px                                                                    |
-| **百分比**     | :45% 45%;                   | 2列, 宽为容器的45%                                                                |
-| **repeat**     | :repeat(2, 100px);          | 2列, 宽为100px                                                                    |
-| **repeat多列** | :repeat(2, 100px 120px);    | 4列, 宽度依次为100px 120px 100px 120px                                            |
-| **auto-fill**  | :repeat(auto-fill, 100px);  | 列数不固定，每列宽100px                                                           |
-| **fr**         | :100px 1fr 2fr;             | 3列，第一列10px, 剩余空间均分三份，第二列1份，第三列两份                          |
-| **minmax**     | :1fr 1fr minmax(100px 1fr); | 3列，第3列最窄100px，最宽1fr, 第1，2列宽均为1fr (若容器宽度为100px, 则总宽度溢出) |
-| **auto**       | :100px auto 100px;          | 3列, 其他宽度都给中间列                                                           |
 
 
 
@@ -60,14 +36,30 @@ display: inline-grid;   // 允许grid后紧跟元素，同inline-block
 
 
 
-## 行高
+## 列宽
 
-**grid-templete-rows**
+属性值
+1. 行高：`grid-templete-rows`
+2. 列宽：`grid-templete-columns`
 
-使用同grid-templete-columns
+| name         | 属性值                      | 描述                                                                              |
+|--------------|-----------------------------|-----------------------------------------------------------------------------------|
+| `普通用法`   | `100px 100px`               | 2列, 宽为100px                                                                    |
+| `百分比`     | `45% 45%`                   | 2列, 宽为容器的45%                                                                |
+| `repeat`     | `repeat(2, 100px)`          | 2列, 宽为100px                                                                    |
+| `repeat多列` | `repeat(2, 100px 120px)`    | 4列, 宽度依次为100px 120px 100px 120px                                            |
+| `auto-fill`  | `repeat(auto-fill, 100px)`  | 列数不固定，每列宽100px                                                           |
+| `fr`         | `100px 1fr 2fr`             | 3列，第一列10px, 剩余空间均分三份，第二列1份，第三列两份                          |
+| `minmax`     | `1fr 1fr minmax(100px 1fr)` | 3列，第3列最窄100px，最宽1fr, 第1，2列宽均为1fr (若容器宽度为100px, 则总宽度溢出) |
+| `auto`       | `100px auto 100px`          | 3列, 其他宽度都给中间列                                                           |
 
 
- 
+
+
+
+
+
+
 ## 自动生成的行和列的宽度
 
 如果一个容器只有三列, 但是一个项目指定在第五列，则会自动生成一个第四列，该属性则用于指定自动生成的列的宽度；
@@ -148,7 +140,7 @@ grid-gap: 10px 12px;         // 缩写，行间隔均为10px, 列间隔均为12p
 grid-column-gap: 10px 12px;  // 第一列列间隔 10px，后面的都为12px;
 grid-row-gap: 10px 12px;  // 第一行行间隔 10px，后面的都为12px;
 ```
- 
+
 
 
 
@@ -177,7 +169,7 @@ grid-auto-flow: row/column dense; // 某些项目设置位置后，其他项目�
 ```css
 .container {
   justify-content: start | end | center | stretch | space-around | space-between | space-evenly;
-  align-content: start | end | center | stretch | space-around | space-between | space-evenly;  
+  align-content: start | end | center | stretch | space-around | space-between | space-evenly;
 }
 ```
 
@@ -204,7 +196,7 @@ justify-items: start | end | center | stretch;
 **align-items** :单元格内容的垂直位置
 
 ```css
-align-items: start | end | center | stretch; 
+align-items: start | end | center | stretch;
 ```
 
 
@@ -276,8 +268,8 @@ place-items: center end; // 垂直方向居中，水平方向对齐结束位置
 
 ## 指定项目对齐方式
 
-**justify-self** 
-**align-self** 
+**justify-self**
+**align-self**
 **place-self**
 
 用法同 **justify-items**， **align-items**
