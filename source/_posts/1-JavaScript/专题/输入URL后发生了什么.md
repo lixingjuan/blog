@@ -1,1 +1,1 @@
-![](x-mind/从URL输入到渲染.png)
+![](x-mind/输入URL发生了什么.png)
