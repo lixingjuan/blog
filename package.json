@@ -7,7 +7,7 @@
     "dev": "cd server egg-bin dev",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "hot": "node ./source/_node/index.js && hexo s -g --debug",
+    "hot": "node ./source/_node/index.js && ./node_modules/.bin/hexo s -g --debug",
     "start": "hexo clean && node ./source/_node/index.js && hexo server",
     "up": "hexo clean && node ./source/_node/index.js && hexo g && hexo d"
   },
@@ -23,7 +23,7 @@
     "axios": "^0.21.0",
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
-    "hexo": "^4.0.0",
+    "hexo": "4.2.1",
     "hexo-deployer-git": "^2.1.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
