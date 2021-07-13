@@ -2,9 +2,9 @@
 
 ## 性能分析
 
-### 1. 打包速度分析
+### 打包速度分析
 
-使用插件 `speed-measure-webpack-plugin`， 分析各部分耗时
+#### 插件 `speed-measure-webpack-plugin`， 分析各部分耗时
 
 使用方法
 
@@ -52,130 +52,6 @@ postcss-loader, and
 sass-loader, and
 cache-loader, and
 vue-loader took 28.47 secs
-  module count = 145
-css-loader, and
-vue-loader, and
-postcss-loader, and
-sass-loader, and
-cache-loader, and
-vue-loader took 28.44 secs
-  module count = 145
-cache-loader, and
-thread-loader, and
-babel-loader, and
-ts-loader, and
-eslint-loader took 27.78 secs
-  module count = 70
-cache-loader, and
-vue-loader, and
-eslint-loader took 25.25 secs
-  module count = 304
-cache-loader, and
-thread-loader, and
-babel-loader, and
-ts-loader, and
-cache-loader, and
-vue-loader took 20.66 secs
-  module count = 147
-modules with no loaders took 18.028 secs
-  module count = 1202
-cache-loader, and
-vue-loader, and
-cache-loader, and
-vue-loader took 16.16 secs
-  module count = 152
-vue-loader, and
-mini-css-extract-plugin, and
-css-loader, and
-postcss-loader, and
-sass-loader, and
-mini-css-extract-plugin, and
-css-loader, and
-postcss-loader, and
-sass-loader took 15.41 secs
-  module count = 2
-css-loader, and
-vue-loader, and
-postcss-loader, and
-sass-loader took 15.41 secs
-  module count = 1
-cache-loader, and
-thread-loader, and
-babel-loader took 7.52 secs
-  module count = 29
-mini-css-extract-plugin, and
-css-loader, and
-postcss-loader took 3.55 secs
-  module count = 4
-cache-loader, and
-thread-loader, and
-babel-loader, and
-eslint-loader took 2.81 secs
-  module count = 2
-cache-loader, and
-thread-loader, and
-babel-loader, and
-cache-loader, and
-vue-loader took 2.49 secs
-  module count = 3
-mini-css-extract-plugin, and
-css-loader, and
-vue-loader, and
-postcss-loader, and
-cache-loader, and
-vue-loader took 2.33 secs
-  module count = 7
-css-loader, and
-vue-loader, and
-postcss-loader, and
-cache-loader, and
-vue-loader took 2.31 secs
-  module count = 7
-css-loader, and
-postcss-loader took 2.15 secs
-  module count = 4
-url-loader took 1.27 secs
-  module count = 15
-file-loader took 0.252 secs
-  module count = 2
-html-webpack-plugin took 0.081 secs
-  module count = 1
-vue-loader, and
-mini-css-extract-plugin, and
-css-loader, and
-postcss-loader, and
-sass-loader, and
-cache-loader, and
-vue-loader, and
-eslint-loader took 0.049 secs
-  module count = 145
-vue-loader, and
-cache-loader, and
-thread-loader, and
-babel-loader, and
-ts-loader, and
-cache-loader, and
-vue-loader, and
-eslint-loader, and
-eslint-loader took 0.049 secs
-  module count = 147
-vue-loader, and
-cache-loader, and
-thread-loader, and
-babel-loader, and
-cache-loader, and
-vue-loader, and
-eslint-loader, and
-eslint-loader took 0.004 secs
-  module count = 3
-vue-loader, and
-mini-css-extract-plugin, and
-css-loader, and
-postcss-loader, and
-cache-loader, and
-vue-loader, and
-eslint-loader took 0 secs
-  module count = 7
 ```
 
 
@@ -212,14 +88,17 @@ module.exports = {
 
 ## 性能优化
 
-### 1. 打包体积优化
-
-#### externals
-
-webpack externals 属性，排除打包在内的三方库，然后在 `index.html` 中CDN引入
+### thread-loader： 开启多线程打包
+放在所有loader 之前
 
 
-#### 开启缓存cache相关
+### externals
+
+1. webpack externals 属性，排除打包在内的三方库，然后在 `index.html` 中CDN引入
+
+
+
+### 开启缓存cache相关
 
 1. babel-loader
 
@@ -255,10 +134,13 @@ webpack externals 属性，排除打包在内的三方库，然后在 `index.htm
 ```
 
 
-### 2. 打包速度优化，使用DLL
+### DLL，优化打包速度和体积
 
+1. webpack.DllReferencePlugin
+2. AddAssetHtmlWebpackPlugin
+3. webpack.DllPlugin
+4. 举例
 ```js
-
 /* 1. 新建 webpack.dll.config.js 文件 */
 module.exports = {
   mode: 'development', // 环境

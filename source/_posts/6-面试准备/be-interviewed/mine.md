@@ -1,6 +1,43 @@
 # 我的面经
 
 
+
+
+## 第一财经
+
+1. [x] 输入url发生了什么？
+2. [x] 怎么实现资源同步下载 --
+   1. [ ] defer, 异步加载，延迟执行
+   2. [ ] async, 异步加载，异步执行
+   3. [ ] 正常，同步加载，同步执行
+3. [x] dispaly 实现超出换行？
+   1. [ ] dispaly-
+4. [x] setState 是同步还是异步？
+5. [x] 说出两种判断数组的方式？
+   1. Array.isArray()
+   2. Object.prototype.toString.call()
+   3. A instanceof B (该方法是用来判断 B.prototype 是否位于A的原型链上, iframe会形成自己的全局作用域, 跨作用域的原形判断永远返回false)
+   4. A.constructor === Array, 同样不能跨iframe
+6. useState 和 class 的 setState 的区别？ 如果同时修改一个对象，引用地址变了么？
+7. 如果想让 prop 和state 改变，但是不让组件渲染，怎么做？
+   1. useRef
+   2. useMemo
+   3. React.memo
+8. 性能优化！！！
+   1. 代码(react)
+   2. webpack打包
+   3. 网络
+9.  webpack打包怎么分包？
+10. docker 有没有了解
+11. 一个函数，有两种输入，（复杂类型），ts怎么处理？———— key in 操作符
+12. 使用JSON.stringify做深拷贝有什么问题？ ———— 复杂类型丢失
+13. ts条件判断怎么处理？
+    1.  答案：keyof还是in操作符判断类型
+14. 枚举为什么可以反向映射？
+15. 箭头函数特性 （在问this）
+    1. 箭头函数能不能做构造函数？
+    2. 如果箭头函数和普通函数 当作函数调用和普通函数调用有什么区别？
+
 ## B站
 
 
@@ -151,37 +188,3 @@
  6. [ ]  H5项目，如何处理兼容性？
  7. [ ]  对项目有什么技术推动？有团队内做过技术分享么？分享的什么？
  8. [ ]  怎么学习前端的？(我说看书，看视频，看博客)看了哪些书？
-
-
-## 第一财经
-
-a
-1. [x] 输入url发生了什么？
-2. [x] 怎么实现资源同步下载 --
-   1. [ ] defer, 异步加载，延迟执行
-   2. [ ] async, 异步加载，异步执行
-   3. [ ] 正常，同步加载，同步执行
-3. [x] dispaly 实现超出换行？
-   1. [ ] dispaly-
-4. [x] setState 是同步还是异步？
-5. [x] 说出两种判断数组的方式？
-   1. Array.isArray()
-   2. Object.prototype.toString.call()
-   3. A instanceof B (该方法是用来判断 B.prototype 是否位于A的原型链上, iframe会形成自己的全局作用域, 跨作用域的原形判断永远返回false)
-   4. A.constructor === Array, 同样不能跨iframe
-6. useState 和 class 的 setState 的区别？ 如果同时修改一个对象，引用地址变了么？
-7. 如果想让prop 和state 改变，但是不让组件渲染，怎么做？--- useRef
-8. 🔴性能优化！！！
-   1. 代码(react)
-   2. webpack打包
-   3. 网络
-9.  🔴webpack 拆包
-10. docker 有没有了解
-11. 一个函数，有两种输入，（复杂类型），ts怎么处理？———— key in 操作符
-12. 使用JSON.stringify做深拷贝有什么问题？ ———— 复杂类型丢失
-13. ts条件判断怎么处理？
-    1.  答案：keyof还是in操作符判断类型
-14. 枚举为什么可以反向映射？
-15. 箭头函数特性 （在问this）
-    1. 箭头函数能不能做构造函数？
-    2. 如果箭头函数和普通函数 当作函数调用和普通函数调用有什么区别？
