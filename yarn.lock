@@ -2798,10 +2798,10 @@ hexo-util@^2.1.0:
     strip-indent "^3.0.0"
     striptags "^3.1.1"
 
-hexo@^4.0.0:
+hexo@4.2.1:
   version "4.2.1"
-  resolved "https://registry.yarnpkg.com/hexo/-/hexo-4.2.1.tgz#2aa1d4428b0ade23bac34f546a387b36432dd81c"
-  integrity sha512-V7kJsL4m2HM0Czm0j0ZDLJWxv5OJvbpTWgk0cCKcvHg2Dd/SVgtyLI+ygoPPrMipTquxii6waF5l44Op0bMEEQ==
+  resolved "http://f2e01.wmcloud-dev.com:7001/hexo/download/hexo-4.2.1.tgz#2aa1d4428b0ade23bac34f546a387b36432dd81c"
+  integrity sha1-KqHUQosK3iO6w09Uajh7NkMt2Bw=
   dependencies:
     abbrev "^1.1.1"
     archy "^1.0.0"

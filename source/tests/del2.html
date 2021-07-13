@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function handleSend() {
+        window.top.window.postMessage(
+          {
+            value: new Array(1, 2, 3),
+          },
+          "*"
+        );
+        console.log(
+          "在iframe中",
+          new Array(1, 2, 3) instanceof window.top.window.Array
+        );
+
+        console.log("[2].constructor === Array", [2].constructor === Array);
+        console.log(
+          "[2].constructor === window.top.window",
+          [2].constructor === window.top.window.Array
+        );
+      }
+    </script>
+    <button onclick="handleSend()">向父iframe发送一个数组</button>
+  </body>
+</html>

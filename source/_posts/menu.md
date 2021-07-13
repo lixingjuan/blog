@@ -21,6 +21,8 @@
 
 * [new的时候发生了什么](/Blog/1-JavaScript/专题/new的时候发生了什么) 
 
+* [reduce](/Blog/1-JavaScript/专题/reduce) 
+
 * [this相关](/Blog/1-JavaScript/专题/this相关) 
 
 * [todo-跨域](/Blog/1-JavaScript/专题/todo-跨域) 
@@ -44,8 +46,6 @@
 * [加快首屏渲染](/Blog/1-JavaScript/专题/加快首屏渲染) 
 
 * [原型和原型链的理解](/Blog/1-JavaScript/专题/原型和原型链的理解) 
-
-* [废弃](/Blog/1-JavaScript/专题/废弃) 
 
 * [扩充类型的功能](/Blog/1-JavaScript/专题/扩充类型的功能) 
 
@@ -185,6 +185,14 @@
 
 * [深拷贝](/Blog/2-框架和库/lodash/深拷贝) 
 
+## typescript 
+
+* [4.3新增方法](/Blog/2-框架和库/typescript/4.3新增方法) 
+
+* [interface-vs-type](/Blog/2-框架和库/typescript/interface-vs-type) 
+
+* [一些记录](/Blog/2-框架和库/typescript/一些记录) 
+
 ## 公共类 
 
 * [key的作用](/Blog/2-框架和库/公共类/key的作用) 
@@ -268,6 +276,8 @@
 * [Nginx](/Blog/4-网络和算法和ts/网络和安全类/Nginx) 
 
 * [cookie为什么不安全](/Blog/4-网络和算法和ts/网络和安全类/cookie为什么不安全) 
+
+### drawio_assets 
 
 * [get和post区别](/Blog/4-网络和算法和ts/网络和安全类/get和post区别) 
 
@@ -363,8 +373,6 @@
 
 * [20210105](/Blog/7-日记/2021/20210105) 
 
-* [20210118](/Blog/7-日记/2021/20210118) 
-
 * [冷门属性](/Blog/7-日记/2021/冷门属性) 
 
 * [前端团队技术分享主题](/Blog/7-日记/2021/前端团队技术分享主题) 
@@ -392,6 +400,8 @@
 * [eslint](/Blog/8-乱七八糟工具/webpack/eslint) 
 
 * [perttier](/Blog/8-乱七八糟工具/webpack/perttier) 
+
+* [webpack性能优化](/Blog/8-乱七八糟工具/webpack/webpack性能优化) 
 
 * [webpack热更新原理](/Blog/8-乱七八糟工具/webpack/webpack热更新原理) 
 
