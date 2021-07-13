@@ -1,25 +1,54 @@
-/* 发布订阅 */
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstring = function (s) {
+  const string = s ?? '';
 
-const ControllerObj = {
-    arr: [],
-    subscribe: function (key, event) {
-        this.arr.push({
-            key,
-            event
-        })
+  if (string.length <= 1) {
+    return string.length
+  }
 
-    },
-    emit: function (key) {
-        if (key) {
+  const arrSring = Array.from(string)
 
-            this.arr.filter(it => it.key === key).forEach(it => it.event())
-        }
-        this.arr.forEach(it => it.event())
-    },
-}
+  let maxLength = 0;
 
-ControllerObj.subscribe('lixingjuan', () => {
-    console.log('lixingjuan')
-})
+  let arr = [];
 
-ControllerObj.emit('')
+
+  for (let index = 0; index < arrSring.length; index++) {
+    const it = arrSring[index];
+    if (!arr.length) {
+      arr.push(it)
+      maxLength = 1
+    } else {
+      // 最后出现的索引
+      const lastIndex = arr.lastIndexOf(it)
+
+      // 1. 如果没有出现过
+      if (lastIndex < 0) {
+        arr.push(it);
+        maxLength = Math.max(arr.length, maxLength)
+      } else {
+        // 2. 出现过，则将其最后出现的位置之前及其本身都删除
+        arr.splice(0, lastIndex + 1)
+        arr.push(it)
+        maxLength = Math.max(arr.length, maxLength)
+      }
+    }
+  }
+
+
+  return maxLength
+};
+
+
+// console.time('hhhh')
+console.log(lengthOfLongestSubstring("abcabcbb")) // 3
+console.log(lengthOfLongestSubstring("bbbbb"))  // 1
+console.log(lengthOfLongestSubstring("pwwkew")) // 3
+console.log(lengthOfLongestSubstring("  "))   // 2
+console.log(lengthOfLongestSubstring("cbb"))    // 2
+console.log(lengthOfLongestSubstring("aab"))    // 2
+console.log(lengthOfLongestSubstring("dvdf"))   // 3
+// console.timeEnd('hhhh')
