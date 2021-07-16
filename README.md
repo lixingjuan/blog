@@ -3,7 +3,7 @@
 
 - 这里是李幸娟博客的主体代码
 - 博客文章资源位于 `'./source'` 目录下
-- 博客文章位于仓库 [Blog](https://github.com/lixingjuan/Blog)
+- 博客文章位于仓库 [Blog](https://github.com/lixingjuan/)
 
 
 # 生成目录脚本

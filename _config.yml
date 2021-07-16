@@ -105,7 +105,7 @@ theme: book
 #   type: ""
 deploy:
   type: git
-  repo: https://github.com/lixingjuan/
+  repo: https://github.com/lixingjuan/lixingjuan.github.io
   # example, https://github.com/hexojs/hexojs.github.io
   branch: gh-pages
 markdown:

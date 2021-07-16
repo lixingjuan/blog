@@ -6,7 +6,7 @@
 
 cookie的属性如下：
 
-<img src='/Blog/images/cookie的组成.jpg' />
+<img src='/images/cookie的组成.jpg' />
 
 1. ==Name/value==:  设置Cookie 的名称以及相对应的只，对于认证cookie, Value包括Web服务器所提供的访问令牌
 2. ==Expires属==性: 设置cookie 的生存期，有两种存储类型的cookie

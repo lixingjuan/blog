@@ -12,7 +12,7 @@ comments: false
 该博客仅用于日常学习的记录，如有错误或问题请联系我 (邮箱：18236129679@163.com)
 
 
-<img src='/Blog/images/home-banner.svg'/>
+<img src='/images/home-banner.svg'/>
 
 
 

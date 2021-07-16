@@ -28,7 +28,7 @@ fs.writeFileSync(menuPosition, initialString);
  * @des 向指定路径写入内容
  * @param {String} title 要写入的内容
  */
-const writeToMenu = function(title) {
+const writeToMenu = function (title) {
   fs.appendFileSync(menuPosition, `${title} \n\n`, "utf8");
 };
 
@@ -39,9 +39,9 @@ const writeToMenu = function(title) {
  * @param {String} item 文件名称(带扩展名)
  * @return:
  */
-const getTitle = function(linkOrTitle, _postPosition, item) {
+const getTitle = function (linkOrTitle, _postPosition, item) {
   if (linkOrTitle === "link") {
-    return `* [${item.slice(0, -3)}](/Blog/${_postPosition.slice(
+    return `* [${item.slice(0, -3)}](/${_postPosition.slice(
       beginPath.length + 1
     )}/${item.slice(0, -3)})`;
   } else {

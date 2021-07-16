@@ -29,11 +29,11 @@ function listerner(){
 
 - 连接之前的 this
 
-<img src='/Blog/images/connect之前的this.png'>
+<img src='/images/connect之前的this.png'>
 
 - 连接之后的 this
-  
-<img src='/Blog/images/connect之后的this.png'>
+
+<img src='/images/connect之后的this.png'>
 
 - 然后我们就可以通过 `this.props` 去访问redux的state啦！
 
@@ -43,11 +43,11 @@ function listerner(){
 
 ## 在create-react-app中的使用流程
 
-1. 在App.js中 
-  
+1. 在App.js中
+
 - store就是保存数据的地方，可以给他堪称一个容器，整个应用只能有一个store
 - 函数`createStore`用来生成store
-  
+
 ```javascript
 // 引入createStore 和reducer函数 , 并且创建创建store
 import { createStore } from "redux";  // 接受一个函数作为参数
