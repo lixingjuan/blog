@@ -16,9 +16,11 @@ comments: false
 
 
 
-
-<div style="margin: 30px 0;">输出是最好的学习</div>
-<div style="margin: 30px 0;">温故而知新</div>
+<ol>
+<li><b style="margin: 30px 0;font-size: 28">输出是最好的学习</b></li>
+<li><b style="margin: 30px 0;font-size: 28">温故而知新</b></li>
+<li><b style="margin: 30px 0;font-size: 28">每天问自己，那些重点且常见的知识，我是真的明白么？还是模模糊糊？</b></li>
+</ol>
 
 
 ![](x-mind/李幸娟-前端汇总.png)
