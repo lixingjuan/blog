@@ -13,8 +13,8 @@ timezone: ""
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://lixingjuan.github.io/Blog/
-root: /Blog
+url: https://lixingjuan.github.io/
+root: /
 permalink: /:title/
 permalink_defaults:
 pretty_urls:
@@ -105,7 +105,7 @@ theme: book
 #   type: ""
 deploy:
   type: git
-  repo: https://github.com/lixingjuan/Blog
+  repo: https://github.com/lixingjuan/
   # example, https://github.com/hexojs/hexojs.github.io
   branch: gh-pages
 markdown:
