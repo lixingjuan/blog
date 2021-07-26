@@ -7,6 +7,7 @@
     "dev": "cd server egg-bin dev",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
+    "g": "./node_modules/.bin/hexo generate",
     "hot": "node ./source/_node/index.js && ./node_modules/.bin/hexo s -g --debug",
     "start": "hexo clean && node ./source/_node/index.js && hexo server",
     "up": "hexo clean && node ./source/_node/index.js && hexo g && hexo d"
