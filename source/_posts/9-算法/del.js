@@ -1,24 +1,5 @@
 let arr = [
-  3,
-  44,
-  38,
-  5,
-  47,
-  15,
-  88,
-  23,
-  21,
-  12,
-  333,
-  218,
-  36,
-  26,
-  27,
-  2,
-  46,
-  4,
-  19,
-  50,
+  3, 44, 38, 5, 47, 15, 88, 23, 21, 12, 333, 218, 36, 26, 27, 2, 46, 4, 19, 50,
   48,
 ];
 
@@ -55,3 +36,49 @@ const quickSort = (array) => {
 };
 
 console.log(quickSort(arr));
+
+// class Solution {
+//     public int lengthOfLIS(int[] nums) {
+//         if (nums.length == 0) {
+//             return 0;
+//         }
+//         int[] dp = new int[nums.length];
+//         dp[0] = 1;
+//         int maxans = 1;
+//         for (int i = 1; i < nums.length; i++) {
+//             dp[i] = 1;
+//             for (int j = 0; j < i; j++) {
+//                 if (nums[i] > nums[j]) {
+//                     dp[i] = Math.max(dp[i], dp[j] + 1);
+//                 }
+//             }
+//             maxans = Math.max(maxans, dp[i]);
+//         }
+//         return maxans;
+//     }
+// }
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var lengthOfLIS = function (nums) {
+  if (nums.length == 0) {
+    return 0;
+  }
+
+  const dp = Array.from({ length: nums.length });
+  dp[0] = 1;
+  let maxans = 1;
+
+  for (let i = 1; i < nums.length; i++) {
+    dp[i] = 1;
+    for (let j = 0; j < i; j++) {
+      if (nums[i] > nums[j]) {
+        dp[i] = Math.max(dp[i], dp[j] + 1);
+      }
+    }
+    maxans = Math.max(maxans, dp[i]);
+  }
+  return maxans;
+};
