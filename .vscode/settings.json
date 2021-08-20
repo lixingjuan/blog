@@ -8,5 +8,6 @@
     "editor.wordWrap": "on",
     "editor.formatOnSave": true,
     "editor.quickSuggestions": true // 打开markdown文件的智能感知提示，解决markdown文件代码片段不生效问题
-  }
+  },
+  "liveServer.settings.port": 5501
 }
