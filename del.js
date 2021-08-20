@@ -1,48 +1,23 @@
-// const book = {
-//   title: 'Profeeeional javas',
-//   authors: ['2', 2],
-//   edition: 4444,
-//   year: 2018
-// }
+setTimeout(() => console.log(1), 3000);
 
-let book = {
-  title: "Professional",
-  authors: [
-    "Nicholas C. Zakas",
-    "Matt Frisbie"
-  ],
-  edition: 4,
+async function async1() {
+  console.log(2);
+  const res = await async2();
+  console.log(res);
+}
 
-};
+async function async2() {
+  setTimeout(() => console.log(3), 3000);
+  return 4;
+}
 
-let jsontext1 = JSON.stringify(book, (key, value) => {
-  switch (key) {
-    case "title":
-      return value.split('').join('-')
-    case "authors":
-      return value.join(",")
-    default:
-      return value
-  }
-})
-
-
-
-console.log(jsontext1)
-
-
-
-let jsonTex2 = JSON.stringify(book, (key, value) => {
-  switch (key) {
-    case "authors":
-      return value.join(",")
-    case "year":
-      return 5000;
-    case "edition":
-      return undefined;
-    default:
-      return value;
-  }
+Promise.resolve().then(() => {
+  console.log(4);
 });
 
-console.log(jsonTex2)
+setTimeout(() => {
+  console.log(5);
+});
+
+async1();
+console.log(6);
