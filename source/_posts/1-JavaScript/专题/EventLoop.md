@@ -102,3 +102,72 @@ Node.js 也是单线程的Event Loop, 但是他的执行机制和js不同:
 # 3. 相关参考文章
 
 1. [阮一峰-JavaScript 运行机制详解：再谈Event Loop](http://www.ruanyifeng.com/blog/2014/10/event-loop.html)
+
+
+
+
+## 考题
+
+
+题目一
+
+
+题目二
+
+```js
+console.log("start");
+setTimeout(() => {
+  console.log("children2");
+  Promise.resolve().then(() => {
+    console.log("children3");
+  });
+  Promise.resolve().then(() => {
+    console.log("children33333");
+  });
+}, 0);
+
+new Promise(function (resolve, reject) {
+  console.log("children4");
+  setTimeout(() => {
+    console.log("children5");
+    resolve("children6");
+  }, 0);
+}).then((res) => {
+  console.log("children7");
+  setTimeout(() => {
+    console.log(res);
+  }, 0);
+});
+
+
+
+```
+
+
+
+题目三
+
+
+```js
+const p = function () {
+  return new Promise((resolve, reject) => {
+    const p1 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(1);
+      }, 0);
+      resolve(2);
+    });
+    p1.then((res) => {
+      console.log(res);
+    });
+    console.log(3);
+    resolve(4);
+  });
+};
+
+p().then((res) => {
+  console.log(res);
+});
+
+console.log("end");
+```
