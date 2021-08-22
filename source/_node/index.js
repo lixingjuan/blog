@@ -1,3 +1,5 @@
+const { ignoreMenuArr } = require("./constant.js");
+
 /*
  * @desc: 用于生成 menu
  */
@@ -41,20 +43,22 @@ const writeToMenu = function (title) {
  */
 const getTitle = function (linkOrTitle, _postPosition, item) {
   if (linkOrTitle === "link") {
-    return `* [${item.slice(0, -3)}](/${_postPosition.slice(
+    const title = `* [${item.slice(0, -3)}](/${_postPosition.slice(
       beginPath.length + 1
     )}/${item.slice(0, -3)})`;
-  } else {
-    const postionDepth =
-      (_postPosition + "/" + item).split("/").length - firstDepth;
+    console.log({ title });
+    return title;
+  }
 
-    switch (postionDepth) {
-      case 1:
-        return `<h1 style="color:#448d55;">${item.replace(reg, "")}</h1>`;
+  const postionDepth =
+    (_postPosition + "/" + item).split("/").length - firstDepth;
 
-      default:
-        return `${"#".repeat(postionDepth)} ${item}`;
-    }
+  switch (postionDepth) {
+    case 1:
+      return `<h1 style="color:#448d55;">${item.replace(reg, "")}</h1>`;
+
+    default:
+      return `${"#".repeat(postionDepth)} ${item}`;
   }
 };
 
@@ -63,20 +67,17 @@ const getTitle = function (linkOrTitle, _postPosition, item) {
  * @param {String} 要遍历的路径
  * @return:
  */
-const generateMenu = _postPosition => {
+const generateMenu = (_postPosition) => {
   const floderArr = fs.readdirSync(_postPosition);
 
   const afterFilter = floderArr.filter(
-    item =>
-      ![
-        "menu.md",
-        "home.md",
-        "README.md",
-        "temporary.md",
-        ".DS_Store",
-        "changelog.md",
-        "menu2.md"
-      ].includes(item)
+    (item) =>
+      !ignoreMenuArr.includes(item) &&
+      !item.startsWith("_") &&
+      !item.endsWith(".js") &&
+      !item.endsWith(".ts") &&
+      !item.endsWith(".html") &&
+      !item.endsWith(".less")
   );
 
   const afterSort = afterFilter.sort((i, j) => parseInt(i) - parseInt(j));
@@ -85,22 +86,20 @@ const generateMenu = _postPosition => {
     return;
   }
 
-  afterSort.map(item => {
-    // 以_开头的文件不生成目录
-    if (item.startsWith("_")) {
-      return;
-    }
+  console.log("afterSort", afterSort);
 
+  afterSort.map((item) => {
     // 如果是文件，就写下名字
     if (item.includes(".md")) {
       const link = getTitle("link", _postPosition, item);
       writeToMenu(link);
-    } else if (!item.includes(".")) {
-      // 如果是文件夹，就写下名字，继续递归
-      const title = getTitle("title", _postPosition, item);
-      writeToMenu(title);
-      generateMenu(path.join(_postPosition, item));
+      return;
     }
+
+    // 如果是文件夹，就写下名字，继续递归
+    const title = getTitle("title", _postPosition, item);
+    writeToMenu(title);
+    generateMenu(path.join(_postPosition, item));
   });
 };
 
