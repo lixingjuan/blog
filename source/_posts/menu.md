@@ -1,15 +1,13 @@
 
-* [Home](/Blog)
+* [Home](/)
 
-<h1 style="color:#448d55;">JavaScript</h1> 
+<h1 style="color: #ba2f7b">JavaScript</h1> 
 
 ## 专题 
 
-* [0.1+0.2](/1-JavaScript/专题/0.1+0.2) 
+* [(0.1+0.2)](/1-JavaScript/专题/(0.1+0.2)) 
 
 * [Class相关](/1-JavaScript/专题/Class相关) 
-
-* [EventLoop](/1-JavaScript/专题/EventLoop) 
 
 * [Promise](/1-JavaScript/专题/Promise) 
 
@@ -57,8 +55,6 @@
 
 * [输入URL后发生了什么](/1-JavaScript/专题/输入URL后发生了什么) 
 
-* [进程和线程](/1-JavaScript/专题/进程和线程) 
-
 * [闭包是什么应用场景](/1-JavaScript/专题/闭包是什么应用场景) 
 
 * [防抖和节流](/1-JavaScript/专题/防抖和节流) 
@@ -101,9 +97,13 @@
 
 * [箭头函数](/1-JavaScript/基础知识类/箭头函数) 
 
-<h1 style="color:#448d55;">测试目录</h1> 
+<h1 style="color: #ba2f7b">JavaScript基础</h1> 
 
-<h1 style="color:#448d55;">框架和库</h1> 
+* [EventLoop](/1-JavaScript基础/EventLoop) 
+
+* [进程和线程](/1-JavaScript基础/进程和线程) 
+
+<h1 style="color: #ba2f7b">框架和库</h1> 
 
 ## Deno 
 
@@ -217,7 +217,7 @@
 
 * [框架通识](/2-框架和库/公共类/框架通识) 
 
-<h1 style="color:#448d55;">CSS相关</h1> 
+<h1 style="color: #ba2f7b">CSS相关</h1> 
 
 ## 基础 
 
@@ -257,7 +257,7 @@
 
 * [移动端适配](/3-CSS相关/库&方案/移动端适配) 
 
-<h1 style="color:#448d55;">网络和算法和ts</h1> 
+<h1 style="color: #ba2f7b">网络和算法和ts</h1> 
 
 ## TypeScript 
 
@@ -319,7 +319,7 @@
 
 * [输入URL后发生了什么](/4-网络和算法和ts/网络和安全类/输入URL后发生了什么) 
 
-<h1 style="color:#448d55;">笔记和复盘</h1> 
+<h1 style="color: #ba2f7b">笔记和复盘</h1> 
 
 ## 读书笔记 
 
@@ -345,7 +345,7 @@
 
 * [腾安基金](/5-笔记和复盘/项目复盘/腾安基金) 
 
-<h1 style="color:#448d55;">面试准备</h1> 
+<h1 style="color: #ba2f7b">面试准备</h1> 
 
 ## Interview-others 
 
@@ -375,7 +375,7 @@
 
 * [面经list](/6-面试准备/ready/面经list) 
 
-<h1 style="color:#448d55;">日记</h1> 
+<h1 style="color: #ba2f7b">日记</h1> 
 
 ## 2020 
 
@@ -397,7 +397,7 @@
 
 * [前端团队技术分享主题](/7-日记/2021/前端团队技术分享主题) 
 
-<h1 style="color:#448d55;">乱七八糟工具</h1> 
+<h1 style="color: #ba2f7b">乱七八糟工具</h1> 
 
 ## MAC指令 
 
@@ -431,7 +431,7 @@
 
 * [查看本地ip之类的配置(window)](/8-乱七八糟工具/系统操作/查看本地ip之类的配置(window)) 
 
-<h1 style="color:#448d55;">非技术类</h1> 
+<h1 style="color: #ba2f7b">非技术类</h1> 
 
 * [固定性思维和成长性思维](/非技术类/固定性思维和成长性思维) 
 

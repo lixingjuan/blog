@@ -1,23 +1,18 @@
-const { ignoreMenuArr } = require("./constant.js");
+const fs = require("fs");
+const path = require("path");
+
+const {
+  ignoreMenuArr,
+  initialString,
+  menuPosition,
+  beginPath,
+  firstDepth,
+  reg,
+} = require("./constant.js");
 
 /*
  * @desc: 用于生成 menu
  */
-
-const fs = require("fs");
-const path = require("path");
-
-/* 菜单位置 */
-const menuPosition = `${path.dirname(__dirname)}/_posts/menu.md`;
-/* 开始遍历的位置 */
-const beginPath = `${path.dirname(__dirname)}/_posts`;
-/* 一级菜单所在的深度 */
-const firstDepth = beginPath.split("/").length;
-/* 初始字符串 */
-const initialString = `
-* [Home](/Blog)\n\n`;
-/* 匹配一级菜单前缀 1- 2-等 */
-let reg = /^\d-/;
 
 /**
  * @des 同步清空目录文件
@@ -43,9 +38,12 @@ const writeToMenu = function (title) {
  */
 const getTitle = function (linkOrTitle, _postPosition, item) {
   if (linkOrTitle === "link") {
-    const title = `* [${item.slice(0, -3)}](/${_postPosition.slice(
-      beginPath.length + 1
-    )}/${item.slice(0, -3)})`;
+    const [fileName] = item.split(".md");
+
+    const [, tempPath] = _postPosition.split(beginPath);
+
+    const title = `* [${fileName}](${tempPath}/${fileName})`;
+
     console.log({ title });
     return title;
   }
@@ -55,7 +53,7 @@ const getTitle = function (linkOrTitle, _postPosition, item) {
 
   switch (postionDepth) {
     case 1:
-      return `<h1 style="color:#448d55;">${item.replace(reg, "")}</h1>`;
+      return `<h1 style="color: #ba2f7b">${item.replace(reg, "")}</h1>`;
 
     default:
       return `${"#".repeat(postionDepth)} ${item}`;
