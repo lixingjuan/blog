@@ -21,8 +21,6 @@
 
 * [this相关](/1-JavaScript基础/this相关) 
 
-* [todo-跨域](/1-JavaScript基础/todo-跨域) 
-
 * [事件委托](/1-JavaScript基础/事件委托) 
 
 * [作用域相关](/1-JavaScript基础/作用域相关) 
