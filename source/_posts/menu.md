@@ -1,8 +1,6 @@
 
 * [Home](/)
 
-<h1 style="color: #ba2f7b">JavaScript</h1> 
-
 <h1 style="color: #ba2f7b">Javascript基础</h1> 
 
 * [Class相关](/1-Javascript基础/Class相关) 
@@ -209,8 +207,6 @@
 
 * [输入URL后发生了什么](/4-网络/输入URL后发生了什么) 
 
-<h1 style="color: #ba2f7b">网络和算法和ts</h1> 
-
 <h1 style="color: #ba2f7b">项目复盘</h1> 
 
 * [工银-自动化报告](/5-项目复盘/工银-自动化报告) 
@@ -218,44 +214,6 @@
 * [民生星探-移动端](/5-项目复盘/民生星探-移动端) 
 
 * [腾安基金](/5-项目复盘/腾安基金) 
-
-<h1 style="color: #ba2f7b">面试准备</h1> 
-
-## Interview-others 
-
-* [2021-08-16](/6-面试准备/Interview-others/2021-08-16) 
-
-* [2021-08-17](/6-面试准备/Interview-others/2021-08-17) 
-
-* [2021-08-20](/6-面试准备/Interview-others/2021-08-20) 
-
-* [2021-09-20(下午四点女生)](/6-面试准备/Interview-others/2021-09-20(下午四点女生)) 
-
-* [interview-other](/6-面试准备/Interview-others/interview-other) 
-
-* [面试别人的收获](/6-面试准备/Interview-others/面试别人的收获) 
-
-* [面试别人的问题](/6-面试准备/Interview-others/面试别人的问题) 
-
-## be-interviewed 
-
-* [mine](/6-面试准备/be-interviewed/mine) 
-
-## ready 
-
-* [algorithm-list](/6-面试准备/ready/algorithm-list) 
-
-* [list](/6-面试准备/ready/list) 
-
-* [todo-掘金-俊劫-有赞](/6-面试准备/ready/todo-掘金-俊劫-有赞) 
-
-* [todo-掘金-慕晨同学-腾讯](/6-面试准备/ready/todo-掘金-慕晨同学-腾讯) 
-
-* [执行上下文+作用域链+闭包](/6-面试准备/ready/执行上下文+作用域链+闭包) 
-
-* [文章《如何进阿里》](/6-面试准备/ready/文章《如何进阿里》) 
-
-* [面经list](/6-面试准备/ready/面经list) 
 
 <h1 style="color: #ba2f7b">日记</h1> 
 
@@ -303,5 +261,9 @@
 
 <h1 style="color: #ba2f7b">非技术类</h1> 
 
+* [上海互联网公司](/非技术类/上海互联网公司) 
+
 * [固定性思维和成长性思维](/非技术类/固定性思维和成长性思维) 
+
+* [费曼学习法](/非技术类/费曼学习法) 
 
