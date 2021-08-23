@@ -4,6 +4,14 @@
 
 ## Promise历史
 
+**期约**是对尚不存在的一个结果的替身。早期的期约机制是在Jquery和Dojo中以Derferred API 出现的。后来2010年，common.js实现的Promises/A规范逐渐流行起来。Q和BlueBird实现的javascript 第三方库也逐渐得到社区的认可，但是这些库的实现都多少有些不同。2012年，Promises/A+规范fork 了common.js的 Promises/A 建议，并以相同的名字制定了Promises/A+规范，这个规范也最终成为了ES6规范实现的版本。
+
+ECMAScript 6增加了对Promises/A+规范的完善支持，即Promise类型，成为了主导性的异步编程方案，
+
+
+
+
+
 ## Promises/A+规范
 
 
@@ -20,8 +28,8 @@ Promise的特点
 ## Promise.then的返回值
 
 
-### then, resolve 的情况
-
+<details>
+<summary style="font-weight: 600;">resolve状态，then不同处理的返回</summary>
 
 在不同状态下，Promise.then的返回值不同
 
@@ -69,11 +77,137 @@ p1.then(()=> {throw '出错了'})          // Promise {<rejected>: "出错了"}
 p1.then(()=> { return Error('出错了')}) // Promise {<fulfilled>: Error: 出错了
 ```
 
+</details>
+
+
+<details>
+<summary style="font-weight: 600;">reject状态，then不同处理的返回</summary>
+
+onRejected处理程序也与之有点类似: onRejected的返回值也会被Promise.resolve()包装，乍一看会感觉有点违反直觉，但是想一想，onRejected处理程序不就是为了捕获异常么？因此，onRejected处理程序在捕获异常后不抛出异常是符合期约的行为。
+
+`let p1 = Promise.reject('foo')`
+
+
+1. 如果调用then的时候不传处理程序，则原样向后传;
+
+`p1.then(); // Promise {<rejected>: "foo"}`
+
+
+
+2. 如果没有显式的返回，则Promise.resolve()会包装默认的返回值undefined;
+
+```js
+p1.then(null, ()=>{});                // Promise {<rejected>: "foo"}
+p1.then(null, ()=> undefined);        // Promise {<rejected>: "foo"}
+p1.then(null, ()=>Promise.resolve()); // Promise {<rejected>: "foo"}
+```
+
+
+3. 如果有显式的返回，则Promise.resove() 会包装这个值
+
+```js
+p1.then(null, ()=>'a');                   // Promise {<fulfilled>: "a"}
+p1.then(null, ()=> Promise.resolve('a')); // Promise {<fulfilled>: "a"}
+```
+
+4. 保留返回的promise
+
+```js
+p1.then(null, ()=> new Promise(()=>{}));    // Promise {<pending>}
+p1.then(null, ()=> Promise.reject());       // Promise {<rejected>: undefined}
+p1.then(null, ()=> Promise.resolve());      // Promise {<fulfilled>: undefined}
+```
+
+
+5. 抛出异常: 会返回拒绝状态的Promise
+
+```js
+p1.then(null, ()=> {throw '出错了'})          // Promise {<rejected>: "出错了"}
+```
+
+1. 返回错误值: 会用Promise.resolve 将该错误值进行包装
+
+```js
+p1.then(()=> { return Error('出错了')}) // Promise {<fulfilled>: Error: 出错了
+```
+
+
+
+</details>
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Promise.prototype.catch
+
+其实相当于 **Promise.prototype.then(null, onRejected)**
+
+
+
+## Promise.prototype.finally()
+
+`let p1 = Promise.resolve('foo')`
+
+<details>
+<summary style="font-weight: 600;">Promise.prototype.finally()返回值有几种情况？</summary>
+
+Promise.prototype.finally()于给函数添加onFinally 处理程序，被设计为与状态无关的函数，无论onResolve还是onRejected该方法都会被执行，避免在 then 和catch中处理冗余的逻辑。
+
+绝大多数情况下，Promise.prototype.finally() 都表现为父期约的传递
+
+
+
+
+
+```js
+p1.finally(()=> 'bbb')
+p1.finally(()=> undefined)
+p1.finally()
+p1.finally(()=> Promise.resolve('ccc'))
+p1.finally(()=> Promise.reject('ccc'))
+p1.finally(()=> { return Error('出错啦！')})
+```
+
+
+
+
+1. 如果返回的是一个 pending 状态的 期约，则保留状态。
+
+```js
+p1.finally(()=> new Promise());           // Promise {<pending>}
+```
+
+
+3. 如果抛出错误 或 返回一个 rejected 状态的promise, 则
+
+
+```js
+p1.finally(()=> Promise.reject('baz'));             // Promise {<rejected>: "baz"}
+p1.finally(()=> { throw new Error('throw error')}); // Promise {<rejected>: Error: throw error
+```
+
+
+</details>
 
 
 
@@ -101,6 +235,9 @@ doSomething(){...}
   .then(()=>{...})
   .then(()=>{...})
 ```
+
+
+
 
 # promise的方法
 

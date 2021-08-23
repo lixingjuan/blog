@@ -11,7 +11,7 @@
 
 * [call和apply](/1-JavaScript基础/call和apply) 
 
-* [flat实现](/1-JavaScript基础/flat实现) 
+* [flat实现三种方案](/1-JavaScript基础/flat实现三种方案) 
 
 * [for和forEach的区别](/1-JavaScript基础/for和forEach的区别) 
 

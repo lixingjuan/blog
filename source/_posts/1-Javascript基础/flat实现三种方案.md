@@ -1,12 +1,7 @@
 # flat
 
 
-实现flat三种方案
-
-1. ES6的flat
-2. 使用ES5实现一个flat
-3. 调用toString()方法
-
+题目
 
 ```js
 let initArr = [
@@ -21,6 +16,9 @@ let initArr = [
   ]
 ]
 ```
+
+
+
 
 ## 方案1: 递归
 
