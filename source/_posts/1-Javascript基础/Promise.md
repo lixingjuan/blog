@@ -1,9 +1,83 @@
+
+
 # Promise与异步函数
 
+## Promise历史
+
+## Promises/A+规范
+
+
+Promise的特点
+
+1. Promise有三个状态，pending, fulfilled, rejected
+2. 状态改变后不可再次改变(判断如果已经处于fulfilled, rejected，则不可再次切换其状态)
+3. 可以使用new 操作符进行实例化(不能用箭头函数实现)
+4. 可以直接通过调用 Promise.resolve()或者Promise.reject() 方法返回 fulfilled/rejected 状态的 Promise
+5. 具有thanable 接口 (Promise 的 prototype 上需要有 then方法)
+6. then 方法接受两个处理程序，onResolved, onRejcted, 分别对应Promise 状态变为 fulfilled/rejected 时进行调用
+
+
+## Promise.then的返回值
+
+
+### then, resolve 的情况
+
+
+在不同状态下，Promise.then的返回值不同
+
+`let p1 = Promise.resolve('foo')`
+
+
+1. 如果调用then的时候不传处理程序，则原样向后传;
+
+`const p2 = p1.then(); // Promise {<fulfilled>: "foo"}`
+
+
+2. 如果没有显式的返回，则Promise.resolve()会包装默认的返回值undefined;
+
+```js
+p1.then(()=>{});                // Promise {<fulfilled>: undefined}
+p1.then(()=> undefined);        // Promise {<fulfilled>: undefined}
+p1.then(()=>Promise.resolve()); // Promise {<fulfilled>: undefined}
+```
+
+
+3. 如果有显式的返回，则Promise.resove() 会包装这个值
+
+```js
+p1.then(()=>'a');                   // Promise {<fulfilled>: "a"}
+p1.then(()=> Promise.resolve('a')); // Promise {<fulfilled>: "a"}
+```
+
+4. 保留返回的promise
+
+```js
+p1.then(()=> new Promise(()=>{}));    // Promise {<pending>}
+p1.then(()=> Promise.reject());       // Promise {<rejected>: undefined}
+```
+
+
+5. 如果抛出异常会返回拒绝状态的Promise
+
+```js
+p1.then(()=> {throw '出错了'})          // Promise {<rejected>: "出错了"}
+```
+
+6. 如果返回错误值，会用Promise.resolve 将该错误值进行包装
+
+```js
+p1.then(()=> { return Error('出错了')}) // Promise {<fulfilled>: Error: 出错了
+```
 
 
 
-# Promise
+
+
+
+
+
+
+## Promise
 
 promise的提出解决了以下两个问题:
 
