@@ -75,7 +75,8 @@ const generateMenu = (_postPosition) => {
       !item.endsWith(".js") &&
       !item.endsWith(".ts") &&
       !item.endsWith(".html") &&
-      !item.endsWith(".less")
+      !item.endsWith(".less") &&
+      !item.endsWith(".drawio")
   );
 
   const afterSort = afterFilter.sort((i, j) => parseInt(i) - parseInt(j));
