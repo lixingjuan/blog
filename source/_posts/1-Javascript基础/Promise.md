@@ -210,3 +210,120 @@ p1.finally(()=> { throw new Error('throw error')}); // Promise {<rejected>: Err
 </details>
 
 
+<hr/>
+
+
+
+## 期约连锁与期约合成
+
+期约连锁，一个期约接一个的期约
+期约合成，将多个期约合成一个期约
+
+### 期约连锁
+
+即利用promise的thenable, 串行化执行异步任务
+
+
+### 期约合成
+
+<details>
+<summary> Promise.all</summary>
+
+Promise.all() 静态方法创建的期约会在一组期约全部解决之后再解决。这个静态方法接收一个可迭代对象，返回一个新的期约。
+
+
+参数的三种情况
+
+1. 传入常量数组,可迭代对象中的数组会通过 Promise.resolve() 转换为期约。
+
+```js
+Promise.all([3,4]) // Promise {<fulfilled>: Array(2)}
+```
+
+2. 传入空的可迭代对象，相当于Promise.resove()
+
+```js
+Promise.all([]) // Promise {<fulfilled>: Array(0)}
+```
+
+3. 什么也不传，会报错
+
+```js
+Promise.all() // Promise {<rejected>: TypeError: undefined is not iterable (cannot read property Symbol(Symbol.iterator))
+```
+
+
+4. 如果有期约拒绝，则第一个拒绝的期约的会将自己的理由作为合成期约的理由，之后再拒绝的期约，不会影响最终期约的拒绝理由。
+
+```js
+Promise.all([
+   Promise.resolve('我是老大'),
+   Promise.reject('我是老二'),
+   Promise.resolve('我是老三'),
+])
+//  Promise {<rejected>: "我是老二"}
+```
+
+
+
+</details>
+
+
+
+<details>
+<summary>Promise.race()</summary>
+Promise.race() 返回一个包装期约，是一组期约中最先解决/或拒绝的期约的镜像，这个方法接受一个可迭代对象，返回一个新的期约。
+</details>
+
+
+
+<details>
+<summary>⭐️ 串行期约的合成() </summary>
+基于后续期约使用之前期约的返回值来串联期约是期约的基本功能，所以我们可以利用该特性，结合reduce函数来实现串行合成。
+
+
+```js
+function addTwo(x) {
+  return x + 2;
+}
+function addThree(x) {
+  return x + 3;
+}
+function addFive(x) {
+  return x + 5;
+}
+
+
+
+function componse(...fn) {
+  return (x) =>
+    fn.reduce((tolPromise, fn) => tolPromise.then(fn), Promise.resolve(x));
+}
+
+const addTen = componse(addTwo, addThree, addFive);
+
+addTen(8).then((res) => {
+  console.log(res);
+});
+
+```
+</details>
+
+
+
+
+<style>
+  .details {
+    margin-top: 10px;
+  }
+</style>
+
+
+
+## 期约扩展
+
+
+<details>
+<summary>期约取消</summary>
+
+</details>

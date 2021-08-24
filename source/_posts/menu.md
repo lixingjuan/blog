@@ -9,17 +9,9 @@
 
 * [Promise](/1-Javascript基础/Promise) 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-* [flat实现三种方案](/1-JavaScript基础/flat实现三种方案) 
-=======
-* [EventLoop](/1-JavaScript/专题/EventLoop)
->>>>>>> 8810d611 (temp)
-=======
 * [call和apply](/1-Javascript基础/call和apply) 
->>>>>>> 09a3a011 (fix: 删除多余文件)
 
-* [flat实现](/1-Javascript基础/flat实现) 
+* [flat实现三种方案](/1-Javascript基础/flat实现三种方案) 
 
 * [for和forEach的区别](/1-Javascript基础/for和forEach的区别) 
 
@@ -27,19 +19,7 @@
 
 * [reduce](/1-Javascript基础/reduce) 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-* [事件委托](/1-JavaScript基础/事件委托) 
-=======
-* [new的时候发生了什么](/1-JavaScript/专题/new的时候发生了什么)
-
-* [reduce](/1-JavaScript/专题/reduce)
->>>>>>> 8810d611 (temp)
-=======
 * [this相关](/1-Javascript基础/this相关) 
-
-* [todo-跨域](/1-Javascript基础/todo-跨域) 
->>>>>>> 09a3a011 (fix: 删除多余文件)
 
 * [事件委托](/1-Javascript基础/事件委托) 
 
@@ -57,17 +37,9 @@
 
 * [加快首屏渲染](/1-Javascript基础/加快首屏渲染) 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-* [异步编程](/1-JavaScript基础/异步编程) 
-
-* [扩充类型的功能](/1-JavaScript基础/扩充类型的功能) 
-=======
-* [判断数据类型的方式及区别](/1-JavaScript/专题/判断数据类型的方式及区别)
->>>>>>> 8810d611 (temp)
-=======
 * [原型和原型链的理解](/1-Javascript基础/原型和原型链的理解) 
->>>>>>> 09a3a011 (fix: 删除多余文件)
+
+* [异步编程](/1-Javascript基础/异步编程) 
 
 * [扩充类型的功能](/1-Javascript基础/扩充类型的功能) 
 
