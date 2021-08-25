@@ -263,8 +263,14 @@ Promise.all([
 ])
 //  Promise {<rejected>: "我是老二"}
 ```
+</details>
 
 
+
+
+
+<details>
+<summary>怎么实现一个Promise.all()?</summary>
 
 </details>
 
