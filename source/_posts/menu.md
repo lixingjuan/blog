@@ -1,59 +1,59 @@
 
 * [Home](/)
 
-<h1 style="color: #ba2f7b">Javascript基础</h1> 
+<h1 style="color: #ba2f7b">JavaScript基础</h1> 
 
-* [Class相关](/1-Javascript基础/Class相关) 
+* [Class相关](/1-JavaScript基础/Class相关) 
 
-* [EventLoop](/1-Javascript基础/EventLoop) 
+* [EventLoop](/1-JavaScript基础/EventLoop) 
 
-* [Promise](/1-Javascript基础/Promise) 
+* [Promise](/1-JavaScript基础/Promise) 
 
-* [call和apply](/1-Javascript基础/call和apply) 
+* [call和apply](/1-JavaScript基础/call和apply) 
 
-* [flat实现三种方案](/1-Javascript基础/flat实现三种方案) 
+* [flat实现三种方案](/1-JavaScript基础/flat实现三种方案) 
 
-* [for和forEach的区别](/1-Javascript基础/for和forEach的区别) 
+* [for和forEach的区别](/1-JavaScript基础/for和forEach的区别) 
 
-* [new的时候发生了什么](/1-Javascript基础/new的时候发生了什么) 
+* [new的时候发生了什么](/1-JavaScript基础/new的时候发生了什么) 
 
-* [reduce](/1-Javascript基础/reduce) 
+* [reduce](/1-JavaScript基础/reduce) 
 
-* [this相关](/1-Javascript基础/this相关) 
+* [this相关](/1-JavaScript基础/this相关) 
 
-* [事件委托](/1-Javascript基础/事件委托) 
+* [事件委托](/1-JavaScript基础/事件委托) 
 
-* [作用域相关](/1-Javascript基础/作用域相关) 
+* [作用域相关](/1-JavaScript基础/作用域相关) 
 
-* [作用域链](/1-Javascript基础/作用域链) 
+* [作用域链](/1-JavaScript基础/作用域链) 
 
-* [函数柯里化](/1-Javascript基础/函数柯里化) 
+* [函数柯里化](/1-JavaScript基础/函数柯里化) 
 
-* [函数的内部属性](/1-Javascript基础/函数的内部属性) 
+* [函数的内部属性](/1-JavaScript基础/函数的内部属性) 
 
-* [判断数据类型的方式及区别](/1-Javascript基础/判断数据类型的方式及区别) 
+* [判断数据类型的方式及区别](/1-JavaScript基础/判断数据类型的方式及区别) 
 
-* [前端模块化规范](/1-Javascript基础/前端模块化规范) 
+* [前端模块化规范](/1-JavaScript基础/前端模块化规范) 
 
-* [加快首屏渲染](/1-Javascript基础/加快首屏渲染) 
+* [加快首屏渲染](/1-JavaScript基础/加快首屏渲染) 
 
-* [原型和原型链的理解](/1-Javascript基础/原型和原型链的理解) 
+* [原型和原型链的理解](/1-JavaScript基础/原型和原型链的理解) 
 
-* [异步编程](/1-Javascript基础/异步编程) 
+* [异步编程](/1-JavaScript基础/异步编程) 
 
-* [扩充类型的功能](/1-Javascript基础/扩充类型的功能) 
+* [扩充类型的功能](/1-JavaScript基础/扩充类型的功能) 
 
-* [浏览器](/1-Javascript基础/浏览器) 
+* [浏览器](/1-JavaScript基础/浏览器) 
 
-* [继承](/1-Javascript基础/继承) 
+* [继承](/1-JavaScript基础/继承) 
 
-* [输入URL后发生了什么](/1-Javascript基础/输入URL后发生了什么) 
+* [输入URL后发生了什么](/1-JavaScript基础/输入URL后发生了什么) 
 
-* [进程和线程](/1-Javascript基础/进程和线程) 
+* [进程和线程](/1-JavaScript基础/进程和线程) 
 
-* [闭包是什么应用场景](/1-Javascript基础/闭包是什么应用场景) 
+* [闭包是什么应用场景](/1-JavaScript基础/闭包是什么应用场景) 
 
-* [防抖和节流](/1-Javascript基础/防抖和节流) 
+* [防抖和节流](/1-JavaScript基础/防抖和节流) 
 
 <h1 style="color: #ba2f7b">CSS相关</h1> 
 
