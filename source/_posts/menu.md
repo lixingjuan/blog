@@ -141,6 +141,8 @@
 
 * [miniVue](/3-Vue源码学习/miniVue) 
 
+* [v-model](/3-Vue源码学习/v-model) 
+
 * [vue](/3-Vue源码学习/vue) 
 
 * [vue的data为什么是函数](/3-Vue源码学习/vue的data为什么是函数) 
@@ -232,6 +234,10 @@
 * [常见排序](/9-算法/常见排序) 
 
 * [汉诺塔](/9-算法/汉诺塔) 
+
+<h1 style="color: #ba2f7b">前端other</h1> 
+
+* [性能优化](/前端other/性能优化) 
 
 <h1 style="color: #ba2f7b">非技术类</h1> 
 
