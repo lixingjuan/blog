@@ -243,7 +243,7 @@ Promise.all([3,4]) // Promise {<fulfilled>: Array(2)}
 2. 传入空的可迭代对象，相当于Promise.resove()
 
 ```js
-Promise.all([]) // Promise {<fulfilled>: Array(0)}
+Promise.all([]) //  Promise {<fulfilled>: Array(0)}
 ```
 
 3. 什么也不传，会报错

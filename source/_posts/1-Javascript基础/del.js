@@ -62,3 +62,6 @@ const p1 = new MyPromise((resolve, reject) => {
 );
 
 console.log(p1);
+let p1 = Promise.reject("foo");
+
+p1.then().catch((res) => console.log(res));
