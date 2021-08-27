@@ -137,23 +137,29 @@ v10之后，和浏览器的行为统一了
 async function async1() {
   console.log(1);
   const res = await async2();
-  console.log(3);
+  console.log(2);
 }
 
 async function async2() {
-  console.log(2);
+  console.log(3);
 }
 
 Promise.resolve().then(() => {
   console.log(4);
-});
-
-setTimeout(() => {
+  setTimeout(() => {
+    console.log(5);
+     resolve(6);
+  }, 0);
+  Promise.reject();
   console.log(5);
 });
 
+setTimeout(() => {
+  console.log(6);
+});
+
 async1();
-console.log(6);
+console.log(7);
 ```
 
 ## 2.2. 题目二
@@ -191,6 +197,7 @@ new Promise(function (resolve, reject) {
 
 ## 2.3. 题目三
 
+主要是考察 Promise
 
 ```js
 const p = function () {
