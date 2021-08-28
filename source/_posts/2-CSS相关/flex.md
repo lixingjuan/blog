@@ -1,3 +1,42 @@
+<style>
+  .wrap {
+    resize: both;
+    overflow: scroll;
+    border: red solid 1px;
+  }
+  .parent {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: unset !important;
+  }
+
+  .box {
+    height: 80px;
+    flex: 1 1 150px;
+    margin: 5px;
+    flex-basis: 33.3%;
+  }
+
+  .green {
+    background-color: green;
+    color: #fff;
+    list-style : none;
+  }
+</style>
+
+<div class="wrap">
+<ul class="parent white">
+  <li class="box green">1</li>
+  <li class="box green">2</li>
+  <li class="box green">3</li>
+  <li class="box green">4</li>
+  <li class="box green">5</li>
+</ul>
+
+</div>
+
 # 容器属性
 
 1. display
