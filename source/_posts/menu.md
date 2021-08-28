@@ -35,8 +35,6 @@
 
 * [前端模块化规范](/1-JavaScript基础/前端模块化规范) 
 
-* [加快首屏渲染](/1-JavaScript基础/加快首屏渲染) 
-
 * [原型和原型链的理解](/1-JavaScript基础/原型和原型链的理解) 
 
 * [异步函数](/1-JavaScript基础/异步函数) 
@@ -74,8 +72,6 @@
 * [less速成](/2-CSS相关/less速成) 
 
 * [line-height](/2-CSS相关/line-height) 
-
-* [margin塌陷](/2-CSS相关/margin塌陷) 
 
 * [scss速成](/2-CSS相关/scss速成) 
 
@@ -214,6 +210,8 @@
 <h1 style="color: #ba2f7b">前端other</h1> 
 
 * [code-review](/前端other/code-review) 
+
+* [性能优化](/前端other/性能优化) 
 
 <h1 style="color: #ba2f7b">非技术类</h1> 
 
