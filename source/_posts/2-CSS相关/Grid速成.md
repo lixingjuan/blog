@@ -1,5 +1,59 @@
 # 一些测试
 
+<div>
+
+  <style>
+    fieldset ul {
+      resize: both;
+      overflow: scroll;
+    }
+
+    fieldset li:nth-child(odd) {
+      background-color: royalblue;
+    }
+    fieldset li:nth-child(even) {
+      background-color: goldenrod;
+    }
+
+    fieldset ul.flex {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    fieldset ul.flex li {
+      width: 33%;
+      list-style: none;
+    }
+
+    fieldset ul.grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  </style>
+  <h2>分别使用grid 和 flex 实现一行三个元素，超出换行</h2>
+  <fieldset class="flex-fieldset">
+    <legend>flex</legend>
+    <ul class="flex">
+      <li>flex-item</li>
+      <li>flex-item</li>
+      <li>flex-item</li>
+      <li>flex-item</li>
+      <li>flex-item</li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>grid</legend>
+    <ul class="grid">
+      <li>grid-item</li>
+      <li>grid-item</li>
+      <li>grid-item</li>
+      <li>grid-item</li>
+      <li>grid-item</li>
+    </ul>
+  </fieldset>
+</div>
+
 ## auto
 
 grid-template-columns: repeat(2, 100px) auto repeat(2, 80px) auto;
@@ -46,7 +100,7 @@ color: #fff;
 # 容器属性
 
 | 属性                    | 描述                                                                                                                                            |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | `display`               | grid/inline-grid                                                                                                                                |
 | `grid-template-rows`    | 每行行高                                                                                                                                        |
 | `grid-template-columns` | 每列列宽                                                                                                                                        |
@@ -73,7 +127,7 @@ color: #fff;
 2. 列宽：`grid-templete-columns`
 
 | name         | 属性值                      | 描述                                                                                       |
-| ------------ | --------------------------- | ------------------------------------------------------------------------------------------ |
+|--------------|-----------------------------|--------------------------------------------------------------------------------------------|
 | `普通用法`   | `100px 100px`               | 2 列, 宽为 100px                                                                           |
 | `百分比`     | `45% 45%`                   | 2 列, 宽为容器的 45%                                                                       |
 | `repeat`     | `repeat(2, 100px)`          | 2 列, 宽为 100px                                                                           |
