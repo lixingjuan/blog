@@ -1,32 +1,82 @@
+<!--
+
+<div>
+  <style>
+    .wrapper1 {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      border: 3px red solid;
+    }
+    .top {
+      background-color: aqua;
+    }
+    .bottom {
+      background-color: rgba(22,33,55, 0.4);
+      margin: unset !important;
+    }
+    .bottom ul li {
+      height: 20px;
+      list-style: none;
+    }
+  </style>
+  <h2>flex 设置了固定高度，并为其设置 flex, 列表的长度会超出容器 </h2>
+  <h3> 解决方法，根据方向为被撑开的flex-item 设置:
+  纵向：height: 0; 或者 min-height: 0; 横向：width: 0;  或者 min-width: 0;</h3>
+  <div class="wrapper1">
+    <div class="top">top</div>
+    <div class="bottom">
+      <ul>
+        <li>wowoo</li>
+        <li>wowoo</li>
+        <li>wowoo</li>
+        <li>wowoo</li>
+        <li>wowoo</li>
+        <li>wowoo</li>
+        <li>wowoo</li>
+        <li>wowoo</li>
+        <li>wowoo</li>
+        <li>wowoo</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+ -->
+<div class="wrap2">
+
 <style>
-  .wrap {
-    resize: both;
-    overflow: scroll;
-    border: red solid 1px;
-  }
-  .parent {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: unset !important;
-  }
+.wrap2 {
+  resize: both;
+  overflow: scroll;
+  margin-top: 200px;
+}
 
-  .box {
-    height: 80px;
-    flex: 1 1 150px;
-    margin: 5px;
-    flex-basis: 33.3%;
-  }
+.parent {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: unset !important;
+}
 
-  .green {
-    background-color: green;
-    color: #fff;
-    list-style : none;
-  }
+.box {
+  height: 80px;
+  flex: 1 1 150px;
+  margin: 5px;
+  flex-basis: 33.3%;
+}
+
+.green {
+  background-color: green;
+  color: #fff;
+  list-style : none;
+}
 </style>
 
-<div class="wrap">
+<h2>flex一行三个元素，超出换行</h2>
 <ul class="parent white">
   <li class="box green">1</li>
   <li class="box green">2</li>
@@ -34,7 +84,6 @@
   <li class="box green">4</li>
   <li class="box green">5</li>
 </ul>
-
 </div>
 
 # 容器属性
