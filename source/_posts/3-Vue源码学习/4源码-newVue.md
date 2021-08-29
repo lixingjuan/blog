@@ -1,6 +1,6 @@
 # new Vue 发生了什么
 
-首先看下Vue构造函数
+首先看下Vue构造函数, 这里核心入口文件
 
 ```js
 /* src/core/instance/index.js  */
