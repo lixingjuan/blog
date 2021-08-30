@@ -15,12 +15,19 @@ Promise.resolve().then((resolve) => {
     resolve(6);
   }, 0);
   Promise.reject();
-  console.log(5);
+  console.log(7);
 });
 
 setTimeout(() => {
-  console.log(6);
+  console.log(8);
 });
 
 async1();
-console.log(7);
+console.log(9);
+// 1, 3, 9, 4, 7, 2, 8, 5
+// 1
+3;
+9;
+4;
+7;
+2;
