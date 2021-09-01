@@ -1,5 +1,5 @@
 
-![](source/images/输入URL后发生了什么-21-06-23-05-35-25.png)
+![](x-mind/输入URL发生了什么.png)
 
 # 输入URL后发生了什么?
 

@@ -9,6 +9,8 @@
 
 * [Promise](/1-JavaScript基础/Promise) 
 
+* [Promise点all](/1-JavaScript基础/Promise点all) 
+
 * [call和apply](/1-JavaScript基础/call和apply) 
 
 * [flat实现三种方案](/1-JavaScript基础/flat实现三种方案) 
