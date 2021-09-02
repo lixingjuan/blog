@@ -67,10 +67,6 @@
 
 * [blur和change](/2-CSS相关/blur和change) 
 
-* [c-less速成](/2-CSS相关/c-less速成) 
-
-* [c-scss速成](/2-CSS相关/c-scss速成) 
-
 * [css3动画属性](/2-CSS相关/css3动画属性) 
 
 * [flex](/2-CSS相关/flex) 
@@ -84,6 +80,10 @@
 * [实现居中的四种方案](/2-CSS相关/实现居中的四种方案) 
 
 * [常见布局](/2-CSS相关/常见布局) 
+
+* [库-less速成](/2-CSS相关/库-less速成) 
+
+* [库-scss速成](/2-CSS相关/库-scss速成) 
 
 * [移动端适配](/2-CSS相关/移动端适配) 
 

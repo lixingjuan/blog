@@ -50,7 +50,7 @@ comments: false
   />
 </div>
 
-<div class="slogan animate__animated animate__bounceInDown animate__delay-3s">
+<div class="slogan animate__animated animate__bounceInDown animate__delay-2s">
   平凡生活中的英雄梦想。
 </div>
 
