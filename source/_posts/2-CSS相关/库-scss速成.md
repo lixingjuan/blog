@@ -1,28 +1,31 @@
-# scss速成
+# SCSS一览
 
-scss是sass的升级版，sass依赖于缩进表示嵌套关系，scss使用大括号
-
-scss语法总览
-
-1. 变量
-2. 计算
-3. 继承 
-4. 嵌套
-5. &引用父选择器
-6. 循环
-8. import 引入其他scss文件
-10. extend继承
-11. mixin
-12. 注释
-13. 自定义函数
+scss是sass的升级版
 
 
 
+## &引用父元素(同less)
 
 
-## 嵌套规则
 
-SASS允许使用变量，所有变量以$开头。
+比如，a:hover 可以写成
+
+```scss
+a{
+  &:hover{
+    color:#ffb3ff;
+  }
+}
+```
+
+
+
+
+## 变量
+
+
+定义变量语法: `$+字符定义;`
+
 
 ```scss
 $blue : #1875e7;　
@@ -42,17 +45,11 @@ $side:left;
 }
 ```
 
-## 计算
 
-```scss
-$var:20px;
 
-body {
-  margin: (14px/2);
-  top: 50px + 100px;
-  right: $var * 10%;
-}
-```
+
+
+
 
 ## 嵌套
 
@@ -81,33 +78,7 @@ p{
 }
 ```
 
-## &引用父元素
 
-比如，a:hover 可以写成
-
-```scss
-a{
-  &:hover{
-    color:#ffb3ff;
-  }
-}
-```
-
-## 注释
-
-SASS共有两种注释风格。
-
-标准的CSS注释 /* comment */ ，会保留到编译后的文件。
-
-单行注释 // comment，只保留在SASS源文件中，编译后被省略。
-
-在/*后面加一个感叹号，表示这是"重要注释"。即使是压缩模式编译，也会保留这行注释，通常可以用于声明版权信息。
-
-```scss
-/*!
-  重要注释！
-*/
-```
 
 ## 继承
 
@@ -150,6 +121,12 @@ div {
 }
 ```
 
+
+
+
+
+## mixin传参
+
 mixin的强大之处，在于可以指定参数和缺省值:
 
 ```scss
@@ -182,11 +159,26 @@ mixin使用举例：
 使用时，如下调用即可：
 
 ```scss
-#navboar li { 
+#navboar li {
   @include rounded(top,left );
 }
-#footer{ 
+#footer{
   @include rounded(top, left, 5px)
+}
+```
+
+
+
+
+## 计算
+
+```scss
+$var:20px;
+
+body {
+  margin: (14px/2);
+  top: 50px + 100px;
+  right: $var * 10%;
 }
 ```
 
@@ -228,7 +220,7 @@ css的@import 是运行到的时候才回去加载资源；
 ## 循环
 
 ### 条件循环
-`@if`  
+`@if`
 
 ```scss
 p {
@@ -249,7 +241,7 @@ p {
 
 ### 循环语句
 
-for循环 - `@for` 
+for循环 - `@for`
 
 ```scss
 @for $i from 1 to 10 {
@@ -265,8 +257,8 @@ while循环 - `@while`
 $i: 6;
 
 @while $i > 0 {
-  .item-#{$i} { 
-    width: 2em * $i; 
+  .item-#{$i} {
+    width: 2em * $i;
   }
   $i: $i - 2;
 }
