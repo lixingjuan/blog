@@ -3,24 +3,25 @@ title: 'Home'
 comments: false
 ---
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 
 
-
-
-# HELLO  <p style="display: inline-block; margin-bottom: 0;">![](images/hello-face.png)</p>
+# HELLO  <p style="display: inline-block; margin-bottom: 0;" class="animate__animated animate__bounceInDown">![](images/hello-face.png)</p>
 
 这里是李幸娟博客的首页！！！
 
 该博客仅用于日常学习的记录，如有错误或问题请联系我 (邮箱：18236129679@163.com)
 
 
-<img src='/images/home-banner.svg'/>
+<img src='/images/home-banner.svg' class="animate__animated animate__bounceInDown animate__delay-1s" />
 
 
 
-<div style="margin: 300px;font-size: 28px; text-align: center;">平凡生活中的英雄梦想。</div>
+<div style="margin: 300px;font-size: 28px; text-align: center;" class="animate__animated animate__bounceInDown animate__delay-3s">
+平凡生活中的英雄梦想。
+</div>
 
 
 <!--
