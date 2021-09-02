@@ -19,7 +19,7 @@ comments: false
 
 
 
-<div style="margin: 300px;font-size: 28px; text-align: center;" class="animate__animated animate__bounceInDown animate__delay-3s">
+<div style="margin: 100px;font-size: 28px; text-align: center;" class="animate__animated animate__bounceInDown animate__delay-3s">
 平凡生活中的英雄梦想。
 </div>
 
