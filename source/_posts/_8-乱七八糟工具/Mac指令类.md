@@ -1,4 +1,48 @@
 
+
+
+## tree
+
+
+```bash
+# 遍历两层并输出到README.md
+tree -L 2 >README.md
+
+# 显示项目的层级，n表示层级数
+tree -L n
+
+# 过滤不想要显示的文件或者文件夹
+tree -I “node_modules”
+
+# 遍历两层& 忽略 node_modules文件夹 并输出到tree.md
+tree -L 2 -I "node_modules" > tree.md
+```
+
+
+## Mac所有支持的shell
+
+```bash
+# 查看所有的shell
+more /ect/shells
+# 共六种
+# /bin/bash
+# /bin/tcsh
+# /bin/csh
+# /bin/zsh
+# /bin/ksh
+# /bin/sh
+
+# 切换到bash
+chsh -s /bin/bash
+
+# 显示当前shell类型
+echo $SHELL
+```
+
+
+
+
+
 ## npm切换淘宝源
 
 npx - 是从npm v5.2.0时引入的一条命令，方便开发者执行本地已安装的可执行工具，不必配置scripts或者全局安装;
@@ -29,6 +73,10 @@ npm config set sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
 
 yarn config set sass_binary_site "https://npm.taobao.org/mirrors/node-sass/"
 ```
+
+
+
+
 
 ## 切换node版本
 
