@@ -195,7 +195,13 @@
 
 <h1 style="color: #ba2f7b">TypeScript</h1> 
 
+* [4.3新增方法](/8-TypeScript/4.3新增方法) 
+
 * [enum](/8-TypeScript/enum) 
+
+* [interface-vs-type](/8-TypeScript/interface-vs-type) 
+
+* [一些记录](/8-TypeScript/一些记录) 
 
 * [测试目录结构](/8-TypeScript/测试目录结构) 
 

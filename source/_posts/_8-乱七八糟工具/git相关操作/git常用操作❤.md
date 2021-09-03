@@ -1,5 +1,14 @@
 # git常用操作 🎀
 
+## 其他
+
+向指定分支推送代码
+
+```js
+git push --set-upstream origin dev-home
+```
+
+
 ## hexo d失败
 
 ```js
