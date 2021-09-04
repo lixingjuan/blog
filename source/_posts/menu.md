@@ -67,10 +67,6 @@
 
 * [blur和change](/2-CSS相关/blur和change) 
 
-* [css3动画属性](/2-CSS相关/css3动画属性) 
-
-* [css中的百分比](/2-CSS相关/css中的百分比) 
-
 * [flex](/2-CSS相关/flex) 
 
 * [line-height](/2-CSS相关/line-height) 
