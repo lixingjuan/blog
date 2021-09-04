@@ -8,15 +8,15 @@ cookie的属性如下：
 
 <img src='/images/cookie的组成.jpg' />
 
-1. ==Name/value==:  设置Cookie 的名称以及相对应的只，对于认证cookie, Value包括Web服务器所提供的访问令牌
-2. ==Expires属==性: 设置cookie 的生存期，有两种存储类型的cookie
+1. **Name/value**:  设置Cookie 的名称以及相对应的只，对于认证cookie, Value包括Web服务器所提供的访问令牌
+2. **Expires属**性: 设置cookie 的生存期，有两种存储类型的cookie
    1. 会话型，Expores属性缺省时，为会话性token, 仅保存在客户端的内存中，并在用户关闭浏览器时失效；
    2. 持久性cookie 会保存在用户的硬盘中，直至`生存期`到或者`用户主动注销`，该token才会失效；
-3. ==Path属性==：定义了Web站点上可以访问该Cookie的目录；
-4. ==Domain属性==：制定了可以访问该Cookie的web 站点或域，
-5. ==Secre属性==：指定是否使用HTTPS安全协议发送cookie. 使用HTTPS安全协议，可以保护Cookie 在浏览器和服务器传输的过程中不被窃取和篡改。
+3. **Path属性**：定义了Web站点上可以访问该Cookie的目录；
+4. **Domain属性**：制定了可以访问该Cookie的web 站点或域，
+5. **Secre属性**：指定是否使用HTTPS安全协议发送cookie. 使用HTTPS安全协议，可以保护Cookie 在浏览器和服务器传输的过程中不被窃取和篡改。
    1. 该方法也可用于web站点的身份鉴别，即在HTTPS的连接建立阶段，`浏览器`会检查web网站的`SSL证书` 的有效性，但是基于兼容性的原因（比如有些网站使用自签署的证书）在检测到SSL证书无效时，浏览器并不会立即终止用户的连接请求，而是显示安全风险信息，用户仍可以选择继续访问该站点。
-6. ==HTTPOnly属性==：用于防治客户端脚本通过document.cookie属性访问cookie, 有助于保护Cookie 不被跨站脚本窃取或者篡改（但是，HTTPOnly的应用仍存在局限性，一些浏览器可以阻止客户端脚本对Cookie的读操作，但允许写操作；此外大多数浏览器仍允许通过XMLHTTP对象读取HTTP响应中的Set-Cookie头）
+6. **HTTPOnly属性**：用于防治客户端脚本通过document.cookie属性访问cookie, 有助于保护Cookie 不被跨站脚本窃取或者篡改（但是，HTTPOnly的应用仍存在局限性，一些浏览器可以阻止客户端脚本对Cookie的读操作，但允许写操作；此外大多数浏览器仍允许通过XMLHTTP对象读取HTTP响应中的Set-Cookie头）
 
 
 

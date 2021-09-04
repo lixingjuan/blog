@@ -191,6 +191,24 @@
 
 * [fiber是什么](/6-React/fiber是什么) 
 
+<h1 style="color: #ba2f7b">算法</h1> 
+
+* [5最长回文字符串](/6-算法/5最长回文字符串) 
+
+* [js三种遍历](/6-算法/js三种遍历) 
+
+* [两数之和](/6-算法/两数之和) 
+
+* [大数相加](/6-算法/大数相加) 
+
+* [常见排序](/6-算法/常见排序) 
+
+* [汉诺塔](/6-算法/汉诺塔) 
+
+<h1 style="color: #ba2f7b">React</h1> 
+
+* [fiber是什么](/7-React/fiber是什么) 
+
 <h1 style="color: #ba2f7b">TypeScript</h1> 
 
 * [4.3新增方法](/8-TypeScript/4.3新增方法) 
@@ -204,6 +222,10 @@
 * [测试目录结构](/8-TypeScript/测试目录结构) 
 
 * [画瓢](/8-TypeScript/画瓢) 
+
+<h1 style="color: #ba2f7b">React</h1> 
+
+* [对hooks理解](/React/对hooks理解) 
 
 <h1 style="color: #ba2f7b">前端other</h1> 
 
