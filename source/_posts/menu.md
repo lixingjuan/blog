@@ -33,6 +33,8 @@
 
 * [作用域链](/1-JavaScript基础/作用域链) 
 
+* [使用promise实现并发](/1-JavaScript基础/使用promise实现并发) 
+
 * [函数柯里化](/1-JavaScript基础/函数柯里化) 
 
 * [函数的内部属性](/1-JavaScript基础/函数的内部属性) 
