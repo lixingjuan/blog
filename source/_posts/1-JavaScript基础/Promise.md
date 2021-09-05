@@ -1,15 +1,10 @@
 
 
-# Promise与异步函数
-
-## Promise历史
+# Promise历史
 
 **期约**是对尚不存在的一个结果的替身。早期的期约机制是在Jquery和Dojo中以Derferred API 出现的。后来2010年，common.js实现的Promises/A规范逐渐流行起来。Q和BlueBird实现的javascript 第三方库也逐渐得到社区的认可，但是这些库的实现都多少有些不同。2012年，Promises/A+规范fork 了common.js的 Promises/A 建议，并以相同的名字制定了Promises/A+规范，这个规范也最终成为了ES6规范实现的版本。
 
 ECMAScript 6增加了对Promises/A+规范的完善支持，即Promise类型，成为了主导性的异步编程方案，
-
-
-
 
 
 ## Promises/A+规范
@@ -17,25 +12,31 @@ ECMAScript 6增加了对Promises/A+规范的完善支持，即Promise类型，�
 
 Promise的特点
 
-1. Promise有三个状态，pending, fulfilled, rejected
+1. Promise有三个状态: pending, fulfilled, rejected;
 2. 状态改变后不可再次改变(判断如果已经处于fulfilled, rejected，则不可再次切换其状态)
-3. 可以使用new 操作符进行实例化(不能用箭头函数实现)
-4. 可以直接通过调用 Promise.resolve()或者Promise.reject() 方法返回 fulfilled/rejected 状态的 Promise
+3. 可以使用 `new` 操作符进行实例化(不能用箭头函数实现)
+4. 可以直接通过调用 `Promise.resolve()` 或者 `Promise.reject()` 方法返回 fulfilled/rejected 状态的 Promise
 5. 具有thanable 接口 (Promise 的 prototype 上需要有 then方法)
 6. then 方法接受两个处理程序，onResolved, onRejcted, 分别对应Promise 状态变为 fulfilled/rejected 时进行调用
+....
 
 
 
 
-## Promise.then的返回值
+
+# thenable接口
 
 
-<details>
-<summary style="font-weight: 600;">resolve状态，then不同处理的返回</summary>
+## resolve状态 Promise.then的返回值
 
-在不同状态下，Promise.then的返回值不同
+
+resolve 状态的 Promise, 链式调用 .then 接收不同传参, 返回值不同, 首先我们拥有一个resolve状态的Promise, p1:
 
 `let p1 = Promise.resolve('foo')`
+
+<details>
+<summary>点击查看6种状况</summary>
+
 
 
 1. 如果调用then的时候不传处理程序，则原样向后传;
@@ -82,12 +83,17 @@ p1.then(()=> { return Error('出错了')}) // Promise {<fulfilled>: Error: 出�
 </details>
 
 
-<details style="margin-top: 30px;">
-<summary style="font-weight: 600;">reject状态，then不同处理的返回</summary>
+## reject状态 Promise.then的返回值
 
-onRejected处理程序也与之有点类似: onRejected的返回值也会被Promise.resolve()包装，乍一看会感觉有点违反直觉，但是想一想，onRejected处理程序不就是为了捕获异常么？因此，onRejected处理程序在捕获异常后不抛出异常是符合期约的行为。
+
+`onRejected `处理程序也与之有点类似: `onRejected` 的返回值也会被 `Promise.resolve()` 包装，乍一看会感觉有点违反直觉，但是想一想，onRejected处理程序不就是为了捕获异常么？因此，onRejected处理程序在捕获异常后不抛出异常是符合期约的行为。
 
 `let p1 = Promise.reject('foo')`
+
+
+<details style="margin-top: 30px;">
+<summary>点击查看6种状况</summary>
+
 
 
 1. 如果调用then的时候不传处理程序，则原样向后传;
@@ -148,16 +154,12 @@ p1.then(()=> { return Error('出错了')}) // Promise {<fulfilled>: Error: 出�
 
 
 
-
-
-
-
-
-
-
 ## Promise.prototype.catch 返回值
 
 其实相当于 **Promise.prototype.then(null, onRejected)**
+
+
+
 
 
 
@@ -214,20 +216,21 @@ p1.finally(()=> { throw new Error('throw error')}); // Promise {<rejected>: Err
 
 
 
-## 期约连锁与期约合成
+# 期约连锁与期约合成
 
 期约连锁，一个期约接一个的期约
 期约合成，将多个期约合成一个期约
 
-### 期约连锁
+## 期约连锁
 
 即利用promise的thenable, 串行化执行异步任务
 
 
-### 期约合成
+
+## 期约合成
 
 <details>
-<summary> Promise.all</summary>
+<summary> Promise.all的特点</summary>
 
 Promise.all() 静态方法创建的期约会在一组期约全部解决之后再解决。这个静态方法接收一个可迭代对象，返回一个新的期约。
 
@@ -269,15 +272,9 @@ Promise.all([
 
 
 
-<details>
-<summary>怎么实现一个Promise.all()?</summary>
-
-</details>
-
-
 
 <details>
-<summary>Promise.race()</summary>
+<summary>Promise.race的特点</summary>
 Promise.race() 返回一个包装期约，是一组期约中最先解决/或拒绝的期约的镜像，这个方法接受一个可迭代对象，返回一个新的期约。
 </details>
 
@@ -319,17 +316,15 @@ addTen(8).then((res) => {
 
 
 <style>
-  .details {
-    margin-top: 10px;
-  }
+.details {margin-top: 10px;}
 </style>
 
 
 
-## 期约扩展
-
-
-<details>
-<summary>期约取消</summary>
-
-</details>
+<!-- ## 期约扩展 -->
+<!--  -->
+<!--  -->
+<!-- <details> -->
+<!-- <summary>期约取消</summary> -->
+<!--  -->
+<!-- </details> -->
