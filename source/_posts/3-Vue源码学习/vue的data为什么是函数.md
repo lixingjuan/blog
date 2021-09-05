@@ -1,4 +1,4 @@
-vue的data以函数返回？ - **避免变量共享**
+## vue的data以函数返回？ - **避免变量共享**
 
 
 因为js中，引用类型是按引用传递的; <br/>
@@ -26,6 +26,7 @@ export function initState (vm: Component) {
 
 
 传给 initData 的是vm实例，该函数并未对data 进行深拷贝，而是直接对其进行处理的
+
 
 ```js
 function initData (vm: Component) {
