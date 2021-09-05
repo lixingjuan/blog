@@ -13,6 +13,8 @@
 
 * [Promise点all](/1-JavaScript基础/Promise点all) 
 
+* [bind](/1-JavaScript基础/bind) 
+
 * [call和apply](/1-JavaScript基础/call和apply) 
 
 * [flat实现三种方案](/1-JavaScript基础/flat实现三种方案) 
@@ -187,10 +189,6 @@
 
 * [腾安基金](/5-项目复盘/腾安基金) 
 
-<h1 style="color: #ba2f7b">React</h1> 
-
-* [fiber是什么](/6-React/fiber是什么) 
-
 <h1 style="color: #ba2f7b">算法</h1> 
 
 * [5最长回文字符串](/6-算法/5最长回文字符串) 
@@ -204,10 +202,6 @@
 * [常见排序](/6-算法/常见排序) 
 
 * [汉诺塔](/6-算法/汉诺塔) 
-
-<h1 style="color: #ba2f7b">React</h1> 
-
-* [fiber是什么](/7-React/fiber是什么) 
 
 <h1 style="color: #ba2f7b">TypeScript</h1> 
 

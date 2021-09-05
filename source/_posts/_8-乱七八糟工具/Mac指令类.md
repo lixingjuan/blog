@@ -1,4 +1,7 @@
 
+## B站高速度播放
+
+document.querySelector('video').playbackRate = 3
 
 
 ## tree
