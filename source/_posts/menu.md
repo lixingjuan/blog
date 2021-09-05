@@ -1,6 +1,8 @@
 
 * [Home](/)
 
+* [0-nice](/0-nice) 
+
 <h1 style="color: #ba2f7b">JavaScript基础</h1> 
 
 * [Class相关](/1-JavaScript基础/Class相关) 
