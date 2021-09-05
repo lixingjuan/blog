@@ -5,14 +5,14 @@
 
 ## 复习
 
-要想是想一个方法，首先要了解他的特性
+要想实现一个方法，首先要了解他的特性
 
-1. 归属，Promise.all是Promise上的一个静态方法
+1. 归属，`Promise.all` 是Promise上的一个静态方法
 2. 传参，接受一个具有可迭代接口的参数，如果不传，会报错undefined没有可迭代接口，实际开发中都传数组，数组元素随意
 3. 特点，
    1. 按照传参顺序依次执行，
-   2. 如果有一个失败了，其他的仍然会执行，但是不会再改变promise的状态
-   3. 等全部都行完，才会返回状态
+   2. 等全部任务都 resolve，才会返回resolve状态;
+   3. 如果有一个失败了，则会以第一个拒绝的理由，做为整个Promise拒绝的理由返回, 但是后续的任务仍然会执行，但是不会再影响Promise的状态;
 
 
 
@@ -23,6 +23,7 @@
 function PromiseAll(arr) {
   let params = [];
   try {
+    // 1. 参数必须具有可迭代接口
     params = [...arr];
   } catch (error) {
     console.log(error);
@@ -30,12 +31,15 @@ function PromiseAll(arr) {
   }
   return new Promise((resolve, reject) => {
     const result = [];
+
+    // 2. 存储参数长度决定循环执行任务的次数
     const paramsLength = params.length;
     let counter = 0;
 
     for (let index = 0; index < paramsLength; index++) {
       Promise.resolve(arr[index])
         .then((value) => {
+          // 3. 利用计数器，记录任务是否全部执行完毕
           counter++;
           result[index] = value;
 
