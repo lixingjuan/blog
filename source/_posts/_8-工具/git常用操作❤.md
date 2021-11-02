@@ -1,5 +1,98 @@
 # git常用操作 🎀
 
+## log
+
+
+```bash
+
+## 更清晰的查看log
+
+git log --oneline
+```
+![](images/git常用操作❤-21-11-02-10-36-47.png)
+
+```bash
+## 普通的
+git log
+```
+
+![](images/git常用操作❤-21-11-02-10-37-14.png)
+
+
+
+
+
+
+
+## 分支
+
+
+```bash
+# 使分支display in columns
+git config --global column.ui always
+
+# column列出分支
+git branch --column[=<style>]
+
+# 列出所有本地分支
+$ git branch
+
+# 列出所有远程分支
+$ git branch -r
+
+# 列出所有本地分支和远程分支
+$ git branch -a
+
+# 新建一个分支，但依然停留在当前分支
+$ git branch [branch-name]
+
+# 新建一个分支，并切换到该分支
+
+$ git checkout -b [branch]
+
+# 新建一个分支，指向指定commit
+$ git branch [branch] [commit]
+
+# 新建一个分支，与指定的远程分支建立追踪关系
+$ git branch --track [branch] [remote-branch]
+
+# 切换到指定分支，并更新工作区
+$ git checkout [branch-name]
+
+# 切换到上一个分支
+$ git checkout -
+
+# 建立追踪关系，在现有分支与指定的远程分支之间
+$ git branch --set-upstream [branch] [remote-branch]
+
+# 合并指定分支到当前分支
+$ git merge [branch]
+
+# 选择一个commit，合并进当前分支
+$ git cherry-pick [commit]
+
+# 删除分支
+$ git branch -d [branch-name]
+
+# 删除远程分支
+$ git push origin --delete [branch-name]
+$ git branch -dr [remote/branch]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 其他
 
 向指定分支推送代码
@@ -7,6 +100,16 @@
 ```js
 git push --set-upstream origin dev-home
 ```
+
+
+
+
+
+
+
+
+
+
 
 
 ## hexo d失败
@@ -17,6 +120,17 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
+
+
+
+
+
+
+
+
+
+
+
 ## 基本知识
 
 ```bash
@@ -26,10 +140,25 @@ index：Git追踪库，暂存区
 workspace：本地工作区，
 ```
 
+
+
+
+
+
+
+
+
 ## 清空本地保存的用户名和密码
 ```bash
 git config --system --unset credential.helper
 ```
+
+
+
+
+
+
+
 
 
 ## git revert
