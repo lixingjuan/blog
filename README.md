@@ -6,6 +6,11 @@
 - 博客文章位于仓库 [Blog](https://github.com/lixingjuan/)
 
 
+
+# TODO
+
+1. [ ] git commit lint
+
 # 生成目录脚本
 
 `./source/_node/index.js`
