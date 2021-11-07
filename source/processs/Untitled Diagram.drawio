@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-07T14:07:42.660Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="Npw0PWu6bOfeMI9l1Kp0" version="15.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-07T14:10:25.348Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="68Y7iYF0qBN5TKZly0se" version="15.6.6" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="1351" dy="841" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="946" dy="589" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -184,10 +184,10 @@
         <mxCell id="j5J3xBHVAEixcrVTz0q9-53" value="" style="sketch=0;shadow=0;dashed=0;html=1;strokeColor=default;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.databases.database_server_green;labelBackgroundColor=default;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="423.8499999999999" y="1206" width="113" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="j5J3xBHVAEixcrVTz0q9-58" value="客户端" style="text;html=1;strokeColor=default;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=default;fontColor=default;" vertex="1" parent="1">
+        <mxCell id="j5J3xBHVAEixcrVTz0q9-58" value="客户端" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=default;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="92.42000000000007" y="1166" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="j5J3xBHVAEixcrVTz0q9-59" value="服务器" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=default;fillColor=none;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+        <mxCell id="j5J3xBHVAEixcrVTz0q9-59" value="服务器" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
           <mxGeometry x="440" y="1172" width="46" height="18" as="geometry" />
         </mxCell>
         <mxCell id="j5J3xBHVAEixcrVTz0q9-60" value="运输层&lt;br&gt;(TCP)" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=default;fontColor=default;strokeColor=default;fillColor=default;" vertex="1" parent="1">
@@ -1693,6 +1693,38 @@
         </mxCell>
         <mxCell id="j5J3xBHVAEixcrVTz0q9-586" value="治理方案，秘书" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=38;fontColor=default;" vertex="1" parent="1">
           <mxGeometry x="634" y="3518" width="276" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="j5J3xBHVAEixcrVTz0q9-587" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=default;fontColor=default;strokeColor=default;fillColor=default;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1105" y="3774" as="targetPoint" />
+            <mxPoint x="650.0000000000001" y="3774" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5J3xBHVAEixcrVTz0q9-588" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;labelBackgroundColor=default;fontColor=default;strokeColor=default;fillColor=default;flipV=1;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="577.15" y="3740" width="82.85" height="112.28" as="geometry" />
+        </mxCell>
+        <mxCell id="j5J3xBHVAEixcrVTz0q9-589" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.552;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=default;fontColor=default;strokeColor=default;fillColor=default;" edge="1" parent="1" source="j5J3xBHVAEixcrVTz0q9-590" target="j5J3xBHVAEixcrVTz0q9-588">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="819.9999999999999" y="3802" />
+              <mxPoint x="819.9999999999999" y="3802" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j5J3xBHVAEixcrVTz0q9-590" value="" style="sketch=0;shadow=0;dashed=0;html=1;strokeColor=default;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.databases.database_server_green;labelBackgroundColor=default;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1109" y="3740" width="113" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="j5J3xBHVAEixcrVTz0q9-591" value="客户端" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=default;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="588.57" y="3700" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j5J3xBHVAEixcrVTz0q9-592" value="服务器" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=default;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="1113" y="3696" width="46" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="j5J3xBHVAEixcrVTz0q9-593" value="" style="verticalLabelPosition=bottom;sketch=0;html=1;fillColor=#282828;strokeColor=none;verticalAlign=top;pointerEvents=1;align=center;shape=mxgraph.cisco_safe.people_places_things_icons.icon8;labelBackgroundColor=default;fontSize=38;fontColor=default;" vertex="1" parent="1">
+          <mxGeometry x="954" y="3966" width="19.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="j5J3xBHVAEixcrVTz0q9-595" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/user-avatar-20/64/19-monk-128.png;fontSize=38;fontColor=default;strokeColor=default;fillColor=default;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="528" y="4008" width="297" height="297" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
