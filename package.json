@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/lixingjuan/learn-webpack#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1"
   }
