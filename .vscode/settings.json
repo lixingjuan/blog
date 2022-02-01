@@ -1,0 +1,9 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.quickSuggestions": true // 打开markdown文件的智能感知提示，解决markdown文件代码片段不生效问题
+  }
+}
