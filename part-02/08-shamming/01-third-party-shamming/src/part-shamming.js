@@ -1,0 +1,1 @@
+this.alert('局部shamming')
