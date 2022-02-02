@@ -1,0 +1,10 @@
+body {
+  background-color: forestgreen;
+  display: flex;
+
+  .box {
+    width: 60px;
+    height: 60px;
+    background-color: rgb(248, 246, 103);
+  }
+}
