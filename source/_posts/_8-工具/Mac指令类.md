@@ -40,7 +40,13 @@ chsh -s /bin/bash
 
 # 显示当前shell类型
 echo $SHELL
+
+
+# 打开 zsh 的配置文件
+open ~/.zshrc
 ```
+
+
 
 
 
