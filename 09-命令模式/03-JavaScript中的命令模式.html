@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-JavaScript中的命令模式</title>
+  </head>
+  <body>
+    <h1>03-JavaScript中的命令模式</h1>
+    <button id="button1">刷新菜单</button>
+    <button id="button2">增加子菜单</button>
+    <button id="button3">删除子菜单</button>
+    <button id="button4">刷新菜单(使用闭包的方式实现)</button>
+    <button id="button5">刷新菜单(执行函数改为execute)</button>
+    <script>
+      const button1 = document.getElementById("button1");
+      const button2 = document.getElementById("button2");
+      const button3 = document.getElementById("button3");
+      const button4 = document.getElementById("button4");
+      const button5 = document.getElementById("button5");
+
+      const bindClick = function (button, func) {
+        button.onclick = func;
+      };
+
+      /** 命令接收者 */
+      const MenuBar = {
+        refresh: function () {
+          console.log("刷新菜单");
+        },
+      };
+
+      const SubMenu = {
+        add: function () {
+          console.log("增加子菜单");
+        },
+        del: function () {
+          console.log("删除子菜单");
+        },
+      };
+
+      /** 实现绑定 */
+      bindClick(button1, MenuBar.refresh);
+      bindClick(button2, SubMenu.add);
+      bindClick(button3, SubMenu.del);
+    </script>
+
+    <p>
+      如果我们依然需要请求“接收者”，那也未必使用面向对象方式，闭包也同样可以
+    </p>
+    <h2>如下是闭包的实现方式</h2>
+    <script>
+      const setCommand = function (button, func) {
+        button.onclick = function () {
+          func();
+        };
+      };
+
+      const RefreshMenuBarCommand = function (receiver) {
+        return function () {
+          receiver.refresh();
+        };
+      };
+
+      const refreshMenuBarCommand = RefreshMenuBarCommand(MenuBar);
+
+      setCommand(button4, refreshMenuBarCommand);
+    </script>
+
+    <h3>
+      如果想更明确的表达当前在使用命令模式，或除了执行命令之外，将来还可能要提供撤销命令等操作。那我们最好还是将执行函数改为调用execute方法
+    </h3>
+    <script>
+      const RefreshMenuBarCommand2 = function (receiver) {
+        return {
+          execute: function () {
+            receiver.refresh();
+          },
+        };
+      };
+
+      const setCommand2 = function (button, func) {
+        button.onclick = function () {
+          func.execute();
+        };
+      };
+
+      const refreshMenuBarCommand2 = RefreshMenuBarCommand2(MenuBar);
+
+      setCommand2(button5, refreshMenuBarCommand2);
+    </script>
+  </body>
+</html>
