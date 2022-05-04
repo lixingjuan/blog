@@ -1,5 +1,5 @@
 const fs = require("fs");
-const cloneDeep = require("lodash/cloneDeep");
+const toJSON = require("lodash/toJSON");
 
 /**
  * 1. 同级增加
@@ -32,20 +32,16 @@ const cloneDeep = require("lodash/cloneDeep");
 
 /** Define Basic Node  */
 class Node {
-  constructor(name) {
+  constructor(vnode) {
+    const { name, children } = vnode;
     this.name = name;
     this.children = [];
     this.parentNode = null;
   }
 
-  append = (node) => {
+  appendChild = function (node) {
     node.parentNode = this;
-    this.children.push(...node);
-  };
-
-  appendChild = (node) => {
-    node.parentNode = this;
-    this.children.push(node);
+    this.children && this.children.push(node);
   };
 
   replaceChild = (newNode, oldNode) => {
@@ -87,36 +83,57 @@ class Node {
   };
 }
 
-/** to Create Data */
+/** source tree Data */
+const sourceTreeData = {
+  name: "学习资料",
+  children: [
+    {
+      name: "js",
+      children: [
+        {
+          name: "基础知识",
+        },
+        {
+          name: "继承",
+        },
+        {
+          name: "闭包",
+        },
+      ],
+    },
+    {
+      name: "框架",
+      children: [
+        {
+          name: "react",
+          children: [
+            {
+              name: "Api",
+            },
+            {
+              name: "fiber",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
 
-const rootNode = new Node("学习资料");
-// 第一层
-const node1 = new Node("node1");
-const node2 = new Node("node2");
-// 第二层
-const node11 = new Node("node11");
-const node21 = new Node("node21");
-// 第三层
-const node111 = new Node("node111");
-// 第四层
-const node1111 = new Node("node1111");
+/** 对source tree data 进行递归 */
 
-rootNode.appendChild(node1);
-rootNode.appendChild(node2);
+// const tree = new Node(sourceTreeData);
+const recursive = (nodeData) => {
+  const nodeItem = new Node(nodeData);
+  if (nodeData.children) {
+    nodeData.children.forEach((it) => {
+      const subNode = recursive(it);
+      nodeItem.appendChild(subNode);
+    });
+  }
+  return nodeItem;
+};
 
-node1.appendChild(node11);
-node2.appendChild(node21);
+const result = recursive(sourceTreeData);
 
-node11.appendChild(node111);
-
-node111.appendChild(node1111);
-
-////////////////////////////////////////////////////////////////
-// const copyRootNode = cloneDeep(rootNode);
-// fs.writeFileSync("/test2.json", copyRootNode);
-
-////////////////////////////////////////////////////////////////
-
-/** to Use */
-const theNamesResult = node111.dependParent();
-console.log(theNamesResult);
+console.log(result);
