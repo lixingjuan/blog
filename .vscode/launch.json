@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/10-组合模式/07-组合模式的例子-扫描文件夹.js"
+      "program": "${workspaceFolder}/del.js"
     }
   ]
 }
