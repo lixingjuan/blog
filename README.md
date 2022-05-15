@@ -1,58 +1,41 @@
+# Website
 
-# Blog
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-- 这里是李幸娟博客的主体代码
-- 博客文章资源位于 `'./source'` 目录下
-- 博客文章位于仓库 [Blog](https://github.com/lixingjuan/)
-
-
-
-# TODO
-
-1. [ ] git commit lint
-
-# 生成目录脚本
-
-`./source/_node/index.js`
-
-
-
-## 项目指令
-
-```bash
-# 本地启动项目
-hexo server
-
-# 生成文章（把md 文件生成 html 文件）
-hexo g
-
-# 上传文章到git（就是发布的意思）
-hexo d
+### Installation
 
 ```
+$ yarn
+```
 
+### Local Development
 
+```
+$ yarn start
+```
 
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+### Build
 
+```
+$ yarn build
+```
 
-## 环境需求
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-node 12.x.x
+### Deployment
 
+Using SSH:
 
+```
+$ USE_SSH=true yarn deploy
+```
 
+Not using SSH:
 
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
 
-
-
-
-## Other
-
-1. 使用的主题book
-   - [git地址](https://github.com/kaiiiz/hexo-theme-book-demo)
-
-
-
-
-
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
