@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="Promise.js"></script>
+    <script>
+      let p1 = new HD((resolve) => {
+        setTimeout(() => resolve("hello, p1"), 3000);
+      });
+      let p2 = new HD((resolve) => {
+        setTimeout(() => resolve("hello, p2"), 2000);
+      });
+
+      HD.race([p1, p2]).then((res) => {
+        console.log(res);
+      });
+    </script>
+    <script>
+      // new Promise((resolve, reject) => {
+      // setTimeout(() => {
+      // reject("❌ 2");
+      // resolve("解决");
+      // }, 1);
+      // }).then(
+      // (res) => {
+      // throw new Error("我是抛出的异常 2");
+      // console.log(res);
+      // },
+      // (err) => {
+      // console.log(err);
+      // }
+      // );
+    </script>
+  </body>
+</html>
