@@ -1,40 +1,36 @@
 import React from "react";
-import clsx from "clsx";
+// import clsx from "clsx";
+// import Link from "@docusaurus/Link";
+// import HomepageFeatures from "@site/src/components/HomepageFeatures";
+// import Button from "@site/src/components/Button";
 import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import { XMindEmbedViewer } from "xmind-embed-viewer";
 
-function HomepageHeader() {
+export default function Home() {
   const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link className="button button--secondary button--lg" to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
 
-export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+  React.useEffect(() => {
+    const viewer = new XMindEmbedViewer({
+      el: "#xmind-wrapper", // HTMLElement | HTMLIFrameElement | string
+      styles: {
+        height: "calc(100vh - 100px)",
+        width: "100%",
+      },
+    });
+
+    fetch("test-1.xmind")
+      .then((res) => res.arrayBuffer())
+      .then((file) => viewer.load(file));
+  }, []);
+
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <HomepageHeader />
-      hello
-      <main>
-        <HomepageFeatures />
-      </main>
+      <div id="xmind-wrapper" className={styles["x-mind-wrapper"]}></div>
     </Layout>
   );
 }
