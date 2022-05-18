@@ -1,0 +1,54 @@
+## !和 Boolean 转换得到的类型不同
+
+```ts
+const a = !!0;
+type A = typeof a; // type: false, value: false
+
+const b = Boolean(0);
+type B = typeof b; // type: boolean, value: false
+```
+
+但是
+
+```ts
+typeof a === "boolean"; // true
+```
+
+## typeof 操作符
+
+通过一个对象，获取其类型
+
+```typescript
+const obj = { name: "11", age: 11 };
+
+type BBB = typeof obj;
+
+// BBB
+// type BBB = {
+//    name: string;
+//    age: number;
+// }
+```
+
+## keyof 操作符
+
+通过一个对象，获取其所有键的合集
+
+```ts
+// 1. 作用于interface
+interface Person {
+  name: string;
+  age: number;
+}
+
+type AA = keyof Person;
+// AA , hover查看结果是: type AA = keyof Person; 但是实际上得到的和BBB 一样
+
+// 2. 结合typeof, 作用于对象
+const Tom = { name: "11", age: 11 };
+
+type BBB = keyof typeof obj;
+
+// BBB
+// type BBB = "name" | "age"
+```

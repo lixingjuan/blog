@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import clsx from "clsx";
 // import Link from "@docusaurus/Link";
 // import HomepageFeatures from "@site/src/components/HomepageFeatures";
@@ -10,6 +10,7 @@ import { XMindEmbedViewer } from "xmind-embed-viewer";
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+  const [loading, setloading] = useState(true);
 
   React.useEffect(() => {
     const viewer = new XMindEmbedViewer({
@@ -19,10 +20,14 @@ export default function Home() {
         width: "100%",
       },
     });
+    viewer.setZoomScale(120);
 
-    fetch("test-1.xmind")
+    fetch("xmind/李幸娟-前端汇总.xmind")
       .then((res) => res.arrayBuffer())
-      .then((file) => viewer.load(file));
+      .then((file) => viewer.load(file))
+      .finally(() => {
+        setloading(false);
+      });
   }, []);
 
   return (
@@ -30,6 +35,7 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
+      {loading && <h1 style={{ position: "absolute", top: "45vh", left: "45vw" }}>loading</h1>}
       <div id="xmind-wrapper" className={styles["x-mind-wrapper"]}></div>
     </Layout>
   );

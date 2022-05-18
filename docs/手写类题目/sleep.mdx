@@ -1,0 +1,31 @@
+---
+sidebar_position: 1
+---
+
+import CodeBlock from "@theme/CodeBlock";
+import sleep from "./code/sleep";
+import Code from "!!raw-loader!./code/sleep";
+
+## 实现
+
+<CodeBlock language="js">{Code}</CodeBlock>
+
+## tests
+
+<div>
+  <button
+    onClick={async () => {
+      console.time("demo");
+      console.log("函数开始执行");
+      await sleep(2000);
+      alert("end");
+      console.timeEnd("demo");
+    }}
+  >
+    sleep 2秒后弹窗hello
+  </button>
+</div>
+
+## 参考
+
+- 《JavaScrip 高级程序设计-第十一章-11.3.3 异步函数策略》

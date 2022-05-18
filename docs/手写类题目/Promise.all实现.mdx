@@ -1,0 +1,19 @@
+import CodeBlock from "@theme/CodeBlock";
+import Button from "@site/src/components/Button";
+import Space from "@site/src/components/Space";
+
+import { PromiseAll, test1, test2 } from "./code/PromiseAll.js";
+import PromiseAllCode from "!!raw-loader!./code/PromiseAll";
+
+## tests
+
+<Space>
+  <Button onClick={test1}>test1</Button>
+  <Button onClick={test2}>test2</Button>
+</Space>
+
+## Code
+
+<CodeBlock language="js" title="docs/手写类题目/code/PromiseAll.js">
+  {PromiseAllCode}
+</CodeBlock>

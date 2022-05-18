@@ -1,0 +1,38 @@
+import CodeBlock from "@theme/CodeBlock";
+import Button from "@site/src/components/Button";
+import Space from "@site/src/components/Space";
+
+import PromiseRace from "./code/Promise.race";
+import Code from "!!raw-loader!./code/Promise.race";
+
+## Code
+
+<CodeBlock language="js">{Code}</CodeBlock>
+
+## tests
+
+```js
+const fns = [Promise.reject(1), 2, Promise.resolve(3)];
+
+PromiseRace(fns).then(console.log).catch(console.error);
+Promise.race(fns).then(console.log).catch(console.error);
+```
+
+<Space>
+  <Button
+    onClick={() => {
+      const fns = [Promise.reject(1), 2, Promise.resolve(3)];
+      PromiseRace(fns).then(console.log).catch(console.error);
+    }}
+  >
+    PromiseRace(fns)
+  </Button>
+  <Button
+    onClick={() => {
+      const fns = [Promise.reject(1), 2, Promise.resolve(3)];
+      Promise.race(fns).then(console.log).catch(console.error);
+    }}
+  >
+    Promise.race(fns)
+  </Button>
+</Space>

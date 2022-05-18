@@ -1,0 +1,26 @@
+import CodeBlock from "@theme/CodeBlock";
+import Space from "@site/src/components/Space";
+import Button from "@site/src/components/Button";
+
+import { foo, bar } from "./code/Promise平行执行加速";
+import Code from "!!raw-loader!./code/Promise平行执行加速";
+
+## tests
+
+<Space>
+  <Button onClick={foo}>foo-未加速</Button>
+  <Button onClick={bar}>bar-平行加速</Button>
+</Space>
+
+## 实现
+
+当发起大量网络请求的时候
+
+- 若顺序不是固定的，可以一次性初始化所有期约，再分别等待结果
+- (如果不在乎几个异步函数的执行顺序，可以使用下述平行加速技巧)
+
+<CodeBlock language="js">{Code}</CodeBlock>
+
+## 参考
+
+- 《JavaScrip 高级程序设计-第十一章-11.3.3 异步函数策略》

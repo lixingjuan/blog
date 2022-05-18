@@ -32,4 +32,4 @@ const test2 = () => {
     .catch(console.log);
 };
 
-module.exports = { PromiseAll, test1, test2 };
+export { PromiseAll, test1, test2 };

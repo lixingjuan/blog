@@ -1,0 +1,42 @@
+import { randomSleep } from "./code/sleep.js";
+import CodeBlock from "@theme/CodeBlock";
+import Button from "@site/src/components/Button";
+
+import limitLoad from "./code/Promise实现并发.js";
+import Code from "!!raw-loader!./code/Promise实现并发";
+
+## Code
+
+<CodeBlock language="js">{Code}</CodeBlock>
+
+## tests
+
+```js
+/** 准备 */
+import { randomSleep } from "./code/sleep.js";
+
+const imagesUrls = Array.from({ length: 20 }).map((i, index) => index);
+
+/** 模拟一次加载图片的网络请求 */
+const loadImage = async (url) => {
+  console.log("start!", url);
+  await randomSleep();
+  console.log("ok!", url);
+  return "ok";
+};
+
+limitLoad(imagesUrls, loadImage, 3);
+```
+
+<Button
+  onClick={() => {const imagesUrls = Array.from({ length: 20 }).map((i, index) => index);/** 模拟一次加载图片的网络请求 */
+const loadImage = async (url) => {
+  console.log("start!", url);
+  await randomSleep();
+  console.log("ok!", url);
+  return "ok";
+};limitLoad(imagesUrls, loadImage, 3);
+}}>
+加载 20 张图片，一次加载 3 张
+
+</Button>
