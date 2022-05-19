@@ -1,0 +1,95 @@
+---
+sidebar_position: 10
+---
+
+import CodeBlock from "@theme/CodeBlock";
+import Button from "@site/src/components/Button";
+import Space from "@site/src/components/Space";
+
+import Throttle1 from "./code/Throttle1.tsx";
+import CodeThrottle1 from "!!raw-loader!./code/Throttle1.tsx";
+
+import Throttle2 from "./code/Throttle2.tsx";
+import CodeThrottle2 from "!!raw-loader!./code/Throttle2.tsx";
+
+import Throttle3 from "./code/Throttle3.tsx";
+import CodeThrottle3 from "!!raw-loader!./code/Throttle3.tsx";
+
+# 节流
+
+常用于某些频发事件的监听，如滚动条滚动
+高频时间在规定的时间内不管触发事件多少次，都只执行一次
+
+## 方案 1: 时间戳
+
+:::tip
+
+特点
+
+- 第一次触发即立即执行
+- 最后一次触发离开后不会再执行
+
+实现思路：
+
+- 假设设置节流间隔时间 300ms
+- 每次事件触发都去检查存储上次网络请求发起的时间戳，若间隔 >= 300ms, 则再次触发，
+- 否则静默
+
+:::
+
+### Codes
+
+<CodeBlock language="js">{CodeThrottle1}</CodeBlock>
+
+### tests
+
+<Throttle1 />
+
+## 方案 2
+
+:::tip
+
+特点
+
+- 第一次触发不执行
+- 最后一次触发离开后仍执行执行
+
+实现思路：
+
+- 触发事件的时候，设置一个定时器，
+- 再次触发的时候，若定时器存在，则不执行；
+- 直到定时器执行，然后执行函数，清空定时器，这样就可以设置下个定时器；
+
+:::
+
+### tests
+
+<Throttle2 />
+
+### Codes
+
+<CodeBlock language="js">{CodeThrottle2}</CodeBlock>
+
+## 方案 3:结合版
+
+:::tip
+
+特点
+
+- 第一次触发即立即执行
+- 最后一次触发离开后仍执行执行
+
+:::
+
+### tests
+
+<Throttle3 />
+
+### Codes
+
+<CodeBlock language="js">{CodeThrottle3}</CodeBlock>
+
+## 参考文章
+
+- https://github.com/mqyqingfeng/Blog/issues/22
+- https://github.com/mqyqingfeng/Blog/issues/26
