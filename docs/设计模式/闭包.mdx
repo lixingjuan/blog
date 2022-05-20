@@ -1,0 +1,41 @@
+---
+sidebar_position: 10
+---
+
+import CodeBlock from "@theme/CodeBlock";
+import Code from "!!raw-loader!./code/03-闭包/01-闭包-封装私有变量-缓存计算结果.js";
+import Code2 from "!!raw-loader!./code/03-闭包/01-闭包-延续局部变量寿命-image数据上报.js";
+import Code3 from "!!raw-loader!./code/03-闭包/3.1.4-闭包和面向对象设计.js";
+
+
+## 闭包应用
+
+:::tip
+
+封装私有变量-缓存计算结果
+
+:::
+
+<CodeBlock language="js">{Code}</CodeBlock>
+
+:::tip
+
+延续局部变量寿命-image数据上报
+
+:::
+
+
+<CodeBlock language="js">{Code2}</CodeBlock>
+
+
+
+## 面向对象
+
+过程与数据结合是形容面向对象中的”对象“时经常使用的表达
+
+- 对象以方法的形式包含了过程
+- 闭包则是在过程中以环境的形式包含了数据
+
+通常用面向对象思想能实现的功能，用闭包也能实现，反之亦然
+
+<CodeBlock language="js">{Code3}</CodeBlock>
