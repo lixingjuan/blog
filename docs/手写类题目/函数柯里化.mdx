@@ -1,0 +1,35 @@
+---
+sidebar_position: 10
+---
+
+import CodeBlock from "@theme/CodeBlock";
+import Button from "@site/src/components/Button";
+import Space from "@site/src/components/Space";
+
+import Demo from "./code/函数柯里化";
+import Code from "!!raw-loader!./code/函数柯里化.tsx";
+
+## 作用
+
+:::tip
+
+可以固化一部分参数，返回一个新的函数，新的函数可以接受剩余的参数
+
+:::
+
+## 实现思路
+
+:::tip
+
+比较 fn.length 和 当前已经收到的所有参数的 length
+
+- 若相等，则执行 fn，
+- 否则返回新的函数
+
+:::
+
+## Demo & Code
+
+<Demo />
+
+<CodeBlock language="js">{Code}</CodeBlock>
