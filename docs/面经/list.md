@@ -10,7 +10,7 @@
     - 什么是协商缓存？
     - 强缓存和协商缓存的区别？
 6.  [x] HTTP和http2有什么区别？
-7.  [x] [什么是oAuth 2.0? 解决了什么问题？]()
+7.  [x] [什么是oAuth 2.0? 解决了什么问题？](')
 8.  [x] [一个 tcp 连接能发几个 http 请求]
     1.  [木易杨的博客，较为简介](https://github.com/mqyqingfeng/frontend-interview-question-and-answer/issues/1)
     2.  [developers.google.com,文档较为全面官方](https://developers.google.com/web/fundamentals/performance/http2?hl=zh-cn)
