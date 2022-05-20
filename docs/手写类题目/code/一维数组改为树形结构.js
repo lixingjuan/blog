@@ -1,0 +1,35 @@
+const flatArr = [
+  { id: "01", parentId: 0, name: "节点1" },
+  { id: "011", parentId: "01", name: "节点1-1" },
+  { id: "0111", parentId: "011", name: "节点1-1-1" },
+  { id: "02", parentId: 0, name: "节点2" },
+  { id: "022", parentId: "02", name: "节点2-2" },
+  { id: "023", parentId: "02", name: "节点2-3" },
+  { id: "0222", parentId: "022", name: "节点2-2-2" },
+  { id: "03", parentId: 0, name: "节点3" },
+];
+
+/**  💓 I'like this!! 💓  */
+function flatArrToTree2(arr) {
+  const tree = [];
+  const obj = arr.reduce((tol, cur) => {
+    tol[cur.id] = cur;
+    return tol;
+  }, {});
+
+  arr.forEach((item) => {
+    // 从map结构中取出父节点
+    const parent = obj[item.parentId];
+    if (parent) {
+      !parent.children && (parent.children = []);
+      parent.children.push(item);
+    } else {
+      // 没有parent, 代表是根节点
+      tree.push(item);
+    }
+  });
+
+  return tree;
+}
+
+console.log(JSON.stringify(flatArrToTree2(flatArr)));
