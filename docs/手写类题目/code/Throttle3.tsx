@@ -34,12 +34,12 @@ function foo() {
   document.getElementById(domId).innerHTML = `${number + 1}`;
 }
 
-const throttledFn = throttle(foo, 500);
+const throttledFn = throttle(foo, 6000);
 
 const Demo = () => {
   return (
     <>
-      <div>节流 1000ms: 在⬇️移动鼠标</div>
+      <div>在⬇️移动鼠标</div>
       <div
         id={domId}
         style={{
