@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-命令模式的例子-菜单程序</title>
+  </head>
+  <body>
+    <h1>02-命令模式的例子-菜单程序</h1>
+    <button id="button1">刷新菜单</button>
+    <button id="button2">增加子菜单</button>
+    <button id="button3">删除子菜单</button>
+    <script>
+      const button1 = document.getElementById("button1");
+      const button2 = document.getElementById("button2");
+      const button3 = document.getElementById("button3");
+
+      const setCommand = function (button, command) {
+        button.onclick = function () {
+          command.execute(command);
+        };
+      };
+
+      /** 命令接收者 */
+      const MenuBar = {
+        refresh: function () {
+          console.log("刷新菜单");
+        },
+      };
+
+      const SubMenu = {
+        add: function () {
+          console.log("增加子菜单");
+        },
+        del: function () {
+          console.log("删除子菜单");
+        },
+      };
+
+      /** 封装 */
+      const RefreshMenuBarCommand = function (receiver) {
+        this.receiver = receiver;
+      };
+
+      RefreshMenuBarCommand.prototype.execute = function (command) {
+        this.receiver.refresh();
+      };
+
+      const AddSubMenuCommand = function (receiRefreshMenuBarCommandver) {
+        this.receiver = receiver;
+      };
+
+      AddSubMenuCommand.prototype.execute = function (command) {
+        this.receiver.add();
+      };
+
+      const DelMenuCommand = function (receiver) {
+        this.receiver = receiver;
+      };
+
+      DelMenuCommand.prototype.execute = function (command) {
+        this.receiver.del();
+      };
+
+      /** 将 命令接收者 传入command对象中，并且把command对象安装到button上 */
+      const refreshMenuBarCommand = new RefreshMenuBarCommand(MenuBar);
+      const addSubMenuCommand = new AddSubMenuCommand(SubMenu);
+      const delMenuCommand = new DelMenuCommand(SubMenu);
+
+      setCommand(button1, refreshMenuBarCommand);
+      setCommand(button2, addSubMenuCommand);
+      setCommand(button3, delMenuCommand);
+    </script>
+  </body>
+</html>
