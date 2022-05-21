@@ -29,6 +29,14 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+.code-block-core-line {
+  background-color: #ecbaf230;
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  border-left: 3px solid #ecbaf2;
+}
+
 /* ****************************************************************************************************
  *                                    自定义样式
  ************************************************************************************************* */
