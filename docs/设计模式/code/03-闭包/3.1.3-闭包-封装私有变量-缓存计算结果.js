@@ -2,11 +2,14 @@
  *                                    1. 封装变量，实现缓存记忆
  ************************************************************************************************* */
 let addTwoNumber = (() => {
-  const cache = new Map(); // 🎀
+  // core-next-line
+  const cache = new Map();
 
   return (...args) => {
-    const argStr = args.join(","); // 🎀
+    // core-next-line
+    const argStr = args.join(",");
 
+    // highlight-next-line
     if (cache.has(argStr)) {
       return cache.get(argStr);
     } else {
@@ -20,15 +23,21 @@ let addTwoNumber = (() => {
 console.log(addTwoNumber(1, 2)); // 3
 console.log(addTwoNumber(1, 2)); // 3
 
-/** ❗️实际开发中，如果一个大函数中的一些代码块代码块能投独立出来，我们常常把这些diamanté封装在独立的小函数中，如下 */
-
-addTwoNumber = (() => {
+const newAddTwoNumber = (() => {
   const cache = new Map();
 
-  const getSum = (arr) => arr.reduce((tol, cur) => (tol += cur), 0); // 🎀
+  /**
+   * 若一个大函数中的一些代码块能够独立出来，
+   * 我们常常把这些代码封装在独立的小函数中，
+   * 如下
+   */
+  // highlight-start
+  const getSum = (arr) => {
+    return arr.reduce((tol, cur) => (tol += cur), 0);
+  };
+  // highlight-end
 
   return (...args) => {
-    console.log(args);
     const argStr = args.join(",");
 
     if (cache.has(argStr)) {
@@ -40,3 +49,5 @@ addTwoNumber = (() => {
     }
   };
 })();
+
+console.log(newAddTwoNumber(1, 2)); // 3
