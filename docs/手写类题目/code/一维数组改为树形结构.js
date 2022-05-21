@@ -12,10 +12,7 @@ const flatArr = [
 /**  💓 I'like this!! 💓  */
 function flatArrToTree2(arr) {
   const tree = [];
-  const obj = arr.reduce((tol, cur) => {
-    tol[cur.id] = cur;
-    return tol;
-  }, {});
+  const obj = arr.reduce((tol, cur) => Object.assign(tol, { [cur.id]: cur }), {});
 
   arr.forEach((item) => {
     // 从map结构中取出父节点
