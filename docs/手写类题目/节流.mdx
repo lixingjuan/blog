@@ -6,6 +6,9 @@ import CodeBlock from "@theme/CodeBlock";
 import Button from "@site/src/components/Button";
 import Space from "@site/src/components/Space";
 
+import ThrottleBest from "./code/Throttle-best.tsx";
+import CodeThrottleBest from "!!raw-loader!./code/Throttle-best.tsx";
+
 import Throttle1 from "./code/Throttle1.tsx";
 import CodeThrottle1 from "!!raw-loader!./code/Throttle1.tsx";
 
@@ -17,10 +20,21 @@ import CodeThrottle3 from "!!raw-loader!./code/Throttle3.tsx";
 
 # 节流
 
-常用于某些频发事件的监听，如滚动条滚动
-高频时间在规定的时间内不管触发事件多少次，都只执行一次
+:::note
 
-## 方案 1: 时间戳
+- 常用于某些频发事件的监听，如滚动条滚动、window.onresize 等;
+- 高频时间在规定的时间内不管触发事件多少次，都只执行一次
+
+:::
+
+## 方案 0: 💓
+
+代码来自《JavaScript 设计模式-3-闭包》
+
+<ThrottleBest />
+<CodeBlock language="js">{CodeThrottleBest}</CodeBlock>
+
+## 方案 1: 时间戳-简易版
 
 :::tip
 
