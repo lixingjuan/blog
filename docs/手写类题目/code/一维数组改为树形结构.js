@@ -10,7 +10,7 @@ const flatArr = [
 ];
 
 /**  💓 I'like this!! 💓  */
-function flatArrToTree2(arr) {
+function flatArrToTree(arr) {
   const tree = [];
   const obj = arr.reduce((tol, cur) => Object.assign(tol, { [cur.id]: cur }), {});
 
@@ -29,4 +29,4 @@ function flatArrToTree2(arr) {
   return tree;
 }
 
-console.log(JSON.stringify(flatArrToTree2(flatArr)));
+console.log(JSON.stringify(flatArrToTree(flatArr)));
