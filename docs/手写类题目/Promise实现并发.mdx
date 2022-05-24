@@ -29,14 +29,17 @@ limitLoad(imagesUrls, loadImage, 3);
 ```
 
 <Button
-  onClick={() => {const imagesUrls = Array.from({ length: 20 }).map((i, index) => index);/** 模拟一次加载图片的网络请求 */
-const loadImage = async (url) => {
-  console.log("start!", url);
-  await randomSleep();
-  console.log("ok!", url);
-  return "ok";
-};limitLoad(imagesUrls, loadImage, 3);
-}}>
+  onClick={() => {
+    const imagesUrls = Array.from({ length: 20 }).map((i, index) => index);/** 模拟一次加载图片的网络请求 */
+    const loadImage = async (url) => {
+      console.log("start!", url);
+      await randomSleep();
+      console.log("ok!", url);
+      return "ok";
+    };
+    limitLoad(imagesUrls, loadImage, 3);
+  }}
+>
 加载 20 张图片，一次加载 3 张
 
 </Button>
