@@ -48,7 +48,7 @@ const obj3 = {
   name: "hello",
   age: 25,
   getName: function () {
-    console.log(this.name); //指向obj3
+    console.log(this.name); // 指向obj3
     const printAge = function () {
       console.log(this.age); // this指向window
     };
@@ -63,7 +63,7 @@ const obj4 = {
   name: "hello",
   age: 25,
   getName: function () {
-    console.log(this.name); //指向obj3
+    console.log(this.name); // 指向obj3
     const that = this;
     const printAge = function () {
       console.log(that.age); // this指向window
@@ -142,6 +142,13 @@ const obj10 = {
 console.log(obj10.getName()); // obj10
 console.log(obj10.getName.call(obj9)); // obj9
 
+
+
+
+
+
+
+
 /* ****************************************************************************************************
  *                                    丢失的this
  ************************************************************************************************* */
@@ -156,3 +163,30 @@ const getObj11Name = obj11.getName;
 
 console.log(obj11.getName()); // obj11
 console.log(getObj11Name()); // hello, I'm global!: 指向了全局
+
+
+
+/* ****************************************************************************************************
+ * test
+ *
+ * Hi, guys! 👋 where this?
+ ************************************************************************************************* */
+
+
+const name = 'hello'
+
+const macroCommand = function () {
+  const name = 'world'
+
+  return {
+    commandList: [],
+    add: function () {
+      console.log(this.name)
+    }
+  }
+}
+const macroCommand1 = macroCommand()
+macroCommand1.name = 'xiaoming'
+
+macroCommand1.add()  // 🤪 xiaoming
+
