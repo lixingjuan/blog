@@ -29254,6 +29254,7 @@
   };
 
   function createRoot(container, options) {
+    console.log('createRoot 开始')
     if (!isValidContainer(container)) {
       throw new Error('createRoot(...): Target container is not a DOM element.');
     }

@@ -13,7 +13,10 @@
     <div id="root"></div>
     <script type="text/babel">
       function MyApp() {
+        console.log("ceeee", "组件开始");
         const [count, setCount] = React.useState(0);
+
+        console.log({ React });
         return (
           <div>
             <div>count {count}</div>
