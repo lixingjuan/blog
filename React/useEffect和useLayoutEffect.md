@@ -1,7 +1,7 @@
 ## useEffect和useLayoutEffectde的区别
 
 1. useEffect, brower repaint, 之后执行;
-2. useLayoutEffectde, dom mutated 之后, brower repaint, 之后执行;
+2. useLayoutEffectde, dom mutated 之后, brower repaint之前执行;
 
 
 ![执行时机对比图](https://pbs.twimg.com/media/FQfQwHXakAISgnr?format=jpg&name=large)
