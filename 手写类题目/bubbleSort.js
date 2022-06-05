@@ -1,22 +1,34 @@
-let arr = [3, 44, 38, 5, 47, 15, 88, 23, 21, 12, 333, 218, 36, 26, 27, 2, 46, 4, 19, 50, 48];
-
-// 冒泡排序
-const bubbleSort = (nums) => {
+/**
+ * 平均时间复杂度：O(n^2)
+ * 最坏时间复杂度：O(n^2)
+ * 最好时间复杂度：O(n)
+ * 空间复杂度：O(1)
+ * 稳定性：稳定
+ * @describe 冒泡排序
+ * @example
+ */
+function bubbleSort(nums) {
   let times = nums.length;
-  while (times--) {
-    let hadSwap = false;
+  let exchange = true;
+
+  // 外层表示冒泡次数
+  while (times-- && exchange) {
+    exchange = false;
     for (let i = 0; i < times; i++) {
       if (nums[i] > nums[i + 1]) {
         [nums[i], nums[i + 1]] = [nums[i + 1], nums[i]];
-        hadSwap = true;
+        exchange = true;
       }
     }
-
-    if (!hadSwap) {
-      break;
-    }
   }
-  return nums;
-};
 
-console.log(bubbleSort(arr));
+  return nums;
+}
+
+bubbleSort([2]);
+bubbleSort([8, 2]);
+bubbleSort([8, 2, 1]);
+bubbleSort([8, 7, 2, 1]);
+bubbleSort([8, 7, 6, 2, 1]);
+bubbleSort([8, 7, 6, 5, 2, 1]);
+bubbleSort([2, 1, 10, 3, 5, 6, 7, 8, 9]);
