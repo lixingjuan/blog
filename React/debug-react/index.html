@@ -33,33 +33,69 @@
         return <h1>PageOne</h1>;
       }
 
+      function Demo1() {
+        const [count, setCount] = React.useState(0);
+
+        console.log(count);
+
+        return (
+          <button
+            onClick={() => {
+              setCount(1);
+              setCount(2);
+              setCount(3);
+            }}
+          >
+            function {count}
+          </button>
+        );
+      }
+
+      class Demo2 extends React.Component {
+        state = {
+          count: 0,
+        };
+
+        render() {
+          console.log(this.state.count);
+
+          return (
+            <button
+              onClick={() => {
+                this.setState({ count: 1 });
+                this.setState({ count: 2 });
+                this.setState({ count: 3 });
+              }}
+            >
+              class {this.state.count}
+            </button>
+          );
+        }
+      }
+
       function MyApp() {
         console.log("ceeee", "组件开始");
         const [count, setCount] = React.useState(0);
 
         console.log({ React });
-        return (
-          <Router>
-            <div>
-              <h1>Hello, React Router!</h1>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/page1" element={<PageOne />} />
-              </Routes>
-            </div>
-          </Router>
-        );
-
         // return (
         // <Router>
-        // <div>count {count}</div>
-        // <button onClick={() => setCount((pre) => pre + 1)}>add</button>
+        // <div>
+        // <h1>Hello, React Router!</h1>
         // <Routes>
-        // <Route>page1</Route>
-        // <Route>page2</Route>
+        // <Route path="/" element={<Home />} />
+        // <Route path="/page1" element={<PageOne />} />
         // </Routes>
+        // </div>
         // </Router>
         // );
+
+        return (
+          <div>
+            <Demo1 />
+            <Demo2 />
+          </div>
+        );
       }
 
       const container = document.getElementById("root");

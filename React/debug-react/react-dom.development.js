@@ -9291,7 +9291,7 @@
         }
       }
     }
-
+    // MARK: handleTopLevel 事件处理函数
     batchedUpdates(function () {
       return dispatchEventsForPlugins(domEventName, eventSystemFlags, nativeEvent, ancestorInst);
     });
@@ -13256,6 +13256,7 @@
 
   var classComponentUpdater = {
     isMounted: isMounted,
+    // MARK: 就是创建一个 update ，然后放入当前 fiber 对象的待更新队列中，最后开启调度更新，进入上述讲到的更新流程。
     enqueueSetState: function (inst, payload, callback) {
       var fiber = get(inst);
       var eventTime = requestEventTime();
@@ -13265,13 +13266,14 @@
 
       if (callback !== undefined && callback !== null) {
         {
-          warnOnInvalidCallback(callback, 'setState');
+          warnOnInvalidCallback(callback, "setState");
         }
 
         update.callback = callback;
       }
-
+      /* enqueueUpdate 把当前的update 传入当前fiber，待更新队列中 */
       enqueueUpdate(fiber, update);
+      /* 开始调度更新 */
       var root = scheduleUpdateOnFiber(fiber, lane, eventTime);
 
       if (root !== null) {
@@ -13292,7 +13294,7 @@
 
       if (callback !== undefined && callback !== null) {
         {
-          warnOnInvalidCallback(callback, 'replaceState');
+          warnOnInvalidCallback(callback, "replaceState");
         }
 
         update.callback = callback;
@@ -13318,7 +13320,7 @@
 
       if (callback !== undefined && callback !== null) {
         {
-          warnOnInvalidCallback(callback, 'forceUpdate');
+          warnOnInvalidCallback(callback, "forceUpdate");
         }
 
         update.callback = callback;
@@ -13334,7 +13336,7 @@
       {
         markForceUpdateScheduled(fiber, lane);
       }
-    }
+    },
   };
 
   function checkShouldComponentUpdate(workInProgress, ctor, oldProps, newProps, oldState, newState, nextContext) {
