@@ -24,4 +24,6 @@ module.exports = {
     "React/debug-react/react.development.js",
     "React/debug-react/react-dom.development.js",
   ],
+    "no-irregular-whitespace": 0
+  }
 };
