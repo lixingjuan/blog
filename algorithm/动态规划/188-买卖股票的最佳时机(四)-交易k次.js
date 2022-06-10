@@ -6,35 +6,46 @@
  * 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
  */
 
+/**
+ * 状态转移方程
+ *
+ * dp[i][k][0] = Math.max(dp[i - 1][k][0], dp[i - 1][k][1] + prices[i])
+ * dp[i][k][1] = Math.max(dp[i - 1][k][1], dp[i - 1][k - 1][0] - prices[i])
+ *
+ * for (let i = 0; i < n; i++) {
+ *  for (let k = maxK; k >= 1; k--) {
+ *    dp[i][k][0] = Math.max(dp[i - 1][k][0], dp[i - 1][k][1] + prices[i]);
+ *    dp[i][k][1] = Math.max(dp[i - 1][k][1], dp[i - 1][k - 1][0] - prices[i]);
+ *  }
+ * }
+
+ */
+
+/**
+ * dp[0]: sell,
+ * dp[1]: buy,
+ *
+ */
 function maxProfit(k, prices) {
-  const n = prices.length;
+  const len = prices.length;
+  if (len <= 1) return 0;
 
-  let profit = [];
+  let dp = Array.from({ length: prices.length }, () => ({
+    sell: 0, // 表示没有股票
+    buy: -prices[0], // 表示有股票
+  }));
 
-  for (let i = 0; i <= k; i++) {
-    profit.push({
-      sell: 0, // 表示没有股票
-      buy: -prices[0], // 表示有股票
-    });
-  }
-
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < len; i++) {
     for (let j = 1; j <= k; j++) {
-      // 在无限次交易的基础哈桑，加一层k循环
-      // sell = Math.max(sell, buy + prices[i]),
-      // bug = Math.max(buy, -prices[i])
-      profit[j] = {
-        sell: Math.max(profit[j].sell, profit[j].buy + prices[i]),
-        buy: Math.max(profit[j].buy, profit[j - 1].sell - prices[i]),
+      dp[j] = {
+        sell: Math.max(dp[j].sell, dp[j].buy + prices[i]),
+        buy: Math.max(dp[j].buy, dp[j - 1].sell - prices[i]),
       };
     }
   }
 
-  console.log(profit);
-  return profit[k].sell;
+  return dp[k].sell;
 }
 
-let theK = 2;
-let thePrices = [2, 4, 1];
-
-console.log(maxProfit(theK, thePrices));
+console.log(maxProfit(2, []) === 0);
+console.log(maxProfit(2, [3, 2, 6, 5, 0, 3]) === 7);
