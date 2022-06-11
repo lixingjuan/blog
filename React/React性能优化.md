@@ -1,0 +1,10 @@
+1. 避免不必要的计算和渲染
+   1. React.memo
+   2. useMemo
+   3. useCallback
+   4. PureComponent
+   5. shouldComponentUpdate
+2. 用户体验
+   1. 防抖/节流的处理
+3. 包体积
+   1. 压缩
