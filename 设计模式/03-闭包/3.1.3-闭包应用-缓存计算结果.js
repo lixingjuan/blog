@@ -1,29 +1,8 @@
 /* ****************************************************************************************************
- *                                    1. 封装变量，实现缓存记忆
+ *                                    封装私有变量，实现缓存记忆
  ************************************************************************************************* */
-let addTwoNumber = (() => {
-  // core-next-line
-  const cache = new Map();
 
-  return (...args) => {
-    // core-next-line
-    const argStr = args.join(",");
-
-    // highlight-next-line
-    if (cache.has(argStr)) {
-      return cache.get(argStr);
-    } else {
-      const result = args.reduce((tol, cur) => (tol += cur), 0);
-      cache.set(argStr, result);
-      return result;
-    }
-  };
-})();
-
-console.log(addTwoNumber(1, 2)); // 3
-console.log(addTwoNumber(1, 2)); // 3
-
-const newAddTwoNumber = (() => {
+const addTwoNumber = (() => {
   const cache = new Map();
 
   /**
@@ -50,4 +29,6 @@ const newAddTwoNumber = (() => {
   };
 })();
 
-console.log(newAddTwoNumber(1, 2)); // 3
+console.log(addTwoNumber(1, 2)); // 3
+console.log(addTwoNumber(1, 2)); // 3
+console.log(addTwoNumber(1, 2)); // 3
