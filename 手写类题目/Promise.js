@@ -40,61 +40,142 @@ class HD {
 
   then(onFulfilled, onRejected) {
     if (typeof onFulfilled !== "function") {
-      onFulfilled = () => {};
+      onFulfilled = () => this.value;
     }
     if (typeof onRejected !== "function") {
-      onRejected = () => {};
+      onRejected = () => this.value;
     }
 
-    if (this.status === HD.PENDING) {
-      this.callback.push({
-        onFulfilled: (val) => {
+    return new HD((resolve, reject) => {
+      if (this.status === HD.PENDING) {
+        this.callback.push({
+          onFulfilled: (val) => {
+            try {
+              let res = onFulfilled(val);
+              this.parse(res, resolve, reject);
+            } catch (error) {
+              reject(error);
+            }
+          },
+          onRejected: (val) => {
+            try {
+              let res = onRejected(val);
+              this.parse(res, resolve, reject);
+            } catch (error) {
+              reject(error);
+            }
+          },
+        });
+      }
+
+      if (this.status === HD.FULFILLED) {
+        setTimeout(() => {
           try {
-            onFulfilled(val);
+            let res = onFulfilled(this.value);
+            this.parse(res, resolve, reject);
           } catch (error) {
-            onRejected(error);
+            reject(error);
           }
-        },
-        onRejected: (val) => {
+        });
+      }
+
+      if (this.status === HD.REJECTED) {
+        setTimeout(() => {
           try {
-            onRejected(val);
+            let res = onRejected(this.value);
+            this.parse(res, resolve, reject);
           } catch (error) {
-            onRejected(error);
+            reject(error);
           }
-        },
-      });
-    }
+        });
+      }
+    });
+  }
 
-    if (this.status === HD.FULFILLED) {
-      setTimeout(() => {
-        try {
-          onFulfilled(this.value);
-        } catch (error) {
-          onRejected(error);
-        }
-      });
+  parse(result, resolve, reject) {
+    // 对返回值进行解包，如果是普通值直接返回，如果是promise, 获取到value并返回
+    if (result instanceof HD) {
+      result.then(resolve, reject);
+    } else {
+      resolve(result);
     }
+  }
 
-    if (this.status === HD.REJECTED) {
-      setTimeout(() => {
-        try {
-          onRejected(this.value);
-        } catch (error) {
-          onRejected(error);
-        }
+  static resolve(val) {
+    return new HD((resolve, reject) => {
+      if (val instanceof HD) {
+        val.then(resolve, reject);
+      } else {
+        resolve(val);
+      }
+    });
+  }
+
+  static reject(val) {
+    return new HD((resolve, reject) => {
+      if (val instanceof HD) {
+        val.then(resolve, reject);
+      } else {
+        reject(val);
+      }
+    });
+  }
+
+  static all(arr) {
+    return new HD((resolve, reject) => {
+      let count = 0;
+      let result = [];
+      arr.forEach((fn, index) => {
+        fn.then(
+          (res) => {
+            result[index] = res;
+            while (++count === arr.length) {
+              resolve(result);
+            }
+          },
+          (err) => {
+            reject(err);
+          }
+        );
       });
-    }
+    });
+  }
+
+  static race(arr) {
+    return new HD((resolve, reject) => {
+      arr.forEach((fn) => {
+        fn.then(
+          (res) => {
+            resolve(res);
+          },
+          (err) => {
+            reject(err);
+          }
+        );
+      });
+    });
   }
 }
 
-const a = new HD((resolve, reject) => {
-  // const a = new Promise((resolve, reject) => {
+let RPromise = Promise;
+RPromise = HD;
+
+let p1 = new RPromise((resolve, reject) => {
   setTimeout(() => {
-    resolve(3);
-    console.log(2);
+    resolve("p1");
+  }, 2000);
+});
+let p2 = new RPromise((resolve, reject) => {
+  setTimeout(() => {
+    reject("p2");
   }, 1000);
-}).then((res) => {
-  console.log(res);
 });
 
-console.log(1);
+RPromise.race([p1, p2]).then(
+  (res) => {
+    console.log("res", res);
+  },
+  (err) => {
+    console.log("err", err);
+  }
+);
