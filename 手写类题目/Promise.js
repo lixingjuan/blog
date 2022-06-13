@@ -18,10 +18,28 @@ class HD {
     if (this.status === HD.PENDING) {
       this.value = val;
       this.status = HD.FULFILLED;
+      /**
+       * 此处添加setTimeout，是为了解决如下场景
+       * 正确的打印顺序应该是2，1，3
+       * setTimeout中的resolve(2), 应该在 `console.log(1)` 之后执行
+       *
+       * const p = new HD((resolve, reject) => {
+       *  setTimeout(() => {
+       *    resolve(3);
+       *    console.log(1);
+       *  }, 1000);
+       * })
+       *  .then((res) => {
+       *    console.log(res);
+       *  })
+       *  .then((res) => {
+       *    console.log(res);
+       *  });
+       *
+       *  console.log(2);
+       */
       setTimeout(() => {
-        this.callback.forEach((cb) => {
-          cb.onFulfilled(this.value);
-        });
+        this.callback.forEach((fn) => fn.onFulfilled(this.value));
       }, 0);
     }
   }
@@ -31,8 +49,8 @@ class HD {
       this.value = val;
       this.status = HD.REJECTED;
       setTimeout(() => {
-        this.callback.forEach((cb) => {
-          cb.onRejected(this.value);
+        this.callback.forEach((fn) => {
+          fn.onRejected(this.value);
         });
       }, 0);
     }
@@ -51,7 +69,7 @@ class HD {
         this.callback.push({
           onFulfilled: (val) => {
             try {
-              let res = onFulfilled(val);
+              const res = onFulfilled(val);
               this.parse(res, resolve, reject);
             } catch (error) {
               reject(error);
@@ -59,7 +77,7 @@ class HD {
           },
           onRejected: (val) => {
             try {
-              let res = onRejected(val);
+              const res = onRejected(val);
               this.parse(res, resolve, reject);
             } catch (error) {
               reject(error);
@@ -76,7 +94,7 @@ class HD {
           } catch (error) {
             reject(error);
           }
-        });
+        }, 0);
       }
 
       if (this.status === HD.REJECTED) {
@@ -87,7 +105,7 @@ class HD {
           } catch (error) {
             reject(error);
           }
-        });
+        }, 0);
       }
     });
   }
@@ -114,7 +132,7 @@ class HD {
   static reject(val) {
     return new HD((resolve, reject) => {
       if (val instanceof HD) {
-        val.then(resolve, reject);
+        val.then(reject, reject);
       } else {
         reject(val);
       }
@@ -122,14 +140,16 @@ class HD {
   }
 
   static all(arr) {
-    return new HD((resolve, reject) => {
-      let count = 0;
-      let result = [];
-      arr.forEach((fn, index) => {
+    return new Promise((resolve, reject) => {
+      const promises = arr.map((it) => HD.resolve(it));
+      const result = [];
+      let counter = 0;
+
+      promises.forEach((fn, index) => {
         fn.then(
-          (res) => {
-            result[index] = res;
-            while (++count === arr.length) {
+          (val) => {
+            result[index] = val;
+            while (counter++ === arr.length) {
               resolve(result);
             }
           },
@@ -142,15 +162,12 @@ class HD {
   }
 
   static race(arr) {
-    return new HD((resolve, reject) => {
-      arr.forEach((fn) => {
+    return new Promise((resolve, reject) => {
+      const promises = arr.map((it) => HD.resolve(it));
+      promises.forEach((fn) => {
         fn.then(
-          (res) => {
-            resolve(res);
-          },
-          (err) => {
-            reject(err);
-          }
+          (res) => resolve(res),
+          (err) => reject(err)
         );
       });
     });
@@ -179,3 +196,6 @@ RPromise.race([p1, p2]).then(
     console.log("err", err);
   }
 );
+
+console.log(Promise.reject(1).then());
+console.log(HD.reject(1).then());
