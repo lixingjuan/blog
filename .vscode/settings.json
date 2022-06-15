@@ -7,7 +7,11 @@
     "editor.defaultFormatter": "fcrespo82.markdown-table-formatter",
     "editor.wordWrap": "on",
     "editor.formatOnSave": true,
-    "editor.quickSuggestions": true // 打开markdown文件的智能感知提示，解决markdown文件代码片段不生效问题
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    } // 打开markdown文件的智能感知提示，解决markdown文件代码片段不生效问题
   },
   "liveServer.settings.port": 5501,
   "prettier.printWidth": 100
