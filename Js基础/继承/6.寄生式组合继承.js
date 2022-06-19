@@ -8,10 +8,7 @@
  *                  Sub.prototype.constructor = Sub;
  ************************************************************************************************* */
 
-
-
-/** 🟡 实现 🟡 */
-// 1. 定义inherite 方法
+// 1. 定义inherite 方法： Sub.prototype = Object.create(Super.prototype)
 function inheritPrototype(son, father) {
   // 1. 创建超类型原型的一个副本
   const prototype = Object.create(father.prototype);
@@ -21,27 +18,22 @@ function inheritPrototype(son, father) {
   son.prototype = prototype;
 }
 
-
+// 2. 定义父类
 function Super(name) {
   this.name = name;
-  this.colors = ['red', 'blue', 'green'];
+  this.colors = ["red", "blue", "green"];
 }
 
+// 3. 定义子类，并在子类中执行 `父类.call(this)`
 function Sub(name, age) {
-  Super.call(this, 'sub');
-  this.age = age
+  Super.call(this, "sub");
+  this.age = age;
 }
 
+// 4. 调用inheritPrototype, 父子继承
 inheritPrototype(Sub, Super);
 
+// 5. 子类自定义方法
 Sub.prototype.sayColor = function () {
   console.log(this.colors);
-}
-
-const instance1 = new Sub('instance1', 22);
-const instance2 = new Sub('instance2', 24);
-
-/** 🔵 测试 🔵 */
-console.log(instance1.colors === instance2.colors) // false
-instance1.sayColor(); // ['red', 'blue', 'green']
-
+};
