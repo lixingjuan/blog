@@ -13,7 +13,6 @@ Function.prototype.bind2 = function (context, ...args) {
 
   // 保存父作用域的this指向，是为了后面判断，bind返回的函数是否被用了new 调用
   const _self = this;
-  const fNOP = function () {};
 
   const bound = function (...innerArgs) {
     const isCallWithNew = this instanceof _self;
@@ -24,6 +23,7 @@ Function.prototype.bind2 = function (context, ...args) {
     return _self.apply(newThis, [...args, ...innerArgs]);
   };
 
+  const fNOP = function () {};
   fNOP.prototype = this.prototype;
   bound.prototype = new fNOP();
   return bound;
