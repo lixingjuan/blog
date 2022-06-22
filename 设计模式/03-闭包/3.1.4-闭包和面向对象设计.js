@@ -10,7 +10,6 @@ let extent = (() => {
       console.log(value);
     },
   };
-  // core-next-line
 })();
 
 extent.call(); // 1
@@ -22,7 +21,7 @@ extent.call(); // 3
  ************************************************************************************************* */
 extent = {
   value: 0,
-  // core-next-line
+
   call: function () {
     this.value++;
     console.log(this.value);
@@ -44,7 +43,6 @@ Extent.prototype.call = function () {
   console.log(this.value);
 };
 
-// core-next-line
 extent = new Extent();
 
 extent.call(); // 1

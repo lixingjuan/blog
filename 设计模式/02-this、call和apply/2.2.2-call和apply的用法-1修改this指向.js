@@ -10,7 +10,7 @@ const getName = function () {
 };
 
 getName(); // "Big Window"
-// core-next-line
+
 getName.apply(obj); // Mary
 
 // eg.2
@@ -23,7 +23,7 @@ const person = {
 const personGetName = person.getName;
 
 person.getName(); // Tom
-// core-next-line
+
 personGetName(); // "Big Window", 请注意，此时this指向全局，浏览器为window
 
 // eg.3
@@ -32,7 +32,6 @@ const getAge = function () {
   console.log(this);
 };
 
-// core-next-line
 getAge(); // undefined, 严格模式下，函数的this为undefined
 
 // eg.4
