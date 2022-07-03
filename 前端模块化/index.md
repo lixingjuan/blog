@@ -12,7 +12,8 @@
 
 ## Common.js
 
-1. 同步加载
+1. 同步加载（因为是服务端，所以动态加载不怕速度慢）
+
 
 ## AMD
 
@@ -20,7 +21,7 @@ Async Module Definition (RequireJS 对模块定义的规范化产出)
 
 1. 语法，required.config()指定路径、defined()定义模块、required()加载模块
 2. 异步加载
-3. AMD(required.js)推崇前置、提前执行；
+3. AMD(required.js)推崇**前置**、提前执行；
 
 
 ## UMD
@@ -32,8 +33,8 @@ UMD是AMD和CommonJS的糅合
 
 这迫使人们又想出另一个更通用的模式UMD （Universal Module Definition）。希望解决跨平台的解决方案。
 
-UMD先判断**是否支持Node.js的模块（exports）是否存在**，存在则使用Node.js模块模式。
-再判断是否支持AMD（define是否存在），存在则使用AMD方式加载模块
+UMD**先判断**是否支持**Node.js**的模块（exports）是否存在，存在则使用Node.js模块模式。
+**再判断**是否支持AMD（define是否存在），存在则使用AMD方式加载模块
 
 
 
