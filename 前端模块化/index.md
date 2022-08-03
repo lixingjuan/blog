@@ -4,6 +4,11 @@
 - [前端模块化开发那点历史](https://github.com/seajs/seajs/issues/588)
 
 
+| ESModule | Common.js | UMD                  | AMD | CMD |
+|----------|-----------|----------------------|-----|-----|
+| 静态编译 | 同步加载  | 现判断node.js, 再AMD |     |     |
+| 值的引用 | 同步加载  |                      |     |     |
+
 ## ESModule
 
 
