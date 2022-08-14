@@ -1,6 +1,6 @@
 1. Suspense
-2. ConcurrentMode
-3. automatic batchUpdate
+2. automatic batchUpdate
+3. ConcurrentMode
 4. useTransition/startTransition
 5. useEvent
 6. useId
