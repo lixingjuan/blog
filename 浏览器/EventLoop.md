@@ -10,8 +10,8 @@ EventLoop
 ## Browser
 
 浏览器中，任务分为两种：同步任务 和 异步任务（宏任务 和 微任务），用来将事件分为不同的优先级
-- 同步任务在主线程执行
-- 异步任务会在时间队列等待
+- 同步任务在**主线程**执行
+- 异步任务会在**时间队列等待**
 
 
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--I8K4E512--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tg7893fgvd0q8im1fy3s.png">
