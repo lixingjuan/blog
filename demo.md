@@ -16,18 +16,7 @@
 3. HTTP3.0
    1. UDP
    2. 解决多路复用，一个包阻塞，整条流都阻塞
-4. 简单请求 & 复杂请求
-   1. get/head/post
-   2. 头字段
-      1. accept
-      2. accept-language
-      3. content-language
-      4. content-type
-         1. text/plain
-         2. multiple/form-data
-         3. application/x-www-form-urlencoded
-   3. 请求中没有使用 ReadableStream 对象
-   4. 请求中的任意 XMLHttpRequest 对象均没有注册任何事件监听器；XMLHttpRequest 对象可以使用 XMLHttpRequest.upload 属性访问。
+
 5. bfc
    1. display:flow-root，这是唯一没有副作用的一种
    2. display的值是inline-block、table-cell、flex、table-caption或者inline-flex
