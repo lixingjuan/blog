@@ -1,14 +1,53 @@
-var isPalindrome = function (x) {
-  if (x === 0) return true;
-  if (x < 0 || x % 10 === 0) return false; //实例的两个特例
-  let reverse = 0;
-  let rest = x;
-
-  while (rest >= 10) {
-    reverse = reverse * 10 + (rest % 10);
-    rest = Math.floor(rest / 10);
+/**
+ * @param {number[]} height
+ * @return {number}
+ */
+var maxArea = function (height) {
+  const getArea = ({left, right, leftIndex, rightIndex}) => {
+    return Math.min(left, right) * (rightIndex - leftIndex);
   }
-  return reverse * 10 + rest === x;
+
+  // 数组补齐偶数
+  let newHeight = height.length % 2 ? [...height, 0] : height;
+
+  const len = newHeight.length;
+
+  const times = len / 2;
+
+  // 左指针，右指针
+  let leftIndex = 0;
+  let rightIndex = len - 1;
+
+  let left = newHeight[leftIndex];
+  let right = newHeight[rightIndex];
+
+
+
+  for (let i = 1; i < times; i++) {
+    const backLeftIndex = i;
+    const backLeft = newHeight[backLeftIndex]
+    if (
+      getArea({ left: backLeft, right, leftIndex: backLeftIndex, rightIndex }) >
+      getArea({ left, right, leftIndex, rightIndex })
+    ) {
+      left = backLeft;
+      leftIndex = backLeftIndex;
+    }
+
+    const backRightIndex = len - i - 1;
+    const backRight = newHeight[backRightIndex];
+    if (
+      getArea({ left, right: backRight, leftIndex, rightIndex: backRightIndex }) >=
+      getArea({ left, right, leftIndex, rightIndex })
+    ) {
+      right = backRight;
+      rightIndex = backRightIndex;
+    }
+  }
+
+  return getArea({left, right, leftIndex, rightIndex})
+
 };
 
-console.log(isPalindrome(121));
+// console.log(maxArea([1,8,6,2,5,4,8,3,7]))
+console.log(maxArea([4,3,2,1,4]))

@@ -10,7 +10,7 @@
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/del.js",
-      "runtimeExecutable": "/Users/lixingjuan/.nvm/versions/node/v16.2.0/bin/node"
+      "runtimeExecutable": "/opt/homebrew/bin/node"
     }
   ]
 }
