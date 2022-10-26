@@ -4,7 +4,7 @@ const curry = (fn, ...args) => {
     return (...innerArgs) => curry(fn, ...[...args, ...innerArgs]);
   } else {
     // 参数传完，执行函数
-    return fn(...args);
+    return fn.apply(null, args);
   }
 };
 

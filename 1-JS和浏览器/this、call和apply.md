@@ -12,4 +12,4 @@
 1. call可以接受单个元素
 2. apply可以接受数组
 
-其他详见
+其他详见-[4-设计模式/02-this、call和apply/章2-this、call和apply.md]

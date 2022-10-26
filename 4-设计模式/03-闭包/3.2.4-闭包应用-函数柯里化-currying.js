@@ -11,12 +11,11 @@
  * 1. 调用cost时候，如果明确带上了一些参数，表示此事不进行真正的求值，而是把参数保存起来，此时让cost函数返回另外一个函数
  * 2. 只有当我们以不带参数的形式执行cost时，才利用前面保存的所有参数
  */
-const currying = function (fn) {
+const currying = function (fn, ...args) {
   const args = [];
 
   return function inner() {
     // 利用之前的保存的参数进行调用
-    // core-start
     if (arguments.length === 0) {
       return fn.apply(this, args);
     }
@@ -25,7 +24,6 @@ const currying = function (fn) {
     args.push(...arguments);
     // arguments.callee, 即inner函数本身
     return arguments.callee;
-    // core-end
   };
 };
 

@@ -1,10 +1,14 @@
 const arr = [1, 2, 3];
-const obj = { a: 1, b: 2 };
+const obj = { a: '1', b: 2, c: false, d: undefined, e: null, f: Symbol('f') };
 obj.obj = obj;
 
 const copyObj = (source, map = new WeakMap()) => {
-  if (["string", "number", "boolean", "undefined"].includes(typeof source)) {
+  if (["string", "number", "boolean", "undefined", 'symbol'].includes(typeof source)) {
     return source;
+  }
+
+  if (source === null) {
+    return null
   }
 
   if (map.has(source)) {
