@@ -17,13 +17,14 @@ function flatArrToTree(arr) {
   arr.forEach((item) => {
     // 从map结构中取出父节点
     const parent = obj[item.parentId];
-    if (parent) {
-      !parent.children && (parent.children = []);
-      parent.children.push(item);
-    } else {
+    if (!parent) {
       // 没有parent, 代表是根节点
       tree.push(item);
+      return;
     }
+
+    !parent.children && (parent.children = []);
+    parent.children.push(item);
   });
 
   return tree;

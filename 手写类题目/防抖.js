@@ -1,16 +1,16 @@
 /** 防抖 */
-const dobounce = function (fn, time) {
+const debounce = (fn, wait = 300) => {
   let timer = null;
-  let isFistTime = true;
+  let isFirstTime = true;
 
-  return function () {
-    if (isFistTime) {
-      fn();
-      isFistTime = false;
+  return (...args) => {
+    if (isFirstTime) {
+      fn.apply(null, args);
+      isFirstTime = false;
       return;
     }
 
     timer && clearTimeout(timer);
-    timer = setTimeout(fn, time);
+    timer = setTimeout(fn, wait, ...args);
   };
 };

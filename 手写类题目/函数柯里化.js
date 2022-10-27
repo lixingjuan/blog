@@ -1,11 +1,11 @@
+/** 函数柯里化 */
 const curry = (fn, ...args) => {
-  // 先判断参数是否传完了，没有传完继续递归
-  if (fn.length > args.length) {
-    return (...innerArgs) => curry(fn, ...[...args, ...innerArgs]);
-  } else {
-    // 参数传完，执行函数
+  // 参数已经传完, 则直接执行
+  if (fn.length === args.length) {
     return fn.apply(null, args);
   }
+
+  return (...innerArgs) => curry(fn, ...[...args, ...innerArgs]);
 };
 
 const testFn = (a, b, c, d, e) => {

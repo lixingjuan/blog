@@ -18,6 +18,7 @@ const throttle = function (fn, time) {
     // 延迟一段时间执行
     timer = setTimeout(() => {
       clearTimeout(timer);
+      // ❗️ 注意这里清除timer
       timer = null;
       fn.apply(null, args);
     }, time);
