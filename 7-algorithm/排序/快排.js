@@ -1,3 +1,8 @@
+/**
+ * 核心：
+ * 1. 找到基准值
+ * 2. 将数据分为[...quickSort(小于基准值)，基准值，...quickSort(大于基准值)]
+ */
 const quickSort = (arr) => {
   if (arr.length < 2) {
     return arr
