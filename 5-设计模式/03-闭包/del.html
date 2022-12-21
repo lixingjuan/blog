@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="input" />
+    <!-- <button id="button">AAA</button> -->
+
+    <script>
+      // 防抖函数
+      const debounce = function (fn, delay) {
+        let timer = null;
+        let firstTime = true;
+
+        return function (...args) {
+          if (firstTime) {
+            fn(...args);
+            firstTime = false;
+            return;
+          }
+
+          timer && clearTimeout(timer);
+          timer = setTimeout(fn, delay, ...args);
+        };
+      };
+
+      const debounced = debounce((a, b, c) => {
+        // console.log(a + b + c);
+        console.log(a);
+      }, 300);
+      // debounced(1, 2, 3);
+
+      // 使用
+      let input = document.getElementById("input");
+      input.addEventListener(
+        "input",
+        debounced
+        // debounce((val = 222) => {
+        // console.log("输入内容");
+        // }, 300)
+      );
+    </script>
+  </body>
+</html>

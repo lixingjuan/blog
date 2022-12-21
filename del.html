@@ -4,47 +4,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      div {
-        width: 300px;
-        height: 300px;
-      }
-    </style>
   </head>
   <body>
+    <button id="demo">demo</button>
     <script>
-      /** 节流 */
-      const throttle = (fn, wait = 300) => {
-        let timer = null;
-        let isFirstTime = true;
-
-        return (...args) => {
-          // console.log(args)
-          if (isFirstTime) {
-            fn.apply(null, args);
-            isFirstTime = false;
-            return;
-          }
-
-          if (timer) {
-            return;
-          }
-
-          timer = setTimeout(()=>{
-            clearTimeout(timer);
-            timer = null;
-            fn.apply(null, args);
-          }, wait);
-        };
-      };
-
-      const demo = (a, b, c) => {
-        console.log(a, b, c);
-      };
-
-      const debouncedDemo = throttle(demo, 1000, 1, 2);
-      window.count = 0;
+      const button = document.getElementById("demo");
+      button.addEventListener(
+        "click",
+        () => {
+          console.log(1);
+        },
+        true
+      );
+      button.addEventListener(
+        "click",
+        () => {
+          console.log(1);
+        },
+        false
+      );
     </script>
-    <div onclick="debouncedDemo(count+1, count+1)">button</div>
   </body>
 </html>

@@ -16,6 +16,7 @@ function search(nums, target) {
 
   while (left <= right) {
     let mid = Math.floor((right - left) / 2) + left; // 🔴 注意，此时中间索引不能使用数组长度求得
+    console.log(mid);
     const midVal = nums[mid];
 
     if (midVal === target) {
