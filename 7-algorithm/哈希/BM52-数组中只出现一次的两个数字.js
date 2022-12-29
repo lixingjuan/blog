@@ -17,8 +17,4 @@ function FindNumsAppearOnce(array) {
   return [...memo].sort((a, b) => a - b);
 }
 
-console.log(FindNumsAppearOnce([1,  1, 6,4]));
-
-module.exports = {
-  FindNumsAppearOnce: FindNumsAppearOnce,
-};
+console.log(FindNumsAppearOnce([1, 2, 3, 1, 2, 3]));
