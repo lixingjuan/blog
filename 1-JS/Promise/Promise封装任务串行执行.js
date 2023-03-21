@@ -4,7 +4,10 @@ const addThree = (x) => x + 3;
 const addFive = (x) => x + 5;
 
 /** 方案1: 利用Promise + reduce */
-const compose = (fns) => (x) => fns.reduce((promise, fn) => promise.then(fn), Promise.resolve(x));
+const compose = (fns) => {
+  return (x) =>
+    fns.reduce((lastPromiseResult, fn) => lastPromiseResult.then(fn), Promise.resolve(x));
+};
 
 const addTen = compose([addTwo, addThree, addFive]);
 

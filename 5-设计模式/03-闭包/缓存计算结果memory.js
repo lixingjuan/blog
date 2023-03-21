@@ -12,13 +12,15 @@ const addTwoNumber = (() => {
     const sortedArr = getSortedArr(args);
     const argStr = sortedArr.join(",");
 
+    // 1. 已缓存
     if (cache.has(argStr)) {
       return cache.get(argStr);
-    } else {
-      const result = getSum(sortedArr);
-      cache.set(argStr, result);
-      return result;
     }
+
+    // 2. 未缓存
+    const result = getSum(sortedArr);
+    cache.set(argStr, result);
+    return result;
   };
 })();
 

@@ -34,7 +34,7 @@ const deepCopy = (source, map = new WeakMap()) => {
    */
 
   const isSimpleType =
-    ["string", "number", "boolean", "undefined", "symbol"].includes(typeof source) ||
+    ["string", "number", "boolean", "undefined", "bigint", "symbol"].includes(typeof source) ||
     source === null;
 
   if (isSimpleType) {

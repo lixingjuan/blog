@@ -1,4 +1,4 @@
-1. 一些API的废弃, ReactDom.render, 改为 createRoute(dom).render
+1. 一些API的废弃, ReactDom.render, 改为 createRoot(dom).render
 2. Suspense ⭐️
 3. automatic batchUpdate： 自动批处理
 4. ConcurrentMode

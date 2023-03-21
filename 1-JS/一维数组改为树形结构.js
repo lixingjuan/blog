@@ -12,15 +12,16 @@ const flatArr = [
 /**
  * 找爸爸，
  * 没爸爸，自己就是爸爸 */
-function flatArrToTree(arr) {
+function flatArrayToTree(arr) {
   const tree = [];
-  const obj = arr.reduce((tol, cur) => Object.assign(tol, { [cur.id]: cur }), {});
+  const itemIdToItemMap = arr.reduce((tol, cur) => Object.assign(tol, { [cur.id]: cur }), {});
 
   arr.forEach((item) => {
     // 从map结构中取出父节点
-    const parent = obj[item.parentId];
+    const parent = itemIdToItemMap[item.parentId];
+
+    // 没有parent, 代表是根节点
     if (!parent) {
-      // 没有parent, 代表是根节点
       tree.push(item);
       return;
     }
@@ -32,4 +33,4 @@ function flatArrToTree(arr) {
   return tree;
 }
 
-console.log(JSON.stringify(flatArrToTree(flatArr)));
+console.log(JSON.stringify(flatArrayToTree(flatArr)));

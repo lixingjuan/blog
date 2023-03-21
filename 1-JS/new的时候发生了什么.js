@@ -6,7 +6,7 @@ function _new(constructor, ...args) {
   // 1. 创建一个新对象
   const target = {};
 
-  // 2. 新对象的 __proto__ 指向构造函数的 prototype
+  // 2. 原型链链接：新对象的 __proto__ 指向构造函数的 prototype
   target.__proto__ = constructor.prototype;
 
   // 3. 将新对象作为`this`的上下文，调用构造函数中的代码。

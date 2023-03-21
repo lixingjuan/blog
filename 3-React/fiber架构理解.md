@@ -1,4 +1,8 @@
-# 你对fiber架构的理解？
+# fiber架构
+
+## 推出版本
+
+v16
 
 
 ## 为什么提出fiber架构？
@@ -16,7 +20,7 @@ js执行 => 页面绘制 => 渲染
 1. Reconciler
 2. Renderer
 
-在Reconciler中，挂载和更新子组件，都会递归更新子组件，递归一旦开始，就无法停止，如果子组件过多，js执行时间就会过长，就会导致页面卡顿的效果。
+在Stack Reconciler中，挂载和更新子组件，都会递归更新子组件，递归一旦开始，就无法停止，如果子组件过多，js执行时间就会过长，就会导致页面卡顿的效果。
 
 
 
@@ -27,7 +31,7 @@ js执行 => 页面绘制 => 渲染
 react在16提出了fiber架构，主要解决四个问题：
 
 1. 事件执行可中断
-2. 可恢复；
+2. 中断之后可以恢复工作；
 3. 任务分配优先级；
 4. 抛弃不必要执行的任务；
 
@@ -36,19 +40,19 @@ react在16提出了fiber架构，主要解决四个问题：
 
 ## fiber实现思路
 
+Fiber把整个渲染更过程划分为多个小的任务单元，也就是fiber, 每个fiber都是一个执行单元.
+
+
 ### 事件可中断
 
 
+每次fiber执行前都先判断是否应该继续执行，判断条件是:
+1. 是否有更高优先级的fiber出现，如果有，则先执行该高优先级fiber, 完成后再回来执行当前fiber;
+2. 当前帧是否剩余时间, 如果没有， 则中断执行，则将控制权交给主线程；
+   1. 判断是否剩余执行时间，使用`requestAnimationFrame` 重新实现了requestIdleCallback，即Scheduler（调度器），未直接使用 `requestIdleCallback`, 是由于 浏览器兼容性；
 
-Fiber把渲染更新过程拆分成多个子任务，也就是一个个的fiber, 每个fiber都是一个执行单元
 
-每次执行前都先判断是否应该继续执行，判断条件是
-1. 有其他更高优先级任务需要先更新
-2. 当前帧没有剩余时间
-
-如果不符合条件，则将控制权交给主线程，等主线程不忙的时候在继续执行
-
-浏览器已经实现了这一个 API，`requestIdleCallback`, 但是由于 浏览器兼容性， 所以react使用 `requestAnimationFrame` 重新实现了requestIdleCallback，即Scheduler（调度器），一起组成了 React16 的新架构：
+React16 的新架构：
 - Scheduler：调度器。
 - Reconciler：协调器。由 Stack Reconciler 变成 Fiber Reconciler。
 - Renderer：渲染器。

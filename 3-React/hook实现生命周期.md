@@ -92,6 +92,7 @@ getSnapshotBeforeUpdate() 在最近一次渲染输出（提交到 DOM 节点）�
   }
 ```
 ## render
+
 ## componentDidUpdate
 
 `useLayoutEffect`
@@ -102,7 +103,7 @@ getSnapshotBeforeUpdate() 在最近一次渲染输出（提交到 DOM 节点）�
 
 
 
-## unmounting阶段
+# unmounting阶段
 
 ## componentWillUnmount
 
