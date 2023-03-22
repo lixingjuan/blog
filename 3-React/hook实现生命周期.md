@@ -1,4 +1,4 @@
-# mounting阶段
+# mounting阶段-4个
 
 ## constructor
 
@@ -31,7 +31,7 @@ static getDerivedStateFromProps(props, state), 它应该返回一个对象来更
 `useLayoutEffect`, 数组为空
 
 
-# updating阶段
+# updating阶段-5个
 
 
 ## static getDerivedStateFromProps
@@ -98,7 +98,7 @@ getSnapshotBeforeUpdate() 在最近一次渲染输出（提交到 DOM 节点）�
 `useLayoutEffect`
 
 
-可以使用ref.current来记录一个变量，判断是否是首次，首次的话不执行
+可以使用ref.current来记录一个变量，判断是否是首次，首次不执行
 
 
 

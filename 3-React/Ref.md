@@ -1,25 +1,19 @@
 
 # ref解决了什么问题？
 
-1. 提供了操作底层Dom 的能力，eg. Input.focus()、
+1. 提供了操作原生Dom 的能力，eg.
+   1. Input.focus()
+   2. echarts渲染
 2. 直接调用子组件方法的能力
-
-
 
 
 ## Ref有什么作用？
 
 react会自动做转发：
 
-- 作用于HTML元素：将**底层dom**绑定在.current属性上
-- 作用于（class）组件：将**组件实例**绑定在.current属性上
-- 作用于（函数）组件：因为函数式组件没有实例，需要搭配`forwardRef`, 做转发，另外可以使用 `useImperativeHandle(ref, handle, deps)`, 将子组件的方法绑定到父组件上，使得父组件可以 `父组件.current.xxx()` 调用子组件绑定的方法
-
-
-
-
-
-
+- 作用于HTML元素： 将`原生dom`绑定在.current属性上
+- 作用于`class`组件： 将`组件实例`绑定在.current属性上
+- 作用于`函数`组件： 因为函数式组件没有实例，需要搭配`forwardRef`, 做转发，另外可以使用 `useImperativeHandle(ref, handle, deps)`, 将子组件的方法绑定到父组件上，使得父组件可以 `父组件.current.xxx()` 调用子组件绑定的方法
 
 
 ## 创建方式

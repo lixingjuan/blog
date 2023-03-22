@@ -3,8 +3,16 @@
 3. automatic batchUpdate： 自动批处理
 4. ConcurrentMode
 5. useTransition/startTransition
-6. useEvent
-7. useId
-8. useInsertionEffect
-9. useSyncExternalStore
-10. componet reUseable, 保持状态，卸载组件
+6. componet reUseable, 保持状态，卸载组件
+7. useEvent
+8. useId
+9. useInsertionEffect
+10. useSyncExternalStore
+
+
+
+
+# 渲染模式（https://zhuanlan.zhihu.com/p/60307571）
+1. Sync
+2. Debounced
+3. ConcurrentMode
