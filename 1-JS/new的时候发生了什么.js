@@ -1,5 +1,5 @@
 /**
- * # new的原理
+ * new的原理
  */
 
 function _new(constructor, ...args) {
@@ -12,7 +12,8 @@ function _new(constructor, ...args) {
   // 3. 将新对象作为`this`的上下文，调用构造函数中的代码。
   const result = constructor.apply(target, args);
 
-  // 4. 返回，若构造函数执行后未返回其他对象，那么new表达式中的函数调用会自动返回这个新对象；
+
+  // 4. 返回，若函数未返回其他对象，那么new表达式中的函数调用会自动返回这个新对象；
   return result instanceof Object ? result : target;
 }
 
