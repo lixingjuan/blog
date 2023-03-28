@@ -8,3 +8,8 @@ type MRecord<K extends keyof any, T> = {
   [P in K]: T;
 };
 
+
+interface A {
+  name:''
+}
+

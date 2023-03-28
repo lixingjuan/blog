@@ -54,15 +54,11 @@ React的fiber架构包含三层，分别是
    1. 判断是否剩余执行时间，使用`requestAnimationFrame` 重新实现了requestIdleCallback，即Scheduler（调度器），未直接使用 `requestIdleCallback`, 是由于 浏览器兼容性；
 
 
-React16 的新架构：
-- Scheduler：调度器。
-- Reconciler：协调器。由 Stack Reconciler 变成 Fiber Reconciler。
-- Renderer：渲染器。
 
 
 
 
-Api的实现上，浏览器已经实现了这一个 API，`requestIdleCallback`, 但是由于 浏览器兼容性， 所以react使用 `requestAnimationFrame` 重新实现了requestIdleCallback，即Scheduler（调度器）
+
 
 
 ### 事件可恢复
