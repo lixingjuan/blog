@@ -9,14 +9,14 @@ https://github.com/yacan8/blog/issues/33
 ## 分代垃圾回收机制
 
 
-堆空间分为两部分，一个小的**新生区**约1-8M 和一个大的**老生区**;
+堆空间分为两部分，一个小的**新生代**约1-8M 和一个大的**老生代**;
 
 <img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/357189121dda46368c4200eeb481c957~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp?"/>
 
 
 ## 新生区
 
-新生区采用`Scavenge`算法实现: Scavenge是一种空间换时间的算法。
+新生区采用户较快的`Scavenge`算法实现: Scavenge是一种空间换时间的算法。
 
 新生区又分为 `From区-激活区` 和 `To区-未激活区`两个区域。
 

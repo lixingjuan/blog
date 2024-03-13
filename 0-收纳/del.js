@@ -1,23 +1,23 @@
-/**
- * @param {number} x
- * @return {boolean}
- */
-var isPalindrome = function (x) {
-  if (x < 0) {
-    return false;
+// 1. 快速排序
+function quickSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
   }
-  if (x === 0) {
-    return true;
+  
+  const pivotIndex = Math.floor(arr.length / 2);
+  const pivot = arr.splice(pivotIndex, 1)[0];
+  const left = [];
+  const right = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < pivot) {
+      left.push(arr[i]);
+    } else {
+      right.push(arr[i]);
+    }
   }
+  return quickSort(left).concat([pivot], quickSort(right));
+}
 
-  let result = x;
-  let remaining = 0;
-  let temp = 0;
-  while (result !== 0) {
-    remaining = result % 10;
-    temp = temp * 10 + remaining;
-    result = result / 10;
-  }
-
-  return result === temp
-};
+// 测试用例
+const arr = [5, 3, 8, 4, 2];
+console.log(quickSort(arr)); // [2, 3, 4, 5, 8]

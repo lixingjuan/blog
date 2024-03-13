@@ -94,7 +94,7 @@ react 通过算法，给所有的任务分配过期时间（expirationTime），
 > 因为generator有上下文依赖关系，无法插入高优先级任务；
 
 
-react 17.0-rc优先级模型改为了lanes
+react 17.0-rc 优先级模型改为了lanes
 
 #### lanes
 

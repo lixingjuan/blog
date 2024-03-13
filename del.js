@@ -1,46 +1,24 @@
-// /**
-//  * Definition for a binary tree node.
-//  * function TreeNode(val, left, right) {
-//  *     this.val = (val===undefined ? 0 : val)
-//  *     this.left = (left===undefined ? null : left)
-//  *     this.right = (right===undefined ? null : right)
-//  * }
-//  */
-// /**
-//  * @param {TreeNode} root
-//  * @param {number} k
-//  * @return {number}
-//  */
-// var kthSmallest = function (root, k) {
-//   const stack = [];
-//   while (root != null || stack.length) {
-//     while (root != null) {
-//       stack.push(root);
-//       root = root.left;
-//     }
-
-//     root = stack.pop();
-//     --k;
-
-//     if (k === 0) {
-//       break;
-//     }
-//     root = root.right;
-//   }
-//   return root.val;
-// };
-
-// console.log(kthSmallest());
-
-let outer = 2;
-while (outer--) {
-  console.log({ outer });
-  let inner = 3;
-  while (inner > 0) {
-    console.log({ inner });
-    inner--;
-    if (inner === 1) {
-      break;
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {number}
+ */
+var characterReplacement = function(s, k) {
+    if (!s) return 0
+    let codes = Array(26).fill(0)  // 记录窗口内各字符出现次数
+    let i = 0
+    let max = 0
+    for(let j = 0; j < s.length; j++){
+        let n = s[j].charCodeAt() - 65
+        codes[n] += 1
+        max = Math.max(max, codes[n])
+        if (j - i + 1 > max + k) {  // 移动左边
+            codes[ s[i].charCodeAt() - 65 ] -= 1
+            i++
+        } 
     }
-  }
-}
+    return s.length - i
+};
+ 
+
+console.log(characterReplacement("ABAB", 2) )

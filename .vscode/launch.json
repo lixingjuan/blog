@@ -10,7 +10,7 @@
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/del.js",
-      "runtimeExecutable": "/Users/lixingjuan/.nvm/versions/node/v18.3.0/bin/node"
+      "runtimeExecutable": "/Users/lixingjuan/.nvm/versions/node/v18.13.0/bin/node"
     }
   ]
 }
