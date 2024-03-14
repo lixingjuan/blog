@@ -1,29 +1,28 @@
 /* ****************************************************************************************************
  *  实现思路：在子类的作用域中执行父类
- *  解决的问题：1. 支持向超类传参； 2. “引用类型值的原型属性” 会被所有实例共享；
+ *  解决的问题：1. 支持向父类传参； 2. “引用类型值的原型属性” 会被所有实例共享；
  *  问题：1. 只能继承属性，无法继承方法；2. 方法必须定义在子类内部, 复用性差
  *************************************************************************************************** */
 
-// 1. 定义超类型
-function SuperType(val) {
-  this.colors = ["red", "blue", "green"];
-  this.name = val;
+function Animal(name) {
+  this.colors = ["pink", "black"];
+  this.name = name;
 }
 
-// 2. 定义子类型
-function SubType(name) {
-  // 执行父类
-  SuperType.call(this, name);
-
-  // 实例属性
-  // this.name = name;
-
-  // ❗️ 方法需要定义在这里
-  this.sayHello = function () {
-    console.log("Hello " + name);
-  };
+function Dog(...args) {
+  Animal.apply(this, args);
 }
 
-// 3. 创建实例
-const instance1 = new SubType("hello");
-const instance2 = new SubType("world");
+Dog.prototype.bark = function () {
+  console.log("Woof! Woof!" + this.name);
+};
+
+const dog1 = new Dog("Max");
+const dog2 = new Dog("Jall");
+dog1.bark();
+console.log(dog1.colors);
+dog1.colors[2] = "red";
+console.log(dog1.colors);
+
+dog2.bark();
+console.log(dog2.colors);

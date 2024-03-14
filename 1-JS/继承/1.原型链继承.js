@@ -1,18 +1,22 @@
 /* ****************************************************************************************************
  * 实现：子类.prototype 指向 父类实例
- * 缺点；1. 父类的引用类型属性会实例共享；2. 子类无法向超类传参；
+ * 缺点；1. 创建子类实例时无法向父类传参；
+ *      2. 父类的引用类型属性会被所有实例共享；
  ************************************************************************************************* */
 
-// 1. 定义超类型
-const SuperType = function () {};
-SuperType.prototype.sayHello = function () {
+const Animal = function () {};
+Animal.prototype.colors = ["red", "green", "blue", "yellow"];
+Animal.prototype.sayHello = function () {
   console.log("hello");
 };
-SuperType.prototype.colors = ["red", "green", "blue", "yellow"];
 
-// 2. 定义子类型
-const SubType = function () {};
-SubType.prototype = new SuperType();
+const Dog = function (name) {
+  this.name = name;
+};
+Dog.prototype = new Animal();
+Dog.prototype.bark = function () {
+  console.log(this.name + "," + "Woof! Woof!");
+};
 
-// 3. 创建子类型的实例
-const person = new SubType();
+const dog1 = new Dog("Max");
+dog1.bark();

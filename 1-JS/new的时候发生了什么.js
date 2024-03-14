@@ -1,30 +1,10 @@
-/**
- * new的原理
- */
+const myNew = function (_constructor, ...args) {
+  // 1. 创建一个新对象, 并完成原型链接
+  const inner = Object.create(_constructor.prototype);
 
-function _new(constructor, ...args) {
-  // 1. 创建一个新对象
-  const target = {};
+  // 2. 将新创建对象环境作为执行上下文，执行参数构造函数，并传入参数
+  const result = _constructor.apply(inner, args);
 
-  // 2. 原型链链接：新对象的 __proto__ 指向构造函数的 prototype
-  target.__proto__ = constructor.prototype;
-
-  // 3. 将新对象作为`this`的上下文，调用构造函数中的代码。
-  const result = constructor.apply(target, args);
-
-
-  // 4. 返回，若函数未返回其他对象，那么new表达式中的函数调用会自动返回这个新对象；
-  return result instanceof Object ? result : target;
-}
-
-function Person(name) {
-  this.name = name;
-}
-
-const a = new Person("小花");
-console.log(a.name);
-console.log(a instanceof Person);
-
-const b = _new(Person, "小草");
-console.log(b.name);
-console.log(b instanceof Person);
+  // 3. 若构造函数返回一个对象，则这个对象会成为“new”表达式的结果，否则默认返回新创建的对象
+  return result instanceof Object ? result : inner;
+};

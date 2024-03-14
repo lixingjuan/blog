@@ -1,24 +1,10 @@
-/**
- * @param {string} s
- * @param {number} k
- * @return {number}
- */
-var characterReplacement = function(s, k) {
-    if (!s) return 0
-    let codes = Array(26).fill(0)  // 记录窗口内各字符出现次数
-    let i = 0
-    let max = 0
-    for(let j = 0; j < s.length; j++){
-        let n = s[j].charCodeAt() - 65
-        codes[n] += 1
-        max = Math.max(max, codes[n])
-        if (j - i + 1 > max + k) {  // 移动左边
-            codes[ s[i].charCodeAt() - 65 ] -= 1
-            i++
-        } 
-    }
-    return s.length - i
-};
- 
+function _new(_constructor, ...args) {
+  // 1. 创建一个新对象，并完成原型链接
+  const target = Object.create(_constructor.prototype, ...args);
 
-console.log(characterReplacement("ABAB", 2) )
+  // 2. 将新对象作为上下文环境，调用构造函数并传入参数
+  const result = _constructor.apply(args);
+
+  // 3. 如果构造函数有返回&是对象，则返回该返回内容， 否则返回新对象
+  return result instanceof Object ? result : target;
+}
