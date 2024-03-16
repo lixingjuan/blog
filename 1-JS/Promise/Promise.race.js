@@ -1,14 +1,25 @@
-const PromiseRace = (arr) => {
-  const promises = arr.map((it) => Promise.resolve(it));
+class MyPromise {
+  static race(fns) {
+    return new Promise((resolve, reject) => {
+      if (!Array.isArray(fns)) {
+        return reject(new TypeError("arguments must be array"));
+      }
 
-  return new Promise((resolve, reject) => {
-    promises.forEach((fn) => {
-      fn.then(resolve, reject);
-      // ❗️❗️ Why ⬇️ doesn't work?
-      // Promise.resolve(fn).then(resolve).catch(reject);
-      // ❗️❗️因为catch是微任务，会进入微任务队列，而then的两个参数为同级同步任务
+      // const promises = fns.map((it) => Promise.resolve(it));
+      fns.forEach((fn) => {
+        Promise.resolve(fn).then(resolve, reject);
+        // 不使用 `Promise.resolve(fn).then(resolve).catch(reject);` 是因为，
+        // then(resolve, reject)只处理原始Promise的错误，而.catch, .then中的错误也会进入catch
+      });
     });
-  });
-};
+  }
+}
 
-export default PromiseRace;
+Promise.race([Promise.reject(1)]).then(
+  (res) => {
+    console.log("success", res);
+  },
+  (err) => {
+    console.log("error", err);
+  }
+);

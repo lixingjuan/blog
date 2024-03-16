@@ -5,11 +5,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "pwa-node",
+      "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Run Current File",
+      "program": "${file}",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/del.js",
       "runtimeExecutable": "/Users/lixingjuan/.nvm/versions/node/v18.13.0/bin/node"
     }
   ]

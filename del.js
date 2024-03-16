@@ -1,10 +1,32 @@
-function _new(_constructor, ...args) {
-  // 1. 创建一个新对象，并完成原型链接
-  const target = Object.create(_constructor.prototype, ...args);
-
-  // 2. 将新对象作为上下文环境，调用构造函数并传入参数
-  const result = _constructor.apply(args);
-
-  // 3. 如果构造函数有返回&是对象，则返回该返回内容， 否则返回新对象
-  return result instanceof Object ? result : target;
+/**
+ * Promise.any 的特征，
+ * 1. 检查输入，参数必须是数组
+ * 2. 检查输入，参数如果是空数组，会直接走到catch, 并却失败原因是All promises were rejected
+ * 3. 只要有一个resolve(成功或者失败)， 都会走到then;
+ * 4. 所有任务都拒绝，就会走到catch
+ */
+class MyPromise {
+  static any(promises) {
+    return new Promise((resolve, reject) => {
+      if (!Array.isArray(promises)) {
+        return reject(new TypeError("arguments must be array"));
+      }
+      if (!promises.length) {
+        new Error();
+        return reject("All promises were rejected");
+      }
+      promises.forEach((it) => {
+        Promise.resolve(it).then(resolve, resolve);
+      });
+    });
+  }
 }
+
+Promise.any([]).then(
+  (res) => {
+    console.log("成功", res);
+  },
+  (error) => {
+    console.log("失败", error);
+  }
+);

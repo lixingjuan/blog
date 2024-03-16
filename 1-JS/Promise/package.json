@@ -1,13 +1,8 @@
 {
-  "dependencies": {
-    "request": "^2.88.2"
-  },
   "devDependencies": {
     "promises-aplus-tests": "^2.1.2"
   },
   "scripts": {
-    "test": "promises-aplus-tests MyPromise",
-    "test2": "promises-aplus-tests MyPromise2",
-    "test3": "promises-aplus-tests Promise"
+    "test": "promises-aplus-tests ./promiseAdapter"
   }
 }
