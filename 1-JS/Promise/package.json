@@ -3,6 +3,10 @@
     "promises-aplus-tests": "^2.1.2"
   },
   "scripts": {
+    "jest": "jest",
     "test": "promises-aplus-tests ./promiseAdapter"
+  },
+  "dependencies": {
+    "jest": "^29.7.0"
   }
 }
