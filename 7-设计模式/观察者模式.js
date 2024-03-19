@@ -1,43 +1,32 @@
-/** Copyright © 2013-2022 DataYes, All Rights Reserved. */
+class Subject {
+  constructor() {
+    this.observer = [];
+  }
 
-// 有一家猎人工会，其中每个猎人都具有发布任务(publish)，订阅任务(subscribe)的功能
-// 他们都有一个订阅列表来记录谁订阅了自己
-// 定义一个猎人类
-// 包括姓名，级别，订阅列表
-function Hunter(name, level) {
-  this.name = name;
-  this.level = level;
-  this.list = [];
+  addObserver(val) {
+    this.observer.push(val);
+  }
+
+  removeObserver(val) {
+    this.observer = this.observer.filter((it) => it !== val);
+  }
+
+  notify() {
+    this.observer.forEach((it) => it.update());
+  }
 }
-Hunter.prototype.publish = function (money) {
-  console.log(`${this.level}猎人${this.name}寻求帮助`);
-  this.list.forEach((item, index) => {
-    item(money);
-  });
-};
-Hunter.prototype.subscribe = function (targrt, fn) {
-  console.log(`${this.level}猎人${this.name}订阅了${targrt.name}`);
-  targrt.list.push(fn);
-};
+class Observer {
+  constructor(name) {
+    this.name = name;
+  }
+  update() {
+    console.log("hello", this.name);
+  }
+}
 
-// 猎人工会走来了几个猎人
-const hunterMing = new Hunter('小明', '黄金');
-const hunterJin = new Hunter('小金', '白银');
-const hunterZhang = new Hunter('小张', '黄金');
-const hunterPeter = new Hunter('Peter', '青铜');
+const subject1 = new Subject();
 
-// Peter等级较低，可能需要帮助，所以小明，小金，小张都订阅了Peter
-hunterMing.subscribe(hunterPeter, (money) => {
-  console.log(`小明表示：${money > 200 ? '' : '暂时很忙，不能'}给予帮助`);
-});
-hunterJin.subscribe(hunterPeter, () => {
-  console.log('小金表示：给予帮助');
-});
-hunterZhang.subscribe(hunterPeter, () => {
-  console.log('小张表示：给予帮助');
-});
+subject1.addObserver(new Observer("Tom"));
+subject1.addObserver(new Observer("Jell"));
 
-// Peter遇到困难，赏金198寻求帮助
-hunterPeter.publish(198);
-
-// 猎人们(观察者)关联他们感兴趣的猎人(目标对象)，如Peter，当Peter有困难时，会自动通知给他们（观察者）
+subject1.notify();
