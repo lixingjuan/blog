@@ -1,32 +1,35 @@
+/** 最长回文字符串 */
 /**
- * Promise.any 的特征，
- * 1. 检查输入，参数必须是数组
- * 2. 检查输入，参数如果是空数组，会直接走到catch, 并却失败原因是All promises were rejected
- * 3. 只要有一个resolve(成功或者失败)， 都会走到then;
- * 4. 所有任务都拒绝，就会走到catch
+ * @param {string} s
+ * @return {string}
+ * @desc 中心扩散法，从每一个字符开始向两端扩散，找最长的
  */
-class MyPromise {
-  static any(promises) {
-    return new Promise((resolve, reject) => {
-      if (!Array.isArray(promises)) {
-        return reject(new TypeError("arguments must be array"));
-      }
-      if (!promises.length) {
-        new Error();
-        return reject("All promises were rejected");
-      }
-      promises.forEach((it) => {
-        Promise.resolve(it).then(resolve, resolve);
-      });
-    });
-  }
-}
+var longestPalindrome = function (s) {
+  if (s.length <= 1) return s;
+  let longest = "";
 
-Promise.any([]).then(
-  (res) => {
-    console.log("成功", res);
-  },
-  (error) => {
-    console.log("失败", error);
+  // !注意：奇数和偶数都要考虑
+  const centerSpread = (start, end) => {
+    while (start >= 0 && end < s.length && s[start] === s[end]) {
+      start--;
+      end++;
+    }
+    return s.substring(start + 1, end);
+  };
+
+  for (let i = 0; i < s.length; i++) {
+    const str1 = centerSpread(i, i);
+    const str2 = centerSpread(i, i + 1);
+    const curStr = str1.length > str2.length ? str1 : str2;
+    longest = longest.length > curStr.length ? longest : curStr;
   }
-);
+
+  return longest;
+};
+
+// console.log(longestPalindrome("b"));
+console.log(longestPalindrome("cbbd"));
+// console.log(longestPalindrome("bab"));
+// console.log(longestPalindrome("cbab"));
+// console.log(longestPalindrome("babad"));
+// console.log(longestPalindrome("babab"));

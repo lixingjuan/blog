@@ -16,7 +16,7 @@ https://github.com/yacan8/blog/issues/33
 
 ## 新生区
 
-新生区采用户较快的`Scavenge`算法实现: Scavenge是一种空间换时间的算法。
+新生区采用较快的`Scavenge`算法实现: Scavenge是一种空间换时间的算法。
 
 新生区又分为 `From区-激活区` 和 `To区-未激活区`两个区域。
 
