@@ -44,8 +44,6 @@
  * aabb
  */
 
-// 双指针，但是指针指向谁呢？总不能遍历L吧？ 挺多次的
-
 const readline = require("readline");
 
 const rl = readline.createInterface({

@@ -30,6 +30,7 @@
 function minTransform(s) {
   // 将字符串转换为字符数组，方便操作
   let arr = s.split("");
+
   // 遍历字符串找到第一个可以交换使字符串变小的位置
   for (let i = 0; i < arr.length - 1; i++) {
     let minChar = arr[i];
