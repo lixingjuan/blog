@@ -33,6 +33,7 @@ const rl = readline.createInterface({
   input: process.stdin, // 标 准 输 入 作 为 输 入 源
   output: process.stdout, // 标 准 输 出 作 为 输 出 源
 });
+
 // 当 从 标 准 输 入 中 读 取 到 一 行 数 据 时 触 发
 rl.on("line", (line) => {
   // 将 读 取 到 的 行 分 割 成 数 组 ，并 将 其 元 素 转 换 为 数 字
@@ -48,17 +49,25 @@ rl.on("line", (line) => {
   while (minID <= maxID) {
     // 计算中间值midID
     const midID = minID + Math.floor((maxID - minID) / 2);
+
     // 计算在[1,midID]范围内不能去国家X的员工数量
+    // !!为什么这么计算？想象把员工例如[1,2,3,4,5,6]，x是3， 把1-6分成3分，每一段的最后一个数字都是3的倍数
     const excludedX = Math.floor(midID / x);
+
     // 计算在[1,midID]范围内不能去国家Y的员工数量
     const excludedY = Math.floor(midID / y);
+
     // 计算在[1,midID]范围内既不能去X国也不能去Y国的员工数量
+    // !! 这个处理很重要，x和y的最小公倍数
     const excludedBoth = Math.floor(midID / (x * y));
+
     // 计算国家X实际需要的员工数量
     const neededX = Math.max(0, cntX - (excludedY - excludedBoth));
+
     // 计算国家Y实际需要的员工数量
     const neededY = Math.max(0, cntY - (excludedX - excludedBoth));
-    // 计算 总 共 不 能 使 用 的 员 工 数 量
+
+    // 计算总共不能使用的员工数量
     const totalExcluded = midID - excludedX - excludedY + excludedBoth;
 
     // 判断当前的中间值是否满足条件

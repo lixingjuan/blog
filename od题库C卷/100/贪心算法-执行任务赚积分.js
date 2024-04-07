@@ -50,31 +50,6 @@
  * 共获得 9 个积分
  */
 
-// function maxScore(N, T, tasks) {
-//   // 先按照最后截止时间进行排序
-//   const sorted = [...tasks].sort((a, b) => a[0] - b[0]);
-// }
-
-// // 示例测试
-// const N1 = 4,
-//   T1 = 3,
-//   tasks1 = [
-//     [1, 2],
-//     [1, 3],
-//     [1, 4],
-//     [1, 5],
-//   ];
-// console.log(maxScore(N1, T1, tasks1)); // 输出: 5
-
-// const N2 = 4,
-//   T2 = 3,
-//   tasks2 = [
-//     [1, 2],
-//     [1, 3],
-//     [1, 4],
-//     [3, 5],
-//   ];
-// console.log(maxScore(N2, T2, tasks2)); // 输出: 9
 function maxScore(N, T, tasks) {
   // 初始化dp数组，dp[t]表示在时间t内可以获得的最大积分
   let dp = Array(T + 1).fill(0);
@@ -86,6 +61,7 @@ function maxScore(N, T, tasks) {
     for (let t = SLA; t > 0; t--) {
       if (t <= SLA) {
         // 如果当前时间小于等于任务的最晚完成时间
+        // 则更新时间t内可以获得的最大积分：Math.max(当前任务做可以获得的积分, 当前任务不做可以获得的积分)
         dp[t] = Math.max(dp[t], dp[t - 1] + V);
       }
     }
@@ -96,18 +72,21 @@ function maxScore(N, T, tasks) {
 }
 
 // 示例测试
-const tasks1 = [
-  [1, 2],
-  [1, 3],
-  [1, 4],
-  [1, 5],
-];
-console.log(maxScore(4, 3, tasks1)); // 应该输出 5
 
-const tasks2 = [
-  [1, 2],
-  [1, 3],
-  [1, 4],
-  [3, 5],
-];
-console.log(maxScore(4, 3, tasks2)); // 应该输出 9
+console.log(
+  maxScore(4, 3, [
+    [1, 2],
+    [1, 3],
+    [1, 4],
+    [1, 5],
+  ]) === 5
+);
+
+console.log(
+  maxScore(4, 3, [
+    [1, 2],
+    [1, 3],
+    [1, 4],
+    [3, 5],
+  ]) === 9
+);

@@ -32,10 +32,14 @@
 const demo = (arr) => {
   let resultArr = [];
   let maxCount = 0;
+
+  // !! 组装映射关系 Map<数字, 出现次数>
   const tempMap = arr.reduce((pre, cur) => pre.set(cur, (pre.get(cur) || 0) + 1), new Map());
   const entries = tempMap.entries();
+
   for (const iterator of entries) {
     const [num, count] = iterator;
+    // !! 理解这个过程很重要！如果找到了新的出现最多的，清空众数数组，重新开始
     if (count > maxCount) {
       resultArr = [];
       resultArr.push(num);
@@ -49,6 +53,8 @@ const demo = (arr) => {
   resultArr.sort((a, b) => a - b);
 
   const resultLen = resultArr.length;
+
+  // !! 处理中位数的过程，要考虑数组长度奇数、偶数的情况
   // 处理数组长度为偶数的情况
   if (resultLen % 2 === 0) {
     const mid1 = resultArr[resultLen / 2 - 1];
@@ -60,5 +66,4 @@ const demo = (arr) => {
   }
 };
 
-// console.log(demo([10, 11, 21, 19, 21, 17, 21, 16, 21, 18, 15]));
 console.log(demo([2, 1, 5, 4, 3, 3, 9, 2, 7, 4, 6, 2, 15, 4, 2, 4]));

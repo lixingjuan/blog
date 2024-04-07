@@ -34,3 +34,46 @@
  * 说明：
  * 编号为1、2号的人员为确诊病例1号与0号有接触，0号与3号有接触，2号54号有接触。所以，需要做核酸检测的人是0号、3号、4号,总计3人要进行核酸检测。
  */
+
+const demo = (target, grid) => {
+  const targetPerson = target.split(",").map(Number);
+  const n = grid[0].length;
+  const resultSet = new Set();
+
+  // 定义 DFS 函数，用于从指定起始点开始遍历所有接触的人员
+  // 参数i是行，j表示列
+  const dfs = (i) => {
+    // 遍历每一列，找所有符合条件的：密接&没有处理过该元素
+    for (let j = 0; j < n; j++) {
+      if (grid[i][j] === 1 && !resultSet.has(j)) {
+        resultSet.add(j);
+        // 找到密接，需要对密接再进行深搜
+        dfs(j);
+      }
+    }
+  };
+
+  // 处理确诊人员之间的接触情况
+  targetPerson.forEach((person) => {
+    dfs(person); // 开始 DFS 遍历所有与该确诊人员接触的人员
+  });
+
+  // 移除已经确诊的人员
+  targetPerson.forEach((person) => {
+    resultSet.delete(person);
+  });
+
+  // 返回结果集中的人数
+  return resultSet.size;
+};
+
+// 示例调用
+console.log(
+  demo("1,2", [
+    [1, 1, 0, 1, 0],
+    [1, 1, 0, 0, 0],
+    [0, 0, 1, 0, 1],
+    [1, 0, 0, 1, 0],
+    [0, 0, 1, 0, 1],
+  ])
+);
