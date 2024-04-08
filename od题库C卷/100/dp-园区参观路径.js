@@ -35,6 +35,7 @@ function countPaths(grid) {
   for (let i = 1; i < rows; i++) {
     dp[i][0] = grid[i][0] === 0 ? dp[i - 1][0] : 0;
   }
+
   for (let j = 1; j < cols; j++) {
     dp[0][j] = grid[0][j] === 0 ? dp[0][j - 1] : 0;
   }
