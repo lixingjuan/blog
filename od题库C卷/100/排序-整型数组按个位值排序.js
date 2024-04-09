@@ -15,6 +15,12 @@
  * 输出: 1,-21,11,-101,2,22,42,32,5,55,7,8
  */
 
+/**
+ * 考察重点：
+ * 1. 绝对值
+ * 2. 获取个位数的方法：val % 10
+ */
+
 const demo = (arr) => {
   const decorated = arr.map((it, index) => ({ value: it, index }));
 

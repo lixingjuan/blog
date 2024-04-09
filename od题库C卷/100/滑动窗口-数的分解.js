@@ -15,6 +15,12 @@
  * 21=10+11
  */
 
+/**
+ * 考察点：
+ * 1. 边界条件
+ * 2. 滑动窗口的逻辑
+ */
+
 const demo = (target) => {
   let left = 1;
   let right = 1;
@@ -22,6 +28,7 @@ const demo = (target) => {
 
   const result = [];
 
+  // !!
   while (left < target / 2) {
     if (sum < target) {
       right++;
@@ -30,10 +37,7 @@ const demo = (target) => {
       sum -= left;
       left++;
     } else {
-      result.push({
-        start: left,
-        end: right,
-      });
+      result.push({ start: left, end: right });
 
       sum -= left;
       left++;

@@ -3,12 +3,14 @@
  * 某公司部门需要派遣员工去国外做项目。
  * 现在，代号为x的国家和代号为y的国家分别需要 cntx 名和 cnty 名员工，部门每个员工有一个员工号(1,2,.)，工号连续，从1开始。
  * 部长派遣员工的规则:
- *    规则1: 从 1，k中选择员工派遣出去
+ *    规则1: 从 1到k中选择员工派遣出去
  *    规则2: 编号为 x 的倍数的员工不能去 x 国，编号为 y 的倍数的员工不能去 y 国问题
  * 找到最小的k，使得可以将编号在[1,k]中的员工分配给x国和y国，且满足x国和y国的需求输入描述
+ *
  * 四个整数 x,y,cntx,cnty。
- * 2<x<y< 30000
- * x和y 一定是 质数Q
+ * 2 < x < y < 30000
+ * x 和 y 一定是质数Q
+ *
  * 1 < cntx, cnty < 10^9
  * cntx + cnty< 10^9
  *
@@ -28,15 +30,7 @@
  * 输出的5表示k最小为5
  */
 
-const readline = require("readline");
-const rl = readline.createInterface({
-  input: process.stdin, // 标 准 输 入 作 为 输 入 源
-  output: process.stdout, // 标 准 输 出 作 为 输 出 源
-});
-
-// 当 从 标 准 输 入 中 读 取 到 一 行 数 据 时 触 发
-rl.on("line", (line) => {
-  // 将 读 取 到 的 行 分 割 成 数 组 ，并 将 其 元 素 转 换 为 数 字
+const demo = (line) => {
   const [x, y, cntX, cntY] = line.split(" ").map(Number);
 
   // minID是满足条件的最小员工ID，初始值设置为两个国家需要的员工总数
@@ -81,4 +75,6 @@ rl.on("line", (line) => {
   }
   // 输 出 满 足 条 件 的 最 小 员 工 ID
   console.log(minID);
-});
+};
+
+console.log(demo(2, 3, 3, 1));

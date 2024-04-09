@@ -45,6 +45,7 @@
 function minInfectionTime(N, M, paths, virus) {
   // 建立图的邻接表表示
   let graph = Array.from({ length: N + 1 }, () => []);
+
   paths.forEach(([i, j, t]) => {
     graph[i].push([j, t]);
   });
@@ -60,11 +61,13 @@ function minInfectionTime(N, M, paths, virus) {
 
   for (let count = 0; count < N; count++) {
     let u = -1;
+
     for (let i = 1; i <= N; i++) {
       if (!visited[i] && (u === -1 || dist[i] < dist[u])) {
         u = i;
       }
     }
+
     if (dist[u] === Infinity) break; // 未访问的节点中距离都是无穷大
     visited[u] = true;
     for (let [v, time] of graph[u]) {

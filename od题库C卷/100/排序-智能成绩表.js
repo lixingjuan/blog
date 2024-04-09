@@ -29,6 +29,12 @@
  * 按shuxue成绩排名，依次是xiaohua、fangfang、minmin
  */
 
+/**
+ * 考察重要：
+ * 1.字母比较方法：a.localeCompare(b)
+ * 2.数据组装方式
+ */
+
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -44,6 +50,7 @@ let students = []; // 学生信息数组
 
 rl.on("line", function (line) {
   lineCount++;
+
   if (lineCount === 1) {
     // 1. 获取学生数量 和 科目数量
     const [studentStr, subjectStr] = line.split(" ");

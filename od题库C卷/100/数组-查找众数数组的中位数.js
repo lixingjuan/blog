@@ -54,16 +54,38 @@ const demo = (arr) => {
 
   const resultLen = resultArr.length;
 
-  // !! 处理中位数的过程，要考虑数组长度奇数、偶数的情况
-  // 处理数组长度为偶数的情况
-  if (resultLen % 2 === 0) {
+  // !! 注意：处理中位数要考虑数组长度奇数、偶数的情况
+  // !! 处理数组长度为偶数的情况
+  const isEven = resultLen % 2 === 0;
+
+  if (isEven) {
     const mid1 = resultArr[resultLen / 2 - 1];
     const mid2 = resultArr[resultLen / 2];
     return (mid1 + mid2) / 2; // 正确处理中位数
-  } else {
-    // 处理数组长度为奇数的情况
-    return resultArr[Math.floor(resultLen / 2)];
   }
+
+  // 处理数组长度为奇数的情况
+  return resultArr[Math.floor(resultLen / 2)];
 };
 
-console.log(demo([2, 1, 5, 4, 3, 3, 9, 2, 7, 4, 6, 2, 15, 4, 2, 4]));
+console.log(demo([2, 1, 5, 4, 3, 3, 9, 2, 7, 4, 6, 2, 15, 4, 2, 4]) === 3);
+// 测试用例 1: 给定示例1
+console.log(demo([10, 11, 21, 19, 21, 17, 21, 16, 21, 18, 15]) === 21);
+
+// 测试用例 2: 给定示例2
+console.log(demo([2, 1, 5, 4, 3, 3, 9, 2, 7, 4, 6, 2, 15, 4, 2, 4]) === 3);
+
+// 测试用例 3: 给定示例3
+console.log(
+  demo([5, 1, 5, 3, 5, 2, 5, 5, 7, 6, 7, 3, 7, 11, 7, 55, 7, 9, 98, 9, 17, 9, 15, 9, 9, 1, 39]) ===
+    7
+);
+
+// 测试用例 4: 只有一个数字，它自身就是众数
+console.log(demo([100]) === 100);
+
+// 测试用例 5: 所有数字都是众数
+console.log(demo([1, 1, 2, 2]) === 1.5);
+
+// 测试用例 6: 无法构成众数
+console.log(demo([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) === 5.5);

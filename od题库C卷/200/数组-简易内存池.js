@@ -53,18 +53,6 @@
  * 第五条指令，申请10字节，0~9地址内存空间足够，返回首地址0
  */
 
-// const demo = (commands) => {
-//   // 记录已经被用掉的内存
-//   const hadBeenUsedSet = new Set();
-//   const stack = [];
-//   commands.forEach((cmd) => {
-//     const [operator, size] = cmd.split("=");
-//     // 申请内存，线判断
-//   });
-// };
-
-// console.log(demo(["REQUEST=10", "REQUEST=20", "RELEASE=0", "REQUEST=20", "REQUEST=10"]));
-
 class SimpleMemoryPool {
   constructor(size) {
     this.totalSize = size;
@@ -122,4 +110,4 @@ function handleCommands(commands) {
   }
 }
 
-handleCommands(["REQUEST=10", "REQUEST=20", "RELEASE=0", "REQUEST=20", "REQUEST=10"]);
+console.log(handleCommands(["REQUEST=10", "REQUEST=20", "RELEASE=0", "REQUEST=20", "REQUEST=10"]));

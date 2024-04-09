@@ -43,7 +43,12 @@
  * 最大2个数[4,3] 最小2个数[3,2], 有重叠输出为-1
  */
 
+/** 考点：数组去重 */
+
+const calcSum = (arr) => arr.reduce((pre, cur) => (pre += cur), 0);
+
 const demo = (arr, count) => {
+  // !! 判断重复
   const uniqueArr = [...new Set(arr)];
   if (uniqueArr.length < count * 2) {
     return -1;
@@ -56,9 +61,10 @@ const demo = (arr, count) => {
   const small = sorted.slice(0, count);
   const great = sorted.slice(-count);
 
-  const calcSum = (arr) => arr.reduce((pre, cur) => (pre += cur), 0);
   return calcSum(small) + calcSum(great);
 };
+
 console.log(demo([3, 2, 3, 4, 2], 2) === -1);
 console.log(demo([95, 88, 83, 64, 100], 5) === -1);
 console.log(demo([95, 88, 83, 64, 100], 2) === 342);
+console.log(demo([95, 88, 83, 64, 100], 3) === -1);

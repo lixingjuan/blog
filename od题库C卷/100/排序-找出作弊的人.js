@@ -4,11 +4,13 @@
  * 过滤的规则为:找到分差最小的员工ID对(p1,p2)列表,要求p1<p2员工个数,取值范国:0<n<100000
  * 员工ID为整数,取值范围:0<=n<=100000
  * 考试成绩为整数,取值范围:0<=score<=300
- * 输入描述
+ *
+ * @输入描述
  * 员工的ID及考试分数
  *
  * @输出描述
- * 分差最小的员工ID对(p1,p2)列表,要求p1<p2。每一行代表一个集合,每个集合内的员工ID按顺序排列,多行结果也以员工对中p1值大小升序排列Q(如果p1相同则p2升序)。
+ * 分差最小的员工ID对(p1,p2)列表,要求p1<p2。
+ * 每一行代表一个集合,每个集合内的员工ID按顺序排列,多行结果也以员工对中p1值大小升序排列Q(如果p1相同则p2升序)。
  *
  * @示例1
  * 输入:
@@ -27,7 +29,7 @@
  */
 
 const demo = (employees) => {
-  // 根据分数排序，如果分数相同则根据ID排序
+  // 1. 先根据分数排序，如果分数相同则根据ID排序
   employees.sort((a, b) => a[1] - b[1] || a[0] - b[0]);
 
   let minDiff = Infinity;
@@ -38,9 +40,10 @@ const demo = (employees) => {
     const [curId, curScore] = employees[i];
     const [nextId, nextScore] = employees[i + 1];
 
-    // 如果找到更小的，则清空数组
+    // !! 这个很重要如果找到更小的，则清空数组
     if (nextScore - curScore < minDiff) {
-      pairs.length = 0; // 清空数组
+      // !!清空数组
+      pairs.length = 0;
       minDiff = diff;
       pairs.push([curId, nextId]);
     } else if (diff === minDiff) {

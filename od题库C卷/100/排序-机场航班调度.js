@@ -18,6 +18,8 @@
  * CA3385,CZ6678,DU7523,HK4456,MK0987,SC6508
  */
 
+console.log(["$", "*", "&", "a", "b"].sort((a, b) => a.localeCompare(b)));
+
 const demo = (line) => {
   let order = "$&*0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   return line
@@ -28,14 +30,21 @@ const demo = (line) => {
         if (diff !== 0) {
           return diff;
         }
-        return s1.slice(2) - s2.slice(2);
+        return parseInt(s1.slice(2), 10) - parseInt(s2.slice(2), 10);
       }
     })
     .join(",");
 };
 
+/**
+ * !! 错误示例，因为
+ * console.log(["$", "*", "&", "a", "b"].sort((a, b) => a.localeCompare(b)));
+ * === [ '*', '&', '$', 'a', "b" ]
+ * 题目要求：a$&*
+ */
 const demo2 = (line) => {
   const arr = line.split(",");
+
   return arr
     .sort((a, b) => {
       if (a.slice(0, 2) === b.slice(0, 2)) {
@@ -46,5 +55,24 @@ const demo2 = (line) => {
     .join(",");
 };
 
-console.log(demo("CA3385,CZ6678,SC6508,DU7523,HK4456,MK09"));
-// console.log("CA3385".split(/[]/));
+console.log(
+  demo("CA3385,CZ6678,SC6508,DU7523,HK4456,MK09") === "CA3385,CZ6678,DU7523,HK4456,MK09,SC6508"
+);
+
+// 测试用例 1: 基本测试
+console.log(
+  demo("CA3385,CZ6678,SC6508,DU7523,HK4456,MK0987") === "CA3385,CZ6678,DU7523,HK4456,MK0987,SC6508"
+);
+
+// 测试用例 2: 特殊字符排序
+console.log(demo("$A1234,*B5678,0C9012"));
+console.log(demo2("$A1234,*B5678,0C9012") === "$A1234,*B5678,0C9012");
+
+// 测试用例 3: 相同航空公司缩写，不同航班信息
+console.log(demo("CA1234,CA2345,CA3456") === "CA1234,CA2345,CA3456");
+
+// 测试用例 4: 单个航班号
+console.log(demo("CA3385") === "CA3385");
+
+// 测试用例 5: 不同航空公司缩写排序
+console.log(demo("BA1234,AA1234") === "AA1234,BA1234");

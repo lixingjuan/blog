@@ -1,8 +1,9 @@
 /**
  *
  * @题目描述
- * 构成指定长度字符串的个数 (本题分值100)
+ * 构成指定长度字符串的个数
  * 给定 M（0 < M ≤ 30）个字符（a-z），从中取出任意字符（每个字符只能用一次）拼接成长度为 N（0 < N ≤ 5）的字符串，
+ *
  * 要求相同的字符不能相邻，计算出给定的字符列表能拼接出多少种满足条件的字符串，
  * 输入非法或者无法拼接出满足条件的字符串则返回0。
  *
@@ -29,29 +30,37 @@
  * 可以构成：ab ac ba bc ca cb
  */
 
+/**
+ * 考点：
+ * 1. 回溯的思路：每个字符串作为开头，可以构建多少种，当N===0,表示构建成功
+ * 2. 数组去重
+ */
 function countValidStrings(chars, N) {
   let count = 0;
+  const uniqueChars = [...new Set(chars)]; // 确保字符的唯一性
 
-  function backtrack(N, prevChar) {
+  function backtrack(N, path) {
+    console.log(path);
     if (N === 0) {
       count++;
       return;
     }
-    for (let char of chars) {
-      if (char !== prevChar) {
-        // 确保相同的字符不相邻
-        backtrack(N - 1, char);
+
+    for (let i = 0; i < uniqueChars.length; i++) {
+      const curChar = uniqueChars[i];
+      if (curChar !== path[path.length - 1]) {
+        backtrack(N - 1, path + uniqueChars[i]);
       }
     }
   }
 
-  backtrack(N, ""); // 以空字符开始，表示没有前一个字符
+  backtrack(N, "");
   return count;
 }
 
-// 测试用例
-console.log(countValidStrings(["a", "b"], 2)); // 2: "ab", "ba"
-console.log(countValidStrings(["a", "b", "c"], 2)); // 6: "ab", "ac", "ba", "bc", "ca", "cb"
-console.log(countValidStrings(["a", "b", "c"], 3)); // 12: "aba", "abc", "acb", "bac", "bca", "cab", "cba"...
-console.log(countValidStrings(["a", "b", "c", "d"], 3)); // 36
-console.log(countValidStrings(["a", "b", "c", "d", "e"], 1)); // 5: "a", "b", "c", "d", "e"
+// 调整后的测试用例
+console.log(countValidStrings("ab", 2) === 2);
+console.log(countValidStrings("abc", 2) === 6);
+console.log(countValidStrings("abc", 3) === 12);
+console.log(countValidStrings("abcd", 3) === 36);
+console.log(countValidStrings("abcde", 1) === 5);

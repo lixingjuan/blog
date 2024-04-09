@@ -12,19 +12,9 @@
 
 const demo = (arr) => {
   const innerMap = arr.reduce((pre, cur, index) => {
-    if (pre.has(cur)) {
-      const item = pre.get(cur);
-      return pre.set(cur, {
-        ...item,
-        count: item.count + 1,
-      });
-    } else {
-      return pre.set(cur, {
-        count: 1,
-        appearIndex: index,
-        value: cur,
-      });
-    }
+    const count = (pre.get(cur)?.count || 0) + 1;
+    const appearIndex = pre.has(cur) ? pre.has(cur).appearIndex : index;
+    return pre.set(cur, { value: cur, appearIndex, count });
   }, new Map());
 
   return [...innerMap.values()]
@@ -41,4 +31,4 @@ const demo = (arr) => {
 };
 
 console.log(demo([1, 2, 3, 4]));
-console.log(demo([1, 3, 3, 2, 4, 4, 4, 5]));
+console.log(demo([1, 3, 3, 2, 4, 4, 5]));

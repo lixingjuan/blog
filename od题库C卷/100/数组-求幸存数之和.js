@@ -25,31 +25,43 @@
  */
 
 /**
- *
- * @param arr  正整数数列，长度范围 [1,10000]
+ * 考察点：环形处理数组
+ */
+
+/**
+ * @计算幸存数之和
+ * @param nums  正整数数列，长度范围 [1,10000]
  * @param jump  跳数，范围 [1,10000]
  * @param survivorNum  幸存数量，范围 [1,10000]
  * @return 幸存数之和
  */
-
-// 计算幸存数之和
 function calculateSurvivorsSum(nums, jump, left) {
-  // 如果幸存数量大于等于数组长度，则直接返回数组元素之和
+  // 1. 如果幸存数量大于等于数组长度，则直接返回数组元素之和
   if (left >= nums.length) {
     return nums.reduce((acc, val) => acc + val, 0);
   }
+
   // 使用数组存储元素，方便删除操作
-  let list = nums.slice();
-  // 初始化起跳点索引为8
-  let index = 0;
+  let list = [...nums];
+
+  // 初始化起跳点索引为
+  let pointer = 0;
+
   //当列表大小大于幸存数量时，执行删除操作
   while (list.length > left) {
-    // 计算下一个要删除元素的索引
-    index = (index + jump + 1) % list.length; // 删除计算出的索引处的元素
-    list.splice(index, 1);
-    // 由于删除元素后，列表会缩短，下一个起跳点应当向前移动一位
-    index = index - 1;
+    // !! 计算下一个要删除元素的索引
+    pointer = (pointer + jump + 1) % list.length; // 删除计算出的索引处的元素
+
+    // !! 重点：处理被敲掉的元素
+    list.splice(pointer, 1);
+
+    /**
+     * !! 重点：处理下一步的index
+     * !! 由于删除元素后，列表会缩短，下一个起跳点应当向前移动一位
+     */
+    pointer = pointer - 1;
   }
+
   //计算并返回剩余元素之和
   return list.reduce((acc, val) => acc + val, 0);
 }

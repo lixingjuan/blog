@@ -62,8 +62,10 @@ const demo = (arr, totalMoney) => {
   let sum = 0;
   let maxCount = 0;
 
+  // 一直右指针++，扩大窗口
   for (let right = 0; right < arr.length; right++) {
     sum += arr[right];
+    // 若当前窗口的宝石价值大于我们总钱，需要缩小窗口直到买得起
     while (sum > totalMoney) {
       sum -= arr[left];
       left++;
@@ -73,4 +75,23 @@ const demo = (arr, totalMoney) => {
   return maxCount;
 };
 
-console.log(demo([8, 4, 6, 3, 1, 6, 7], 10));
+// 测试用例 1: 基本情况
+console.log(demo([8, 4, 6, 3, 1, 6, 7], 10) === 3); // 输出：3
+
+// 测试用例 2: 没有宝石的情况
+console.log(demo([], 1) === 0); // 输出：0
+
+// 测试用例 3: 可以购买所有宝石
+console.log(demo([6, 1, 3, 1, 8, 9, 3, 2, 4], 15) === 4); // 输出：4
+
+// 测试用例 4: 持有的钱无法购买任何宝石
+console.log(demo([2, 2, 2, 2, 2], 1) === 0); // 输出：0
+
+// 测试用例 5: 持有的钱恰好可以购买所有宝石
+console.log(demo([1, 2, 3, 4], 10) === 4); // 输出：4
+
+// 测试用例 6: 宝石价格不连续
+console.log(demo([1, 3, 2, 5, 1], 6) === 3); // 输出：3
+
+// 测试用例 7: 最大购买数出现在数组中间
+console.log(demo([1, 2, 5, 2, 1, 2, 1], 5) === 3); // 输出：3

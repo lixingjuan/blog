@@ -44,21 +44,23 @@
 
 const demo = (words, chars) => {
   let count = 0;
-  // 提供一个字符串，统计其中每个字符出现的次数，然后返回一个Map
+
+  // 函数，根据提供一个字符串，统计其中每个字符出现的次数，然后返回一个Map<char, 出现次数>
   const calcCharCountMap = (char) =>
     [...char].reduce((pre, cur) => pre.set(cur, (pre.get(cur) || 0) + 1), new Map());
 
   words.forEach((it) => {
-    // 统计每个单词中，每个字符出现的次数
+    // 统计该单词中，每个字符出现的次数Map
     const innerCharCountMap = calcCharCountMap(it);
-    // 计算每个
+    // 我们拥有的字符串的Map(!!每次都要重新计算，因为每个循环都会直接修改这个Map)
     const targetCharCountMap = calcCharCountMap(chars);
 
     for (const iterator of innerCharCountMap.entries()) {
       const [char, count] = iterator;
+
       // 需要问号的数量
       const needQuestionMarkCount = count - (targetCharCountMap.get(char) || 0);
-
+      // 如果需要问号（问号会一直消耗）
       if (needQuestionMarkCount > 0) {
         // 当前可用问号的数量
         const availableQuestionMarkCount = targetCharCountMap.get("?") || 0;
@@ -76,5 +78,24 @@ const demo = (words, chars) => {
   return count;
 };
 
-console.log(demo(["hello", "world", "cloud"], "welldonehohneyr")); // 期望输出: 2
-console.log(demo(["cat", "bt", "hat", "tree"], "atach??")); // 期望输出: 3
+console.log(demo(["hello", "world", "cloud"], "welldonehohneyr") === 2);
+
+console.log(demo(["cat", "bt", "hat", "tree"], "atach??") === 3);
+
+// 测试用例 1: 确定可以构成的单词数量
+console.log(demo(["cat", "bt", "hat", "tree"], "atach??") === 3);
+
+// 测试用例 2: 不使用万能字符也可以构成的单词
+console.log(demo(["apple", "orange", "pear"], "aelppgorane") === 3);
+
+// 测试用例 3: 必须使用万能字符才能构成的单词
+console.log(demo(["dog", "cat", "cow"], "acod??w") === 3);
+
+// 测试用例 4: 万能字符不够用，无法构成所有单词
+console.log(demo(["mouse", "rat", "bat"], "omu?eb") === 1);
+
+// 测试用例 5: chars 中没有万能字符 "?"
+console.log(demo(["hello", "world", "leetcode"], "welldonehoneyr") === 2);
+
+// 测试用例 6: 单词比chars长，无法构成
+console.log(demo(["impossible", "words"], "short") === 0);

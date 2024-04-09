@@ -1,7 +1,7 @@
 /**
  * @题目描述
  * 给定两个字符串，分别为字符串A与字符串B。
- * 例如A字符串为ABCABBA，B字符串为CBABAC可以得到下图m*n的二维数组，定义原点为(0, 0)，终点为(m, n)，水平与垂直的每一条边距离为1，映射成坐标系如下图。
+ * 例如A字符串为ABCABBA，B字符串为CBABAC可以得到下图 m*n 的二维数组，定义原点为(0, 0)，终点为(m, n)，水平与垂直的每一条边距离为1，映射成坐标系如下图。
  * 从原点(0, 0)到(0, A)为水平边，距离为1，从(0, A)到(A, C)为垂直边，距离为1；
  *
  * 假设两个字符串同一位置的两个字符相同则可以作一个斜边，如(A, C)到(B, B)最短距离为斜边，距离同样为1。
@@ -34,17 +34,18 @@
  */
 
 function shortestPath(A, B) {
-  let m = A.length;
-  let n = B.length;
-  let dp = Array.from(Array(m + 1), () => Array(n + 1).fill(0));
+  let rowNum = A.length;
+  let colNum = B.length;
+
+  let dp = Array.from(Array(rowNum + 1), () => Array(colNum + 1).fill(0));
 
   // 初始化边界条件
-  for (let i = 0; i <= m; i++) dp[i][0] = i;
-  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  for (let i = 0; i <= rowNum; i++) dp[i][0] = i;
+  for (let j = 0; j <= colNum; j++) dp[0][j] = j;
 
   // 动态规划计算
-  for (let i = 1; i <= m; i++) {
-    for (let j = 1; j <= n; j++) {
+  for (let i = 1; i <= rowNum; i++) {
+    for (let j = 1; j <= colNum; j++) {
       // 如果字符窜匹配
       if (A[i - 1] === B[j - 1]) {
         dp[i][j] = dp[i - 1][j - 1] + 1;
@@ -55,9 +56,8 @@ function shortestPath(A, B) {
     }
   }
 
-  return dp[m][n];
+  return dp[rowNum][colNum];
 }
 
 // 测试示例
 console.log(shortestPath("ABC", "ABC")); // 输出：3
-// console.log(shortestPath("ABCABBA", "CBABAC")); // 输出：9

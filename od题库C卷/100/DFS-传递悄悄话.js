@@ -1,6 +1,7 @@
 /**
  * @题意
- * 给定一个二叉树，每个节点上站着一个人，节点数字表示父节点到该节点传递悄悄话需要花费的时间。初始时，根节点所在位置的人有一个悄悄话想要传递给其他人，求二又树所有节点上的，都接收到悄悄话花费的时间。
+ * 给定一个二叉树，每个节点上站着一个人，节点数字表示父节点到该节点传递悄悄话需要花费的时间。
+ * 初始时，根节点所在位置的人有一个悄悄话想要传递给其他人，求二又树所有节点上的，都接收到悄悄话花费的时间。
  *
  * @输入
  * 给定一叉树
@@ -19,17 +20,24 @@
  * （冷笑话：整红薯要10分钟，蒸鸡蛋要5分钟，蒸一个两个红薯一个鸡蛋要多久？）
  * */
 
+/**
+ * 考察店：
+ * 1. 根节点索引：0
+ * 2. 父子节点的索引关系：
+ *    leftChildIndex = 2 * parentIndex + 1;
+ *    rightChildIndex = 2 * parentIndex + 2;
+ */
 function whisperTime(arr) {
   let maxTime = 0; // 用于记录所有节点接收到悄悄话的最长时间
 
-  function dfs(idx, parentNodeTime) {
-    // 检查当前节点是否存在
+  function dfs(idx, toParentNodeTime) {
+    // !! 检查是否超边界，检查当前节点是否存在
     if (idx >= arr.length || arr[idx] === -1) return;
 
-    // 当前节点的时间 = 父节点时间 + 当前节点的值
-    let newTime = parentNodeTime + arr[idx];
+    // !! 从根节点到当前节点的时间 = 到达父节点时间 + 父节点到当前节点的时间
+    let newTime = toParentNodeTime + arr[idx];
 
-    // 更新最长时间
+    // !! 更新最长时间的实际，在每次继续dfs之前
     maxTime = Math.max(maxTime, newTime);
 
     // 继续深入左右子节点

@@ -28,12 +28,13 @@ const demo = (seats) => {
   let maxCount = 0; // 最多还能坐下多少名观众
 
   for (let i = 0; i < seats.length; i++) {
-    // 检查当前位置是否为空，且前后位置也必须为空或不存在（即边界情况）
-    if (
+    // !! 当前位置可以坐的条件：当前位置空 && （且前后位置也必须为空 || 不存在（即数组两端））
+    const canSit =
       seats[i] === 0 &&
       (i === 0 || seats[i - 1] === 0) &&
-      (i === seats.length - 1 || seats[i + 1] === 0)
-    ) {
+      (i === seats.length - 1 || seats[i + 1] === 0);
+
+    if (canSit) {
       maxCount++; // 可以坐人
       seats[i] = 1; // 更新位置状态为已坐人
     }
