@@ -37,15 +37,18 @@
  */
 
 function maxEarnings(T, N, travelDays, earnings) {
-  // 初始化DP数组，所有值设为0
+  // 初始化二维DP数组，所有值设为0
   const dp = Array.from({ length: N + 1 }, () => Array(T + 1).fill(0));
 
   // 计算旅行所需的总天数
   const totalTravelDays = travelDays.reduce((acc, val) => acc + val, 0);
 
+  // 可以卖唱的天数
+  const canEarnDays = T - totalTravelDays;
+
   // 填充DP表
   for (let i = 1; i <= N; i++) {
-    for (let j = 1; j <= T - totalTravelDays; j++) {
+    for (let j = 1; j <= canEarnDays; j++) {
       // 在当前城市不卖唱的情况
       dp[i][j] = dp[i - 1][j];
 
@@ -66,37 +69,26 @@ function maxEarnings(T, N, travelDays, earnings) {
   }
 
   // 返回最大收益
-  return dp[N][T - totalTravelDays];
+  return dp[N][canEarnDays];
 }
 
-// 示例
-const T = 10;
-const N = 2;
-const travelDays = [1, 1, 2];
-const earnings = [
-  [120, 20],
-  [90, 10],
-];
+console.log(
+  maxEarnings(
+    10,
+    2,
+    [1, 1, 2],
+    [
+      [120, 20],
+      [90, 10],
+    ]
+  )
+);
 
-console.log(maxEarnings(T, N, travelDays, earnings));
-
-// 测试用例 1：边界条件
-// 假设只有1天时间到达，没有时间卖唱。
-const T1 = 1;
-const N1 = 1;
-const travelDays1 = [1];
-const earnings1 = [[100, 20]];
-
-console.log(maxEarnings(T1, N1, travelDays1, earnings1)); // 应该输出 0，因为没有时间卖唱。
+console.log(maxEarnings(1, 1, [1], [[100, 20]])); // 应该输出 0，因为没有时间卖唱。
 
 // 测试用例 2：只有一个城市
 // 假设有足够的时间在一个城市停留并卖唱。
-const T2 = 5;
-const N2 = 1;
-const travelDays2 = [2, 1]; // 2天到达，1天返回
-const earnings2 = [[50, 10]]; // 每天收益递减10
-
-console.log(maxEarnings(T2, N2, travelDays2, earnings2)); // 应该输出最大可能的收益
+console.log(maxEarnings(5, 1, [2, 1], [[50, 10]])); // 应该输出最大可能的收益
 
 /**
  * 测试用例 3：时间紧迫

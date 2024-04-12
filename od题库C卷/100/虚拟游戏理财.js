@@ -42,18 +42,18 @@
  * 伪代码如下:
  * 1.初始化最大回报值为0.
  * 2.遍历所有理财产品:
- *   a.如果单个产品的风险值和投资额均不超过限制，考虑其回报值,
- *   b.更新最大回报值。
+ *     a.如果单个产品的风险值和投资额均不超过限制，考虑其回报值,
+ *     b.更新最大回报值。
  * 3.再次遍历所有理财产品组合(两两配对):
- *   a.如果两个产品的风险值之和和投资额之和均不超过限制，考虑这两个产品的回报值之和。
- *   b.更新最大回报值。
+ *     a.如果两个产品的风险值之和和投资额之和均不超过限制，考虑这两个产品的回报值之和。
+ *     b.更新最大回报值。
  * 4.返回最大回报值。
  */
 function maxInvestmentReturn(
   /** 产品数量 */
   productNum,
   /** 总投资额 */
-  totalInvestment,
+  totalInvest,
   /** 可接受的总风险 */
   acceptableRisk,
   /** 产品投资回报率序列 */
@@ -61,7 +61,7 @@ function maxInvestmentReturn(
   /** 产品风险值序列 */
   risks,
   /** // 最大投资额度序列 */
-  maxInvestments
+  maxInvest
 ) {
   // 最大回报
   let maxReturn = 0;
@@ -72,10 +72,10 @@ function maxInvestmentReturn(
   for (let i = 0; i < productNum; i++) {
     for (let j = i; j < productNum; j++) {
       // 对于每种组合，尝试所有可能的投资额分配
-      for (let investI = 1; investI <= Math.min(totalInvestment, maxInvestments[i]); investI++) {
+      for (let investI = 1; investI <= Math.min(totalInvest, maxInvest[i]); investI++) {
         // 剩余可用投资额
-        let remainingInvestment = totalInvestment - investI;
-        let investJ = j === i ? 0 : Math.min(remainingInvestment, maxInvestments[j]);
+        let remainingInvestment = totalInvest - investI;
+        let investJ = j === i ? 0 : Math.min(remainingInvestment, maxInvest[j]);
 
         let currentRisk = risks[i] * (investI !== 0) + risks[j] * (investJ !== 0);
         let currentReturn = returns[i] * investI + returns[j] * investJ;
@@ -86,7 +86,9 @@ function maxInvestmentReturn(
           // 更新最优投资方案
           bestInvestment.fill(0); // 重置投资额序列
           bestInvestment[i] = investI;
-          if (j !== i) bestInvestment[j] = investJ;
+          if (j !== i) {
+            bestInvestment[j] = investJ;
+          }
         }
       }
     }
@@ -94,18 +96,60 @@ function maxInvestmentReturn(
 
   // 如果没有合法投资方案，返回0；否则返回最优投资方案
   if (maxReturn === 0) return "0";
+
   return bestInvestment.join(" ");
 }
 
-// 示例输入
-let productNum = 5;
-let totalInvestment = 100;
-let acceptableRisk = 10;
-let returns = [10, 20, 30, 40, 50];
-let risks = [3, 4, 5, 6, 10];
-let maxInvestments = [20, 30, 20, 40, 30];
-
 // 示例调用
 console.log(
-  maxInvestmentReturn(productNum, totalInvestment, acceptableRisk, returns, risks, maxInvestments)
+  maxInvestmentReturn(5, 100, 10, [10, 20, 30, 40, 50], [3, 4, 5, 6, 10], [20, 30, 20, 40, 30]) ===
+    "0 30 0 40 0"
+);
+
+// 测试用例1: 一个明显的最优选择
+console.log(
+  maxInvestmentReturn(
+    3, // 产品数量
+    100, // 总投资额
+    10, // 可接受的总风险
+    [10, 30, 50], // 产品投资回报率序列
+    [2, 3, 4], // 产品风险值序列
+    [50, 30, 20] // 最大投资额度序列
+  ) === "0 30 20"
+);
+
+// 测试用例2: 需要组合两个产品以获得最大回报
+console.log(
+  maxInvestmentReturn(
+    4, // 产品数量
+    80, // 总投资额
+    6, // 可接受的总风险
+    [10, 20, 40, 30], // 产品投资回报率序列
+    [2, 3, 3, 2], // 产品风险值序列
+    [40, 40, 20, 40] // 最大投资额度序列
+  ) === "0 40 0 40"
+);
+
+// 测试用例3: 所有产品都超出风险限制
+console.log(
+  maxInvestmentReturn(
+    3, // 产品数量
+    100, // 总投资额
+    1, // 可接受的总风险
+    [15, 20, 25], // 产品投资回报率序列
+    [5, 5, 5], // 产品风险值序列
+    [30, 30, 40] // 最大投资额度序列
+  ) === "0"
+);
+
+// 测试用例4: 所有产品风险都在限制内，但投资额度有限
+console.log(
+  maxInvestmentReturn(
+    4, // 产品数量
+    50, // 总投资额
+    10, // 可接受的总风险
+    [10, 20, 30, 40], // 产品投资回报率序列
+    [1, 2, 3, 4], // 产品风险值序列
+    [10, 20, 10, 20] // 最大投资额度序列
+  ) === "0 20 0 20"
 );

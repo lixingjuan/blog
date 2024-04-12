@@ -44,27 +44,20 @@
  */
 
 const demo = (str, target) => {
-  // 先将字符串处理成单词数组
-  const words = str.match(/\b\w+\b/g) || [];
+  const arr = str.match(/\b\w+\b/g);
+  const uniqueArr = [...new Set(arr)];
 
-  // 将单词去重
-  const uniqueWords = [...new Set(words)];
-
-  // 从中寻找所有符合条件的单词, 并按照字典排序
-  const matchedWords = uniqueWords
-    .filter((it) => it.startsWith(target))
-    .sort((a, b) => a.localeCompare(b));
-
-  return matchedWords;
+  return arr.filter((it) => it.startsWith(target)).sort((a, b) => a.localeCompare(b));
 };
 
 console.log(
   demo(
-    "The furthest distance in the world, ls not between life and death, But when I stand in front of you, Yet you don't know that I love you.",
+    "I don't like The furthest distance in the world, ls not between life and death, But when I stand in front of you, Yet you don't know that I love you.",
     "f"
   )
 );
-console.log(demo("I love programming", "pro"));
+
+console.log(demo("I love programming", "pro")); // ["programming"]
 
 console.log(demo("It's a beautiful day, don't you think? I think it is.", "thi")); // think
 console.log(demo("Hello, how are you? I hope you're well.", "H")); // Hello hope

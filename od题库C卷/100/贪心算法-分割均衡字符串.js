@@ -32,6 +32,7 @@ const minBalanceStr = (str) => {
 
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
+
     if (charSet.has(char)) {
       charSet.set(char, charSet.get(char) + 1);
     } else {

@@ -36,35 +36,25 @@
  */
 
 const demo = (target, grid) => {
+  // 找到确诊人员的编号
   const targetPerson = target.split(",").map(Number);
-  const n = grid[0].length;
   const resultSet = new Set();
 
-  // 定义 DFS 函数，用于从指定起始点开始遍历所有接触的人员
-  // 参数i是行，j表示列
+  // 拿着列，遍历每个行
   const dfs = (i) => {
-    // 遍历每一列，找所有符合条件的：密接&没有处理过该元素
-    for (let j = 0; j < n; j++) {
-      // 已经确诊，而且没有记录过
+    for (let j = 0; j < grid.length; j++) {
+      // 找到未记录的密接
       if (grid[i][j] === 1 && !resultSet.has(j)) {
         resultSet.add(j);
-        // 找到密接，需要对密接再进行深搜
         dfs(j);
       }
     }
   };
 
-  // 1. 处理确诊人员之间的接触情况
-  targetPerson.forEach((person) => {
-    dfs(person); // 开始 DFS 遍历所有与该确诊人员接触的人员
-  });
+  targetPerson.forEach((it) => dfs(it));
 
-  // 移除已经确诊的人员
-  targetPerson.forEach((person) => {
-    resultSet.delete(person);
-  });
+  targetPerson.forEach((it) => resultSet.delete(it));
 
-  // 返回结果集中的人数
   return resultSet.size;
 };
 

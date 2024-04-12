@@ -49,6 +49,8 @@ function calculateSurvivorsSum(nums, jump, left) {
 
   //当列表大小大于幸存数量时，执行删除操作
   while (list.length > left) {
+    整数对最小和;
+
     // !! 计算下一个要删除元素的索引
     pointer = (pointer + jump + 1) % list.length; // 删除计算出的索引处的元素
 

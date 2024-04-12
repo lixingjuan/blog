@@ -32,26 +32,26 @@
  * 所以以下解答是按照小朋友解答的
  * */
 
-// function minCommunities(garden) {
-//   // 记录每个数量出现的次数
-//   const countsMap = garden.reduce((pre, cur) => pre.set(cur, (pre.get(cur) || 0) + 1), new Map());
+function minCommunities(garden) {
+  // 记录每个数量出现的次数
+  const countsMap = garden.reduce((pre, cur) => pre.set(cur, (pre.get(cur) || 0) + 1), new Map());
 
-//   let minCommunities = 0;
+  let minCommunities = 0;
 
-//   // num 表示，小朋友报告的，和自己同小区的小朋友数量
-//   // count表示，报告这个num的小朋友数量
-//   for (let [num, count] of countsMap.entries()) {
-//     // 计算每个数量小朋友，对应的最小小区数
-//     const communitiesForThisCount = Math.ceil(count / (num + 1)); // 加上1，是要加上当前小朋友
-//     minCommunities += communitiesForThisCount * (num + 1);
-//   }
+  // num 表示，小朋友报告的，和自己同小区的小朋友数量
+  // count表示，报告这个num的小朋友数量
+  for (let [num, count] of countsMap.entries()) {
+    // 计算每个数量小朋友，对应的最小小区数
+    const communitiesForThisCount = Math.ceil(count / (num + 1)); // 加上1，是要加上当前小朋友
+    minCommunities += communitiesForThisCount * (num + 1);
+  }
 
-//   return minCommunities;
-// }
+  return minCommunities;
+}
 
-// // 示例
-// console.log(minCommunities([2, 2, 3])); // 应输出7
-// // 假设所有小朋友都来自不同的小区，
-// console.log(minCommunities([0, 0, 0, 0])); // 应输出4
-// // 假设有一大群小朋友实际上来自同一个小区，他们每个人报告的同小区小朋友数量相同。
-// console.log(minCommunities([3, 3, 3, 3])); // 应输出1
+// 示例
+console.log(minCommunities([2, 2, 3])); // 应输出7
+// 假设所有小朋友都来自不同的小区，
+console.log(minCommunities([0, 0, 0, 0])); // 应输出4
+// 假设有一大群小朋友实际上来自同一个小区，他们每个人报告的同小区小朋友数量相同。
+console.log(minCommunities([3, 3, 3, 3])); // 应输出1

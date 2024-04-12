@@ -30,7 +30,7 @@ function computeExpression(expression) {
   let tokens = expression.match(/(-?\d+)|[+*]|-/g);
   if (!tokens) return 0;
 
-  // 第一步：处理乘法
+  // 第一步：处理乘法v
   let nums = []; // 用于存储数字和乘法的结果
   let currentNum = 0;
   let op = "+";

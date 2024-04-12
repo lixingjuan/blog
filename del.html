@@ -1,38 +1,20 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>倒计时计时器</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        display: grid;
+        grid-template-columns: repeat(3, 33.3%);
+      }
+    </style>
   </head>
   <body>
-    <div id="timer">-</div>
-    <script>
-      function startCountDown(duration, onCompleted) {
-        let timer = duration,
-          hours,
-          minute,
-          second;
-
-        let intervalId = setInterval(() => {
-          const hoursNum = parseInt(timer / 3600, 10);
-          const minuteNum = parseInt((timer % 3600) / 60, 10);
-          const secondNum = parseInt(timer % 60, 10);
-
-          hours = hoursNum < 10 ? "0" + hoursNum : hoursNum;
-          minute = minuteNum < 10 ? "0" + minuteNum : minuteNum;
-          second = secondNum < 10 ? "0" + secondNum : secondNum;
-          const timerDom = document.getElementById("timer");
-          if (timerDom) {
-            timerDom.innerText = `${hours}:${minute}:${second}`;
-          }
-          if (--timer <= 0) {
-            clearInterval(intervalId);
-            onCompleted();
-          }
-        }, 1000);
-      }
-      startCountDown(3600, () => {
-        alert("计时器结束");
-      });
-    </script>
+    <div class="box">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
   </body>
 </html>

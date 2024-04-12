@@ -51,6 +51,7 @@
  */
 
 function maxScore(N, T, tasks) {
+  vvvvvv;
   // 初始化dp数组，dp[t]表示在时间t内可以获得的最大积分
   let dp = Array(T + 1).fill(0);
 
