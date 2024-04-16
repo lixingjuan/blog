@@ -5,7 +5,7 @@ class DynamicUnionFind {
     this.root = new Map();
   }
 
-  // 查找元素 x 的根节点
+  // 确定元素属于哪个集合。这通常涉及找到该元素的“根”元素，根元素代表了整个集合
   find(x) {
     if (!this.root.has(x)) {
       this.root.set(x, x); // 如果元素 x 不存在，则添加 x，并且它的根是它自己
