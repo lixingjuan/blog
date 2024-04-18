@@ -22,44 +22,26 @@ console.log(JSON.stringify({ name: () => {} })); // {}
 /* ****************************************************************************************************
  *                                    实现2: 递归
  ************************************************************************************************* */
+/**
+ * 使用WeapMap的原因
+ * 1. 避免循环引用导致的无限递归
+ * 2. 利用WeakMap弱引用的特性，不会阻止垃圾收集器回收它们所引用的对象
+ */
 
-const obj = {
-  name: 1,
-  arr: [],
+/** 实现一个深拷贝 */
+const deepCopy = (target, hash = new WeakMap()) => {
+  if (target === null) return null;
+  if (target instanceof Date) return new Date(target);
+  if (target instanceof RegExp) return new RegExp(target);
+  if (typeof target !== "object") return target;
+
+  if (hash.has(target)) return hash.get(target);
+
+  const clone = Array.isArray(target) ? [] : {};
+  hash.set(target, clone);
+  Object.keys(target).forEach((key) => {
+    clone[key] = deepCopy(target[key], hash);
+  });
+
+  return hash.get(target);
 };
-const deepCopy = (source, map = new WeakMap()) => {
-  /**
-   * 1. 6种基本数据类型，直接返回
-   * 2. 引用数据类型（对象和数组区别处理），则使用weakMap存储
-   */
-
-  const isSimpleType =
-    ["string", "number", "boolean", "undefined", "bigint", "symbol"].includes(typeof source) ||
-    source === null;
-
-  if (isSimpleType) {
-    return source;
-  }
-
-  if (map.has(source)) {
-    return map.get(source);
-  }
-
-  const result = Array.isArray(source) ? [] : {};
-  map.set(source, result);
-
-  for (let i in source) {
-    result[i] = deepCopy(source[i], map);
-  }
-
-  return map.get(source);
-};
-
-console.log(deepCopy(obj));
-
-/* ****************************************************************************************************
- * 拓展： 为什么使用weakMap?
- * 1. weakMap的key只能是对象（null除外）
- * 2. weakMap的key是弱引用，不会阻止垃圾回收机制的回收
- * (3. weakMap只有四个方法，不支持遍历)
- ************************************************************************************************* */

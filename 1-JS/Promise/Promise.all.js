@@ -12,29 +12,30 @@ class MyPromise {
   static reject(val) {
     return Promise.reject(val);
   }
-  static all(arr) {
+  static all(fns) {
     return new Promise((resolve, reject) => {
-      if (!Array.isArray(arr)) {
+      if (!Array.isArray(fns)) {
         return reject(new TypeError("arguments must be array"));
       }
 
-      if (!arr.length) {
+      if (!fns.length) {
         return resolve([]);
       }
 
       const result = [];
       let resolvedCounter = 0;
-      const fns = arr.map((it) => Promise.resolve(it));
 
       fns.forEach((fn, index) => {
-        fn.then((res) => {
-          result[index] = res;
-          resolvedCounter += 1;
+        Promise.resolve(fn)
+          .then((res) => {
+            result[index] = res;
+            resolvedCounter += 1;
 
-          if (resolvedCounter === arr.length) {
-            resolve(result);
-          }
-        }).catch(reject);
+            if (resolvedCounter === fns.length) {
+              resolve(result);
+            }
+          })
+          .catch(reject);
       });
     });
   }

@@ -1,30 +1,38 @@
-/** 1. 简单应用 */
-const foo = (discount) => {
-  return (b) => {
-    return discount * b;
-  };
+/** 函数柯里化 */
+/** 1.基础版 */
+const curryBase = (discount) => {
+  return (price) => price * discount;
 };
 
-const todayDiscount = foo(0.7);
+const today = curryBase(0.7);
 
-console.log(todayDiscount(200));
-console.log(todayDiscount(100));
+// A:
+console.log(today(200));
+// B:
+console.log(today(1));
 
-/** 2. 改进应用，无限多参数 */
-const curry = (fn, ...outArgs) => {
-  if (outArgs.length === fn.length) {
-    return fn.apply(null, outArgs);
+/** 2. 高级版 */
+const curry = (fn, ...args) => {
+  if (args.length === fn.length) {
+    return fn.apply(null, args);
   }
-  return (...innerArgs) => curry(fn, ...outArgs, ...innerArgs);
+  return (...innerArgs) => curry(fn, ...args, ...innerArgs);
 };
 
-// 无限参数 加法 计算器
-const add = (a, b, c) => {
-  return a + b + c;
+const add = (a, b, c, d, e) => {
+  return a + b + c + d + e;
 };
 
-const unLimitedParamsAdditionCalcultor = curry(add);
+const sum = curry(add);
+// A
+const ASum = sum(200);
+// B
+const BSum = ASum(100);
+// C
+const CSum = BSum(20);
+// D
+const DSum = CSum(100);
+// E
+const ESum = DSum(100);
 
-console.log(unLimitedParamsAdditionCalcultor(1));
-console.log(unLimitedParamsAdditionCalcultor(1)(2));
-console.log(unLimitedParamsAdditionCalcultor(1)(2)(3));
+console.log(ESum);

@@ -1,27 +1,43 @@
-function promisePool(tasks, poolLimit) {
-  let taskIndex = 0;
-  const promisesResults = []; // 存储所有任务的执行结果
-  const currentExecutingPromises = []; // 存储正在执行的 Promise
-
-  const enqueue = () => {
-    if (taskIndex === tasks.length) {
-      return Promise.resolve();
+class TaskPool {
+  constructor(poolLimit = 10) {
+    this.poolLimit = poolLimit;
+    // 当前正在执行的任务
+    this.activeCount = 0;
+    // 所有任务
+    this.allTasks = [];
+  }
+  addTask(task) {
+    this.allTasks.push(task);
+  }
+  // 任务添加完毕
+  done() {
+    return this.runNext();
+  }
+  // 开始尝试执行下一个任务
+  runNext() {
+    while (this.activeCount < this.poolLimit && this.allTasks.length > 0) {
+      const task = this.allTasks.shift();
+      task().finally((res) => {
+        this.activeCount--;
+        this.runNext();
+      });
     }
-
-    const task = tasks[taskIndex++];
-    const taskPromise = Promise.resolve().then(() => task());
-    promisesResults.push(taskPromise);
-
-    const finishedPromise = taskPromise.then(() =>
-      currentExecutingPromises.splice(currentExecutingPromises.indexOf(finishedPromise), 1)
-    );
-    currentExecutingPromises.push(finishedPromise);
-
-    if (poolLimit > currentExecutingPromises.length) {
-      return Promise.resolve().then(enqueue);
-    }
-    return Promise.race(currentExecutingPromises).then(enqueue);
-  };
-
-  return enqueue().then(() => Promise.all(promisesResults));
+  }
 }
+
+const createTask = (i) => {
+  return () => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(i);
+      }, Math.floor(Math.random() * 1000));
+    });
+  };
+};
+
+const taskPool = new TaskPool(10);
+for (let i = 0; i < 20; i++) {
+  taskPool.addTask(createTask(i));
+}
+
+taskPool.done();

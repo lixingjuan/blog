@@ -1,25 +1,24 @@
 /** 防抖 */
-const debounce = function (fn, delay) {
+const debounce = (fn, delay) => {
   let timer = null;
-  let firstTime = true;
+  let isFirstTime = true;
 
-  return function (...args) {
-    // 1. 首次直接执行
-    if (firstTime) {
+  return (...args) => {
+    // 1. 首次调用直接执行
+    if (isFirstTime) {
       fn(...args);
-      firstTime = false;
+      isFirstTime = false;
       return;
     }
 
-    // 2. timer为真清楚
-    timer && clearTimeout(timer);
-    // 3. 重新赋值timer, 重置定时器
-    timer = setTimeout(fn, delay, ...args);
+    // 2. 若上次的timer还没执行，则重置计时器
+    timer && clearInterval(timer);
+    timer = setTimeout(() => {
+      fn(...args);
+      timer = null;
+    }, delay);
   };
 };
-
-
-
 
 const foo = (val) => setTimeout(console.timeLog, 200, "foo", val);
 
