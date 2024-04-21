@@ -1,3 +1,6 @@
+/**
+ * 观察者模式，
+ * 和发布订阅的区别，另外创建观察者类，观察者直接订阅具体对象 */
 class Subject {
   constructor() {
     this.observer = [];

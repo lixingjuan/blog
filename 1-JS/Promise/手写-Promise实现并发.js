@@ -15,6 +15,7 @@ class TaskPool {
   }
   // 开始尝试执行下一个任务
   runNext() {
+    // while循环
     while (this.activeCount < this.poolLimit && this.allTasks.length > 0) {
       const task = this.allTasks.shift();
       task().finally((res) => {

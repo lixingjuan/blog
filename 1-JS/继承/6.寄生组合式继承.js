@@ -16,17 +16,17 @@ Animal.prototype.speak = function () {
   console.log("hello," + this.categoryAndName);
 };
 
-// 2. 定义子类，借用构造函数继承方法继承属性
+// 2. !!定义子类，借用构造函数继承方法继承属性
 function Dog(name, age) {
   Animal.call(this, "dog" + name);
   this.age = age;
 }
 
-// 4. 利用原型式继承，实现inheritPrototype, 完成原型链接，从而使子类能继承父类的方法
+// 3. !!利用原型式继承，实现inheritPrototype, 完成原型链接，从而使子类能继承父类的方法
 Dog.prototype = Object.create(Animal.prototype);
 Dog.prototype.constructor = Dog;
 
-// 5. 子类自定义方法
+// 4. 子类自定义方法
 Dog.prototype.bark = function () {
   console.log("woof");
 };

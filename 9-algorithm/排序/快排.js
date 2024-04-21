@@ -4,16 +4,17 @@
  * 2. 将数据分为[...quickSort(小于基准值)，基准值，...quickSort(大于基准值)]
  */
 const quickSort = (arr) => {
-  if (arr.length < 2) {
-    return arr;
-  }
+  if (arr.length <= 1) return arr;
 
+  // 选择第一个元素作为基准值
   const pivot = arr[0];
   const less = [];
   const greater = [];
 
+  // 从基准值后面开始遍历数组
   for (let i = 1; i < arr.length; i++) {
     const element = arr[i];
+    // 如果当前元素小于等于基准值，放入less
     if (element <= pivot) {
       less.push(element);
     } else {
@@ -21,6 +22,7 @@ const quickSort = (arr) => {
     }
   }
 
+  // 对左右两个数组进行递归
   return [...quickSort(less), pivot, ...quickSort(greater)];
 };
 

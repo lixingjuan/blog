@@ -1,25 +1,26 @@
 /* 广度优先遍历 */
 function breadthFirst(node) {
-  if (!node) {
-    return;
-  }
-  let stack = []; // 存放待循环队列
-  let arr = []; // 存放遍历后的结果
-  let tmpNode; // 当前处理的节点
+  if (!node) return;
+  // 存放待循环队列
+  let stack = [];
+  // 存放遍历后的结果
+  let nameResults = [];
+  // 当前处理的节点
+  let activeNode;
 
   stack.push(node);
   while (stack.length) {
     // stack 里面存的其实永远都是某个节点的所有子节点, 都是未遍历过的节点
-    tmpNode = stack.shift();
+    activeNode = stack.shift();
     // 每次都是一层遍历完再去遍历下一层
     // 拿到一个节点，就立刻把他的名字放到结果数组
-    arr.push(tmpNode.name);
-    if (tmpNode.children && tmpNode.children.length) {
+    nameResults.push(activeNode.name);
+    if (activeNode.children && activeNode.children.length) {
       // 当前节点的字节点们都放在当前
-      tmpNode.children.reverse().map((item) => stack.push(item));
+      activeNode.children.reverse().map((item) => stack.push(item));
     }
   }
-  return arr;
+  return nameResults;
 }
 
 const root = {

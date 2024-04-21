@@ -1,3 +1,7 @@
+/**
+ * 发布订阅，常用于事件的异步处理
+ * 发布者和订阅者都是通过一个中间件进行交互
+ * */
 class EventBus {
   constructor() {
     this.listeners = [];

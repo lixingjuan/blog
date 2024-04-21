@@ -1,16 +1,15 @@
-ast,
-1. 记录了语法类型type：变量声明、函数等
+# AST
+
+1. 记录了语法类型 type：变量声明、函数等
 2. "kind": "const"
-3.  代码开始和结束为止
-4.  body
+3. 代码开始和结束为止
+4. body
 
 ```js
 const a = 1;
 
-function demo(){}
+function demo() {}
 ```
-
-
 
 ```json
 {

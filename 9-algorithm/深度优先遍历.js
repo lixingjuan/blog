@@ -39,7 +39,9 @@ const DepthFirst1 = function (root) {
 
   const dfs = (node) => {
     if (node) {
+      // 先获取当前节点
       result.push(node.name);
+      // 再遍历子节点，递归调用dfs
       if (node.children && node.children.length) {
         node.children.map((item) => {
           dfs(item);

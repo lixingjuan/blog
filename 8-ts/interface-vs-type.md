@@ -1,54 +1,47 @@
 # 不同点
 
-
-1. type可以重命名基本类型
-2. interface 可以声明合并，而type不行
+1. type 可以重命名基本类型
+2. interface 可以声明合并，而 type 不行
 3. interface 的报错更简洁
 
 ```ts
-
 interface Base {
-    name: string
+  name: string;
 }
 
 // interface
 interface MergeItemInterface extends Base {
-    age: number
+  age: number;
 }
 
 type TypeMergeItem = Base & {
-    age: number
-}
+  age: number;
+};
 
-
-function demo(val: MergeItemInterface){}
-demo({age: 11})
+function demo(val: MergeItemInterface) {}
+demo({ age: 11 });
 // Argument of type '{ age: number; }' is not assignable to parameter of type 'MergeItemInterface'.
 //  Property 'name' is missing in type '{ age: number; }' but required in type 'MergeItemInterface'
 
-
-
-
-function demo2(val: TypeMergeItem){}
-demo2({age: 11})
+function demo2(val: TypeMergeItem) {}
+demo2({ age: 11 });
 // Argument of type '{ age: number; }' is not assignable to parameter of type 'TypeMergeItem'.
 // Property 'name' is missing in type '{ age: number; }' but required in type 'Base'
 ```
-
 
 4. interface 如果是使用名称使用的，接口名称会以其原始形式出现在报错信息里, type 如果是基本类型，报错不会出现其原始名称
 
 ```ts
 /* interface */
 interface MergeItemInterface {
-  age: number
+  age: number;
 }
 
 type TypeMergeItem = {
-  age: number
-}
+  age: number;
+};
 
-const a: MergeItemInterface = { age: '2' }
+const a: MergeItemInterface = { age: "2" };
 //                        ~~~~~~
 // 不能将类型“string”分配给类型“number”。ts(2322)
 // del.ts(85, 3): 所需类型来自属性 "age"，在此处的 "MergeItemInterface" 类型上声明该属性
@@ -57,7 +50,7 @@ const a: MergeItemInterface = { age: '2' }
 //
 // (property) MergeItemInterface.age: number   <------ 这里
 
-const b: TypeMergeItem = { age: '2' }
+const b: TypeMergeItem = { age: "2" };
 //                        ~~~~~~
 // 不能将类型“string”分配给类型“number”。ts(2322)
 // del.ts(89, 3): 所需类型来自属性 "age"，在此处的 "MergeItemType" 类型上声明该属性
@@ -65,7 +58,6 @@ const b: TypeMergeItem = { age: '2' }
 // Age => 年龄
 //
 // (property) age: number   <------ 这里
-
 
 /**
  * type
@@ -77,12 +69,6 @@ const c: HHH = 1;
 //  const c: string
 ```
 
-
-
-
-
-
-
 # 共同点
 
 1. 都可以声明类型
@@ -93,18 +79,15 @@ type AAA = {
   guagua: string;
 };
 
-
 interface BBB {
   name: string;
   guagua: string;
 }
-
 ```
 
 2. 都能作为类型使用
 
 ```ts
-
 const objA: AAA = {
   name: "name",
   guagua: "",
@@ -115,7 +98,6 @@ const objB: BBB = {
   guagua: "",
 };
 ```
-
 
 3. 都能被混合
 
@@ -134,6 +116,4 @@ interface ExtendsAAA extends AAA {
 interface ExtendsBBB extends BBB {
   something: "something";
 }
-
 ```
-
