@@ -1,20 +1,21 @@
+/**
+ * 思路：
+ * 类似于扑克牌排序
+ */
+
 /** 插入排序 */
 function insertionSort(arr) {
-  let preIndex = undefined;
-  let current = undefined;
+  for (let i = 0; i < arr.length; i++) {
+    const current = arr[i];
+    let j = i - 1;
 
-  // 遍历数组
-  for (let i = 1; i < arr.length; i++) {
-    current = arr[i];
-    preIndex = i - 1;
-
-    // while循环：当前元素如果大于
-    while (preIndex >= 0 && arr[preIndex] > current) {
-      arr[preIndex + 1] = arr[preIndex];
-      preIndex--;
+    while (j >= 0 && arr[j] > current) {
+      arr[j + 1] = arr[j];
+      j--;
     }
 
-    arr[preIndex + 1] = current;
+    // 把current插入到对应位置
+    arr[j + 1] = current;
   }
   return arr;
 }

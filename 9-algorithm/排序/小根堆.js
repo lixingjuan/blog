@@ -3,25 +3,31 @@ class MinHeap {
   constructor() {
     this.heap = [];
   }
+
   // !! 获取索引为i的元素父元素
   getParentIndex(i) {
     return Math.floor((i - 1) / 2);
   }
+
   getLeftChildIndex(i) {
     return i * 2 + 1;
   }
+
   getRightChildIndex(i) {
     return i * 2 + 2;
   }
+
   swap(i, j) {
     [this.heap[i], this.heap[j]] = [this.heap[j], this.heap[i]];
   }
+
   insert(val) {
     // 把这个元素加入堆
     this.heap.push(val);
     // 对最新加入的元素上进上浮
     this.bubbleUp(this.heap.length - 1);
   }
+
   bubbleUp(index) {
     // 1. 首先，获取要被上浮的元素的父元素
     let parentIndex = this.getParentIndex(index);
