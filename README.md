@@ -1,3 +1,21 @@
+Yes! Yes! For interview 🤥
+
+# Morning ☀️
+
+- [ ] [Join Discussions](https://github.com/lixingjuan/my-article-tracker/discussions)
+- [ ] [RSS 订阅](https://www.inoreader.com/all_articles)
+- [ ] [Github Trending](https://github.com/trending)
+- [ ] [Dev.to#React](https://dev.to/t/react)
+- [ ] [HashNode#React](https://hashnode.com/n/reactjs)
+- [ ] [Reddit#React](https://www.reddit.com/r/reactjs/)
+- [ ] [React Blog](https://zh-hans.react.dev/blog)
+- [ ] [Stackoverflow#React](https://stackoverflow.com/questions/tagged/reactjs)
+- [ ] [Discord#React](https://discord.gg/WY3sDZe8)
+
+# Other
+
+I'm looking for a aggregation platform for front-end knowledge 🥲
+
 👋 Hi!
 
 [李李](https://whimsical.com/YNapr5kpkMu1a4GSuuyvbj)
