@@ -32,5 +32,5 @@ function generateHTML(filePath) {
 }
 
 // 执行脚本
-const rootDir = './src'; // 根目录，指向你的源文件目录
+const rootDir = '.'; // 根目录
 walkDir(rootDir, generateHTML);
