@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "iconfont";
+  src: url("./assets/iconfont.ttf") format("truetype");
+}
+
+.hello {
+  color: red;
+  background-image: url("./assets/carrot.jpg");
+}
+
+.icon {
+  font-family: "iconfont";
+  font-size: 30px;
+}

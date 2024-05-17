@@ -1,0 +1,67 @@
+<html><body><h2 id="work-pool">work-pool</h2>
+<ol>
+<li>thread-loader 可以将非常消耗资源的 loader 分流诶一个worker pool</li>
+<li>该loader 替代了 happy-pack</li>
+</ol>
+<blockquote>
+<p>不要使用太多的worker, 因为Node.js 的 runtime 和 loader 都有启动开销，最小化worker 和 main precess(主进程)之间的模块传输、进程间通讯(IPC, inter process communication)是非常消耗资源的。</p>
+</blockquote>
+<h2 id="实现">实现</h2>
+<ol>
+<li>安装 <code>npm i thread-loader -D</code></li>
+<li>配置webpack.config.js</li>
+</ol>
+<pre><code class="language-js">const path = require(&quot;path&quot;);
+
+module.exports = {
+  // ...
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: &quot;babel-loader&quot;,
+            options: {
+              presets: [&quot;@babel/preset-env&quot;]
+            }
+          },
+          {
+            loader: &quot;thread-loader&quot;,
+            options: {
+              workers: 2
+            }
+          }
+        ]
+      },
+    ]
+  }
+};
+</code></pre>
+<h2 id="对比">对比</h2>
+<p>使用loader: thread-loader 前后多次执行打包 耗时对比</p>
+<table>
+<thead>
+<tr>
+<th>前</th>
+<th>后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>640 ms</td>
+<td>790 ms</td>
+</tr>
+<tr>
+<td>646 ms</td>
+<td>799 ms</td>
+</tr>
+<tr>
+<td>660 ms</td>
+<td>868 ms</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意，loader 本身的启动有时间开销，所以该loader更适用于耗时非常大的loader</p>
+</blockquote>
+</body></html>

@@ -1,0 +1,53 @@
+<html><body><h2 id="安装eslint">安装eslint</h2>
+<ol>
+<li>安装eslint, <code>npm i eslint -D</code></li>
+<li>对项目进行初始化, <code>eslint --init</code></li>
+<li>对src下进行eslint校验, <code>npx eslint src</code></li>
+</ol>
+<h2 id="将eslint-和-webpack-结合起来">将eslint 和 webpack 结合起来</h2>
+<ol>
+<li>安装 <code>babel-loader eslint-webpack-plugin</code></li>
+<li>如下配置</li>
+</ol>
+<pre><code class="language-js">const EslintWebpackPlugin = require(&#39;eslint-webpack-plugin&#39;);
+
+
+{
+  // ...
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        /**
+         *  !! 之前
+         *  先用eslint-loader 做检查
+         *  再用babel-loader 编译
+         *  !! 现在
+         *  eslint-loader 已弃用，改用 eslint-webpack-plugin
+         */
+        use: [&#39;babel-loader&#39;, /* &#39;eslint-loader&#39; */],
+      },
+    ],
+  },
+
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: &#39;./src/app.html&#39;,
+    }),
+
+    new EslintWebpackPlugin(),
+  ],
+}
+</code></pre>
+<h2 id="vscode-配置">vscode 配置</h2>
+<pre><code class="language-js">{
+  &quot;editor.codeActionsOnSave&quot;: {
+    &quot;source.fixAll.eslint&quot;: true
+  },
+  &quot;[javascript]&quot;: {
+    &quot;editor.formatOnSave&quot;: false,
+    &quot;editor.quickSuggestions&quot;: true // 打开markdown文件的智能感知提示，解决markdown文件代码片段不生效问题
+  }
+}
+</code></pre>
+</body></html>

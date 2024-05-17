@@ -1,0 +1,11 @@
+<html><body><h2 id="遇到的问题">遇到的问题</h2>
+<ol>
+<li>包含jsx语法的js文件编译会报错：脚本修改 .jsx；</li>
+<li>.js文件装饰器不识别: 脚本修改此类文件 .tsx文件；</li>
+<li>antd组件和类型的引入地址lib: 增加同别名 /es；</li>
+<li>之前定义的一些环境变量，process.env等，需要在 <code>vite.config.js</code> 中定义</li>
+<li>循环引用问题：需要人力修改；</li>
+<li>antd/icon内部报错：<code>global未定义</code>,在index.html将该变量挂载到window；</li>
+<li>vscode的 go to type definition功能总是跳去lib包，需要找一下怎么配置；</li>
+</ol>
+</body></html>

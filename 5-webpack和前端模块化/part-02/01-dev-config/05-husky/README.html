@@ -1,0 +1,19 @@
+<html><body><h2 id="安装husky">安装husky</h2>
+<ol>
+<li><p><code>git init</code></p>
+</li>
+<li><p><code>npm install husky -D</code></p>
+</li>
+<li><p><code>npx husky install</code></p>
+</li>
+<li><p>在.husky文件夹下新建文件 <code>pre-commit</code></p>
+</li>
+<li><p>然后去执行commit, 发现报错</p>
+<pre><code class="language-js">hint: The &#39;.husky/pre-commit&#39; hook was ignored because it&#39;s not set as executable.
+hint: You can disable this warning with `git config advice.ignoredHook false`.
+</code></pre>
+</li>
+<li><p>执行 <code>chmod +x .husky/pre-commit</code> 给予读写权限</p>
+</li>
+</ol>
+</body></html>

@@ -1,0 +1,50 @@
+<html><body><h2 id="全局shamming-实现全局变量">全局shamming 实现全局变量</h2>
+<p>webpack.config.js</p>
+<pre><code class="language-js">const webpack = require(&quot;webpack&quot;);
+
+module.exports = {
+  // ...
+  plugins: [
+    new webpack.ProvidePlugin({
+      _: &quot;lodash&quot;
+    })
+  ],
+};
+</code></pre>
+<h2 id="细粒度shamming-局部文件变量">细粒度shamming 局部文件变量</h2>
+<ol>
+<li>安装 <code>npm install imports-loader -D</code></li>
+<li>webpack.config.js</li>
+</ol>
+<pre><code class="language-js">module.exports = {
+  // ...
+  module: {
+    rules: [
+      {
+        test: require.resolve(&quot;./src/part-shamming.js&quot;),
+        use: &#39;imports-loader?wrapper=window&#39;
+      }
+    ]
+  }
+};
+</code></pre>
+<p>这样，在文件part-shamming中，访问this, 即为window</p>
+<h2 id="全局exports">全局Exports</h2>
+<p>实际开发应用：为不清楚导出情况的文件定义导出</p>
+<ol>
+<li>安装 <code>npm install exports-loader -D</code></li>
+<li>webpack.config.js</li>
+</ol>
+<pre><code class="language-js">module.exports = {
+  // ...
+  module: {
+    rules: [
+      {
+        test: require.resolve(&quot;./src/global.js&quot;),
+        use: &#39;exports-loader?type=commonjs&amp;exports=file,multiple|helpers.parse|parse&#39;
+      },
+    ]
+  }
+};
+</code></pre>
+</body></html>

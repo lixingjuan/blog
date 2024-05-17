@@ -1,0 +1,18 @@
+{
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    } // 打开markdown文件的智能感知提示，解决markdown文件代码片段不生效问题
+  },
+  "liveServer.settings.port": 5501,
+  "prettier.printWidth": 100
+}

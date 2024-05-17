@@ -1,0 +1,126 @@
+<html><body><p>优点: 语言组织流畅， 反应快</p>
+<p>Vue技术栈</p>
+<h2 id="项目">项目</h2>
+<ol>
+<li>项目介绍下，并根据项目情况问一下<ol>
+<li>没有问项目，因为都写的比较简略，没有功能，难点实现之类的，没有切入点;</li>
+</ol>
+</li>
+<li>是否有code review? 如果有，通常关注什么？<ol>
+<li>答: 项目中通常不做code-review</li>
+</ol>
+</li>
+</ol>
+<h2 id="css">css</h2>
+<ol>
+<li>flex布局，一行三个，多余换行怎么实现？<ol>
+<li>答：display: flex; flex-direction: row; flex-wrap(模糊记得wrap):</li>
+</ol>
+</li>
+<li>BFC的理解<ol>
+<li>高度塌陷原因及解决方法？<ol>
+<li>答：浮动，伪元素，clear</li>
+</ol>
+</li>
+<li>还有别的情况下会出现高度塌陷么？<ol>
+<li>答：没了</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>定位有用过么？有哪些属性？分别相对谁进行的定位？<ol>
+<li>答: 几种定位及其相对元素都答到了;</li>
+</ol>
+</li>
+<li>居中几种方案?<ol>
+<li>答: 1. flex布局; 2. postion + transform; 3. postion + 负margin</li>
+</ol>
+</li>
+</ol>
+<h2 id="js基础知识">js基础知识</h2>
+<ol>
+<li>js类型<ol>
+<li>数据类型<ol>
+<li>number, string, boolean, undefined, null, symbol, binint</li>
+</ol>
+</li>
+<li>判断类型的方式?<ol>
+<li>答: 基本数据类型，typeof , instanceOf</li>
+</ol>
+</li>
+<li>instanceOf为什么<ol>
+<li>答：左侧的原型链是否包含右侧</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>实现继承的方式有几种，简单介绍下<ol>
+<li>答：几种方式都简单介绍了下</li>
+</ol>
+</li>
+<li>Promise有了解么？<ol>
+<li>解决了什么问题？</li>
+<li>有哪些方法简单介绍下？</li>
+<li>如果一个promise, 我希望10s如果还没结果取消promise的方法怎么做?</li>
+<li>EventLoop有了解么？</li>
+<li>宏任务，微任务的理解</li>
+<li>题目1的打印</li>
+<li>答题<ol>
+<li>以上几个基本都回答的不错，不过题目打印顺序没有答对,</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>题目如下</p>
+<pre><code class="language-js">async function async1() {
+  console.log(1);
+  const res = await async2();
+  console.log(2);
+}
+
+async function async2() {
+  console.log(3);
+}
+
+Promise.resolve().then((resolve) =&gt; {
+  console.log(4);
+  setTimeout(() =&gt; {
+    console.log(5);
+    resolve(6);
+  }, 0);
+  Promise.reject();
+});
+
+setTimeout(() =&gt; {
+  console.log(6);
+});
+
+async1();
+console.log(7);
+// 候选人的答案: // 1, 3, 7, 4, 2, 6, 5
+</code></pre>
+<h2 id="vue">Vue</h2>
+<ol>
+<li>key的作用<ol>
+<li>答: 答到了 patch 时候 节点 的对比 以及就地复用 两个点</li>
+</ol>
+</li>
+</ol>
+<h2 id="webpack">webpack</h2>
+<ol>
+<li>用过什么插件？(以下为答案的简单记录)
+mini-css,
+webpack-plugin
+mini-css, css-assets, 压缩css
+HappyPack, 压缩
+UglifyJsPlugin, 混淆压缩js</li>
+</ol>
+<h2 id="网络">网络</h2>
+<ol>
+<li>强缓存和协商缓存有了解么？<ol>
+<li>回答的不错，字段也都有说到，表述流畅</li>
+</ol>
+</li>
+</ol>
+</body></html>

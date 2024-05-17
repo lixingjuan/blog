@@ -1,0 +1,79 @@
+<html><body><h2 id="通用环境提升构建性能">通用环境提升构建性能</h2>
+<p><img src="images/README-22-02-02-20-59-19.png" alt=""></p>
+<p>Dll 是微软的一个动态链接技术
+时间和体积对比</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>dll前</th>
+<th>dll后</th>
+<th>add asset 后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>时间</td>
+<td>2728 ms</td>
+<td>655 ms</td>
+<td>in 1956 ms</td>
+</tr>
+<tr>
+<td>体积</td>
+<td>main.js 88.3 KiB</td>
+<td>main.js 608 bytes</td>
+<td>main.js 608 bytes <br> jquery.js 88.1 KiB</td>
+</tr>
+</tbody></table>
+<h2 id="dll配置过程">Dll配置过程</h2>
+<ol>
+<li>创建并配置文件 webpack.dll.config.js</li>
+</ol>
+<pre><code class="language-js">const path = require(&#39;path&#39;);
+const webpack = require(&#39;webpack&#39;);
+
+
+module.exports = {
+  mode: &quot;production&quot;,
+  entry: {
+    jquery: [&quot;jquery&quot;],
+  },
+  output: {
+    filename: &quot;[name].js&quot;,
+    path: path.resolve(__dirname, &quot;dll&quot;),
+    library: &#39;[name]_[hash]&#39;
+  },
+  plugins: [
+    new webpack.DllPlugin({
+      name: &#39;[name]_[hash]&#39;,
+      path: path.resolve(__dirname, &quot;dll/manifest.json&quot;),
+
+
+    })
+  ]
+}
+</code></pre>
+<ol start="2">
+<li>安装插件add-asset-html-webpack-plugin</li>
+<li>配置 webpack.config.js</li>
+</ol>
+<pre><code class="language-js">const path = require(&quot;path&quot;);
+const webpack = require(&quot;webpack&quot;)
+const HtmlWebpackPlugin = require(&quot;html-webpack-plugin&quot;);
+const AddAssetHtmlWebpackPlugin = require(&#39;add-asset-html-webpack-plugin&#39;)
+
+module.exports = {
+  // ...
+  plugins: [
+    // ...
+    new webpack.DllReferencePlugin({
+      manifest: path.join(__dirname, &#39;./dll/manifest.json&#39;)
+    }),
+
+    new AddAssetHtmlWebpackPlugin({
+      filepath: path.join(__dirname, &#39;./dll/jquery.js&#39;),
+      publicPath: &#39;./&#39;
+    })
+  ],
+};
+</code></pre>
+</body></html>

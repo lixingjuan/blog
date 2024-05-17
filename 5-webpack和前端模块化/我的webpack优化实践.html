@@ -1,0 +1,24 @@
+<html><body><h2 id="开发环境编译速度优化">开发环境编译速度优化</h2>
+<ol>
+<li>增加 <code>reach-refresh</code>: 提升开发体验，不需要全局刷新; 编译速度也有提升；</li>
+<li>使用 webpackplugin <code>speed-measure-webpack-plugin</code>, 测速发现 dev 模式下，移 <code>LodashModuleReplacementPlugin</code>，耗时过长，而他的作用是删除不需要的方法从而减小打包提示，所以是比较适合生产环境， 所以把它移动到了到 prod.js</li>
+<li><code>dll预编译</code>：将 devDenpences 中所有依赖均使用 dll 进行打包；</li>
+<li><code>手工升级</code>，项目中之前有一个老的卡片的写法，处理方式是，将一个大的对象注册到 window 上，发现这边注释掉后，编译速度会一下到 200-300ms, 所以这边是手工一个个改为组件的用法(背景：项目中原来就有计划，废弃卡片的写法，目前还有 10 几张，共 50 多个)；</li>
+</ol>
+<p>编译速度提升 6000-8000ms =&gt; 2000-3000ms</p>
+<h2 id="包体积优化">包体积优化</h2>
+<ol>
+<li>利用 import 的魔法注释，增加打包的可读性，并且通过阅读代码，抽离包公用部分</li>
+<li>并存的不同版本的 highcharts，作为技术任务，优先将使用 react-highcharts 的部分，改为 echarts 的写法，（背景：由于版权问题，项目中已经在逐渐将 high-charts 改写为 echarts）</li>
+<li>TODO: 代码拆分，配置多个入口点，影响了 LCP</li>
+</ol>
+<h2 id="dead-code-清理">dead-code 清理</h2>
+<ol>
+<li>分析工具:<ol>
+<li><code>webpack-deadcode-plugin</code>, 检测未使用的文件和文件夹</li>
+<li><code>ts-prune</code>, 检测范围是<code>tsconfig.json</code>中<code>include</code>字段指定的文件</li>
+</ol>
+</li>
+<li>代码行数统计工具: <code>vscode-code-line</code>插件</li>
+</ol>
+</body></html>

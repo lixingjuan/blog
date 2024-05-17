@@ -1,0 +1,37 @@
+<html><body><h2 id="react渲染流程">react渲染流程</h2>
+<p>分为三个阶段</p>
+<ol>
+<li>调度 Scheduler</li>
+<li>调和 Reconciler</li>
+<li>提交<ol>
+<li>before mutate</li>
+<li>mutate</li>
+<li>repaint</li>
+</ol>
+</li>
+</ol>
+<h1 id="reconciliation调和">Reconciliation调和</h1>
+<p><strong>什么是Reconciliation</strong></p>
+<p>React 用来diff 两棵树的，从而确定哪些部分需要修改</p>
+<p><strong>Diff的对比过程</strong></p>
+<ol>
+<li>对比不同类型的组件/元素：都会触发卸载/重新渲染<ol>
+<li>组件A-组件B</li>
+<li>元素A-元素B</li>
+<li>元素A-组件B</li>
+</ol>
+</li>
+<li>对比同类型的元素：修改改变的属性</li>
+<li>对比同类型的组件元素：组件实例和state保持不变，触发更新的生命周期</li>
+</ol>
+<h1 id="render-阶段">render 阶段</h1>
+<h1 id="commit阶段">Commit阶段</h1>
+<p>在这个阶段执行生命周期、hook</p>
+<p>在commit阶段运行的主要函数是 <a href="https://github.com/facebook/react/blob/95a313ec0b957f71798a69d8e83408f40e76765b/packages/react-reconciler/src/ReactFiberScheduler.js#L523">commitRoot</a></p>
+<h2 id="相关文章">相关文章</h2>
+<ol>
+<li><a href="https://github.com/acdlite/react-fiber-architecture">React Fiber Architecture</a></li>
+<li><a href="https://indepth.dev/posts/1008/inside-fiber-in-depth-overview-of-the-new-reconciliation-algorithm-in-react">Inside Fiber: in-depth overview of the new reconciliation algorithm in React</a></li>
+<li><a href="https://medium.com/react-in-depth/the-how-and-why-on-reacts-usage-of-linked-list-in-fiber-67f1014d0eb7">The how and why on React’s usage of linked list in Fiber to walk the component’s tree</a></li>
+</ol>
+</body></html>

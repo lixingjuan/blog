@@ -1,0 +1,38 @@
+<html><body><h2 id="defer-和-async">defer 和 async</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>defer</th>
+<th>async</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>版本</td>
+<td>HTML4.01</td>
+<td>HTML5</td>
+</tr>
+<tr>
+<td>阻塞</td>
+<td>立即下载，不阻塞，延迟执行</td>
+<td>立即下载，不阻塞，延迟执行</td>
+</tr>
+<tr>
+<td>执行时机</td>
+<td><code>&lt;/html&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>DOMContentLoaded</td>
+<td>DOMContentLoaded 之前执行</td>
+<td>onload 事件之前，DOMContentLoaded 前后</td>
+</tr>
+<tr>
+<td>有序否？</td>
+<td>有序</td>
+<td>无序</td>
+</tr>
+</tbody></table>
+<h2 id="页面事件顺序">页面事件顺序</h2>
+<p>DOMContentLoaded =&gt; onload</p>
+</body></html>

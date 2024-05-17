@@ -1,0 +1,24 @@
+<html><body><h1 id="防止页面被-iframe-内嵌">防止页面被 iframe 内嵌</h1>
+<h2 id="x-frame-options">x-frame-options</h2>
+<p>response-header 字段： X-Frame-Options</p>
+<ul>
+<li>deny：禁止，不允许任何网页嵌套，包括是同源的域名也不可以。</li>
+<li>sameorigin：只允许同源的域名访问</li>
+<li>allow-from：url</li>
+</ul>
+<h2 id="content-security-policy">Content-Security-Policy</h2>
+<p>简称 CSP</p>
+<p>CSP 的主要目标是减少和报告 XSS 攻击</p>
+<p>开启方式</p>
+<ol>
+<li>在 response-header 中配置策略</li>
+<li>也可以在 meta 标签中实现，如下</li>
+</ol>
+<pre><code class="language-js">&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#39;self&#39;; img-src https://*; child-src &#39;none&#39;;&quot;&gt;
+</code></pre>
+<h2 id="通过窗口判断">通过窗口判断</h2>
+<pre><code class="language-js">if (window.top != window.self) {
+  window.top.location = window.self.location; // 替换顶级窗口的地址
+}
+</code></pre>
+</body></html>

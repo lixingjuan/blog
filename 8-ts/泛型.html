@@ -1,0 +1,68 @@
+<html><body><hr>
+<h2 id="sidebar_position-10-title-画瓢">sidebar_position: 10
+title: 画瓢</h2>
+<h1 id="文章收藏">文章收藏</h1>
+<ul>
+<li>(TypeScript 高级用法-掘金-字节)[<a href="https://juejin.cn/post/6926794697553739784#heading-20%5D">https://juejin.cn/post/6926794697553739784#heading-20]</a></li>
+</ul>
+<h2 id="泛型约束">泛型约束</h2>
+<h3 id="属性约束">属性约束</h3>
+<p>定义一个接口必须包含 <code>length</code> 属性</p>
+<pre><code class="language-js">interface Lengthwise {
+    length: number;
+}
+
+function loggingIdentity&lt;T extends Lengthwise&gt;(arg: T): T {
+    console.log(arg.length);  // Now we know it has a .length property, so no more error
+    return arg;
+}
+</code></pre>
+<p>现在这个泛型函数被定义了约束，因此它不再是适用于任意类型：</p>
+<pre><code class="language-js">loggingIdentity(3); // Error, number doesn&#39;t have a .length property
+</code></pre>
+<p>我们需要传入符合约束类型的值，必须包含必须的属性：</p>
+<pre><code class="language-js">loggingIdentity({ length: 10, value: 3 });
+</code></pre>
+<h3 id="在泛型里使用类类型">在泛型里使用类类型</h3>
+<p>在 TypeScript 使用泛型创建工厂函数时，需要引用构造函数的类类型。比如，</p>
+<pre><code class="language-js">function create&lt;T&gt;(c: { new(): T }): T {
+  return new c();
+}
+</code></pre>
+<h3 id="泛型约束：class-和构造函数">泛型约束：class 和构造函数</h3>
+<pre><code class="language-js">
+class BeeKeeper {
+  hasMask: boolean;
+}
+
+class ZooKeeper {
+  nametag: string;
+}
+
+class Animal {
+  numLegs: number;
+}
+
+class Bee extends Animal {
+  keeper: BeeKeeper;
+}
+
+class Lion extends Animal {
+  keeper: ZooKeeper;
+}
+
+function createInstance&lt;A extends Animal&gt;(c: new () =&gt; A): A {
+  return new c();
+}
+
+createInstance(Lion).keeper.nametag; // typechecks!
+createInstance(BeeKeeper).keeper.hasMask; // Error: Property &#39;keeper&#39; does not exist on type &#39;Animal&#39;.t
+</code></pre>
+<h2 id="泛型工具">泛型工具</h2>
+<p>ReturnType&lt;T
+<img src="/images/%E7%94%BB%E7%93%A2-21-04-29-09-40-56.png" alt=""></p>
+<p><strong>type OR interface?</strong>
+<img src="/images/%E7%94%BB%E7%93%A2-21-04-29-09-43-08.png" alt=""></p>
+<p><strong>全局变量</strong>
+<img src="/images/%E7%94%BB%E7%93%A2-21-04-29-10-00-07.png" alt=""></p>
+</body></html>

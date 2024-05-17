@@ -1,0 +1,40 @@
+<html><body><h2 id="useeffect和uselayouteffectde的区别">useEffect和useLayoutEffectde的区别</h2>
+<ol>
+<li>useEffect, brower repaint, 之后执行;</li>
+<li>useLayoutEffectde, dom mutated 之后, brower repaint之前执行;</li>
+</ol>
+<p><img src="https://pbs.twimg.com/media/FQfQwHXakAISgnr?format=jpg&name=large" alt="执行时机对比图"></p>
+<h2 id="when-to-use">when to use?</h2>
+<ol>
+<li>useLayoutEffect, 想要在brower repaint之前对Dom做一些操作，eg. 修改Dom、测量Dom尺寸等;</li>
+<li>useEffect, 大多数情况下都应该使用这个，不应该阻塞浏览器的渲染</li>
+</ol>
+<h2 id="code">code</h2>
+<pre><code class="language-jsx">import React, { useContext, useEffect } from &quot;react&quot;;
+
+export default function App() {
+  const ref = React.useRef(&quot;&quot;);
+
+  React.useEffect(() =&gt; {
+    ref.current = &quot;some value&quot;;
+  });
+
+  // then, later in another hook or something
+  React.useLayoutEffect(() =&gt; {
+    console.log(&quot;ref.current&quot;, ref.current); // &lt;-- this logs an old value because this runs first!
+    // 会打印两次，第一次：&quot;&quot;, 第二次：&quot;some value&quot;
+  });
+
+  return (
+    &lt;div&gt;
+      &lt;div&gt;{ref.current}&lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h2 id="参考">参考</h2>
+<ol>
+<li><a href="https://kentcdodds.com/blog/useeffect-vs-uselayouteffect">useEffect vs useLayoutEffect</a></li>
+<li><a href="https://twitter.com/D555Sai/status/1515409331428429824">twitter</a></li>
+</ol>
+</body></html>

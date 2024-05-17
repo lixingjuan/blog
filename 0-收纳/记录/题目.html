@@ -1,0 +1,37 @@
+<html><body><ol>
+<li>题目1</li>
+</ol>
+<pre><code class="language-js">async function async1() {
+  console.log(1);
+  const res = await async2();
+  console.log(2);
+}
+
+async function async2() {
+  console.log(3);
+}
+
+Promise.resolve().then(() =&gt; {
+  console.log(4);
+  setTimeout(() =&gt; {
+    console.log(5);
+    Promise.resolve(6);
+  }, 0);
+  Promise.reject();
+  console.log(7);
+});
+
+setTimeout(() =&gt; {
+  console.log(8);
+});
+
+async1();
+console.log(9);
+// 1, 3, 2, 9, 4, 7, 8, 5,
+</code></pre>
+<ol>
+<li>题目2</li>
+</ol>
+<pre><code class="language-js">
+</code></pre>
+</body></html>

@@ -1,0 +1,44 @@
+<html><body><h2 id="利用-module-federation-实现微服务">利用 module-federation 实现微服务</h2>
+<p>生产者配置 webpack.config.js</p>
+<pre><code class="language-js">const { ModuleFederationPlugin } = require(&quot;webpack&quot;).container
+
+module.exports = {
+  // ...
+  plugins: [
+    new ModuleFederationPlugin({
+      name: &#39;nav&#39;,
+      filename: &#39;remoteEntry.js&#39;,
+      remotes: {},
+      exposes: {
+        &quot;./Header&quot;: &quot;./src/Header.js&quot;
+      },
+      // 三方共享模块
+      shared: {}
+    })
+  ],
+};
+</code></pre>
+<p>消费者配置 webpack.config.js</p>
+<pre><code class="language-js">const path = require(&quot;path&quot;);
+const HtmlWebpackPlugin = require(&quot;html-webpack-plugin&quot;);
+const { ModuleFederationPlugin } = require(&quot;webpack&quot;).container
+
+module.exports = {
+  // ...
+  plugins: [
+    new ModuleFederationPlugin({
+      name: &#39;home&#39;,
+      filename: &#39;remoteEntry.js&#39;,
+      remotes: {
+        nav: &quot;nav@http://localhost:3002/remoteEntry.js&quot;
+      },
+      exposes: {
+        &quot;./HomeList&quot;: &quot;./src/HomeList.js&quot;
+      },
+      // 三方共享模块
+      shared: {}
+    })
+  ],
+};
+</code></pre>
+</body></html>

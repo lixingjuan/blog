@@ -1,0 +1,77 @@
+<html><body><h2 id="什么是loader">什么是loader?</h2>
+<p>loader 可以让webpack 去处理其他类型的文件，并且将他们转化为有效的模块来供我们的应用程序使用</p>
+<h2 id="加载css">加载css</h2>
+<p>我们学习了</p>
+<ol>
+<li><p>通过style-loader, css-loader 让webpack 去加载css资源</p>
+</li>
+<li><p>并且将css代码放在html页面的head里面(!!style-loader 实现)</p>
+</li>
+<li><p>同时还可以使用less-loader, sass-loader, stylus-loader 来引入css预处理工具</p>
+</li>
+<li></li>
+</ol>
+<pre><code class="language-js">{
+  module: {
+    rules: [
+      // ...
+      {
+        test: /\.css$/,
+        /**
+         * 1. 此处支持字符串/数组
+         * 2. 顺序从后向前
+         * 3. 先使用css-loader使得打包没有问题，可识别css文件
+         *    再使用style-loader将css放置页面上
+         */
+        /**
+         * !!loader支持链式调用，且逆序，最后一个loader先对源进行转换，将转换的结果传给他的前一个loader
+        */
+        use: [&quot;style-loader&quot;, &quot;css-loader&quot;, &quot;less-loader&quot;],
+      },
+    ],
+  },
+}
+</code></pre>
+<h2 id="抽离和压缩css">抽离和压缩css</h2>
+<ol>
+<li>利用 <code>mini-css-extract-plugin</code> 及其 对应的loader 去抽离css文件</li>
+<li>利用 <code>css-minimizer-webpack-plugin</code> 压缩css文件<ol>
+<li>!! 注意，他是使用在 <code>{   optimization: { minimizer: [ // 在此处实例化 ] } }</code></li>
+<li>!! 还需要修改mode值为 production</li>
+</ol>
+</li>
+</ol>
+<h2 id="加载-images-图像">加载 images 图像</h2>
+<ol>
+<li>css中加载图片资源<ol>
+<li>直接支持</li>
+</ol>
+</li>
+<li>通过05课的 <code>asset-module</code> 加载</li>
+</ol>
+<h2 id="加载-fonts-字体">加载 fonts 字体</h2>
+<ol>
+<li>module 引入规则</li>
+</ol>
+<pre><code class="language-js">{
+  // ...
+  module: {
+    {
+      test: /\.(woff|woff2|eot|ttf|otf)$/,
+      type: &quot;asset/resource&quot;,
+    },
+  }
+}
+</code></pre>
+<ol start="2">
+<li>在css中引入字体文件并定义</li>
+</ol>
+<h2 id="加载数据">加载数据</h2>
+<ol>
+<li>利用 <code>csv-loader</code> 和 <code>xml-loader</code> 来加载 csv, tsv, 或者是 xml文件</li>
+</ol>
+<h2 id="自定义-json-模块-parser">自定义 json 模块 parser</h2>
+<ol>
+<li>利用 loader <code>yaml, taml, json5</code> 去加载 yaml, toml, 以及json5</li>
+</ol>
+</body></html>

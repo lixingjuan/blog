@@ -1,0 +1,15 @@
+<html><body><h2 id="为什么需要babel-loader">为什么需要babel-loader</h2>
+<ol>
+<li>虽然webpack 天生支持加载js文件，但是他只能做js模块化的打包，并不能转化js里的代码，比如将ES6转化为ES5，那有时候我们的ES6/7/8等新版本语法可以正常运行，纯靠浏览器来解析，如果遇到低版本的浏览器，运行就可能发生错误。
+因此我们在写高版本语法的js是需要转化的，这个转化的工具就是babel</li>
+<li>babel 和webpack结合就需要一个babel-loader</li>
+</ol>
+<h2 id="使用babel-loader">使用babel-loader</h2>
+<p>我们通过安装 <code>babel-loader</code> <code>@babel/core</code> <code>@babel/preset-env</code> 在配置文件里让webpack来解析js文件的时候，去用babel-loader 来对js转化一下</p>
+<h2 id="regeneratorruntime-插件">regeneratorRuntime 插件</h2>
+<p>例如，async/await语法转化为ES5的时候，是需要 regeneratorRuntime 插件的支持，所以我们通过安装另外两个插件来实现</p>
+<ol>
+<li>@babel/runtime: 包含全局 <code>regeneratorRuntime</code> 辅助函数</li>
+<li>@babel/plugin-transform-runtime: 该插件会在需要 <code>regeneratorRuntime</code> 函数的地方<strong>自动require导包</strong></li>
+</ol>
+</body></html>

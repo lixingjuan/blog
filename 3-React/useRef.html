@@ -1,0 +1,44 @@
+<html><body><h1 id="useref">useRef</h1>
+<p>useRef是React Hook之一，他可以在函数组件中存储一个可变的引用对象，这个引用对象在函数组件的整个生命周期内都保持不变。
+useRef最常见的用途有两个：访问Dom结点和保存任何可变值。</p>
+<h2 id="访问dom节点">访问DOM节点</h2>
+<p>在React中，通常使用受控组件来处理表单输入等，但有时直接访问DOM节点是必要的，比如管理焦点、文本选择或媒体播放。useRef允许我们直接访问DOM元素，而不用依赖于传统的DOM操作方法。</p>
+<h2 id="保存任何可变值">保存任何可变值</h2>
+<p>另一个useRef的用途是保存任何可变值。这个值可以是任何类型，比如一个数字、字符串、对象等。与实例属性在class组件中的作用相似，通过useRef创建的对象在组件的整个生命周期内保持不变，即使组件重新渲染。不同于状态（state），更新ref对象中的值不会触发组件的重新渲染。</p>
+<h1 id="ref解决了什么问题？">ref解决了什么问题？</h1>
+<ol>
+<li>提供了操作原生Dom 的能力，eg.<ol>
+<li>Input.focus()</li>
+<li>echarts渲染</li>
+</ol>
+</li>
+<li>直接调用子组件方法的能力</li>
+</ol>
+<h2 id="ref有什么作用？">Ref有什么作用？</h2>
+<p>react会自动做转发：</p>
+<ul>
+<li>作用于HTML元素： 将<code>原生dom</code>绑定在.current属性上</li>
+<li>作用于<code>class</code>组件： 将<code>组件实例</code>绑定在.current属性上</li>
+<li>作用于<code>函数</code>组件： 因为函数式组件没有实例，需要搭配<code>forwardRef</code>, 做转发，另外可以使用 <code>useImperativeHandle(ref, handle, deps)</code>, 将子组件的方法绑定到父组件上，使得父组件可以 <code>父组件.current.xxx()</code> 调用子组件绑定的方法</li>
+</ul>
+<h2 id="创建方式">创建方式</h2>
+<ol>
+<li>class组件：<ol>
+<li>React.createRef;</li>
+<li>回调函数写法：<code>ref={element =&gt; this.textInput = element}</code>;</li>
+</ol>
+</li>
+<li>函数式组件：<code>React.useRef()</code>;</li>
+</ol>
+<h2 id="其他用处">其他用处</h2>
+<ol>
+<li>因为 <code>ref</code> 在组件的整个生命周期内保持稳定引用地址的特性, 通常用它保存一些，在别的地方需要立即获取最新值的属性值；</li>
+<li>操作子组件的方法： 封装echarts库的时候，向组件暴漏当前实例/方法，便于发出action/event</li>
+</ol>
+<h2 id="有什么？">有什么？</h2>
+<ol>
+<li>回调写法，16.3.0版本开始支持</li>
+<li>React.createRef: class组件</li>
+<li>✨useRef: hooks, 函数式组件</li>
+</ol>
+</body></html>

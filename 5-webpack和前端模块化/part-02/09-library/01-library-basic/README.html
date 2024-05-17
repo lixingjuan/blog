@@ -1,0 +1,109 @@
+<html><body><h2 id="打包出支持-script标签引入">打包出支持 script标签引入</h2>
+<p>webpack.config.js 配置</p>
+<pre><code class="language-js">const path = require(&quot;path&quot;);
+
+module.exports = {
+  mode: &quot;production&quot;,
+
+  entry: &quot;./src/index.js&quot;,
+
+  output: {
+    path: path.resolve(__dirname, &quot;./dist&quot;),
+    clean: true,
+    filename: &quot;myLib.js&quot;,
+    library: &#39;myLib&#39;
+   },
+};
+</code></pre>
+<p>或者</p>
+<pre><code class="language-js">const path = require(&quot;path&quot;);
+
+module.exports = {
+  mode: &quot;production&quot;,
+
+  entry: &quot;./src/index.js&quot;,
+
+  output: {
+    path: path.resolve(__dirname, &quot;./dist&quot;),
+    clean: true,
+    filename: &quot;myLib.js&quot;,
+    /* !! 配置了该属性，就不会被treeShaking */
+    library: {
+      name: &#39;myLib&#39;,
+      type: &quot;window&quot;
+    }
+   },
+};
+</code></pre>
+<h2 id="打包出支持-esmodule">打包出支持 ESModule</h2>
+<pre><code class="language-js">const path = require(&quot;path&quot;);
+
+module.exports = {
+  mode: &quot;production&quot;,
+
+  entry: &quot;./src/index.js&quot;,
+
+  experiments: {
+    /* !! ESModule 需要允许实验性功能 */
+    outputModule: true
+  },
+
+  output: {
+    path: path.resolve(__dirname, &quot;./dist&quot;),
+    clean: true,
+    filename: &quot;myLib.js&quot;,
+    /* !! 配置了该属性，就不会被treeShaking */
+    library: {
+      type: &quot;module&quot;
+    }
+   },
+};
+</code></pre>
+<h2 id="打包出支持-commonjs">打包出支持 common.js</h2>
+<p>webpack.config.js</p>
+<pre><code class="language-js">const path = require(&quot;path&quot;);
+
+module.exports = {
+  mode: &quot;production&quot;,
+
+  entry: &quot;./src/index.js&quot;,
+
+  output: {
+    path: path.resolve(__dirname, &quot;./dist&quot;),
+    clean: true,
+    filename: &quot;myLib.js&quot;,
+    /* !! 配置了该属性，就不会被treeShaking */
+    library: {
+      name: &#39;myLib&#39;,
+      type: &quot;commonjs&quot;
+    }
+   },
+};
+</code></pre>
+<h2 id="打包出umd--同时-支持-commonjs--script">打包出UMD =&gt; 同时 支持 common.js &amp; script</h2>
+<pre><code class="language-js">const path = require(&quot;path&quot;);
+
+module.exports = {
+  mode: &quot;production&quot;,
+
+  entry: &quot;./src/index.js&quot;,
+
+  // experiments: {
+  //   outputModule: true
+  // },
+
+  output: {
+    path: path.resolve(__dirname, &quot;./dist&quot;),
+    clean: true,
+    filename: &quot;myLib.js&quot;,
+    /* !! 配置了该属性，就不会被treeShaking */
+    library: {
+      name: &#39;myLib&#39;,
+      type: &quot;umd&quot;
+    },
+    /* !! globalThis 代替 全局self */
+    globalObject: &quot;globalThis&quot;
+   },
+};
+</code></pre>
+</body></html>

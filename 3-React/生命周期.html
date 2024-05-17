@@ -1,0 +1,62 @@
+<html><body><iframe src="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/" style="width: 100vw; height: 800px;"></iframe>
+
+<p>react的生命周期方法允许我们在组件的不同阶段执行代码</p>
+<h2 id="常用的生命周期方法">常用的生命周期方法</h2>
+<ol>
+<li><code>constructor</code><ol>
+<li>通常进行状态的初始化和事件绑定</li>
+</ol>
+</li>
+<li><code>render</code><ol>
+<li>这是唯一必须实现的方法，他输出组件要渲染的内容</li>
+</ol>
+</li>
+<li><code>componentDidMount</code><ol>
+<li>dom挂载完成</li>
+<li>仅执行一次</li>
+</ol>
+</li>
+<li><code>componentDidUpdate(prevProps, prevState)</code><ol>
+<li>在组件的props或state更新后调用</li>
+<li>应用：页面需要根据props变化重新获取数据</li>
+</ol>
+</li>
+<li><code>componentWillUnmount</code><ol>
+<li>组件将被卸载前调用</li>
+<li>常用来用来取消事件的监听或清除组件中使用的定时器</li>
+</ol>
+</li>
+</ol>
+<h2 id="不常用的一些">不常用的一些</h2>
+<ol>
+<li><code>componentDidCatch(error, info)</code></li>
+<li><code>static getDerivedStateFromError</code></li>
+<li><code>shouldComponentUpdate</code><ol>
+<li>参数(nextProps, nextState)</li>
+<li>根据返回的布尔值来决定组件是否被渲染</li>
+</ol>
+</li>
+<li><code>getSnapshotBeforeUpdate</code><ol>
+<li>render之前调用，</li>
+<li>render方法之前调用，并且在初始挂载及后续更新时都会被调用。</li>
+<li>根据 shouldComponentUpdate() 的返回值，判断 React 组件的输出是否受当前 state 或 props 更改的影响</li>
+</ol>
+</li>
+</ol>
+<h2 id="163生命周期发生了什么变化">16.3生命周期发生了什么变化</h2>
+<ol>
+<li>增加2个生命周期：<ol>
+<li><code>static getDerivedStateFromProps</code></li>
+<li><code>getSnapshotBeforeUpdate</code></li>
+</ol>
+</li>
+<li>2生命周期加上了 <code>UNSAFE_</code>前缀：<ol>
+<li><code>UNSAFE_componentWillMount</code></li>
+<li><code>UNSAFE_componentWillReceiveProps</code></li>
+<li><code>UNSAFE_componentWillUpdate</code></li>
+</ol>
+</li>
+</ol>
+<h2 id="168发生了什么">16.8发生了什么</h2>
+<p>推出了hooks</p>
+</body></html>

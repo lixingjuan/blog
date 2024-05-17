@@ -1,0 +1,236 @@
+<html><body><h2 id="模版字符串的ts">模版字符串的ts</h2>
+<ol>
+<li>typescript 帮我们推断出字符串</li>
+</ol>
+<pre><code class="language-ts">type Colors = &quot;red&quot; | &quot;green&quot;;
+type Size = &quot;big&quot; | &quot;small&quot;;
+type Result = `${Colors | Size} fish`; // &quot;red fish&quot; | &quot;green fish&quot; | &quot;big fish&quot; | &quot;small fish&quot;
+</code></pre>
+<ol start="2">
+<li>在函数中使用</li>
+</ol>
+<pre><code class="language-ts">// 模版字符串
+const Demo = (s: string): `hahaha ${string}` =&gt; {
+  return `hahaha ${s}`;
+};
+
+type DemoType = typeof Demo2; // type Demo2 = (s: string) =&gt; `hahaha ${string}`
+</code></pre>
+<h2 id="-声明私有属性方法">“#” 声明私有属性/方法</h2>
+<p>在类中使用 “#” 使得属性/方法 在运行时成为真正的私有元素</p>
+<pre><code class="language-ts">class Foo {
+    age = 58
+    private length = &quot;吐司&quot;
+    #name = &quot;吐司&quot;
+    static #staticName = &quot;吐司&quot;
+
+    sayHello(){
+        console.log(&#39;hello world&#39;)
+    }
+
+    private sayYes(){
+        console.log(&#39;yes&#39;)
+    }
+
+    #sayNo(){
+        console.log(&#39;No&#39;)
+    }
+
+}
+
+// 属性
+new Foo().age
+new Foo().length    // Property &#39;length&#39; is private and only accessible within class &#39;Foo&#39;.
+new Foo().staticName  // Property &#39;staticName&#39; does not exist on type &#39;Foo&#39;.
+new Foo().name  // Property &#39;name&#39; does not exist on type &#39;Foo&#39;.
+
+// 方法
+new Foo().sayHello()
+new Foo().sayYes()  // Property &#39;sayYes&#39; is private and only accessible within class &#39;Foo&#39;.
+new Foo().sayNo()   // Property &#39;sayNo&#39; does not exist on type &#39;Foo&#39;
+</code></pre>
+<p>继承的子类也不能访问</p>
+<pre><code class="language-ts">class FooChild extends Foo {
+    sayFatherAge(){
+        console.log(this.age)
+        console.log(this.length)  // Property &#39;length&#39; is private and only accessible within class &#39;Foo&#39;.
+        console.log(this.staticName)  // Property &#39;staticName&#39; does not exist on type &#39;FooChild&#39;.
+    }
+}
+</code></pre>
+<h2 id="抽象类-constructorparameters">抽象类 ConstructorParameters</h2>
+<p>ConstructorParameters 帮我们获取抽象类的 constructor 参数</p>
+<pre><code class="language-ts">abstract class CCC {
+    constructor(name: string, age: number, beauty: boolean){
+    }
+
+    abstract getName(): string
+}
+
+type CCCType = ConstructorParameters&lt;typeof CCC&gt; // [name: string, age: number, beauty: boolean]
+</code></pre>
+<h2 id="第二个泛型">第二个泛型</h2>
+<p>4.2及之前版本如下代码不能正确识别 第二个泛型C</p>
+<pre><code class="language-ts">// 4.2 及以前, 写法
+function makeUnique&lt;T extends String | Number&gt;(collection: Set&lt;T&gt; | T[]): Set&lt;T&gt; | T[];
+// 4.3
+function makeUnique&lt;T extends String | Number, C extends Set&lt;T&gt; | T[]&gt;(collection: C): C;
+</code></pre>
+<pre><code class="language-ts">function makeUnique&lt;T extends String | Number, C extends Set&lt;T&gt; | T[]&gt;(
+  collection: C,
+): C {
+  if (collection instanceof Set) {
+    return collection;
+  }
+
+  // Error: Property &#39;sort&#39; does not exist on type &#39;C&#39;
+  collection.sort((a,b) =&gt; Number(a) &lt; Number(b) ? -1 : 1)
+
+  // 数组的去重操作，可忽略其实现
+  for (let index = 0; index &lt; collection.length; index++) {
+    // Element implicitly has an &#39;any&#39; type because expression of type &#39;number&#39; can&#39;t be used to index type &#39;Set&lt;T&gt; | T[]&#39;.
+    const element = collection[index];
+
+    for (
+      let startIndex = index + 1;
+      index &lt; collection.length - startIndex;
+      startIndex++
+    ) {
+      const nextElement = collection[startIndex];
+      if (element === nextElement) {
+        collection.splice(index + 1, 1);
+      } else {
+        break;
+      }
+    }
+  }
+
+
+  return collection;
+}
+</code></pre>
+<h2 id="检查promise-的-truthy">检查promise 的 truthy</h2>
+<p>文档说如果直接调用Promise 判断真假，会报错
+但是我在playground 尝试并没有发现</p>
+<pre><code class="language-ts">async function foo(): Promise&lt;boolean&gt; {
+  return false;
+}
+async function bar(): Promise&lt;string&gt; {
+  if (foo()) {
+    //  ~~~~~
+    // Error!
+    // This condition will always return true since
+    // this &#39;Promise&lt;boolean&gt;&#39; appears to always be defined.
+    // Did you forget to use &#39;await&#39;?
+    return &quot;true&quot;;
+  }
+  return &quot;false&quot;;
+}
+</code></pre>
+<h2 id="static允许修改类本身索引签名">static允许修改类本身索引签名</h2>
+<p>索引签名允许我们对值设置比显式声明的类型更多的属性, 但是之前我们只能在类的实例端声明，代码如下</p>
+<pre><code class="language-ts">class Foo {
+  age = 29;
+
+  [propName: string]: string | number | undefined
+}
+
+let instance = new Foo();
+instance[&#39;otherthing&#39;] = &#39;我是name&#39;
+
+// 如果尝试直接修改类本身，则会报错
+Foo[&quot;something&quot;] = &#39;我是长度&#39;
+// ~~~~~
+// Element implicitly has an &#39;any&#39; type because expression of type &#39;&quot;something&quot;&#39; can&#39;t be used to index type &#39;typeof Foo&#39;.
+</code></pre>
+<p>4.3 使得我们该索引签名添加 static 关键字，从而允许直接修改类本身的属性, 但是这样不能修改实例的</p>
+<pre><code class="language-ts">class Foo {
+  age = 29;
+
+  static [propName: string]: string | number | undefined
+}
+
+let instance = new Foo();
+instance[&#39;otherthing&#39;] = &#39;我是name&#39;
+//        ~~~~~~~~~~
+// Element implicitly has an &#39;any&#39; type because expression of type &#39;&quot;otherthing&quot;&#39; can&#39;t be used to index type &#39;Foo&#39;.
+
+Foo[&quot;something&quot;] = &#39;我是长度&#39;
+</code></pre>
+<p>类的静态方面的索引签名和实例方面的索引签名应用的规则相同，也就是说，其他所有的静态属性都必须和索引签名类型相同</p>
+<pre><code class="language-ts">
+class Foo {
+  static age = 29;
+  //     ~~~
+  // Property &#39;age&#39; of type &#39;number&#39; is not assignable to string index type &#39;string | undefined&#39;
+
+  static [propName: string]: string | undefined
+}
+
+Foo[&quot;something&quot;] = &#39;我是长度&#39;
+</code></pre>
+<h2 id="枚举类型不能与永远不相等的数字进行比较">枚举类型不能与永远不相等的数字进行比较</h2>
+<pre><code class="language-ts">enum AA {
+  A = 0,
+  B = 1
+}
+
+const demo = (val: AA) =&gt; {
+  if(val === 3){
+    // ~~~~~~~ 4.3版本这里会类型报错
+    // This condition will always return &#39;false&#39; since the types &#39;AA&#39; and &#39;3&#39; have no overlap.
+
+    // do something
+  }
+}
+</code></pre>
+<p><strong>对此的变通方案</strong></p>
+<ol>
+<li>重写枚举，将枚举重新声明为不平凡(non-trivial )的值</li>
+</ol>
+<pre><code class="language-ts">enum AA {
+  A = +0,
+  B = 1
+}
+
+const demo = (val: AA) =&gt; {
+  if(val === 3){
+    // do something
+  }
+}
+</code></pre>
+<ol start="2">
+<li>使用 as, 对值进行类型断言</li>
+</ol>
+<pre><code class="language-ts">enum AA {
+  A = 0,
+  B = 1
+}
+
+const demo = (val: AA) =&gt; {
+  if((val as number) === 3){
+    // do something
+  }
+}
+</code></pre>
+<ol start="3">
+<li>使用联合类型 并 添加注释</li>
+</ol>
+<pre><code class="language-ts">enum AA {
+  A = 0,
+  B = 1
+}
+
+// Include 3 in the type, if we&#39;re really certain that 3 can come through.
+const demo = (val: AA  | 3) =&gt; {
+  if((val as number) === 3){
+    // do something
+  }
+}
+</code></pre>
+<h1 id="其他">其他</h1>
+<ol>
+<li>搭配新版内部版本vscode, import 类型提示更智能 <a href="https://code.visualstudio.com/insiders/">vscode地址</a></li>
+<li>支持@link tag <img src="https://devblogs.microsoft.com/typescript/wp-content/uploads/sites/11/2021/05/link-tag-4-3.gif" /></li>
+</ol>
+</body></html>

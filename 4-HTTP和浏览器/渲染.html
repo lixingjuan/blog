@@ -1,0 +1,63 @@
+<html><body><h2 id="渲染过程">渲染过程</h2>
+<pre><code class="language-jsx">HTML parser --&gt; DOM Tree
+
+标记化算法，进行元素状态的标记
+dom 树构建
+
+
+CSS parser --&gt; Style Tree
+
+解析 css 代码，生成样式树
+
+
+attachment --&gt; Render Tree
+
+结合 dom树 与 style树，生成渲染树
+
+
+layout: 布局
+GPU painting: 像素绘制页）
+</code></pre>
+<h2 id="css-会阻塞-html-解析么？">css 会阻塞 html 解析么？</h2>
+<p>css 是同步加载还是异步加载？css 会阻塞渲染么？会阻塞解析么？</p>
+<ol>
+<li>同步加载的</li>
+<li><code>不会阻塞解析</code>: 因为 css 不影响 DOM tree 的构建; 比如，display:none, 对应的 dom, 不会出现在 layout 树 s</li>
+<li><code>会阻塞渲染</code>: 因为 layout 树的构建，需要 css；伪元素没有出现在 dom 树中，但是在 layout 树中; layout 树是渲染到浏览器的上一步</li>
+</ol>
+<h2 id="defer-和-async">defer 和 async</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>defer</th>
+<th>async</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>版本</td>
+<td>HTML4.01</td>
+<td>HTML5</td>
+</tr>
+<tr>
+<td>阻塞</td>
+<td>立即下载，延迟执行</td>
+<td>立即下载，延迟执行</td>
+</tr>
+<tr>
+<td>执行时机</td>
+<td><code>&lt;/html&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td>DOMContentLoaded</td>
+<td>DOMContentLoaded 之前</td>
+<td>onload 之前，DOMContentLoaded 前后</td>
+</tr>
+<tr>
+<td>有序否？</td>
+<td>有序</td>
+<td>无序</td>
+</tr>
+</tbody></table>
+</body></html>

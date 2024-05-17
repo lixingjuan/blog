@@ -1,0 +1,55 @@
+<html><body><h2 id="http-server">http-server</h2>
+<p>基于node.js, 可以帮助启动一个静态服务</p>
+<p>使用</p>
+<ol>
+<li>安装 <code>npm i http-server -D</code></li>
+<li>启动dist文件, <code>npx http-server dist</code></li>
+</ol>
+<h2 id="每次修改都将打包文件写入-dist文件夹">每次修改都将打包文件写入 dist文件夹</h2>
+<p>webpack.config.js</p>
+<pre><code class="language-js">module.exports = {
+  // ...
+  devServer: {
+    devMiddleware: {
+      /* !! 每次热编译都写入硬盘, 默认是写入告诉缓存中的 */
+      writeToDisk: true,
+    }
+  },
+};
+</code></pre>
+<h2 id="pwa">pwa</h2>
+<p>渐进式网络应用程序(Progressive Web Apps), 可以在浏览器端提供类似于原生APP体验, pwa可以做的事很多，其中最重要就是在离线环境下应用程序可以继续运行，这一实现利用的是Service-Worker</p>
+<h2 id="添加workbox来支持pwa">添加workbox来支持pwa</h2>
+<ol>
+<li>安装 <code>npm i workbox-webpack-plugin -D</code></li>
+<li>webpack.config.js</li>
+</ol>
+<pre><code class="language-js">{
+  plugins: [
+    // ...
+    new WorkboxWebpackPlugin.GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true
+    })
+  ],
+}
+</code></pre>
+<h2 id="注册serviceworker">注册ServiceWorker</h2>
+<pre><code class="language-js">if (&#39;serviceWorker&#39; in navigator) {
+  window.addEventListener(&#39;load&#39;, () =&gt; {
+    navigator.serviceWorker.register(&#39;./service-worker.js&#39;)
+      .then(registration =&gt; {
+      console.log(&#39; SW 注册成功&#39;, registration );
+      })
+      .catch(err =&gt; {
+      console.log(&#39; SW 注册失败&#39;,err);
+    })
+  })
+}
+</code></pre>
+<h2 id="清除sw的注册">清除SW的注册</h2>
+<ol>
+<li>浏览器访问：chrome://serviceworker-internals/</li>
+<li>点击：unregister</li>
+</ol>
+</body></html>

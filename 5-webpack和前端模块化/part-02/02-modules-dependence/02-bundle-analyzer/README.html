@@ -1,0 +1,20 @@
+<html><body><h2 id="bundle-analyzer">bundle-analyzer</h2>
+<p><code>npm install webpack-bundle-analyzer -D</code></p>
+<p>webpack.config.js</p>
+<pre><code class="language-js">const { BundleAnalyzerPlugin } = require(&#39;webpack-bundle-analyzer&#39;)
+
+{
+  plugins: [
+    new BundleAnalyzerPlugin()
+  ]
+}
+</code></pre>
+<h2 id="一些bundle分析工具">一些bundle分析工具</h2>
+<ol>
+<li>webpack-chart: webpack stats 可以交互拼图</li>
+<li>webpack-bundle-analyzer: 一个plugin 和cli工具，</li>
+<li>webpack bundle optimize helpers: 分析bundle, 并提供可操作的改进措施，以减少bundle的大小</li>
+<li>bundle-stats: 生成报告</li>
+<li>??webpack-visualizer-plugin: 可视化分析bundle, 检查哪些模块占用空间，哪些可能是重复使用的</li>
+</ol>
+</body></html>

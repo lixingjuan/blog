@@ -1,0 +1,49 @@
+<html><body><h2 id="完全引入polyfills">完全引入polyfills</h2>
+<blockquote>
+<p>生产环境打包后main.js体积 =&gt; 87.6 KiB</p>
+</blockquote>
+<p>不推荐，可能仅使用了一个方法，却导入了整个polyfill, 导致包体积大</p>
+<ol>
+<li>安装 <code>npm install @babel/polyfill -D</code></li>
+<li>在文件开头引入 <code>import &quot;@babel/polyfill&quot;</code></li>
+</ol>
+<h2 id="优化polyfills引入方案">优化polyfills引入方案</h2>
+<blockquote>
+<p>生产环境打包后main.js体积 =&gt; 19.1 KiB</p>
+</blockquote>
+<ol>
+<li>安装 <code>npm i babel-loader @babel/core @babel/preset-env core-js@2 -D</code></li>
+<li>配置webpack.config.js</li>
+</ol>
+<pre><code class="language-js">module.exports = {
+  // ...
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: &#39;babel-loader&#39;,
+          options: {
+            presets: [
+              [
+                &#39;@babel/preset-env&#39;,
+                {
+                  /* !! 这部分也可以定义在package.json 中 */
+                  targets: [
+                    &#39;last 1 versions&#39;,
+                    &#39;&gt; 1%&#39;
+                  ],
+                  useBuiltIns: &#39;usage&#39;,
+                  corejs: 3
+                }
+              ]
+            ]
+          }
+        }
+      }
+    ]
+  }
+};
+</code></pre>
+</body></html>

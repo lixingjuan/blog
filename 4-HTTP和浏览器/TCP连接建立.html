@@ -1,0 +1,35 @@
+<html><body><h1 id="tcp连接建立">tcp连接建立</h1>
+<h2 id="三次握手">三次握手</h2>
+<ol>
+<li>客户端：发送syn包（seq=j）到服务器， 并进入 SYN_SEND 状态；</li>
+<li>服务端：确认客户端的syn包，ack = j+1, 同时自己发送一个syn包（seq=k），并进入 SYN_REVE 状态；</li>
+<li>客户端：收到服务器的 syn + ack包，并且发送 syn = k+1, 双方进入 ESTABLISHED状态；</li>
+</ol>
+<h2 id="https">https</h2>
+<p>先三次握手建立TCP连接
+再通过 TLS 四次握手，交换双方的密钥
+TLS是非对称加密，</p>
+<ul>
+<li>公钥（public key）：公开可见，用于加密数据。</li>
+<li>私钥（private key）：只自己可见，用于解密。</li>
+</ul>
+<h2 id="四次挥手">四次挥手</h2>
+<pre><code>       FIN
+    -------&gt;
+
+       ACK
+    &lt;-------
+</code></pre>
+<p>客户端              服务器
+           FIN
+        &lt;-------</p>
+<pre><code>       ACK
+    -------&gt;
+</code></pre>
+<ol>
+<li>客户端发送 <code>FIN</code>;</li>
+<li>服务器向客户端发送一个确认序号<code>ACK</code>，同时通知自己相应的应用程序：对方要求关闭连接（先发送ACK的目的是为了防止在这段时间内，对方重传FIN报文段）;</li>
+<li>服务器的向客户端送一个<code>FIN</code>报文段;</li>
+<li>客户端收到这个FIN报文段后，向主机B发送一个<code>ACK</code>表示连接彻底释放;</li>
+</ol>
+</body></html>

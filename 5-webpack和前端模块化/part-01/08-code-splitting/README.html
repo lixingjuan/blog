@@ -1,0 +1,38 @@
+<html><body><h2 id="常见代码分离方式">常见代码分离方式</h2>
+<ol>
+<li>入口起点<ol>
+<li>使用entry配置手动地分离代码</li>
+<li>缺点：多个文件共享的文件会分别在每个包里重复打包</li>
+</ol>
+</li>
+<li>防止重复<ol>
+<li>使用entry dependencies 或者 SplitChunkdPlugin 去重和分离代码</li>
+</ol>
+</li>
+<li>动态导入<ol>
+<li>通过模块的内联函数 <code>import</code> 来调用函数分离代码</li>
+</ol>
+</li>
+</ol>
+<h2 id="动态导入的应用">动态导入的应用</h2>
+<p>实现懒加载</p>
+<ol>
+<li>初次不加载</li>
+<li>点击时间才加载</li>
+<li>魔法注释<ol>
+<li><code>webpackChunkName: &#39;math&#39;</code>: 修改打包后文件名称</li>
+<li><code>webpackPrefetch: true</code>: 预获取, 网络空闲的时候提前加载</li>
+<li><code>webpackPreload: true</code>: 预加载, 和懒加载效果比较像</li>
+</ol>
+</li>
+</ol>
+<pre><code class="language-js">const button = document.createElement(&quot;button&quot;);
+button.innerHTML = &quot;点击执行加法运算&quot;;
+button.addEventListener(&quot;click&quot;, () =&gt; {
+  import(/* webpackChunkName: &#39;math&#39;, webpackPrefetch: true */ &quot;./math.js&quot;).then(({ add }) =&gt; {
+    console.log(add(1, 3));
+  });
+});
+document.body.appendChild(button);
+</code></pre>
+</body></html>

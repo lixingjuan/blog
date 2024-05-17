@@ -1,0 +1,74 @@
+<html><body><h2 id="利用css3">利用css3</h2>
+<pre><code class="language-html">&lt;div class=&quot;box1&quot;&gt;
+  &lt;div class=&quot;box2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 50%; /* relative设置top百分比是相对父元素 */
+  left: 50%;
+  background-color: pink;
+  transform: translate(-50%, -50%);/* 50%为自身尺寸的一半 */
+}
+</code></pre>
+<h2 id="displayflex">display:flex;</h2>
+<pre><code class="language-html">&lt;div class=&quot;box1&quot;&gt;
+  &lt;div class=&quot;box2&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">.box1 {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+</code></pre>
+<h2 id="利用topleft定位属性结合margin-----1">利用top/left定位属性结合margin --- (1)</h2>
+<p>利用 top/margin-top(负数)来实现居中</p>
+<ul>
+<li>缺点：必须已知块的 宽度和高度</li>
+</ul>
+<pre><code class="language-html">  &lt;div id=&quot;pageContanier&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">#pageContanier {
++ width: 200px;
++ height: 200px;
++ position: relative;
++ top: 50%;
++ left: 50%;
++ margin-top: -100px;
++ margin-left: -100px;
+  background-color: red;
+}
+</code></pre>
+<h2 id="利用topleft定位属性结合margin-----2">利用top/left定位属性结合margin --- (2)</h2>
+<p>利用 top/margin(auto)来实现居中</p>
+<pre><code class="language-html">  &lt;div id=&quot;pageContanier&quot;&gt;&lt;/div&gt;
+</code></pre>
+<pre><code class="language-css">#pageContanier {
++ width: 80%;
++ height: 80%;
++ position: absolute;
++ top: 0;
++ bottom: 0;
++ left: 0;
++ right: 0;
++ margin: auto;
+  background-color: red;
+}
+</code></pre>
+</body></html>
