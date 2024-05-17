@@ -28,5 +28,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./src # 生成 HTML 文件的目录
+        publish_dir: . # 生成 HTML 文件的目录
         publish_branch: gh-pages
