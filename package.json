@@ -1,0 +1,12 @@
+{
+  "name": "your-project",
+  "version": "1.0.0",
+  "description": "Your project description",
+  "main": "index.js",
+  "scripts": {
+    "generate-html": "node scripts/generate-html.js"
+  },
+  "dependencies": {
+    "marked": "^4.0.0"
+  }
+}
