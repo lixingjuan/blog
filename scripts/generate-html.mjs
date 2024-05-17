@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const marked = require('marked');
+import fs from 'fs';
+import path from 'path';
+import { marked } from 'marked';
 
 // 递归遍历目录
 function walkDir(dir, callback) {
