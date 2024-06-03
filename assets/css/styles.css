@@ -1,0 +1,20 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+}
+
+#menu {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+#content {
+  flex: 1;
+  padding: 20px;
+}

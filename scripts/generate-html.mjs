@@ -18,11 +18,11 @@ function generateHTML(filePath) {
   let htmlContent;
 
   if (ext === '.js') {
-    htmlContent = `<html><body><pre>${content}</pre></body></html>`;
+    htmlContent = `<html><head><link rel="stylesheet" href="/assets/css/styles.css"></head><body><pre>${content}</pre></body></html>`;
   } else if (ext === '.md') {
-    htmlContent = `<html><body>${marked(content)}</body></html>`;
+    htmlContent = `<html><head><link rel="stylesheet" href="/assets/css/styles.css"></head><body>${marked(content)}</body></html>`;
   } else if (['.jpg', '.jpeg', '.png', '.gif'].includes(ext)) {
-    htmlContent = `<html><body><img src="${filePath}" alt="image" /></body></html>`;
+    htmlContent = `<html><head><link rel="stylesheet" href="/assets/css/styles.css"></head><body><img src="${filePath}" alt="image" /></body></html>`;
   } else {
     return;
   }
@@ -31,6 +31,26 @@ function generateHTML(filePath) {
   fs.writeFileSync(outputFilePath, htmlContent);
 }
 
-// 执行脚本
-const rootDir = '.'; // 根目录
-walkDir(rootDir, generateHTML);
+// 生成菜单和内容页面
+function generateSite() {
+  const rootDir = '.'; // Markdown 文件所在目录
+  const outputDir = './dist'; // 输出目录
+  if (!fs.existsSync(outputDir)){
+    fs.mkdirSync(outputDir);
+  }
+
+  const menuItems = [];
+
+  walkDir(rootDir, (filePath) => {
+    generateHTML(filePath);
+    const fileName = path.basename(filePath, path.extname(filePath));
+    menuItems.push(`<li><a href="${fileName}.html">${fileName}</a></li>`);
+  });
+
+  const menuHTML = `<ul>${menuItems.join('')}</ul>`;
+  const indexHTML = `<html><head><link rel="stylesheet" href="/assets/css/styles.css"></head><body><div id="menu">${menuHTML}</div><div id="content">Select an item from the menu.</div></body></html>`;
+
+  fs.writeFileSync(path.join(outputDir, 'index.html'), indexHTML);
+}
+
+generateSite();

@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Your project description",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "generate-html": "node scripts/generate-html.js"
+    "generate-html": "node scripts/generate-html.mjs"
   },
   "dependencies": {
     "marked": "^4.0.0"
