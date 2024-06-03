@@ -11,10 +11,11 @@ if (!fs.existsSync(outputDir)) {
 
 const menuItems = [];
 
+// 写入本地
 walkDir(rootDir, (filePath) => {
   generateHTML(filePath);
   const fileName = path.basename(filePath, path.extname(filePath));
-  menuItems.push(`<li><a href="${fileName}.html">${fileName}</a></li>`);
+  menuItems.push(`<li>${fileName}</li>`);
 });
 
 const menuHTML = `<ul>${menuItems.join("")}</ul>`;
