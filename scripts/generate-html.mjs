@@ -17,9 +17,8 @@ const getHtml = (ext, content) => {
     case ".png":
     case ".gif":
       return `<html><head><link rel="stylesheet" href="/assets/css/styles.css"></head><body>${content}</body></html>`;
-
     default:
-      break;
+      return "";
   }
 };
 
@@ -30,5 +29,9 @@ export function generateHTML(filePath) {
   let htmlContent = getHtml(ext, content);
 
   const outputFilePath = filePath.replace(ext, ".html");
-  fs.writeFileSync(outputFilePath, htmlContent);
+  try {
+    fs.writeFileSync(outputFilePath, htmlContent);
+  } catch (error) {
+    console.log("error", error);
+  }
 }

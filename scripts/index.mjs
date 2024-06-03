@@ -3,7 +3,7 @@ import path from "path";
 import { walkDir } from "./walk-dir.mjs";
 import { generateHTML } from "./generate-html.mjs";
 
-const rootDir = "."; // Markdown 文件所在目录
+const rootDir = ".";
 const outputDir = "./blog"; // 输出目录
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);

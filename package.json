@@ -1,11 +1,11 @@
 {
-  "name": "your-project",
+  "name": "lxj-blog",
   "version": "1.0.0",
   "description": "Your project description",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/index.mjs"
   },
   "dependencies": {
     "marked": "^4.0.0"
