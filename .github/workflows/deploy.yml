@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main # 监听 main 分支的推送事件
 
 jobs:
   build:
@@ -16,17 +16,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18"
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run script to generate HTML
-        run: npm run build
+          node-version: "18" # 你项目所需要的 Node.js 版本
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./blog
-          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 提供的 token
+          publish_dir: ./dist # 打包后的文件夹
+          publish_branch: gh-pages # 目标分支
