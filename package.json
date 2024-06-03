@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "generate-html": "node scripts/generate-html.mjs"
+    "build": "node scripts/build.mjs"
   },
   "dependencies": {
     "marked": "^4.0.0"
