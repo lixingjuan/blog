@@ -1,15 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import { marked } from 'marked';
+import { walkDir } from './walk-dir.mjs'
 
-// 递归遍历目录
-function walkDir(dir, callback) {
-  fs.readdirSync(dir).forEach(f => {
-    let dirPath = path.join(dir, f);
-    let isDirectory = fs.statSync(dirPath).isDirectory();
-    isDirectory ? walkDir(dirPath, callback) : callback(path.join(dir, f));
-  });
-}
 
 // 生成 HTML 文件
 function generateHTML(filePath) {
@@ -35,7 +28,7 @@ function generateHTML(filePath) {
 function generateSite() {
   const rootDir = '.'; // Markdown 文件所在目录
   const outputDir = './dist'; // 输出目录
-  if (!fs.existsSync(outputDir)){
+  if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir);
   }
 
