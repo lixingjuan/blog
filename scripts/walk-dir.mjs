@@ -10,7 +10,6 @@ export function walkDir(dir, callback) {
     if (excludes.includes(dirPath.split("/")[0])) {
       return;
     }
-    console.log({ dirPath });
     let isDirectory = fs.statSync(dirPath).isDirectory();
     isDirectory ? walkDir(dirPath, callback) : callback(path.join(dir, f));
   });
