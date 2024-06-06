@@ -5,7 +5,10 @@ import { marked } from "marked";
 const getHtml = (ext, content) => {
   switch (ext) {
     case ".js":
-      return `<html><head><link rel="stylesheet" href="/assets/css/styles.css"></head><body><pre>${content}</pre></body></html>`;
+      return `<html><head><link rel="stylesheet" href="/assets/css/styles.css"></head><body>
+          <pre>${content}</pre>
+        </body>
+      </html>`;
     case ".md":
       return `<html><head><link rel="stylesheet" href="/assets/css/styles.css"></head><body>${marked(
         content
