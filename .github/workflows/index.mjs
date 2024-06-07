@@ -11,7 +11,6 @@ function generateDirectoryStructure(dir, baseUrl, isRoot = false) {
 
   const result = files
     .map((file) => {
-      console.log(file);
       const fileName = file.name;
       const fullPath = path.join(file.parentPath, fileName);
       const relativePath = path.relative(baseUrl, fullPath);
