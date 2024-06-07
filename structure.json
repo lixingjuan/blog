@@ -1,11 +1,5 @@
 [
   {
-    "type": "file",
-    "name": ".gitignore",
-    "path": ".gitignore",
-    "fileType": ""
-  },
-  {
     "type": "directory",
     "name": "0-收纳",
     "path": "0-收纳",
