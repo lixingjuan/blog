@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LXJ, Blog ☀️</title>
+    <!-- 引入 React 和 ReactDOM -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!-- 引入 Babel 编译器 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 引入 marked 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 引入 highlight 库 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      #wrappper {
+        display: flex;
+        position: relative;
+        height: 100vh;
+      }
+
+      #sidebar {
+        width: 200px;
+        top: 0;
+        max-height: 100vh;
+        overflow: auto;
+        padding: 20px 0px;
+        flex-shrink: 0;
+      }
+
+      #content {
+        flex-grow: 1;
+        padding: 20px;
+        overflow: auto;
+      }
+
+      .pl-20 {
+        padding-left: 20px;
+      }
+
+      .file {
+        color: #333;
+        padding-left: 20px;
+      }
+
+      .file:hover {
+        background-color: #e9f4fe;
+        color: #1677ff;
+        cursor: pointer;
+      }
+
+      .folder {
+        padding-left: 20px;
+        line-height: 32px;
+      }
+
+      .folder > .folder-name {
+        color: #666;
+        font-weight: 600;
+      }
+
+      .font-20 {
+        font-size: 20px;
+      }
+      .is-open-arrow {
+        transform: rotate(90deg);
+        display: inline-block;
+      }
+    </style>
+    <script type="text/babel">
+      const AppContext = React.createContext();
+
+      const Arrow = ({ open }) => <span class={`font-20 ${open ? "is-open-arrow" : ""}`}>‣</span>;
+
+      const File = ({ name = "", path = "", fileType }) => {
+        const { updateContent } = React.useContext(AppContext);
+
+        if (!name) return null;
+        return (
+          <div class="file" onClick={() => updateContent({ path, fileType })}>
+            {name}
+          </div>
+        );
+      };
+
+      const Folder = ({ name, children = [] }) => {
+        const [isOpen, setIsOpen] = React.useState(false);
+        return (
+          <div class="folder">
+            <div class="folder-name" onClick={() => setIsOpen((pre) => !pre)}>
+              <Arrow open={isOpen} />
+              {name}
+            </div>
+            {isOpen && (
+              <div>
+                {children.map((it) => {
+                  if (it.type === "directory") {
+                    return <Folder name={it.name} children={it.children} />;
+                  }
+                  return <File name={it.name} path={it.path} fileType={it.fileType} />;
+                })}
+              </div>
+            )}
+          </div>
+        );
+      };
+
+      const loadContent = ({ path, fileType }) => {
+        if (!path) {
+          alert("路径错误");
+          return;
+        }
+        /**
+         * 根据当前文件类型，做不同的操作
+         * 1. html, 直接更新
+         * 2. markdown, 使用marked.parse, 解析为html进行展示
+         * 3. js, 按照code展示
+         */
+
+        return fetch(path)
+          .then((response) => response.text())
+          .then((fileContent) => {
+            console.log({ fileContent });
+            const lowercaseFileType = fileType.toLocaleLowerCase();
+
+            switch (fileType) {
+              case ".md":
+                return marked.parse(fileContent);
+              case ".html":
+                return fileContent;
+              case ".jpg":
+              case ".jpeg":
+              case ".png":
+                return `<div style="text-align: center;"><img src="${path}"/></div>`;
+              case ".js":
+                hljs.highlightAll();
+                return `<pre><code class="language-js">${fileContent}</code></pre>`;
+              case ".json":
+                hljs.highlightAll();
+                return `<pre><code class="language-json">${fileContent}</code></pre>`;
+              default:
+                return `<div style="color:red;">暂未支持该类型: ${fileType}</div>`;
+            }
+          });
+      };
+
+      // React 组件
+      function App() {
+        const [sidebarData, setSidebarData] = React.useState([]);
+        const [menuLoading, setMenuLoading] = React.useState(true);
+        const [contentLoading, setContentLoading] = React.useState(true);
+        const [content, setContent] = React.useState(marked.parse("# Hello"));
+
+        React.useEffect(() => {
+          setMenuLoading(true);
+          fetch("structure.json")
+            .then((response) => response.json())
+            .then((data) => {
+              setSidebarData(data);
+              setContentLoading(true);
+              // 默认展示README.md的内容
+              return loadContent({ path: "./README.md", fileType: ".md" });
+            })
+            .then(setContent)
+            .finally(() => {
+              setMenuLoading(false);
+              setContentLoading(false);
+            });
+        }, []);
+
+        const value = React.useMemo(
+          () => ({
+            updateContent: async ({ path, fileType }) => {
+              setContentLoading(true);
+              const nextContent = await loadContent({ path, fileType });
+              setContentLoading(false);
+              setContent(nextContent);
+            },
+          }),
+          [setContent]
+        );
+
+        return (
+          <AppContext.Provider value={value}>
+            <div id="wrappper">
+              <div id="sidebar">
+                {menuLoading ? (
+                  <span>loading...</span>
+                ) : (
+                  sidebarData.map((it) => {
+                    if (it.type === "directory") {
+                      return <Folder name={it.name} children={it.children} />;
+                    }
+                    return <File name={it.name} path={it.path} fileType={it.fileType} />;
+                  })
+                )}
+              </div>
+
+              <div id="content">
+                {(() => {
+                  if (contentLoading) {
+                    return <h1>Loading...</h1>;
+                  }
+                  if (!content) {
+                    return <h1>Empty</h1>;
+                  }
+                  return <div dangerouslySetInnerHTML={{ __html: content }} />;
+                })()}
+              </div>
+            </div>
+          </AppContext.Provider>
+        );
+      }
+
+      const app = document.createElement("div");
+      document.body.appendChild(app);
+      ReactDOM.render(<App />, app);
+    </script>
+  </head>
+
+  <body></body>
+</html>
