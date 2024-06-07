@@ -5361,12 +5361,6 @@
   },
   {
     "type": "file",
-    "name": "index.html",
-    "path": "index.html",
-    "fileType": ".html"
-  },
-  {
-    "type": "file",
     "name": "od-200.js",
     "path": "od-200.js",
     "fileType": ".js"
