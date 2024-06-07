@@ -5,18 +5,42 @@ import { fileURLToPath } from "url";
 
 // 需要忽略的文件/文件夹列表
 const ignoreFolders = ["node_modules", ".git", "output", ".github", ".vscode"];
+const readmeFileName = "README.md";
+
+const shouldIgnore = (file, isRoot) => {
+  if (!isRoot) return false;
+  const fileName = file.name;
+  if (ignoreFolders.includes(fileName)) return true;
+  if (file.isFile()) {
+    return fileName !== readmeFileName;
+  }
+  return false;
+};
 
 function generateDirectoryStructure(dir, baseUrl, isRoot = false) {
   const files = fs.readdirSync(dir, { withFileTypes: true });
 
-  const result = files
+  // 根目录，需要将README, 放在最上面
+  const fileList = isRoot
+    ? files.sort((a, b) => {
+        if (a.name === readmeFileName) return -1;
+        if (b.name === readmeFileName) return 1;
+        return 0;
+      })
+    : files.sort((a, b) => {
+        if (a.isDirectory()) return -1;
+        if (b.isDirectory()) return 1;
+        return 0;
+      });
+
+  const result = fileList
     .map((file) => {
       const fileName = file.name;
       const fullPath = path.join(file.parentPath, fileName);
       const relativePath = path.relative(baseUrl, fullPath);
 
       // 针对根目录做过滤
-      if ((isRoot && file.isFile()) || ignoreFolders.includes(fileName)) return null;
+      if (shouldIgnore(file, isRoot)) return null;
 
       // 如果是目录
       if (file.isDirectory()) {
