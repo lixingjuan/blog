@@ -3,8 +3,8 @@ import path from "path";
 
 import { fileURLToPath } from "url";
 
-// 忽略的文件/文件夹列表
-const ignoreFolders = ["node_modules", ".git", "output", ".github", ".vscode", ".gitignore"];
+// 需要忽略的文件/文件夹列表
+const ignoreFolders = ["node_modules", ".git", "output", ".github", ".vscode"];
 
 function generateDirectoryStructure(dir, baseUrl, isRoot = false) {
   const files = fs.readdirSync(dir, { withFileTypes: true });
@@ -17,7 +17,7 @@ function generateDirectoryStructure(dir, baseUrl, isRoot = false) {
       const relativePath = path.relative(baseUrl, fullPath);
 
       // 针对根目录做过滤
-      if (isRoot && ignoreFolders.includes(fileName)) return null;
+      if ((isRoot && file.isFile()) || ignoreFolders.includes(fileName)) return null;
 
       // 如果是目录
       if (file.isDirectory()) {
