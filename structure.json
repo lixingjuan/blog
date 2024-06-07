@@ -1,0 +1,5564 @@
+[
+  {
+    "type": "file",
+    "name": ".gitignore",
+    "path": ".gitignore",
+    "fileType": ""
+  },
+  {
+    "type": "directory",
+    "name": "0-收纳",
+    "path": "0-收纳",
+    "children": [
+      {
+        "type": "file",
+        "name": "demo.md",
+        "path": "0-收纳/demo.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "link-list.md",
+        "path": "0-收纳/link-list.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "list.md",
+        "path": "0-收纳/list.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "mine.md",
+        "path": "0-收纳/mine.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "offer前关注点.md",
+        "path": "0-收纳/offer前关注点.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "关于面试的想法.md",
+        "path": "0-收纳/关于面试的想法.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "其他.md",
+        "path": "0-收纳/其他.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "如何性能优化.md",
+        "path": "0-收纳/如何性能优化.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "学习新内容.md",
+        "path": "0-收纳/学习新内容.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "微服务.md",
+        "path": "0-收纳/微服务.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "我做过的项目.md",
+        "path": "0-收纳/我做过的项目.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "文章.md",
+        "path": "0-收纳/文章.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "梦.md",
+        "path": "0-收纳/梦.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "直播课.md",
+        "path": "0-收纳/直播课.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "稿子.md",
+        "path": "0-收纳/稿子.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "简历.md",
+        "path": "0-收纳/简历.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "职业规划.md",
+        "path": "0-收纳/职业规划.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "腾讯面试题.md",
+        "path": "0-收纳/腾讯面试题.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "自我介绍.md",
+        "path": "0-收纳/自我介绍.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "directory",
+        "name": "记录",
+        "path": "0-收纳/记录",
+        "children": [
+          {
+            "type": "file",
+            "name": "2021-08-16.md",
+            "path": "0-收纳/记录/2021-08-16.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "2021-08-17.md",
+            "path": "0-收纳/记录/2021-08-17.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "2021-08-20(下午四点女生).md",
+            "path": "0-收纳/记录/2021-08-20(下午四点女生).md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "2021-08-20.md",
+            "path": "0-收纳/记录/2021-08-20.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "2021-08-26(01).md",
+            "path": "0-收纳/记录/2021-08-26(01).md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "2021-08-26(02).md",
+            "path": "0-收纳/记录/2021-08-26(02).md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "2021-08-27.md",
+            "path": "0-收纳/记录/2021-08-27.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "del.html",
+            "path": "0-收纳/记录/del.html",
+            "fileType": ".html"
+          },
+          {
+            "type": "file",
+            "name": "题目.md",
+            "path": "0-收纳/记录/题目.md",
+            "fileType": ".md"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "遇到的项目难点亮点.md",
+        "path": "0-收纳/遇到的项目难点亮点.md",
+        "fileType": ".md"
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "1-JS",
+    "path": "1-JS",
+    "children": [
+      {
+        "type": "file",
+        "name": "AST.md",
+        "path": "1-JS/AST.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "directory",
+        "name": "Promise",
+        "path": "1-JS/Promise",
+        "children": [
+          {
+            "type": "file",
+            "name": "Promise.all.test.js",
+            "path": "1-JS/Promise/Promise.all.test.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "package.json",
+            "path": "1-JS/Promise/package.json",
+            "fileType": ".json"
+          },
+          {
+            "type": "file",
+            "name": "pnpm-lock.yaml",
+            "path": "1-JS/Promise/pnpm-lock.yaml",
+            "fileType": ".yaml"
+          },
+          {
+            "type": "file",
+            "name": "promise.md",
+            "path": "1-JS/Promise/promise.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "promiseAdapter.js",
+            "path": "1-JS/Promise/promiseAdapter.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "promise和async优缺异同.md",
+            "path": "1-JS/Promise/promise和async优缺异同.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "sleep.js",
+            "path": "1-JS/Promise/sleep.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "手写-MyPromise.js",
+            "path": "1-JS/Promise/手写-MyPromise.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "手写-Promise.all.js",
+            "path": "1-JS/Promise/手写-Promise.all.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "手写-Promise.allSettled.js",
+            "path": "1-JS/Promise/手写-Promise.allSettled.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "手写-Promise.any.js",
+            "path": "1-JS/Promise/手写-Promise.any.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "手写-Promise.race.js",
+            "path": "1-JS/Promise/手写-Promise.race.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "手写-Promise实现并发.js",
+            "path": "1-JS/Promise/手写-Promise实现并发.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "手写-Promise封装任务串行执行.js",
+            "path": "1-JS/Promise/手写-Promise封装任务串行执行.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "手写-Promise平行执行加速.js",
+            "path": "1-JS/Promise/手写-Promise平行执行加速.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "手写-Promise超时重传.js",
+            "path": "1-JS/Promise/手写-Promise超时重传.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "defer和async.md",
+        "path": "1-JS/defer和async.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "flat实现.js",
+        "path": "1-JS/flat实现.js",
+        "fileType": ".js"
+      },
+      {
+        "type": "file",
+        "name": "js编译原理.md",
+        "path": "1-JS/js编译原理.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "this.js",
+        "path": "1-JS/this.js",
+        "fileType": ".js"
+      },
+      {
+        "type": "file",
+        "name": "手写-bind.md",
+        "path": "1-JS/手写-bind.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "手写-new的时候发生了什么.js",
+        "path": "1-JS/手写-new的时候发生了什么.js",
+        "fileType": ".js"
+      },
+      {
+        "type": "file",
+        "name": "手写-一维数组改为树形结构.js",
+        "path": "1-JS/手写-一维数组改为树形结构.js",
+        "fileType": ".js"
+      },
+      {
+        "type": "file",
+        "name": "手写-函数柯里化.js",
+        "path": "1-JS/手写-函数柯里化.js",
+        "fileType": ".js"
+      },
+      {
+        "type": "file",
+        "name": "手写-实现计时器.html",
+        "path": "1-JS/手写-实现计时器.html",
+        "fileType": ".html"
+      },
+      {
+        "type": "file",
+        "name": "手写-深拷贝.js",
+        "path": "1-JS/手写-深拷贝.js",
+        "fileType": ".js"
+      },
+      {
+        "type": "file",
+        "name": "手写-深比较.js",
+        "path": "1-JS/手写-深比较.js",
+        "fileType": ".js"
+      },
+      {
+        "type": "file",
+        "name": "数据类型.md",
+        "path": "1-JS/数据类型.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "directory",
+        "name": "继承",
+        "path": "1-JS/继承",
+        "children": [
+          {
+            "type": "file",
+            "name": "1.原型链继承.js",
+            "path": "1-JS/继承/1.原型链继承.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "2.借用构造函继承.js",
+            "path": "1-JS/继承/2.借用构造函继承.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "3.组合继承(伪经典继承).js",
+            "path": "1-JS/继承/3.组合继承(伪经典继承).js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "4.原型式继承.js",
+            "path": "1-JS/继承/4.原型式继承.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "5.寄生式继承.js",
+            "path": "1-JS/继承/5.寄生式继承.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "6.寄生组合式继承.js",
+            "path": "1-JS/继承/6.寄生组合式继承.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "7.class继承.js",
+            "path": "1-JS/继承/7.class继承.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "summary.md",
+            "path": "1-JS/继承/summary.md",
+            "fileType": ".md"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "闭包.md",
+        "path": "1-JS/闭包.md",
+        "fileType": ".md"
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "2-CSS",
+    "path": "2-CSS",
+    "children": [
+      {
+        "type": "file",
+        "name": "1px.md",
+        "path": "2-CSS/1px.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "bfc.md",
+        "path": "2-CSS/bfc.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "伪类和伪元素.md",
+        "path": "2-CSS/伪类和伪元素.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "保持比例的两种方案.html",
+        "path": "2-CSS/保持比例的两种方案.html",
+        "fileType": ".html"
+      },
+      {
+        "type": "file",
+        "name": "元素居中四种方案.md",
+        "path": "2-CSS/元素居中四种方案.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "图片格式.md",
+        "path": "2-CSS/图片格式.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "百分比相对.md",
+        "path": "2-CSS/百分比相对.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "选择器加权原则.md",
+        "path": "2-CSS/选择器加权原则.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "重绘和重排.md",
+        "path": "2-CSS/重绘和重排.md",
+        "fileType": ".md"
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "3-React",
+    "path": "3-React",
+    "children": [
+      {
+        "type": "file",
+        "name": "ConcurrentMode.md",
+        "path": "3-React/ConcurrentMode.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "Fiber架构相关.md",
+        "path": "3-React/Fiber架构相关.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "React18的变化.md",
+        "path": "3-React/React18的变化.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "React性能优化.md",
+        "path": "3-React/React性能优化.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "class可以做但hooks做不了的.md",
+        "path": "3-React/class可以做但hooks做不了的.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "class和hooks对比.md",
+        "path": "3-React/class和hooks对比.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "directory",
+        "name": "debug-react",
+        "path": "3-React/debug-react",
+        "children": [
+          {
+            "type": "file",
+            "name": "history.development.js",
+            "path": "3-React/debug-react/history.development.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "index.html",
+            "path": "3-React/debug-react/index.html",
+            "fileType": ".html"
+          },
+          {
+            "type": "file",
+            "name": "react-dom.development.js",
+            "path": "3-React/debug-react/react-dom.development.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "react-router-dom.development.js",
+            "path": "3-React/debug-react/react-router-dom.development.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "react-router.development.js",
+            "path": "3-React/debug-react/react-router.development.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "react.development.js",
+            "path": "3-React/debug-react/react.development.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "fiber数据结构.md",
+        "path": "3-React/fiber数据结构.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "hook实现生命周期.md",
+        "path": "3-React/hook实现生命周期.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "key提升性能.md",
+        "path": "3-React/key提升性能.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "react渲染流程.md",
+        "path": "3-React/react渲染流程.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "setState.md",
+        "path": "3-React/setState.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "setState同异步.md",
+        "path": "3-React/setState同异步.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "useCallback 和 useMemo 应用场景和区别.md",
+        "path": "3-React/useCallback 和 useMemo 应用场景和区别.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "useEffect和useLayoutEffect.md",
+        "path": "3-React/useEffect和useLayoutEffect.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "useLayoutEffect.md",
+        "path": "3-React/useLayoutEffect.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "useRef.md",
+        "path": "3-React/useRef.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "为什么不需要importreact.md",
+        "path": "3-React/为什么不需要importreact.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "为什么提供setstate方法而不是直接修改.md",
+        "path": "3-React/为什么提供setstate方法而不是直接修改.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "如何实现组件懒加载.md",
+        "path": "3-React/如何实现组件懒加载.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "生命周期.md",
+        "path": "3-React/生命周期.md",
+        "fileType": ".md"
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "4-HTTP和浏览器",
+    "path": "4-HTTP和浏览器",
+    "children": [
+      {
+        "type": "file",
+        "name": "EventLoop.md",
+        "path": "4-HTTP和浏览器/EventLoop.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "HTTP.md",
+        "path": "4-HTTP和浏览器/HTTP.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "TCP连接建立.md",
+        "path": "4-HTTP和浏览器/TCP连接建立.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "get和post区别.md",
+        "path": "4-HTTP和浏览器/get和post区别.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "分代垃圾回收机制.md",
+        "path": "4-HTTP和浏览器/分代垃圾回收机制.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "客户端存储.md",
+        "path": "4-HTTP和浏览器/客户端存储.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "新开tab启动哪些进程.md",
+        "path": "4-HTTP和浏览器/新开tab启动哪些进程.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "渲染.md",
+        "path": "4-HTTP和浏览器/渲染.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "简单请求和复杂请求.md",
+        "path": "4-HTTP和浏览器/简单请求和复杂请求.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "跨域相关.md",
+        "path": "4-HTTP和浏览器/跨域相关.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "输入URL发生了什么.md",
+        "path": "4-HTTP和浏览器/输入URL发生了什么.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "进程和线程.md",
+        "path": "4-HTTP和浏览器/进程和线程.md",
+        "fileType": ".md"
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "5-webpack和前端模块化",
+    "path": "5-webpack和前端模块化",
+    "children": [
+      {
+        "type": "file",
+        "name": ".gitignore",
+        "path": "5-webpack和前端模块化/.gitignore",
+        "fileType": ""
+      },
+      {
+        "type": "file",
+        "name": "ESModule和CommonJS对比.md",
+        "path": "5-webpack和前端模块化/ESModule和CommonJS对比.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "README.md",
+        "path": "5-webpack和前端模块化/README.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "babel.md",
+        "path": "5-webpack和前端模块化/babel.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "loader和plugin区别.md",
+        "path": "5-webpack和前端模块化/loader和plugin区别.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "directory",
+        "name": "part-01",
+        "path": "5-webpack和前端模块化/part-01",
+        "children": [
+          {
+            "type": "directory",
+            "name": "01-why-webpack",
+            "path": "5-webpack和前端模块化/part-01/01-why-webpack",
+            "children": [
+              {
+                "type": "directory",
+                "name": "ESModule",
+                "path": "5-webpack和前端模块化/part-01/01-why-webpack/ESModule",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "add.js",
+                    "path": "5-webpack和前端模块化/part-01/01-why-webpack/ESModule/add.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.html",
+                    "path": "5-webpack和前端模块化/part-01/01-why-webpack/ESModule/index.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "minus.js",
+                    "path": "5-webpack和前端模块化/part-01/01-why-webpack/ESModule/minus.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "app.js",
+                "path": "5-webpack和前端模块化/part-01/01-why-webpack/app.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "index-1.html",
+                "path": "5-webpack和前端模块化/part-01/01-why-webpack/index-1.html",
+                "fileType": ".html"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "02-steup-app",
+            "path": "5-webpack和前端模块化/part-01/02-steup-app",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-01/02-steup-app/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-01/02-steup-app/dist",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "bundle.js",
+                    "path": "5-webpack和前端模块化/part-01/02-steup-app/dist/bundle.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.html",
+                "path": "5-webpack和前端模块化/part-01/02-steup-app/index.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-01/02-steup-app/src",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "hello-world.js",
+                    "path": "5-webpack和前端模块化/part-01/02-steup-app/src/hello-world.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.js",
+                    "path": "5-webpack和前端模块化/part-01/02-steup-app/src/index.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-01/02-steup-app/webpack.config.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "03-manage-output",
+            "path": "5-webpack和前端模块化/part-01/03-manage-output",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-01/03-manage-output/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-01/03-manage-output/dist",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "app.html",
+                    "path": "5-webpack和前端模块化/part-01/03-manage-output/dist/app.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "bundle.js",
+                    "path": "5-webpack和前端模块化/part-01/03-manage-output/dist/bundle.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.html",
+                "path": "5-webpack和前端模块化/part-01/03-manage-output/index.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-01/03-manage-output/src",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "hello-world.js",
+                    "path": "5-webpack和前端模块化/part-01/03-manage-output/src/hello-world.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.js",
+                    "path": "5-webpack和前端模块化/part-01/03-manage-output/src/index.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-01/03-manage-output/webpack.config.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "04-development",
+            "path": "5-webpack和前端模块化/part-01/04-development",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-01/04-development/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "file",
+                "name": "index.html",
+                "path": "5-webpack和前端模块化/part-01/04-development/index.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-01/04-development/src",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "hello-world.js",
+                    "path": "5-webpack和前端模块化/part-01/04-development/src/hello-world.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.js",
+                    "path": "5-webpack和前端模块化/part-01/04-development/src/index.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-01/04-development/webpack.config.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "05-asset-modules",
+            "path": "5-webpack和前端模块化/part-01/05-asset-modules",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-01/05-asset-modules/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-01/05-asset-modules/dist",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "app.html",
+                    "path": "5-webpack和前端模块化/part-01/05-asset-modules/dist/app.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "bundle.js",
+                    "path": "5-webpack和前端模块化/part-01/05-asset-modules/dist/bundle.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "images",
+                    "path": "5-webpack和前端模块化/part-01/05-asset-modules/dist/images",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "lxj.692d0bee5ff91207ff06.png",
+                        "path": "5-webpack和前端模块化/part-01/05-asset-modules/dist/images/lxj.692d0bee5ff91207ff06.png",
+                        "fileType": ".png"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.html",
+                "path": "5-webpack和前端模块化/part-01/05-asset-modules/index.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-01/05-asset-modules/src",
+                "children": [
+                  {
+                    "type": "directory",
+                    "name": "assets",
+                    "path": "5-webpack和前端模块化/part-01/05-asset-modules/src/assets",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "carrot.jpg",
+                        "path": "5-webpack和前端模块化/part-01/05-asset-modules/src/assets/carrot.jpg",
+                        "fileType": ".jpg"
+                      },
+                      {
+                        "type": "file",
+                        "name": "carrot.svg",
+                        "path": "5-webpack和前端模块化/part-01/05-asset-modules/src/assets/carrot.svg",
+                        "fileType": ".svg"
+                      },
+                      {
+                        "type": "file",
+                        "name": "example.txt",
+                        "path": "5-webpack和前端模块化/part-01/05-asset-modules/src/assets/example.txt",
+                        "fileType": ".txt"
+                      },
+                      {
+                        "type": "file",
+                        "name": "icon.png",
+                        "path": "5-webpack和前端模块化/part-01/05-asset-modules/src/assets/icon.png",
+                        "fileType": ".png"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "hello-world.js",
+                    "path": "5-webpack和前端模块化/part-01/05-asset-modules/src/hello-world.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.js",
+                    "path": "5-webpack和前端模块化/part-01/05-asset-modules/src/index.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-01/05-asset-modules/webpack.config.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "06-manage-assets",
+            "path": "5-webpack和前端模块化/part-01/06-manage-assets",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-01/06-manage-assets/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-01/06-manage-assets/dist",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "app.html",
+                    "path": "5-webpack和前端模块化/part-01/06-manage-assets/dist/app.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "bundle.js",
+                    "path": "5-webpack和前端模块化/part-01/06-manage-assets/dist/bundle.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "images",
+                    "path": "5-webpack和前端模块化/part-01/06-manage-assets/dist/images",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "4c3f98e290054c8a2edd.ttf",
+                        "path": "5-webpack和前端模块化/part-01/06-manage-assets/dist/images/4c3f98e290054c8a2edd.ttf",
+                        "fileType": ".ttf"
+                      },
+                      {
+                        "type": "file",
+                        "name": "86a7db547718483f016b.jpg",
+                        "path": "5-webpack和前端模块化/part-01/06-manage-assets/dist/images/86a7db547718483f016b.jpg",
+                        "fileType": ".jpg"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "main.css",
+                    "path": "5-webpack和前端模块化/part-01/06-manage-assets/dist/main.css",
+                    "fileType": ".css"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.html",
+                "path": "5-webpack和前端模块化/part-01/06-manage-assets/index.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-01/06-manage-assets/src",
+                "children": [
+                  {
+                    "type": "directory",
+                    "name": "assets",
+                    "path": "5-webpack和前端模块化/part-01/06-manage-assets/src/assets",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "carrot.jpg",
+                        "path": "5-webpack和前端模块化/part-01/06-manage-assets/src/assets/carrot.jpg",
+                        "fileType": ".jpg"
+                      },
+                      {
+                        "type": "file",
+                        "name": "data.csv",
+                        "path": "5-webpack和前端模块化/part-01/06-manage-assets/src/assets/data.csv",
+                        "fileType": ".csv"
+                      },
+                      {
+                        "type": "file",
+                        "name": "data.json5",
+                        "path": "5-webpack和前端模块化/part-01/06-manage-assets/src/assets/data.json5",
+                        "fileType": ".json5"
+                      },
+                      {
+                        "type": "file",
+                        "name": "data.toml",
+                        "path": "5-webpack和前端模块化/part-01/06-manage-assets/src/assets/data.toml",
+                        "fileType": ".toml"
+                      },
+                      {
+                        "type": "file",
+                        "name": "data.xml",
+                        "path": "5-webpack和前端模块化/part-01/06-manage-assets/src/assets/data.xml",
+                        "fileType": ".xml"
+                      },
+                      {
+                        "type": "file",
+                        "name": "data.yaml",
+                        "path": "5-webpack和前端模块化/part-01/06-manage-assets/src/assets/data.yaml",
+                        "fileType": ".yaml"
+                      },
+                      {
+                        "type": "file",
+                        "name": "iconfont.ttf",
+                        "path": "5-webpack和前端模块化/part-01/06-manage-assets/src/assets/iconfont.ttf",
+                        "fileType": ".ttf"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.js",
+                    "path": "5-webpack和前端模块化/part-01/06-manage-assets/src/index.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "style.css",
+                    "path": "5-webpack和前端模块化/part-01/06-manage-assets/src/style.css",
+                    "fileType": ".css"
+                  },
+                  {
+                    "type": "file",
+                    "name": "style.less",
+                    "path": "5-webpack和前端模块化/part-01/06-manage-assets/src/style.less",
+                    "fileType": ".less"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-01/06-manage-assets/webpack.config.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "07-babel-loader",
+            "path": "5-webpack和前端模块化/part-01/07-babel-loader",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-01/07-babel-loader/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-01/07-babel-loader/dist",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "app.html",
+                    "path": "5-webpack和前端模块化/part-01/07-babel-loader/dist/app.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "bundle.js",
+                    "path": "5-webpack和前端模块化/part-01/07-babel-loader/dist/bundle.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.html",
+                "path": "5-webpack和前端模块化/part-01/07-babel-loader/index.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-01/07-babel-loader/src",
+                "children": [
+                  {
+                    "type": "directory",
+                    "name": "assets",
+                    "path": "5-webpack和前端模块化/part-01/07-babel-loader/src/assets",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "carrot.jpg",
+                        "path": "5-webpack和前端模块化/part-01/07-babel-loader/src/assets/carrot.jpg",
+                        "fileType": ".jpg"
+                      },
+                      {
+                        "type": "file",
+                        "name": "data.csv",
+                        "path": "5-webpack和前端模块化/part-01/07-babel-loader/src/assets/data.csv",
+                        "fileType": ".csv"
+                      },
+                      {
+                        "type": "file",
+                        "name": "data.json5",
+                        "path": "5-webpack和前端模块化/part-01/07-babel-loader/src/assets/data.json5",
+                        "fileType": ".json5"
+                      },
+                      {
+                        "type": "file",
+                        "name": "data.toml",
+                        "path": "5-webpack和前端模块化/part-01/07-babel-loader/src/assets/data.toml",
+                        "fileType": ".toml"
+                      },
+                      {
+                        "type": "file",
+                        "name": "data.xml",
+                        "path": "5-webpack和前端模块化/part-01/07-babel-loader/src/assets/data.xml",
+                        "fileType": ".xml"
+                      },
+                      {
+                        "type": "file",
+                        "name": "data.yaml",
+                        "path": "5-webpack和前端模块化/part-01/07-babel-loader/src/assets/data.yaml",
+                        "fileType": ".yaml"
+                      },
+                      {
+                        "type": "file",
+                        "name": "iconfont.ttf",
+                        "path": "5-webpack和前端模块化/part-01/07-babel-loader/src/assets/iconfont.ttf",
+                        "fileType": ".ttf"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "hello-world.js",
+                    "path": "5-webpack和前端模块化/part-01/07-babel-loader/src/hello-world.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.js",
+                    "path": "5-webpack和前端模块化/part-01/07-babel-loader/src/index.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-01/07-babel-loader/webpack.config.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "08-code-splitting",
+            "path": "5-webpack和前端模块化/part-01/08-code-splitting",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-01/08-code-splitting/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-01/08-code-splitting/dist",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "another.bundle.js",
+                    "path": "5-webpack和前端模块化/part-01/08-code-splitting/dist/another.bundle.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "app.html",
+                    "path": "5-webpack和前端模块化/part-01/08-code-splitting/dist/app.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.bundle.js",
+                    "path": "5-webpack和前端模块化/part-01/08-code-splitting/dist/index.bundle.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "math.bundle.js",
+                    "path": "5-webpack和前端模块化/part-01/08-code-splitting/dist/math.bundle.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "vendors-node_modules_lodash_lodash_js.bundle.js",
+                    "path": "5-webpack和前端模块化/part-01/08-code-splitting/dist/vendors-node_modules_lodash_lodash_js.bundle.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.html",
+                "path": "5-webpack和前端模块化/part-01/08-code-splitting/index.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-01/08-code-splitting/src",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "another-module.js",
+                    "path": "5-webpack和前端模块化/part-01/08-code-splitting/src/another-module.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "async-module.js",
+                    "path": "5-webpack和前端模块化/part-01/08-code-splitting/src/async-module.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.js",
+                    "path": "5-webpack和前端模块化/part-01/08-code-splitting/src/index.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "math.js",
+                    "path": "5-webpack和前端模块化/part-01/08-code-splitting/src/math.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-01/08-code-splitting/webpack.config.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "09-caching",
+            "path": "5-webpack和前端模块化/part-01/09-caching",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-01/09-caching/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-01/09-caching/dist",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "app.html",
+                    "path": "5-webpack和前端模块化/part-01/09-caching/dist/app.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "scripts",
+                    "path": "5-webpack和前端模块化/part-01/09-caching/dist/scripts",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "main.da55e510ad02a6e828b4.js",
+                        "path": "5-webpack和前端模块化/part-01/09-caching/dist/scripts/main.da55e510ad02a6e828b4.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "vendors.29025132a649c43205f8.js",
+                        "path": "5-webpack和前端模块化/part-01/09-caching/dist/scripts/vendors.29025132a649c43205f8.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.html",
+                "path": "5-webpack和前端模块化/part-01/09-caching/index.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-01/09-caching/src",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "index.js",
+                    "path": "5-webpack和前端模块化/part-01/09-caching/src/index.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-01/09-caching/webpack.config.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "10-multiple-env",
+            "path": "5-webpack和前端模块化/part-01/10-multiple-env",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-01/10-multiple-env/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "config",
+                "path": "5-webpack和前端模块化/part-01/10-multiple-env/config",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "webpack.config.common.js",
+                    "path": "5-webpack和前端模块化/part-01/10-multiple-env/config/webpack.config.common.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.dev.js",
+                    "path": "5-webpack和前端模块化/part-01/10-multiple-env/config/webpack.config.dev.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-01/10-multiple-env/config/webpack.config.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.prod.js",
+                    "path": "5-webpack和前端模块化/part-01/10-multiple-env/config/webpack.config.prod.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-01/10-multiple-env/dist",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "app.html",
+                    "path": "5-webpack和前端模块化/part-01/10-multiple-env/dist/app.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "scripts",
+                    "path": "5-webpack和前端模块化/part-01/10-multiple-env/dist/scripts",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "main.f605a612bde0ff89b3c2.js",
+                        "path": "5-webpack和前端模块化/part-01/10-multiple-env/dist/scripts/main.f605a612bde0ff89b3c2.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "vendors.18ffa789d8382e25f080.js",
+                        "path": "5-webpack和前端模块化/part-01/10-multiple-env/dist/scripts/vendors.18ffa789d8382e25f080.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "vendors.18ffa789d8382e25f080.js.LICENSE.txt",
+                        "path": "5-webpack和前端模块化/part-01/10-multiple-env/dist/scripts/vendors.18ffa789d8382e25f080.js.LICENSE.txt",
+                        "fileType": ".txt"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.html",
+                "path": "5-webpack和前端模块化/part-01/10-multiple-env/index.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "file",
+                "name": "package.json",
+                "path": "5-webpack和前端模块化/part-01/10-multiple-env/package.json",
+                "fileType": ".json"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-01/10-multiple-env/src",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "index.js",
+                    "path": "5-webpack和前端模块化/part-01/10-multiple-env/src/index.js",
+                    "fileType": ".js"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "part-02",
+        "path": "5-webpack和前端模块化/part-02",
+        "children": [
+          {
+            "type": "directory",
+            "name": "01-dev-config",
+            "path": "5-webpack和前端模块化/part-02/01-dev-config",
+            "children": [
+              {
+                "type": "directory",
+                "name": "01-source-map",
+                "path": "5-webpack和前端模块化/part-02/01-dev-config/01-source-map",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/01-source-map/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "file",
+                    "name": "app.js",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/01-source-map/app.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/01-source-map/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "5-webpack和前端模块化/part-02/01-dev-config/01-source-map/dist/index.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "main.js",
+                        "path": "5-webpack和前端模块化/part-02/01-dev-config/01-source-map/dist/main.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/01-source-map/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/01-source-map/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/01-source-map/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02-devserver",
+                "path": "5-webpack和前端模块化/part-02/01-dev-config/02-devserver",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "404.html",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/02-devserver/404.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/02-devserver/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "file",
+                    "name": "app.js",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/02-devserver/app.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/02-devserver/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "5-webpack和前端模块化/part-02/01-dev-config/02-devserver/dist/index.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "main.js",
+                        "path": "5-webpack和前端模块化/part-02/01-dev-config/02-devserver/dist/main.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/02-devserver/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/02-devserver/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "server.js",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/02-devserver/server.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/02-devserver/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "03-hmr",
+                "path": "5-webpack和前端模块化/part-02/01-dev-config/03-hmr",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/03-hmr/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "file",
+                    "name": "app.css",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/03-hmr/app.css",
+                    "fileType": ".css"
+                  },
+                  {
+                    "type": "file",
+                    "name": "app.html",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/03-hmr/app.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "app.js",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/03-hmr/app.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/03-hmr/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "5-webpack和前端模块化/part-02/01-dev-config/03-hmr/dist/index.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "main.js",
+                        "path": "5-webpack和前端模块化/part-02/01-dev-config/03-hmr/dist/main.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "input.js",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/03-hmr/input.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/03-hmr/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/03-hmr/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "04-eslint",
+                "path": "5-webpack和前端模块化/part-02/01-dev-config/04-eslint",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": ".eslintrc.json",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/04-eslint/.eslintrc.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": ".prettierrc",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/04-eslint/.prettierrc",
+                    "fileType": ""
+                  },
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/04-eslint/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/04-eslint/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/04-eslint/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/04-eslint/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "app.html",
+                        "path": "5-webpack和前端模块化/part-02/01-dev-config/04-eslint/src/app.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "app.js",
+                        "path": "5-webpack和前端模块化/part-02/01-dev-config/04-eslint/src/app.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/04-eslint/webpack.config.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "yarn.lock",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/04-eslint/yarn.lock",
+                    "fileType": ".lock"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "05-husky",
+                "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": ".eslintrc.json",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky/.eslintrc.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": ".husky",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky/.husky",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "pre-commit",
+                        "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky/.husky/pre-commit",
+                        "fileType": ""
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": ".prettierrc",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky/.prettierrc",
+                    "fileType": ""
+                  },
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "app.html",
+                        "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky/src/app.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "app.js",
+                        "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky/src/app.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/01-dev-config/05-husky/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "02-modules-dependence",
+            "path": "5-webpack和前端模块化/part-02/02-modules-dependence",
+            "children": [
+              {
+                "type": "directory",
+                "name": "01-resolver",
+                "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/dist/index.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "main.js",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/dist/main.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "images",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/images",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "loader-module.jpeg",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/images/loader-module.jpeg",
+                        "fileType": ".jpeg"
+                      },
+                      {
+                        "type": "file",
+                        "name": "webpack-module.jpeg",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/images/webpack-module.jpeg",
+                        "fileType": ".jpeg"
+                      },
+                      {
+                        "type": "file",
+                        "name": "webpack模块解析过程.jpeg",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/images/webpack模块解析过程.jpeg",
+                        "fileType": ".jpeg"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "app.js",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/src/app.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "math.js",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/src/math.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "math.json",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/src/math.json",
+                        "fileType": ".json"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/webpack.config.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "yarn.lock",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/yarn.lock",
+                    "fileType": ".lock"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02-bundle-analyzer",
+                "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "app1.js",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/dist/app1.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "app2.js",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/dist/app2.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/dist/index.html",
+                        "fileType": ".html"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "app1.js",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/src/app1.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "app2.js",
+                        "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/src/app2.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/webpack.config.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "yarn.lock",
+                    "path": "5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/yarn.lock",
+                    "fileType": ".lock"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "03-externals",
+            "path": "5-webpack和前端模块化/part-02/03-externals",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-02/03-externals/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-02/03-externals/dist",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "index.html",
+                    "path": "5-webpack和前端模块化/part-02/03-externals/dist/index.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "main.js",
+                    "path": "5-webpack和前端模块化/part-02/03-externals/dist/main.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "main.js.map",
+                    "path": "5-webpack和前端模块化/part-02/03-externals/dist/main.js.map",
+                    "fileType": ".map"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "package-lock.json",
+                "path": "5-webpack和前端模块化/part-02/03-externals/package-lock.json",
+                "fileType": ".json"
+              },
+              {
+                "type": "file",
+                "name": "package.json",
+                "path": "5-webpack和前端模块化/part-02/03-externals/package.json",
+                "fileType": ".json"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-02/03-externals/src",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "app.js",
+                    "path": "5-webpack和前端模块化/part-02/03-externals/src/app.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-02/03-externals/webpack.config.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "yarn.lock",
+                "path": "5-webpack和前端模块化/part-02/03-externals/yarn.lock",
+                "fileType": ".lock"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "04-extends",
+            "path": "5-webpack和前端模块化/part-02/04-extends",
+            "children": [
+              {
+                "type": "directory",
+                "name": "01-post-css-module",
+                "path": "5-webpack和前端模块化/part-02/04-extends/01-post-css-module",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/01-post-css-module/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/01-post-css-module/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/01-post-css-module/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "postcss.config.js",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/01-post-css-module/postcss.config.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/01-post-css-module/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "app.css",
+                        "path": "5-webpack和前端模块化/part-02/04-extends/01-post-css-module/src/app.css",
+                        "fileType": ".css"
+                      },
+                      {
+                        "type": "file",
+                        "name": "app.js",
+                        "path": "5-webpack和前端模块化/part-02/04-extends/01-post-css-module/src/app.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/01-post-css-module/webpack.config.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "yarn.lock",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/01-post-css-module/yarn.lock",
+                    "fileType": ".lock"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02-webworks",
+                "path": "5-webpack和前端模块化/part-02/04-extends/02-webworks",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/02-webworks/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/02-webworks/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/02-webworks/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/02-webworks/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "app.js",
+                        "path": "5-webpack和前端模块化/part-02/04-extends/02-webworks/src/app.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "work.js",
+                        "path": "5-webpack和前端模块化/part-02/04-extends/02-webworks/src/work.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/02-webworks/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "03-typescript",
+                "path": "5-webpack和前端模块化/part-02/04-extends/03-typescript",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/03-typescript/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/03-typescript/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "bundle.js",
+                        "path": "5-webpack和前端模块化/part-02/04-extends/03-typescript/dist/bundle.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "5-webpack和前端模块化/part-02/04-extends/03-typescript/dist/index.html",
+                        "fileType": ".html"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/03-typescript/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/03-typescript/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/03-typescript/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "app.ts",
+                        "path": "5-webpack和前端模块化/part-02/04-extends/03-typescript/src/app.ts",
+                        "fileType": ".ts"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "tsconfig.json",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/03-typescript/tsconfig.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/04-extends/03-typescript/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "05-multiple-page",
+            "path": "5-webpack和前端模块化/part-02/05-multiple-page",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-02/05-multiple-page/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-02/05-multiple-page/dist",
+                "children": [
+                  {
+                    "type": "directory",
+                    "name": "chanel1",
+                    "path": "5-webpack和前端模块化/part-02/05-multiple-page/dist/chanel1",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "app1.html",
+                        "path": "5-webpack和前端模块化/part-02/05-multiple-page/dist/chanel1/app1.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "app2.html",
+                        "path": "5-webpack和前端模块化/part-02/05-multiple-page/dist/chanel1/app2.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "main1.js",
+                        "path": "5-webpack和前端模块化/part-02/05-multiple-page/dist/chanel1/main1.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "chanel2",
+                    "path": "5-webpack和前端模块化/part-02/05-multiple-page/dist/chanel2",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "main2.js",
+                        "path": "5-webpack和前端模块化/part-02/05-multiple-page/dist/chanel2/main2.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "common",
+                    "path": "5-webpack和前端模块化/part-02/05-multiple-page/dist/common",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "lodash",
+                        "path": "5-webpack和前端模块化/part-02/05-multiple-page/dist/common/lodash",
+                        "fileType": ""
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "package-lock.json",
+                "path": "5-webpack和前端模块化/part-02/05-multiple-page/package-lock.json",
+                "fileType": ".json"
+              },
+              {
+                "type": "file",
+                "name": "package.json",
+                "path": "5-webpack和前端模块化/part-02/05-multiple-page/package.json",
+                "fileType": ".json"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-02/05-multiple-page/src",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "app.html",
+                    "path": "5-webpack和前端模块化/part-02/05-multiple-page/src/app.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "demo1.js",
+                    "path": "5-webpack和前端模块化/part-02/05-multiple-page/src/demo1.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "demo2.js",
+                    "path": "5-webpack和前端模块化/part-02/05-multiple-page/src/demo2.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "demo3.js",
+                    "path": "5-webpack和前端模块化/part-02/05-multiple-page/src/demo3.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-02/05-multiple-page/webpack.config.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "yarn.lock",
+                "path": "5-webpack和前端模块化/part-02/05-multiple-page/yarn.lock",
+                "fileType": ".lock"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "06-tree-shaking",
+            "path": "5-webpack和前端模块化/part-02/06-tree-shaking",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-02/06-tree-shaking/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-02/06-tree-shaking/dist",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "index.html",
+                    "path": "5-webpack和前端模块化/part-02/06-tree-shaking/dist/index.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "main.js",
+                    "path": "5-webpack和前端模块化/part-02/06-tree-shaking/dist/main.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "package-lock.json",
+                "path": "5-webpack和前端模块化/part-02/06-tree-shaking/package-lock.json",
+                "fileType": ".json"
+              },
+              {
+                "type": "file",
+                "name": "package.json",
+                "path": "5-webpack和前端模块化/part-02/06-tree-shaking/package.json",
+                "fileType": ".json"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-02/06-tree-shaking/src",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "app.css",
+                    "path": "5-webpack和前端模块化/part-02/06-tree-shaking/src/app.css",
+                    "fileType": ".css"
+                  },
+                  {
+                    "type": "file",
+                    "name": "app.js",
+                    "path": "5-webpack和前端模块化/part-02/06-tree-shaking/src/app.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "global.css",
+                    "path": "5-webpack和前端模块化/part-02/06-tree-shaking/src/global.css",
+                    "fileType": ".css"
+                  },
+                  {
+                    "type": "file",
+                    "name": "math.js",
+                    "path": "5-webpack和前端模块化/part-02/06-tree-shaking/src/math.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-02/06-tree-shaking/webpack.config.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "07-pwa",
+            "path": "5-webpack和前端模块化/part-02/07-pwa",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-02/07-pwa/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "dist",
+                "path": "5-webpack和前端模块化/part-02/07-pwa/dist",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "index.html",
+                    "path": "5-webpack和前端模块化/part-02/07-pwa/dist/index.html",
+                    "fileType": ".html"
+                  },
+                  {
+                    "type": "file",
+                    "name": "main.js",
+                    "path": "5-webpack和前端模块化/part-02/07-pwa/dist/main.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "service-worker.js",
+                    "path": "5-webpack和前端模块化/part-02/07-pwa/dist/service-worker.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "workbox-37481be9.js",
+                    "path": "5-webpack和前端模块化/part-02/07-pwa/dist/workbox-37481be9.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "package-lock.json",
+                "path": "5-webpack和前端模块化/part-02/07-pwa/package-lock.json",
+                "fileType": ".json"
+              },
+              {
+                "type": "file",
+                "name": "package.json",
+                "path": "5-webpack和前端模块化/part-02/07-pwa/package.json",
+                "fileType": ".json"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-02/07-pwa/src",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "app.js",
+                    "path": "5-webpack和前端模块化/part-02/07-pwa/src/app.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-02/07-pwa/webpack.config.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "08-shamming",
+            "path": "5-webpack和前端模块化/part-02/08-shamming",
+            "children": [
+              {
+                "type": "directory",
+                "name": "01-third-party-shamming",
+                "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "globalShamming.js",
+                        "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/dist/globalShamming.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/dist/index.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "partShamming.js",
+                        "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/dist/partShamming.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "app.js",
+                        "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/src/app.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "global.js",
+                        "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/src/global.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "part-shamming.js",
+                        "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/src/part-shamming.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02-polyfills",
+                "path": "5-webpack和前端模块化/part-02/08-shamming/02-polyfills",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/02-polyfills/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/02-polyfills/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "5-webpack和前端模块化/part-02/08-shamming/02-polyfills/dist/index.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "main.js",
+                        "path": "5-webpack和前端模块化/part-02/08-shamming/02-polyfills/dist/main.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/02-polyfills/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/02-polyfills/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/02-polyfills/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "app.js",
+                        "path": "5-webpack和前端模块化/part-02/08-shamming/02-polyfills/src/app.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/08-shamming/02-polyfills/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "09-library",
+            "path": "5-webpack和前端模块化/part-02/09-library",
+            "children": [
+              {
+                "type": "directory",
+                "name": "01-library-basic",
+                "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "demo",
+                    "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/demo",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "test-esmodule.html",
+                        "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/demo/test-esmodule.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "test-script.html",
+                        "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/demo/test-script.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "test.js",
+                        "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/demo/test.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "myLib.js",
+                        "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/dist/myLib.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "index.js",
+                        "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/src/index.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/09-library/01-library-basic/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02-webpack-numbers",
+                "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "demo",
+                    "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/demo",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "test.js",
+                        "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/demo/test.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "webpack-numbers.js",
+                        "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/dist/webpack-numbers.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "index.js",
+                        "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/src/index.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "ref.json",
+                        "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/src/ref.json",
+                        "fileType": ".json"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "10-module-federation",
+            "path": "5-webpack和前端模块化/part-02/10-module-federation",
+            "children": [
+              {
+                "type": "directory",
+                "name": "HomeList",
+                "path": "5-webpack和前端模块化/part-02/10-module-federation/HomeList",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/HomeList/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/HomeList/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/HomeList/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "HomeList.js",
+                        "path": "5-webpack和前端模块化/part-02/10-module-federation/HomeList/src/HomeList.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.js",
+                        "path": "5-webpack和前端模块化/part-02/10-module-federation/HomeList/src/index.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/HomeList/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "Nav",
+                "path": "5-webpack和前端模块化/part-02/10-module-federation/Nav",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/Nav/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/Nav/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/Nav/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "Header.js",
+                        "path": "5-webpack和前端模块化/part-02/10-module-federation/Nav/src/Header.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.js",
+                        "path": "5-webpack和前端模块化/part-02/10-module-federation/Nav/src/index.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/Nav/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-02/10-module-federation/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "Search",
+                "path": "5-webpack和前端模块化/part-02/10-module-federation/Search",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/Search/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/Search/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/Search/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "index.js",
+                        "path": "5-webpack和前端模块化/part-02/10-module-federation/Search/src/index.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/10-module-federation/Search/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "11-build-performance",
+            "path": "5-webpack和前端模块化/part-02/11-build-performance",
+            "children": [
+              {
+                "type": "directory",
+                "name": "01-dll",
+                "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/dist/index.html",
+                        "fileType": ".html"
+                      },
+                      {
+                        "type": "file",
+                        "name": "jquery.js",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/dist/jquery.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "jquery.js.LICENSE.txt",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/dist/jquery.js.LICENSE.txt",
+                        "fileType": ".txt"
+                      },
+                      {
+                        "type": "file",
+                        "name": "main.js",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/dist/main.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dll",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/dll",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "jquery.js",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/dll/jquery.js",
+                        "fileType": ".js"
+                      },
+                      {
+                        "type": "file",
+                        "name": "jquery.js.LICENSE.txt",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/dll/jquery.js.LICENSE.txt",
+                        "fileType": ".txt"
+                      },
+                      {
+                        "type": "file",
+                        "name": "manifest.json",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/dll/manifest.json",
+                        "fileType": ".json"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "images",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/images",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-20-59-19.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/images/README-22-02-02-20-59-19.png",
+                        "fileType": ".png"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "index.js",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/src/index.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/webpack.config.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.dll.config.js",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/01-dll/webpack.dll.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02-worker-poll",
+                "path": "5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "dist",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/dist",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "main.js",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/dist/main.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "images",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/images",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-20-59-19.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/images/README-22-02-02-20-59-19.png",
+                        "fileType": ".png"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "package-lock.json",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/package-lock.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "package.json",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/package.json",
+                    "fileType": ".json"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "src",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/src",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "index.js",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/src/index.js",
+                        "fileType": ".js"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "file",
+                    "name": "webpack.config.js",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/webpack.config.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "03-summary",
+                "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "README.md",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/README.md",
+                    "fileType": ".md"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "images",
+                    "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-21-56-18.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-21-56-18.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-21-57-26.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-21-57-26.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-21-58-13.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-21-58-13.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-21-59-17.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-21-59-17.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-00-32.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-00-32.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-01-48.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-01-48.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-02-36.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-02-36.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-03-13.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-03-13.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-03-59.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-03-59.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-04-36.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-04-36.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-05-33.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-05-33.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-17-16.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-17-16.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-19-43.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-19-43.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-20-55.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-20-55.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-21-32.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-21-32.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-21-57.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-21-57.png",
+                        "fileType": ".png"
+                      },
+                      {
+                        "type": "file",
+                        "name": "README-22-02-02-22-22-25.png",
+                        "path": "5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-22-25.png",
+                        "fileType": ".png"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "12-loader",
+            "path": "5-webpack和前端模块化/part-02/12-loader",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "5-webpack和前端模块化/part-02/12-loader/README.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "directory",
+                "name": "build",
+                "path": "5-webpack和前端模块化/part-02/12-loader/build",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "build.js",
+                    "path": "5-webpack和前端模块化/part-02/12-loader/build/build.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.html",
+                    "path": "5-webpack和前端模块化/part-02/12-loader/build/index.html",
+                    "fileType": ".html"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.html",
+                "path": "5-webpack和前端模块化/part-02/12-loader/index.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "directory",
+                "name": "loaders",
+                "path": "5-webpack和前端模块化/part-02/12-loader/loaders",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "simple-loader.js",
+                    "path": "5-webpack和前端模块化/part-02/12-loader/loaders/simple-loader.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "simple-style-loader.js",
+                    "path": "5-webpack和前端模块化/part-02/12-loader/loaders/simple-style-loader.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "package-lock.json",
+                "path": "5-webpack和前端模块化/part-02/12-loader/package-lock.json",
+                "fileType": ".json"
+              },
+              {
+                "type": "file",
+                "name": "package.json",
+                "path": "5-webpack和前端模块化/part-02/12-loader/package.json",
+                "fileType": ".json"
+              },
+              {
+                "type": "directory",
+                "name": "src",
+                "path": "5-webpack和前端模块化/part-02/12-loader/src",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "index.css",
+                    "path": "5-webpack和前端模块化/part-02/12-loader/src/index.css",
+                    "fileType": ".css"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.js",
+                    "path": "5-webpack和前端模块化/part-02/12-loader/src/index.js",
+                    "fileType": ".js"
+                  },
+                  {
+                    "type": "file",
+                    "name": "math.js",
+                    "path": "5-webpack和前端模块化/part-02/12-loader/src/math.js",
+                    "fileType": ".js"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "webpack.config.js",
+                "path": "5-webpack和前端模块化/part-02/12-loader/webpack.config.js",
+                "fileType": ".js"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "webpack.md",
+        "path": "5-webpack和前端模块化/webpack.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "webpack.vs.rollup.md",
+        "path": "5-webpack和前端模块化/webpack.vs.rollup.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "我的webpack优化实践.md",
+        "path": "5-webpack和前端模块化/我的webpack优化实践.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "迁移vite遇到的问题.md",
+        "path": "5-webpack和前端模块化/迁移vite遇到的问题.md",
+        "fileType": ".md"
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "6-网络和安全",
+    "path": "6-网络和安全",
+    "children": [
+      {
+        "type": "file",
+        "name": "DDOS攻击.md",
+        "path": "6-网络和安全/DDOS攻击.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "DNS查询流程.drawio",
+        "path": "6-网络和安全/DNS查询流程.drawio",
+        "fileType": ".drawio"
+      },
+      {
+        "type": "file",
+        "name": "xss和csfr.md",
+        "path": "6-网络和安全/xss和csfr.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "怎么阻止别人通过iframe内嵌我们的网页.md",
+        "path": "6-网络和安全/怎么阻止别人通过iframe内嵌我们的网页.md",
+        "fileType": ".md"
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "7-设计模式",
+    "path": "7-设计模式",
+    "children": [
+      {
+        "type": "directory",
+        "name": "01-面向对象的JavaScript",
+        "path": "7-设计模式/01-面向对象的JavaScript",
+        "children": [
+          {
+            "type": "file",
+            "name": "01-动态类型语言和鸭子类型.js",
+            "path": "7-设计模式/01-面向对象的JavaScript/01-动态类型语言和鸭子类型.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "02-多态.js",
+            "path": "7-设计模式/01-面向对象的JavaScript/02-多态.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "03-封装.js",
+            "path": "7-设计模式/01-面向对象的JavaScript/03-封装.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "04-原型模式和基于原型继承的JavaScript对象系统.js",
+            "path": "7-设计模式/01-面向对象的JavaScript/04-原型模式和基于原型继承的JavaScript对象系统.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "02-this、call和apply",
+        "path": "7-设计模式/02-this、call和apply",
+        "children": [
+          {
+            "type": "file",
+            "name": "2.2.2-call和apply的用法-1修改this指向.js",
+            "path": "7-设计模式/02-this、call和apply/2.2.2-call和apply的用法-1修改this指向.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "2.2.2-call和apply的用法-3借用其他函数方法.js",
+            "path": "7-设计模式/02-this、call和apply/2.2.2-call和apply的用法-3借用其他函数方法.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "index.html",
+            "path": "7-设计模式/02-this、call和apply/index.html",
+            "fileType": ".html"
+          },
+          {
+            "type": "file",
+            "name": "实现bind.js",
+            "path": "7-设计模式/02-this、call和apply/实现bind.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "03-闭包",
+        "path": "7-设计模式/03-闭包",
+        "children": [
+          {
+            "type": "file",
+            "name": "01-闭包-延续局部变量寿命-image数据上报.js",
+            "path": "7-设计模式/03-闭包/01-闭包-延续局部变量寿命-image数据上报.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "3.1.4-闭包和面向对象设计.js",
+            "path": "7-设计模式/03-闭包/3.1.4-闭包和面向对象设计.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "3.1.6-闭包与内存管理.md",
+            "path": "7-设计模式/03-闭包/3.1.6-闭包与内存管理.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "3.2.3-闭包应用-高阶函数实现AOP.js",
+            "path": "7-设计模式/03-闭包/3.2.3-闭包应用-高阶函数实现AOP.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "3.2.4-闭包应用-uncurrying.js",
+            "path": "7-设计模式/03-闭包/3.2.4-闭包应用-uncurrying.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "del.html",
+            "path": "7-设计模式/03-闭包/del.html",
+            "fileType": ".html"
+          },
+          {
+            "type": "file",
+            "name": "利用闭包的特性实现背景色渐变.html",
+            "path": "7-设计模式/03-闭包/利用闭包的特性实现背景色渐变.html",
+            "fileType": ".html"
+          },
+          {
+            "type": "file",
+            "name": "缓存计算结果memory.js",
+            "path": "7-设计模式/03-闭包/缓存计算结果memory.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "节流.js",
+            "path": "7-设计模式/03-闭包/节流.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "闭包应用-命令模式.js",
+            "path": "7-设计模式/03-闭包/闭包应用-命令模式.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "防抖.js",
+            "path": "7-设计模式/03-闭包/防抖.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "04-单例模式",
+        "path": "7-设计模式/04-单例模式",
+        "children": [
+          {
+            "type": "file",
+            "name": "03-用代理实现单例.js",
+            "path": "7-设计模式/04-单例模式/03-用代理实现单例.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "04-javascript中的单例模式.js",
+            "path": "7-设计模式/04-单例模式/04-javascript中的单例模式.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "05-策略模式",
+        "path": "7-设计模式/05-策略模式",
+        "children": [
+          {
+            "type": "file",
+            "name": "01-使用策略模式计算奖金.js",
+            "path": "7-设计模式/05-策略模式/01-使用策略模式计算奖金.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "02-JavaScript版本的重构.js",
+            "path": "7-设计模式/05-策略模式/02-JavaScript版本的重构.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "directory",
+            "name": "03-应用-表单校验",
+            "path": "7-设计模式/05-策略模式/03-应用-表单校验",
+            "children": [
+              {
+                "type": "file",
+                "name": "第一版.html",
+                "path": "7-设计模式/05-策略模式/03-应用-表单校验/第一版.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "file",
+                "name": "第三版-策略模式优化-某个文本框增加多种校验规则.html",
+                "path": "7-设计模式/05-策略模式/03-应用-表单校验/第三版-策略模式优化-某个文本框增加多种校验规则.html",
+                "fileType": ".html"
+              },
+              {
+                "type": "file",
+                "name": "第二版-引入策略模式.html",
+                "path": "7-设计模式/05-策略模式/03-应用-表单校验/第二版-引入策略模式.html",
+                "fileType": ".html"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "07-迭代器模式",
+        "path": "7-设计模式/07-迭代器模式",
+        "children": [
+          {
+            "type": "file",
+            "name": "02-实现自己的迭代器.js",
+            "path": "7-设计模式/07-迭代器模式/02-实现自己的迭代器.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "03-内部迭代器和外部迭代器.js",
+            "path": "7-设计模式/07-迭代器模式/03-内部迭代器和外部迭代器.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "04-迭代类数组对象和字面量对象.js",
+            "path": "7-设计模式/07-迭代器模式/04-迭代类数组对象和字面量对象.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "05-倒序迭代器.js",
+            "path": "7-设计模式/07-迭代器模式/05-倒序迭代器.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "06-终止迭代器.js",
+            "path": "7-设计模式/07-迭代器模式/06-终止迭代器.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "07-迭代器模式的应用举例.js",
+            "path": "7-设计模式/07-迭代器模式/07-迭代器模式的应用举例.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "08-发布订阅",
+        "path": "7-设计模式/08-发布订阅",
+        "children": [
+          {
+            "type": "file",
+            "name": "05-发布订阅的通用实现.js",
+            "path": "7-设计模式/08-发布订阅/05-发布订阅的通用实现.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "06-取消订阅的事件.js",
+            "path": "7-设计模式/08-发布订阅/06-取消订阅的事件.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "07-真实的例子-网站登陆.js",
+            "path": "7-设计模式/08-发布订阅/07-真实的例子-网站登陆.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "08-全局的发布-订阅对象.js",
+            "path": "7-设计模式/08-发布订阅/08-全局的发布-订阅对象.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "09-命令模式",
+        "path": "7-设计模式/09-命令模式",
+        "children": [
+          {
+            "type": "file",
+            "name": "01-用途.js",
+            "path": "7-设计模式/09-命令模式/01-用途.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "02-Example-菜单程序.html",
+            "path": "7-设计模式/09-命令模式/02-Example-菜单程序.html",
+            "fileType": ".html"
+          },
+          {
+            "type": "file",
+            "name": "03-JavaScript中的命令模式.html",
+            "path": "7-设计模式/09-命令模式/03-JavaScript中的命令模式.html",
+            "fileType": ".html"
+          },
+          {
+            "type": "file",
+            "name": "04-撤销命令.html",
+            "path": "7-设计模式/09-命令模式/04-撤销命令.html",
+            "fileType": ".html"
+          },
+          {
+            "type": "file",
+            "name": "07-Example-宏命令.js",
+            "path": "7-设计模式/09-命令模式/07-Example-宏命令.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "10-组合模式",
+        "path": "7-设计模式/10-组合模式",
+        "children": [
+          {
+            "type": "file",
+            "name": "03-组合模式的用途.js",
+            "path": "7-设计模式/10-组合模式/03-组合模式的用途.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "04-更强大的宏命令.js",
+            "path": "7-设计模式/10-组合模式/04-更强大的宏命令.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "07-Example-扫描文件夹.js",
+            "path": "7-设计模式/10-组合模式/07-Example-扫描文件夹.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "09-引用父对象.js",
+            "path": "7-设计模式/10-组合模式/09-引用父对象.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "test-class.js",
+            "path": "7-设计模式/10-组合模式/test-class.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "test-constructor.js",
+            "path": "7-设计模式/10-组合模式/test-constructor.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "test-folder.js",
+            "path": "7-设计模式/10-组合模式/test-folder.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "15-装饰者模式",
+        "path": "7-设计模式/15-装饰者模式",
+        "children": [
+          {
+            "type": "file",
+            "name": "用AOP装饰函数.js",
+            "path": "7-设计模式/15-装饰者模式/用AOP装饰函数.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "part3-设计原则和编程技巧",
+        "path": "7-设计模式/part3-设计原则和编程技巧",
+        "children": [
+          {
+            "type": "directory",
+            "name": "18-单一职责原则",
+            "path": "7-设计模式/part3-设计原则和编程技巧/18-单一职责原则",
+            "children": [
+              {
+                "type": "file",
+                "name": "00-前言.md",
+                "path": "7-设计模式/part3-设计原则和编程技巧/18-单一职责原则/00-前言.md",
+                "fileType": ".md"
+              },
+              {
+                "type": "file",
+                "name": "01-设计中的SRP原则.md",
+                "path": "7-设计模式/part3-设计原则和编程技巧/18-单一职责原则/01-设计中的SRP原则.md",
+                "fileType": ".md"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "19-最少知识原则",
+            "path": "7-设计模式/part3-设计原则和编程技巧/19-最少知识原则",
+            "children": [
+              {
+                "type": "file",
+                "name": "00-前言.md",
+                "path": "7-设计模式/part3-设计原则和编程技巧/19-最少知识原则/00-前言.md",
+                "fileType": ".md"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "发布订阅模式.js",
+        "path": "7-设计模式/发布订阅模式.js",
+        "fileType": ".js"
+      },
+      {
+        "type": "file",
+        "name": "观察者模式.js",
+        "path": "7-设计模式/观察者模式.js",
+        "fileType": ".js"
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "8-ts",
+    "path": "8-ts",
+    "children": [
+      {
+        "type": "file",
+        "name": "4.3新增方法.md",
+        "path": "8-ts/4.3新增方法.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "enum.ts",
+        "path": "8-ts/enum.ts",
+        "fileType": ".ts"
+      },
+      {
+        "type": "file",
+        "name": "interface-vs-type.md",
+        "path": "8-ts/interface-vs-type.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "switch穷尽.ts",
+        "path": "8-ts/switch穷尽.ts",
+        "fileType": ".ts"
+      },
+      {
+        "type": "file",
+        "name": "常用的工具类型.md",
+        "path": "8-ts/常用的工具类型.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "手写工具类型.ts",
+        "path": "8-ts/手写工具类型.ts",
+        "fileType": ".ts"
+      },
+      {
+        "type": "file",
+        "name": "泛型.md",
+        "path": "8-ts/泛型.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "类型守卫.ts",
+        "path": "8-ts/类型守卫.ts",
+        "fileType": ".ts"
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "9-algorithm",
+    "path": "9-algorithm",
+    "children": [
+      {
+        "type": "directory",
+        "name": "od题库C卷",
+        "path": "9-algorithm/od题库C卷",
+        "children": [
+          {
+            "type": "directory",
+            "name": "100",
+            "path": "9-algorithm/od题库C卷/100",
+            "children": [
+              {
+                "type": "file",
+                "name": "API集群负载统计.js",
+                "path": "9-algorithm/od题库C卷/100/API集群负载统计.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "DFS-传递悄悄话.js",
+                "path": "9-algorithm/od题库C卷/100/DFS-传递悄悄话.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "DFS-围棋的气.js",
+                "path": "9-algorithm/od题库C卷/100/DFS-围棋的气.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "DFS-核酸检测.js",
+                "path": "9-algorithm/od题库C卷/100/DFS-核酸检测.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "DFS-游戏分组.js",
+                "path": "9-algorithm/od题库C卷/100/DFS-游戏分组.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "DP-园区参观路径.js",
+                "path": "9-algorithm/od题库C卷/100/DP-园区参观路径.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "GPU调度-执行时长.js",
+                "path": "9-algorithm/od题库C卷/100/GPU调度-执行时长.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "二分法-小明找位置.js",
+                "path": "9-algorithm/od题库C卷/100/二分法-小明找位置.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "单指针-体育场找座位.js",
+                "path": "9-algorithm/od题库C卷/100/单指针-体育场找座位.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "单指针-最少停车数-停车场车辆统计.js",
+                "path": "9-algorithm/od题库C卷/100/单指针-最少停车数-停车场车辆统计.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "双指针-寻找连续区间-数组连续和.js",
+                "path": "9-algorithm/od题库C卷/100/双指针-寻找连续区间-数组连续和.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "哈希表-万能单词拼写-掌握单词个数.js",
+                "path": "9-algorithm/od题库C卷/100/哈希表-万能单词拼写-掌握单词个数.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "回溯-构成指定长度字符串的个数.js",
+                "path": "9-algorithm/od题库C卷/100/回溯-构成指定长度字符串的个数.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "字符串-全量和已占用字符集.js",
+                "path": "9-algorithm/od题库C卷/100/字符串-全量和已占用字符集.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "字符串-字符串变换最小字符串.js",
+                "path": "9-algorithm/od题库C卷/100/字符串-字符串变换最小字符串.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "字符串-求字符串中所有整数的最小和.js",
+                "path": "9-algorithm/od题库C卷/100/字符串-求字符串中所有整数的最小和.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "字符串数学运算-火星文计算.js",
+                "path": "9-algorithm/od题库C卷/100/字符串数学运算-火星文计算.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "密码解密.js",
+                "path": "9-algorithm/od题库C卷/100/密码解密.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "小华地图寻宝-小华最多能获得多少黄金.js",
+                "path": "9-algorithm/od题库C卷/100/小华地图寻宝-小华最多能获得多少黄金.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "小朋友来自多少小区.js",
+                "path": "9-algorithm/od题库C卷/100/小朋友来自多少小区.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "排序-内存冷热标记.js",
+                "path": "9-algorithm/od题库C卷/100/排序-内存冷热标记.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "排序-寻找身高相近的小朋友.js",
+                "path": "9-algorithm/od题库C卷/100/排序-寻找身高相近的小朋友.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "排序-开源项目热度榜单.js",
+                "path": "9-algorithm/od题库C卷/100/排序-开源项目热度榜单.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "排序-找出作弊的人.js",
+                "path": "9-algorithm/od题库C卷/100/排序-找出作弊的人.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "排序-数组去重和排序.js",
+                "path": "9-algorithm/od题库C卷/100/排序-数组去重和排序.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "排序-整型数组按个位值排序.js",
+                "path": "9-algorithm/od题库C卷/100/排序-整型数组按个位值排序.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "排序-智能成绩表.js",
+                "path": "9-algorithm/od题库C卷/100/排序-智能成绩表.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "排序-机场航班调度.js",
+                "path": "9-algorithm/od题库C卷/100/排序-机场航班调度.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "提取字符串中的最长数学表达式并计算.js",
+                "path": "9-algorithm/od题库C卷/100/提取字符串中的最长数学表达式并计算.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "数学运算-来自异国的客人-幸运数字.js",
+                "path": "9-algorithm/od题库C卷/100/数学运算-来自异国的客人-幸运数字.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "数学运算-素数之积-RSA加密算法.js",
+                "path": "9-algorithm/od题库C卷/100/数学运算-素数之积-RSA加密算法.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "数组-最大N个数与最小N个数的和.js",
+                "path": "9-algorithm/od题库C卷/100/数组-最大N个数与最小N个数的和.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "数组-查找众数数组的中位数.js",
+                "path": "9-algorithm/od题库C卷/100/数组-查找众数数组的中位数.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "数组-求幸存数之和.js",
+                "path": "9-algorithm/od题库C卷/100/数组-求幸存数之和.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "数组-计算面积.js",
+                "path": "9-algorithm/od题库C卷/100/数组-计算面积.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "数组-转盘寿司.js",
+                "path": "9-algorithm/od题库C卷/100/数组-转盘寿司.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "暴力解法-游戏分组.js",
+                "path": "9-algorithm/od题库C卷/100/暴力解法-游戏分组.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "最小堆-整数对最小和.js",
+                "path": "9-algorithm/od题库C卷/100/最小堆-整数对最小和.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "有效字符串.js",
+                "path": "9-algorithm/od题库C卷/100/有效字符串.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "模拟题-模拟目录管理.js",
+                "path": "9-algorithm/od题库C卷/100/模拟题-模拟目录管理.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "滑动窗口-数的分解.js",
+                "path": "9-algorithm/od题库C卷/100/滑动窗口-数的分解.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "滑动窗口-最多购买宝石数目.js",
+                "path": "9-algorithm/od题库C卷/100/滑动窗口-最多购买宝石数目.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "滑动窗口-环中最长字符串的长度.js",
+                "path": "9-algorithm/od题库C卷/100/滑动窗口-环中最长字符串的长度.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "用连续自然数之和来表达整数.js",
+                "path": "9-algorithm/od题库C卷/100/用连续自然数之和来表达整数.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "英文输入法.js",
+                "path": "9-algorithm/od题库C卷/100/英文输入法.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "虚拟游戏理财.js",
+                "path": "9-algorithm/od题库C卷/100/虚拟游戏理财.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "螺旋数字矩阵.js",
+                "path": "9-algorithm/od题库C卷/100/螺旋数字矩阵.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "贪心算法-分割均衡字符串.js",
+                "path": "9-algorithm/od题库C卷/100/贪心算法-分割均衡字符串.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "贪心算法-分披萨.js",
+                "path": "9-algorithm/od题库C卷/100/贪心算法-分披萨.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "贪心算法-剩余银饰的重量.js",
+                "path": "9-algorithm/od题库C卷/100/贪心算法-剩余银饰的重量.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "贪心算法-山脉的个数.js",
+                "path": "9-algorithm/od题库C卷/100/贪心算法-山脉的个数.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "贪心算法-执行任务赚积分.js",
+                "path": "9-algorithm/od题库C卷/100/贪心算法-执行任务赚积分.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "逻辑题-分配土地.js",
+                "path": "9-algorithm/od题库C卷/100/逻辑题-分配土地.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "逻辑题-测试用例执行计划.js",
+                "path": "9-algorithm/od题库C卷/100/逻辑题-测试用例执行计划.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "200",
+            "path": "9-algorithm/od题库C卷/200",
+            "children": [
+              {
+                "type": "file",
+                "name": "BFS-亲子游戏.js",
+                "path": "9-algorithm/od题库C卷/200/BFS-亲子游戏.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "BFS-路口最短时间问题.js",
+                "path": "9-algorithm/od题库C卷/200/BFS-路口最短时间问题.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "DFS-可以组成网络的服务器.js",
+                "path": "9-algorithm/od题库C卷/200/DFS-可以组成网络的服务器.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "DFS-欢乐的周末.js",
+                "path": "9-algorithm/od题库C卷/200/DFS-欢乐的周末.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "DP-MELON的难题.js",
+                "path": "9-algorithm/od题库C卷/200/DP-MELON的难题.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "DP-两个字符串间的最短路径问题.js",
+                "path": "9-algorithm/od题库C卷/200/DP-两个字符串间的最短路径问题.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "DP-贪心歌手.js",
+                "path": "9-algorithm/od题库C卷/200/DP-贪心歌手.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "Wonderland.js",
+                "path": "9-algorithm/od题库C卷/200/Wonderland.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "二分法-员工派遣.js",
+                "path": "9-algorithm/od题库C卷/200/二分法-员工派遣.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "双指针-贪吃的猴子.js",
+                "path": "9-algorithm/od题库C卷/200/双指针-贪吃的猴子.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "回溯-分月饼.js",
+                "path": "9-algorithm/od题库C卷/200/回溯-分月饼.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "并查集-5G网络建设.js",
+                "path": "9-algorithm/od题库C卷/200/并查集-5G网络建设.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "数组-会议室占用时间段.js",
+                "path": "9-algorithm/od题库C卷/200/数组-会议室占用时间段.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "数组-攀登者2.js",
+                "path": "9-algorithm/od题库C卷/200/数组-攀登者2.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "数组-简易内存池.js",
+                "path": "9-algorithm/od题库C卷/200/数组-简易内存池.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "数组-项目排期.js",
+                "path": "9-algorithm/od题库C卷/200/数组-项目排期.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "树-城市聚集度-找城市.js",
+                "path": "9-algorithm/od题库C卷/200/树-城市聚集度-找城市.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "滑动窗口-查找接口成功率最优时间段.js",
+                "path": "9-algorithm/od题库C卷/200/滑动窗口-查找接口成功率最优时间段.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "电脑病毒感染.js",
+                "path": "9-algorithm/od题库C卷/200/电脑病毒感染.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "相似字符串.js",
+                "path": "9-algorithm/od题库C卷/200/相似字符串.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "贪心算法-树-生成哈夫曼树.js",
+                "path": "9-algorithm/od题库C卷/200/贪心算法-树-生成哈夫曼树.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "进制转换-根据IP查找城市.js",
+                "path": "9-algorithm/od题库C卷/200/进制转换-根据IP查找城市.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "逻辑-结队编程.js",
+                "path": "9-algorithm/od题库C卷/200/逻辑-结队编程.js",
+                "fileType": ".js"
+              },
+              {
+                "type": "file",
+                "name": "逻辑题-信道分配.js",
+                "path": "9-algorithm/od题库C卷/200/逻辑题-信道分配.js",
+                "fileType": ".js"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "images",
+            "path": "9-algorithm/od题库C卷/images",
+            "children": [
+              {
+                "type": "file",
+                "name": "两个字符串间的最短路径问题-1.png",
+                "path": "9-algorithm/od题库C卷/images/两个字符串间的最短路径问题-1.png",
+                "fileType": ".png"
+              },
+              {
+                "type": "file",
+                "name": "两个字符串间的最短路径问题-2.png",
+                "path": "9-algorithm/od题库C卷/images/两个字符串间的最短路径问题-2.png",
+                "fileType": ".png"
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "name": "并查集.js",
+            "path": "9-algorithm/od题库C卷/并查集.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "循环停止对比.js",
+            "path": "9-algorithm/od题库C卷/循环停止对比.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "二叉树",
+        "path": "9-algorithm/二叉树",
+        "children": [
+          {
+            "type": "file",
+            "name": "反转二叉树.js",
+            "path": "9-algorithm/二叉树/反转二叉树.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "二叉树先中后序遍历.js",
+        "path": "9-algorithm/二叉树先中后序遍历.js",
+        "fileType": ".js"
+      },
+      {
+        "type": "directory",
+        "name": "动态规划",
+        "path": "9-algorithm/动态规划",
+        "children": [
+          {
+            "type": "file",
+            "name": "121-买卖股票的最佳时机(一)-只能交易一次.js",
+            "path": "9-algorithm/动态规划/121-买卖股票的最佳时机(一)-只能交易一次.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "122-买卖股票的最佳时机(二)-不限次数.js",
+            "path": "9-algorithm/动态规划/122-买卖股票的最佳时机(二)-不限次数.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "123-买卖股票的最佳时机(三)-只能交易两次.js",
+            "path": "9-algorithm/动态规划/123-买卖股票的最佳时机(三)-只能交易两次.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "188-买卖股票的最佳时机(四)-交易k次.js",
+            "path": "9-algorithm/动态规划/188-买卖股票的最佳时机(四)-交易k次.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "22-括号生成.js",
+            "path": "9-algorithm/动态规划/22-括号生成.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "BM62-斐波那契数列.js",
+            "path": "9-algorithm/动态规划/BM62-斐波那契数列.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "爬楼梯.js",
+            "path": "9-algorithm/动态规划/爬楼梯.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "哈希",
+        "path": "9-algorithm/哈希",
+        "children": [
+          {
+            "type": "file",
+            "name": "BM52-数组中只出现一次的两个数字.js",
+            "path": "9-algorithm/哈希/BM52-数组中只出现一次的两个数字.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "BM53-缺失的第一个正整数.js",
+            "path": "9-algorithm/哈希/BM53-缺失的第一个正整数.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "广度优先遍历.js",
+        "path": "9-algorithm/广度优先遍历.js",
+        "fileType": ".js"
+      },
+      {
+        "type": "directory",
+        "name": "排序",
+        "path": "9-algorithm/排序",
+        "children": [
+          {
+            "type": "file",
+            "name": "冒泡.js",
+            "path": "9-algorithm/排序/冒泡.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "小根堆.js",
+            "path": "9-algorithm/排序/小根堆.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "快排.js",
+            "path": "9-algorithm/排序/快排.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "插入排序.js",
+            "path": "9-algorithm/排序/插入排序.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "栈+堆+队列",
+        "path": "9-algorithm/栈+堆+队列",
+        "children": [
+          {
+            "type": "file",
+            "name": "剑指 Offer 09. 用两个栈实现队列.js",
+            "path": "9-algorithm/栈+堆+队列/剑指 Offer 09. 用两个栈实现队列.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "剑指 Offer 30. 包含min函数的栈.js",
+            "path": "9-algorithm/栈+堆+队列/剑指 Offer 30. 包含min函数的栈.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "深度优先遍历.js",
+        "path": "9-algorithm/深度优先遍历.js",
+        "fileType": ".js"
+      },
+      {
+        "type": "directory",
+        "name": "贪心算法",
+        "path": "9-algorithm/贪心算法",
+        "children": [
+          {
+            "type": "file",
+            "name": "BM95-分糖果问题.js",
+            "path": "9-algorithm/贪心算法/BM95-分糖果问题.js",
+            "fileType": ".js"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "链表",
+        "path": "9-algorithm/链表",
+        "children": [
+          {
+            "type": "file",
+            "name": "146-LRU缓存.js",
+            "path": "9-algorithm/链表/146-LRU缓存.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "2-两数相加.js",
+            "path": "9-algorithm/链表/2-两数相加.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "206-反转链表.js",
+            "path": "9-algorithm/链表/206-反转链表.js",
+            "fileType": ".js"
+          },
+          {
+            "type": "file",
+            "name": "21-合并两个有序链表.js",
+            "path": "9-algorithm/链表/21-合并两个有序链表.js",
+            "fileType": ".js"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "Other",
+    "path": "Other",
+    "children": [
+      {
+        "type": "directory",
+        "name": "Images",
+        "path": "Other/Images",
+        "children": [
+          {
+            "type": "file",
+            "name": "1711ed6777afd723.png",
+            "path": "Other/Images/1711ed6777afd723.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "1px.jpg",
+            "path": "Other/Images/1px.jpg",
+            "fileType": ".jpg"
+          },
+          {
+            "type": "file",
+            "name": "after-demo.png",
+            "path": "Other/Images/after-demo.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "caret-color.png",
+            "path": "Other/Images/caret-color.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "connect之前的this.png",
+            "path": "Other/Images/connect之前的this.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "connect之后的this.png",
+            "path": "Other/Images/connect之后的this.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "contenteditable-demo.png",
+            "path": "Other/Images/contenteditable-demo.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "cookie的组成.jpg",
+            "path": "Other/Images/cookie的组成.jpg",
+            "fileType": ".jpg"
+          },
+          {
+            "type": "file",
+            "name": "git常用操作❤-21-11-02-10-36-47.png",
+            "path": "Other/Images/git常用操作❤-21-11-02-10-36-47.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "git常用操作❤-21-11-02-10-37-14.png",
+            "path": "Other/Images/git常用操作❤-21-11-02-10-37-14.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "header.png",
+            "path": "Other/Images/header.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "hello-face.png",
+            "path": "Other/Images/hello-face.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "home-banner.svg",
+            "path": "Other/Images/home-banner.svg",
+            "fileType": ".svg"
+          },
+          {
+            "type": "file",
+            "name": "http和https的区别-21-08-29-08-29-58.png",
+            "path": "Other/Images/http和https的区别-21-08-29-08-29-58.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "http和https的区别-21-08-29-08-39-25.png",
+            "path": "Other/Images/http和https的区别-21-08-29-08-39-25.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "logo.png",
+            "path": "Other/Images/logo.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "react调用函数传递的this.png",
+            "path": "Other/Images/react调用函数传递的this.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "responsive.png",
+            "path": "Other/Images/responsive.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "《图解HTTP》-21-06-26-07-19-57.png",
+            "path": "Other/Images/《图解HTTP》-21-06-26-07-19-57.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "《图解HTTP》-21-06-26-07-20-16.png",
+            "path": "Other/Images/《图解HTTP》-21-06-26-07-20-16.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "原型链表示图.png",
+            "path": "Other/Images/原型链表示图.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "李幸娟-前端汇总.png",
+            "path": "Other/Images/李幸娟-前端汇总.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "画瓢-21-04-29-09-40-56.png",
+            "path": "Other/Images/画瓢-21-04-29-09-40-56.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "画瓢-21-04-29-09-43-08.png",
+            "path": "Other/Images/画瓢-21-04-29-09-43-08.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "画瓢-21-04-29-10-00-07.png",
+            "path": "Other/Images/画瓢-21-04-29-10-00-07.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "输入URL后发生了什么-21-06-23-05-35-17.png",
+            "path": "Other/Images/输入URL后发生了什么-21-06-23-05-35-17.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "输入URL后发生了什么-21-06-23-05-35-25.png",
+            "path": "Other/Images/输入URL后发生了什么-21-06-23-05-35-25.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "输入URL后发生了什么-21-06-23-05-59-51.png",
+            "path": "Other/Images/输入URL后发生了什么-21-06-23-05-59-51.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "输入URL后发生了什么-21-06-23-06-01-41.png",
+            "path": "Other/Images/输入URL后发生了什么-21-06-23-06-01-41.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "输入URL后发生了什么-21-06-26-06-09-12.png",
+            "path": "Other/Images/输入URL后发生了什么-21-06-26-06-09-12.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "输入URL后发生了什么-21-06-26-06-37-03.png",
+            "path": "Other/Images/输入URL后发生了什么-21-06-26-06-37-03.png",
+            "fileType": ".png"
+          },
+          {
+            "type": "file",
+            "name": "闭包作用域链.png",
+            "path": "Other/Images/闭包作用域链.png",
+            "fileType": ".png"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "Trash",
+        "path": "Other/Trash",
+        "children": [
+          {
+            "type": "directory",
+            "name": "2020-01-03-边框渐变button",
+            "path": "Other/Trash/2020-01-03-边框渐变button",
+            "children": [
+              {
+                "type": "file",
+                "name": "Demo.tsx",
+                "path": "Other/Trash/2020-01-03-边框渐变button/Demo.tsx",
+                "fileType": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "Demo1.tsx",
+                "path": "Other/Trash/2020-01-03-边框渐变button/Demo1.tsx",
+                "fileType": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "Demo2.tsx",
+                "path": "Other/Trash/2020-01-03-边框渐变button/Demo2.tsx",
+                "fileType": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "Demo3.tsx",
+                "path": "Other/Trash/2020-01-03-边框渐变button/Demo3.tsx",
+                "fileType": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "Demo4.tsx",
+                "path": "Other/Trash/2020-01-03-边框渐变button/Demo4.tsx",
+                "fileType": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "index.mdx",
+                "path": "Other/Trash/2020-01-03-边框渐变button/index.mdx",
+                "fileType": ".mdx"
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "name": "2021-09-01-上海互联网公司.md",
+            "path": "Other/Trash/2021-09-01-上海互联网公司.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "2021-09-01-固定性思维和成长性思维.mdx",
+            "path": "Other/Trash/2021-09-01-固定性思维和成长性思维.mdx",
+            "fileType": ".mdx"
+          },
+          {
+            "type": "file",
+            "name": "2021-09-01-费曼学习法.md",
+            "path": "Other/Trash/2021-09-01-费曼学习法.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "directory",
+            "name": "2022-05-18-选择器优先级2",
+            "path": "Other/Trash/2022-05-18-选择器优先级2",
+            "children": [
+              {
+                "type": "file",
+                "name": "demo.tsx",
+                "path": "Other/Trash/2022-05-18-选择器优先级2/demo.tsx",
+                "fileType": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "index.mdx",
+                "path": "Other/Trash/2022-05-18-选择器优先级2/index.mdx",
+                "fileType": ".mdx"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "Xmind",
+        "path": "Other/Xmind",
+        "children": [
+          {
+            "type": "file",
+            "name": "react学习大纲.xmind",
+            "path": "Other/Xmind/react学习大纲.xmind",
+            "fileType": ".xmind"
+          },
+          {
+            "type": "file",
+            "name": "vue初始化.xmind",
+            "path": "Other/Xmind/vue初始化.xmind",
+            "fileType": ".xmind"
+          },
+          {
+            "type": "file",
+            "name": "中国.xmind",
+            "path": "Other/Xmind/中国.xmind",
+            "fileType": ".xmind"
+          },
+          {
+            "type": "file",
+            "name": "如何做好一场技术演讲.xmind",
+            "path": "Other/Xmind/如何做好一场技术演讲.xmind",
+            "fileType": ".xmind"
+          },
+          {
+            "type": "file",
+            "name": "我在阿里等你文章.xmind",
+            "path": "Other/Xmind/我在阿里等你文章.xmind",
+            "fileType": ".xmind"
+          },
+          {
+            "type": "file",
+            "name": "李幸娟-前端汇总.xmind",
+            "path": "Other/Xmind/李幸娟-前端汇总.xmind",
+            "fileType": ".xmind"
+          },
+          {
+            "type": "file",
+            "name": "页面保存图片方案的探索.xmind",
+            "path": "Other/Xmind/页面保存图片方案的探索.xmind",
+            "fileType": ".xmind"
+          },
+          {
+            "type": "file",
+            "name": "项目复盘.xmind",
+            "path": "Other/Xmind/项目复盘.xmind",
+            "fileType": ".xmind"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "流程图",
+        "path": "Other/流程图",
+        "children": [
+          {
+            "type": "file",
+            "name": "Untitled Diagram.drawio",
+            "path": "Other/流程图/Untitled Diagram.drawio",
+            "fileType": ".drawio"
+          },
+          {
+            "type": "file",
+            "name": "sso-tao&tmail.drawio",
+            "path": "Other/流程图/sso-tao&tmail.drawio",
+            "fileType": ".drawio"
+          },
+          {
+            "type": "file",
+            "name": "计算机网络.drawio",
+            "path": "Other/流程图/计算机网络.drawio",
+            "fileType": ".drawio"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "简历存档",
+        "path": "Other/简历存档",
+        "children": [
+          {
+            "type": "file",
+            "name": "李幸娟-2年-前端-2021-05-27.pdf",
+            "path": "Other/简历存档/李幸娟-2年-前端-2021-05-27.pdf",
+            "fileType": ".pdf"
+          },
+          {
+            "type": "file",
+            "name": "李幸娟-3年-react-18236129679.pdf",
+            "path": "Other/简历存档/李幸娟-3年-react-18236129679.pdf",
+            "fileType": ".pdf"
+          },
+          {
+            "type": "file",
+            "name": "李幸娟简历-2020-09-19.pdf",
+            "path": "Other/简历存档/李幸娟简历-2020-09-19.pdf",
+            "fileType": ".pdf"
+          },
+          {
+            "type": "file",
+            "name": "李幸娟简历-2022-04.pdf",
+            "path": "Other/简历存档/李幸娟简历-2022-04.pdf",
+            "fileType": ".pdf"
+          },
+          {
+            "type": "file",
+            "name": "李幸娟简历-normal-2021-08-23.pdf",
+            "path": "Other/简历存档/李幸娟简历-normal-2021-08-23.pdf",
+            "fileType": ".pdf"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "考核类",
+        "path": "Other/考核类",
+        "children": [
+          {
+            "type": "file",
+            "name": "20200709-talking.md",
+            "path": "Other/考核类/20200709-talking.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "中期考核.md",
+            "path": "Other/考核类/中期考核.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "年中考核PPT.md",
+            "path": "Other/考核类/年中考核PPT.md",
+            "fileType": ".md"
+          },
+          {
+            "type": "file",
+            "name": "转正考核PPT.md",
+            "path": "Other/考核类/转正考核PPT.md",
+            "fileType": ".md"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "英语单词",
+        "path": "Other/英语单词",
+        "children": [
+          {
+            "type": "file",
+            "name": "Word Power Made Easy (Norman Lewis) (z-lib.org).pdf",
+            "path": "Other/英语单词/Word Power Made Easy (Norman Lewis) (z-lib.org).pdf",
+            "fileType": ".pdf"
+          },
+          {
+            "type": "file",
+            "name": "XDF词根词缀记忆大全.pdf",
+            "path": "Other/英语单词/XDF词根词缀记忆大全.pdf",
+            "fileType": ".pdf"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "file",
+    "name": "README.md",
+    "path": "README.md",
+    "fileType": ".md"
+  },
+  {
+    "type": "file",
+    "name": "del.html",
+    "path": "del.html",
+    "fileType": ".html"
+  },
+  {
+    "type": "file",
+    "name": "del.js",
+    "path": "del.js",
+    "fileType": ".js"
+  },
+  {
+    "type": "file",
+    "name": "del.md",
+    "path": "del.md",
+    "fileType": ".md"
+  },
+  {
+    "type": "file",
+    "name": "del.tsx",
+    "path": "del.tsx",
+    "fileType": ".tsx"
+  },
+  {
+    "type": "directory",
+    "name": "docs",
+    "path": "docs",
+    "children": [
+      {
+        "type": "file",
+        "name": "index.html",
+        "path": "docs/index.html",
+        "fileType": ".html"
+      },
+      {
+        "type": "file",
+        "name": "当选择一个技术栈的时候我考虑的因素.md",
+        "path": "docs/当选择一个技术栈的时候我考虑的因素.md",
+        "fileType": ".md"
+      }
+    ]
+  },
+  {
+    "type": "file",
+    "name": "index.html",
+    "path": "index.html",
+    "fileType": ".html"
+  },
+  {
+    "type": "file",
+    "name": "od-200.js",
+    "path": "od-200.js",
+    "fileType": ".js"
+  },
+  {
+    "type": "directory",
+    "name": "offer收割机",
+    "path": "offer收割机",
+    "children": [
+      {
+        "type": "file",
+        "name": "1 前端面试准备.md",
+        "path": "offer收割机/1 前端面试准备.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "10 offer收割机之手写代码篇.md",
+        "path": "offer收割机/10 offer收割机之手写代码篇.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "11 offer收割机之代码输出篇.md",
+        "path": "offer收割机/11 offer收割机之代码输出篇.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "12LeetCode面试常考题目.md",
+        "path": "offer收割机/12LeetCode面试常考题目.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "13 offer收割机之Vue篇.md",
+        "path": "offer收割机/13 offer收割机之Vue篇.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "14 vue项目的性能优化.md",
+        "path": "offer收割机/14 vue项目的性能优化.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "2 程序员面试软技能.md",
+        "path": "offer收割机/2 程序员面试软技能.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "3 offer收割机之HTML篇.md",
+        "path": "offer收割机/3 offer收割机之HTML篇.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "4 offer收割机之CSS篇.md",
+        "path": "offer收割机/4 offer收割机之CSS篇.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "5 offer收割机之JavaScript篇.md",
+        "path": "offer收割机/5 offer收割机之JavaScript篇.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "6 offer收割机之性能优化篇.md",
+        "path": "offer收割机/6 offer收割机之性能优化篇.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "7 offer收割机之React篇.md",
+        "path": "offer收割机/7 offer收割机之React篇.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "7 offer收割机之前端工程化篇.md",
+        "path": "offer收割机/7 offer收割机之前端工程化篇.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "8 offer收割机之计算机网络篇.md",
+        "path": "offer收割机/8 offer收割机之计算机网络篇.md",
+        "fileType": ".md"
+      },
+      {
+        "type": "file",
+        "name": "9 offer收割机之浏览器原理篇.md",
+        "path": "offer收割机/9 offer收割机之浏览器原理篇.md",
+        "fileType": ".md"
+      }
+    ]
+  },
+  {
+    "type": "file",
+    "name": "something.md",
+    "path": "something.md",
+    "fileType": ".md"
+  },
+  {
+    "type": "file",
+    "name": "wordCloud.html",
+    "path": "wordCloud.html",
+    "fileType": ".html"
+  },
+  {
+    "type": "directory",
+    "name": "一些前端面试题",
+    "path": "一些前端面试题",
+    "children": [
+      {
+        "type": "file",
+        "name": "IMG_8300.PNG",
+        "path": "一些前端面试题/IMG_8300.PNG",
+        "fileType": ".PNG"
+      },
+      {
+        "type": "file",
+        "name": "IMG_8301.PNG",
+        "path": "一些前端面试题/IMG_8301.PNG",
+        "fileType": ".PNG"
+      },
+      {
+        "type": "file",
+        "name": "IMG_8302.PNG",
+        "path": "一些前端面试题/IMG_8302.PNG",
+        "fileType": ".PNG"
+      },
+      {
+        "type": "file",
+        "name": "IMG_8303.PNG",
+        "path": "一些前端面试题/IMG_8303.PNG",
+        "fileType": ".PNG"
+      },
+      {
+        "type": "file",
+        "name": "IMG_8304.PNG",
+        "path": "一些前端面试题/IMG_8304.PNG",
+        "fileType": ".PNG"
+      },
+      {
+        "type": "file",
+        "name": "IMG_8305.PNG",
+        "path": "一些前端面试题/IMG_8305.PNG",
+        "fileType": ".PNG"
+      },
+      {
+        "type": "file",
+        "name": "IMG_8306.PNG",
+        "path": "一些前端面试题/IMG_8306.PNG",
+        "fileType": ".PNG"
+      },
+      {
+        "type": "file",
+        "name": "IMG_8307.PNG",
+        "path": "一些前端面试题/IMG_8307.PNG",
+        "fileType": ".PNG"
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "实现效果",
+    "path": "实现效果",
+    "children": [
+      {
+        "type": "file",
+        "name": "ellipsis.html",
+        "path": "实现效果/ellipsis.html",
+        "fileType": ".html"
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "物联网",
+    "path": "物联网",
+    "children": [
+      {
+        "type": "file",
+        "name": "index.md",
+        "path": "物联网/index.md",
+        "fileType": ".md"
+      }
+    ]
+  }
+]

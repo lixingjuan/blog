@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" modified="2021-06-03T02:52:24.117Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36" etag="JAVBEPIF7v1oPMHzeHXZ" version="14.7.4" type="github">
+  <diagram name="Page-1" id="74e2e168-ea6b-b213-b513-2b3c1d86103e">
+    <mxGraphModel dx="1426" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DUHY6pxnqgJCjsqbhflD-3" target="DUHY6pxnqgJCjsqbhflD-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-3" value="&lt;span&gt;用户进入www.taobao.com&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="60" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DUHY6pxnqgJCjsqbhflD-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-5" value="进入登陆页面&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;论询login.taobao.com&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="60" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.45;entryY=-0.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="DUHY6pxnqgJCjsqbhflD-7" target="DUHY6pxnqgJCjsqbhflD-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="875" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="875" y="220" />
+              <mxPoint x="874" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-7" value="已经登陆，则login.taobao.com setCookie&lt;br&gt;set-cookie: sgcookie=E100Rkx%2FvN1ftYW60kCmEVIxMt5yA9FARi%2BWTOjW2e7fbhQQQpaLKl36o7JAu34IWqm2cAv3MRbEjE67ggoK8FFw7Q%3D%3D;Domain=.taobao.com;Path=/;Expires=Fri, 03-Jun-2022 10:30:41 GMT;HttpOnly;Secure;SameSite=None" style="rounded=0;html=1;textDirection=ltr;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="520" y="60" width="710" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DUHY6pxnqgJCjsqbhflD-9" target="DUHY6pxnqgJCjsqbhflD-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-9" value="用户进入天猫&lt;br&gt;tmail.com" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="590" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-10" value="进入登陆页面&lt;br&gt;登陆dom使用的iframe 内嵌 login.taobao.com" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DUHY6pxnqgJCjsqbhflD-13" target="DUHY6pxnqgJCjsqbhflD-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="670" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-13" value="使用该cookie调用自己的登陆接口，实现登陆" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUHY6pxnqgJCjsqbhflD-15" value="之后的接口都用自己的cookie" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

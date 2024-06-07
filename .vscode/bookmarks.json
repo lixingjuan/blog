@@ -1,0 +1,69 @@
+{
+  "files": [
+    {
+      "path": "React/debug-react/react.development.js",
+      "bookmarks": [
+        {
+          "line": 65,
+          "column": 32,
+          "label": ""
+        },
+        {
+          "line": 112,
+          "column": 66,
+          "label": ""
+        },
+        {
+          "line": 233,
+          "column": 42,
+          "label": ""
+        },
+        {
+          "line": 252,
+          "column": 73,
+          "label": ""
+        },
+        {
+          "line": 340,
+          "column": 68,
+          "label": ""
+        },
+        {
+          "line": 413,
+          "column": 78,
+          "label": ""
+        }
+      ]
+    },
+    {
+      "path": "React/debug-react/react-dom.development.js",
+      "bookmarks": [
+        {
+          "line": 9294,
+          "column": 32,
+          "label": ""
+        },
+        {
+          "line": 13259,
+          "column": 57,
+          "label": ""
+        },
+        {
+          "line": 13274,
+          "column": 35,
+          "label": ""
+        },
+        {
+          "line": 29195,
+          "column": 39,
+          "label": ""
+        },
+        {
+          "line": 29257,
+          "column": 43,
+          "label": ""
+        }
+      ]
+    }
+  ]
+}

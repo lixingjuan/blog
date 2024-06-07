@@ -1,0 +1,42 @@
+(代码 demo 地址)[https://stackblitz.com/edit/react-d5ylj7?file=index.js]
+
+import CodeBlock from "@theme/CodeBlock";
+import Button from "@site/src/components/Button";
+import Space from "@site/src/components/Space";
+
+import Demo1 from "./Demo1";
+import CodeDemo1 from "!!raw-loader!./Demo1";
+import Demo2 from "./Demo2";
+import CodeDemo2 from "!!raw-loader!./Demo2";
+import Demo3 from "./Demo3";
+import CodeDemo3 from "!!raw-loader!./Demo3";
+import Demo4 from "./Demo4";
+import CodeDemo4 from "!!raw-loader!./Demo4";
+
+首先需要熟悉一个属性
+
+1. [background-clip](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip), 设置元素的背景（背景图片或颜色）是否延伸程度，text, content, border ,padding；
+
+## button 仅背景渐变
+
+<Demo1 />
+<CodeBlock language="js">{CodeDemo1}</CodeBlock>
+
+## button border 渐变
+
+原理即使用 padding 模拟 border，PC
+
+<Demo2 />
+<CodeBlock language="js">{CodeDemo2}</CodeBlock>
+
+## button 边框渐变 + 文字渐变
+
+方案一： background-clip: text
+
+<Demo3 />
+<CodeBlock language="js">{CodeDemo3}</CodeBlock>
+
+方案二： 内部的渐变字体使用 svg 绘制
+
+<Demo4 />
+<CodeBlock language="js">{CodeDemo4}</CodeBlock>

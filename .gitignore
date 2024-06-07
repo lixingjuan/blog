@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+
+# Production
+/build
+/10-Node
+/7-设计模式
+
+# Generated files
+.docusaurus
+.cache-loader
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.docusaurus
+React/my-app/.gitignore
+React/my-app/package-lock.json
+React/my-app/package.json
+React/my-app/README.md
+React/my-app/public/favicon.ico
+React/my-app/public/index.html
+React/my-app/public/logo192.png
+React/my-app/public/logo512.png
+React/my-app/public/manifest.json
+React/my-app/public/robots.txt
+React/my-app/src/App.css
+React/my-app/src/App.js
+React/my-app/src/App.test.js
+React/my-app/src/index.css
+React/my-app/src/index.js
+React/my-app/src/logo.svg
+React/my-app/src/reportWebVitals.js
+React/my-app/src/setupTests.js
+
+.vscode/launch.json
