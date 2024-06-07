@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LXJ, Blog ☀️</title>
+    <!-- 引入 React 和 ReactDOM -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!-- 引入 Babel 编译器 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 引入 marked 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 引入 highlight 库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <style>
+      #sidebar {
+        width: 200px;
+      }
+      #content {
+        flex-grow: 1;
+        padding: 20px;
+      }
+      .flex {
+        display: flex;
+      }
+      .pl-20 {
+        padding-left: 20px;
+      }
+      .file {
+        color: #333;
+        padding-left: 20px;
+      }
+      .file:hover {
+        background-color: #e9f4fe;
+        color: #1677ff;
+        cursor: pointer;
+      }
+      .folder {
+        padding-left: 20px;
+      }
+      .folder > .folder-name {
+        color: #666;
+        font-weight: 600;
+      }
+    </style>
+    <!-- 编写 React 代码 -->
+    <script type="text/babel">
+      const AppContext = React.createContext();
+
+      const File = ({ name = "", path = "", fileType }) => {
+        const { updateContent } = React.useContext(AppContext);
+
+        const loadContent = () => {
+          if (!path) {
+            alert("路径错误");
+            return;
+          }
+          /**
+           * 根据当前文件类型，做不同的操作
+           * 1. html, 直接更新
+           * 2. markdown, 使用marked.parse, 解析为html进行展示
+           * 3. js, 按照code展示
+           */
+
+          fetch(path)
+            .then((response) => response.text())
+            .then((fileContent) => {
+              console.log({ fileContent });
+              switch (fileType) {
+                case ".md":
+                  updateContent(marked.parse(fileContent));
+                  break;
+                case ".js":
+                  updateContent(`<pre><code class="language-js">${fileContent}</code></pre>`);
+                  hljs.highlightAll();
+                  break;
+                default:
+                  updateContent(fileContent);
+                  break;
+              }
+            });
+        };
+
+        if (!name) return null;
+        return (
+          <div class="file" onClick={loadContent}>
+            {name}
+          </div>
+        );
+      };
+
+      const Folder = ({ name, children = [] }) => {
+        return (
+          <div class="folder">
+            <div class="folder-name">{name}</div>
+            {children.map((it) => {
+              if (it.type === "directory") {
+                return <Folder name={it.name} children={it.children} />;
+              }
+              return <File name={it.name} path={it.path} fileType={it.fileType} />;
+            })}
+          </div>
+        );
+      };
+
+      // React 组件
+      function App() {
+        const [sidebarData, setSidebarData] = React.useState([]);
+        const [content, setContent] = React.useState(
+          marked.parse("# Marked in the browser\n\nRendered by **marked**.")
+        );
+
+        React.useEffect(() => {
+          fetch("structure.json")
+            .then((response) => response.json())
+            .then((data) => {
+              setSidebarData(data);
+            });
+        }, []);
+
+        const value = React.useMemo(
+          () => ({
+            updateContent: (val) => {
+              console.log("更新content");
+              setContent(val);
+            },
+          }),
+          []
+        );
+
+        return (
+          <AppContext.Provider value={value}>
+            <div class="flex">
+              <div id="sidebar">
+                {sidebarData.map((it) => {
+                  if (it.type === "directory") {
+                    return <Folder name={it.name} children={it.children} />;
+                  }
+                  return <File name={it.name} path={it.path} fileType={it.fileType} />;
+                })}
+              </div>
+              <div id="content">{content ? <div dangerouslySetInnerHTML={{ __html: content }} /> : <h1>empty</h1>}</div>
+            </div>
+          </AppContext.Provider>
+        );
+      }
+
+      const app = document.createElement("div");
+      document.body.appendChild(app);
+      ReactDOM.render(<App />, app);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -6,26 +6,44 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// 忽略的文件夹列表
+const ignoreFolders = ["node_modules", ".git", "output", ".github"];
+
 function generateDirectoryStructure(dir, baseUrl) {
-  const files = fs.readdirSync(dir);
-  return files.map((file) => {
-    const fullPath = path.join(dir, file);
-    const relativePath = path.relative(baseUrl, fullPath);
-    if (fs.statSync(fullPath).isDirectory()) {
-      return {
-        type: "directory",
-        name: file,
-        path: relativePath,
-        children: generateDirectoryStructure(fullPath, baseUrl),
-      };
-    } else {
+  // const files = fs.readdirSync(dir);
+  const files = fs.readdirSync(dir, { withFileTypes: true });
+
+  const result = files
+    .map((file) => {
+      console.log({ file });
+
+      const fileName = file.name;
+      const fullPath = path.join(file.parentPath, fileName);
+      const relativePath = path.relative(baseUrl, fullPath);
+      console.log({ relativePath });
+
+      // 如果是目录
+      if (file.isDirectory()) {
+        if (ignoreFolders.includes(fileName)) return null;
+
+        return {
+          type: "directory",
+          name: fileName,
+          path: relativePath,
+          children: generateDirectoryStructure(fullPath, baseUrl),
+        };
+      }
+
       return {
         type: "file",
-        name: file,
+        name: fileName,
         path: relativePath,
+        fileType: path.extname(fullPath),
       };
-    }
-  });
+    })
+    .filter(Boolean);
+
+  return result;
 }
 
 const baseDir = __dirname;
