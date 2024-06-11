@@ -143,7 +143,7 @@
                 const htmlResult = marked.parse(fileContent);
                 if (isREADME(path)) {
                   // 加入一段脚本，让所有的a标签都使用新页面打开
-                  return htmlResult.replace("<a href", '<a target="_blank" href');
+                  return htmlResult.replaceAll("<a href", '<a target="_blank" href');
                 }
                 return htmlResult;
               }
