@@ -1,6 +1,4 @@
-Yes! Yes! For interview 🤥
-
-# Morning ☀️
+# Good Morning ☀️
 
 - [ ] [Join Discussions](https://github.com/lixingjuan/my-article-tracker/discussions)
 - [ ] [RSS 订阅](https://www.inoreader.com/all_articles)
