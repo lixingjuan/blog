@@ -86,6 +86,32 @@
     <script type="text/babel">
       const AppContext = React.createContext();
 
+      class ErrorBoundary extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { hasError: false };
+        }
+
+        static getDerivedStateFromError(error) {
+          // 更新 state 以便下次渲染能够显示降级后的 UI
+          return { hasError: true };
+        }
+
+        componentDidCatch(error, errorInfo) {
+          // 你同样可以将错误日志上报给服务器
+          console.error("ErrorBoundary caught an error", error, errorInfo);
+        }
+
+        render() {
+          if (this.state.hasError) {
+            // 你可以自定义降级后的 UI 并渲染
+            return <h1>出了点问题。</h1>;
+          }
+
+          return this.props.children;
+        }
+      }
+
       const Arrow = ({ open }) => <span class={`font-20 ${open ? "is-open-arrow" : ""}`}>‣</span>;
 
       const File = ({ name = "", path = "", fileType }) => {
@@ -143,6 +169,7 @@
             const lowercaseFileType = fileType.toLocaleLowerCase();
             switch (fileType) {
               case ".md": {
+                console.log({ fileContent });
                 const htmlResult = marked.parse(fileContent);
                 if (isREADME(path)) {
                   // 加入一段脚本，让所有的a标签都使用新页面打开
@@ -151,6 +178,7 @@
                 return htmlResult;
               }
               case ".html":
+                debugger;
                 return fileContent;
               case ".jpg":
               case ".jpeg":
@@ -220,17 +248,19 @@
                 )}
               </div>
 
-              <div id="content">
-                {(() => {
-                  if (contentLoading) {
-                    return <h1>Loading...</h1>;
-                  }
-                  if (!content) {
-                    return <h1>Empty</h1>;
-                  }
-                  return <div dangerouslySetInnerHTML={{ __html: content }} />;
-                })()}
-              </div>
+              <ErrorBoundary>
+                <div id="content">
+                  {(() => {
+                    if (contentLoading) {
+                      return <h1>Loading...</h1>;
+                    }
+                    if (!content) {
+                      return <h1>Empty</h1>;
+                    }
+                    return <div dangerouslySetInnerHTML={{ __html: content }} />;
+                  })()}
+                </div>
+              </ErrorBoundary>
             </div>
           </AppContext.Provider>
         );
