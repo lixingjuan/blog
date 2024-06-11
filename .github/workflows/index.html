@@ -75,6 +75,10 @@
         transform: rotate(90deg);
         display: inline-block;
       }
+      ul {
+        list-style: none;
+        padding-left: 0px;
+      }
     </style>
     <script type="text/babel">
       const AppContext = React.createContext();
@@ -114,6 +118,10 @@
         );
       };
 
+      const isREADME = (path) => {
+        return path.includes("/README.md");
+      };
+
       const loadContent = ({ path, fileType }) => {
         if (!path) {
           alert("路径错误");
@@ -129,12 +137,16 @@
         return fetch(path)
           .then((response) => response.text())
           .then((fileContent) => {
-            console.log({ fileContent });
             const lowercaseFileType = fileType.toLocaleLowerCase();
-
             switch (fileType) {
-              case ".md":
-                return marked.parse(fileContent);
+              case ".md": {
+                const htmlResult = marked.parse(fileContent);
+                if (isREADME(path)) {
+                  // 加入一段脚本，让所有的a标签都使用新页面打开
+                  return htmlResult.replace("<a href", '<a target="_blank" href');
+                }
+                return htmlResult;
+              }
               case ".html":
                 return fileContent;
               case ".jpg":
