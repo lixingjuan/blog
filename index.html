@@ -167,9 +167,8 @@
           .then((response) => response.text())
           .then((fileContent) => {
             const lowercaseFileType = fileType.toLocaleLowerCase();
-            switch (fileType) {
+            switch (lowercaseFileType) {
               case ".md": {
-                console.log({ fileContent });
                 const htmlResult = marked.parse(fileContent);
                 if (isREADME(path)) {
                   // 加入一段脚本，让所有的a标签都使用新页面打开
