@@ -197,6 +197,9 @@
               case ".json":
                 setTimeout(hljs.highlightAll, 0);
                 return `<pre><code class="language-json">${fileContent}</code></pre>`;
+              case ".ts":
+                setTimeout(hljs.highlightAll, 0);
+                return `<pre><code class="language-ts">${fileContent}</code></pre>`;
               default:
                 return `<div style="color:red;">暂未支持该类型: ${fileType}</div>`;
             }
