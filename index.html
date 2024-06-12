@@ -178,17 +178,16 @@
                 return htmlResult;
               }
               case ".html":
-                debugger;
                 return fileContent;
               case ".jpg":
               case ".jpeg":
               case ".png":
                 return `<div style="text-align: center;"><img src="${path}"/></div>`;
               case ".js":
-                hljs.highlightAll();
+                setTimeout(hljs.highlightAll, 0);
                 return `<pre><code class="language-js">${fileContent}</code></pre>`;
               case ".json":
-                hljs.highlightAll();
+                setTimeout(hljs.highlightAll, 0);
                 return `<pre><code class="language-json">${fileContent}</code></pre>`;
               default:
                 return `<div style="color:red;">暂未支持该类型: ${fileType}</div>`;
