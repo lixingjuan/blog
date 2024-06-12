@@ -82,11 +82,6 @@
       ul > li > a {
         color: #0969da;
       }
-
-      /* global */
-      .text-center {
-        text-align: center;
-      }
     </style>
     <script type="text/babel">
       const AppContext = React.createContext();
@@ -262,10 +257,10 @@
                 <div id="content">
                   {(() => {
                     if (contentLoading) {
-                      return <h1 class="text-center">Loading...</h1>;
+                      return <h1>Loading...</h1>;
                     }
                     if (!content) {
-                      return <h1 class="text-center">Empty</h1>;
+                      return <h1>Empty</h1>;
                     }
                     return <div dangerouslySetInnerHTML={{ __html: content }} />;
                   })()}
