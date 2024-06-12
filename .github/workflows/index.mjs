@@ -39,8 +39,13 @@ function generateDirectoryStructure(dir, baseUrl, isRoot = false) {
       const fullPath = path.join(file.parentPath, fileName);
       const relativePath = path.relative(baseUrl, fullPath);
 
+      console.log(`Processing: ${fullPath}`); // 添加调试信息
+
       // 针对根目录做过滤
-      if (shouldIgnore(file, isRoot)) return null;
+      if (shouldIgnore(file, isRoot)) {
+        console.log("ignore file:", file);
+        return null;
+      }
 
       // 如果是目录
       if (file.isDirectory()) {
