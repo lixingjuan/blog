@@ -156,17 +156,21 @@
           alert("路径错误");
           return;
         }
+
+        const lowercaseFileType = fileType.toLocaleLowerCase();
+        if (lowercaseFileType === ".pdf") {
+          return `<iframe src="${path}" style="width: 100%;height: 100vh;"></iframe>`;
+        }
+
         /**
          * 根据当前文件类型，做不同的操作
          * 1. html, 直接更新
          * 2. markdown, 使用marked.parse, 解析为html进行展示
          * 3. js, 按照code展示
          */
-
         return fetch(path)
           .then((response) => response.text())
           .then((fileContent) => {
-            const lowercaseFileType = fileType.toLocaleLowerCase();
             switch (lowercaseFileType) {
               case ".md": {
                 const htmlResult = marked.parse(fileContent);
