@@ -3,8 +3,6 @@ node_modules
 
 # Production
 /build
-/10-Node
-/7-设计模式
 
 # Generated files
 .docusaurus
