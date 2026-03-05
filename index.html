@@ -391,15 +391,22 @@
 
       .toc-item {
         margin: 4px 0;
+        list-style: none;
+      }
+
+      .toc-item-h1 {
+        margin: 8px 0 4px 0;
+        padding-left: 0;
       }
 
       .toc-item-h2 {
-        margin: 8px 0 4px 0;
+        margin: 4px 0;
+        padding-left: 16px;
       }
 
       .toc-item-h3 {
         margin: 4px 0;
-        padding-left: 16px;
+        padding-left: 32px;
       }
 
       .toc-link {
@@ -417,9 +424,16 @@
         color: #2563eb;
       }
 
+      .toc-link-h1 {
+        font-weight: 700;
+        color: #1a202c;
+        font-size: 15px;
+      }
+
       .toc-link-h2 {
         font-weight: 600;
         color: #2d3748;
+        font-size: 14px;
       }
 
       .toc-link-h3 {
@@ -548,6 +562,31 @@
         );
       };
 
+      // 递归渲染目录项
+      const renderTOCItem = (item, handleClick) => {
+        const levelClass = `toc-item-h${item.level}`;
+        const linkClass = `toc-link toc-link-h${item.level}`;
+        
+        return (
+          <React.Fragment key={item.id}>
+            <li class={`toc-item ${levelClass}`}>
+              <a
+                href={`#${item.id}`}
+                class={linkClass}
+                onClick={(e) => handleClick(e, item.id)}
+              >
+                {item.text}
+              </a>
+            </li>
+            {item.children && item.children.length > 0 && (
+              <>
+                {item.children.map((child) => renderTOCItem(child, handleClick))}
+              </>
+            )}
+          </React.Fragment>
+        );
+      };
+
       // 目录组件
       const TableOfContents = ({ toc }) => {
         const handleClick = (e, id) => {
@@ -572,12 +611,17 @@
           return null;
         }
 
-        // 计算总标题数（H2 + H3）
-        const totalHeadings = toc.reduce((sum, item) => sum + 1 + item.children.length, 0);
-        const hasH2 = toc.length > 0;
+        // 计算总标题数（递归计算所有级别的标题）
+        const countHeadings = (items) => {
+          return items.reduce((sum, item) => {
+            return sum + 1 + (item.children ? countHeadings(item.children) : 0);
+          }, 0);
+        };
 
-        // 只有当标题数量 >= 3 且至少有一个 H2 时才显示
-        if (totalHeadings < 3 || !hasH2) {
+        const totalHeadings = countHeadings(toc);
+
+        // 只有当标题数量 >= 3 时才显示
+        if (totalHeadings < 3) {
           return null;
         }
 
@@ -585,30 +629,7 @@
           <div class="table-of-contents">
             <div class="toc-title">📑 目录</div>
             <ul class="toc-list">
-              {toc.map((item) => (
-                <React.Fragment key={item.id}>
-                  <li class={`toc-item toc-item-h2`}>
-                    <a
-                      href={`#${item.id}`}
-                      class="toc-link toc-link-h2"
-                      onClick={(e) => handleClick(e, item.id)}
-                    >
-                      {item.text}
-                    </a>
-                  </li>
-                  {item.children.map((child) => (
-                    <li key={child.id} class={`toc-item toc-item-h3`}>
-                      <a
-                        href={`#${child.id}`}
-                        class="toc-link toc-link-h3"
-                        onClick={(e) => handleClick(e, child.id)}
-                      >
-                        {child.text}
-                      </a>
-                    </li>
-                  ))}
-                </React.Fragment>
-              ))}
+              {toc.map((item) => renderTOCItem(item, handleClick))}
             </ul>
           </div>
         );
@@ -645,9 +666,10 @@
         // 使用临时容器来解析 HTML
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = html;
-        const headings = tempDiv.querySelectorAll('h2, h3');
+        const headings = tempDiv.querySelectorAll('h1, h2, h3');
         const toc = [];
         const existingIds = new Set();
+        let currentH1 = null;
         let currentH2 = null;
 
         headings.forEach((heading) => {
@@ -658,13 +680,34 @@
           // 为标题添加 ID
           heading.id = id;
 
-          if (level === 2) {
+          if (level === 1) {
+            // H1 标题
+            currentH1 = { text, id, level, children: [] };
+            toc.push(currentH1);
+            currentH2 = null; // 重置 H2
+          } else if (level === 2) {
             // H2 标题
             currentH2 = { text, id, level, children: [] };
-            toc.push(currentH2);
-          } else if (level === 3 && currentH2) {
-            // H3 标题，作为当前 H2 的子项
-            currentH2.children.push({ text, id, level });
+            if (currentH1) {
+              // 如果有 H1，H2 作为 H1 的子项
+              currentH1.children.push(currentH2);
+            } else {
+              // 如果没有 H1，H2 作为顶级
+              toc.push(currentH2);
+            }
+          } else if (level === 3) {
+            // H3 标题
+            const h3Item = { text, id, level };
+            if (currentH2) {
+              // 如果有 H2，H3 作为 H2 的子项
+              currentH2.children.push(h3Item);
+            } else if (currentH1) {
+              // 如果有 H1 但没有 H2，H3 作为 H1 的子项
+              currentH1.children.push(h3Item);
+            } else {
+              // 如果既没有 H1 也没有 H2，H3 作为顶级（不太常见，但处理一下）
+              toc.push(h3Item);
+            }
           }
         });
 
