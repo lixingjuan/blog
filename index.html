@@ -355,8 +355,22 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         z-index: 100;
         font-size: 14px;
-        cursor: move;
         user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+
+      .table-of-contents .toc-list {
+        cursor: default;
+      }
+
+      .table-of-contents .toc-link {
+        cursor: pointer;
+        user-select: text;
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
       }
 
       .table-of-contents.dragging {
@@ -416,6 +430,11 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        cursor: default;
+      }
+
+      .toc-link {
+        cursor: pointer !important;
       }
 
       .toc-item {
@@ -652,46 +671,47 @@
           }
         }, [currentPath]);
 
-        // 处理鼠标移动
-        const handleMouseMove = React.useCallback((e) => {
-          if (!isDraggingRef.current || !tocRef.current) return;
-
-          const deltaX = dragStartPos.current.x - e.clientX;
-          const deltaY = e.clientY - dragStartPos.current.y;
-
-          const newRight = Math.max(0, Math.min(window.innerWidth - 240, initialTocPos.current.right + deltaX));
-          const newTop = Math.max(0, Math.min(window.innerHeight - 200, initialTocPos.current.top + deltaY));
-
-          tocRef.current.style.right = `${newRight}px`;
-          tocRef.current.style.top = `${newTop}px`;
-        }, []);
-
-        // 处理鼠标释放
-        const handleMouseUp = React.useCallback(() => {
-          if (isDraggingRef.current && tocRef.current) {
-            const rect = tocRef.current.getBoundingClientRect();
-            const newPosition = {
-              right: window.innerWidth - rect.right,
-              top: rect.top
-            };
-            setPosition(newPosition);
-            savePosition(newPosition);
-            tocRef.current.classList.remove('dragging');
-            isDraggingRef.current = false;
-          }
-        }, [savePosition]);
-
-        // 添加全局事件监听
+        // 处理鼠标移动 - 使用 useRef 存储函数，避免闭包问题
+        const handleMouseMoveRef = React.useRef(null);
+        const handleMouseUpRef = React.useRef(null);
+        
+        // 初始化事件处理函数
         React.useEffect(() => {
-          if (isDraggingRef.current) {
-            document.addEventListener('mousemove', handleMouseMove);
-            document.addEventListener('mouseup', handleMouseUp);
-            return () => {
-              document.removeEventListener('mousemove', handleMouseMove);
-              document.removeEventListener('mouseup', handleMouseUp);
-            };
-          }
-        }, [handleMouseMove, handleMouseUp]);
+          handleMouseMoveRef.current = (e) => {
+            if (!isDraggingRef.current || !tocRef.current) return;
+
+            const deltaX = dragStartPos.current.x - e.clientX;
+            const deltaY = e.clientY - dragStartPos.current.y;
+
+            const newRight = Math.max(0, Math.min(window.innerWidth - 240, initialTocPos.current.right + deltaX));
+            const newTop = Math.max(0, Math.min(window.innerHeight - 200, initialTocPos.current.top + deltaY));
+
+            tocRef.current.style.right = `${newRight}px`;
+            tocRef.current.style.top = `${newTop}px`;
+          };
+
+          handleMouseUpRef.current = () => {
+            if (isDraggingRef.current && tocRef.current) {
+              const rect = tocRef.current.getBoundingClientRect();
+              const newPosition = {
+                right: window.innerWidth - rect.right,
+                top: rect.top
+              };
+              setPosition(newPosition);
+              savePosition(newPosition);
+              tocRef.current.classList.remove('dragging');
+              isDraggingRef.current = false;
+
+              // 移除事件监听器
+              if (handleMouseMoveRef.current) {
+                document.removeEventListener('mousemove', handleMouseMoveRef.current);
+              }
+              if (handleMouseUpRef.current) {
+                document.removeEventListener('mouseup', handleMouseUpRef.current);
+              }
+            }
+          };
+        }, [savePosition]);
 
         // 处理鼠标按下
         const handleMouseDown = React.useCallback((e) => {
@@ -716,7 +736,16 @@
             tocRef.current.classList.add('dragging');
           }
 
+          // 添加事件监听器
+          if (handleMouseMoveRef.current) {
+            document.addEventListener('mousemove', handleMouseMoveRef.current);
+          }
+          if (handleMouseUpRef.current) {
+            document.addEventListener('mouseup', handleMouseUpRef.current);
+          }
+
           e.preventDefault();
+          e.stopPropagation();
         }, []);
 
         const handleClick = React.useCallback((e, id) => {
@@ -764,12 +793,12 @@
         return (
           <div 
             ref={tocRef}
-            class="table-of-contents"
+            className="table-of-contents"
             onMouseDown={handleMouseDown}
-            style={{ right: `${position.right}px`, top: `${position.top}px` }}
+            style={{ right: `${position.right}px`, top: `${position.top}px`, cursor: 'move' }}
           >
-            <div class="toc-title">📑 目录</div>
-            <ul class="toc-list">
+            <div className="toc-title" style={{ cursor: 'move' }}>📑 目录</div>
+            <ul className="toc-list">
               {toc.map((item) => renderTOCItem(item, handleClick))}
             </ul>
           </div>
