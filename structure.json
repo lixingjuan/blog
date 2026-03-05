@@ -5428,6 +5428,32 @@
   },
   {
     "type": "directory",
+    "name": "pretty",
+    "path": "pretty",
+    "children": [
+      {
+        "type": "directory",
+        "name": "images",
+        "path": "pretty/images",
+        "children": [
+          {
+            "type": "file",
+            "name": "1.png",
+            "path": "pretty/images/1.png",
+            "fileType": ".png"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "20260305.md",
+        "path": "pretty/20260305.md",
+        "fileType": ".md"
+      }
+    ]
+  },
+  {
+    "type": "directory",
     "name": "一些前端面试题",
     "path": "一些前端面试题",
     "children": [
