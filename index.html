@@ -355,6 +355,18 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         z-index: 100;
         font-size: 14px;
+        cursor: move;
+        user-select: none;
+      }
+
+      .table-of-contents.dragging {
+        opacity: 0.8;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        cursor: grabbing;
+      }
+
+      .table-of-contents:active {
+        cursor: grabbing;
       }
 
       .table-of-contents::-webkit-scrollbar {
@@ -381,6 +393,23 @@
         margin-bottom: 12px;
         padding-bottom: 8px;
         border-bottom: 2px solid #e2e8f0;
+        position: relative;
+        padding-right: 20px;
+      }
+
+      .toc-title::after {
+        content: '⋮⋮';
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #94a3b8;
+        font-size: 12px;
+        line-height: 1.5;
+        cursor: move;
+      }
+
+      .table-of-contents:hover .toc-title::after {
+        color: #64748b;
       }
 
       .toc-list {
@@ -588,8 +617,115 @@
       };
 
       // 目录组件
-      const TableOfContents = ({ toc }) => {
-        const handleClick = (e, id) => {
+      const TableOfContents = ({ toc, currentPath }) => {
+        const tocRef = React.useRef(null);
+        const [position, setPosition] = React.useState({ right: 20, top: 100 });
+        const isDraggingRef = React.useRef(false);
+        const dragStartPos = React.useRef({ x: 0, y: 0 });
+        const initialTocPos = React.useRef({ right: 0, top: 0 });
+
+        // 从 localStorage 加载保存的位置
+        React.useEffect(() => {
+          if (currentPath && tocRef.current) {
+            const savedPosition = localStorage.getItem(`toc-position-${currentPath}`);
+            if (savedPosition) {
+              try {
+                const pos = JSON.parse(savedPosition);
+                setPosition(pos);
+                tocRef.current.style.right = `${pos.right}px`;
+                tocRef.current.style.top = `${pos.top}px`;
+              } catch (e) {
+                console.error('Failed to parse saved position:', e);
+              }
+            } else {
+              // 如果没有保存的位置，使用默认值
+              tocRef.current.style.right = '20px';
+              tocRef.current.style.top = '100px';
+            }
+          }
+        }, [currentPath]);
+
+        // 保存位置到 localStorage
+        const savePosition = React.useCallback((pos) => {
+          if (currentPath) {
+            localStorage.setItem(`toc-position-${currentPath}`, JSON.stringify(pos));
+          }
+        }, [currentPath]);
+
+        // 处理鼠标移动
+        const handleMouseMove = React.useCallback((e) => {
+          if (!isDraggingRef.current || !tocRef.current) return;
+
+          const deltaX = dragStartPos.current.x - e.clientX;
+          const deltaY = e.clientY - dragStartPos.current.y;
+
+          const newRight = Math.max(0, Math.min(window.innerWidth - 240, initialTocPos.current.right + deltaX));
+          const newTop = Math.max(0, Math.min(window.innerHeight - 200, initialTocPos.current.top + deltaY));
+
+          tocRef.current.style.right = `${newRight}px`;
+          tocRef.current.style.top = `${newTop}px`;
+        }, []);
+
+        // 处理鼠标释放
+        const handleMouseUp = React.useCallback(() => {
+          if (isDraggingRef.current && tocRef.current) {
+            const rect = tocRef.current.getBoundingClientRect();
+            const newPosition = {
+              right: window.innerWidth - rect.right,
+              top: rect.top
+            };
+            setPosition(newPosition);
+            savePosition(newPosition);
+            tocRef.current.classList.remove('dragging');
+            isDraggingRef.current = false;
+          }
+        }, [savePosition]);
+
+        // 添加全局事件监听
+        React.useEffect(() => {
+          if (isDraggingRef.current) {
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', handleMouseUp);
+            return () => {
+              document.removeEventListener('mousemove', handleMouseMove);
+              document.removeEventListener('mouseup', handleMouseUp);
+            };
+          }
+        }, [handleMouseMove, handleMouseUp]);
+
+        // 处理鼠标按下
+        const handleMouseDown = React.useCallback((e) => {
+          // 如果点击的是链接或链接内的元素，不触发拖拽
+          const clickedLink = e.target.tagName === 'A' || e.target.closest('a');
+          // 如果点击的是标题区域（包括拖拽图标），允许拖拽
+          const clickedTitle = e.target.closest('.toc-title');
+          
+          if (clickedLink && !clickedTitle) {
+            return;
+          }
+
+          isDraggingRef.current = true;
+          dragStartPos.current = { x: e.clientX, y: e.clientY };
+          
+          if (tocRef.current) {
+            const rect = tocRef.current.getBoundingClientRect();
+            initialTocPos.current = {
+              right: window.innerWidth - rect.right,
+              top: rect.top
+            };
+            tocRef.current.classList.add('dragging');
+          }
+
+          e.preventDefault();
+        }, []);
+
+        const handleClick = React.useCallback((e, id) => {
+          // 如果正在拖拽，不触发点击跳转
+          if (isDraggingRef.current) {
+            e.preventDefault();
+            return;
+          }
+
           e.preventDefault();
           const element = document.getElementById(id);
           const contentContainer = document.getElementById('content');
@@ -605,7 +741,7 @@
               behavior: 'smooth'
             });
           }
-        };
+        }, []);
 
         if (!toc || toc.length === 0) {
           return null;
@@ -626,7 +762,12 @@
         }
 
         return (
-          <div class="table-of-contents">
+          <div 
+            ref={tocRef}
+            class="table-of-contents"
+            onMouseDown={handleMouseDown}
+            style={{ right: `${position.right}px`, top: `${position.top}px` }}
+          >
             <div class="toc-title">📑 目录</div>
             <ul class="toc-list">
               {toc.map((item) => renderTOCItem(item, handleClick))}
@@ -757,16 +898,78 @@
               case ".jpg":
               case ".jpeg":
               case ".png":
+              case ".gif":
+              case ".svg":
+              case ".webp":
+              case ".bmp":
+              case ".ico":
                 return { content: `<div style="text-align: center;"><img src="${path}"/></div>`, createdAt: null, updatedAt: null, toc: [] };
               case ".js":
+              case ".mjs":
                 setTimeout(hljs.highlightAll, 0);
                 return { content: `<pre><code class="language-js">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
-              case ".json":
+              case ".jsx":
                 setTimeout(hljs.highlightAll, 0);
-                return { content: `<pre><code class="language-json">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+                return { content: `<pre><code class="language-jsx">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
               case ".ts":
                 setTimeout(hljs.highlightAll, 0);
                 return { content: `<pre><code class="language-ts">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".tsx":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-tsx">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".vue":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-vue">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".json":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-json">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".css":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-css">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".py":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-python">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".java":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-java">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".cpp":
+              case ".cxx":
+              case ".cc":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-cpp">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".c":
+              case ".h":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-c">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".go":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-go">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".rs":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-rust">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".php":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-php">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".rb":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-ruby">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".sh":
+              case ".bash":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-bash">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".yaml":
+              case ".yml":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-yaml">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".xml":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-xml">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".sql":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-sql">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".txt":
+              case ".log":
+                return { content: `<pre style="background: #f1f5f9; padding: 20px; border-radius: 8px; white-space: pre-wrap; font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;">${fileContent}</pre>`, createdAt: null, updatedAt: null, toc: [] };
               default:
                 return { content: `<div style="color:red;">暂未支持该类型: ${fileType}</div>`, createdAt: null, updatedAt: null, toc: [] };
             }
@@ -783,6 +986,7 @@
         const [currentUpdatedAt, setCurrentUpdatedAt] = React.useState(null);
         const [currentFileType, setCurrentFileType] = React.useState("");
         const [toc, setToc] = React.useState([]);
+        const [currentPath, setCurrentPath] = React.useState("");
 
         React.useEffect(() => {
           setMenuLoading(true);
@@ -800,6 +1004,7 @@
               setCurrentUpdatedAt(result.updatedAt);
               setCurrentFileType(".md");
               setToc(result.toc || []);
+              setCurrentPath("./README.md");
             })
             .finally(() => {
               setMenuLoading(false);
@@ -818,6 +1023,7 @@
               setCurrentUpdatedAt(result.updatedAt);
               setCurrentFileType(fileType);
               setToc(result.toc || []);
+              setCurrentPath(path || "");
             },
           }),
           [setContent]
@@ -874,7 +1080,7 @@
                           </div>
                         )}
                         <div dangerouslySetInnerHTML={{ __html: content }} />
-                        {currentFileType.toLowerCase() === ".md" && <TableOfContents toc={toc} />}
+                        {currentFileType.toLowerCase() === ".md" && <TableOfContents toc={toc} currentPath={currentPath} />}
                       </>
                     );
                   })()}
