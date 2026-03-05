@@ -12,10 +12,11 @@
 
 # Other
 
+I'm looking for a aggregation platform for front-end knowledge 🥲
 
 👋 Hi!
 
-[知识框架](https://whimsical.com/Cy6xPBZi6uijsGCyUC7XWc)
+[李李-知识框架](https://whimsical.com/Cy6xPBZi6uijsGCyUC7XWc)
 
 1. 大道至简
 2. 完成比完美重要
