@@ -194,15 +194,24 @@
         background: linear-gradient(90deg, #f8f9fa 0%, transparent 100%);
         padding: 16px 24px;
         border-radius: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
       }
 
-      .created-date {
+      .created-date,
+      .updated-date {
         font-size: 14px;
         color: #64748b;
         display: inline-flex;
         align-items: center;
         gap: 8px;
         font-weight: 500;
+      }
+
+      .updated-date {
+        color: #4299e1;
       }
 
       /* Markdown 内容样式 */
@@ -411,12 +420,12 @@
 
       const Arrow = ({ open }) => <span class={`font-20 ${open ? "is-open-arrow" : ""}`}>‣</span>;
 
-      const File = ({ name = "", path = "", fileType, createdAt }) => {
+      const File = ({ name = "", path = "", fileType, createdAt, updatedAt }) => {
         const { updateContent } = React.useContext(AppContext);
 
         if (!name) return null;
         return (
-          <div class="file" onClick={() => updateContent({ path, fileType, createdAt })}>
+          <div class="file" onClick={() => updateContent({ path, fileType, createdAt, updatedAt })}>
             {name}
           </div>
         );
@@ -436,7 +445,7 @@
                   if (it.type === "directory") {
                     return <Folder name={it.name} children={it.children} />;
                   }
-                  return <File name={it.name} path={it.path} fileType={it.fileType} createdAt={it.createdAt} />;
+                  return <File name={it.name} path={it.path} fileType={it.fileType} createdAt={it.createdAt} updatedAt={it.updatedAt} />;
                 })}
               </div>
             )}
@@ -448,7 +457,7 @@
         return path.includes("/README.md");
       };
 
-      const loadContent = ({ path, fileType, createdAt }) => {
+      const loadContent = ({ path, fileType, createdAt, updatedAt }) => {
         if (!path) {
           alert("路径错误");
           return;
@@ -456,7 +465,7 @@
 
         const lowercaseFileType = fileType.toLocaleLowerCase();
         if (lowercaseFileType === ".pdf") {
-          return { content: `<iframe src="${path}" style="width: 100%;height: 100vh;"></iframe>`, createdAt: null };
+          return { content: `<iframe src="${path}" style="width: 100%;height: 100vh;"></iframe>`, createdAt: null, updatedAt: null };
         }
 
         /**
@@ -474,25 +483,25 @@
                 const processedHtml = isREADME(path)
                   ? htmlResult.replaceAll("<a href", '<a target="_blank" href')
                   : htmlResult;
-                return { content: processedHtml, createdAt: createdAt };
+                return { content: processedHtml, createdAt: createdAt, updatedAt: updatedAt };
               }
               case ".html":
-                return { content: fileContent, createdAt: null };
+                return { content: fileContent, createdAt: null, updatedAt: null };
               case ".jpg":
               case ".jpeg":
               case ".png":
-                return { content: `<div style="text-align: center;"><img src="${path}"/></div>`, createdAt: null };
+                return { content: `<div style="text-align: center;"><img src="${path}"/></div>`, createdAt: null, updatedAt: null };
               case ".js":
                 setTimeout(hljs.highlightAll, 0);
-                return { content: `<pre><code class="language-js">${fileContent}</code></pre>`, createdAt: null };
+                return { content: `<pre><code class="language-js">${fileContent}</code></pre>`, createdAt: null, updatedAt: null };
               case ".json":
                 setTimeout(hljs.highlightAll, 0);
-                return { content: `<pre><code class="language-json">${fileContent}</code></pre>`, createdAt: null };
+                return { content: `<pre><code class="language-json">${fileContent}</code></pre>`, createdAt: null, updatedAt: null };
               case ".ts":
                 setTimeout(hljs.highlightAll, 0);
-                return { content: `<pre><code class="language-ts">${fileContent}</code></pre>`, createdAt: null };
+                return { content: `<pre><code class="language-ts">${fileContent}</code></pre>`, createdAt: null, updatedAt: null };
               default:
-                return { content: `<div style="color:red;">暂未支持该类型: ${fileType}</div>`, createdAt: null };
+                return { content: `<div style="color:red;">暂未支持该类型: ${fileType}</div>`, createdAt: null, updatedAt: null };
             }
           });
       };
@@ -504,6 +513,7 @@
         const [contentLoading, setContentLoading] = React.useState(true);
         const [content, setContent] = React.useState(marked.parse("# Hello"));
         const [currentCreatedAt, setCurrentCreatedAt] = React.useState(null);
+        const [currentUpdatedAt, setCurrentUpdatedAt] = React.useState(null);
         const [currentFileType, setCurrentFileType] = React.useState("");
 
         React.useEffect(() => {
@@ -514,11 +524,12 @@
               setSidebarData(data);
               setContentLoading(true);
               // 默认展示README.md的内容
-              return loadContent({ path: "./README.md", fileType: ".md", createdAt: null });
+              return loadContent({ path: "./README.md", fileType: ".md", createdAt: null, updatedAt: null });
             })
             .then((result) => {
               setContent(result.content);
               setCurrentCreatedAt(result.createdAt);
+              setCurrentUpdatedAt(result.updatedAt);
               setCurrentFileType(".md");
             })
             .finally(() => {
@@ -529,12 +540,13 @@
 
         const value = React.useMemo(
           () => ({
-            updateContent: async ({ path, fileType, createdAt }) => {
+            updateContent: async ({ path, fileType, createdAt, updatedAt }) => {
               setContentLoading(true);
-              const result = await loadContent({ path, fileType, createdAt });
+              const result = await loadContent({ path, fileType, createdAt, updatedAt });
               setContentLoading(false);
               setContent(result.content);
               setCurrentCreatedAt(result.createdAt);
+              setCurrentUpdatedAt(result.updatedAt);
               setCurrentFileType(fileType);
             },
           }),
@@ -555,7 +567,7 @@
                     if (it.type === "directory") {
                       return <Folder name={it.name} children={it.children} />;
                     }
-                    return <File name={it.name} path={it.path} fileType={it.fileType} createdAt={it.createdAt} />;
+                    return <File name={it.name} path={it.path} fileType={it.fileType} createdAt={it.createdAt} updatedAt={it.updatedAt} />;
                   })
                 )}
               </div>
@@ -581,9 +593,14 @@
                     }
                     return (
                       <>
-                        {currentFileType.toLowerCase() === ".md" && currentCreatedAt && (
+                        {currentFileType.toLowerCase() === ".md" && (currentCreatedAt || currentUpdatedAt) && (
                           <div class="article-meta">
-                            <span class="created-date">📅 创建时间: {currentCreatedAt}</span>
+                            {currentCreatedAt && (
+                              <span class="created-date">📅 创建时间: {currentCreatedAt}</span>
+                            )}
+                            {currentUpdatedAt && (
+                              <span class="updated-date">🔄 更新时间: {currentUpdatedAt}</span>
+                            )}
                           </div>
                         )}
                         <div dangerouslySetInnerHTML={{ __html: content }} />
