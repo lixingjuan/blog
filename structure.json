@@ -6939,6 +6939,21 @@
   },
   {
     "type": "directory",
+    "name": "使用AI随笔",
+    "path": "使用AI随笔",
+    "children": [
+      {
+        "type": "file",
+        "name": "worktree.md",
+        "path": "使用AI随笔/worktree.md",
+        "fileType": ".md",
+        "createdAt": "2026-03-24",
+        "updatedAt": "2026-03-24"
+      }
+    ]
+  },
+  {
+    "type": "directory",
     "name": "实现效果",
     "path": "实现效果",
     "children": [
