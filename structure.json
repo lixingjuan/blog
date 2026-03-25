@@ -6981,5 +6981,27 @@
         "updatedAt": "2024-04-21"
       }
     ]
+  },
+  {
+    "type": "directory",
+    "name": "英语学习",
+    "path": "英语学习",
+    "children": [
+      {
+        "type": "directory",
+        "name": "老友记",
+        "path": "英语学习/老友记",
+        "children": [
+          {
+            "type": "file",
+            "name": "01.md",
+            "path": "英语学习/老友记/01.md",
+            "fileType": ".md",
+            "createdAt": "2026-03-25",
+            "updatedAt": "2026-03-25"
+          }
+        ]
+      }
+    ]
   }
 ]
