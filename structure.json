@@ -6998,7 +6998,22 @@
             "path": "英语学习/老友记/01.md",
             "fileType": ".md",
             "createdAt": "2026-03-25",
-            "updatedAt": "2026-03-25"
+            "updatedAt": "2026-03-26"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "books",
+        "path": "英语学习/books",
+        "children": [
+          {
+            "type": "file",
+            "name": "李阳疯狂英语口语突破系列教材 突破对话 (李阳主编, 李阳) (z-library.sk, 1lib.sk, z-lib.sk).pdf.crdownload",
+            "path": "英语学习/books/李阳疯狂英语口语突破系列教材 突破对话 (李阳主编, 李阳) (z-library.sk, 1lib.sk, z-lib.sk).pdf.crdownload",
+            "fileType": ".crdownload",
+            "createdAt": "2026-03-26",
+            "updatedAt": "2026-03-26"
           }
         ]
       }
