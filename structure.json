@@ -255,6 +255,29 @@
   },
   {
     "type": "directory",
+    "name": "00-日常记录",
+    "path": "00-日常记录",
+    "children": [
+      {
+        "type": "file",
+        "name": "4月19日.md",
+        "path": "00-日常记录/4月19日.md",
+        "fileType": ".md",
+        "createdAt": "2026-06-09",
+        "updatedAt": "2026-06-09"
+      },
+      {
+        "type": "file",
+        "name": "vpn坏了.md",
+        "path": "00-日常记录/vpn坏了.md",
+        "fileType": ".md",
+        "createdAt": "2026-06-09",
+        "updatedAt": "2026-06-09"
+      }
+    ]
+  },
+  {
+    "type": "directory",
     "name": "1-JS",
     "path": "1-JS",
     "children": [
