@@ -603,6 +603,104 @@
   },
   {
     "type": "directory",
+    "name": "11-英语学习",
+    "path": "11-英语学习",
+    "children": [
+      {
+        "type": "directory",
+        "name": "老友记",
+        "path": "11-英语学习/老友记",
+        "children": [
+          {
+            "type": "file",
+            "name": "01.md",
+            "path": "11-英语学习/老友记/01.md",
+            "fileType": ".md",
+            "createdAt": "2026-06-09",
+            "updatedAt": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "破产姐妹",
+        "path": "11-英语学习/破产姐妹",
+        "children": [
+          {
+            "type": "file",
+            "name": "S01E18.md",
+            "path": "11-英语学习/破产姐妹/S01E18.md",
+            "fileType": ".md",
+            "createdAt": "2026-06-09",
+            "updatedAt": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "books",
+        "path": "11-英语学习/books",
+        "children": [
+          {
+            "type": "file",
+            "name": "李阳疯狂英语口语突破系列教材 突破对话 (李阳主编, 李阳) (z-library.sk, 1lib.sk, z-lib.sk).pdf.crdownload",
+            "path": "11-英语学习/books/李阳疯狂英语口语突破系列教材 突破对话 (李阳主编, 李阳) (z-library.sk, 1lib.sk, z-lib.sk).pdf.crdownload",
+            "fileType": ".crdownload",
+            "createdAt": "2026-06-09",
+            "updatedAt": "2026-06-09"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "12-会计",
+    "path": "12-会计",
+    "children": [
+      {
+        "type": "directory",
+        "name": "images",
+        "path": "12-会计/images",
+        "children": [
+          {
+            "type": "file",
+            "name": "kuaijidengshi.png",
+            "path": "12-会计/images/kuaijidengshi.png",
+            "fileType": ".png",
+            "createdAt": "2026-06-09",
+            "updatedAt": "2026-06-09"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "1.基础知识.md",
+        "path": "12-会计/1.基础知识.md",
+        "fileType": ".md",
+        "createdAt": "2026-06-09",
+        "updatedAt": "2026-06-09"
+      },
+      {
+        "type": "file",
+        "name": "2.科目.md",
+        "path": "12-会计/2.科目.md",
+        "fileType": ".md",
+        "createdAt": "2026-06-09",
+        "updatedAt": "2026-06-09"
+      },
+      {
+        "type": "file",
+        "name": "3.借贷.md",
+        "path": "12-会计/3.借贷.md",
+        "fileType": ".md",
+        "createdAt": "2026-06-09",
+        "updatedAt": "2026-06-09"
+      }
+    ]
+  },
+  {
+    "type": "directory",
     "name": "2-CSS",
     "path": "2-CSS",
     "children": [
@@ -6992,6 +7090,21 @@
   },
   {
     "type": "directory",
+    "name": "小说",
+    "path": "小说",
+    "children": [
+      {
+        "type": "file",
+        "name": "第一章节.md",
+        "path": "小说/第一章节.md",
+        "fileType": ".md",
+        "createdAt": "2026-06-09",
+        "updatedAt": "2026-06-09"
+      }
+    ]
+  },
+  {
+    "type": "directory",
     "name": "物联网",
     "path": "物联网",
     "children": [
@@ -7002,43 +7115,6 @@
         "fileType": ".md",
         "createdAt": "2023-03-22",
         "updatedAt": "2024-04-21"
-      }
-    ]
-  },
-  {
-    "type": "directory",
-    "name": "英语学习",
-    "path": "英语学习",
-    "children": [
-      {
-        "type": "directory",
-        "name": "老友记",
-        "path": "英语学习/老友记",
-        "children": [
-          {
-            "type": "file",
-            "name": "01.md",
-            "path": "英语学习/老友记/01.md",
-            "fileType": ".md",
-            "createdAt": "2026-03-25",
-            "updatedAt": "2026-03-30"
-          }
-        ]
-      },
-      {
-        "type": "directory",
-        "name": "books",
-        "path": "英语学习/books",
-        "children": [
-          {
-            "type": "file",
-            "name": "李阳疯狂英语口语突破系列教材 突破对话 (李阳主编, 李阳) (z-library.sk, 1lib.sk, z-lib.sk).pdf.crdownload",
-            "path": "英语学习/books/李阳疯狂英语口语突破系列教材 突破对话 (李阳主编, 李阳) (z-library.sk, 1lib.sk, z-lib.sk).pdf.crdownload",
-            "fileType": ".crdownload",
-            "createdAt": "2026-03-26",
-            "updatedAt": "2026-03-26"
-          }
-        ]
       }
     ]
   }
