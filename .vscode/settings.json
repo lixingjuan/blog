@@ -4,7 +4,7 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     "editor.wordWrap": "on",
     "editor.formatOnSave": true,
     "editor.quickSuggestions": {
