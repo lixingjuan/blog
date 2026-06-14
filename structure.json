@@ -189,6 +189,14 @@
       },
       {
         "type": "file",
+        "name": "最爱榜单.md",
+        "path": "0-收纳/最爱榜单.md",
+        "fileType": ".md",
+        "createdAt": "2026-06-14",
+        "updatedAt": "2026-06-14"
+      },
+      {
+        "type": "file",
         "name": "梦.md",
         "path": "0-收纳/梦.md",
         "fileType": ".md",
