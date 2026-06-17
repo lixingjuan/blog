@@ -276,6 +276,22 @@
       },
       {
         "type": "file",
+        "name": "6月17日.md",
+        "path": "00-日常记录/6月17日.md",
+        "fileType": ".md",
+        "createdAt": "2026-06-17",
+        "updatedAt": "2026-06-17"
+      },
+      {
+        "type": "file",
+        "name": "image.png",
+        "path": "00-日常记录/image.png",
+        "fileType": ".png",
+        "createdAt": "2026-06-17",
+        "updatedAt": "2026-06-17"
+      },
+      {
+        "type": "file",
         "name": "vpn坏了.md",
         "path": "00-日常记录/vpn坏了.md",
         "fileType": ".md",
