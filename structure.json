@@ -284,6 +284,14 @@
       },
       {
         "type": "file",
+        "name": "7月06日.md",
+        "path": "00-日常记录/7月06日.md",
+        "fileType": ".md",
+        "createdAt": "2026-07-06",
+        "updatedAt": "2026-07-06"
+      },
+      {
+        "type": "file",
         "name": "cursor_users_lixingjuan_documents_lzh.md",
         "path": "00-日常记录/cursor_users_lixingjuan_documents_lzh.md",
         "fileType": ".md",
@@ -312,7 +320,7 @@
         "path": "00-日常记录/必看电视电影书.md",
         "fileType": ".md",
         "createdAt": "2026-07-04",
-        "updatedAt": "2026-07-04"
+        "updatedAt": "2026-07-06"
       }
     ]
   },
