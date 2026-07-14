@@ -1,0 +1,3210 @@
+[
+  {
+    "type": "file",
+    "name": "README.md",
+    "path": "README.md",
+    "fileType": ".md",
+    "title": "Good Morning ☀️",
+    "cover": "随笔/image.png",
+    "date": "2020-02-28",
+    "pathDate": null,
+    "createdAt": "2020-02-28",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "type": "directory",
+    "name": "学习",
+    "path": "学习",
+    "children": [
+      {
+        "type": "directory",
+        "name": "英语",
+        "path": "学习/英语",
+        "children": [
+          {
+            "type": "directory",
+            "name": "老友记",
+            "path": "学习/英语/老友记",
+            "children": [
+              {
+                "type": "file",
+                "name": "01.md",
+                "path": "学习/英语/老友记/01.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2026-03-30",
+                "pathDate": null,
+                "createdAt": "2026-03-30",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "破产姐妹",
+            "path": "学习/英语/破产姐妹",
+            "children": [
+              {
+                "type": "file",
+                "name": "S01E18.md",
+                "path": "学习/英语/破产姐妹/S01E18.md",
+                "fileType": ".md",
+                "title": "We do not accept bribes.",
+                "cover": null,
+                "date": "2026-06-09",
+                "pathDate": null,
+                "createdAt": "2026-06-09",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "实现效果",
+        "path": "学习/实现效果",
+        "children": [
+          {
+            "type": "file",
+            "name": "ellipsis.html",
+            "path": "学习/实现效果/ellipsis.html",
+            "fileType": ".html",
+            "title": null,
+            "cover": null,
+            "date": "2024-05-08",
+            "pathDate": null,
+            "createdAt": "2024-05-08",
+            "updatedAt": "2026-07-14"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "前端面试备考归档",
+        "path": "学习/前端面试备考归档",
+        "children": [
+          {
+            "type": "directory",
+            "name": "物联网",
+            "path": "学习/前端面试备考归档/物联网",
+            "children": [
+              {
+                "type": "file",
+                "name": "index.md",
+                "path": "学习/前端面试备考归档/物联网/index.md",
+                "fileType": ".md",
+                "title": "目前智能家居领域的通信协议主要就是",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "offer收割机",
+            "path": "学习/前端面试备考归档/offer收割机",
+            "children": [
+              {
+                "type": "file",
+                "name": "1 前端面试准备.md",
+                "path": "学习/前端面试备考归档/offer收割机/1 前端面试准备.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "10 offer收割机之手写代码篇.md",
+                "path": "学习/前端面试备考归档/offer收割机/10 offer收割机之手写代码篇.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": "https://cdn.nlark.com/yuque/0/2021/png/1500604/1621676946378-71d6b405-ef4e-42e4-9e42-f9c9aafcefb6.png?x-oss-process=image%2Fresize%2Cw_1038",
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "11 offer收割机之代码输出篇.md",
+                "path": "学习/前端面试备考归档/offer收割机/11 offer收割机之代码输出篇.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": "https://cdn.nlark.com/yuque/0/2021/png/1500604/1620043144097-44798602-b916-406d-bc50-e003f27dece2.png",
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "12LeetCode面试常考题目.md",
+                "path": "学习/前端面试备考归档/offer收割机/12LeetCode面试常考题目.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "13 offer收割机之Vue篇.md",
+                "path": "学习/前端面试备考归档/offer收割机/13 offer收割机之Vue篇.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": "https://cdn.nlark.com/yuque/0/2021/png/1500604/1621612367141-93b24efc-8b06-4c10-8259-586cd8c6c5d5.png?x-oss-process=image%2Fresize%2Cw_1038",
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "14 vue项目的性能优化.md",
+                "path": "学习/前端面试备考归档/offer收割机/14 vue项目的性能优化.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "2 程序员面试软技能.md",
+                "path": "学习/前端面试备考归档/offer收割机/2 程序员面试软技能.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "3 offer收割机之HTML篇.md",
+                "path": "学习/前端面试备考归档/offer收割机/3 offer收割机之HTML篇.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": "https://cdn.nlark.com/yuque/0/2021/png/1500604/1621600195788-acab59b1-a654-4ec4-b9c2-0a491a660671.png",
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "4 offer收割机之CSS篇.md",
+                "path": "学习/前端面试备考归档/offer收割机/4 offer收割机之CSS篇.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": "https://cdn.nlark.com/yuque/0/2021/png/1500604/1618650369902-a402f0bc-d213-4330-93ea-6cb1a9bd3976.png?x-oss-process=image%2Fresize%2Cw_1038",
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "5 offer收割机之JavaScript篇.md",
+                "path": "学习/前端面试备考归档/offer收割机/5 offer收割机之JavaScript篇.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": "https://cdn.nlark.com/yuque/0/2021/png/1500604/1621500410361-1f8976b5-7b26-4803-b5c3-d0ec8cd819d8.png?x-oss-process=image%2Fresize%2Cw_1038",
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "6 offer收割机之性能优化篇.md",
+                "path": "学习/前端面试备考归档/offer收割机/6 offer收割机之性能优化篇.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": "https://cdn.nlark.com/yuque/0/2021/png/1500604/1621611602044-9eff4f96-7acb-4c4a-927e-fa254bf23418.png?x-oss-process=image%2Fresize%2Cw_1038",
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "7 offer收割机之React篇.md",
+                "path": "学习/前端面试备考归档/offer收割机/7 offer收割机之React篇.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": "https://cdn.nlark.com/yuque/0/2021/png/1500604/1618317949340-04bf1cbc-f74c-4f76-8dbf-fe7de4714d30.png?x-oss-process=image%2Fresize%2Cw_1038",
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "7 offer收割机之前端工程化篇.md",
+                "path": "学习/前端面试备考归档/offer收割机/7 offer收割机之前端工程化篇.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": "https://cdn.nlark.com/yuque/0/2021/png/1500604/1615910527011-339c57ce-22b2-4660-bcb5-93a7c6ec113b.png?x-oss-process=image%2Fresize%2Cw_1500",
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "8 offer收割机之计算机网络篇.md",
+                "path": "学习/前端面试备考归档/offer收割机/8 offer收割机之计算机网络篇.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": "https://cdn.nlark.com/yuque/0/2021/png/1500604/1621606395878-ec50f847-ec2c-451b-885a-0baac77777e0.png?x-oss-process=image%2Fresize%2Cw_746",
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "9 offer收割机之浏览器原理篇.md",
+                "path": "学习/前端面试备考归档/offer收割机/9 offer收割机之浏览器原理篇.md",
+                "fileType": ".md",
+                "title": "# 当用webpack-dev-server等中间件代理接口访问nignx时，此时无浏览器参与，故没有同源限制，下面的跨域配置可不启用",
+                "cover": "https://cdn.nlark.com/yuque/0/2021/png/1500604/1621608379974-5f496e1b-b721-4317-bd17-c3bb0411a510.png?x-oss-process=image%2Fresize%2Cw_1038",
+                "date": "2024-03-14",
+                "pathDate": null,
+                "createdAt": "2024-03-14",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "docs",
+            "path": "学习/前端面试备考归档/docs",
+            "children": [
+              {
+                "type": "file",
+                "name": "index.html",
+                "path": "学习/前端面试备考归档/docs/index.html",
+                "fileType": ".html",
+                "title": null,
+                "cover": null,
+                "date": "2024-05-11",
+                "pathDate": null,
+                "createdAt": "2024-05-11",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "当选择一个技术栈的时候我考虑的因素.md",
+                "path": "学习/前端面试备考归档/docs/当选择一个技术栈的时候我考虑的因素.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-05-11",
+                "pathDate": null,
+                "createdAt": "2024-05-11",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "Other",
+            "path": "学习/前端面试备考归档/Other",
+            "children": [
+              {
+                "type": "directory",
+                "name": "英语单词",
+                "path": "学习/前端面试备考归档/Other/英语单词",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Word Power Made Easy (Norman Lewis) (z-lib.org).pdf",
+                    "path": "学习/前端面试备考归档/Other/英语单词/Word Power Made Easy (Norman Lewis) (z-lib.org).pdf",
+                    "fileType": ".pdf",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-06-06",
+                    "pathDate": null,
+                    "createdAt": "2022-06-06",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "XDF词根词缀记忆大全.pdf",
+                    "path": "学习/前端面试备考归档/Other/英语单词/XDF词根词缀记忆大全.pdf",
+                    "fileType": ".pdf",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-06-06",
+                    "pathDate": null,
+                    "createdAt": "2022-06-06",
+                    "updatedAt": "2026-07-14"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "考核类",
+                "path": "学习/前端面试备考归档/Other/考核类",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "20200709-talking.md",
+                    "path": "学习/前端面试备考归档/Other/考核类/20200709-talking.md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2020-07-22",
+                    "pathDate": null,
+                    "createdAt": "2020-07-22",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "中期考核.md",
+                    "path": "学习/前端面试备考归档/Other/考核类/中期考核.md",
+                    "fileType": ".md",
+                    "title": "工作内容",
+                    "cover": null,
+                    "date": "2020-12-24",
+                    "pathDate": null,
+                    "createdAt": "2020-12-24",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "年中考核PPT.md",
+                    "path": "学习/前端面试备考归档/Other/考核类/年中考核PPT.md",
+                    "fileType": ".md",
+                    "title": "回顾展望",
+                    "cover": null,
+                    "date": "2020-07-12",
+                    "pathDate": null,
+                    "createdAt": "2020-07-12",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "转正考核PPT.md",
+                    "path": "学习/前端面试备考归档/Other/考核类/转正考核PPT.md",
+                    "fileType": ".md",
+                    "title": "各个部分讲解",
+                    "cover": null,
+                    "date": "2022-05-18",
+                    "pathDate": null,
+                    "createdAt": "2022-05-18",
+                    "updatedAt": "2026-07-14"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "简历存档",
+                "path": "学习/前端面试备考归档/Other/简历存档",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "李幸娟-2年-前端-2021-05-27.pdf",
+                    "path": "学习/前端面试备考归档/Other/简历存档/李幸娟-2年-前端-2021-05-27.pdf",
+                    "fileType": ".pdf",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-02-10",
+                    "pathDate": null,
+                    "createdAt": "2022-02-10",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "李幸娟-3年-react-18236129679.pdf",
+                    "path": "学习/前端面试备考归档/Other/简历存档/李幸娟-3年-react-18236129679.pdf",
+                    "fileType": ".pdf",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-07-11",
+                    "pathDate": null,
+                    "createdAt": "2022-07-11",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "李幸娟简历-2020-09-19.pdf",
+                    "path": "学习/前端面试备考归档/Other/简历存档/李幸娟简历-2020-09-19.pdf",
+                    "fileType": ".pdf",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-02-10",
+                    "pathDate": null,
+                    "createdAt": "2022-02-10",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "李幸娟简历-2022-04.pdf",
+                    "path": "学习/前端面试备考归档/Other/简历存档/李幸娟简历-2022-04.pdf",
+                    "fileType": ".pdf",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-06-21",
+                    "pathDate": null,
+                    "createdAt": "2022-06-21",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "李幸娟简历-normal-2021-08-23.pdf",
+                    "path": "学习/前端面试备考归档/Other/简历存档/李幸娟简历-normal-2021-08-23.pdf",
+                    "fileType": ".pdf",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-02-10",
+                    "pathDate": null,
+                    "createdAt": "2022-02-10",
+                    "updatedAt": "2026-07-14"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "Trash",
+                "path": "学习/前端面试备考归档/Other/Trash",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "2021-09-01-上海互联网公司.md",
+                    "path": "学习/前端面试备考归档/Other/Trash/2021-09-01-上海互联网公司.md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-05-20",
+                    "pathDate": null,
+                    "createdAt": "2022-05-20",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "2021-09-01-费曼学习法.md",
+                    "path": "学习/前端面试备考归档/Other/Trash/2021-09-01-费曼学习法.md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-05-20",
+                    "pathDate": null,
+                    "createdAt": "2022-05-20",
+                    "updatedAt": "2026-07-14"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "8-ts",
+            "path": "学习/前端面试备考归档/8-ts",
+            "children": [
+              {
+                "type": "file",
+                "name": "4.3新增方法.md",
+                "path": "学习/前端面试备考归档/8-ts/4.3新增方法.md",
+                "fileType": ".md",
+                "title": "其他",
+                "cover": "https://devblogs.microsoft.com/typescript/wp-content/uploads/sites/11/2021/05/link-tag-4-3.gif",
+                "date": "2022-06-01",
+                "pathDate": null,
+                "createdAt": "2022-06-01",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "interface-vs-type.md",
+                "path": "学习/前端面试备考归档/8-ts/interface-vs-type.md",
+                "fileType": ".md",
+                "title": "不同点",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "常用的工具类型.md",
+                "path": "学习/前端面试备考归档/8-ts/常用的工具类型.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "泛型.md",
+                "path": "学习/前端面试备考归档/8-ts/泛型.md",
+                "fileType": ".md",
+                "title": "文章收藏",
+                "cover": null,
+                "date": "2022-05-18",
+                "pathDate": null,
+                "createdAt": "2022-05-18",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "7-设计模式",
+            "path": "学习/前端面试备考归档/7-设计模式",
+            "children": [
+              {
+                "type": "directory",
+                "name": "part3-设计原则和编程技巧",
+                "path": "学习/前端面试备考归档/7-设计模式/part3-设计原则和编程技巧",
+                "children": [
+                  {
+                    "type": "directory",
+                    "name": "19-最少知识原则",
+                    "path": "学习/前端面试备考归档/7-设计模式/part3-设计原则和编程技巧/19-最少知识原则",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "00-前言.md",
+                        "path": "学习/前端面试备考归档/7-设计模式/part3-设计原则和编程技巧/19-最少知识原则/00-前言.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-05-07",
+                        "pathDate": null,
+                        "createdAt": "2022-05-07",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "18-单一职责原则",
+                    "path": "学习/前端面试备考归档/7-设计模式/part3-设计原则和编程技巧/18-单一职责原则",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "00-前言.md",
+                        "path": "学习/前端面试备考归档/7-设计模式/part3-设计原则和编程技巧/18-单一职责原则/00-前言.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-05-07",
+                        "pathDate": null,
+                        "createdAt": "2022-05-07",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "01-设计中的SRP原则.md",
+                        "path": "学习/前端面试备考归档/7-设计模式/part3-设计原则和编程技巧/18-单一职责原则/01-设计中的SRP原则.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2020-02-28",
+                        "pathDate": null,
+                        "createdAt": "2020-02-28",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "09-命令模式",
+                "path": "学习/前端面试备考归档/7-设计模式/09-命令模式",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "02-Example-菜单程序.html",
+                    "path": "学习/前端面试备考归档/7-设计模式/09-命令模式/02-Example-菜单程序.html",
+                    "fileType": ".html",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-03-27",
+                    "pathDate": null,
+                    "createdAt": "2022-03-27",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "03-JavaScript中的命令模式.html",
+                    "path": "学习/前端面试备考归档/7-设计模式/09-命令模式/03-JavaScript中的命令模式.html",
+                    "fileType": ".html",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-03-27",
+                    "pathDate": null,
+                    "createdAt": "2022-03-27",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "04-撤销命令.html",
+                    "path": "学习/前端面试备考归档/7-设计模式/09-命令模式/04-撤销命令.html",
+                    "fileType": ".html",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-03-27",
+                    "pathDate": null,
+                    "createdAt": "2022-03-27",
+                    "updatedAt": "2026-07-14"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "05-策略模式",
+                "path": "学习/前端面试备考归档/7-设计模式/05-策略模式",
+                "children": [
+                  {
+                    "type": "directory",
+                    "name": "03-应用-表单校验",
+                    "path": "学习/前端面试备考归档/7-设计模式/05-策略模式/03-应用-表单校验",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "第一版.html",
+                        "path": "学习/前端面试备考归档/7-设计模式/05-策略模式/03-应用-表单校验/第一版.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-05-20",
+                        "pathDate": null,
+                        "createdAt": "2022-05-20",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "第三版-策略模式优化-某个文本框增加多种校验规则.html",
+                        "path": "学习/前端面试备考归档/7-设计模式/05-策略模式/03-应用-表单校验/第三版-策略模式优化-某个文本框增加多种校验规则.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-05-20",
+                        "pathDate": null,
+                        "createdAt": "2022-05-20",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "第二版-引入策略模式.html",
+                        "path": "学习/前端面试备考归档/7-设计模式/05-策略模式/03-应用-表单校验/第二版-引入策略模式.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-05-20",
+                        "pathDate": null,
+                        "createdAt": "2022-05-20",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "03-闭包",
+                "path": "学习/前端面试备考归档/7-设计模式/03-闭包",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "3.1.6-闭包与内存管理.md",
+                    "path": "学习/前端面试备考归档/7-设计模式/03-闭包/3.1.6-闭包与内存管理.md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2024-04-18",
+                    "pathDate": null,
+                    "createdAt": "2024-04-18",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "del.html",
+                    "path": "学习/前端面试备考归档/7-设计模式/03-闭包/del.html",
+                    "fileType": ".html",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-12-21",
+                    "pathDate": null,
+                    "createdAt": "2022-12-21",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "利用闭包的特性实现背景色渐变.html",
+                    "path": "学习/前端面试备考归档/7-设计模式/03-闭包/利用闭包的特性实现背景色渐变.html",
+                    "fileType": ".html",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-06-15",
+                    "pathDate": null,
+                    "createdAt": "2022-06-15",
+                    "updatedAt": "2026-07-14"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "02-this、call和apply",
+                "path": "学习/前端面试备考归档/7-设计模式/02-this、call和apply",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "index.html",
+                    "path": "学习/前端面试备考归档/7-设计模式/02-this、call和apply/index.html",
+                    "fileType": ".html",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-12-21",
+                    "pathDate": null,
+                    "createdAt": "2022-12-21",
+                    "updatedAt": "2026-07-14"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "6-网络和安全",
+            "path": "学习/前端面试备考归档/6-网络和安全",
+            "children": [
+              {
+                "type": "file",
+                "name": "DDOS攻击.md",
+                "path": "学习/前端面试备考归档/6-网络和安全/DDOS攻击.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "xss和csfr.md",
+                "path": "学习/前端面试备考归档/6-网络和安全/xss和csfr.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "怎么阻止别人通过iframe内嵌我们的网页.md",
+                "path": "学习/前端面试备考归档/6-网络和安全/怎么阻止别人通过iframe内嵌我们的网页.md",
+                "fileType": ".md",
+                "title": "防止页面被 iframe 内嵌",
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "5-webpack和前端模块化",
+            "path": "学习/前端面试备考归档/5-webpack和前端模块化",
+            "children": [
+              {
+                "type": "directory",
+                "name": "part-02",
+                "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02",
+                "children": [
+                  {
+                    "type": "directory",
+                    "name": "12-loader",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/12-loader",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/12-loader/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-05-28",
+                        "pathDate": null,
+                        "createdAt": "2022-05-28",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/12-loader/index.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-05-28",
+                        "pathDate": null,
+                        "createdAt": "2022-05-28",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "11-build-performance",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/11-build-performance",
+                    "children": [
+                      {
+                        "type": "directory",
+                        "name": "03-summary",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/11-build-performance/03-summary",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/11-build-performance/03-summary/README.md",
+                            "fileType": ".md",
+                            "title": "提升构建性能",
+                            "cover": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/11-build-performance/03-summary/images/README-22-02-02-22-17-16.png",
+                            "date": "2022-02-02",
+                            "pathDate": null,
+                            "createdAt": "2022-02-02",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "02-worker-poll",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/11-build-performance/02-worker-poll/images/README-22-02-02-20-59-19.png",
+                            "date": "2022-02-02",
+                            "pathDate": null,
+                            "createdAt": "2022-02-02",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "01-dll",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/11-build-performance/01-dll",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/11-build-performance/01-dll/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/11-build-performance/01-dll/images/README-22-02-02-20-59-19.png",
+                            "date": "2022-02-02",
+                            "pathDate": null,
+                            "createdAt": "2022-02-02",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "10-module-federation",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/10-module-federation",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/10-module-federation/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-02-02",
+                        "pathDate": null,
+                        "createdAt": "2022-02-02",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "09-library",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/09-library",
+                    "children": [
+                      {
+                        "type": "directory",
+                        "name": "02-webpack-numbers",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/09-library/02-webpack-numbers",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/09-library/02-webpack-numbers/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-09",
+                            "pathDate": null,
+                            "createdAt": "2022-02-09",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "01-library-basic",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/09-library/01-library-basic",
+                        "children": [
+                          {
+                            "type": "directory",
+                            "name": "demo",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/09-library/01-library-basic/demo",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "test-esmodule.html",
+                                "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/09-library/01-library-basic/demo/test-esmodule.html",
+                                "fileType": ".html",
+                                "title": null,
+                                "cover": null,
+                                "date": "2022-02-02",
+                                "pathDate": null,
+                                "createdAt": "2022-02-02",
+                                "updatedAt": "2026-07-14"
+                              },
+                              {
+                                "type": "file",
+                                "name": "test-script.html",
+                                "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/09-library/01-library-basic/demo/test-script.html",
+                                "fileType": ".html",
+                                "title": null,
+                                "cover": null,
+                                "date": "2022-02-02",
+                                "pathDate": null,
+                                "createdAt": "2022-02-02",
+                                "updatedAt": "2026-07-14"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/09-library/01-library-basic/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-02",
+                            "pathDate": null,
+                            "createdAt": "2022-02-02",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "08-shamming",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/08-shamming",
+                    "children": [
+                      {
+                        "type": "directory",
+                        "name": "02-polyfills",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/08-shamming/02-polyfills",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/08-shamming/02-polyfills/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-02",
+                            "pathDate": null,
+                            "createdAt": "2022-02-02",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "01-third-party-shamming",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/08-shamming/01-third-party-shamming/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-02",
+                            "pathDate": null,
+                            "createdAt": "2022-02-02",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "07-pwa",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/07-pwa",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/07-pwa/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-02-02",
+                        "pathDate": null,
+                        "createdAt": "2022-02-02",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "06-tree-shaking",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/06-tree-shaking",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/06-tree-shaking/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-02-02",
+                        "pathDate": null,
+                        "createdAt": "2022-02-02",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "05-multiple-page",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/05-multiple-page",
+                    "children": [
+                      {
+                        "type": "directory",
+                        "name": "src",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/05-multiple-page/src",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "app.html",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/05-multiple-page/src/app.html",
+                            "fileType": ".html",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-02",
+                            "pathDate": null,
+                            "createdAt": "2022-02-02",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/05-multiple-page/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-02-02",
+                        "pathDate": null,
+                        "createdAt": "2022-02-02",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "04-extends",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/04-extends",
+                    "children": [
+                      {
+                        "type": "directory",
+                        "name": "03-typescript",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/04-extends/03-typescript",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/04-extends/03-typescript/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-02",
+                            "pathDate": null,
+                            "createdAt": "2022-02-02",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "02-webworks",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/04-extends/02-webworks",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/04-extends/02-webworks/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-02",
+                            "pathDate": null,
+                            "createdAt": "2022-02-02",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "01-post-css-module",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/04-extends/01-post-css-module",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/04-extends/01-post-css-module/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-02",
+                            "pathDate": null,
+                            "createdAt": "2022-02-02",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "03-externals",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/03-externals",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/03-externals/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-02-02",
+                        "pathDate": null,
+                        "createdAt": "2022-02-02",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "02-modules-dependence",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/02-modules-dependence",
+                    "children": [
+                      {
+                        "type": "directory",
+                        "name": "02-bundle-analyzer",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/02-modules-dependence/02-bundle-analyzer/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-02",
+                            "pathDate": null,
+                            "createdAt": "2022-02-02",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "01-resolver",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/02-modules-dependence/01-resolver/images/loader-module.jpeg",
+                            "date": "2022-02-01",
+                            "pathDate": null,
+                            "createdAt": "2022-02-01",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "01-dev-config",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config",
+                    "children": [
+                      {
+                        "type": "directory",
+                        "name": "05-husky",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/05-husky",
+                        "children": [
+                          {
+                            "type": "directory",
+                            "name": "src",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/05-husky/src",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "app.html",
+                                "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/05-husky/src/app.html",
+                                "fileType": ".html",
+                                "title": null,
+                                "cover": null,
+                                "date": "2022-02-01",
+                                "pathDate": null,
+                                "createdAt": "2022-02-01",
+                                "updatedAt": "2026-07-14"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/05-husky/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-01",
+                            "pathDate": null,
+                            "createdAt": "2022-02-01",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "04-eslint",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/04-eslint",
+                        "children": [
+                          {
+                            "type": "directory",
+                            "name": "src",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/04-eslint/src",
+                            "children": [
+                              {
+                                "type": "file",
+                                "name": "app.html",
+                                "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/04-eslint/src/app.html",
+                                "fileType": ".html",
+                                "title": null,
+                                "cover": null,
+                                "date": "2022-02-01",
+                                "pathDate": null,
+                                "createdAt": "2022-02-01",
+                                "updatedAt": "2026-07-14"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/04-eslint/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-01",
+                            "pathDate": null,
+                            "createdAt": "2022-02-01",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "03-hmr",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/03-hmr",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/03-hmr/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-01",
+                            "pathDate": null,
+                            "createdAt": "2022-02-01",
+                            "updatedAt": "2026-07-14"
+                          },
+                          {
+                            "type": "file",
+                            "name": "app.html",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/03-hmr/app.html",
+                            "fileType": ".html",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-02-01",
+                            "pathDate": null,
+                            "createdAt": "2022-02-01",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "02-devserver",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/02-devserver",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "404.html",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/02-devserver/404.html",
+                            "fileType": ".html",
+                            "title": null,
+                            "cover": null,
+                            "date": "2021-08-23",
+                            "pathDate": null,
+                            "createdAt": "2021-08-23",
+                            "updatedAt": "2026-07-14"
+                          },
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/02-devserver/README.md",
+                            "fileType": ".md",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-01-31",
+                            "pathDate": null,
+                            "createdAt": "2022-01-31",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "directory",
+                        "name": "01-source-map",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/01-source-map",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "README.md",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-02/01-dev-config/01-source-map/README.md",
+                            "fileType": ".md",
+                            "title": "7中source-map",
+                            "cover": null,
+                            "date": "2022-01-31",
+                            "pathDate": null,
+                            "createdAt": "2022-01-31",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "part-01",
+                "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01",
+                "children": [
+                  {
+                    "type": "directory",
+                    "name": "10-multiple-env",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/10-multiple-env",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/10-multiple-env/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-31",
+                        "pathDate": null,
+                        "createdAt": "2022-01-31",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/10-multiple-env/index.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "09-caching",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/09-caching",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/09-caching/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-31",
+                        "pathDate": null,
+                        "createdAt": "2022-01-31",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/09-caching/index.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "08-code-splitting",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/08-code-splitting",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/08-code-splitting/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-31",
+                        "pathDate": null,
+                        "createdAt": "2022-01-31",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/08-code-splitting/index.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "07-babel-loader",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/07-babel-loader",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/07-babel-loader/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/07-babel-loader/src/assets/carrot.jpg",
+                        "date": "2022-01-31",
+                        "pathDate": null,
+                        "createdAt": "2022-01-31",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/07-babel-loader/index.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "06-manage-assets",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/06-manage-assets",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/06-manage-assets/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/06-manage-assets/src/assets/carrot.jpg",
+                        "date": "2022-01-31",
+                        "pathDate": null,
+                        "createdAt": "2022-01-31",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/06-manage-assets/index.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "05-asset-modules",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/05-asset-modules",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/05-asset-modules/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/05-asset-modules/src/assets/carrot.jpg",
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/05-asset-modules/index.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "04-development",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/04-development",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/04-development/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/04-development/index.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "03-manage-output",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/03-manage-output",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/03-manage-output/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/03-manage-output/index.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "02-steup-app",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/02-steup-app",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "README.md",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/02-steup-app/README.md",
+                        "fileType": ".md",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.html",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/02-steup-app/index.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "directory",
+                    "name": "01-why-webpack",
+                    "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/01-why-webpack",
+                    "children": [
+                      {
+                        "type": "directory",
+                        "name": "ESModule",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/01-why-webpack/ESModule",
+                        "children": [
+                          {
+                            "type": "file",
+                            "name": "index.html",
+                            "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/01-why-webpack/ESModule/index.html",
+                            "fileType": ".html",
+                            "title": null,
+                            "cover": null,
+                            "date": "2022-01-16",
+                            "pathDate": null,
+                            "createdAt": "2022-01-16",
+                            "updatedAt": "2026-07-14"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "file",
+                        "name": "index-1.html",
+                        "path": "学习/前端面试备考归档/5-webpack和前端模块化/part-01/01-why-webpack/index-1.html",
+                        "fileType": ".html",
+                        "title": null,
+                        "cover": null,
+                        "date": "2022-01-16",
+                        "pathDate": null,
+                        "createdAt": "2022-01-16",
+                        "updatedAt": "2026-07-14"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "ESModule和CommonJS对比.md",
+                "path": "学习/前端面试备考归档/5-webpack和前端模块化/ESModule和CommonJS对比.md",
+                "fileType": ".md",
+                "title": "模块化",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "学习/前端面试备考归档/5-webpack和前端模块化/README.md",
+                "fileType": ".md",
+                "title": "learn-webpack",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "babel.md",
+                "path": "学习/前端面试备考归档/5-webpack和前端模块化/babel.md",
+                "fileType": ".md",
+                "title": "babel",
+                "cover": null,
+                "date": "2024-04-22",
+                "pathDate": null,
+                "createdAt": "2024-04-22",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "loader和plugin区别.md",
+                "path": "学习/前端面试备考归档/5-webpack和前端模块化/loader和plugin区别.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "webpack.md",
+                "path": "学习/前端面试备考归档/5-webpack和前端模块化/webpack.md",
+                "fileType": ".md",
+                "title": "webpack 是什么？",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "webpack.vs.rollup.md",
+                "path": "学习/前端面试备考归档/5-webpack和前端模块化/webpack.vs.rollup.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2022-06-19",
+                "pathDate": null,
+                "createdAt": "2022-06-19",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "我的webpack优化实践.md",
+                "path": "学习/前端面试备考归档/5-webpack和前端模块化/我的webpack优化实践.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "迁移vite遇到的问题.md",
+                "path": "学习/前端面试备考归档/5-webpack和前端模块化/迁移vite遇到的问题.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2022-12-21",
+                "pathDate": null,
+                "createdAt": "2022-12-21",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "4-HTTP和浏览器",
+            "path": "学习/前端面试备考归档/4-HTTP和浏览器",
+            "children": [
+              {
+                "type": "file",
+                "name": "EventLoop.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/EventLoop.md",
+                "fileType": ".md",
+                "title": "事件循环（Event Loop）",
+                "cover": "https://res.cloudinary.com/practicaldev/image/fetch/s--I8K4E512--/c_limit,f_auto,fl_progressive,q_auto,w_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tg7893fgvd0q8im1fy3s.png",
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "HTTP.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/HTTP.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "TCP连接建立.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/TCP连接建立.md",
+                "fileType": ".md",
+                "title": "tcp连接建立",
+                "cover": null,
+                "date": "2022-12-21",
+                "pathDate": null,
+                "createdAt": "2022-12-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "get和post区别.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/get和post区别.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "分代垃圾回收机制.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/分代垃圾回收机制.md",
+                "fileType": ".md",
+                "title": "分代垃圾回收机制",
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "客户端存储.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/客户端存储.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "新开tab启动哪些进程.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/新开tab启动哪些进程.md",
+                "fileType": ".md",
+                "title": "新开一个tab需要启动的进程",
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "渲染.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/渲染.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "简单请求和复杂请求.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/简单请求和复杂请求.md",
+                "fileType": ".md",
+                "title": "请求类型",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "跨域相关.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/跨域相关.md",
+                "fileType": ".md",
+                "title": "跨域相关",
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "输入URL发生了什么.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/输入URL发生了什么.md",
+                "fileType": ".md",
+                "title": "输入 URL 发生了什么",
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "进程和线程.md",
+                "path": "学习/前端面试备考归档/4-HTTP和浏览器/进程和线程.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "3-React",
+            "path": "学习/前端面试备考归档/3-React",
+            "children": [
+              {
+                "type": "directory",
+                "name": "debug-react",
+                "path": "学习/前端面试备考归档/3-React/debug-react",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "index.html",
+                    "path": "学习/前端面试备考归档/3-React/debug-react/index.html",
+                    "fileType": ".html",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-06-07",
+                    "pathDate": null,
+                    "createdAt": "2022-06-07",
+                    "updatedAt": "2026-07-14"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "ConcurrentMode.md",
+                "path": "学习/前端面试备考归档/3-React/ConcurrentMode.md",
+                "fileType": ".md",
+                "title": "ConcurrentMode是什么？解决了什么问题？",
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "Fiber架构相关.md",
+                "path": "学习/前端面试备考归档/3-React/Fiber架构相关.md",
+                "fileType": ".md",
+                "title": "fiber架构",
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "React18的变化.md",
+                "path": "学习/前端面试备考归档/3-React/React18的变化.md",
+                "fileType": ".md",
+                "title": "渲染模式（https://zhuanlan.zhihu.com/p/60307571）",
+                "cover": null,
+                "date": "2024-04-23",
+                "pathDate": null,
+                "createdAt": "2024-04-23",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "React性能优化.md",
+                "path": "学习/前端面试备考归档/3-React/React性能优化.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2022-06-11",
+                "pathDate": null,
+                "createdAt": "2022-06-11",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "class可以做但hooks做不了的.md",
+                "path": "学习/前端面试备考归档/3-React/class可以做但hooks做不了的.md",
+                "fileType": ".md",
+                "title": "class 可以做但 hooks 做不了的",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "class和hooks对比.md",
+                "path": "学习/前端面试备考归档/3-React/class和hooks对比.md",
+                "fileType": ".md",
+                "title": "class和hooks对比",
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "fiber数据结构.md",
+                "path": "学习/前端面试备考归档/3-React/fiber数据结构.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2022-12-21",
+                "pathDate": null,
+                "createdAt": "2022-12-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "hook实现生命周期.md",
+                "path": "学习/前端面试备考归档/3-React/hook实现生命周期.md",
+                "fileType": ".md",
+                "title": "mounting阶段-4个",
+                "cover": null,
+                "date": "2023-03-22",
+                "pathDate": null,
+                "createdAt": "2023-03-22",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "key提升性能.md",
+                "path": "学习/前端面试备考归档/3-React/key提升性能.md",
+                "fileType": ".md",
+                "title": "key",
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "react渲染流程.md",
+                "path": "学习/前端面试备考归档/3-React/react渲染流程.md",
+                "fileType": ".md",
+                "title": "Reconciliation调和",
+                "cover": null,
+                "date": "2022-12-21",
+                "pathDate": null,
+                "createdAt": "2022-12-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "setState.md",
+                "path": "学习/前端面试备考归档/3-React/setState.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "setState同异步.md",
+                "path": "学习/前端面试备考归档/3-React/setState同异步.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "useCallback 和 useMemo 应用场景和区别.md",
+                "path": "学习/前端面试备考归档/3-React/useCallback 和 useMemo 应用场景和区别.md",
+                "fileType": ".md",
+                "title": "useCallback 和 useMemo的作用和使用场景",
+                "cover": null,
+                "date": "2024-03-19",
+                "pathDate": null,
+                "createdAt": "2024-03-19",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "useEffect和useLayoutEffect.md",
+                "path": "学习/前端面试备考归档/3-React/useEffect和useLayoutEffect.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": "https://pbs.twimg.com/media/FQfQwHXakAISgnr?format=jpg&name=large",
+                "date": "2022-06-05",
+                "pathDate": null,
+                "createdAt": "2022-06-05",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "useLayoutEffect.md",
+                "path": "学习/前端面试备考归档/3-React/useLayoutEffect.md",
+                "fileType": ".md",
+                "title": "使用场景",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "useRef.md",
+                "path": "学习/前端面试备考归档/3-React/useRef.md",
+                "fileType": ".md",
+                "title": "useRef",
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "为什么不需要importreact.md",
+                "path": "学习/前端面试备考归档/3-React/为什么不需要importreact.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-23",
+                "pathDate": null,
+                "createdAt": "2024-04-23",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "为什么提供setstate方法而不是直接修改.md",
+                "path": "学习/前端面试备考归档/3-React/为什么提供setstate方法而不是直接修改.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "如何实现组件懒加载.md",
+                "path": "学习/前端面试备考归档/3-React/如何实现组件懒加载.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2023-03-22",
+                "pathDate": null,
+                "createdAt": "2023-03-22",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "生命周期.md",
+                "path": "学习/前端面试备考归档/3-React/生命周期.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "2-CSS",
+            "path": "学习/前端面试备考归档/2-CSS",
+            "children": [
+              {
+                "type": "file",
+                "name": "1px.md",
+                "path": "学习/前端面试备考归档/2-CSS/1px.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "bfc.md",
+                "path": "学习/前端面试备考归档/2-CSS/bfc.md",
+                "fileType": ".md",
+                "title": "BFC",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "伪类和伪元素.md",
+                "path": "学习/前端面试备考归档/2-CSS/伪类和伪元素.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2022-12-21",
+                "pathDate": null,
+                "createdAt": "2022-12-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "保持比例的两种方案.html",
+                "path": "学习/前端面试备考归档/2-CSS/保持比例的两种方案.html",
+                "fileType": ".html",
+                "title": null,
+                "cover": null,
+                "date": "2022-07-07",
+                "pathDate": null,
+                "createdAt": "2022-07-07",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "元素居中四种方案.md",
+                "path": "学习/前端面试备考归档/2-CSS/元素居中四种方案.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "图片格式.md",
+                "path": "学习/前端面试备考归档/2-CSS/图片格式.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "百分比相对.md",
+                "path": "学习/前端面试备考归档/2-CSS/百分比相对.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "选择器加权原则.md",
+                "path": "学习/前端面试备考归档/2-CSS/选择器加权原则.md",
+                "fileType": ".md",
+                "title": "加权原则",
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "重绘和重排.md",
+                "path": "学习/前端面试备考归档/2-CSS/重绘和重排.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2022-10-27",
+                "pathDate": null,
+                "createdAt": "2022-10-27",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "1-JS",
+            "path": "学习/前端面试备考归档/1-JS",
+            "children": [
+              {
+                "type": "directory",
+                "name": "继承",
+                "path": "学习/前端面试备考归档/1-JS/继承",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "summary.md",
+                    "path": "学习/前端面试备考归档/1-JS/继承/summary.md",
+                    "fileType": ".md",
+                    "title": "7 种实现继承的方式",
+                    "cover": null,
+                    "date": "2024-04-21",
+                    "pathDate": null,
+                    "createdAt": "2024-04-21",
+                    "updatedAt": "2026-07-14"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "Promise",
+                "path": "学习/前端面试备考归档/1-JS/Promise",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "promise.md",
+                    "path": "学习/前端面试备考归档/1-JS/Promise/promise.md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2024-04-21",
+                    "pathDate": null,
+                    "createdAt": "2024-04-21",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "promise和async优缺异同.md",
+                    "path": "学习/前端面试备考归档/1-JS/Promise/promise和async优缺异同.md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2024-04-21",
+                    "pathDate": null,
+                    "createdAt": "2024-04-21",
+                    "updatedAt": "2026-07-14"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "AST.md",
+                "path": "学习/前端面试备考归档/1-JS/AST.md",
+                "fileType": ".md",
+                "title": "AST",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "defer和async.md",
+                "path": "学习/前端面试备考归档/1-JS/defer和async.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "js编译原理.md",
+                "path": "学习/前端面试备考归档/1-JS/js编译原理.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "手写-bind.md",
+                "path": "学习/前端面试备考归档/1-JS/手写-bind.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-18",
+                "pathDate": null,
+                "createdAt": "2024-04-18",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "手写-实现计时器.html",
+                "path": "学习/前端面试备考归档/1-JS/手写-实现计时器.html",
+                "fileType": ".html",
+                "title": null,
+                "cover": null,
+                "date": "2024-03-19",
+                "pathDate": null,
+                "createdAt": "2024-03-19",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "数据类型.md",
+                "path": "学习/前端面试备考归档/1-JS/数据类型.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2022-10-26",
+                "pathDate": null,
+                "createdAt": "2022-10-26",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "闭包.md",
+                "path": "学习/前端面试备考归档/1-JS/闭包.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "0-收纳",
+            "path": "学习/前端面试备考归档/0-收纳",
+            "children": [
+              {
+                "type": "directory",
+                "name": "记录",
+                "path": "学习/前端面试备考归档/0-收纳/记录",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "2021-08-16.md",
+                    "path": "学习/前端面试备考归档/0-收纳/记录/2021-08-16.md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2021-08-16",
+                    "pathDate": "2021-08-16",
+                    "createdAt": "2021-08-20",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "2021-08-17.md",
+                    "path": "学习/前端面试备考归档/0-收纳/记录/2021-08-17.md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2021-08-17",
+                    "pathDate": "2021-08-17",
+                    "createdAt": "2021-08-20",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "2021-08-20(下午四点女生).md",
+                    "path": "学习/前端面试备考归档/0-收纳/记录/2021-08-20(下午四点女生).md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2021-08-20",
+                    "pathDate": null,
+                    "createdAt": "2021-08-20",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "2021-08-20.md",
+                    "path": "学习/前端面试备考归档/0-收纳/记录/2021-08-20.md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2021-08-20",
+                    "pathDate": "2021-08-20",
+                    "createdAt": "2021-08-20",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "2021-08-26(01).md",
+                    "path": "学习/前端面试备考归档/0-收纳/记录/2021-08-26(01).md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2021-08-27",
+                    "pathDate": null,
+                    "createdAt": "2021-08-27",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "2021-08-26(02).md",
+                    "path": "学习/前端面试备考归档/0-收纳/记录/2021-08-26(02).md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2021-08-27",
+                    "pathDate": null,
+                    "createdAt": "2021-08-27",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "2021-08-27.md",
+                    "path": "学习/前端面试备考归档/0-收纳/记录/2021-08-27.md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2021-08-27",
+                    "pathDate": "2021-08-27",
+                    "createdAt": "2021-08-30",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "del.html",
+                    "path": "学习/前端面试备考归档/0-收纳/记录/del.html",
+                    "fileType": ".html",
+                    "title": null,
+                    "cover": null,
+                    "date": "2022-06-05",
+                    "pathDate": null,
+                    "createdAt": "2022-06-05",
+                    "updatedAt": "2026-07-14"
+                  },
+                  {
+                    "type": "file",
+                    "name": "题目.md",
+                    "path": "学习/前端面试备考归档/0-收纳/记录/题目.md",
+                    "fileType": ".md",
+                    "title": null,
+                    "cover": null,
+                    "date": "2021-08-27",
+                    "pathDate": null,
+                    "createdAt": "2021-08-27",
+                    "updatedAt": "2026-07-14"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "demo.md",
+                "path": "学习/前端面试备考归档/0-收纳/demo.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "link-list.md",
+                "path": "学习/前端面试备考归档/0-收纳/link-list.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2022-12-22",
+                "pathDate": null,
+                "createdAt": "2022-12-22",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "list.md",
+                "path": "学习/前端面试备考归档/0-收纳/list.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "mine.md",
+                "path": "学习/前端面试备考归档/0-收纳/mine.md",
+                "fileType": ".md",
+                "title": "imile/艾麦物流",
+                "cover": null,
+                "date": "2024-04-23",
+                "pathDate": null,
+                "createdAt": "2024-04-23",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "offer前关注点.md",
+                "path": "学习/前端面试备考归档/0-收纳/offer前关注点.md",
+                "fileType": ".md",
+                "title": "offer 前的沟通点",
+                "cover": null,
+                "date": "2024-04-23",
+                "pathDate": null,
+                "createdAt": "2024-04-23",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "关于面试的想法.md",
+                "path": "学习/前端面试备考归档/0-收纳/关于面试的想法.md",
+                "fileType": ".md",
+                "title": "面试通常考察",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "其他.md",
+                "path": "学习/前端面试备考归档/0-收纳/其他.md",
+                "fileType": ".md",
+                "title": "有赞面经",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "如何性能优化.md",
+                "path": "学习/前端面试备考归档/0-收纳/如何性能优化.md",
+                "fileType": ".md",
+                "title": "性能优化",
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "学习新内容.md",
+                "path": "学习/前端面试备考归档/0-收纳/学习新内容.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-22",
+                "pathDate": null,
+                "createdAt": "2024-04-22",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "微服务.md",
+                "path": "学习/前端面试备考归档/0-收纳/微服务.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-23",
+                "pathDate": null,
+                "createdAt": "2024-04-23",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "我做过的项目.md",
+                "path": "学习/前端面试备考归档/0-收纳/我做过的项目.md",
+                "fileType": ".md",
+                "title": "汉得信息(2019-08)",
+                "cover": null,
+                "date": "2024-04-23",
+                "pathDate": null,
+                "createdAt": "2024-04-23",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "文章.md",
+                "path": "学习/前端面试备考归档/0-收纳/文章.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "最爱榜单.md",
+                "path": "学习/前端面试备考归档/0-收纳/最爱榜单.md",
+                "fileType": ".md",
+                "title": "最爱榜单",
+                "cover": null,
+                "date": "2026-06-14",
+                "pathDate": null,
+                "createdAt": "2026-06-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "梦.md",
+                "path": "学习/前端面试备考归档/0-收纳/梦.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "直播课.md",
+                "path": "学习/前端面试备考归档/0-收纳/直播课.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2022-12-21",
+                "pathDate": null,
+                "createdAt": "2022-12-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "稿子.md",
+                "path": "学习/前端面试备考归档/0-收纳/稿子.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-03-13",
+                "pathDate": null,
+                "createdAt": "2024-03-13",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "简历.md",
+                "path": "学习/前端面试备考归档/0-收纳/简历.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2024-04-21",
+                "pathDate": null,
+                "createdAt": "2024-04-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "职业规划.md",
+                "path": "学习/前端面试备考归档/0-收纳/职业规划.md",
+                "fileType": ".md",
+                "title": "职业规划",
+                "cover": null,
+                "date": "2024-04-23",
+                "pathDate": null,
+                "createdAt": "2024-04-23",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "腾讯面试题.md",
+                "path": "学习/前端面试备考归档/0-收纳/腾讯面试题.md",
+                "fileType": ".md",
+                "title": null,
+                "cover": null,
+                "date": "2022-12-21",
+                "pathDate": null,
+                "createdAt": "2022-12-21",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "自我介绍.md",
+                "path": "学习/前端面试备考归档/0-收纳/自我介绍.md",
+                "fileType": ".md",
+                "title": "面试自我介绍",
+                "cover": null,
+                "date": "2024-04-23",
+                "pathDate": null,
+                "createdAt": "2024-04-23",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "遇到的项目难点亮点.md",
+                "path": "学习/前端面试备考归档/0-收纳/遇到的项目难点亮点.md",
+                "fileType": ".md",
+                "title": "AI 复盘",
+                "cover": null,
+                "date": "2024-04-22",
+                "pathDate": null,
+                "createdAt": "2024-04-22",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "会计",
+        "path": "学习/会计",
+        "children": [
+          {
+            "type": "file",
+            "name": "1.基础知识.md",
+            "path": "学习/会计/1.基础知识.md",
+            "fileType": ".md",
+            "title": "会计等式 (2个)",
+            "cover": "学习/会计/images/kuaijidengshi.png",
+            "date": "2026-06-09",
+            "pathDate": null,
+            "createdAt": "2026-06-09",
+            "updatedAt": "2026-07-14"
+          },
+          {
+            "type": "file",
+            "name": "2.科目.md",
+            "path": "学习/会计/2.科目.md",
+            "fileType": ".md",
+            "title": "会计科目分类",
+            "cover": "学习/会计/images/kuaijidengshi.png",
+            "date": "2026-06-09",
+            "pathDate": null,
+            "createdAt": "2026-06-09",
+            "updatedAt": "2026-07-14"
+          },
+          {
+            "type": "file",
+            "name": "3.借贷.md",
+            "path": "学习/会计/3.借贷.md",
+            "fileType": ".md",
+            "title": null,
+            "cover": "学习/会计/images/kuaijidengshi.png",
+            "date": "2026-06-09",
+            "pathDate": null,
+            "createdAt": "2026-06-09",
+            "updatedAt": "2026-07-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "展览",
+    "path": "展览",
+    "children": [
+      {
+        "type": "directory",
+        "name": "玩偶艺术展_2026_07_14",
+        "path": "展览/玩偶艺术展_2026_07_14",
+        "children": [
+          {
+            "type": "file",
+            "name": "index.md",
+            "path": "展览/玩偶艺术展_2026_07_14/index.md",
+            "fileType": ".md",
+            "title": "07月14日 · 玩偶艺术展",
+            "cover": "展览/玩偶艺术展_2026_07_14/images/IMG_7790.jpg",
+            "date": "2026-07-14",
+            "pathDate": null,
+            "createdAt": "2026-07-14",
+            "updatedAt": "2026-07-14"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "pretty",
+        "path": "展览/pretty",
+        "children": [
+          {
+            "type": "file",
+            "name": "20260305.md",
+            "path": "展览/pretty/20260305.md",
+            "fileType": ".md",
+            "title": null,
+            "cover": "展览/pretty/images/1.png",
+            "date": "2026-03-05",
+            "pathDate": "2026-03-05",
+            "createdAt": "2026-03-05",
+            "updatedAt": "2026-07-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "directory",
+    "name": "随笔",
+    "path": "随笔",
+    "children": [
+      {
+        "type": "directory",
+        "name": "小说",
+        "path": "随笔/小说",
+        "children": [
+          {
+            "type": "file",
+            "name": "第一章节.md",
+            "path": "随笔/小说/第一章节.md",
+            "fileType": ".md",
+            "title": null,
+            "cover": null,
+            "date": "2026-06-09",
+            "pathDate": null,
+            "createdAt": "2026-06-09",
+            "updatedAt": "2026-07-14"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "使用AI随笔",
+        "path": "随笔/使用AI随笔",
+        "children": [
+          {
+            "type": "file",
+            "name": "worktree.md",
+            "path": "随笔/使用AI随笔/worktree.md",
+            "fileType": ".md",
+            "title": "Worktree vs 分支",
+            "cover": null,
+            "date": "2026-03-24",
+            "pathDate": null,
+            "createdAt": "2026-03-24",
+            "updatedAt": "2026-07-14"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "04月19日.md",
+        "path": "随笔/04月19日.md",
+        "fileType": ".md",
+        "title": null,
+        "cover": "随笔/image.png",
+        "date": "2026-06-09",
+        "pathDate": null,
+        "createdAt": "2026-06-09",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "06月17日.md",
+        "path": "随笔/06月17日.md",
+        "fileType": ".md",
+        "title": null,
+        "cover": "随笔/image.png",
+        "date": "2026-06-17",
+        "pathDate": null,
+        "createdAt": "2026-06-17",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "07月06日.md",
+        "path": "随笔/07月06日.md",
+        "fileType": ".md",
+        "title": "—————————— 从心理学上解释下这个情况 ——————————",
+        "cover": "随笔/image.png",
+        "date": "2026-07-07",
+        "pathDate": null,
+        "createdAt": "2026-07-07",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "07月07日.md",
+        "path": "随笔/07月07日.md",
+        "fileType": ".md",
+        "title": "日记",
+        "cover": "随笔/image.png",
+        "date": "2026-07-09",
+        "pathDate": null,
+        "createdAt": "2026-07-09",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "07月08日.md",
+        "path": "随笔/07月08日.md",
+        "fileType": ".md",
+        "title": null,
+        "cover": "随笔/image.png",
+        "date": "2026-07-09",
+        "pathDate": null,
+        "createdAt": "2026-07-09",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "7月.md",
+        "path": "随笔/7月.md",
+        "fileType": ".md",
+        "title": "07月13日",
+        "cover": "随笔/image.png",
+        "date": "2026-07-14",
+        "pathDate": null,
+        "createdAt": "2026-07-14",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "cursor_users_lixingjuan_documents_lzh.md",
+        "path": "随笔/cursor_users_lixingjuan_documents_lzh.md",
+        "fileType": ".md",
+        "title": "@/Users/lixingjuan/Documents/lzh/lzh-dealer/lzh-dealer-admin/",
+        "cover": "随笔/image.png",
+        "date": "2026-07-04",
+        "pathDate": null,
+        "createdAt": "2026-07-04",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "vpn坏了.md",
+        "path": "随笔/vpn坏了.md",
+        "fileType": ".md",
+        "title": null,
+        "cover": "随笔/image.png",
+        "date": "2026-06-09",
+        "pathDate": null,
+        "createdAt": "2026-06-09",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "回避型依恋.md",
+        "path": "随笔/回避型依恋.md",
+        "fileType": ".md",
+        "title": null,
+        "cover": "随笔/image.png",
+        "date": "2020-02-28",
+        "pathDate": null,
+        "createdAt": "2020-02-28",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "必看电视电影书.md",
+        "path": "随笔/必看电视电影书.md",
+        "fileType": ".md",
+        "title": "电视剧",
+        "cover": "随笔/image.png",
+        "date": "2026-07-06",
+        "pathDate": null,
+        "createdAt": "2026-07-06",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "我的创作原则.md",
+        "path": "随笔/我的创作原则.md",
+        "fileType": ".md",
+        "title": null,
+        "cover": "随笔/image.png",
+        "date": "2020-02-28",
+        "pathDate": null,
+        "createdAt": "2020-02-28",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "视频稿子.md",
+        "path": "随笔/视频稿子.md",
+        "fileType": ".md",
+        "title": null,
+        "cover": "随笔/image.png",
+        "date": "2026-07-14",
+        "pathDate": null,
+        "createdAt": "2026-07-14",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "风格网站推荐.md",
+        "path": "随笔/风格网站推荐.md",
+        "fileType": ".md",
+        "title": null,
+        "cover": "随笔/image.png",
+        "date": "2026-07-14",
+        "pathDate": null,
+        "createdAt": "2026-07-14",
+        "updatedAt": "2026-07-14"
+      }
+    ]
+  }
+]

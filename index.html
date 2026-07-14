@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LXJ, Blog ☀️</title>
+    <!-- 引入 React 和 ReactDOM -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <!-- 引入 Babel 编译器 -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- 引入 marked 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- 引入 highlight 库 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: #f5f7fa;
+        color: #2c3e50;
+        line-height: 1.6;
+      }
+
+      #wrappper {
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top left, rgba(184, 129, 78, 0.12), transparent 34rem),
+          linear-gradient(180deg, #fbfaf7 0%, #f4f0ea 100%);
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        border-bottom: 1px solid rgba(70, 58, 44, 0.12);
+        background: rgba(251, 250, 247, 0.92);
+        backdrop-filter: blur(16px);
+      }
+
+      .site-header-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 18px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+
+      .site-brand {
+        border: 0;
+        background: transparent;
+        padding: 0;
+        color: #2f2a24;
+        cursor: pointer;
+        text-align: left;
+      }
+
+      .site-brand-title {
+        display: block;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 22px;
+        line-height: 1.1;
+        letter-spacing: 0;
+      }
+
+      .site-brand-subtitle {
+        display: block;
+        margin-top: 3px;
+        color: #8a7664;
+        font-size: 12px;
+      }
+
+      .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .top-nav-button {
+        border: 1px solid transparent;
+        background: transparent;
+        color: #5f5145;
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-size: 14px;
+        line-height: 1;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .top-nav-button:hover,
+      .top-nav-button.is-active {
+        color: #251f1a;
+        border-color: rgba(105, 77, 45, 0.18);
+        background: rgba(255, 255, 255, 0.72);
+      }
+
+      #content {
+        min-height: calc(100vh - 76px);
+        padding: 56px 32px 88px;
+        background: transparent;
+        max-width: 980px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      #wrappper.exhibition-mode {
+        background: #050303;
+      }
+
+      #wrappper.exhibition-mode .site-header {
+        border-bottom-color: rgba(165, 22, 36, 0.28);
+        background: rgba(5, 3, 3, 0.84);
+      }
+
+      #wrappper.exhibition-mode .site-brand,
+      #wrappper.exhibition-mode .site-brand-title,
+      #wrappper.exhibition-mode .top-nav-button {
+        color: #f0e7dc;
+      }
+
+      #wrappper.exhibition-mode .site-brand-subtitle {
+        color: #9e706d;
+      }
+
+      #wrappper.exhibition-mode .top-nav-button:hover,
+      #wrappper.exhibition-mode .top-nav-button.is-active {
+        color: #fff8ef;
+        border-color: rgba(166, 24, 40, 0.45);
+        background: rgba(90, 12, 20, 0.38);
+      }
+
+      #wrappper.exhibition-mode #content {
+        max-width: none;
+        min-height: calc(100vh - 76px);
+        padding: 0;
+        background: #050303;
+      }
+
+      #wrappper.exhibition-mode .article-meta,
+      #wrappper.exhibition-mode .table-of-contents,
+      #wrappper.exhibition-mode #content > div > h1:first-child {
+        display: none;
+      }
+
+      #content::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      #content::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      #content::-webkit-scrollbar-thumb {
+        background: #cbd5e0;
+        border-radius: 4px;
+      }
+
+      #content::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+
+      .pl-20 {
+        padding-left: 20px;
+      }
+
+      .file {
+        color: #4a5568;
+        padding: 10px 20px 10px 40px;
+        margin: 2px 12px;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        font-size: 14px;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .file::before {
+        content: '📄';
+        margin-right: 8px;
+        font-size: 12px;
+        opacity: 0.6;
+      }
+
+      .file:hover {
+        background: linear-gradient(90deg, #e6f3ff 0%, #f0f8ff 100%);
+        color: #2563eb;
+        cursor: pointer;
+        transform: translateX(4px);
+        box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+      }
+
+      .file:active {
+        transform: translateX(2px);
+      }
+
+      .folder {
+        padding: 4px 12px;
+        margin: 4px 0;
+      }
+
+      .folder > .folder-name {
+        color: #2d3748;
+        font-weight: 600;
+        padding: 10px 20px 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        user-select: none;
+      }
+
+      .folder > .folder-name:hover {
+        background: #f7fafc;
+        color: #1a202c;
+      }
+
+      .font-20 {
+        font-size: 18px;
+        margin-right: 8px;
+        transition: transform 0.2s ease;
+        display: inline-block;
+        color: #718096;
+      }
+
+      .is-open-arrow {
+        transform: rotate(90deg);
+        display: inline-block;
+        color: #4299e1;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0px;
+      }
+
+      ul > li > a {
+        color: #2563eb;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      ul > li > a:hover {
+        color: #1d4ed8;
+        text-decoration: underline;
+      }
+
+      .article-meta {
+        margin-bottom: 32px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #e2e8f0;
+        background: linear-gradient(90deg, #f8f9fa 0%, transparent 100%);
+        padding: 16px 24px;
+        border-radius: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .created-date,
+      .updated-date {
+        font-size: 14px;
+        color: #64748b;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+      }
+
+      .updated-date {
+        color: #4299e1;
+      }
+
+      .category-page {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .category-kicker {
+        color: #9a7a54;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+      }
+
+      .category-title {
+        margin: 0;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 44px;
+        line-height: 1.12;
+        font-weight: 500;
+        color: #2c251f;
+        letter-spacing: 0;
+      }
+
+      .category-summary {
+        margin: 14px 0 32px;
+        color: #7a6b5d;
+        font-size: 15px;
+      }
+
+      .category-back {
+        border: 0;
+        background: transparent;
+        color: #8b6a44;
+        padding: 0;
+        margin: 0 0 18px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .category-back:hover {
+        color: #4a3521;
+        text-decoration: underline;
+      }
+
+      .collection-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+      }
+
+      .collection-card {
+        border: 1px solid rgba(72, 58, 44, 0.12);
+        background: rgba(255, 255, 255, 0.68);
+        border-radius: 8px;
+        padding: 20px;
+        min-height: 132px;
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      }
+
+      .collection-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(122, 88, 50, 0.32);
+        background: rgba(255, 255, 255, 0.92);
+      }
+
+      .collection-title {
+        color: #2d2924;
+        font-size: 19px;
+        font-weight: 650;
+        line-height: 1.35;
+      }
+
+      .collection-meta {
+        margin-top: 12px;
+        color: #8f8174;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .article-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .category-page.is-exhibition .article-list {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+      }
+
+      .article-list-item {
+        width: 100%;
+        border: 1px solid rgba(72, 58, 44, 0.12);
+        background: rgba(255, 255, 255, 0.68);
+        border-radius: 8px;
+        padding: 18px 20px;
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      }
+
+      .category-page.is-exhibition .article-list-item {
+        padding: 0;
+        overflow: hidden;
+        min-height: 100%;
+      }
+
+      .article-list-item:hover {
+        transform: translateY(-2px);
+        border-color: rgba(122, 88, 50, 0.32);
+        background: rgba(255, 255, 255, 0.92);
+      }
+
+      .article-list-cover {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        background: #ece5db;
+      }
+
+      .article-list-cover img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .article-list-body {
+        padding: 18px 20px;
+      }
+
+      .article-list-item:not(.has-cover) .article-list-body {
+        padding: 0;
+      }
+
+      .article-list-title {
+        color: #2d2924;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.45;
+      }
+
+      .category-page.is-exhibition .article-list-title {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      .article-list-path {
+        margin-top: 6px;
+        color: #8f8174;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .article-list-meta {
+        margin-top: 10px;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        color: #9a7a54;
+        font-size: 13px;
+      }
+
+      .empty-category {
+        border: 1px dashed rgba(72, 58, 44, 0.2);
+        border-radius: 8px;
+        padding: 32px;
+        color: #8f8174;
+        background: rgba(255, 255, 255, 0.46);
+      }
+
+      /* Markdown 内容样式 */
+      #content h1 {
+        font-size: 2.5em;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 24px;
+        color: #1a202c;
+        border-bottom: 3px solid #4299e1;
+        padding-bottom: 12px;
+      }
+
+      #content h2 {
+        font-size: 2em;
+        font-weight: 600;
+        margin-top: 32px;
+        margin-bottom: 16px;
+        color: #2d3748;
+      }
+
+      #content h3 {
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-top: 24px;
+        margin-bottom: 12px;
+        color: #4a5568;
+      }
+
+      #content p {
+        margin-bottom: 16px;
+        line-height: 1.8;
+        color: #4a5568;
+      }
+
+      #content code {
+        background: #f1f5f9;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        font-size: 0.9em;
+        color: #e53e3e;
+      }
+
+      #content pre {
+        background: #1e293b;
+        color: #e2e8f0;
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 24px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      #content pre code {
+        background: transparent;
+        padding: 0;
+        color: inherit;
+        font-size: 14px;
+      }
+
+      #content blockquote {
+        border-left: 4px solid #4299e1;
+        padding-left: 20px;
+        margin: 24px 0;
+        color: #64748b;
+        font-style: italic;
+        background: #f8f9fa;
+        padding: 16px 20px;
+        border-radius: 4px;
+      }
+
+      #content ul,
+      #content ol {
+        margin: 16px 0;
+        padding-left: 32px;
+      }
+
+      #content li {
+        margin: 8px 0;
+        color: #4a5568;
+      }
+
+      #content a {
+        color: #2563eb;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      #content a:hover {
+        color: #1d4ed8;
+        text-decoration: underline;
+      }
+
+      #content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 24px 0;
+      }
+
+      #content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 24px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      #content table th,
+      #content table td {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      #content table th {
+        background: #f7fafc;
+        font-weight: 600;
+        color: #2d3748;
+      }
+
+      #content table tr:hover {
+        background: #f8f9fa;
+      }
+
+      /* 目录样式 */
+      .table-of-contents {
+        position: fixed;
+        right: 20px;
+        top: 100px;
+        width: 240px;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        font-size: 14px;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+      }
+
+      .table-of-contents .toc-list {
+        cursor: default;
+      }
+
+      .table-of-contents .toc-link {
+        cursor: pointer;
+        user-select: text;
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+      }
+
+      .table-of-contents.dragging {
+        opacity: 0.8;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        cursor: grabbing;
+      }
+
+      .table-of-contents:active {
+        cursor: grabbing;
+      }
+
+      .table-of-contents::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .table-of-contents::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      .table-of-contents::-webkit-scrollbar-thumb {
+        background: #cbd5e0;
+        border-radius: 3px;
+      }
+
+      .table-of-contents::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+
+      .toc-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #e2e8f0;
+        position: relative;
+        padding-right: 20px;
+      }
+
+      .toc-title::after {
+        content: '⋮⋮';
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #94a3b8;
+        font-size: 12px;
+        line-height: 1.5;
+        cursor: move;
+      }
+
+      .table-of-contents:hover .toc-title::after {
+        color: #64748b;
+      }
+
+      .toc-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        cursor: default;
+      }
+
+      .toc-link {
+        cursor: pointer !important;
+      }
+
+      .toc-item {
+        margin: 4px 0;
+        list-style: none;
+      }
+
+      .toc-item-h1 {
+        margin: 8px 0 4px 0;
+        padding-left: 0;
+      }
+
+      .toc-item-h2 {
+        margin: 4px 0;
+        padding-left: 16px;
+      }
+
+      .toc-item-h3 {
+        margin: 4px 0;
+        padding-left: 32px;
+      }
+
+      .toc-link {
+        color: #4a5568;
+        text-decoration: none;
+        display: block;
+        padding: 6px 8px;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+        line-height: 1.5;
+      }
+
+      .toc-link:hover {
+        background: #f7fafc;
+        color: #2563eb;
+      }
+
+      .toc-link-h1 {
+        font-weight: 700;
+        color: #1a202c;
+        font-size: 15px;
+      }
+
+      .toc-link-h2 {
+        font-weight: 600;
+        color: #2d3748;
+        font-size: 14px;
+      }
+
+      .toc-link-h3 {
+        font-weight: 400;
+        color: #64748b;
+        font-size: 13px;
+      }
+
+      /* 响应式设计 - 小屏幕隐藏目录 */
+      @media (max-width: 1400px) {
+        .table-of-contents {
+          display: none;
+        }
+      }
+
+      /* 动画效果 */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      #content > div {
+        animation: fadeIn 0.3s ease;
+      }
+
+      /* 响应式设计 */
+      @media (max-width: 768px) {
+        .site-header-inner {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 16px 20px;
+          gap: 14px;
+        }
+
+        .top-nav {
+          justify-content: flex-start;
+        }
+
+        #content {
+          padding: 32px 20px 64px;
+        }
+
+        .category-title {
+          font-size: 34px;
+        }
+      }
+    </style>
+    <script type="text/babel">
+      const AppContext = React.createContext();
+
+      class ErrorBoundary extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { hasError: false };
+        }
+
+        static getDerivedStateFromError(error) {
+          // 更新 state 以便下次渲染能够显示降级后的 UI
+          return { hasError: true };
+        }
+
+        componentDidCatch(error, errorInfo) {
+          // 你同样可以将错误日志上报给服务器
+          console.error("ErrorBoundary caught an error", error, errorInfo);
+        }
+
+        render() {
+          if (this.state.hasError) {
+            // 你可以自定义降级后的 UI 并渲染
+            return (
+              <div style={{ textAlign: 'center', padding: '100px 20px', color: '#e53e3e' }}>
+                <div style={{ fontSize: '48px', marginBottom: '20px' }}>⚠️</div>
+                <h1 style={{ fontSize: '24px', fontWeight: '600', marginBottom: '12px' }}>出了点问题</h1>
+                <p style={{ color: '#718096', fontSize: '16px' }}>请刷新页面重试</p>
+              </div>
+            );
+          }
+
+          return this.props.children;
+        }
+      }
+
+      const Arrow = ({ open }) => <span class={`font-20 ${open ? "is-open-arrow" : ""}`}>‣</span>;
+
+      const File = ({ name = "", path = "", fileType, createdAt, updatedAt }) => {
+        const { updateContent } = React.useContext(AppContext);
+
+        if (!name) return null;
+        return (
+          <div class="file" onClick={() => updateContent({ path, fileType, createdAt, updatedAt })}>
+            {name}
+          </div>
+        );
+      };
+
+      const Folder = ({ name, children = [] }) => {
+        const [isOpen, setIsOpen] = React.useState(false);
+        return (
+          <div class="folder">
+            <div class="folder-name" onClick={() => setIsOpen((pre) => !pre)}>
+              <Arrow open={isOpen} />
+              {name}
+            </div>
+            {isOpen && (
+              <div>
+                {children.map((it) => {
+                  if (it.type === "directory") {
+                    return <Folder name={it.name} children={it.children} />;
+                  }
+                  return <File name={it.name} path={it.path} fileType={it.fileType} createdAt={it.createdAt} updatedAt={it.updatedAt} />;
+                })}
+              </div>
+            )}
+          </div>
+        );
+      };
+
+      // 递归渲染目录项
+      const renderTOCItem = (item, handleClick) => {
+        const levelClass = `toc-item-h${item.level}`;
+        const linkClass = `toc-link toc-link-h${item.level}`;
+        
+        return (
+          <React.Fragment key={item.id}>
+            <li class={`toc-item ${levelClass}`}>
+              <a
+                href={`#${item.id}`}
+                class={linkClass}
+                onClick={(e) => handleClick(e, item.id)}
+              >
+                {item.text}
+              </a>
+            </li>
+            {item.children && item.children.length > 0 && (
+              <>
+                {item.children.map((child) => renderTOCItem(child, handleClick))}
+              </>
+            )}
+          </React.Fragment>
+        );
+      };
+
+      // 目录组件
+      const TableOfContents = ({ toc, currentPath }) => {
+        const tocRef = React.useRef(null);
+        const [position, setPosition] = React.useState({ right: 20, top: 100 });
+        const isDraggingRef = React.useRef(false);
+        const dragStartPos = React.useRef({ x: 0, y: 0 });
+        const initialTocPos = React.useRef({ right: 0, top: 0 });
+
+        // 从 localStorage 加载保存的位置
+        React.useEffect(() => {
+          if (currentPath && tocRef.current) {
+            const savedPosition = localStorage.getItem(`toc-position-${currentPath}`);
+            if (savedPosition) {
+              try {
+                const pos = JSON.parse(savedPosition);
+                setPosition(pos);
+                tocRef.current.style.right = `${pos.right}px`;
+                tocRef.current.style.top = `${pos.top}px`;
+              } catch (e) {
+                console.error('Failed to parse saved position:', e);
+              }
+            } else {
+              // 如果没有保存的位置，使用默认值
+              tocRef.current.style.right = '20px';
+              tocRef.current.style.top = '100px';
+            }
+          }
+        }, [currentPath]);
+
+        // 保存位置到 localStorage
+        const savePosition = React.useCallback((pos) => {
+          if (currentPath) {
+            localStorage.setItem(`toc-position-${currentPath}`, JSON.stringify(pos));
+          }
+        }, [currentPath]);
+
+        // 处理鼠标移动 - 使用 useRef 存储函数，避免闭包问题
+        const handleMouseMoveRef = React.useRef(null);
+        const handleMouseUpRef = React.useRef(null);
+        
+        // 初始化事件处理函数
+        React.useEffect(() => {
+          handleMouseMoveRef.current = (e) => {
+            if (!isDraggingRef.current || !tocRef.current) return;
+
+            const deltaX = dragStartPos.current.x - e.clientX;
+            const deltaY = e.clientY - dragStartPos.current.y;
+
+            const newRight = Math.max(0, Math.min(window.innerWidth - 240, initialTocPos.current.right + deltaX));
+            const newTop = Math.max(0, Math.min(window.innerHeight - 200, initialTocPos.current.top + deltaY));
+
+            tocRef.current.style.right = `${newRight}px`;
+            tocRef.current.style.top = `${newTop}px`;
+          };
+
+          handleMouseUpRef.current = () => {
+            if (isDraggingRef.current && tocRef.current) {
+              const rect = tocRef.current.getBoundingClientRect();
+              const newPosition = {
+                right: window.innerWidth - rect.right,
+                top: rect.top
+              };
+              setPosition(newPosition);
+              savePosition(newPosition);
+              tocRef.current.classList.remove('dragging');
+              isDraggingRef.current = false;
+
+              // 移除事件监听器
+              if (handleMouseMoveRef.current) {
+                document.removeEventListener('mousemove', handleMouseMoveRef.current);
+              }
+              if (handleMouseUpRef.current) {
+                document.removeEventListener('mouseup', handleMouseUpRef.current);
+              }
+            }
+          };
+        }, [savePosition]);
+
+        // 处理鼠标按下
+        const handleMouseDown = React.useCallback((e) => {
+          // 如果点击的是链接或链接内的元素，不触发拖拽
+          const clickedLink = e.target.tagName === 'A' || e.target.closest('a');
+          // 如果点击的是标题区域（包括拖拽图标），允许拖拽
+          const clickedTitle = e.target.closest('.toc-title');
+          
+          if (clickedLink && !clickedTitle) {
+            return;
+          }
+
+          isDraggingRef.current = true;
+          dragStartPos.current = { x: e.clientX, y: e.clientY };
+          
+          if (tocRef.current) {
+            const rect = tocRef.current.getBoundingClientRect();
+            initialTocPos.current = {
+              right: window.innerWidth - rect.right,
+              top: rect.top
+            };
+            tocRef.current.classList.add('dragging');
+          }
+
+          // 添加事件监听器
+          if (handleMouseMoveRef.current) {
+            document.addEventListener('mousemove', handleMouseMoveRef.current);
+          }
+          if (handleMouseUpRef.current) {
+            document.addEventListener('mouseup', handleMouseUpRef.current);
+          }
+
+          e.preventDefault();
+          e.stopPropagation();
+        }, []);
+
+        const handleClick = React.useCallback((e, id) => {
+          // 如果正在拖拽，不触发点击跳转
+          if (isDraggingRef.current) {
+            e.preventDefault();
+            return;
+          }
+
+          e.preventDefault();
+          const element = document.getElementById(id);
+          const contentContainer = document.getElementById('content');
+          if (element && contentContainer) {
+            // 计算元素相对于内容容器的位置
+            const elementTop = element.getBoundingClientRect().top;
+            const containerTop = contentContainer.getBoundingClientRect().top;
+            const scrollTop = contentContainer.scrollTop;
+            const targetScrollTop = scrollTop + elementTop - containerTop - 20; // 20px 偏移
+            
+            contentContainer.scrollTo({
+              top: targetScrollTop,
+              behavior: 'smooth'
+            });
+          }
+        }, []);
+
+        if (!toc || toc.length === 0) {
+          return null;
+        }
+
+        // 计算总标题数（递归计算所有级别的标题）
+        const countHeadings = (items) => {
+          return items.reduce((sum, item) => {
+            return sum + 1 + (item.children ? countHeadings(item.children) : 0);
+          }, 0);
+        };
+
+        const totalHeadings = countHeadings(toc);
+
+        // 只有当标题数量 >= 3 时才显示
+        if (totalHeadings < 3) {
+          return null;
+        }
+
+        return (
+          <div 
+            ref={tocRef}
+            className="table-of-contents"
+            onMouseDown={handleMouseDown}
+            style={{ right: `${position.right}px`, top: `${position.top}px`, cursor: 'move' }}
+          >
+            <div className="toc-title" style={{ cursor: 'move' }}>📑 目录</div>
+            <ul className="toc-list">
+              {toc.map((item) => renderTOCItem(item, handleClick))}
+            </ul>
+          </div>
+        );
+      };
+
+      const isREADME = (path) => {
+        return path.includes("/README.md");
+      };
+
+      const DISPLAY_FILE_TYPES = new Set([".md", ".html", ".pdf"]);
+
+      const scrollToPageTop = () => {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      };
+
+      const getFileTitle = (item) => {
+        if (!item) return "";
+        if (item.title) return item.title;
+        const normalizedPath = item.path || "";
+        const fileName = item.name || "";
+        const ext = item.fileType || "";
+        const nameWithoutExt = ext ? fileName.slice(0, -ext.length) : fileName;
+
+        if (fileName.toLowerCase() === "index.md" || fileName.toLowerCase() === "index.html") {
+          const parts = normalizedPath.split("/").filter(Boolean);
+          return parts.length > 1 ? parts[parts.length - 2] : nameWithoutExt;
+        }
+
+        return nameWithoutExt || fileName;
+      };
+
+      const flattenDisplayFiles = (nodes = [], parentNames = []) => {
+        return nodes.flatMap((node) => {
+          if (node.type === "directory") {
+            return flattenDisplayFiles(node.children || [], [...parentNames, node.name]);
+          }
+
+          const fileType = (node.fileType || "").toLowerCase();
+          if (!DISPLAY_FILE_TYPES.has(fileType)) return [];
+
+          return [{
+            ...node,
+            title: getFileTitle(node),
+            categoryTrail: parentNames,
+          }];
+        });
+      };
+
+      const getTopLevelCategories = (nodes = []) => {
+        return nodes.filter((node) => node.type === "directory");
+      };
+
+      const sortFilesByDateDesc = (files = []) => {
+        return [...files].sort((a, b) => {
+          const dateA = a.date || a.createdAt || a.updatedAt || "";
+          const dateB = b.date || b.createdAt || b.updatedAt || "";
+          if (dateA !== dateB) return dateB.localeCompare(dateA);
+          return (a.title || a.name || "").localeCompare(b.title || b.name || "", "zh-Hans-CN");
+        });
+      };
+
+      const formatDisplayDate = (file) => {
+        return file.date || file.createdAt || file.updatedAt || "";
+      };
+
+      const getLatestDate = (files = []) => {
+        return files
+          .map(formatDisplayDate)
+          .filter(Boolean)
+          .sort((a, b) => b.localeCompare(a))[0] || "";
+      };
+
+      const createCollection = (node, parentCategory) => {
+        const files = sortFilesByDateDesc(flattenDisplayFiles(node.children || []));
+        return {
+          name: node.name,
+          path: node.path,
+          parentCategory,
+          node,
+          files,
+          latestDate: getLatestDate(files),
+        };
+      };
+
+      const getCategoryCollections = (category) => {
+        if (!category) return [];
+
+        const directFiles = [];
+        const collections = [];
+
+        (category.children || []).forEach((child) => {
+          if (child.type === "directory") {
+            collections.push(createCollection(child, category));
+            return;
+          }
+
+          const fileType = (child.fileType || "").toLowerCase();
+          if (DISPLAY_FILE_TYPES.has(fileType)) {
+            directFiles.push({
+              ...child,
+              title: getFileTitle(child),
+              categoryTrail: [],
+            });
+          }
+        });
+
+        if (directFiles.length > 0) {
+          collections.unshift({
+            name: "未归入书架",
+            path: `${category.path}.__direct__`,
+            parentCategory: category,
+            node: null,
+            files: sortFilesByDateDesc(directFiles),
+            latestDate: getLatestDate(directFiles),
+          });
+        }
+
+        return collections.sort((a, b) => {
+          if (a.latestDate !== b.latestDate) return b.latestDate.localeCompare(a.latestDate);
+          return a.name.localeCompare(b.name, "zh-Hans-CN");
+        });
+      };
+
+      // 生成标题 ID（URL 友好）
+      const generateHeadingId = (text) => {
+        return text
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '') // 移除特殊字符
+          .replace(/\s+/g, '-') // 空格替换为连字符
+          .replace(/-+/g, '-') // 多个连字符合并为一个
+          .trim();
+      };
+
+      // 处理重复 ID
+      const ensureUniqueId = (id, existingIds) => {
+        let uniqueId = id;
+        let counter = 1;
+        while (existingIds.has(uniqueId)) {
+          uniqueId = `${id}-${counter}`;
+          counter++;
+        }
+        existingIds.add(uniqueId);
+        return uniqueId;
+      };
+
+      // 提取标题并构建目录
+      const extractTOC = (html) => {
+        // 使用临时容器来解析 HTML
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = html;
+        const headings = tempDiv.querySelectorAll('h1, h2, h3');
+        const toc = [];
+        const existingIds = new Set();
+        let currentH1 = null;
+        let currentH2 = null;
+
+        headings.forEach((heading) => {
+          const level = parseInt(heading.tagName.substring(1));
+          const text = heading.textContent.trim();
+          const id = ensureUniqueId(generateHeadingId(text), existingIds);
+
+          // 为标题添加 ID
+          heading.id = id;
+
+          if (level === 1) {
+            // H1 标题
+            currentH1 = { text, id, level, children: [] };
+            toc.push(currentH1);
+            currentH2 = null; // 重置 H2
+          } else if (level === 2) {
+            // H2 标题
+            currentH2 = { text, id, level, children: [] };
+            if (currentH1) {
+              // 如果有 H1，H2 作为 H1 的子项
+              currentH1.children.push(currentH2);
+            } else {
+              // 如果没有 H1，H2 作为顶级
+              toc.push(currentH2);
+            }
+          } else if (level === 3) {
+            // H3 标题
+            const h3Item = { text, id, level };
+            if (currentH2) {
+              // 如果有 H2，H3 作为 H2 的子项
+              currentH2.children.push(h3Item);
+            } else if (currentH1) {
+              // 如果有 H1 但没有 H2，H3 作为 H1 的子项
+              currentH1.children.push(h3Item);
+            } else {
+              // 如果既没有 H1 也没有 H2，H3 作为顶级（不太常见，但处理一下）
+              toc.push(h3Item);
+            }
+          }
+        });
+
+        // 将修改后的 HTML 返回
+        return { html: tempDiv.innerHTML, toc };
+      };
+
+      const loadContent = ({ path, fileType, createdAt, updatedAt }) => {
+        if (!path) {
+          alert("路径错误");
+          return;
+        }
+
+        const lowercaseFileType = fileType.toLocaleLowerCase();
+        if (lowercaseFileType === ".pdf") {
+          return { content: `<iframe src="${path}" style="width: 100%;height: 100vh;"></iframe>`, createdAt: null, updatedAt: null, toc: [] };
+        }
+
+        /**
+         * 根据当前文件类型，做不同的操作
+         * 1. html, 直接更新
+         * 2. markdown, 使用marked.parse, 解析为html进行展示
+         * 3. js, 按照code展示
+         */
+        return fetch(path)
+          .then((response) => response.text())
+          .then((fileContent) => {
+            switch (lowercaseFileType) {
+              case ".md": {
+                const htmlResult = marked.parse(fileContent);
+                const processedHtml = isREADME(path)
+                  ? htmlResult.replaceAll("<a href", '<a target="_blank" href')
+                  : htmlResult;
+                
+                // 提取目录
+                const { html: htmlWithIds, toc } = extractTOC(processedHtml);
+                
+                return { 
+                  content: htmlWithIds, 
+                  createdAt: createdAt, 
+                  updatedAt: updatedAt,
+                  toc: toc
+                };
+              }
+              case ".html":
+                return { content: fileContent, createdAt: null, updatedAt: null, toc: [] };
+              case ".jpg":
+              case ".jpeg":
+              case ".png":
+              case ".gif":
+              case ".svg":
+              case ".webp":
+              case ".bmp":
+              case ".ico":
+                return { content: `<div style="text-align: center;"><img src="${path}"/></div>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".js":
+              case ".mjs":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-js">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".jsx":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-jsx">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".ts":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-ts">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".tsx":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-tsx">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".vue":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-vue">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".json":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-json">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".css":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-css">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".py":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-python">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".java":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-java">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".cpp":
+              case ".cxx":
+              case ".cc":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-cpp">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".c":
+              case ".h":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-c">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".go":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-go">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".rs":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-rust">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".php":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-php">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".rb":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-ruby">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".sh":
+              case ".bash":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-bash">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".yaml":
+              case ".yml":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-yaml">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".xml":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-xml">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".sql":
+                setTimeout(hljs.highlightAll, 0);
+                return { content: `<pre><code class="language-sql">${fileContent}</code></pre>`, createdAt: null, updatedAt: null, toc: [] };
+              case ".txt":
+              case ".log":
+                return { content: `<pre style="background: #f1f5f9; padding: 20px; border-radius: 8px; white-space: pre-wrap; font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;">${fileContent}</pre>`, createdAt: null, updatedAt: null, toc: [] };
+              default:
+                return { content: `<div style="color:red;">暂未支持该类型: ${fileType}</div>`, createdAt: null, updatedAt: null, toc: [] };
+            }
+          });
+      };
+
+      // React 组件
+      function App() {
+        const [sidebarData, setSidebarData] = React.useState([]);
+        const [menuLoading, setMenuLoading] = React.useState(true);
+        const [contentLoading, setContentLoading] = React.useState(true);
+        const [content, setContent] = React.useState(marked.parse("# Hello"));
+        const [currentCreatedAt, setCurrentCreatedAt] = React.useState(null);
+        const [currentUpdatedAt, setCurrentUpdatedAt] = React.useState(null);
+        const [currentFileType, setCurrentFileType] = React.useState("");
+        const [toc, setToc] = React.useState([]);
+        const [currentPath, setCurrentPath] = React.useState("");
+        const [currentView, setCurrentView] = React.useState("home");
+        const [currentCategory, setCurrentCategory] = React.useState(null);
+        const [currentCollection, setCurrentCollection] = React.useState(null);
+
+        React.useEffect(() => {
+          setMenuLoading(true);
+          fetch("structure.json")
+            .then((response) => response.json())
+            .then((data) => {
+              setSidebarData(data);
+              setContentLoading(true);
+              // 默认展示README.md的内容
+              return loadContent({ path: "./README.md", fileType: ".md", createdAt: null, updatedAt: null });
+            })
+            .then((result) => {
+              setContent(result.content);
+              setCurrentCreatedAt(result.createdAt);
+              setCurrentUpdatedAt(result.updatedAt);
+              setCurrentFileType(".md");
+              setToc(result.toc || []);
+              setCurrentPath("./README.md");
+              setCurrentView("home");
+              setCurrentCategory(null);
+              setCurrentCollection(null);
+            })
+            .finally(() => {
+              setMenuLoading(false);
+              setContentLoading(false);
+            });
+        }, []);
+
+        const value = React.useMemo(
+          () => ({
+            updateContent: async ({ path, fileType, createdAt, updatedAt }) => {
+              setContentLoading(true);
+              const result = await loadContent({ path, fileType, createdAt, updatedAt });
+              setContentLoading(false);
+              setContent(result.content);
+              setCurrentCreatedAt(result.createdAt);
+              setCurrentUpdatedAt(result.updatedAt);
+              setCurrentFileType(fileType);
+              setToc(result.toc || []);
+              setCurrentPath(path || "");
+              setCurrentView("article");
+              setCurrentCategory(null);
+              setCurrentCollection(null);
+              scrollToPageTop();
+            },
+            openHome: async () => {
+              setContentLoading(true);
+              const result = await loadContent({ path: "./README.md", fileType: ".md", createdAt: null, updatedAt: null });
+              setContentLoading(false);
+              setContent(result.content);
+              setCurrentCreatedAt(result.createdAt);
+              setCurrentUpdatedAt(result.updatedAt);
+              setCurrentFileType(".md");
+              setToc(result.toc || []);
+              setCurrentPath("./README.md");
+              setCurrentView("home");
+              setCurrentCategory(null);
+              setCurrentCollection(null);
+              scrollToPageTop();
+            },
+            openCategory: (category) => {
+              setCurrentCategory(category);
+              setCurrentCollection(null);
+              setCurrentView("category");
+              setContentLoading(false);
+              setToc([]);
+              setCurrentPath("");
+              setCurrentFileType("");
+              setCurrentCreatedAt(null);
+              setCurrentUpdatedAt(null);
+              scrollToPageTop();
+            },
+            openCollection: (collection) => {
+              setCurrentCategory(collection.parentCategory);
+              setCurrentCollection(collection);
+              setCurrentView("category");
+              setContentLoading(false);
+              setToc([]);
+              setCurrentPath("");
+              setCurrentFileType("");
+              setCurrentCreatedAt(null);
+              setCurrentUpdatedAt(null);
+              scrollToPageTop();
+            },
+          }),
+          [setContent]
+        );
+
+        const categories = React.useMemo(() => getTopLevelCategories(sidebarData), [sidebarData]);
+        const isExhibitionArticle =
+          currentView === "article" &&
+          currentFileType.toLowerCase() === ".md" &&
+          currentPath.replace(/^\.\//, "").startsWith("展览/");
+
+        const CategoryPage = ({ category }) => {
+          if (!category) return null;
+          const collections = getCategoryCollections(category);
+          const files = currentCollection ? currentCollection.files : [];
+          const isExhibition = category.name.includes("展览");
+
+          return (
+            <div class={`category-page ${isExhibition ? "is-exhibition" : ""}`}>
+              {currentCollection && (
+                <button type="button" class="category-back" onClick={() => value.openCategory(category)}>
+                  返回 {category.name}
+                </button>
+              )}
+              <p class="category-kicker">{currentCollection ? "Shelf" : "Room"}</p>
+              <h1 class="category-title">{currentCollection ? currentCollection.name : category.name}</h1>
+              <p class="category-summary">
+                {currentCollection
+                  ? `${files.length} 篇内容，按时间从近到远陈列。`
+                  : `${collections.length} 个书架，来自这个房间的二级目录。`}
+              </p>
+
+              {!currentCollection && collections.length === 0 && (
+                <div class="empty-category">这个房间暂时还没有可展示的文章。</div>
+              )}
+
+              {!currentCollection && collections.length > 0 && (
+                <div class="collection-grid">
+                  {collections.map((collection) => (
+                    <button
+                      key={collection.path}
+                      type="button"
+                      class="collection-card"
+                      onClick={() => value.openCollection(collection)}
+                    >
+                      <div class="collection-title">{collection.name}</div>
+                      <div class="collection-meta">
+                        <div>{collection.files.length} 篇内容</div>
+                        {collection.latestDate && <div>最近更新 {collection.latestDate}</div>}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {currentCollection && files.length === 0 && (
+                <div class="empty-category">这个书架暂时还没有可展示的文章。</div>
+              )}
+
+              {currentCollection && files.length > 0 && (
+                <div class="article-list">
+                  {files.map((file) => (
+                    <button
+                      key={file.path}
+                      type="button"
+                      class={`article-list-item ${file.cover ? "has-cover" : ""}`}
+                      onClick={() => value.updateContent(file)}
+                    >
+                      {file.cover && (
+                        <div class="article-list-cover">
+                          <img src={file.cover} alt="" loading="lazy" />
+                        </div>
+                      )}
+                      <div class="article-list-body">
+                        <div class="article-list-title">{file.title}</div>
+                        <div class="article-list-path">{file.categoryTrail.join(" / ") || category.name}</div>
+                        <div class="article-list-meta">
+                          {formatDisplayDate(file) && <span>{formatDisplayDate(file)}</span>}
+                          {file.pathDate && <span>来自路径日期</span>}
+                        </div>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        };
+
+        const TopNavigation = () => (
+          <header class="site-header">
+            <div class="site-header-inner">
+              <button type="button" class="site-brand" onClick={() => value.openHome()}>
+                <span class="site-brand-title">LXJ, Blog</span>
+                <span class="site-brand-subtitle">Personal knowledge palace</span>
+              </button>
+              <nav class="top-nav" aria-label="主要导航">
+                <button
+                  type="button"
+                  class={`top-nav-button ${currentView === "home" ? "is-active" : ""}`}
+                  onClick={() => value.openHome()}
+                >
+                  首页
+                </button>
+                {categories.map((category) => (
+                  <button
+                    key={category.path}
+                    type="button"
+                    class={`top-nav-button ${currentCategory && currentCategory.path === category.path ? "is-active" : ""}`}
+                    onClick={() => value.openCategory(category)}
+                  >
+                    {category.name}
+                  </button>
+                ))}
+              </nav>
+            </div>
+          </header>
+        );
+
+        return (
+          <AppContext.Provider value={value}>
+            <div id="wrappper" class={isExhibitionArticle ? "exhibition-mode" : ""}>
+              <TopNavigation />
+
+              <ErrorBoundary>
+                <div id="content">
+                  {(() => {
+                    if (menuLoading || contentLoading) {
+                      return (
+                        <div style={{ textAlign: 'center', padding: '100px 20px', color: '#4299e1' }}>
+                          <div style={{ fontSize: '48px', marginBottom: '20px', animation: 'spin 1s linear infinite' }}>⚙️</div>
+                          <div style={{ fontSize: '18px', fontWeight: '500' }}>加载中...</div>
+                        </div>
+                      );
+                    }
+                    if (currentView === "category") {
+                      return <CategoryPage category={currentCategory} />;
+                    }
+                    if (!content) {
+                      return (
+                        <div style={{ textAlign: 'center', padding: '100px 20px', color: '#94a3b8' }}>
+                          <div style={{ fontSize: '48px', marginBottom: '20px' }}>📭</div>
+                          <div style={{ fontSize: '18px', fontWeight: '500' }}>暂无内容</div>
+                        </div>
+                      );
+                    }
+                    return (
+                      <>
+                        {currentFileType.toLowerCase() === ".md" && (currentCreatedAt || currentUpdatedAt) && (
+                          <div class="article-meta">
+                            {currentCreatedAt && (
+                              <span class="created-date">📅 创建时间: {currentCreatedAt}</span>
+                            )}
+                            {currentUpdatedAt && (
+                              <span class="updated-date">🔄 更新时间: {currentUpdatedAt}</span>
+                            )}
+                          </div>
+                        )}
+                        <div dangerouslySetInnerHTML={{ __html: content }} />
+                        {currentFileType.toLowerCase() === ".md" && <TableOfContents toc={toc} currentPath={currentPath} />}
+                      </>
+                    );
+                  })()}
+                </div>
+              </ErrorBoundary>
+            </div>
+          </AppContext.Provider>
+        );
+      }
+
+      const app = document.createElement("div");
+      document.body.appendChild(app);
+      ReactDOM.render(<App />, app);
+    </script>
+  </head>
+
+  <body></body>
+</html>
