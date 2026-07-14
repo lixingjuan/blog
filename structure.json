@@ -2968,38 +2968,38 @@
     "children": [
       {
         "type": "directory",
-        "name": "玩偶艺术展_2026_07_14",
-        "path": "展览/玩偶艺术展_2026_07_14",
+        "name": "2026_音乐专辑封面",
+        "path": "展览/2026_音乐专辑封面",
         "children": [
           {
             "type": "file",
-            "name": "index.md",
-            "path": "展览/玩偶艺术展_2026_07_14/index.md",
+            "name": "20260305.md",
+            "path": "展览/2026_音乐专辑封面/20260305.md",
             "fileType": ".md",
-            "title": "07月14日 · 玩偶艺术展",
-            "cover": "展览/玩偶艺术展_2026_07_14/images/IMG_7790.jpg",
-            "date": "2026-07-14",
-            "pathDate": null,
-            "createdAt": "2026-07-14",
+            "title": null,
+            "cover": "展览/2026_音乐专辑封面/images/1.png",
+            "date": "2026-03-05",
+            "pathDate": "2026-03-05",
+            "createdAt": "2026-03-05",
             "updatedAt": "2026-07-14"
           }
         ]
       },
       {
         "type": "directory",
-        "name": "pretty",
-        "path": "展览/pretty",
+        "name": "2026_07_14_玩偶艺术展",
+        "path": "展览/2026_07_14_玩偶艺术展",
         "children": [
           {
             "type": "file",
-            "name": "20260305.md",
-            "path": "展览/pretty/20260305.md",
+            "name": "index.md",
+            "path": "展览/2026_07_14_玩偶艺术展/index.md",
             "fileType": ".md",
-            "title": null,
-            "cover": "展览/pretty/images/1.png",
-            "date": "2026-03-05",
-            "pathDate": "2026-03-05",
-            "createdAt": "2026-03-05",
+            "title": "07月14日 · 玩偶艺术展",
+            "cover": "展览/2026_07_14_玩偶艺术展/images/IMG_7790.jpg",
+            "date": "2026-07-14",
+            "pathDate": null,
+            "createdAt": "2026-07-14",
             "updatedAt": "2026-07-14"
           }
         ]
