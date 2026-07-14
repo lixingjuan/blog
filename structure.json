@@ -1273,6 +1273,14 @@
         "fileType": ".md",
         "createdAt": "2026-07-14",
         "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "风格网站推荐.md",
+        "path": "00-日常记录/风格网站推荐.md",
+        "fileType": ".md",
+        "createdAt": "2026-07-14",
+        "updatedAt": "2026-07-14"
       }
     ]
   },
