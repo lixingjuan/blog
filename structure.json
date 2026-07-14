@@ -267,6 +267,1164 @@
     "path": "00-日常记录",
     "children": [
       {
+        "type": "directory",
+        "name": "2026-07-14",
+        "path": "00-日常记录/2026-07-14",
+        "children": [
+          {
+            "type": "directory",
+            "name": "玩偶艺术展",
+            "path": "00-日常记录/2026-07-14/玩偶艺术展",
+            "children": [
+              {
+                "type": "file",
+                "name": "IMG_7790.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7790.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7791.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7791.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7792.JPG",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7792.JPG",
+                "fileType": ".JPG",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7793.JPG",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7793.JPG",
+                "fileType": ".JPG",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7794.JPG",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7794.JPG",
+                "fileType": ".JPG",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7795.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7795.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7796.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7796.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7797.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7797.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7799.MOV",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7799.MOV",
+                "fileType": ".MOV",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7800.MOV",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7800.MOV",
+                "fileType": ".MOV",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7801.MOV",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7801.MOV",
+                "fileType": ".MOV",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7802.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7802.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7803.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7803.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7804.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7804.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7805.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7805.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7806.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7806.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7807.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7807.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7808.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7808.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7809.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7809.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7810.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7810.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7811.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7811.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7812.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7812.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7813.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7813.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7814.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7814.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7815.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7815.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7816.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7816.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7817.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7817.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7818.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7818.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7819.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7819.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7820.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7820.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7821.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7821.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7822.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7822.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7823.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7823.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7824.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7824.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7825.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7825.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7826.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7826.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7827.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7827.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7828.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7828.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7829.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7829.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7830.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7830.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7831.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7831.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7832.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7832.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7833.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7833.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7834.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7834.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7835.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7835.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7836.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7836.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7837.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7837.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7838.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7838.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7839.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7839.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7840.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7840.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7841.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7841.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7842.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7842.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7843.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7843.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7844.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7844.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7845.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7845.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7846.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7846.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7847.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7847.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7848.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7848.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7849.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7849.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7850.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7850.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7851.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7851.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7852.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7852.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7853.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7853.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7854.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7854.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7855.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7855.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7856.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7856.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7857.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7857.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7858.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7858.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7859.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7859.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7860.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7860.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7861.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7861.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7862.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7862.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7863.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7863.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7864.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7864.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7865.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7865.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7866.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7866.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7867.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7867.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7868.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7868.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7869.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7869.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7870.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7870.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7871.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7871.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7872.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7872.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7873.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7873.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7874.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7874.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7875.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7875.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7876.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7876.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7877.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7877.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7878.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7878.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7879.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7879.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7880.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7880.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7881.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7881.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7882.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7882.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7883.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7883.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7884.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7884.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7885.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7885.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7886.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7886.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7887.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7887.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7888.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7888.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7889.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7889.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7890.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7890.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7891.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7891.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7892.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7892.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7893.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7893.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7894.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7894.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7895.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7895.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7896.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7896.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7897.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7897.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7898.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7898.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7899.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7899.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7900.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7900.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7901.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7901.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7902.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7902.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7903.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7903.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7904.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7904.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7905.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7905.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7906.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7906.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7907.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7907.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7908.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7908.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7909.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7909.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7910.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7910.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7911.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7911.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7912.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7912.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7913.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7913.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7914.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7914.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7915.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7915.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7916.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7916.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7917.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7917.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7918.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7918.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7919.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7919.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7920.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7920.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7921.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7921.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7922.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7922.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7923.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7923.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7924.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7924.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7925.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7925.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7926.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7926.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7927.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7927.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7928.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7928.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7929.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7929.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7930.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7930.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7931.jpg",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7931.jpg",
+                "fileType": ".jpg",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              },
+              {
+                "type": "file",
+                "name": "IMG_7937.PNG",
+                "path": "00-日常记录/2026-07-14/玩偶艺术展/IMG_7937.PNG",
+                "fileType": ".PNG",
+                "createdAt": "2026-07-14",
+                "updatedAt": "2026-07-14"
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "name": "index.md",
+            "path": "00-日常记录/2026-07-14/index.md",
+            "fileType": ".md",
+            "createdAt": "2026-07-14",
+            "updatedAt": "2026-07-14"
+          }
+        ]
+      },
+      {
         "type": "file",
         "name": "04月19日.md",
         "path": "00-日常记录/04月19日.md",
@@ -308,6 +1466,14 @@
       },
       {
         "type": "file",
+        "name": "7月.md",
+        "path": "00-日常记录/7月.md",
+        "fileType": ".md",
+        "createdAt": "2026-07-14",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
         "name": "cursor_users_lixingjuan_documents_lzh.md",
         "path": "00-日常记录/cursor_users_lixingjuan_documents_lzh.md",
         "fileType": ".md",
@@ -345,6 +1511,22 @@
         "fileType": ".md",
         "createdAt": "2026-07-04",
         "updatedAt": "2026-07-06"
+      },
+      {
+        "type": "file",
+        "name": "我的创作原则.md",
+        "path": "00-日常记录/我的创作原则.md",
+        "fileType": ".md",
+        "createdAt": "2026-07-14",
+        "updatedAt": "2026-07-14"
+      },
+      {
+        "type": "file",
+        "name": "视频稿子.md",
+        "path": "00-日常记录/视频稿子.md",
+        "fileType": ".md",
+        "createdAt": "2026-07-14",
+        "updatedAt": "2026-07-14"
       }
     ]
   },
