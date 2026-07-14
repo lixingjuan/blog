@@ -1,20 +1,279 @@
 import fs from "fs";
 import path from "path";
-import { execSync } from "child_process";
+import { execFileSync } from "child_process";
 
 import { fileURLToPath } from "url";
 
 // 需要忽略的文件/文件夹列表
-const ignoreFolders = ["node_modules", ".git", "output", ".github", ".vscode"];
+const ignoreFolders = new Set([
+  "node_modules",
+  ".git",
+  "output",
+  ".github",
+  ".vscode",
+  ".idea",
+  ".next",
+  ".nuxt",
+  ".cache",
+  "dist",
+  "build",
+  "coverage",
+  "target",
+  "_site",
+]);
+const displayFileTypes = new Set([".md", ".html", ".pdf"]);
 const readmeFileName = "README.md";
+const gitDateCache = new Map();
+let gitBlobHistoryCache = null;
+let gitPathHistoryCache = null;
+
+const formatGitDate = (gitDate) => {
+  if (!gitDate) return null;
+  return gitDate.split(" ")[0] || null;
+};
+
+const runGit = (args, cwd) =>
+  execFileSync("git", args, {
+    encoding: "utf8",
+    cwd,
+    stdio: ["ignore", "pipe", "ignore"],
+    timeout: 30000,
+    maxBuffer: 1024 * 1024 * 100,
+  }).trim();
+
+const normalizeRelativePath = (relativePath) => {
+  return relativePath.split(path.sep).join("/");
+};
+
+const getGitPathDates = (relativePath, baseUrl) => {
+  const pathHistory = getGitPathHistory(baseUrl);
+  return pathHistory.get(normalizeRelativePath(relativePath)) || { createdAt: null, updatedAt: null };
+};
+
+const getGitPathHistory = (baseUrl) => {
+  if (gitPathHistoryCache) return gitPathHistoryCache;
+
+  const history = new Map();
+  const log = runGit(["log", "--reverse", "--format=commit-date:%ai", "--name-only"], baseUrl);
+  let currentDate = null;
+
+  for (const line of log.split(/\r?\n/)) {
+    if (line.startsWith("commit-date:")) {
+      currentDate = formatGitDate(line.replace("commit-date:", ""));
+      continue;
+    }
+
+    const currentPath = line.trim();
+    if (!currentDate || !currentPath) continue;
+
+    const dates = history.get(currentPath) || { createdAt: currentDate, updatedAt: currentDate };
+    dates.createdAt = getEarlierDate(dates.createdAt, currentDate);
+    dates.updatedAt = currentDate;
+    history.set(currentPath, dates);
+  }
+
+  gitPathHistoryCache = history;
+  return history;
+};
+
+const getGitObjectDates = (fullPath, baseUrl) => {
+  const hash = runGit(["hash-object", fullPath], baseUrl);
+  if (!hash) return { createdAt: null, updatedAt: null };
+
+  if (gitDateCache.has(hash)) {
+    return gitDateCache.get(hash);
+  }
+
+  const blobHistory = getGitBlobHistory(baseUrl);
+  const dates = blobHistory.get(hash) || { createdAt: null, updatedAt: null };
+  gitDateCache.set(hash, dates);
+  return dates;
+};
+
+const getGitBlobHistory = (baseUrl) => {
+  if (gitBlobHistoryCache) return gitBlobHistoryCache;
+
+  const history = new Map();
+  const log = runGit(
+    ["log", "--all", "--reverse", "--format=commit-date:%ai", "--raw", "--no-abbrev", "--no-renames"],
+    baseUrl
+  );
+  let currentDate = null;
+
+  for (const line of log.split(/\r?\n/)) {
+    if (line.startsWith("commit-date:")) {
+      currentDate = formatGitDate(line.replace("commit-date:", ""));
+      continue;
+    }
+
+    if (!currentDate || !line.startsWith(":")) continue;
+
+    const [meta] = line.split("\t");
+    const parts = meta.split(" ");
+    const newHash = parts[3];
+
+    if (!newHash || /^0+$/.test(newHash)) continue;
+
+    const dates = history.get(newHash) || { createdAt: currentDate, updatedAt: currentDate };
+    dates.createdAt = getEarlierDate(dates.createdAt, currentDate);
+    dates.updatedAt = currentDate;
+    history.set(newHash, dates);
+  }
+
+  gitBlobHistoryCache = history;
+  return history;
+};
+
+const getFileSystemDates = (fullPath) => {
+  const stats = fs.statSync(fullPath);
+  const date = new Date(stats.mtime).toISOString().split("T")[0];
+  return { createdAt: date, updatedAt: date };
+};
+
+const getEarlierDate = (dateA, dateB) => {
+  if (!dateA) return dateB;
+  if (!dateB) return dateA;
+  return dateA.localeCompare(dateB) <= 0 ? dateA : dateB;
+};
+
+const getFileDates = (fullPath, relativePath, baseUrl, preferContentHistory = false) => {
+  let createdAt = null;
+  let updatedAt = null;
+
+  try {
+    const pathDates = getGitPathDates(relativePath, baseUrl);
+    createdAt = pathDates.createdAt;
+    updatedAt = pathDates.updatedAt;
+  } catch (error) {
+    // 当前路径可能还没有提交，下面会继续用文件内容反查历史。
+  }
+
+  const today = new Date().toISOString().split("T")[0];
+  const shouldUseObjectDates = !createdAt || !updatedAt || (preferContentHistory && createdAt === today);
+
+  if (shouldUseObjectDates) {
+    try {
+      const objectDates = getGitObjectDates(fullPath, baseUrl);
+      createdAt = preferContentHistory
+        ? getEarlierDate(createdAt, objectDates.createdAt)
+        : createdAt || objectDates.createdAt;
+      updatedAt = updatedAt || objectDates.updatedAt;
+    } catch (error) {
+      // 新文件或未被 Git 记录过的内容会走文件系统时间兜底。
+    }
+  }
+
+  if (createdAt && updatedAt) {
+    return { createdAt, updatedAt };
+  }
+
+  try {
+    const fsDates = getFileSystemDates(fullPath);
+    return {
+      createdAt: createdAt || fsDates.createdAt,
+      updatedAt: updatedAt || fsDates.updatedAt,
+    };
+  } catch (error) {
+    console.warn(`Failed to get dates for ${relativePath}:`, error.message);
+    return { createdAt, updatedAt };
+  }
+};
+
+const extractPathDate = (relativePath) => {
+  const dashedMatch = relativePath.match(/(?:^|\/)(\d{4}-\d{2}-\d{2})(?:\/|$|\.)/);
+  if (dashedMatch) return dashedMatch[1];
+
+  const compactMatch = relativePath.match(/(?:^|\/)(\d{4})(\d{2})(\d{2})(?:\/|$|\.)/);
+  return compactMatch ? `${compactMatch[1]}-${compactMatch[2]}-${compactMatch[3]}` : null;
+};
+
+const normalizeAssetPath = (assetPath, fileRelativePath, baseUrl) => {
+  if (!assetPath || /^(https?:)?\/\//.test(assetPath) || assetPath.startsWith("data:")) {
+    return assetPath;
+  }
+
+  const rootRelativePath = path.normalize(assetPath);
+  if (fs.existsSync(path.join(baseUrl, rootRelativePath))) {
+    return rootRelativePath;
+  }
+
+  const fileRelativeAssetPath = path.normalize(path.join(path.dirname(fileRelativePath), assetPath));
+  if (fs.existsSync(path.join(baseUrl, fileRelativeAssetPath))) {
+    return fileRelativeAssetPath;
+  }
+
+  return null;
+};
+
+const findFirstImageAsset = (absoluteDir, relativeDir, depth = 2) => {
+  if (depth < 0) return null;
+
+  try {
+    const entries = fs
+      .readdirSync(absoluteDir, { withFileTypes: true })
+      .sort((a, b) => a.name.localeCompare(b.name, "zh-Hans-CN"));
+
+    for (const entry of entries) {
+      const absolutePath = path.join(absoluteDir, entry.name);
+      const relativePath = path.normalize(path.join(relativeDir, entry.name));
+
+      if (entry.isFile() && /\.(png|jpe?g|gif|webp|svg)$/i.test(entry.name)) {
+        return relativePath;
+      }
+
+      if (entry.isDirectory() && !shouldIgnoreDirectory(entry.name)) {
+        const nestedImage = findFirstImageAsset(absolutePath, relativePath, depth - 1);
+        if (nestedImage) return nestedImage;
+      }
+    }
+  } catch (error) {
+    return null;
+  }
+
+  return null;
+};
+
+const extractMarkdownMeta = (filePath, relativePath, baseUrl) => {
+  try {
+    const content = fs.readFileSync(filePath, "utf8");
+    const titleLine = content
+      .split(/\r?\n/)
+      .find((line) => /^#\s+/.test(line.trim()));
+
+    const imageMatch =
+      content.match(/!\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/) ||
+      content.match(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/i);
+    const explicitCover = imageMatch
+      ? normalizeAssetPath(imageMatch[1], relativePath, baseUrl)
+      : null;
+
+    return {
+      title: titleLine ? titleLine.replace(/^#\s+/, "").trim() : null,
+      cover:
+        explicitCover ||
+        findFirstImageAsset(path.dirname(filePath), path.dirname(relativePath)),
+    };
+  } catch (error) {
+    console.warn(`Failed to read markdown metadata for ${filePath}:`, error.message);
+    return { title: null, cover: null };
+  }
+};
+
+const shouldIgnoreDirectory = (fileName) => {
+  return ignoreFolders.has(fileName);
+};
 
 const shouldIgnore = (file, isRoot) => {
-  if (!isRoot) return false;
   const fileName = file.name;
-  if (ignoreFolders.includes(fileName)) return true;
-  if (file.isFile()) {
-    return fileName !== readmeFileName;
+  if (file.isDirectory()) {
+    return shouldIgnoreDirectory(fileName);
   }
+
+  if (file.isFile()) {
+    if (isRoot) return fileName !== readmeFileName;
+    return !displayFileTypes.has(path.extname(fileName).toLowerCase());
+  }
+
   return false;
 };
 
@@ -40,101 +299,47 @@ function generateDirectoryStructure(dir, baseUrl, isRoot = false) {
       const fullPath = path.join(file.parentPath, fileName);
       const relativePath = path.relative(baseUrl, fullPath);
 
-      console.log(`Processing: ${fullPath}`); // 添加调试信息
-
       // 针对根目录做过滤
       if (shouldIgnore(file, isRoot)) {
-        console.log("ignore file:", file);
         return null;
       }
 
       // 如果是目录
       if (file.isDirectory()) {
+        const children = generateDirectoryStructure(fullPath, baseUrl);
+        if (children.length === 0) return null;
+
         return {
           type: "directory",
           name: fileName,
           path: relativePath,
-          children: generateDirectoryStructure(fullPath, baseUrl),
+          children,
         };
       }
 
-      // 获取文件创建时间（使用 Git 首次提交时间）
-      let createdAt = null;
-      try {
-        // 使用 git log 获取文件的首次提交时间
-        // --format=%ai 获取作者日期，--reverse 从最早开始
-        // 使用 --diff-filter=A 只查找文件添加的提交（首次提交）
-        // 或者使用 --follow 跟踪文件重命名
-        const gitCommand = `git log --format=%ai --reverse --diff-filter=A --follow -- "${relativePath}" | head -1`;
-        const gitDate = execSync(gitCommand, { 
-          encoding: 'utf8',
-          cwd: baseUrl,
-          stdio: ['pipe', 'pipe', 'ignore'], // 忽略 stderr
-          timeout: 5000 // 5秒超时
-        }).trim();
-        
-        if (gitDate) {
-          // git log 返回格式: 2023-01-15 10:30:45 +0800
-          // 提取日期部分 YYYY-MM-DD
-          createdAt = gitDate.split(' ')[0];
-        } else {
-          // 如果 --diff-filter=A 没有结果，尝试普通方式（文件可能被重命名过）
-          const gitCommandFallback = `git log --format=%ai --reverse -- "${relativePath}" | head -1`;
-          const gitDateFallback = execSync(gitCommandFallback, { 
-            encoding: 'utf8',
-            cwd: baseUrl,
-            stdio: ['pipe', 'pipe', 'ignore'],
-            timeout: 5000
-          }).trim();
-          if (gitDateFallback) {
-            createdAt = gitDateFallback.split(' ')[0];
-          }
-        }
-      } catch (error) {
-        // 如果 Git 命令失败（文件不在 Git 中或 Git 不可用），尝试使用文件系统时间作为备选
-        try {
-          const stats = fs.statSync(fullPath);
-          const date = new Date(stats.mtime); // 使用修改时间作为备选
-          createdAt = date.toISOString().split('T')[0];
-        } catch (fsError) {
-          console.warn(`Failed to get creation time for ${relativePath}:`, error.message);
-        }
-      }
-
-      // 获取文件更新时间（使用 Git 最后一次提交时间）
-      let updatedAt = null;
-      try {
-        // 使用 git log 获取文件的最后一次提交时间
-        // --format=%ai 获取作者日期，-1 只取最后一条
-        const gitCommand = `git log --format=%ai --follow -1 -- "${relativePath}"`;
-        const gitDate = execSync(gitCommand, { 
-          encoding: 'utf8',
-          cwd: baseUrl,
-          stdio: ['pipe', 'pipe', 'ignore'], // 忽略 stderr
-          timeout: 5000 // 5秒超时
-        }).trim();
-        
-        if (gitDate) {
-          // git log 返回格式: 2023-01-15 10:30:45 +0800
-          // 提取日期部分 YYYY-MM-DD
-          updatedAt = gitDate.split(' ')[0];
-        }
-      } catch (error) {
-        // 如果 Git 命令失败，尝试使用文件系统时间作为备选
-        try {
-          const stats = fs.statSync(fullPath);
-          const date = new Date(stats.mtime); // 使用修改时间作为备选
-          updatedAt = date.toISOString().split('T')[0];
-        } catch (fsError) {
-          console.warn(`Failed to get update time for ${relativePath}:`, error.message);
-        }
-      }
+      const fileType = path.extname(fullPath);
+      const shouldPreferContentHistory = [".md", ".html", ".pdf"].includes(fileType.toLowerCase());
+      const { createdAt, updatedAt } = getFileDates(
+        fullPath,
+        relativePath,
+        baseUrl,
+        shouldPreferContentHistory
+      );
+      const markdownMeta =
+        fileType.toLowerCase() === ".md"
+          ? extractMarkdownMeta(fullPath, relativePath, baseUrl)
+          : { title: null, cover: null };
+      const pathDate = extractPathDate(relativePath);
 
       return {
         type: "file",
         name: fileName,
         path: relativePath,
-        fileType: path.extname(fullPath),
+        fileType: fileType,
+        title: markdownMeta.title,
+        cover: markdownMeta.cover,
+        date: pathDate || createdAt || updatedAt,
+        pathDate: pathDate,
         createdAt: createdAt,
         updatedAt: updatedAt,
       };

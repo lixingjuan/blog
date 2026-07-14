@@ -35,51 +35,128 @@
       }
 
       #wrappper {
-        display: flex;
-        position: relative;
-        height: 100vh;
-        background: #ffffff;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top left, rgba(184, 129, 78, 0.12), transparent 34rem),
+          linear-gradient(180deg, #fbfaf7 0%, #f4f0ea 100%);
       }
 
-      #sidebar {
-        width: 280px;
+      .site-header {
+        position: sticky;
         top: 0;
-        max-height: 100vh;
-        overflow-y: auto;
-        overflow-x: hidden;
-        padding: 24px 0;
-        flex-shrink: 0;
-        background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
-        border-right: 1px solid #e1e8ed;
-        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
-        transition: all 0.3s ease;
+        z-index: 200;
+        border-bottom: 1px solid rgba(70, 58, 44, 0.12);
+        background: rgba(251, 250, 247, 0.92);
+        backdrop-filter: blur(16px);
       }
 
-      #sidebar::-webkit-scrollbar {
-        width: 6px;
+      .site-header-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 18px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
       }
 
-      #sidebar::-webkit-scrollbar-track {
+      .site-brand {
+        border: 0;
         background: transparent;
+        padding: 0;
+        color: #2f2a24;
+        cursor: pointer;
+        text-align: left;
       }
 
-      #sidebar::-webkit-scrollbar-thumb {
-        background: #cbd5e0;
-        border-radius: 3px;
+      .site-brand-title {
+        display: block;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 22px;
+        line-height: 1.1;
+        letter-spacing: 0;
       }
 
-      #sidebar::-webkit-scrollbar-thumb:hover {
-        background: #a0aec0;
+      .site-brand-subtitle {
+        display: block;
+        margin-top: 3px;
+        color: #8a7664;
+        font-size: 12px;
+      }
+
+      .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .top-nav-button {
+        border: 1px solid transparent;
+        background: transparent;
+        color: #5f5145;
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-size: 14px;
+        line-height: 1;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .top-nav-button:hover,
+      .top-nav-button.is-active {
+        color: #251f1a;
+        border-color: rgba(105, 77, 45, 0.18);
+        background: rgba(255, 255, 255, 0.72);
       }
 
       #content {
-        flex-grow: 1;
-        padding: 40px 60px;
-        overflow: auto;
-        background: #ffffff;
-        max-width: 1200px;
+        min-height: calc(100vh - 76px);
+        padding: 56px 32px 88px;
+        background: transparent;
+        max-width: 980px;
         margin: 0 auto;
         width: 100%;
+      }
+
+      #wrappper.exhibition-mode {
+        background: #050303;
+      }
+
+      #wrappper.exhibition-mode .site-header {
+        border-bottom-color: rgba(165, 22, 36, 0.28);
+        background: rgba(5, 3, 3, 0.84);
+      }
+
+      #wrappper.exhibition-mode .site-brand,
+      #wrappper.exhibition-mode .site-brand-title,
+      #wrappper.exhibition-mode .top-nav-button {
+        color: #f0e7dc;
+      }
+
+      #wrappper.exhibition-mode .site-brand-subtitle {
+        color: #9e706d;
+      }
+
+      #wrappper.exhibition-mode .top-nav-button:hover,
+      #wrappper.exhibition-mode .top-nav-button.is-active {
+        color: #fff8ef;
+        border-color: rgba(166, 24, 40, 0.45);
+        background: rgba(90, 12, 20, 0.38);
+      }
+
+      #wrappper.exhibition-mode #content {
+        max-width: none;
+        min-height: calc(100vh - 76px);
+        padding: 0;
+        background: #050303;
+      }
+
+      #wrappper.exhibition-mode .article-meta,
+      #wrappper.exhibition-mode .table-of-contents,
+      #wrappper.exhibition-mode #content > div > h1:first-child {
+        display: none;
       }
 
       #content::-webkit-scrollbar {
@@ -212,6 +289,179 @@
 
       .updated-date {
         color: #4299e1;
+      }
+
+      .category-page {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .category-kicker {
+        color: #9a7a54;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin: 0 0 10px;
+      }
+
+      .category-title {
+        margin: 0;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 44px;
+        line-height: 1.12;
+        font-weight: 500;
+        color: #2c251f;
+        letter-spacing: 0;
+      }
+
+      .category-summary {
+        margin: 14px 0 32px;
+        color: #7a6b5d;
+        font-size: 15px;
+      }
+
+      .category-back {
+        border: 0;
+        background: transparent;
+        color: #8b6a44;
+        padding: 0;
+        margin: 0 0 18px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .category-back:hover {
+        color: #4a3521;
+        text-decoration: underline;
+      }
+
+      .collection-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+      }
+
+      .collection-card {
+        border: 1px solid rgba(72, 58, 44, 0.12);
+        background: rgba(255, 255, 255, 0.68);
+        border-radius: 8px;
+        padding: 20px;
+        min-height: 132px;
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      }
+
+      .collection-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(122, 88, 50, 0.32);
+        background: rgba(255, 255, 255, 0.92);
+      }
+
+      .collection-title {
+        color: #2d2924;
+        font-size: 19px;
+        font-weight: 650;
+        line-height: 1.35;
+      }
+
+      .collection-meta {
+        margin-top: 12px;
+        color: #8f8174;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .article-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .category-page.is-exhibition .article-list {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+      }
+
+      .article-list-item {
+        width: 100%;
+        border: 1px solid rgba(72, 58, 44, 0.12);
+        background: rgba(255, 255, 255, 0.68);
+        border-radius: 8px;
+        padding: 18px 20px;
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      }
+
+      .category-page.is-exhibition .article-list-item {
+        padding: 0;
+        overflow: hidden;
+        min-height: 100%;
+      }
+
+      .article-list-item:hover {
+        transform: translateY(-2px);
+        border-color: rgba(122, 88, 50, 0.32);
+        background: rgba(255, 255, 255, 0.92);
+      }
+
+      .article-list-cover {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        background: #ece5db;
+      }
+
+      .article-list-cover img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .article-list-body {
+        padding: 18px 20px;
+      }
+
+      .article-list-item:not(.has-cover) .article-list-body {
+        padding: 0;
+      }
+
+      .article-list-title {
+        color: #2d2924;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.45;
+      }
+
+      .category-page.is-exhibition .article-list-title {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      .article-list-path {
+        margin-top: 6px;
+        color: #8f8174;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      .article-list-meta {
+        margin-top: 10px;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        color: #9a7a54;
+        font-size: 13px;
+      }
+
+      .empty-category {
+        border: 1px dashed rgba(72, 58, 44, 0.2);
+        border-radius: 8px;
+        padding: 32px;
+        color: #8f8174;
+        background: rgba(255, 255, 255, 0.46);
       }
 
       /* Markdown 内容样式 */
@@ -524,19 +774,23 @@
 
       /* 响应式设计 */
       @media (max-width: 768px) {
-        #wrappper {
+        .site-header-inner {
+          align-items: flex-start;
           flex-direction: column;
+          padding: 16px 20px;
+          gap: 14px;
         }
 
-        #sidebar {
-          width: 100%;
-          max-height: 200px;
-          border-right: none;
-          border-bottom: 1px solid #e1e8ed;
+        .top-nav {
+          justify-content: flex-start;
         }
 
         #content {
-          padding: 24px 20px;
+          padding: 32px 20px 64px;
+        }
+
+        .category-title {
+          font-size: 34px;
         }
       }
     </style>
@@ -809,6 +1063,120 @@
         return path.includes("/README.md");
       };
 
+      const DISPLAY_FILE_TYPES = new Set([".md", ".html", ".pdf"]);
+
+      const scrollToPageTop = () => {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      };
+
+      const getFileTitle = (item) => {
+        if (!item) return "";
+        if (item.title) return item.title;
+        const normalizedPath = item.path || "";
+        const fileName = item.name || "";
+        const ext = item.fileType || "";
+        const nameWithoutExt = ext ? fileName.slice(0, -ext.length) : fileName;
+
+        if (fileName.toLowerCase() === "index.md" || fileName.toLowerCase() === "index.html") {
+          const parts = normalizedPath.split("/").filter(Boolean);
+          return parts.length > 1 ? parts[parts.length - 2] : nameWithoutExt;
+        }
+
+        return nameWithoutExt || fileName;
+      };
+
+      const flattenDisplayFiles = (nodes = [], parentNames = []) => {
+        return nodes.flatMap((node) => {
+          if (node.type === "directory") {
+            return flattenDisplayFiles(node.children || [], [...parentNames, node.name]);
+          }
+
+          const fileType = (node.fileType || "").toLowerCase();
+          if (!DISPLAY_FILE_TYPES.has(fileType)) return [];
+
+          return [{
+            ...node,
+            title: getFileTitle(node),
+            categoryTrail: parentNames,
+          }];
+        });
+      };
+
+      const getTopLevelCategories = (nodes = []) => {
+        return nodes.filter((node) => node.type === "directory");
+      };
+
+      const sortFilesByDateDesc = (files = []) => {
+        return [...files].sort((a, b) => {
+          const dateA = a.date || a.createdAt || a.updatedAt || "";
+          const dateB = b.date || b.createdAt || b.updatedAt || "";
+          if (dateA !== dateB) return dateB.localeCompare(dateA);
+          return (a.title || a.name || "").localeCompare(b.title || b.name || "", "zh-Hans-CN");
+        });
+      };
+
+      const formatDisplayDate = (file) => {
+        return file.date || file.createdAt || file.updatedAt || "";
+      };
+
+      const getLatestDate = (files = []) => {
+        return files
+          .map(formatDisplayDate)
+          .filter(Boolean)
+          .sort((a, b) => b.localeCompare(a))[0] || "";
+      };
+
+      const createCollection = (node, parentCategory) => {
+        const files = sortFilesByDateDesc(flattenDisplayFiles(node.children || []));
+        return {
+          name: node.name,
+          path: node.path,
+          parentCategory,
+          node,
+          files,
+          latestDate: getLatestDate(files),
+        };
+      };
+
+      const getCategoryCollections = (category) => {
+        if (!category) return [];
+
+        const directFiles = [];
+        const collections = [];
+
+        (category.children || []).forEach((child) => {
+          if (child.type === "directory") {
+            collections.push(createCollection(child, category));
+            return;
+          }
+
+          const fileType = (child.fileType || "").toLowerCase();
+          if (DISPLAY_FILE_TYPES.has(fileType)) {
+            directFiles.push({
+              ...child,
+              title: getFileTitle(child),
+              categoryTrail: [],
+            });
+          }
+        });
+
+        if (directFiles.length > 0) {
+          collections.unshift({
+            name: "未归入书架",
+            path: `${category.path}.__direct__`,
+            parentCategory: category,
+            node: null,
+            files: sortFilesByDateDesc(directFiles),
+            latestDate: getLatestDate(directFiles),
+          });
+        }
+
+        return collections.sort((a, b) => {
+          if (a.latestDate !== b.latestDate) return b.latestDate.localeCompare(a.latestDate);
+          return a.name.localeCompare(b.name, "zh-Hans-CN");
+        });
+      };
+
       // 生成标题 ID（URL 友好）
       const generateHeadingId = (text) => {
         return text
@@ -1016,6 +1384,9 @@
         const [currentFileType, setCurrentFileType] = React.useState("");
         const [toc, setToc] = React.useState([]);
         const [currentPath, setCurrentPath] = React.useState("");
+        const [currentView, setCurrentView] = React.useState("home");
+        const [currentCategory, setCurrentCategory] = React.useState(null);
+        const [currentCollection, setCurrentCollection] = React.useState(null);
 
         React.useEffect(() => {
           setMenuLoading(true);
@@ -1034,6 +1405,9 @@
               setCurrentFileType(".md");
               setToc(result.toc || []);
               setCurrentPath("./README.md");
+              setCurrentView("home");
+              setCurrentCategory(null);
+              setCurrentCollection(null);
             })
             .finally(() => {
               setMenuLoading(false);
@@ -1053,40 +1427,186 @@
               setCurrentFileType(fileType);
               setToc(result.toc || []);
               setCurrentPath(path || "");
+              setCurrentView("article");
+              setCurrentCategory(null);
+              setCurrentCollection(null);
+              scrollToPageTop();
+            },
+            openHome: async () => {
+              setContentLoading(true);
+              const result = await loadContent({ path: "./README.md", fileType: ".md", createdAt: null, updatedAt: null });
+              setContentLoading(false);
+              setContent(result.content);
+              setCurrentCreatedAt(result.createdAt);
+              setCurrentUpdatedAt(result.updatedAt);
+              setCurrentFileType(".md");
+              setToc(result.toc || []);
+              setCurrentPath("./README.md");
+              setCurrentView("home");
+              setCurrentCategory(null);
+              setCurrentCollection(null);
+              scrollToPageTop();
+            },
+            openCategory: (category) => {
+              setCurrentCategory(category);
+              setCurrentCollection(null);
+              setCurrentView("category");
+              setContentLoading(false);
+              setToc([]);
+              setCurrentPath("");
+              setCurrentFileType("");
+              setCurrentCreatedAt(null);
+              setCurrentUpdatedAt(null);
+              scrollToPageTop();
+            },
+            openCollection: (collection) => {
+              setCurrentCategory(collection.parentCategory);
+              setCurrentCollection(collection);
+              setCurrentView("category");
+              setContentLoading(false);
+              setToc([]);
+              setCurrentPath("");
+              setCurrentFileType("");
+              setCurrentCreatedAt(null);
+              setCurrentUpdatedAt(null);
+              scrollToPageTop();
             },
           }),
           [setContent]
         );
 
+        const categories = React.useMemo(() => getTopLevelCategories(sidebarData), [sidebarData]);
+        const isExhibitionArticle =
+          currentView === "article" &&
+          currentFileType.toLowerCase() === ".md" &&
+          currentPath.replace(/^\.\//, "").startsWith("展览/");
+
+        const CategoryPage = ({ category }) => {
+          if (!category) return null;
+          const collections = getCategoryCollections(category);
+          const files = currentCollection ? currentCollection.files : [];
+          const isExhibition = category.name.includes("展览");
+
+          return (
+            <div class={`category-page ${isExhibition ? "is-exhibition" : ""}`}>
+              {currentCollection && (
+                <button type="button" class="category-back" onClick={() => value.openCategory(category)}>
+                  返回 {category.name}
+                </button>
+              )}
+              <p class="category-kicker">{currentCollection ? "Shelf" : "Room"}</p>
+              <h1 class="category-title">{currentCollection ? currentCollection.name : category.name}</h1>
+              <p class="category-summary">
+                {currentCollection
+                  ? `${files.length} 篇内容，按时间从近到远陈列。`
+                  : `${collections.length} 个书架，来自这个房间的二级目录。`}
+              </p>
+
+              {!currentCollection && collections.length === 0 && (
+                <div class="empty-category">这个房间暂时还没有可展示的文章。</div>
+              )}
+
+              {!currentCollection && collections.length > 0 && (
+                <div class="collection-grid">
+                  {collections.map((collection) => (
+                    <button
+                      key={collection.path}
+                      type="button"
+                      class="collection-card"
+                      onClick={() => value.openCollection(collection)}
+                    >
+                      <div class="collection-title">{collection.name}</div>
+                      <div class="collection-meta">
+                        <div>{collection.files.length} 篇内容</div>
+                        {collection.latestDate && <div>最近更新 {collection.latestDate}</div>}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {currentCollection && files.length === 0 && (
+                <div class="empty-category">这个书架暂时还没有可展示的文章。</div>
+              )}
+
+              {currentCollection && files.length > 0 && (
+                <div class="article-list">
+                  {files.map((file) => (
+                    <button
+                      key={file.path}
+                      type="button"
+                      class={`article-list-item ${file.cover ? "has-cover" : ""}`}
+                      onClick={() => value.updateContent(file)}
+                    >
+                      {file.cover && (
+                        <div class="article-list-cover">
+                          <img src={file.cover} alt="" loading="lazy" />
+                        </div>
+                      )}
+                      <div class="article-list-body">
+                        <div class="article-list-title">{file.title}</div>
+                        <div class="article-list-path">{file.categoryTrail.join(" / ") || category.name}</div>
+                        <div class="article-list-meta">
+                          {formatDisplayDate(file) && <span>{formatDisplayDate(file)}</span>}
+                          {file.pathDate && <span>来自路径日期</span>}
+                        </div>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        };
+
+        const TopNavigation = () => (
+          <header class="site-header">
+            <div class="site-header-inner">
+              <button type="button" class="site-brand" onClick={() => value.openHome()}>
+                <span class="site-brand-title">LXJ, Blog</span>
+                <span class="site-brand-subtitle">Personal knowledge palace</span>
+              </button>
+              <nav class="top-nav" aria-label="主要导航">
+                <button
+                  type="button"
+                  class={`top-nav-button ${currentView === "home" ? "is-active" : ""}`}
+                  onClick={() => value.openHome()}
+                >
+                  首页
+                </button>
+                {categories.map((category) => (
+                  <button
+                    key={category.path}
+                    type="button"
+                    class={`top-nav-button ${currentCategory && currentCategory.path === category.path ? "is-active" : ""}`}
+                    onClick={() => value.openCategory(category)}
+                  >
+                    {category.name}
+                  </button>
+                ))}
+              </nav>
+            </div>
+          </header>
+        );
+
         return (
           <AppContext.Provider value={value}>
-            <div id="wrappper">
-              <div id="sidebar">
-                {menuLoading ? (
-                  <div style={{ textAlign: 'center', padding: '40px 20px', color: '#94a3b8' }}>
-                    <div style={{ fontSize: '24px', marginBottom: '12px' }}>⏳</div>
-                    <div>加载中...</div>
-                  </div>
-                ) : (
-                  sidebarData.map((it) => {
-                    if (it.type === "directory") {
-                      return <Folder name={it.name} children={it.children} />;
-                    }
-                    return <File name={it.name} path={it.path} fileType={it.fileType} createdAt={it.createdAt} updatedAt={it.updatedAt} />;
-                  })
-                )}
-              </div>
+            <div id="wrappper" class={isExhibitionArticle ? "exhibition-mode" : ""}>
+              <TopNavigation />
 
               <ErrorBoundary>
                 <div id="content">
                   {(() => {
-                    if (contentLoading) {
+                    if (menuLoading || contentLoading) {
                       return (
                         <div style={{ textAlign: 'center', padding: '100px 20px', color: '#4299e1' }}>
                           <div style={{ fontSize: '48px', marginBottom: '20px', animation: 'spin 1s linear infinite' }}>⚙️</div>
                           <div style={{ fontSize: '18px', fontWeight: '500' }}>加载中...</div>
                         </div>
                       );
+                    }
+                    if (currentView === "category") {
+                      return <CategoryPage category={currentCategory} />;
                     }
                     if (!content) {
                       return (

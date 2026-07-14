@@ -23,9 +23,20 @@ jobs:
       - name: Run build script
         run: node .github/workflows/index.mjs
 
+      - name: Prepare publish directory
+        run: |
+          mkdir _site
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '.gitignore' \
+            --exclude '.vscode' \
+            --exclude '_site' \
+            ./ _site/
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 提供的 token
-          publish_dir: ./ # 假设构建产物输出到 dist 文件夹
+          publish_dir: ./_site
           publish_branch: gh-pages # 目标分支
