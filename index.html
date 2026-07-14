@@ -464,6 +464,227 @@
         background: rgba(255, 255, 255, 0.46);
       }
 
+      .home-page {
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+
+      .home-hero {
+        min-height: calc(100vh - 188px);
+        display: grid;
+        align-content: center;
+        gap: 42px;
+        padding: 22px 0 56px;
+      }
+
+      .home-kicker {
+        margin: 0 0 14px;
+        color: #9a7a54;
+        font-size: 13px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      #content .home-page .home-title {
+        margin: 0;
+        max-width: 840px;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(48px, 8vw, 92px);
+        font-weight: 500;
+        line-height: 0.98;
+        color: #2c251f;
+        letter-spacing: 0;
+        border: 0;
+        padding: 0;
+      }
+
+      .home-title-line {
+        display: block;
+      }
+
+      #content .home-page .home-subtitle {
+        max-width: 620px;
+        margin: 22px 0 0;
+        color: #6f6256;
+        font-size: 17px;
+        line-height: 1.9;
+      }
+
+      .home-rooms {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+      }
+
+      .home-room-card {
+        min-height: 168px;
+        padding: 22px;
+        border: 1px solid rgba(72, 58, 44, 0.12);
+        border-radius: 8px;
+        background:
+          linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(250, 245, 237, 0.58));
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      }
+
+      .home-room-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(122, 88, 50, 0.32);
+        background: rgba(255, 255, 255, 0.92);
+      }
+
+      .home-room-name {
+        color: #2d2924;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+
+      .home-room-desc {
+        margin-top: 12px;
+        color: #7a6b5d;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .home-room-meta {
+        margin-top: 18px;
+        color: #9a7a54;
+        font-size: 13px;
+      }
+
+      .home-section {
+        padding: 64px 0 8px;
+        border-top: 1px solid rgba(72, 58, 44, 0.12);
+      }
+
+      .home-section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 22px;
+      }
+
+      #content .home-page .home-section-title {
+        margin: 0;
+        color: #2c251f;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 34px;
+        font-weight: 500;
+        border: 0;
+        padding: 0;
+      }
+
+      .home-section-note {
+        margin: 0;
+        color: #8f8174;
+        font-size: 14px;
+      }
+
+      .home-latest-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      .home-latest-item {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 128px minmax(0, 1fr);
+        gap: 18px;
+        align-items: stretch;
+        border: 1px solid rgba(72, 58, 44, 0.12);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.62);
+        padding: 12px;
+        text-align: left;
+        cursor: pointer;
+        transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      }
+
+      .home-latest-item:hover {
+        transform: translateY(-2px);
+        border-color: rgba(122, 88, 50, 0.32);
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      .home-latest-cover {
+        min-height: 96px;
+        border-radius: 6px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 28% 22%, rgba(154, 122, 84, 0.24), transparent 42%),
+          linear-gradient(145deg, #efe8de, #ded2c2);
+      }
+
+      .home-latest-cover img {
+        width: 100%;
+        height: 100%;
+        min-height: 96px;
+        display: block;
+        object-fit: cover;
+      }
+
+      .home-latest-body {
+        min-width: 0;
+        display: grid;
+        align-content: center;
+        gap: 8px;
+        padding: 4px 2px;
+      }
+
+      .home-latest-title {
+        color: #2d2924;
+        font-size: 18px;
+        font-weight: 650;
+        line-height: 1.45;
+      }
+
+      .home-latest-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        color: #9a7a54;
+        font-size: 13px;
+      }
+
+      #content .home-page .home-manifesto {
+        max-width: 720px;
+        margin: 64px auto 0;
+        color: #5f5145;
+        font-family: Georgia, 'Times New Roman', 'Songti SC', serif;
+        font-size: 24px;
+        line-height: 1.75;
+        text-align: center;
+      }
+
+      @media (max-width: 720px) {
+        .home-hero {
+          min-height: auto;
+          padding: 16px 0 44px;
+        }
+
+        .home-section-head {
+          display: grid;
+          gap: 8px;
+        }
+
+        .home-latest-item {
+          grid-template-columns: 1fr;
+        }
+
+        .home-latest-cover {
+          min-height: 150px;
+        }
+
+        #content .home-page .home-manifesto {
+          font-size: 20px;
+          text-align: left;
+        }
+      }
+
       /* Markdown 内容样式 */
       #content h1 {
         font-size: 2.5em;
@@ -1060,7 +1281,7 @@
       };
 
       const isREADME = (path) => {
-        return path.includes("/README.md");
+        return path.replace(/^\.\//, "") === "README.md" || path.includes("/README.md");
       };
 
       const DISPLAY_FILE_TYPES = new Set([".md", ".html", ".pdf"]);
@@ -1124,6 +1345,22 @@
           .map(formatDisplayDate)
           .filter(Boolean)
           .sort((a, b) => b.localeCompare(a))[0] || "";
+      };
+
+      const getCategoryDescription = (categoryName) => {
+        if (categoryName.includes("展览")) return "把看展变成一间间可以重新进入的房间。";
+        if (categoryName.includes("学习")) return "英语、乐器、会计和技术，慢慢搭出自己的秩序。";
+        if (categoryName.includes("随笔")) return "日常里冒出来的念头，先收起来，再慢慢看清。";
+        return "一处仍在生长的空间。";
+      };
+
+      const getCategoryStats = (category) => {
+        const files = sortFilesByDateDesc(flattenDisplayFiles(category.children || []));
+        return {
+          files,
+          count: files.length,
+          latestDate: getLatestDate(files),
+        };
       };
 
       const createCollection = (node, parentCategory) => {
@@ -1394,17 +1631,12 @@
             .then((response) => response.json())
             .then((data) => {
               setSidebarData(data);
-              setContentLoading(true);
-              // 默认展示README.md的内容
-              return loadContent({ path: "./README.md", fileType: ".md", createdAt: null, updatedAt: null });
-            })
-            .then((result) => {
-              setContent(result.content);
-              setCurrentCreatedAt(result.createdAt);
-              setCurrentUpdatedAt(result.updatedAt);
-              setCurrentFileType(".md");
-              setToc(result.toc || []);
-              setCurrentPath("./README.md");
+              setContent("");
+              setCurrentCreatedAt(null);
+              setCurrentUpdatedAt(null);
+              setCurrentFileType("");
+              setToc([]);
+              setCurrentPath("");
               setCurrentView("home");
               setCurrentCategory(null);
               setCurrentCollection(null);
@@ -1432,16 +1664,14 @@
               setCurrentCollection(null);
               scrollToPageTop();
             },
-            openHome: async () => {
-              setContentLoading(true);
-              const result = await loadContent({ path: "./README.md", fileType: ".md", createdAt: null, updatedAt: null });
+            openHome: () => {
               setContentLoading(false);
-              setContent(result.content);
-              setCurrentCreatedAt(result.createdAt);
-              setCurrentUpdatedAt(result.updatedAt);
-              setCurrentFileType(".md");
-              setToc(result.toc || []);
-              setCurrentPath("./README.md");
+              setContent("");
+              setCurrentCreatedAt(null);
+              setCurrentUpdatedAt(null);
+              setCurrentFileType("");
+              setToc([]);
+              setCurrentPath("");
               setCurrentView("home");
               setCurrentCategory(null);
               setCurrentCollection(null);
@@ -1476,10 +1706,90 @@
         );
 
         const categories = React.useMemo(() => getTopLevelCategories(sidebarData), [sidebarData]);
+        const allFiles = React.useMemo(
+          () => sortFilesByDateDesc(flattenDisplayFiles(sidebarData)),
+          [sidebarData]
+        );
         const isExhibitionArticle =
           currentView === "article" &&
           currentFileType.toLowerCase() === ".md" &&
           currentPath.replace(/^\.\//, "").startsWith("展览/");
+
+        const HomePage = () => {
+          const latestFiles = allFiles
+            .filter((file) => !isREADME(file.path || ""))
+            .slice(0, 6);
+
+          return (
+            <div class="home-page">
+              <section class="home-hero">
+                <div>
+                  <p class="home-kicker">Personal Knowledge Palace</p>
+                  <h1 class="home-title">
+                    <span class="home-title-line">知识宫殿</span>
+                  </h1>
+                  <p class="home-subtitle">
+                    这里收纳日常随笔、展览现场、学习路径和正在形成的秩序。不是为了把生活整理得完美，而是给每一次注意力留下一间房。
+                  </p>
+                </div>
+
+                <div class="home-rooms">
+                  {categories.map((category) => {
+                    const stats = getCategoryStats(category);
+                    return (
+                      <button
+                        key={category.path}
+                        type="button"
+                        class="home-room-card"
+                        onClick={() => value.openCategory(category)}
+                      >
+                        <div class="home-room-name">{category.name}</div>
+                        <div class="home-room-desc">{getCategoryDescription(category.name)}</div>
+                        <div class="home-room-meta">
+                          {stats.count} 篇内容{stats.latestDate ? ` · 最近更新 ${stats.latestDate}` : ""}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </section>
+
+              {latestFiles.length > 0 && (
+                <section class="home-section">
+                  <div class="home-section-head">
+                    <h2 class="home-section-title">最近更新</h2>
+                    <p class="home-section-note">从所有房间里自动取最近的内容</p>
+                  </div>
+                  <div class="home-latest-list">
+                    {latestFiles.map((file) => (
+                      <button
+                        key={file.path}
+                        type="button"
+                        class="home-latest-item"
+                        onClick={() => value.updateContent(file)}
+                      >
+                        <div class="home-latest-cover">
+                          {file.cover && <img src={file.cover} alt="" loading="lazy" />}
+                        </div>
+                        <div class="home-latest-body">
+                          <div class="home-latest-title">{file.title}</div>
+                          <div class="home-latest-meta">
+                            {file.categoryTrail[0] && <span>{file.categoryTrail[0]}</span>}
+                            {formatDisplayDate(file) && <span>{formatDisplayDate(file)}</span>}
+                          </div>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              <p class="home-manifesto">
+                这里不是完成品，也不是陈列柜。它更像一座持续修建的房子：有些房间明亮，有些房间幽暗，有些只是暂时放下的一张纸。
+              </p>
+            </div>
+          );
+        };
 
         const CategoryPage = ({ category }) => {
           if (!category) return null;
@@ -1604,6 +1914,9 @@
                           <div style={{ fontSize: '18px', fontWeight: '500' }}>加载中...</div>
                         </div>
                       );
+                    }
+                    if (currentView === "home") {
+                      return <HomePage />;
                     }
                     if (currentView === "category") {
                       return <CategoryPage category={currentCategory} />;
