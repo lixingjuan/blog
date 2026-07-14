@@ -3037,6 +3037,30 @@
         "children": [
           {
             "type": "file",
+            "name": "ddl.md",
+            "path": "随笔/使用AI随笔/ddl.md",
+            "fileType": ".md",
+            "title": null,
+            "cover": null,
+            "date": "2026-06-09",
+            "pathDate": null,
+            "createdAt": "2026-06-09",
+            "updatedAt": "2026-07-14"
+          },
+          {
+            "type": "file",
+            "name": "spec.md",
+            "path": "随笔/使用AI随笔/spec.md",
+            "fileType": ".md",
+            "title": null,
+            "cover": null,
+            "date": "2026-06-17",
+            "pathDate": null,
+            "createdAt": "2026-06-17",
+            "updatedAt": "2026-07-14"
+          },
+          {
+            "type": "file",
             "name": "worktree.md",
             "path": "随笔/使用AI随笔/worktree.md",
             "fileType": ".md",
@@ -3048,30 +3072,6 @@
             "updatedAt": "2026-07-14"
           }
         ]
-      },
-      {
-        "type": "file",
-        "name": "04月19日.md",
-        "path": "随笔/04月19日.md",
-        "fileType": ".md",
-        "title": null,
-        "cover": "随笔/image.png",
-        "date": "2026-06-09",
-        "pathDate": null,
-        "createdAt": "2026-06-09",
-        "updatedAt": "2026-07-14"
-      },
-      {
-        "type": "file",
-        "name": "06月17日.md",
-        "path": "随笔/06月17日.md",
-        "fileType": ".md",
-        "title": null,
-        "cover": "随笔/image.png",
-        "date": "2026-06-17",
-        "pathDate": null,
-        "createdAt": "2026-06-17",
-        "updatedAt": "2026-07-14"
       },
       {
         "type": "file",
