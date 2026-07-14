@@ -7,6 +7,8 @@ node_modules
 # Generated files
 .docusaurus
 .cache-loader
+index.html
+structure.json
 
 # Misc
 .DS_Store
