@@ -1290,6 +1290,33 @@
         window.scrollTo({ top: 0, left: 0, behavior: "auto" });
       };
 
+      const routeToUrl = (route = { view: "home" }) => {
+        const baseUrl = `${window.location.pathname}${window.location.search}`;
+        if (route.view === "category" && route.categoryPath) {
+          return `${baseUrl}#room=${encodeURIComponent(route.categoryPath)}`;
+        }
+        if (route.view === "collection" && route.collectionPath) {
+          return `${baseUrl}#shelf=${encodeURIComponent(route.collectionPath)}`;
+        }
+        if (route.view === "article" && route.path) {
+          return `${baseUrl}#article=${encodeURIComponent(route.path)}`;
+        }
+        return baseUrl;
+      };
+
+      const parseRouteFromHash = () => {
+        const hash = window.location.hash.replace(/^#/, "");
+        if (!hash) return { view: "home" };
+
+        const [key, rawValue = ""] = hash.split("=");
+        const value = decodeURIComponent(rawValue);
+
+        if (key === "room" && value) return { view: "category", categoryPath: value };
+        if (key === "shelf" && value) return { view: "collection", collectionPath: value };
+        if (key === "article" && value) return { view: "article", path: value };
+        return { view: "home" };
+      };
+
       const getFileTitle = (item) => {
         if (!item) return "";
         if (item.title) return item.title;
@@ -1321,6 +1348,17 @@
             categoryTrail: parentNames,
           }];
         });
+      };
+
+      const findNodeByPath = (nodes = [], targetPath = "") => {
+        for (const node of nodes) {
+          if (node.path === targetPath) return node;
+          if (node.type === "directory") {
+            const nestedNode = findNodeByPath(node.children || [], targetPath);
+            if (nestedNode) return nestedNode;
+          }
+        }
+        return null;
       };
 
       const getTopLevelCategories = (nodes = []) => {
