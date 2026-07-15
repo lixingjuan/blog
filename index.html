@@ -1663,89 +1663,149 @@
         const [currentCategory, setCurrentCategory] = React.useState(null);
         const [currentCollection, setCurrentCollection] = React.useState(null);
 
+        const categories = React.useMemo(() => getTopLevelCategories(sidebarData), [sidebarData]);
+        const allFiles = React.useMemo(
+          () => sortFilesByDateDesc(flattenDisplayFiles(sidebarData)),
+          [sidebarData]
+        );
+
+        const resetArticleState = () => {
+          setContent("");
+          setCurrentCreatedAt(null);
+          setCurrentUpdatedAt(null);
+          setCurrentFileType("");
+          setToc([]);
+          setCurrentPath("");
+        };
+
+        const writeHistory = (route, mode = "push") => {
+          const state = { palaceRoute: route };
+          const url = routeToUrl(route);
+          if (mode === "replace") {
+            window.history.replaceState(state, "", url);
+            return;
+          }
+          if (mode === "push") {
+            window.history.pushState(state, "", url);
+          }
+        };
+
+        const applyRoute = async (route = { view: "home" }, options = {}) => {
+          const { historyMode = null, shouldScroll = true } = options;
+          if (historyMode) writeHistory(route, historyMode);
+
+          if (route.view === "category") {
+            const category = findNodeByPath(sidebarData, route.categoryPath);
+            if (!category || category.type !== "directory") {
+              await applyRoute({ view: "home" }, { historyMode: "replace", shouldScroll });
+              return;
+            }
+            setCurrentCategory(category);
+            setCurrentCollection(null);
+            setCurrentView("category");
+            setContentLoading(false);
+            resetArticleState();
+            if (shouldScroll) scrollToPageTop();
+            return;
+          }
+
+          if (route.view === "collection") {
+            const collection = categories
+              .flatMap((category) => getCategoryCollections(category))
+              .find((item) => item.path === route.collectionPath);
+            if (!collection) {
+              await applyRoute({ view: "home" }, { historyMode: "replace", shouldScroll });
+              return;
+            }
+            setCurrentCategory(collection.parentCategory);
+            setCurrentCollection(collection);
+            setCurrentView("category");
+            setContentLoading(false);
+            resetArticleState();
+            if (shouldScroll) scrollToPageTop();
+            return;
+          }
+
+          if (route.view === "article") {
+            const file = allFiles.find((item) => item.path === route.path);
+            if (!file) {
+              await applyRoute({ view: "home" }, { historyMode: "replace", shouldScroll });
+              return;
+            }
+            setContentLoading(true);
+            const result = await loadContent(file);
+            setContent(result.content);
+            setCurrentCreatedAt(result.createdAt);
+            setCurrentUpdatedAt(result.updatedAt);
+            setCurrentFileType(file.fileType);
+            setToc(result.toc || []);
+            setCurrentPath(file.path || "");
+            setCurrentView("article");
+            setCurrentCategory(null);
+            setCurrentCollection(null);
+            setContentLoading(false);
+            if (shouldScroll) scrollToPageTop();
+            return;
+          }
+
+          setContentLoading(false);
+          resetArticleState();
+          setCurrentView("home");
+          setCurrentCategory(null);
+          setCurrentCollection(null);
+          if (shouldScroll) scrollToPageTop();
+        };
+
         React.useEffect(() => {
           setMenuLoading(true);
           fetch("structure.json")
             .then((response) => response.json())
             .then((data) => {
               setSidebarData(data);
-              setContent("");
-              setCurrentCreatedAt(null);
-              setCurrentUpdatedAt(null);
-              setCurrentFileType("");
-              setToc([]);
-              setCurrentPath("");
-              setCurrentView("home");
-              setCurrentCategory(null);
-              setCurrentCollection(null);
             })
             .finally(() => {
               setMenuLoading(false);
-              setContentLoading(false);
             });
         }, []);
 
+        React.useEffect(() => {
+          if (menuLoading) return;
+          applyRoute(parseRouteFromHash(), { historyMode: "replace", shouldScroll: false });
+        }, [menuLoading]);
+
+        React.useEffect(() => {
+          if (menuLoading) return;
+
+          const handlePopState = (event) => {
+            const route = event.state && event.state.palaceRoute
+              ? event.state.palaceRoute
+              : parseRouteFromHash();
+            applyRoute(route, { shouldScroll: true });
+          };
+
+          window.addEventListener("popstate", handlePopState);
+          return () => window.removeEventListener("popstate", handlePopState);
+        }, [menuLoading, sidebarData]);
+
         const value = React.useMemo(
           () => ({
-            updateContent: async ({ path, fileType, createdAt, updatedAt }) => {
-              setContentLoading(true);
-              const result = await loadContent({ path, fileType, createdAt, updatedAt });
-              setContentLoading(false);
-              setContent(result.content);
-              setCurrentCreatedAt(result.createdAt);
-              setCurrentUpdatedAt(result.updatedAt);
-              setCurrentFileType(fileType);
-              setToc(result.toc || []);
-              setCurrentPath(path || "");
-              setCurrentView("article");
-              setCurrentCategory(null);
-              setCurrentCollection(null);
-              scrollToPageTop();
-            },
-            openHome: () => {
-              setContentLoading(false);
-              setContent("");
-              setCurrentCreatedAt(null);
-              setCurrentUpdatedAt(null);
-              setCurrentFileType("");
-              setToc([]);
-              setCurrentPath("");
-              setCurrentView("home");
-              setCurrentCategory(null);
-              setCurrentCollection(null);
-              scrollToPageTop();
-            },
-            openCategory: (category) => {
-              setCurrentCategory(category);
-              setCurrentCollection(null);
-              setCurrentView("category");
-              setContentLoading(false);
-              setToc([]);
-              setCurrentPath("");
-              setCurrentFileType("");
-              setCurrentCreatedAt(null);
-              setCurrentUpdatedAt(null);
-              scrollToPageTop();
-            },
-            openCollection: (collection) => {
-              setCurrentCategory(collection.parentCategory);
-              setCurrentCollection(collection);
-              setCurrentView("category");
-              setContentLoading(false);
-              setToc([]);
-              setCurrentPath("");
-              setCurrentFileType("");
-              setCurrentCreatedAt(null);
-              setCurrentUpdatedAt(null);
-              scrollToPageTop();
-            },
+            updateContent: (file) => applyRoute(
+              { view: "article", path: file.path },
+              { historyMode: "push", shouldScroll: true }
+            ),
+            openHome: () => applyRoute(
+              { view: "home" },
+              { historyMode: "push", shouldScroll: true }
+            ),
+            openCategory: (category) => applyRoute(
+              { view: "category", categoryPath: category.path },
+              { historyMode: "push", shouldScroll: true }
+            ),
+            openCollection: (collection) => applyRoute(
+              { view: "collection", collectionPath: collection.path },
+              { historyMode: "push", shouldScroll: true }
+            ),
           }),
-          [setContent]
-        );
-
-        const categories = React.useMemo(() => getTopLevelCategories(sidebarData), [sidebarData]);
-        const allFiles = React.useMemo(
-          () => sortFilesByDateDesc(flattenDisplayFiles(sidebarData)),
           [sidebarData]
         );
         const isExhibitionArticle =
