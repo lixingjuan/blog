@@ -18,8 +18,8 @@
 
 <section class="gallery">
   <figure class="gallery-item gallery-item-wide">
-    <a href="展览/2026-07-14/玩偶艺术展/IMG_7792.JPG" target="_blank" rel="noopener">
-      <img src="展览/2026-07-14/玩偶艺术展/IMG_7792.JPG" alt="玩偶艺术展 1" loading="lazy" />
+    <a href="./2026_07_14_玩偶艺术展/images/IMG_7792.JPG" target="_blank" rel="noopener">
+      <img src="./2026_07_14_玩偶艺术展/images/IMG_7792.JPG" alt="玩偶艺术展 1" loading="lazy" />
     </a>
     <figcaption>
       <span>红色房间</span>
@@ -27,8 +27,8 @@
     </figcaption>
   </figure>
   <figure class="gallery-item">
-    <a href="展览/2026-07-14/玩偶艺术展/IMG_7793.JPG" target="_blank" rel="noopener">
-      <img src="展览/2026-07-14/玩偶艺术展/IMG_7793.JPG" alt="玩偶艺术展 2" loading="lazy" />
+    <a href="展览/2026_07_14_玩偶艺术展/images/IMG_7793.JPG" target="_blank" rel="noopener">
+      <img src="展览/2026_07_14_玩偶艺术展/images/IMG_7793.JPG" alt="玩偶艺术展 2" loading="lazy" />
     </a>
     <figcaption>
       <span>凝视</span>
@@ -36,8 +36,8 @@
     </figcaption>
   </figure>
   <figure class="gallery-item">
-    <a href="展览/2026-07-14/玩偶艺术展/IMG_7794.JPG" target="_blank" rel="noopener">
-      <img src="展览/2026-07-14/玩偶艺术展/IMG_7794.JPG" alt="玩偶艺术展 3" loading="lazy" />
+    <a href="展览/2026_07_14_玩偶艺术展/images/IMG_7794.JPG" target="_blank" rel="noopener">
+      <img src="展览/2026_07_14_玩偶艺术展/images/IMG_7794.JPG" alt="玩偶艺术展 3" loading="lazy" />
     </a>
     <figcaption>
       <span>棋盘格</span>
@@ -58,15 +58,15 @@
   <p class="section-intro">视频可以保留现场的迟疑、晃动和靠近。这里之后可以写你在现场走动时的感受。</p>
   <div class="video-grid">
     <figure class="video-item">
-      <video src="展览/2026-07-14/玩偶艺术展/IMG_7799.MOV" controls preload="metadata" playsinline></video>
+      <video src="展览/2026_07_14_玩偶艺术展/images/IMG_7799.MOV" controls preload="metadata" playsinline></video>
       <figcaption>片段一 · 这里可以写一句现场备注</figcaption>
     </figure>
     <figure class="video-item">
-      <video src="展览/2026-07-14/玩偶艺术展/IMG_7800.MOV" controls preload="metadata" playsinline></video>
+      <video src="展览/2026_07_14_玩偶艺术展/images/IMG_7800.MOV" controls preload="metadata" playsinline></video>
       <figcaption>片段二 · 这里可以写一句声音或运动的记忆</figcaption>
     </figure>
     <figure class="video-item">
-      <video src="展览/2026-07-14/玩偶艺术展/IMG_7801.MOV" controls preload="metadata" playsinline></video>
+      <video src="展览/2026_07_14_玩偶艺术展/images/IMG_7801.MOV" controls preload="metadata" playsinline></video>
       <figcaption>片段三 · 这里可以写一句收束感受</figcaption>
     </figure>
   </div>
