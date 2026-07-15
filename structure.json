@@ -2987,6 +2987,25 @@
       },
       {
         "type": "directory",
+        "name": "2026_07_15_莫兰迪展览",
+        "path": "展览/2026_07_15_莫兰迪展览",
+        "children": [
+          {
+            "type": "file",
+            "name": "index.md",
+            "path": "展览/2026_07_15_莫兰迪展览/index.md",
+            "fileType": ".md",
+            "title": "07月15日 · 莫兰迪展览",
+            "cover": null,
+            "date": "2026-07-15",
+            "pathDate": null,
+            "createdAt": "2026-07-15",
+            "updatedAt": "2026-07-15"
+          }
+        ]
+      },
+      {
+        "type": "directory",
         "name": "2026_07_14_玩偶艺术展",
         "path": "展览/2026_07_14_玩偶艺术展",
         "children": [
@@ -3081,7 +3100,7 @@
             "date": "2026-07-14",
             "pathDate": null,
             "createdAt": "2026-07-14",
-            "updatedAt": "2026-07-14"
+            "updatedAt": "2026-07-15"
           }
         ]
       },
