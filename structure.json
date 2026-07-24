@@ -624,7 +624,7 @@
                         "date": "2020-02-28",
                         "pathDate": null,
                         "createdAt": "2020-02-28",
-                        "updatedAt": "2026-07-14"
+                        "updatedAt": "2026-07-24"
                       }
                     ]
                   }
@@ -3051,6 +3051,61 @@
       },
       {
         "type": "directory",
+        "name": "🖤",
+        "path": "随笔/🖤",
+        "children": [
+          {
+            "type": "file",
+            "name": "07月06日.md",
+            "path": "随笔/🖤/07月06日.md",
+            "fileType": ".md",
+            "title": "—————————— 从心理学上解释下这个情况 ——————————",
+            "cover": null,
+            "date": "2026-07-07",
+            "pathDate": null,
+            "createdAt": "2026-07-07",
+            "updatedAt": "2026-07-24"
+          },
+          {
+            "type": "file",
+            "name": "07月07日.md",
+            "path": "随笔/🖤/07月07日.md",
+            "fileType": ".md",
+            "title": "日记",
+            "cover": null,
+            "date": "2026-07-09",
+            "pathDate": null,
+            "createdAt": "2026-07-09",
+            "updatedAt": "2026-07-24"
+          },
+          {
+            "type": "file",
+            "name": "07月08日.md",
+            "path": "随笔/🖤/07月08日.md",
+            "fileType": ".md",
+            "title": null,
+            "cover": null,
+            "date": "2026-07-09",
+            "pathDate": null,
+            "createdAt": "2026-07-09",
+            "updatedAt": "2026-07-24"
+          },
+          {
+            "type": "file",
+            "name": "回避型依恋.md",
+            "path": "随笔/🖤/回避型依恋.md",
+            "fileType": ".md",
+            "title": null,
+            "cover": null,
+            "date": "2020-02-28",
+            "pathDate": null,
+            "createdAt": "2020-02-28",
+            "updatedAt": "2026-07-24"
+          }
+        ]
+      },
+      {
+        "type": "directory",
         "name": "小说",
         "path": "随笔/小说",
         "children": [
@@ -3125,42 +3180,6 @@
       },
       {
         "type": "file",
-        "name": "07月06日.md",
-        "path": "随笔/07月06日.md",
-        "fileType": ".md",
-        "title": "—————————— 从心理学上解释下这个情况 ——————————",
-        "cover": "随笔/image.png",
-        "date": "2026-07-07",
-        "pathDate": null,
-        "createdAt": "2026-07-07",
-        "updatedAt": "2026-07-14"
-      },
-      {
-        "type": "file",
-        "name": "07月07日.md",
-        "path": "随笔/07月07日.md",
-        "fileType": ".md",
-        "title": "日记",
-        "cover": "随笔/image.png",
-        "date": "2026-07-09",
-        "pathDate": null,
-        "createdAt": "2026-07-09",
-        "updatedAt": "2026-07-14"
-      },
-      {
-        "type": "file",
-        "name": "07月08日.md",
-        "path": "随笔/07月08日.md",
-        "fileType": ".md",
-        "title": null,
-        "cover": "随笔/image.png",
-        "date": "2026-07-09",
-        "pathDate": null,
-        "createdAt": "2026-07-09",
-        "updatedAt": "2026-07-14"
-      },
-      {
-        "type": "file",
         "name": "cursor_users_lixingjuan_documents_lzh.md",
         "path": "随笔/cursor_users_lixingjuan_documents_lzh.md",
         "fileType": ".md",
@@ -3185,18 +3204,6 @@
       },
       {
         "type": "file",
-        "name": "回避型依恋.md",
-        "path": "随笔/回避型依恋.md",
-        "fileType": ".md",
-        "title": null,
-        "cover": "随笔/image.png",
-        "date": "2020-02-28",
-        "pathDate": null,
-        "createdAt": "2020-02-28",
-        "updatedAt": "2026-07-14"
-      },
-      {
-        "type": "file",
         "name": "必看电视电影书.md",
         "path": "随笔/必看电视电影书.md",
         "fileType": ".md",
@@ -3217,7 +3224,7 @@
         "date": "2020-02-28",
         "pathDate": null,
         "createdAt": "2020-02-28",
-        "updatedAt": "2026-07-14"
+        "updatedAt": "2026-07-24"
       },
       {
         "type": "file",
