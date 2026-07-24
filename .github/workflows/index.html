@@ -1810,7 +1810,7 @@
         );
         const isExhibitionArticle =
           currentView === "article" &&
-          currentFileType.toLowerCase() === ".md" &&
+          [".md", ".html"].includes(currentFileType.toLowerCase()) &&
           currentPath.replace(/^\.\//, "").startsWith("展览/");
 
         const HomePage = () => {

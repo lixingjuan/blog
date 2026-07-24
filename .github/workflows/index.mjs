@@ -259,6 +259,33 @@ const extractMarkdownMeta = (filePath, relativePath, baseUrl) => {
   }
 };
 
+const extractHtmlMeta = (filePath, relativePath, baseUrl) => {
+  try {
+    const content = fs.readFileSync(filePath, "utf8");
+    const titleMatch =
+      content.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i) ||
+      content.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i);
+    const title = titleMatch
+      ? titleMatch[1].replace(/<[^>]+>/g, "").trim()
+      : null;
+
+    const imageMatch = content.match(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/i);
+    const explicitCover = imageMatch
+      ? normalizeAssetPath(imageMatch[1], relativePath, baseUrl)
+      : null;
+
+    return {
+      title,
+      cover:
+        explicitCover ||
+        findFirstImageAsset(path.dirname(filePath), path.dirname(relativePath)),
+    };
+  } catch (error) {
+    console.warn(`Failed to read html metadata for ${filePath}:`, error.message);
+    return { title: null, cover: null };
+  }
+};
+
 const shouldIgnoreDirectory = (fileName) => {
   return ignoreFolders.has(fileName);
 };
@@ -325,10 +352,13 @@ function generateDirectoryStructure(dir, baseUrl, isRoot = false) {
         baseUrl,
         shouldPreferContentHistory
       );
+      const lowercaseFileType = fileType.toLowerCase();
       const markdownMeta =
-        fileType.toLowerCase() === ".md"
+        lowercaseFileType === ".md"
           ? extractMarkdownMeta(fullPath, relativePath, baseUrl)
-          : { title: null, cover: null };
+          : lowercaseFileType === ".html"
+            ? extractHtmlMeta(fullPath, relativePath, baseUrl)
+            : { title: null, cover: null };
       const pathDate = extractPathDate(relativePath);
 
       return {
