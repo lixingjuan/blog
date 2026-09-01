@@ -3000,7 +3000,7 @@
             "date": "2026-08-21",
             "pathDate": null,
             "createdAt": "2026-08-21",
-            "updatedAt": "2026-08-21"
+            "updatedAt": "2026-09-01"
           }
         ]
       },
@@ -3125,6 +3125,37 @@
       },
       {
         "type": "directory",
+        "name": "我以为我认识她",
+        "path": "随笔/我以为我认识她",
+        "children": [
+          {
+            "type": "file",
+            "name": "index.md",
+            "path": "随笔/我以为我认识她/index.md",
+            "fileType": ".md",
+            "title": null,
+            "cover": null,
+            "date": "2026-09-01",
+            "pathDate": null,
+            "createdAt": "2026-09-01",
+            "updatedAt": "2026-09-01"
+          },
+          {
+            "type": "file",
+            "name": "场景.md",
+            "path": "随笔/我以为我认识她/场景.md",
+            "fileType": ".md",
+            "title": null,
+            "cover": null,
+            "date": "2026-09-01",
+            "pathDate": null,
+            "createdAt": "2026-09-01",
+            "updatedAt": "2026-09-01"
+          }
+        ]
+      },
+      {
+        "type": "directory",
         "name": "小说",
         "path": "随笔/小说",
         "children": [
@@ -3193,7 +3224,7 @@
             "date": "2026-08-07",
             "pathDate": null,
             "createdAt": "2026-08-07",
-            "updatedAt": "2026-08-07"
+            "updatedAt": "2026-09-01"
           },
           {
             "type": "file",
@@ -3240,10 +3271,10 @@
         "fileType": ".md",
         "title": "必看影视作品",
         "cover": "随笔/image.png",
-        "date": "2026-08-21",
+        "date": "2026-09-01",
         "pathDate": null,
-        "createdAt": "2026-08-21",
-        "updatedAt": "2026-08-21"
+        "createdAt": "2026-09-01",
+        "updatedAt": "2026-09-01"
       },
       {
         "type": "file",
