@@ -2995,12 +2995,12 @@
             "name": "index.html",
             "path": "展览/2026_07_16_上海天文馆/index.html",
             "fileType": ".html",
-            "title": "三次回望地球",
+            "title": "沿同一条轨道",
             "cover": "展览/2026_07_16_上海天文馆/images/exterior.jpg",
-            "date": "2026-07-24",
+            "date": "2026-08-21",
             "pathDate": null,
-            "createdAt": "2026-07-24",
-            "updatedAt": "2026-07-24"
+            "createdAt": "2026-08-21",
+            "updatedAt": "2026-08-21"
           }
         ]
       },
@@ -3185,6 +3185,18 @@
           },
           {
             "type": "file",
+            "name": "生成随机字符串.md",
+            "path": "随笔/使用AI随笔/生成随机字符串.md",
+            "fileType": ".md",
+            "title": null,
+            "cover": null,
+            "date": "2026-08-07",
+            "pathDate": null,
+            "createdAt": "2026-08-07",
+            "updatedAt": "2026-08-07"
+          },
+          {
+            "type": "file",
             "name": "风格网站推荐.md",
             "path": "随笔/使用AI随笔/风格网站推荐.md",
             "fileType": ".md",
@@ -3223,15 +3235,15 @@
       },
       {
         "type": "file",
-        "name": "必看电视电影书.md",
-        "path": "随笔/必看电视电影书.md",
+        "name": "必看影视作品.md",
+        "path": "随笔/必看影视作品.md",
         "fileType": ".md",
-        "title": "电视剧",
+        "title": "必看影视作品",
         "cover": "随笔/image.png",
-        "date": "2026-07-06",
+        "date": "2026-08-21",
         "pathDate": null,
-        "createdAt": "2026-07-06",
-        "updatedAt": "2026-07-14"
+        "createdAt": "2026-08-21",
+        "updatedAt": "2026-08-21"
       },
       {
         "type": "file",
