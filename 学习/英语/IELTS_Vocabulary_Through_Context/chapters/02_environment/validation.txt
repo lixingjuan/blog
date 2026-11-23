@@ -1,8 +1,0 @@
-CHAPTER 02 VALIDATION
-
-File: chapters/02_environment/article.txt
-Body word count: 3095
-Unique highlighted target items: 309
-Glossary entries: 309
-Highlighted items without definitions: none
-Definitions without highlighted body items: none

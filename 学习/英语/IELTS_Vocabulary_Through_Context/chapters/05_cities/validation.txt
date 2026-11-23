@@ -1,8 +1,0 @@
-CHAPTER 05 VALIDATION
-
-File: chapters/05_cities/article.txt
-Body word count: 3003
-Unique highlighted target items: 304
-Glossary entries: 304
-Highlighted items without definitions: none
-Definitions without highlighted body items: none

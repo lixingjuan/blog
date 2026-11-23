@@ -1413,48 +1413,43 @@
         };
       };
 
-      const isFlatArticleCategory = (category) => {
-        if (!category) return false;
-        return category.name.includes("历史") || category.name.includes("展览");
-      };
-
       const getCategoryCollections = (category) => {
         if (!category) return [];
-        if (isFlatArticleCategory(category)) return [];
 
+        const directFiles = [];
         const collections = [];
 
         (category.children || []).forEach((child) => {
           if (child.type === "directory") {
             collections.push(createCollection(child, category));
+            return;
+          }
+
+          const fileType = (child.fileType || "").toLowerCase();
+          if (DISPLAY_FILE_TYPES.has(fileType)) {
+            directFiles.push({
+              ...child,
+              title: getFileTitle(child),
+              categoryTrail: [],
+            });
           }
         });
+
+        if (directFiles.length > 0) {
+          collections.unshift({
+            name: "未归入书架",
+            path: `${category.path}.__direct__`,
+            parentCategory: category,
+            node: null,
+            files: sortFilesByDateDesc(directFiles),
+            latestDate: getLatestDate(directFiles),
+          });
+        }
 
         return collections.sort((a, b) => {
           if (a.latestDate !== b.latestDate) return b.latestDate.localeCompare(a.latestDate);
           return a.name.localeCompare(b.name, "zh-Hans-CN");
         });
-      };
-
-      const getCategoryDirectFiles = (category) => {
-        if (!category) return [];
-
-        if (isFlatArticleCategory(category)) {
-          return sortFilesByDateDesc(flattenDisplayFiles(category.children || []));
-        }
-
-        const files = (category.children || []).flatMap((child) => {
-          if (child.type !== "file") return [];
-          const fileType = (child.fileType || "").toLowerCase();
-          if (!DISPLAY_FILE_TYPES.has(fileType)) return [];
-          return [{
-            ...child,
-            title: getFileTitle(child),
-            categoryTrail: [],
-          }];
-        });
-
-        return sortFilesByDateDesc(files);
       };
 
       // 生成标题 ID（URL 友好）
@@ -1737,10 +1732,6 @@
               await applyRoute({ view: "home" }, { historyMode: "replace", shouldScroll });
               return;
             }
-            if (file.standalone) {
-              window.location.assign(file.path);
-              return;
-            }
             setContentLoading(true);
             const result = await loadContent(file);
             setContent(result.content);
@@ -1798,16 +1789,10 @@
 
         const value = React.useMemo(
           () => ({
-            updateContent: (file) => {
-              if (file.standalone) {
-                window.location.assign(file.path);
-                return;
-              }
-              return applyRoute(
-                { view: "article", path: file.path },
-                { historyMode: "push", shouldScroll: true }
-              );
-            },
+            updateContent: (file) => applyRoute(
+              { view: "article", path: file.path },
+              { historyMode: "push", shouldScroll: true }
+            ),
             openHome: () => applyRoute(
               { view: "home" },
               { historyMode: "push", shouldScroll: true }
@@ -1825,7 +1810,7 @@
         );
         const isExhibitionArticle =
           currentView === "article" &&
-          [".md", ".html"].includes(currentFileType.toLowerCase()) &&
+          currentFileType.toLowerCase() === ".md" &&
           currentPath.replace(/^\.\//, "").startsWith("展览/");
 
         const HomePage = () => {
@@ -1907,9 +1892,7 @@
         const CategoryPage = ({ category }) => {
           if (!category) return null;
           const collections = getCategoryCollections(category);
-          const files = currentCollection
-            ? currentCollection.files
-            : getCategoryDirectFiles(category);
+          const files = currentCollection ? currentCollection.files : [];
           const isExhibition = category.name.includes("展览");
 
           return (
@@ -1924,12 +1907,10 @@
               <p class="category-summary">
                 {currentCollection
                   ? `${files.length} 篇内容，按时间从近到远陈列。`
-                  : collections.length > 0
-                    ? `${files.length} 篇直接文章，另有 ${collections.length} 个书架。`
-                    : `${files.length} 篇文章，按时间从近到远陈列。`}
+                  : `${collections.length} 个书架，来自这个房间的二级目录。`}
               </p>
 
-              {!currentCollection && collections.length === 0 && files.length === 0 && (
+              {!currentCollection && collections.length === 0 && (
                 <div class="empty-category">这个房间暂时还没有可展示的文章。</div>
               )}
 
@@ -1956,7 +1937,7 @@
                 <div class="empty-category">这个书架暂时还没有可展示的文章。</div>
               )}
 
-              {files.length > 0 && (
+              {currentCollection && files.length > 0 && (
                 <div class="article-list">
                   {files.map((file) => (
                     <button
