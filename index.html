@@ -1732,10 +1732,6 @@
               await applyRoute({ view: "home" }, { historyMode: "replace", shouldScroll });
               return;
             }
-            if (file.standalone) {
-              window.location.assign(file.path);
-              return;
-            }
             setContentLoading(true);
             const result = await loadContent(file);
             setContent(result.content);
@@ -1793,16 +1789,10 @@
 
         const value = React.useMemo(
           () => ({
-            updateContent: (file) => {
-              if (file.standalone) {
-                window.location.assign(file.path);
-                return;
-              }
-              return applyRoute(
-                { view: "article", path: file.path },
-                { historyMode: "push", shouldScroll: true }
-              );
-            },
+            updateContent: (file) => applyRoute(
+              { view: "article", path: file.path },
+              { historyMode: "push", shouldScroll: true }
+            ),
             openHome: () => applyRoute(
               { view: "home" },
               { historyMode: "push", shouldScroll: true }
@@ -1820,7 +1810,7 @@
         );
         const isExhibitionArticle =
           currentView === "article" &&
-          [".md", ".html"].includes(currentFileType.toLowerCase()) &&
+          currentFileType.toLowerCase() === ".md" &&
           currentPath.replace(/^\.\//, "").startsWith("展览/");
 
         const HomePage = () => {

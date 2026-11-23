@@ -1,8 +1,0 @@
-CHAPTER 07 VALIDATION
-
-File: chapters/07_culture_and_identity/article.txt
-Body word count: 3007
-Unique highlighted target items: 321
-Glossary entries: 321
-Highlighted items without definitions: none
-Definitions without highlighted body items: none
