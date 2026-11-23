@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="zh-CN" data-standalone-page>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="一张可交互的中国历史纵向编年矩阵，呈现统一王朝、并立政权与历史转折。" />
+    <title>中国历史线路图</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #080909;
+        --ink-soft: #111210;
+        --panel: #171714;
+        --paper: #ece3cf;
+        --paper-muted: #b8ad99;
+        --cinnabar: #a83232;
+        --cinnabar-bright: #d45b47;
+        --gold: #c7a45a;
+        --gold-bright: #ead28d;
+        --jade: #71998a;
+        --blue: #65879d;
+        --line: rgba(199, 164, 90, 0.24);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        min-width: 320px;
+        background:
+          radial-gradient(circle at 15% 0%, rgba(168, 50, 50, 0.18), transparent 34rem),
+          radial-gradient(circle at 90% 28%, rgba(199, 164, 90, 0.08), transparent 40rem),
+          var(--ink);
+        color: var(--paper);
+        font-family: "Songti SC", "Noto Serif CJK SC", "STSong", serif;
+        font-size: 16px;
+        line-height: 1.65;
+      }
+
+      button, a { -webkit-tap-highlight-color: transparent; }
+      button { font: inherit; }
+      a { color: inherit; }
+      :focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        min-height: 64px;
+        padding: 10px clamp(16px, 4vw, 60px);
+        border-bottom: 1px solid rgba(199, 164, 90, 0.18);
+        background: rgba(8, 9, 9, 0.9);
+        backdrop-filter: blur(18px);
+      }
+
+      .back-link, .topbar-link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 42px;
+        color: var(--paper-muted);
+        text-decoration: none;
+      }
+
+      .back-link { gap: 9px; }
+      .back-link:hover, .topbar-link:hover { color: var(--gold-bright); }
+      .back-mark {
+        display: grid;
+        width: 30px;
+        height: 30px;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+      }
+      .topbar-title { color: var(--gold-bright); letter-spacing: 0.16em; }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: clamp(64px, 10vw, 126px) clamp(20px, 7vw, 104px) clamp(54px, 8vw, 92px);
+        border-bottom: 1px solid rgba(199, 164, 90, 0.16);
+      }
+
+      .hero::after {
+        position: absolute;
+        top: -170px;
+        right: -130px;
+        width: 450px;
+        height: 450px;
+        border: 1px solid rgba(199, 164, 90, 0.13);
+        border-radius: 50%;
+        box-shadow: 0 0 0 42px rgba(199, 164, 90, 0.025), 0 0 0 92px rgba(199, 164, 90, 0.016);
+        content: "";
+      }
+
+      .hero-inner { position: relative; z-index: 1; max-width: 1040px; margin: 0 auto; }
+      .eyebrow, .section-kicker {
+        margin: 0 0 13px;
+        color: var(--cinnabar-bright);
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.82rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      h1, h2, h3, p { margin-top: 0; }
+      h1 {
+        max-width: 900px;
+        margin-bottom: 24px;
+        font-size: clamp(3rem, 8vw, 7rem);
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        line-height: 1;
+      }
+      .hero-lead {
+        max-width: 720px;
+        margin-bottom: 30px;
+        color: var(--paper-muted);
+        font-size: clamp(1rem, 1.8vw, 1.22rem);
+      }
+      .hero-meta { display: flex; flex-wrap: wrap; gap: 9px; }
+      .hero-meta span {
+        padding: 6px 11px;
+        border: 1px solid rgba(199, 164, 90, 0.22);
+        color: var(--paper-muted);
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.84rem;
+      }
+
+      main { max-width: 1240px; margin: 0 auto; padding: clamp(44px, 7vw, 84px) clamp(14px, 4vw, 52px) 100px; }
+      .section-head { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 26px; }
+      .section-head h2 { margin-bottom: 5px; font-size: clamp(1.8rem, 3.4vw, 3rem); font-weight: 400; }
+      .section-intro { max-width: 640px; margin: 0; color: var(--paper-muted); }
+      .legend { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px 16px; color: var(--paper-muted); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.82rem; }
+      .legend span { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+      .legend i { width: 13px; height: 13px; background: rgba(199, 164, 90, 0.18); border: 1px solid var(--gold); }
+      .legend .parallel { background: rgba(113, 153, 138, 0.2); border-color: var(--jade); }
+      .legend .transition { background: rgba(168, 50, 50, 0.2); border-color: var(--cinnabar-bright); }
+
+      .timeline-shell { border: 1px solid rgba(199, 164, 90, 0.2); background: rgba(17, 18, 16, 0.88); }
+      .timeline-guide {
+        display: grid;
+        grid-template-columns: 152px minmax(0, 1fr);
+        min-height: 46px;
+        border-bottom: 1px solid rgba(199, 164, 90, 0.18);
+        color: var(--paper-muted);
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.78rem;
+      }
+      .timeline-guide span { display: flex; align-items: center; padding: 8px 14px; }
+      .timeline-guide span:first-child { border-right: 1px solid rgba(199, 164, 90, 0.18); }
+      .timeline-guide span:last-child { justify-content: space-between; }
+
+      .era-group { display: grid; grid-template-columns: 152px minmax(0, 1fr); border-bottom: 1px solid rgba(199, 164, 90, 0.16); }
+      .era-group:last-child { border-bottom: 0; }
+      .era-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 92px;
+        padding: 16px 10px;
+        border-right: 1px solid rgba(199, 164, 90, 0.18);
+        background: rgba(199, 164, 90, 0.035);
+        text-align: center;
+      }
+      .era-label strong { color: var(--gold-bright); font-size: 1.14rem; font-weight: 500; letter-spacing: 0.08em; }
+      .era-label span { margin-top: 4px; color: var(--paper-muted); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.78rem; line-height: 1.4; }
+      .era-rows { min-width: 0; }
+      .dynasty-row { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); min-height: 58px; border-bottom: 1px solid rgba(199, 164, 90, 0.1); }
+      .dynasty-row:last-child { border-bottom: 0; }
+
+      .dynasty {
+        grid-column: var(--start) / span var(--span);
+        min-width: 0;
+        min-height: 58px;
+        padding: 9px 7px 8px;
+        border: 0;
+        border-right: 1px solid rgba(8, 9, 9, 0.7);
+        background: rgba(199, 164, 90, 0.12);
+        color: var(--paper);
+        text-align: center;
+        cursor: pointer;
+        transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+      }
+      .dynasty:hover { background: rgba(199, 164, 90, 0.23); color: var(--gold-bright); }
+      .dynasty[data-kind="parallel"] { background: rgba(113, 153, 138, 0.16); }
+      .dynasty[data-kind="parallel"]:hover { background: rgba(113, 153, 138, 0.28); }
+      .dynasty[data-kind="transition"] { background: rgba(168, 50, 50, 0.16); }
+      .dynasty[data-kind="transition"]:hover { background: rgba(168, 50, 50, 0.28); }
+      .dynasty[data-featured="true"] { box-shadow: inset 0 0 0 1px var(--gold); }
+      .dynasty strong, .dynasty small { display: block; overflow: hidden; text-overflow: ellipsis; }
+      .dynasty strong { color: var(--gold-bright); font-size: 1rem; font-weight: 500; white-space: nowrap; }
+      .dynasty small { margin-top: 2px; color: var(--paper-muted); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.76rem; line-height: 1.35; white-space: normal; }
+
+      .reading-note {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        margin-top: 28px;
+        background: rgba(199, 164, 90, 0.14);
+      }
+      .note-item { padding: 18px; background: var(--ink-soft); }
+      .note-item strong { display: block; margin-bottom: 5px; color: var(--gold-bright); font-weight: 500; }
+      .note-item p { margin: 0; color: var(--paper-muted); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.84rem; }
+
+      dialog {
+        width: min(560px, calc(100vw - 28px));
+        max-height: min(720px, calc(100vh - 32px));
+        padding: 0;
+        border: 1px solid rgba(199, 164, 90, 0.42);
+        background: var(--panel);
+        color: var(--paper);
+        box-shadow: 0 24px 90px rgba(0, 0, 0, 0.65);
+      }
+      dialog::backdrop { background: rgba(0, 0, 0, 0.72); backdrop-filter: blur(5px); }
+      .detail-head { display: flex; align-items: start; justify-content: space-between; gap: 20px; padding: 24px 24px 20px; border-bottom: 1px solid rgba(199, 164, 90, 0.16); background: linear-gradient(135deg, rgba(168, 50, 50, 0.18), transparent 65%); }
+      .detail-era { display: block; margin-bottom: 5px; color: var(--cinnabar-bright); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.78rem; letter-spacing: 0.14em; }
+      .detail-head h3 { margin: 0; font-size: 2.2rem; font-weight: 400; }
+      .dialog-close { display: grid; flex: 0 0 auto; width: 42px; height: 42px; place-items: center; border: 1px solid var(--line); background: transparent; color: var(--paper-muted); cursor: pointer; }
+      .dialog-close:hover { color: var(--gold-bright); border-color: var(--gold); }
+      .detail-body { padding: 22px 24px 26px; overflow-y: auto; }
+      .detail-years { margin-bottom: 16px; color: var(--gold); font-family: ui-sans-serif, system-ui, sans-serif; }
+      .detail-summary { color: var(--paper-muted); }
+      .detail-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 20px 0 0; }
+      .detail-tags span { padding: 5px 9px; border: 1px solid rgba(199, 164, 90, 0.25); color: var(--paper-muted); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.78rem; }
+      .detail-link { display: inline-flex; align-items: center; min-height: 42px; margin-top: 22px; padding: 7px 13px; border: 1px solid var(--gold); color: var(--gold-bright); text-decoration: none; }
+      .detail-link[hidden] { display: none; }
+
+      footer { padding: 28px 20px 46px; border-top: 1px solid rgba(199, 164, 90, 0.16); color: var(--paper-muted); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.78rem; text-align: center; }
+
+      @media (max-width: 760px) {
+        .topbar-title { display: none; }
+        .section-head { align-items: start; flex-direction: column; }
+        .legend { justify-content: flex-start; }
+        .timeline-guide, .era-group { grid-template-columns: 82px minmax(0, 1fr); }
+        .timeline-guide span { padding-inline: 8px; }
+        .era-label { padding-inline: 6px; }
+        .era-label strong { font-size: 1rem; }
+        .era-label span { font-size: 0.7rem; }
+        .dynasty { padding-inline: 3px; }
+        .dynasty strong { font-size: 0.88rem; }
+        .dynasty small { font-size: 0.66rem; }
+        .reading-note { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 440px) {
+        .topbar-link { font-size: 0.82rem; }
+        .timeline-guide, .era-group { grid-template-columns: 70px minmax(0, 1fr); }
+        .timeline-guide span:last-child { justify-content: flex-end; }
+        .timeline-guide span:last-child b { display: none; }
+        .era-label strong { font-size: 0.92rem; }
+        .dynasty strong { font-size: 0.82rem; }
+        .dynasty small { font-size: 0.62rem; letter-spacing: -0.02em; }
+      }
+    </style>
+    <style>
+      /* Light, information-first timeline inspired by compact printed chronologies. */
+      :root {
+        color-scheme: light;
+        --ink: #f2f4f7;
+        --ink-soft: #ffffff;
+        --panel: #ffffff;
+        --paper: #26384f;
+        --paper-muted: #667489;
+        --cinnabar: #d94b34;
+        --cinnabar-bright: #c83e2b;
+        --gold: #d6a94d;
+        --gold-bright: #9b6d16;
+        --jade: #6cc4bd;
+        --blue: #2d67bd;
+        --line: #d7dde6;
+      }
+
+      body {
+        background: #eef1f5;
+        color: #26384f;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+        line-height: 1.55;
+      }
+
+      :focus-visible { outline-color: #2d67bd; }
+
+      .topbar {
+        min-height: 54px;
+        padding: 6px max(16px, calc((100vw - 760px) / 2));
+        border-bottom: 1px solid #d9dee7;
+        background: rgba(255, 255, 255, 0.94);
+        box-shadow: 0 1px 7px rgba(45, 62, 84, 0.06);
+      }
+
+      .back-link, .topbar-link { min-height: 40px; color: #5d6b7d; font-size: 0.9rem; }
+      .back-link:hover, .topbar-link:hover { color: #245db0; }
+      .back-mark {
+        width: 27px;
+        height: 27px;
+        border-color: #ccd4df;
+        border-radius: 4px;
+      }
+      .topbar-title { color: #2b5fae; font-weight: 600; letter-spacing: 0.08em; }
+
+      .hero {
+        width: min(760px, 100%);
+        margin: 22px auto 0;
+        padding: 26px 26px 22px;
+        border: 1px solid #cfd6e0;
+        border-bottom: 0;
+        background: #e7eaf0;
+      }
+      .hero::after { display: none; }
+      .hero-inner { max-width: none; }
+      .title-row { display: flex; align-items: center; justify-content: center; gap: 18px; }
+      .history-seal {
+        display: grid;
+        flex: 0 0 auto;
+        width: 58px;
+        height: 58px;
+        place-items: center;
+        border: 3px solid #dc4b2f;
+        color: #dc4b2f;
+        font-family: "Songti SC", STSong, serif;
+        font-size: 0.86rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        line-height: 1.15;
+        text-align: center;
+      }
+      .title-copy { min-width: 0; }
+      .eyebrow { display: none; }
+      h1 {
+        margin: 0 0 4px;
+        color: #121820;
+        font-family: "Songti SC", STSong, serif;
+        font-size: clamp(2.4rem, 7vw, 4rem);
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        line-height: 1.05;
+      }
+      .hero-lead {
+        margin: 0;
+        color: #2d67bd;
+        font-size: clamp(1rem, 2.8vw, 1.25rem);
+        font-weight: 700;
+        text-align: center;
+      }
+      .hero-meta {
+        justify-content: center;
+        gap: 6px 14px;
+        margin-top: 16px;
+        padding-top: 14px;
+        border-top: 1px solid #cfd5de;
+      }
+      .hero-meta span {
+        padding: 0;
+        border: 0;
+        color: #687589;
+        font-size: 0.8rem;
+      }
+      .hero-meta span + span::before { margin-right: 14px; color: #aeb8c5; content: "·"; }
+
+      main {
+        width: min(760px, 100%);
+        max-width: none;
+        margin: 0 auto;
+        padding: 0 6px 8px;
+        border-right: 1px solid #cfd6e0;
+        border-left: 1px solid #cfd6e0;
+        background: #ffffff;
+      }
+
+      .section-head {
+        display: block;
+        margin: 0;
+        padding: 14px 14px 12px;
+        border-top: 4px solid #ffffff;
+        border-bottom: 1px solid #d6dce5;
+        background: #f7f8fa;
+        text-align: center;
+      }
+      .section-kicker { display: none; }
+      .section-head h2 { margin: 0 0 3px; color: #2d67bd; font-size: 1.18rem; font-weight: 700; }
+      .section-intro { max-width: none; margin: 0; color: #6b7788; font-size: 0.82rem; }
+      .legend { justify-content: center; margin-top: 10px; gap: 8px 15px; color: #6b7788; font-size: 0.75rem; }
+      .legend i { width: 12px; height: 12px; border: 0; background: #fff4ca; }
+      .legend .parallel { border: 0; background: #dff4e1; }
+      .legend .transition { border: 0; background: #f7dff4; }
+
+      .timeline-shell { border: 0; background: #ffffff; }
+      .timeline-guide {
+        grid-template-columns: 116px minmax(0, 1fr);
+        min-height: 38px;
+        border-bottom: 3px solid #ffffff;
+        background: #e7eaf0;
+        color: #526174;
+        font-size: 0.72rem;
+      }
+      .timeline-guide span { padding: 6px 10px; }
+      .timeline-guide span:first-child { justify-content: center; border-right: 3px solid #ffffff; font-weight: 700; }
+      .timeline-guide span:last-child { justify-content: space-between; }
+
+      .era-group {
+        --row-fill: #f4e1f4;
+        --label-fill: #e8d8f0;
+        grid-template-columns: 116px minmax(0, 1fr);
+        border-bottom: 3px solid #ffffff;
+      }
+      .era-group:nth-of-type(5n + 1) { --row-fill: #daf5f3; --label-fill: #bfeeea; }
+      .era-group:nth-of-type(5n + 2) { --row-fill: #e6f7df; --label-fill: #d3f1d0; }
+      .era-group:nth-of-type(5n + 3) { --row-fill: #fff8d8; --label-fill: #fff0be; }
+      .era-group:nth-of-type(5n + 4) { --row-fill: #f8e2f5; --label-fill: #f2d3ef; }
+      .era-group:nth-of-type(5n) { --row-fill: #fde8df; --label-fill: #f8d7cc; }
+
+      .era-label {
+        min-height: 64px;
+        padding: 10px 7px;
+        border-right: 3px solid #ffffff;
+        background: var(--label-fill);
+      }
+      .era-label strong { color: #2a63b8; font-size: 1rem; font-weight: 700; letter-spacing: 0.03em; }
+      .era-label span { margin-top: 2px; color: #6f7884; font-size: 0.72rem; }
+      .dynasty-row { min-height: 50px; border-bottom: 3px solid #ffffff; background: #ffffff; }
+      .dynasty-row:last-child { border-bottom: 0; }
+
+      .dynasty,
+      .dynasty[data-kind="parallel"],
+      .dynasty[data-kind="transition"] {
+        min-height: 50px;
+        padding: 7px 4px 6px;
+        border-right: 3px solid #ffffff;
+        background: var(--row-fill);
+        color: #314258;
+        box-shadow: none;
+      }
+      .dynasty:last-child { border-right: 0; }
+      .dynasty:hover,
+      .dynasty[data-kind="parallel"]:hover,
+      .dynasty[data-kind="transition"]:hover {
+        background: #dceaff;
+        color: #174e9f;
+      }
+      .dynasty[data-featured="true"] { box-shadow: inset 0 -3px 0 rgba(45, 103, 189, 0.22); }
+      .dynasty strong { color: #2764bd; font-size: 1rem; font-weight: 700; }
+      .dynasty small { margin-top: 0; color: #6d7683; font-size: 0.72rem; line-height: 1.3; }
+
+      .reading-note {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        margin: 3px 0 0;
+        border-top: 1px solid #d9dfe7;
+        background: #f4f6f8;
+      }
+      .note-item { padding: 13px 14px; border-right: 1px solid #d9dfe7; background: transparent; }
+      .note-item:last-child { border-right: 0; }
+      .note-item strong { margin-bottom: 2px; color: #2d5fa9; font-size: 0.82rem; }
+      .note-item p { color: #738093; font-size: 0.74rem; line-height: 1.5; }
+
+      dialog {
+        width: min(480px, calc(100vw - 24px));
+        border: 1px solid #c9d2df;
+        border-radius: 8px;
+        background: #ffffff;
+        color: #26384f;
+        box-shadow: 0 18px 60px rgba(35, 52, 75, 0.24);
+      }
+      dialog::backdrop { background: rgba(43, 55, 72, 0.34); backdrop-filter: blur(2px); }
+      .detail-head { padding: 20px 20px 16px; border-bottom: 1px solid #dce2e9; background: #f3f6fa; }
+      .detail-era { color: #d04b35; font-size: 0.72rem; }
+      .detail-head h3 { color: #245cad; font-size: 1.8rem; font-weight: 700; }
+      .dialog-close { border-color: #ccd5e0; border-radius: 4px; color: #667489; }
+      .dialog-close:hover { border-color: #2d67bd; color: #2d67bd; }
+      .detail-body { padding: 19px 20px 22px; }
+      .detail-years { margin-bottom: 12px; color: #687589; font-weight: 600; }
+      .detail-summary { color: #536277; }
+      .detail-tags span { border: 0; border-radius: 3px; background: #edf3fb; color: #476485; }
+      .detail-link { border-color: #2d67bd; border-radius: 4px; background: #2d67bd; color: #ffffff; }
+
+      footer {
+        width: min(760px, 100%);
+        margin: 0 auto 28px;
+        padding: 18px 20px 22px;
+        border: 1px solid #cfd6e0;
+        border-top: 0;
+        background: #e7eaf0;
+        color: #687589;
+        font-size: 0.72rem;
+      }
+
+      @media (max-width: 760px) {
+        .topbar { padding-inline: 12px; }
+        .hero { margin-top: 0; border-right: 0; border-left: 0; }
+        main { border-right: 0; border-left: 0; }
+        footer { margin-bottom: 0; border-right: 0; border-left: 0; }
+        .section-head { display: block; }
+        .legend { justify-content: center; }
+        .timeline-guide, .era-group { grid-template-columns: 88px minmax(0, 1fr); }
+        .era-label strong { font-size: 0.9rem; }
+        .era-label span { font-size: 0.65rem; }
+        .dynasty strong { font-size: 0.86rem; }
+        .dynasty small { font-size: 0.64rem; }
+        .reading-note { grid-template-columns: 1fr; }
+        .note-item { border-right: 0; border-bottom: 1px solid #d9dfe7; }
+      }
+
+      @media (max-width: 440px) {
+        .hero { padding: 22px 14px 18px; }
+        .title-row { gap: 12px; }
+        .history-seal { width: 48px; height: 48px; font-size: 0.72rem; }
+        h1 { font-size: 2.2rem; letter-spacing: 0.1em; }
+        .hero-lead { font-size: 0.92rem; text-align: left; }
+        .hero-meta { display: none; }
+        .timeline-guide, .era-group { grid-template-columns: 76px minmax(0, 1fr); }
+        .timeline-guide span { padding-inline: 5px; }
+        .era-label { padding-inline: 4px; }
+        .era-label strong { font-size: 0.82rem; }
+        .dynasty { padding-inline: 2px; }
+        .dynasty strong { font-size: 0.78rem; }
+        .dynasty small { font-size: 0.59rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="back-link" href="../../">
+        <span class="back-mark" aria-hidden="true">‹</span>
+        <span>返回首页</span>
+      </a>
+      <span class="topbar-title">中国历史线路图</span>
+      <a class="topbar-link" href="#timeline">进入年表</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="title-row">
+          <div class="history-seal" aria-hidden="true">中国<br />历史</div>
+          <div class="title-copy">
+            <p class="eyebrow">China · A Chronicle of Unity and Division</p>
+            <h1>中国历史</h1>
+            <p class="hero-lead">中国历史发展线路图</p>
+          </div>
+        </div>
+        <div class="hero-meta"><span>约两百万年人类足迹</span><span>公元前—当代</span><span>点击朝代查看详情</span></div>
+      </div>
+    </section>
+
+    <main id="timeline">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">CHRONOLOGICAL MATRIX</p>
+          <h2>中国历史系列条目</h2>
+          <p class="section-intro">纵向阅读时间，横向查看同时期并立政权；点击条目可查看摘要。</p>
+        </div>
+        <div class="legend" aria-label="图例">
+          <span><i></i>统一或主干王朝</span>
+          <span><i class="parallel"></i>并立政权</span>
+          <span><i class="transition"></i>转折时期</span>
+        </div>
+      </div>
+
+      <div class="timeline-shell" id="timeline-grid">
+        <div class="timeline-guide"><span>历史阶段</span><span><b>同时期政权由左至右并列</b><em>时间向下</em></span></div>
+      </div>
+
+      <section class="reading-note" aria-label="阅读说明">
+        <div class="note-item"><strong>看纵向</strong><p>从上向下是时间推进，年代采用常见历史学口径。</p></div>
+        <div class="note-item"><strong>看横向</strong><p>同一行中的多个区块，表示政权在相近时期并存。</p></div>
+        <div class="note-item"><strong>看连接</strong><p>点击任一节点阅读时代摘要；明朝节点可继续进入皇室族谱。</p></div>
+      </section>
+    </main>
+
+    <dialog id="detail-dialog" aria-labelledby="detail-title">
+      <div class="detail-head">
+        <div><span class="detail-era" id="detail-era"></span><h3 id="detail-title"></h3></div>
+        <button class="dialog-close" id="dialog-close" type="button" aria-label="关闭详情">×</button>
+      </div>
+      <div class="detail-body">
+        <p class="detail-years" id="detail-years"></p>
+        <p class="detail-summary" id="detail-summary"></p>
+        <div class="detail-tags" id="detail-tags"></div>
+        <a class="detail-link" id="detail-link" href="../明朝皇室族谱/index.html" hidden>进入明朝皇室族谱</a>
+      </div>
+    </dialog>
+
+    <footer>年代边界与上古纪年存在不同学术口径；本图以通行断代为骨架，便于建立整体历史坐标。</footer>
+
+    <script>
+      const groups = [
+        {
+          label: "文明起源", years: "远古—约前2070", rows: [
+            [{ id: "paleolithic", name: "旧石器时代", years: "约200万年前—约前10000", span: 12, kind: "transition", summary: "早期人类在中国大地活动，经历漫长的采集、狩猎与石器技术发展。", tags: ["早期人类", "打制石器", "采集狩猎"] }],
+            [{ id: "neolithic", name: "新石器时代", years: "约前10000—约前2000", span: 12, kind: "parallel", summary: "农业、聚落与陶器逐渐发展，各区域文化相互交流，复杂社会开始形成。", tags: ["农业起源", "定居聚落", "多元一体"] }]
+          ]
+        },
+        {
+          label: "夏商周", years: "约前2070—前256", rows: [
+            [{ id: "xia", name: "夏", years: "约前2070—约前1600", span: 12, summary: "传统文献所记的早期王朝。其年代、疆域与考古文化对应关系仍在持续研究。", tags: ["早期国家", "二里头文化", "世袭传统"] }],
+            [{ id: "shang", name: "商", years: "约前1600—前1046", span: 12, summary: "以甲骨文、青铜礼器和成熟的王权体系著称，留下了可与文献相互印证的文字材料。", tags: ["甲骨文", "青铜文明", "殷墟"] }],
+            [{ id: "western-zhou", name: "西周", years: "前1046—前771", span: 12, summary: "周人建立分封与宗法秩序，礼乐制度成为后世政治文化的重要源头。", tags: ["分封制", "宗法制", "礼乐"] }],
+            [{ id: "spring-autumn", name: "春秋", years: "前770—前476", span: 6, kind: "transition", summary: "周王室权威下降，诸侯争霸；社会结构变化促成思想与制度的新发展。", tags: ["诸侯争霸", "礼崩乐坏", "孔子"] }, { id: "warring-states", name: "战国", years: "前475—前221", start: 7, span: 6, kind: "transition", summary: "七雄竞争推动变法、军政与官僚制度革新，百家争鸣塑造中国思想传统。", tags: ["战国七雄", "变法", "百家争鸣"] }]
+          ]
+        },
+        {
+          label: "秦汉", years: "前221—220", rows: [
+            [{ id: "qin", name: "秦", years: "前221—前207", span: 12, featured: true, summary: "秦完成大一统，建立皇帝制度与中央集权官僚体系，并推行文字、度量衡等统一。", tags: ["大一统", "郡县制", "书同文"] }],
+            [{ id: "western-han", name: "西汉", years: "前202—9", span: 7, summary: "汉初休养生息，汉武帝时期加强中央权力并开拓交通，统一帝国框架趋于稳固。", tags: ["文景之治", "汉武帝", "丝绸之路"] }, { id: "xin", name: "新", years: "9—23", start: 8, span: 2, kind: "transition", summary: "王莽建立的新朝进行大规模制度改革，但因社会矛盾与治理危机迅速覆亡。", tags: ["王莽", "改制", "新末动荡"] }, { id: "eastern-han", name: "东汉", years: "25—220", start: 10, span: 3, summary: "刘秀重建汉室。后期外戚、宦官与地方势力交织，最终走向群雄割据。", tags: ["光武中兴", "豪强", "党锢之祸"] }]
+          ]
+        },
+        {
+          label: "魏晋", years: "220—420", rows: [
+            [{ id: "wei", name: "曹魏", years: "220—266", span: 4, kind: "parallel", summary: "曹魏控制北方核心地区，九品中正制等制度对魏晋政治影响深远。", tags: ["曹丕", "九品中正", "北方"] }, { id: "shu", name: "蜀汉", years: "221—263", start: 5, span: 4, kind: "parallel", summary: "刘备在成都称帝，以继承汉统自居，诸葛亮执政与北伐最具代表性。", tags: ["刘备", "诸葛亮", "益州"] }, { id: "wu", name: "孙吴", years: "229—280", start: 9, span: 4, kind: "parallel", summary: "孙吴立足江东，发展长江中下游，并推动南方经济与海上交通。", tags: ["孙权", "江东", "南方开发"] }],
+            [{ id: "western-jin", name: "西晋", years: "266—316", span: 12, summary: "西晋短暂统一三国，但宗室内乱和北方动荡使统一迅速瓦解。", tags: ["三国归晋", "八王之乱", "永嘉之乱"] }],
+            [{ id: "eastern-jin", name: "东晋", years: "317—420", span: 6, kind: "parallel", summary: "晋室南渡后以建康为中心维持政权，门阀政治与江南开发是时代特征。", tags: ["衣冠南渡", "门阀政治", "江南开发"] }, { id: "sixteen", name: "十六国", years: "304—439", start: 7, span: 6, kind: "parallel", summary: "北方多个政权先后并立，战争、迁徙与民族互动共同改变社会结构。", tags: ["政权并立", "人口迁徙", "民族交融"] }]
+          ]
+        },
+        {
+          label: "南北朝", years: "420—589", rows: [
+            [{ id: "liu-song", name: "刘宋", years: "420—479", span: 3, kind: "parallel", summary: "南朝第一个政权，承接东晋，以建康为都。", tags: ["南朝", "建康", "寒门上升"] }, { id: "southern-qi", name: "南齐", years: "479—502", start: 4, span: 3, kind: "parallel", summary: "萧道成代宋建齐，政权延续时间较短。", tags: ["南朝", "萧氏", "建康"] }, { id: "liang", name: "梁", years: "502—557", start: 7, span: 3, kind: "parallel", summary: "梁武帝时期文化繁盛，侯景之乱重创江南政治秩序。", tags: ["梁武帝", "侯景之乱", "佛教"] }, { id: "chen", name: "陈", years: "557—589", start: 10, span: 3, kind: "parallel", summary: "南朝最后一个政权，589年为隋所灭。", tags: ["南朝", "陈霸先", "隋灭陈"] }],
+            [{ id: "northern-wei", name: "北魏", years: "386—534", span: 6, kind: "parallel", summary: "北魏统一北方，孝文帝改革与迁都洛阳推动制度转型和民族交融。", tags: ["统一北方", "孝文帝改革", "洛阳"] }, { id: "east-west-wei", name: "东魏 · 西魏", years: "534—557", start: 7, span: 3, kind: "parallel", summary: "北魏分裂为东魏与西魏，两者分别孕育北齐与北周。", tags: ["北魏分裂", "高欢", "宇文泰"] }, { id: "qi-zhou", name: "北齐 · 北周", years: "550—581", start: 10, span: 3, kind: "parallel", summary: "北周最终灭北齐统一北方，为隋朝重新统一奠定基础。", tags: ["北齐", "北周", "北方统一"] }]
+          ]
+        },
+        {
+          label: "隋唐", years: "581—907", rows: [
+            [{ id: "sui", name: "隋", years: "581—618", span: 12, featured: true, summary: "隋结束长期南北分裂，重建统一秩序，并开凿大运河、发展科举。", tags: ["再统一", "大运河", "科举"] }],
+            [{ id: "tang", name: "唐", years: "618—907", span: 12, summary: "唐前期政治开放、国力强盛、交流广泛；安史之乱后藩镇与财政结构发生深刻变化。", tags: ["贞观之治", "长安", "安史之乱"] }],
+            [{ id: "wu-zhou", name: "武周", years: "690—705（唐代中断期）", start: 4, span: 6, kind: "transition", summary: "武则天改国号为周，是唐代政治进程中的一次中断与重组。", tags: ["武则天", "神都洛阳", "科举发展"] }]
+          ]
+        },
+        {
+          label: "五代宋元", years: "907—1368", rows: [
+            [{ id: "five", name: "五代", years: "907—960", span: 6, kind: "transition", summary: "中原先后经历后梁、后唐、后晋、后汉、后周五个短期政权。", tags: ["中原更替", "藩镇", "后周改革"] }, { id: "ten", name: "十国", years: "约902—979", start: 7, span: 6, kind: "parallel", summary: "南方及北方部分地区多个政权并立，区域经济文化继续发展。", tags: ["割据", "南方经济", "区域政权"] }],
+            [{ id: "north-song", name: "北宋", years: "960—1127", span: 5, summary: "宋强化文官政治与中央集权，商品经济、城市文化和技术高度发展。", tags: ["文官政治", "汴京", "商业繁荣"] }, { id: "liao", name: "辽", years: "916—1125", start: 6, span: 3, kind: "parallel", summary: "契丹建立的辽朝与北宋长期并立，以南北面官制度治理不同区域。", tags: ["契丹", "南北面官", "澶渊之盟"] }, { id: "western-xia", name: "西夏", years: "1038—1227", start: 9, span: 4, kind: "parallel", summary: "党项建立的政权，形成独特文字与制度，长期处于宋、辽、金之间。", tags: ["党项", "西夏文", "河西"] }],
+            [{ id: "south-song", name: "南宋", years: "1127—1279", span: 5, kind: "parallel", summary: "宋室南渡后以临安为中心，经济与海上贸易继续发展。", tags: ["临安", "海上贸易", "岳飞"] }, { id: "jin", name: "金", years: "1115—1234", start: 6, span: 4, kind: "parallel", summary: "女真建立金朝，灭辽和北宋，统治中国北方并推动制度融合。", tags: ["女真", "猛安谋克", "宋金对峙"] }, { id: "west-liao", name: "西辽", years: "1124—1218", start: 10, span: 3, kind: "parallel", summary: "辽宗室西迁中亚后建立的政权，延续部分辽朝制度与文化。", tags: ["耶律大石", "中亚", "契丹"] }],
+            [{ id: "mongol-yuan", name: "蒙古国 · 元", years: "1206—1368", span: 12, featured: true, summary: "蒙古兴起并建立元朝，重新统一中国，形成横跨欧亚的交通与交流网络。", tags: ["成吉思汗", "大一统", "行省制"] }]
+          ]
+        },
+        {
+          label: "明清", years: "1368—1912", rows: [
+            [{ id: "ming", name: "明", years: "1368—1644", span: 8, featured: true, summary: "明重建汉地王朝秩序，强化中央集权；中后期商品经济、白银流通与海内外交流显著发展。", tags: ["洪武建国", "郑和下西洋", "晚明社会"], link: "../明朝皇室族谱/index.html" }, { id: "north-yuan", name: "北元", years: "1368—1388", start: 9, span: 4, kind: "parallel", summary: "元廷退出大都后继续在蒙古高原活动，通常以1388年为北元阶段结束的重要节点。", tags: ["蒙古高原", "元明更替", "草原政权"] }],
+            [{ id: "qing", name: "清", years: "1636—1912", span: 9, featured: true, summary: "清建立多民族统一国家，18世纪疆域与制度趋于稳定；19世纪后面临内外危机与现代转型。", tags: ["多民族国家", "康雍乾", "晚清变局"] }, { id: "south-ming", name: "南明", years: "1644—1662", start: 10, span: 3, kind: "parallel", summary: "明亡后，南方多个明朝宗室政权先后延续抗清。", tags: ["明清易代", "弘光", "永历"] }]
+          ]
+        },
+        {
+          label: "近现代", years: "1912—今天", rows: [
+            [{ id: "roc-mainland", name: "中华民国", years: "大陆时期 1912—1949", span: 12, kind: "transition", summary: "帝制终结后，中国经历共和制度探索、军阀混战、民族战争与国家重建。", tags: ["共和转型", "抗日战争", "社会变革"] }],
+            [{ id: "prc", name: "中华人民共和国", years: "1949—", span: 8, featured: true, summary: "1949年中华人民共和国成立，此后中国进入国家建设、改革开放与持续现代化进程。", tags: ["国家建设", "改革开放", "现代化"] }, { id: "roc-taiwan", name: "中华民国", years: "台湾时期 1949—", start: 9, span: 4, kind: "parallel", summary: "1949年后中华民国政府迁台，形成延续至今的两岸分治格局。", tags: ["台湾", "两岸关系", "现代政治"] }]
+          ]
+        }
+      ];
+
+      const grid = document.getElementById("timeline-grid");
+      const dialog = document.getElementById("detail-dialog");
+      const detailEra = document.getElementById("detail-era");
+      const detailTitle = document.getElementById("detail-title");
+      const detailYears = document.getElementById("detail-years");
+      const detailSummary = document.getElementById("detail-summary");
+      const detailTags = document.getElementById("detail-tags");
+      const detailLink = document.getElementById("detail-link");
+
+      function renderTimeline() {
+        groups.forEach((group) => {
+          const section = document.createElement("section");
+          section.className = "era-group";
+          section.innerHTML = `<div class="era-label"><strong>${group.label}</strong><span>${group.years}</span></div><div class="era-rows"></div>`;
+          const rows = section.querySelector(".era-rows");
+
+          group.rows.forEach((items) => {
+            const row = document.createElement("div");
+            row.className = "dynasty-row";
+            items.forEach((item) => {
+              const button = document.createElement("button");
+              button.type = "button";
+              button.className = "dynasty";
+              button.style.setProperty("--start", item.start || 1);
+              button.style.setProperty("--span", item.span);
+              button.dataset.kind = item.kind || "main";
+              if (item.featured) button.dataset.featured = "true";
+              button.innerHTML = `<strong>${item.name}</strong><small>${item.years}</small>`;
+              button.setAttribute("aria-label", `${item.name}，${item.years}，查看详情`);
+              button.addEventListener("click", () => openDetail(group, item));
+              row.appendChild(button);
+            });
+            rows.appendChild(row);
+          });
+          grid.appendChild(section);
+        });
+      }
+
+      function openDetail(group, item) {
+        detailEra.textContent = group.label;
+        detailTitle.textContent = item.name;
+        detailYears.textContent = item.years;
+        detailSummary.textContent = item.summary;
+        detailTags.replaceChildren(...item.tags.map((tag) => {
+          const span = document.createElement("span");
+          span.textContent = tag;
+          return span;
+        }));
+        if (item.link) {
+          detailLink.href = item.link;
+          detailLink.hidden = false;
+        } else {
+          detailLink.hidden = true;
+        }
+        dialog.showModal();
+      }
+
+      document.getElementById("dialog-close").addEventListener("click", () => dialog.close());
+      dialog.addEventListener("click", (event) => {
+        const rect = dialog.getBoundingClientRect();
+        const outside = event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom;
+        if (outside) dialog.close();
+      });
+
+      renderTimeline();
+    </script>
+  </body>
+</html>
