@@ -421,6 +421,11 @@
       }
       .era-label strong { color: #2a63b8; font-size: 1rem; font-weight: 700; letter-spacing: 0.03em; }
       .era-label span { margin-top: 2px; color: #6f7884; font-size: 0.72rem; }
+      .era-label .era-duration {
+        margin-top: 5px;
+        color: #47736c;
+        font-weight: 700;
+      }
       .dynasty-row { min-height: 50px; border-bottom: 3px solid #ffffff; background: #ffffff; }
       .dynasty-row:last-child { border-bottom: 0; }
 
@@ -444,6 +449,17 @@
       .dynasty[data-featured="true"] { box-shadow: inset 0 -3px 0 rgba(45, 103, 189, 0.22); }
       .dynasty strong { color: #2764bd; font-size: 1rem; font-weight: 700; }
       .dynasty small { margin-top: 0; color: #6d7683; font-size: 0.72rem; line-height: 1.3; }
+      .dynasty .duration {
+        display: block;
+        margin-top: 2px;
+        color: #47736c;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.68rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      .dynasty-row, .dynasty { min-height: 64px; }
 
       .reading-note {
         grid-template-columns: repeat(3, 1fr);
@@ -500,6 +516,7 @@
         .era-label span { font-size: 0.65rem; }
         .dynasty strong { font-size: 0.86rem; }
         .dynasty small { font-size: 0.64rem; }
+        .dynasty .duration { font-size: 0.62rem; }
         .reading-note { grid-template-columns: 1fr; }
         .note-item { border-right: 0; border-bottom: 1px solid #d9dfe7; }
       }
@@ -518,6 +535,7 @@
         .dynasty { padding-inline: 2px; }
         .dynasty strong { font-size: 0.78rem; }
         .dynasty small { font-size: 0.59rem; }
+        .dynasty .duration { font-size: 0.58rem; }
       }
     </style>
   </head>
@@ -563,11 +581,6 @@
         <div class="timeline-guide"><span>历史阶段</span><span><b>同时期政权由左至右并列</b><em>时间向下</em></span></div>
       </div>
 
-      <section class="reading-note" aria-label="阅读说明">
-        <div class="note-item"><strong>看纵向</strong><p>从上向下是时间推进，年代采用常见历史学口径。</p></div>
-        <div class="note-item"><strong>看横向</strong><p>同一行中的多个区块，表示政权在相近时期并存。</p></div>
-        <div class="note-item"><strong>看连接</strong><p>点击任一节点阅读时代摘要；明朝节点可继续进入皇室族谱。</p></div>
-      </section>
     </main>
 
     <dialog id="detail-dialog" aria-labelledby="detail-title">
@@ -644,10 +657,75 @@
         {
           label: "近现代", years: "1912—今天", rows: [
             [{ id: "roc-mainland", name: "中华民国", years: "大陆时期 1912—1949", span: 12, kind: "transition", summary: "帝制终结后，中国经历共和制度探索、军阀混战、民族战争与国家重建。", tags: ["共和转型", "抗日战争", "社会变革"] }],
-            [{ id: "prc", name: "中华人民共和国", years: "1949—", span: 8, featured: true, summary: "1949年中华人民共和国成立，此后中国进入国家建设、改革开放与持续现代化进程。", tags: ["国家建设", "改革开放", "现代化"] }, { id: "roc-taiwan", name: "中华民国", years: "台湾时期 1949—", start: 9, span: 4, kind: "parallel", summary: "1949年后中华民国政府迁台，形成延续至今的两岸分治格局。", tags: ["台湾", "两岸关系", "现代政治"] }]
+            [{ id: "prc", name: "中华人民共和国", years: "1949—", ongoingFrom: 1949, span: 8, featured: true, summary: "1949年中华人民共和国成立，此后中国进入国家建设、改革开放与持续现代化进程。", tags: ["国家建设", "改革开放", "现代化"] }, { id: "roc-taiwan", name: "中华民国", years: "台湾时期 1949—", ongoingFrom: 1949, start: 9, span: 4, kind: "parallel", summary: "1949年后中华民国政府迁台，形成延续至今的两岸分治格局。", tags: ["台湾", "两岸关系", "现代政治"] }]
           ]
         }
       ];
+
+      const durationById = {
+        "paleolithic": "约199万年",
+        "neolithic": "约8000年",
+        "xia": "约470年",
+        "shang": "约554年",
+        "western-zhou": "275年",
+        "spring-autumn": "294年",
+        "warring-states": "254年",
+        "qin": "14年",
+        "western-han": "210年",
+        "xin": "14年",
+        "eastern-han": "195年",
+        "wei": "46年",
+        "shu": "42年",
+        "wu": "51年",
+        "western-jin": "50年",
+        "eastern-jin": "103年",
+        "sixteen": "135年",
+        "liu-song": "59年",
+        "southern-qi": "23年",
+        "liang": "55年",
+        "chen": "32年",
+        "northern-wei": "148年",
+        "east-west-wei": "23年",
+        "qi-zhou": "31年",
+        "sui": "37年",
+        "tang": "289年",
+        "wu-zhou": "15年",
+        "five": "53年",
+        "ten": "约77年",
+        "north-song": "167年",
+        "liao": "209年",
+        "western-xia": "189年",
+        "south-song": "152年",
+        "jin": "119年",
+        "west-liao": "94年",
+        "mongol-yuan": "162年",
+        "ming": "276年",
+        "north-yuan": "20年",
+        "qing": "276年",
+        "south-ming": "18年",
+        "roc-mainland": "37年"
+      };
+
+      function getDuration(item) {
+        if (item.ongoingFrom) return `约${new Date().getFullYear() - item.ongoingFrom}年`;
+        return durationById[item.id];
+      }
+
+      const groupDurationByLabel = {
+        "文明起源": "约200万年",
+        "夏商周": "约1814年",
+        "秦汉": "约440年",
+        "魏晋": "约200年",
+        "南北朝": "约169年",
+        "隋唐": "约326年",
+        "五代宋元": "约461年",
+        "明清": "约544年"
+      };
+
+      function getGroupDuration(group) {
+        if (group.label === "近现代") return `约${new Date().getFullYear() - 1912}年`;
+        return groupDurationByLabel[group.label];
+      }
 
       const grid = document.getElementById("timeline-grid");
       const dialog = document.getElementById("detail-dialog");
@@ -662,7 +740,7 @@
         groups.forEach((group) => {
           const section = document.createElement("section");
           section.className = "era-group";
-          section.innerHTML = `<div class="era-label"><strong>${group.label}</strong><span>${group.years}</span></div><div class="era-rows"></div>`;
+          section.innerHTML = `<div class="era-label"><strong>${group.label}</strong><span class="era-years">${group.years}</span><span class="era-duration">历时${getGroupDuration(group)}</span></div><div class="era-rows"></div>`;
           const rows = section.querySelector(".era-rows");
 
           group.rows.forEach((items) => {
@@ -676,8 +754,9 @@
               button.style.setProperty("--span", item.span);
               button.dataset.kind = item.kind || "main";
               if (item.featured) button.dataset.featured = "true";
-              button.innerHTML = `<strong>${item.name}</strong><small>${item.years}</small>`;
-              button.setAttribute("aria-label", `${item.name}，${item.years}，查看详情`);
+              const duration = getDuration(item);
+              button.innerHTML = `<strong>${item.name}</strong><small>${item.years}</small><em class="duration">历时${duration}</em>`;
+              button.setAttribute("aria-label", `${item.name}，${item.years}，历时${duration}，查看详情`);
               button.addEventListener("click", () => openDetail(group, item));
               row.appendChild(button);
             });
@@ -690,7 +769,7 @@
       function openDetail(group, item) {
         detailEra.textContent = group.label;
         detailTitle.textContent = item.name;
-        detailYears.textContent = item.years;
+        detailYears.textContent = `${item.years} · 历时${getDuration(item)}`;
         detailSummary.textContent = item.summary;
         detailTags.replaceChildren(...item.tags.map((tag) => {
           const span = document.createElement("span");
