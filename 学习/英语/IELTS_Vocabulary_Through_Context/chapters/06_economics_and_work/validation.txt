@@ -1,0 +1,8 @@
+CHAPTER 06 VALIDATION
+
+File: chapters/06_economics_and_work/article.txt
+Body word count: 3015
+Unique highlighted target items: 312
+Glossary entries: 312
+Highlighted items without definitions: none
+Definitions without highlighted body items: none

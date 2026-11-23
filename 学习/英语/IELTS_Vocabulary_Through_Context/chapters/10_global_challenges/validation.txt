@@ -1,0 +1,8 @@
+CHAPTER 10 VALIDATION
+
+File: chapters/10_global_challenges/article.txt
+Body word count: 3554
+Unique highlighted target items: 395
+Glossary entries: 395
+Highlighted items without definitions: none
+Definitions without highlighted body items: none

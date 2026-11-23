@@ -1,0 +1,8 @@
+CHAPTER 08 VALIDATION
+
+File: chapters/08_psychology/article.txt
+Body word count: 3007
+Unique highlighted target items: 395
+Glossary entries: 395
+Highlighted items without definitions: none
+Definitions without highlighted body items: none

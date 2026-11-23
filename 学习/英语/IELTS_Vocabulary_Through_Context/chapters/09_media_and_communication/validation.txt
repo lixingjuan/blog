@@ -1,0 +1,8 @@
+CHAPTER 09 VALIDATION
+
+File: chapters/09_media_and_communication/article.txt
+Body word count: 3003
+Unique highlighted target items: 418
+Glossary entries: 418
+Highlighted items without definitions: none
+Definitions without highlighted body items: none
