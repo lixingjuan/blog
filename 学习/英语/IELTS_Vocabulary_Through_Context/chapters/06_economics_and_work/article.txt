@@ -1,0 +1,724 @@
+CHAPTER 06
+
+THE PRICE OF **PROSPERITY**
+
+1. The **Factory** That Became a **Warehouse**
+
+For nearly a **century**, the Bellweather factory **produced** **household** **appliances** and **provided** **stable work** for three **generations** of the same families. Its **wages** supported shops, sports clubs, and local taxes. Then global **competition** **intensified**, **demand** **shifted**, and the owners closed the **production** line. Within two years, the building reopened as an **automated** **distribution** centre **employing** one quarter as many people.
+
+Economists described the change as an **increase** in **productivity**. Each worker now helped move far more **goods** per hour, and **consumers** received faster **delivery** at lower cost. For the region, however, the **transition** felt like decline. Many former factory workers found **service jobs** with **irregular** hours and lower pay. **Economic efficiency** had improved while **economic security** had **weakened**.
+
+This **tension** lies at the heart of prosperity. Growth can expand **incomes**, fund public services, and reduce **material hardship**, yet its **benefits** are neither **automatic** nor **equally shared**. An economy is not a machine **producing** a single outcome. It is a network of institutions and choices that **determines** what is produced, how resources are **allocated**, and who **carries** **risk**.
+
+The Bellweather site therefore became more than a symbol of technological change. It raised a **difficult** question: if society becomes richer in **aggregate** while many people lose stability, what exactly has **progressed**?
+
+2. What **Economic Growth** Measures
+
+Governments **commonly** **measure** **economic activity** through **gross domestic product**, or GDP: the **monetary value** of **final goods** and services produced within a **country** over a period. Rising GDP usually accompanies higher **employment** and tax **revenue**, making it a useful indicator. Yet it is not a complete measure of **welfare**.
+
+GDP counts **spending** after a **natural disaster** as **positive** **activity** because **rebuilding** **generates** **transactions**. It does not **subtract** environmental **depletion**, **unpaid care**, or the **loss of leisure**. A parent caring for a child at home **contributes** no measured **output**, while paying someone else for the same work adds to GDP. The measure describes market production, not **everything** society values.
+
+GDP per person **provides** a rough comparison between **countries**, but an average **conceals** distribution. A large increase **concentrated** among a small elite can raise the figure while most households **experience** little improvement. Analysts therefore **examine** **median income**, **poverty**, **wealth**, health, and access to services alongside **national** output.
+
+Economic growth can be **extensive**, produced by adding more workers, land, or **machines**, or **intensive**, produced by using resources more **effectively**. Long-term gains in **living standards** depend heavily on productivity: better **knowledge**, technology, **organisation**, and infrastructure allow more **value** to be **created** from each hour of work.
+
+However, endless physical **expansion** is **impossible** on a **finite planet**. The central challenge is to separate human well-being from material **consumption** and pollution. A richer society may need not only a larger economy but a **different** **composition** of activity.
+
+3. **Inflation** and the Cost of Living
+
+When prices rise **broadly** over time, money loses **purchasing power**. **Moderate** inflation is common in growing **economies**, but rapid or **unpredictable** inflation makes planning difficult. **Savings** buy less, wages may fail to keep pace, and **businesses** struggle to set prices or sign long-term **contracts**.
+
+Inflation can arise from several sources. Strong demand may exceed an economy's capacity, producing **demand-pull inflation**. Higher energy, food, or wage costs may create **cost-push inflation**. A **currency** decline makes **imports** more **expensive**, while **expectations** of future inflation can influence present prices and wage **negotiations**.
+
+Official agencies calculate a **consumer price index** by **tracking** the cost of a representative **basket of goods** and services. No basket **represents** every household. A renter, a homeowner, a student, and a retired person purchase different things, so each **experiences** inflation differently. Food and energy **increases** often affect poorer households more because **essentials** consume a larger share of their income.
+
+Central **banks** usually **respond** to persistent inflation by **raising** **interest** rates. **Borrowing** becomes more expensive, reducing consumption and **investment**. This can cool demand but may also increase **unemployment**. **Monetary policy** therefore involves delay, uncertainty, and **painful** **trade**-offs.
+
+**Price stability** matters, yet suppressing inflation at any cost can cause unnecessary hardship. **Policymakers** must distinguish temporary **supply** **shocks** from **sustained pressure** and consider who bears the cost of **adjustment**.
+
+**Interest rates** are not the only instrument for stabilising an economy. **Fiscal policy** changes government spending and **taxation**. During a **recession**, public investment or temporary **income support** can **sustain** demand when households and firms become cautious. During an unsustainable boom, lower spending or higher taxes can reduce pressure. Timing is difficult because budgets pass through political processes and their **effects** arrive with delay.
+
+Some programmes act as **automatic stabilisers**. When unemployment rises, **tax receipts** fall and benefit **payments** increase without a new law. This cushions **household income** and prevents a **downturn** from deepening as sharply. When employment recovers, the process partly reverses.
+
+Borrowing allows governments to spread the cost of long-lived infrastructure and respond to emergencies. Persistent **debt** is more manageable when economic growth exceeds the interest rate, but high debt can reduce room for future action. The important questions are why money is borrowed, whether it expands future capacity, and who ultimately pays.
+
+4. Work, Wages, and **Bargaining** Power
+
+In a simple model, wages **reflect** worker productivity and the balance of **labour** supply and demand. Real **labour markets** are shaped by institutions, information, discrimination, **mobility**, and power. Two equally **productive** workers may receive different pay because one can negotiate, move, or wait for a better offer while the other cannot.
+
+The **minimum wage** establishes a legal floor. Critics argue that setting it too high may reduce **hiring**, particularly for inexperienced workers. Supporters reply that **employers** can absorb part of the cost through lower **profits**, small price increases, or better productivity. The actual effect depends on the level, local conditions, and employers' **market power**.
+
+Where a small number of firms dominate hiring, workers face a **monopsony**. An employer can hold wages below a **competitive level** because leaving is difficult. **Non-compete clauses**, limited transport, care responsibilities, and lack of information can all weaken worker mobility.
+
+**Trade unions** increase collective **bargaining power**. They negotiate wages, hours, safety, and procedures for resolving disputes. **Union decline** has coincided in many countries with a **falling share** of **national income** going to labour, though the relationship **differs** by **industry** and period.
+
+Pay is only one aspect of **job quality**. Predictable schedules, autonomy, **training**, respect, leave, and **protection** from injury also matter. A high wage may not **compensate** for dangerous work or **permanent insecurity**.
+
+5. Employment Behind the Headline
+
+The **unemployment rate** counts people without work who are available and actively seeking it. This definition excludes several groups. A **discouraged worker** who has stopped searching, a parent unable to find **childcare**, or someone working a few unwanted hours may **disappear** from the **headline measure**.
+
+Economists therefore examine **underemployment**, **labour-force participation**, hours worked, and the proportion of temporary or insecure jobs. A country can have low unemployment while many workers remain unable to earn enough or use their skills.
+
+Unemployment has different causes. **Frictional unemployment** occurs during normal movement between jobs. **Structural unemployment** arises when workers' skills or locations no longer match available roles. **Cyclical unemployment** increases when an economic downturn reduces demand. Each type requires a different response.
+
+Income support protects households during job loss and sustains spending in **local economies**. However, benefits are sometimes **designed** with **complex** conditions intended to **encourage** work. Excessively punitive **systems** can cause hunger, debt, and stress without improving employment.
+
+**Active labour-market programmes** offer training, **job search assistance**, wage **subsidies**, or direct employment. Their quality varies. Training is useful only when linked to credible opportunities rather than used to move people through courses that employers do not value.
+
+Labour statistics also conceal differences in unpaid time. A worker with a short commute, reliable childcare, and control over a schedule may enjoy far more **real freedom** than someone earning the same wage while travelling three hours and caring for **relatives**. Economists increasingly examine **time poverty**, not only income poverty.
+
+Wealth is distributed even more unequally than income. Property, shares, **pensions**, and **business ownership** generate **returns** and can be transferred between generations. Those without **assets** may pay **rent** and interest to those who already possess them. This cumulative process can widen inequality even when wages rise.
+
+**Advocates** of a **wealth tax** argue that taxing large fortunes can fund public investment and limit extreme **concentration**. Critics warn that assets are difficult to value, **wealthy** people may relocate, and savings already faced tax when earned. **Alternatives** include **inheritance** taxes, **property taxes**, and stronger taxation of **investment income**.
+
+Inequality is not only a moral issue. Extreme concentration may weaken demand, reduce **social mobility**, and give wealthy interests **disproportionate** political influence. Conversely, rewards for **innovation** and effort can encourage useful activity. Policy must distinguish productive **incentives** from advantages created by **monopoly**, inheritance, or privileged access.
+
+6. **Automation** and the Distribution of Gains
+
+Technological change has **eliminated** **occupations** throughout history while creating others. **Mechanisation** reduced agricultural labour, factories transformed craft production, and computers replaced many **clerical tasks**. The long-term result was not permanent **mass unemployment**, but adjustment was often slow and painful.
+
+Automation usually replaces tasks rather than whole jobs. A lawyer may use software to search documents, a nurse may rely on automated monitoring, and a driver may receive computer-generated routes. Work is reorganised as some tasks disappear and others **gain** importance.
+
+Whether technology raises living **standards** broadly depends on ownership and bargaining. If machines increase output while wages **stagnate**, owners receive most of the gain. Tax policy, competition, worker **representation**, and access to education influence how the **productivity dividend** is distributed.
+
+Some propose a **universal basic income**, an **unconditional payment** to every adult. Advocates say it would provide security, simplify welfare, and **strengthen** workers' ability to reject poor conditions. Critics question its cost, whether payments should also go to the wealthy, and whether public services might be weakened to **finance** it.
+
+Other proposals include **shorter working weeks**, wage **insurance**, **lifelong learning** accounts, and **employee ownership**. No single policy can remove disruption, but institutions can turn technological change into shared **opportunity** rather than **private windfall**.
+
+7. Taxes, Services, and Legitimacy
+
+Taxes finance schools, healthcare, infrastructure, **social protection**, and government itself. They also influence behaviour and distribute resources. A tax system must raise sufficient revenue while remaining understandable, enforceable, and regarded as legitimate.
+
+A **progressive tax** takes a larger proportion of income as income rises. A **regressive tax** consumes a larger share of lower incomes, even if everyone pays the same rate. Consumption taxes can be regressive unless essentials are **exempt** or low-income households receive compensation.
+
+**Tax avoidance** uses **legal arrangements** to reduce **liability**, while tax **evasion** illegally conceals income or assets. **Multinational companies** may shift profits to low-tax **jurisdictions** even when little real activity occurs there. **International cooperation** is necessary because **capital** moves more easily across **borders** than national tax authorities do.
+
+Complex **exemptions** and **deductions** often reflect lobbying rather than coherent design. They may favour people able to hire specialist advisers. A broader **tax base** with transparent rates can be fairer and easier to administer, although every reform **creates** winners and losers.
+
+**Compliance** depends partly on trust. People are more willing to pay when they believe others also **contribute** and public money is used competently. Fair enforcement and visible services strengthen the **social contract**.
+
+8. Trade and **Interdependence**
+
+**International trade** allows countries to **specialise** and exchange goods. According to **comparative advantage**, even a country more efficient at producing everything can benefit by focusing on what it produces at the lowest **relative cost**. Consumers gain variety and lower prices, while **exporters** reach larger **markets**.
+
+Trade also creates losers. Import competition may close factories in particular **regions**, and the new opportunities may appear elsewhere or require different skills. The overall gain does not automatically compensate those who bear **concentrated losses**.
+
+Governments use **tariffs**, **quotas**, standards, and subsidies to influence trade. Protection may preserve strategic capacity or allow a new industry to develop, but it can also raise prices, invite **retaliation**, and shelter **inefficient** firms indefinitely.
+
+Modern **products** cross borders many times through **global value chains**. A phone may be designed in one country, use minerals from another, contain components made in several more, and be assembled elsewhere. Efficiency increases, but disruption in one link can spread **rapidly**.
+
+Recent crises encouraged firms to build resilience through additional suppliers, **inventories**, and regional production. This reduced dependence but sacrificed some efficiency. The aim shifted from the cheapest possible chain to one capable of surviving shocks.
+
+9. The Informal and Care Economies
+
+Large parts of economic life occur outside **formal employment**. Street vendors, domestic workers, day labourers, and small family businesses may lack contracts, insurance, or legal protection. The **informal economy** provides livelihoods and flexible access to work, but it can expose workers to exploitation.
+
+**Formalisation** should offer benefits rather than merely impose taxes and paperwork. Simple registration, access to **credit**, **social insurance**, safe marketplaces, and legal recognition can make participation worthwhile. Harsh enforcement may destroy incomes without creating better jobs.
+
+Unpaid care is another hidden foundation. Raising children, supporting disabled relatives, cooking, and maintaining homes reproduce the **labour force** and sustain daily life. Women perform a disproportionate share in most societies, limiting their paid employment and **retirement savings**.
+
+Affordable childcare, **parental leave**, **eldercare**, and **flexible work** can **redistribute** care and expand economic opportunity. **Time-use surveys** make unpaid labour visible, even when **national accounts** do not assign it a monetary price.
+
+Recognising care changes the meaning of productivity. Spending more time with a vulnerable person may improve quality while appearing less efficient according to tasks per hour. Not every valuable activity should be accelerated.
+
+10. Enterprise, Finance, and Risk
+
+New businesses can introduce products, challenge established firms, and create employment. **Entrepreneurs** bear uncertainty: many **ventures** fail, while a small number grow rapidly. Access to finance affects who can **attempt** innovation.
+
+Banks transform short-term **deposits** into longer-term **loans**, evaluate **borrowers**, and enable payments. Because they lend much of the money deposited with them, a sudden loss of confidence can cause a **bank run**. **Deposit insurance** and central-bank support reduce panic, while **regulation** limits excessive risk.
+
+**Financial markets** direct savings towards investment, but **speculation** can detach asset prices from underlying value. Rising prices attract buyers who expect further rises, creating a **bubble**. When confidence reverses, falling prices can damage borrowers, banks, and the wider economy.
+
+Small firms often struggle to obtain credit because lenders lack information and **collateral**. Public **loan guarantees** and community finance can help, though weak assessment may transfer excessive losses to taxpayers.
+
+The goal is not to eliminate risk. Without risk, experimentation and investment would stop. Policy should ensure that those taking profitable risks also bear losses rather than keeping gains while passing failure to the public.
+
+11. Growth Within Limits
+
+Traditional economic policy often treats environmental damage as an **external cost**. A company records revenue and wages but not the health effects of pollution or the depletion of a forest. Prices then send the wrong signal.
+
+**Carbon taxes** and **emissions trading** attempt to incorporate climate damage into economic decisions. When pollution carries a price, efficiency and clean innovation become more valuable. However, higher energy prices can burden poorer households unless revenue is returned through **rebates** or public investment.
+
+Some economists advocate **green growth**, arguing that technology and **structural change** can reduce environmental pressure while incomes rise. Others doubt that **resource use** can fall fast enough and call for **degrowth** in wealthy countries: a planned reduction of unnecessary **material consumption** while protecting well-being.
+
+The disagreement concerns both evidence and values. Growth in **renewable energy**, care, education, and repair differs from growth in fossil extraction or **disposable goods**. The composition and distribution of economic activity matter as much as its total scale.
+
+A credible transition must also be just. Workers and regions dependent on polluting **industries** need investment, retraining, and a voice in planning. **Climate policy** that ignores livelihoods will face resistance and may reproduce inequality.
+
+12. Prosperity as Capability
+
+Years after the Bellweather factory closed, the region began to recover. A **technical college** worked with employers to design training, former workers established repair **cooperatives**, and public investment brought new industries. Recovery was incomplete, but decline was no longer treated as inevitable.
+
+The experience suggested that prosperity should be understood as **capability**: people's real freedom to live lives they value. Income supports capability, but so do health, education, time, security, relationships, and political voice.
+
+Markets are powerful systems for coordinating information and initiative, yet they do not decide moral priorities. They respond to purchasing power, not need, and they can reward activities whose costs fall on others. Government, collective organisation, and social norms shape the boundaries within which markets operate.
+
+Economic democracy can widen participation in these choices. In worker cooperatives, employees share ownership and elect leadership; in works councils, staff receive information and consultation rights even when they do not own the firm. Supporters argue that participation improves trust, uses practical knowledge, and gives workers a fairer share of gains. Critics note that democratic firms still face competitive pressure, require capital, and may struggle to make rapid decisions.
+
+Local ownership can also keep income circulating within a region. Community banks, municipal enterprises, and procurement from smaller suppliers may strengthen local capacity. These arrangements are not automatically efficient or honest; they need professional management and public scrutiny. Their value lies in broadening the range of institutions available rather than assuming that every activity belongs either to a central government department or a distant private corporation.
+
+Measurement should reflect this institutional variety. Statistics can record wages and output, but they rarely capture whether workers possess voice, whether a community controls essential assets, or whether decisions build long-term confidence. Prosperity includes the ability to shape economic life, not merely consume what it produces.
+
+Efficiency remains important because wasted resources could serve valuable purposes. But efficiency answers how to reach an objective; it does not choose the objective. An economy can become highly efficient at producing outcomes society does not want.
+
+The price of prosperity should therefore be judged openly. Who loses security, which resources are depleted, what future risks are created, and which alternatives are available? A successful economy is not merely one that grows. It enables people to adapt, contribute, care, and share in the gains created by collective effort.
+
+GLOSSARY
+
+**Active labour-market programmes** — policies helping unemployed people find work.
+**activity** — action producing a result.
+**adjustment** — change in response to new conditions.
+**Advocates** — people publicly supporting an idea.
+**aggregate** — combined into a total.
+**allocated** — distributed for particular purposes.
+**Alternatives** — other available options.
+**appliances** — machines used in homes.
+**assets** — items possessing economic value.
+**attempt** — effort to achieve something.
+**automated** — operated largely by machines.
+**automatic** — operating with little direct control.
+**automatic stabilisers** — taxes and benefits that moderate economic cycles.
+**Automation** — technology performing tasks with little human input.
+**bank run** — mass withdrawal caused by fear of bank failure.
+**banks** — institutions accepting deposits and making loans.
+**Bargaining** — negotiation over terms.
+**bargaining power** — ability to influence a negotiation.
+**basket of goods** — selected products used to measure prices.
+**benefits** — payments or advantages received.
+**borders** — boundaries between countries.
+**borrowers** — people or organisations receiving loans.
+**Borrowing** — obtaining money with an obligation to repay.
+**broadly** — across a wide range.
+**bubble** — asset-price rise detached from fundamental value.
+**business ownership** — legal possession of an enterprise.
+**businesses** — organisations selling goods or services.
+**capability** — real freedom to achieve valued outcomes.
+**capital** — wealth used to produce more wealth.
+**Carbon taxes** — charges imposed on carbon emissions.
+**carries** — holds or transfers something.
+**century** — period of one hundred years.
+**childcare** — care and supervision of children.
+**clerical tasks** — routine administrative duties.
+**Climate policy** — government action addressing climate change.
+**collateral** — asset promised as security for a loan.
+**commonly** — in a frequent or usual way.
+**comparative advantage** — ability to produce at lower relative cost.
+**compensate** — provide payment or benefit for loss.
+**competition** — rivalry between sellers or buyers.
+**competitive level** — outcome expected under effective competition.
+**complex** — containing many connected parts.
+**Compliance** — act of obeying rules.
+**composition** — way different parts form a whole.
+**conceals** — prevents something from being seen.
+**concentrated** — gathered in a narrow area or group.
+**concentrated losses** — costs borne by a narrow group.
+**concentration** — accumulation in a small group.
+**consumer price index** — measure tracking household prices.
+**consumers** — people purchasing goods and services.
+**consumption** — use of goods and services.
+**contracts** — legally enforceable agreements.
+**contribute** — help produce a result.
+**contributes** — helps produce an outcome.
+**cooperatives** — enterprises owned by their members.
+**cost-push inflation** — price rises caused by higher production costs.
+**countries** — independent states or nations.
+**country** — territory governed as a state.
+**created** — brought into existence.
+**creates** — brings into existence.
+**credit** — borrowed purchasing power.
+**currency** — money used by a country.
+**Cyclical unemployment** — joblessness caused by economic downturn.
+**debt** — money owed to another party.
+**deductions** — amounts removed from taxable income.
+**degrowth** — planned reduction of material economic activity.
+**delivery** — transport of goods to recipients.
+**demand** — willingness and ability to purchase.
+**demand-pull inflation** — price rises caused by excessive demand.
+**depletion** — reduction through use or extraction.
+**Deposit insurance** — guarantee protecting bank deposits.
+**deposits** — money placed in a bank.
+**designed** — planned for a particular purpose.
+**determines** — decides or causes an outcome.
+**different** — not the same.
+**differs** — is unlike something else.
+**difficult** — requiring substantial effort.
+**disappear** — cease to be visible or present.
+**discouraged worker** — jobless person who stopped searching.
+**disposable goods** — products intended for short use.
+**disproportionate** — too large or small relative to others.
+**distribution** — way income or resources are shared.
+**downturn** — period of declining economic activity.
+**economic activity** — production and exchange of goods.
+**Economic efficiency** — maximum output from available resources.
+**Economic Growth** — increase in production over time.
+**economic security** — stable access to income and necessities.
+**economies** — systems of production and exchange.
+**effectively** — in a way producing the intended result.
+**effects** — results caused by an action.
+**eldercare** — support provided to older people.
+**eliminated** — completely removed.
+**emissions trading** — market for rights to release pollution.
+**employee ownership** — workers holding shares in their firm.
+**employers** — organisations hiring workers.
+**employing** — providing paid work.
+**employment** — paid work.
+**encourage** — make an action more likely.
+**Entrepreneurs** — people creating and operating businesses.
+**equally shared** — distributed in equal proportions.
+**essentials** — goods necessary for basic living.
+**evasion** — illegal avoidance of tax.
+**everything** — all things being considered.
+**examine** — inspect or analyse carefully.
+**exempt** — officially free from a requirement.
+**exemptions** — legal releases from taxation.
+**expansion** — period of increasing economic activity.
+**expectations** — beliefs about future outcomes.
+**expensive** — costing a large amount.
+**experience** — knowledge or events encountered directly.
+**experiences** — events personally encountered.
+**exporters** — firms selling goods abroad.
+**extensive** — increasing through additional inputs.
+**external cost** — harm imposed outside a transaction.
+**Factory** — building used for manufacturing.
+**falling share** — declining proportion of a total.
+**final goods** — products sold for ultimate use.
+**finance** — management and provision of money.
+**Financial markets** — systems trading financial assets.
+**finite planet** — earth with limited resources.
+**Fiscal policy** — government spending and taxation policy.
+**flexible work** — employment allowing variation in time or place.
+**formal employment** — registered work protected by law.
+**Formalisation** — bringing activity into legal systems.
+**Frictional unemployment** — temporary joblessness between roles.
+**gain** — beneficial increase or result.
+**generates** — produces or creates.
+**generations** — groups born in similar periods.
+**global value chains** — production stages spread across countries.
+**goods** — physical items produced for use.
+**green growth** — growth with declining environmental pressure.
+**gross domestic product** — value of final domestic production.
+**headline measure** — prominent summary statistic.
+**hiring** — act of employing workers.
+**household** — people sharing a home and finances.
+**household income** — money received by a household.
+**imports** — goods and services bought from abroad.
+**impossible** — not capable of occurring.
+**incentives** — factors encouraging particular behaviour.
+**income support** — payments protecting people with low income.
+**incomes** — money received by people or households.
+**increase** — become or make greater.
+**increases** — becomes greater in amount.
+**industries** — sectors producing related goods.
+**industry** — businesses producing related goods.
+**inefficient** — using more resources than necessary.
+**Inflation** — broad sustained increase in prices.
+**informal economy** — work outside formal regulation.
+**inheritance** — assets received after someone's death.
+**innovation** — introduction of new products or methods.
+**insurance** — protection against financial loss.
+**intensified** — became stronger or more severe.
+**intensive** — increasing through more effective use of inputs.
+**Interdependence** — mutual dependence between economies.
+**interest** — price paid for borrowing money.
+**Interest rates** — percentage cost of borrowing.
+**International cooperation** — countries working together.
+**International trade** — exchange across national borders.
+**inventories** — stocks of goods held for future use.
+**investment** — spending intended to create future benefits.
+**investment income** — returns from assets.
+**irregular** — not following a stable pattern.
+**job quality** — overall conditions of employment.
+**job search assistance** — support helping people find work.
+**jurisdictions** — territories under particular legal authority.
+**knowledge** — information and understanding.
+**labour** — human effort used in production.
+**labour force** — people working or seeking work.
+**labour markets** — systems matching workers and jobs.
+**labour-force participation** — share working or seeking employment.
+**legal arrangements** — structures permitted by law.
+**liability** — legal duty or amount owed.
+**lifelong learning** — education continuing throughout adulthood.
+**living standards** — material conditions of life.
+**loan guarantees** — promises to repay loans after default.
+**loans** — money lent for later repayment.
+**local economies** — production and spending within areas.
+**loss of leisure** — reduction in free time.
+**machines** — devices performing physical work.
+**market power** — ability to influence price or wages.
+**markets** — systems where buyers and sellers exchange.
+**mass unemployment** — joblessness affecting a large population.
+**material consumption** — use of physical resources and products.
+**material hardship** — difficulty meeting basic needs.
+**measure** — method or quantity used for assessment.
+**Mechanisation** — replacement of manual work by machines.
+**median income** — income at the middle of a distribution.
+**minimum wage** — lowest legal hourly pay.
+**mobility** — ability to move between jobs or places.
+**Moderate** — limited rather than extreme.
+**Monetary policy** — central-bank management of rates and money.
+**monetary value** — worth expressed in money.
+**monopoly** — market controlled by one seller.
+**monopsony** — labour market dominated by few employers.
+**Multinational companies** — firms operating in several countries.
+**national** — relating to an entire country.
+**national accounts** — official records of economic activity.
+**national income** — total income earned in an economy.
+**natural disaster** — destructive event caused by nature.
+**negotiations** — discussions aimed at agreement.
+**Non-compete clauses** — contract terms restricting later employment.
+**occupations** — types of paid work.
+**opportunity** — favourable chance for progress.
+**organisation** — structured group or arrangement.
+**output** — quantity or value produced.
+**painful** — causing suffering or serious difficulty.
+**parental leave** — time away from work for child care.
+**payments** — transfers of money.
+**pensions** — income paid during retirement.
+**permanent insecurity** — continuing lack of stability.
+**Policymakers** — people designing public policy.
+**positive** — favourable or greater than zero.
+**poverty** — lack of sufficient resources.
+**Price stability** — low predictable inflation.
+**private windfall** — unexpected gain received privately.
+**produced** — created through work or a process.
+**producing** — creating goods or results.
+**production** — creation of goods and services.
+**productive** — creating useful output efficiently.
+**productivity** — output produced per unit of input.
+**productivity dividend** — benefit created by greater productivity.
+**products** — goods created for use or sale.
+**profits** — financial gains after costs.
+**progressed** — developed towards a later stage.
+**progressive tax** — tax taking a larger share from higher incomes.
+**property taxes** — charges on land or buildings.
+**PROSPERITY** — state of broad economic well-being.
+**protection** — policy shielding industries from competition.
+**provided** — supplied or made available.
+**provides** — supplies something needed.
+**purchasing power** — goods and services money can buy.
+**quotas** — limits on quantities traded.
+**raising** — increasing an amount or level.
+**rapidly** — at a fast rate.
+**real freedom** — effective ability to choose and act.
+**rebates** — partial repayments of charges.
+**rebuilding** — constructing again after damage.
+**recession** — period of declining economic activity.
+**redistribute** — transfer resources between groups.
+**reflect** — show or represent a condition.
+**regions** — large geographic areas.
+**regressive tax** — tax taking a larger share from lower incomes.
+**regulation** — official control through rules.
+**relative cost** — cost compared with alternative production.
+**relatives** — people connected through family.
+**renewable energy** — power from naturally replenished sources.
+**rent** — payment for temporary use of property.
+**representation** — action of speaking for others.
+**represents** — stands for or describes something.
+**resource use** — consumption of natural or economic inputs.
+**respond** — act in reaction to something.
+**retaliation** — counteraction in response to harm.
+**retirement savings** — assets reserved for later life.
+**returns** — income or gains from investment.
+**revenue** — income received by an organisation.
+**risk** — possibility of loss or harm.
+**Savings** — income not currently consumed.
+**service jobs** — employment providing services.
+**shifted** — moved or changed position.
+**shocks** — sudden unexpected economic events.
+**shorter working weeks** — reduction in regular working time.
+**social contract** — implicit agreement between society and government.
+**social insurance** — collective protection against income loss.
+**social mobility** — movement between social or income positions.
+**social protection** — policies protecting people from hardship.
+**specialise** — focus production on selected activities.
+**speculation** — trading based on expected price changes.
+**spending** — use of money to purchase.
+**stable work** — employment providing reliable conditions.
+**stagnate** — remain unchanged or stop growing.
+**standards** — required levels or rules.
+**strengthen** — make more powerful or effective.
+**structural change** — long-term shift in economic composition.
+**Structural unemployment** — joblessness from mismatch of skills or locations.
+**subsidies** — public funds supporting an activity.
+**subtract** — remove an amount from a total.
+**supply** — quantity offered for sale.
+**sustain** — maintain over time.
+**sustained pressure** — force continuing over time.
+**systems** — sets of connected parts.
+**tariffs** — taxes imposed on imports.
+**Tax avoidance** — legal reduction of tax liability.
+**tax base** — income or assets subject to tax.
+**tax receipts** — revenue collected through taxes.
+**taxation** — compulsory charges imposed by government.
+**technical college** — institution providing vocational education.
+**tension** — conflict between forces or goals.
+**time poverty** — lack of sufficient discretionary time.
+**Time-use surveys** — studies recording how people spend time.
+**tracking** — following changes over time.
+**trade** — exchange of goods and services.
+**Trade unions** — organisations representing workers.
+**training** — development of knowledge and skills.
+**transactions** — exchanges involving payment.
+**transition** — change from one state to another.
+**unconditional payment** — money provided without behavioural requirements.
+**underemployment** — work providing too few hours or insufficient skill use.
+**unemployment** — state of lacking paid work.
+**unemployment rate** — share of labour force without jobs.
+**Union decline** — reduction in organised worker membership.
+**universal basic income** — regular unconditional payment to all adults.
+**unpaid care** — care work receiving no wage.
+**unpredictable** — not possible to forecast reliably.
+**value** — worth or usefulness.
+**ventures** — new businesses involving risk.
+**wages** — payment received for labour.
+**Warehouse** — building used to store goods.
+**weakened** — made less strong.
+**wealth** — accumulated assets.
+**wealth tax** — charge imposed on large asset holdings.
+**wealthy** — possessing substantial financial resources.
+**welfare** — public support and general well-being.
+
+**Active labour-market programmes** — policies helping unemployed people find work.
+**adjustment** — change in response to new conditions.
+**Advocates** — people publicly supporting an idea.
+**aggregate** — combined into a total.
+**allocated** — distributed for particular purposes.
+**Alternatives** — other available options.
+**appliances** — machines used in homes.
+**assets** — items possessing economic value.
+**automated** — operated largely by machines.
+**automatic stabilisers** — taxes and benefits that moderate economic cycles.
+**Automation** — technology performing tasks with little human input.
+**bank run** — mass withdrawal caused by fear of bank failure.
+**banks** — institutions accepting deposits and making loans.
+**Bargaining** — negotiation over terms.
+**bargaining power** — ability to influence a negotiation.
+**basket of goods** — selected products used to measure prices.
+**benefits** — payments or advantages received.
+**borrowers** — people or organisations receiving loans.
+**Borrowing** — obtaining money with an obligation to repay.
+**bubble** — asset-price rise detached from fundamental value.
+**business ownership** — legal possession of an enterprise.
+**capability** — real freedom to achieve valued outcomes.
+**capital** — wealth used to produce more wealth.
+**Carbon taxes** — charges imposed on carbon emissions.
+**childcare** — care and supervision of children.
+**clerical tasks** — routine administrative duties.
+**Climate policy** — government action addressing climate change.
+**collateral** — asset promised as security for a loan.
+**comparative advantage** — ability to produce at lower relative cost.
+**compensate** — provide payment or benefit for loss.
+**competition** — rivalry between sellers or buyers.
+**competitive level** — outcome expected under effective competition.
+**Compliance** — act of obeying rules.
+**composition** — way different parts form a whole.
+**concentrated losses** — costs borne by a narrow group.
+**concentration** — accumulation in a small group.
+**consumer price index** — measure tracking household prices.
+**consumers** — people purchasing goods and services.
+**consumption** — use of goods and services.
+**contracts** — legally enforceable agreements.
+**contributes** — helps produce an outcome.
+**cooperatives** — enterprises owned by their members.
+**cost-push inflation** — price rises caused by higher production costs.
+**credit** — borrowed purchasing power.
+**currency** — money used by a country.
+**Cyclical unemployment** — joblessness caused by economic downturn.
+**debt** — money owed to another party.
+**deductions** — amounts removed from taxable income.
+**degrowth** — planned reduction of material economic activity.
+**demand** — willingness and ability to purchase.
+**demand-pull inflation** — price rises caused by excessive demand.
+**depletion** — reduction through use or extraction.
+**Deposit insurance** — guarantee protecting bank deposits.
+**deposits** — money placed in a bank.
+**discouraged worker** — jobless person who stopped searching.
+**disposable goods** — products intended for short use.
+**distribution** — way income or resources are shared.
+**downturn** — period of declining economic activity.
+**economic activity** — production and exchange of goods.
+**Economic efficiency** — maximum output from available resources.
+**Economic Growth** — increase in production over time.
+**economic security** — stable access to income and necessities.
+**eldercare** — support provided to older people.
+**eliminated** — completely removed.
+**emissions trading** — market for rights to release pollution.
+**employee ownership** — workers holding shares in their firm.
+**employment** — paid work.
+**Entrepreneurs** — people creating and operating businesses.
+**equally shared** — distributed in equal proportions.
+**essentials** — goods necessary for basic living.
+**evasion** — illegal avoidance of tax.
+**exempt** — officially free from a requirement.
+**exemptions** — legal releases from taxation.
+**expansion** — period of increasing economic activity.
+**exporters** — firms selling goods abroad.
+**extensive** — increasing through additional inputs.
+**external cost** — harm imposed outside a transaction.
+**Factory** — building used for manufacturing.
+**falling share** — declining proportion of a total.
+**final goods** — products sold for ultimate use.
+**finance** — management and provision of money.
+**Financial markets** — systems trading financial assets.
+**finite planet** — earth with limited resources.
+**Fiscal policy** — government spending and taxation policy.
+**flexible work** — employment allowing variation in time or place.
+**formal employment** — registered work protected by law.
+**Formalisation** — bringing activity into legal systems.
+**Frictional unemployment** — temporary joblessness between roles.
+**gain** — beneficial increase or result.
+**global value chains** — production stages spread across countries.
+**goods** — physical items produced for use.
+**green growth** — growth with declining environmental pressure.
+**gross domestic product** — value of final domestic production.
+**headline measure** — prominent summary statistic.
+**hiring** — act of employing workers.
+**household** — people sharing a home and finances.
+**household income** — money received by a household.
+**imports** — goods and services bought from abroad.
+**incentives** — factors encouraging particular behaviour.
+**income support** — payments protecting people with low income.
+**industry** — businesses producing related goods.
+**inefficient** — using more resources than necessary.
+**Inflation** — broad sustained increase in prices.
+**informal economy** — work outside formal regulation.
+**inheritance** — assets received after someone's death.
+**innovation** — introduction of new products or methods.
+**insurance** — protection against financial loss.
+**intensive** — increasing through more effective use of inputs.
+**Interdependence** — mutual dependence between economies.
+**interest** — price paid for borrowing money.
+**Interest rates** — percentage cost of borrowing.
+**International cooperation** — countries working together.
+**International trade** — exchange across national borders.
+**inventories** — stocks of goods held for future use.
+**investment** — spending intended to create future benefits.
+**investment income** — returns from assets.
+**job quality** — overall conditions of employment.
+**job search assistance** — support helping people find work.
+**jurisdictions** — territories under particular legal authority.
+**labour** — human effort used in production.
+**labour force** — people working or seeking work.
+**labour markets** — systems matching workers and jobs.
+**labour-force participation** — share working or seeking employment.
+**legal arrangements** — structures permitted by law.
+**liability** — legal duty or amount owed.
+**lifelong learning** — education continuing throughout adulthood.
+**living standards** — material conditions of life.
+**loan guarantees** — promises to repay loans after default.
+**loans** — money lent for later repayment.
+**local economies** — production and spending within areas.
+**loss of leisure** — reduction in free time.
+**market power** — ability to influence price or wages.
+**mass unemployment** — joblessness affecting a large population.
+**material consumption** — use of physical resources and products.
+**material hardship** — difficulty meeting basic needs.
+**Mechanisation** — replacement of manual work by machines.
+**median income** — income at the middle of a distribution.
+**minimum wage** — lowest legal hourly pay.
+**mobility** — ability to move between jobs or places.
+**Monetary policy** — central-bank management of rates and money.
+**monetary value** — worth expressed in money.
+**monopoly** — market controlled by one seller.
+**monopsony** — labour market dominated by few employers.
+**Multinational companies** — firms operating in several countries.
+**national accounts** — official records of economic activity.
+**national income** — total income earned in an economy.
+**natural disaster** — destructive event caused by nature.
+**Non-compete clauses** — contract terms restricting later employment.
+**occupations** — types of paid work.
+**opportunity** — favourable chance for progress.
+**output** — quantity or value produced.
+**parental leave** — time away from work for child care.
+**payments** — transfers of money.
+**pensions** — income paid during retirement.
+**permanent insecurity** — continuing lack of stability.
+**Policymakers** — people designing public policy.
+**poverty** — lack of sufficient resources.
+**Price stability** — low predictable inflation.
+**private windfall** — unexpected gain received privately.
+**production** — creation of goods and services.
+**productive** — creating useful output efficiently.
+**productivity** — output produced per unit of input.
+**productivity dividend** — benefit created by greater productivity.
+**progressive tax** — tax taking a larger share from higher incomes.
+**property taxes** — charges on land or buildings.
+**PROSPERITY** — state of broad economic well-being.
+**protection** — policy shielding industries from competition.
+**purchasing power** — goods and services money can buy.
+**quotas** — limits on quantities traded.
+**real freedom** — effective ability to choose and act.
+**rebates** — partial repayments of charges.
+**rebuilding** — constructing again after damage.
+**recession** — period of declining economic activity.
+**redistribute** — transfer resources between groups.
+**regressive tax** — tax taking a larger share from lower incomes.
+**regulation** — official control through rules.
+**relative cost** — cost compared with alternative production.
+**renewable energy** — power from naturally replenished sources.
+**rent** — payment for temporary use of property.
+**representation** — action of speaking for others.
+**resource use** — consumption of natural or economic inputs.
+**retaliation** — counteraction in response to harm.
+**retirement savings** — assets reserved for later life.
+**returns** — income or gains from investment.
+**revenue** — income received by an organisation.
+**risk** — possibility of loss or harm.
+**Savings** — income not currently consumed.
+**service jobs** — employment providing services.
+**shocks** — sudden unexpected economic events.
+**shorter working weeks** — reduction in regular working time.
+**social contract** — implicit agreement between society and government.
+**social insurance** — collective protection against income loss.
+**social mobility** — movement between social or income positions.
+**social protection** — policies protecting people from hardship.
+**specialise** — focus production on selected activities.
+**speculation** — trading based on expected price changes.
+**spending** — use of money to purchase.
+**stable work** — employment providing reliable conditions.
+**stagnate** — remain unchanged or stop growing.
+**standards** — required levels or rules.
+**structural change** — long-term shift in economic composition.
+**Structural unemployment** — joblessness from mismatch of skills or locations.
+**subsidies** — public funds supporting an activity.
+**supply** — quantity offered for sale.
+**sustained pressure** — force continuing over time.
+**tariffs** — taxes imposed on imports.
+**Tax avoidance** — legal reduction of tax liability.
+**tax base** — income or assets subject to tax.
+**tax receipts** — revenue collected through taxes.
+**taxation** — compulsory charges imposed by government.
+**technical college** — institution providing vocational education.
+**time poverty** — lack of sufficient discretionary time.
+**Time-use surveys** — studies recording how people spend time.
+**trade** — exchange of goods and services.
+**Trade unions** — organisations representing workers.
+**training** — development of knowledge and skills.
+**transactions** — exchanges involving payment.
+**transition** — change from one state to another.
+**unconditional payment** — money provided without behavioural requirements.
+**underemployment** — work providing too few hours or insufficient skill use.
+**unemployment** — state of lacking paid work.
+**unemployment rate** — share of labour force without jobs.
+**Union decline** — reduction in organised worker membership.
+**universal basic income** — regular unconditional payment to all adults.
+**unpaid care** — care work receiving no wage.
+**value** — worth or usefulness.
+**ventures** — new businesses involving risk.
+**wages** — payment received for labour.
+**wealth** — accumulated assets.
+**wealth tax** — charge imposed on large asset holdings.
+**welfare** — public support and general well-being.
+
+REVIEW PROMPTS
+
+1. Why can productivity rise while a region experiences economic decline?
+2. What does GDP measure well, and what important forms of value does it omit?
+3. How do monopsony and worker mobility affect wages?
+4. Why do international trade and automation create both total gains and concentrated losses?
+5. How does the concept of capability broaden the meaning of prosperity?
+
+VOCABULARY PRACTICE
+
+Choose twenty-five target items and write a 300-word economic plan for a region affected by factory closures and automation. Address employment, training, taxation, investment, inequality, and environmental transition.

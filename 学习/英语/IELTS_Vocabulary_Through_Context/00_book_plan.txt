@@ -1,0 +1,54 @@
+TEN WORLDS OF IELTS VOCABULARY
+Master 3,000+ Essential Words Through Context
+
+PROJECT STANDARD
+
+- Language: English only
+- Format during drafting: plain-text files with Markdown-style **bold** markers
+- Final format: merged TXT and EPUB
+- Target: approximately 3,000–4,000 high-value IELTS words and common derivatives
+- Counting rule: coverage is tracked by vocabulary item and word family, not inflated by routine plurals or verb endings
+- Style: natural, coherent, academically useful, and vocabulary-dense
+- Reinforcement: selected words recur across chapters, while each chapter introduces a large new set
+
+CHAPTER PLAN
+
+01. Education — The School That Learned to Learn
+02. Environment — A River Returns to Life
+03. Technology — The City Governed by an Algorithm
+04. Health — Beyond the Hospital Walls
+05. Cities — Designing a Home for Ten Million People
+06. Economics and Work — The Price of Prosperity
+07. Culture and Identity — What a Museum Chooses to Remember
+08. Psychology — The Architecture of a Decision
+09. Media and Communication — Truth in an Age of Infinite Voices
+10. Global Challenges — The Century of Cooperation
+
+CHAPTER COMPONENTS
+
+1. Original long-form article
+2. Target vocabulary highlighted with **double asterisks**
+3. An English-only glossary
+4. A short review section
+5. Coverage data added to the master vocabulary ledger
+
+DIRECTORY STANDARD
+
+- Each chapter is stored in chapters/NN_theme/.
+- article.txt contains the chapter text, glossary, and review exercises.
+- vocabulary.csv contains that chapter's vocabulary records.
+- validation.txt contains that chapter's automated checks.
+- output/ is reserved for the final merged TXT and EPUB.
+
+STATUS
+
+Chapter 01: drafted and validated
+Chapter 02: drafted and validated
+Chapter 03: drafted and validated
+Chapter 04: drafted and validated
+Chapter 05: drafted and validated
+Chapter 06: drafted and validated
+Chapter 07: drafted and validated
+Chapter 08: drafted and validated
+Chapter 09: drafted and validated
+Chapter 10: drafted and validated
