@@ -1,0 +1,8 @@
+CHAPTER 04 VALIDATION
+
+File: chapters/04_health/article.txt
+Body word count: 3046
+Unique highlighted target items: 321
+Glossary entries: 321
+Highlighted items without definitions: none
+Definitions without highlighted body items: none

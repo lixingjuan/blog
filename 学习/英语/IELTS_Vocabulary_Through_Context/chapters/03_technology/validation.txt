@@ -1,0 +1,8 @@
+CHAPTER 03 VALIDATION
+
+File: chapters/03_technology/article.txt
+Body word count: 3007
+Unique highlighted target items: 320
+Glossary entries: 320
+Highlighted items without definitions: none
+Definitions without highlighted body items: none
