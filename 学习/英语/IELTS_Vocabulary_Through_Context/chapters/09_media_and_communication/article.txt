@@ -1,0 +1,922 @@
+CHAPTER 09
+
+TRUTH IN AN AGE OF **INFINITE VOICES**
+
+1. The **Photograph** That Arrived First
+
+At 8:14 one **morning**, a photograph appeared online **showing** smoke above the **central railway station**. Within minutes, **thousands** of **users** had shared claims of an **explosion**. **Newsrooms** **interrupted** **programmes**, **commuters** **changed** routes, and anxious relatives called emergency services. At 8:37, **officials** **confirmed** that the smoke came from a maintenance **vehicle** and that no explosion had **occurred**.
+
+The false **claim** **travelled** faster than the **correction** because it was **novel**, **frightening**, and easy to understand. The image appeared to provide **direct evidence**, although it showed only smoke. **Captions** **supplied** a dramatic **interpretation**, and **repetition** made the story feel established before **verification** began.
+
+Digital **communication** has **removed** many **barriers to publishing**. A **witness** can **document** an event **instantly**, **marginalised voices** can reach a global **audience**, and authorities can no longer control every **account**. This expansion has strengthened **public scrutiny** and **democratic participation**.
+
+It has also produced an environment in which information **competes** for attention before its **accuracy** is known. Speed **rewards** **confident claims**, **emotional content**, and **striking images**. Truth must **survive** not only **censorship** but **abundance**.
+
+2. How News Is Made
+
+News does not simply reflect **reality**; it selects from an **unlimited** number of events. **Editors** judge **newsworthiness** **according** to **factors** such as **significance**, **proximity**, **conflict**, novelty, and human interest. An event may be important but **receive** little attention because it **develops** slowly or lacks dramatic images.
+
+**Reporters** gather testimony, **documents**, observations, and data. They seek **corroboration**, **confirmation** from independent **evidence**, **especially** when a claim could cause harm. A single **unnamed source** may provide an important lead, but **publication** usually requires additional support.
+
+Sources sometimes need **anonymity** because **disclosure** could cost a job, invite **retaliation**, or **endanger** life. Anonymity **protects** **whistle-blowers** but prevents **readers** from **evaluating** **motives** directly. Responsible newsrooms explain why a source is **unnamed** and whether editors know the person's **identity**.
+
+**Journalists** distinguish fact, **analysis**, and **opinion**, though boundaries can be difficult. Every report contains choices about emphasis and **context**. **Objectivity** is better **understood** as a **disciplined** method—verification, fairness, **transparency**, and correction—than as the absence of all perspective.
+
+**Errors** are inevitable. **Credible outlets** **publish** visible **corrections**, preserve a **record** of major changes, and examine how **mistakes** occurred. Concealing an error protects **reputation** **briefly** but **damages** **trust** over time.
+
+3. Verification in a Digital Environment
+
+The first task in **verifying** **online material** is to identify the **original source**. A **screenshot** may remove the account name, date, or **surrounding conversation**. **Searching** for **earlier** versions can reveal that an image is old, **altered**, or taken from an **unrelated event**.
+
+**Reverse image search** helps locate previous **appearances** of a **picture**. **Visual clues**—**weather**, **shadows**, **road signs**, **architecture**, and **landmarks**—can support **geolocation**. **Metadata** may contain time or device information, although **platforms** often remove it and files can be **manipulated**.
+
+**Video** requires **similar** caution. Editors examine individual frames, compare audio with the **location**, and search for cuts. A genuine video can still carry a false **description**. Verification concerns the claim **attached** to material, not only whether the **pixels** are **authentic**.
+
+Documents require provenance. Reporters **contact** the institution that **supposedly** produced them, compare **formatting** with known records, and **consult** subject **specialists**. A document that **confirms** what a **journalist** hopes to find **deserves** more scrutiny, not less.
+
+Verification takes time, **creating** tension with **competitive** **publishing**. Newsrooms increasingly mark **uncertain material** **clearly** and **update** **reports** as evidence develops. Saying “we do not yet know” is useful information, not an **admission** of failure.
+
+**Data journalism** **presents** additional **challenges**. A **spreadsheet** may look authoritative while **containing** incomplete records, **inconsistent definitions**, or a **biased sample**. Reporters **inspect** who **collected** the data, for what purpose, and which cases are **missing**. They calculate rates rather than **presenting** **raw totals** when **population size** differs.
+
+**Visualisation** can **clarify** complex patterns, but **scales**, **colours**, and **starting points** **influence** **perception**. A graph with a **truncated axis** may **exaggerate** a small change; a map can make large rural areas appear more important than **densely populated** cities. **Ethical graphics** disclose **uncertainty** and avoid **decoration** that **distorts** comparison.
+
+**Leaked material** also requires judgement. A large **archive** may contain evidence of **wrongdoing** alongside private information **unrelated** to the **public interest**. Journalists verify authenticity, consult **affected** people, and **redact** **details** that create unnecessary harm. **Possessing** information does not automatically **justify** publishing all of it.
+
+**Source protection** involves **digital security** as well as **promises**. **Encrypted communication**, careful document storage, and limits on internal access reduce the chance that an identity will be exposed. Reporters must not offer absolute safety they cannot guarantee.
+
+Verification is **collaborative**. Local witnesses, technical specialists, language **experts**, and open-source **investigators** may each contribute part of the answer. Newsrooms need procedures for **crediting** that work and **correcting** the record when public collaboration **reveals** an error.
+
+4. Misinformation, Disinformation, and Propaganda
+
+**Misinformation** is false or **misleading** information shared without necessarily **intending** harm. **Disinformation** is created or distributed **deliberately** to **deceive**. The distinction matters **ethically**, but **intention** is often difficult to **establish** from a **post** alone.
+
+**Propaganda** is **organised** communication designed to shape **attitudes** or behaviour in service of a **political goal**. It may contain **falsehoods**, **selective truth**, emotional **symbolism**, and repeated **slogans**. Propaganda is not limited to **authoritarian** states; parties, governments, companies, and movements can all use **manipulative communication**.
+
+A successful **false narrative** often attaches itself to genuine **grievances**. It offers a simple cause, a guilty enemy, and evidence **resistant** to **disproof**. Contradictory facts may be **interpreted** as proof that **institutions** are hiding the truth.
+
+**Repeating** a **false claim** in order to correct it can increase **familiarity**. **Communicators** should lead with accurate information, explain the misleading **technique**, and **restate** the truth. Corrections are more effective when they provide an **alternative explanation** rather than leaving a gap.
+
+**Punishing** every person who shares false information is neither practical nor **desirable**. Many errors arise from **confusion**, **humour**, **outdated knowledge**, or sincere belief. Responses should distinguish organised **manipulation** from ordinary mistake.
+
+Language itself can frame conflict. Describing a group as a “wave,” “burden,” or “**infestation**” turns people into a **threatening** mass. **Euphemisms** can hide violence, while labels such as “terrorist,” “freedom fighter,” or “riot” assign moral meaning before evidence is examined. Word choice is never the whole **argument**, but it directs attention and emotion.
+
+**Statistics** can be used **rhetorically** too. A claim may select a **convenient** time period, compare unlike categories, or report a **percentage increase** without the underlying number. Correlation may be presented as causation. Responsible communication provides denominators, **comparison groups**, definitions, and **source links**.
+
+**Conspiracy theories** differ from ordinary suspicion. They explain events through secret coordination by powerful actors and reinterpret missing evidence as proof of **concealment**. Because every contradiction can be absorbed into the theory, direct factual correction may have limited effect.
+
+**Prebunking** exposes common manipulation techniques before people encounter a specific falsehood. Short examples can teach readers to recognise **impersonation**, **emotional provocation**, false **dilemmas**, and attacks on the person instead of the argument. The aim is cognitive resistance without encouraging universal **distrust**.
+
+Humour and **satire** complicate **classification**. A joke may be misunderstood outside its original audience, while propagandists may describe harmful content as humour to escape responsibility. Context, intent, likely interpretation, and actual impact all deserve consideration.
+
+5. Platforms and **Algorithmic Amplification**
+
+**Social-media platforms** do not display all available posts **equally**. **Ranking systems** predict which content will keep each user engaged. **Engagement**—**clicking**, watching, commenting, **sharing**—becomes a measurable substitute for interest and a source of **advertising** revenue.
+
+Content provoking anger, fear, or moral **outrage** often generates strong engagement. An algorithm optimised for attention may therefore amplify **divisive** material without being explicitly programmed to favour **extremism**. The **business model** shapes the information environment.
+
+**Personalisation** creates useful **relevance** but can narrow exposure. The concept of a **filter bubble** describes a user surrounded by information matching previous behaviour. Evidence suggests that people still encounter opposing views, but ranking can reinforce selective attention and **social division**.
+
+Platforms moderate content through **automated systems** and **human reviewers**. At enormous scale, both make errors. Machines struggle with satire, **dialect**, and context, while reviewers face disturbing material and severe time pressure. Decisions about **removal**, **warning labels**, or reduced **distribution** inevitably affect **expression**.
+
+Transparency requires more than publishing **general** **principles**. Researchers need access to data about reach, enforcement, advertising, and **recommendation systems** while protecting user **privacy**. Without such access, **society** cannot **evaluate** a platform's claims about its effects.
+
+6. Advertising, Influence, and Surveillance
+
+Advertising has long funded **newspapers** and **broadcasting**, but **digital advertising** allows **precise targeting**. Platforms infer interests, income, location, and **vulnerability** from behaviour. **Advertisers** can send different **messages** to narrowly **defined** groups without **public visibility**.
+
+**Microtargeting** may make advertising relevant, yet **political microtargeting** fragments **public debate**. **Citizens** cannot easily examine or challenge promises shown only to **selected voters**. A **candidate** might send inconsistent messages to different groups.
+
+**Native advertising** resembles ordinary **editorial content** in style and placement. If **sponsorship** is **unclear**, readers may treat **persuasion** as independent **reporting**. Effective disclosure should be immediate and understandable, not hidden in a distant link.
+
+**Influencers** blur personal recommendation and **commercial promotion**. **Followers** may trust an apparently spontaneous **endorsement** more than a **conventional advertisement**. Rules requiring clear labels protect **audiences**, particularly children.
+
+The underlying model is sometimes called **surveillance capitalism**: **personal behaviour** is collected and analysed to predict and influence future action. Convenience is exchanged for extensive **observation**, often through **terms** few users meaningfully understand.
+
+7. Deepfakes and Synthetic Media
+
+**Artificial intelligence** can generate realistic text, voices, images, and video. **Synthetic media** can support art, **translation**, education, and accessibility. It can also **impersonate** **individuals**, **fabricate** evidence, and automate deception.
+
+A **deepfake** may place words in a **politician**'s mouth or reproduce a relative's voice in a **financial scam**. **Detection tools** search for **technical traces**, but generation improves rapidly and **compressed files** hide clues. Human **viewers** are not reliable detectors.
+
+The greater danger may be the **liar's dividend**: as people learn that convincing media can be fabricated, a wrongdoer can dismiss **genuine evidence** as fake. General distrust becomes protection for **misconduct**.
+
+Responses include **authentication** at capture, **secure records** of editing, visible labels, and laws against harmful impersonation. **Watermarks** may identify generated content, though they can be removed. No single technical solution will settle the social **problem**.
+
+**Media education** should avoid teaching that nothing can be **trusted**. Healthy **scepticism** asks for source, context, and corroboration; **cynicism** assumes all claims are equally false. The first supports inquiry, while the second benefits **deceivers**.
+
+8. **Freedom of Expression** and Its Limits
+
+Freedom of expression protects **unpopular ideas**, **criticism** of **authority**, **artistic experimentation**, and political **opposition**. Without it, officials can define inconvenient truth as harmful speech and silence **accountability**.
+
+Expression is not unlimited. Laws commonly restrict direct threats, **defamation**, **fraud**, and certain disclosures of private information. The difficult task is **drawing boundaries** that **address** harm without enabling **political abuse**.
+
+**Hate speech** can degrade **targeted groups**, encourage **discrimination**, and contribute to violence. Legal approaches differ across societies. Some prohibit defined forms of group hatred; others rely more heavily on **counterspeech** unless expression directly incites **unlawful action**.
+
+**Platform rules** are not identical to **constitutional law**. A **private service** may remove **lawful material** under its terms, yet **dominant platforms** function as major **public forums**. Their decisions can have social consequences similar to regulation.
+
+Fair **moderation** requires clear rules, consistent enforcement, notice, and **appeal**. Context matters: **documentation** of war crimes may contain violent **imagery** that would otherwise be removed, and a **slur** may be quoted in education or reclaimed by its target.
+
+9. Polarisation and Public **Conversation**
+
+Political disagreement is normal in democracy. **Affective polarisation** goes further: opposing groups dislike and distrust one another as people. Compromise begins to look like betrayal, and even neutral institutions become associated with one side.
+
+Media can intensify conflict by rewarding **provocative voices** and presenting politics as a permanent contest. However, polarisation also reflects inequality, institutional design, **political leadership**, and real disputes. Blaming media alone oversimplifies the problem.
+
+Productive conversation requires more than politeness. Participants need **shared rules** for evidence, willingness to **represent** an opponent's position fairly, and space to acknowledge uncertainty. **Moderators** can slow discussion, ask for sources, and prevent a few voices from dominating.
+
+Exposure to an **opposing argument** does not automatically create tolerance. Hostile or humiliating encounters may strengthen previous views. Contact works better when participants possess equal status, a shared task, and enough time to develop trust.
+
+Local **journalism** can support **common knowledge** by reporting on schools, councils, **courts**, and **community life**. When local **outlets** disappear, rumours fill the gap and public officials face less scrutiny.
+
+During emergencies, communication must be fast, consistent, and **actionable**. Authorities should state what is known, what remains uncertain, what people should do, and when the next update will arrive. **Contradictory messages** from different **agencies** create confusion even when each statement is defensible in isolation.
+
+Trust established before a crisis matters. Communities listen to doctors, teachers, religious leaders, neighbourhood groups, and **local broadcasters** they already know. Central authorities can provide technical evidence while trusted **intermediaries** translate it into relevant language and answer practical concerns.
+
+**Rumour** monitoring helps officials understand uncertainty rather than merely police speech. A recurring false claim may indicate that **official guidance** is unclear or that a genuine fear has been ignored. Responding respectfully can address the need that makes the rumour attractive.
+
+Communication should not promise certainty that evidence cannot support. Recommendations may change as facts develop. Explaining the reason for **revision** protects trust better than pretending that earlier advice was never given.
+
+10. The Economics of Journalism
+
+For much of the twentieth century, advertising subsidised reporting. Digital platforms captured a large share of **advertising revenue**, while readers became accustomed to **free online news**. Many newspapers reduced staff or closed.
+
+**Subscriptions** can support quality but place **reliable information** behind a **paywall**. Wealthier audiences receive detailed reporting while others depend on free material of uneven quality. **Membership models**, **donations**, public **funding**, and **nonprofit ownership** offer alternatives.
+
+Publicly funded media can provide universal access and invest in programming that commercial markets neglect. **Independence** requires stable funding and **governance** protected from direct political control.
+
+**Philanthropic funding** supports **investigations** but may reflect **donor priorities**. Outlets should disclose major **funders** and protect **editorial decisions**. Diversity of funding reduces dependence on any single sponsor.
+
+Journalism is partly a **public good**: one person's use of verified information does not prevent another's, and democratic benefits extend beyond paying readers. Markets alone may therefore provide less reporting than society needs.
+
+Ownership concentration creates another concern. When a small number of companies control newspapers, broadcasters, and digital outlets, they can shape which issues receive sustained attention. Direct censorship is unnecessary if commercial priorities quietly narrow the range of investigation. Competition law and ownership disclosure can protect plurality, although a large organisation may also possess resources for expensive reporting that small outlets lack.
+
+Editorial independence requires a boundary between owners, advertisers, and journalists. This boundary is never perfect: budgets determine staffing, and commercial strategy influences audiences. Clear governance, professional standards, and transparent conflicts can reduce improper interference. Journalists also need protection from strategic lawsuits intended to exhaust critics rather than win a legitimate dispute.
+
+The pressure for constant updates has encouraged interest in slow journalism. Instead of repeating every small development, slow reporting investigates causes, compares records, and returns after immediate attention has faded. It may take months to examine a housing failure, polluted river, or abusive workplace.
+
+Long-form work does not automatically produce truth. Length can hide weak evidence as easily as a short post can. Its value lies in time for verification, context, and engagement with people whose experience cannot be compressed into a quotation.
+
+Audiences can support this work through subscriptions, memberships, donations, and public institutions. However, journalism should not become a luxury service available only to those with money and time. Partnerships with libraries, schools, local radio, and community organisations can widen access while preserving editorial standards.
+
+11. **Media Literacy** Without Cynicism
+
+Media literacy begins before sharing. Readers can pause, identify the source, leave the page to see what other outlets say, and locate **original evidence**. **Professional appearance**, large follower counts, or confident language do not establish **reliability**.
+
+**Lateral reading** means opening other sources rather than examining one page in isolation. **Fact-checkers** investigate the **publisher**, claim, and evidence across the web. This often works better than judging a site's design or domain name.
+
+Readers should distinguish **news reporting** from opinion, advertising, satire, and **entertainment**. They can check dates, examine whether a **headline** matches the article, and notice when statistics lack a **denominator** or comparison.
+
+**Emotional awareness** matters. Content that produces **immediate outrage** or triumph deserves a pause because emotion encourages rapid sharing. Asking “Why do I want this to be true?” can expose motivated interpretation.
+
+Literacy should not transfer all responsibility to individuals. No person can verify every claim in a polluted environment. Institutions, platforms, advertisers, schools, and governments share responsibility for **information quality**.
+
+12. A Correction That Travels
+
+After the railway photograph caused panic, several newsrooms studied how the false story spread. They found that many users shared **screenshots** containing the dramatic claim but not the later correction. The correction existed, yet its distribution was weak.
+
+Editors redesigned updates so corrected headlines travelled with shared links. Platforms notified users who had interacted with the original post. Local officials published a short account of the maintenance work and released **time-stamped** **camera footage**.
+
+These actions did not erase the error, but they improved the **information system**. Correction became an active process rather than a quiet note beneath yesterday's article.
+
+Truth in a crowded media environment depends on more than identifying individual lies. It requires institutions that verify, systems that reward reliability, citizens able to evaluate claims, and rules that protect both expression and people from **serious harm**.
+
+An infinite number of voices does not guarantee understanding. It creates possibility: more witnesses, knowledge, criticism, art, and connection, but also more noise and manipulation. The **democratic task** is not to restore a lost world of a few authorised speakers. It is to build conditions in which many voices can be heard and **trustworthy evidence** can still rise above the smoke.
+
+That work is never finished. Each generation inherits communication tools and must decide which habits, institutions, and protections will make those tools serve shared understanding.
+
+GLOSSARY
+
+**abundance** — very large available quantity.
+**according** — as stated or determined by.
+**account** — description of events.
+**accountability** — responsibility for actions.
+**accuracy** — closeness to truth.
+**actionable** — capable of guiding action.
+**address** — deal with an issue.
+**admission** — acknowledgement of a fact.
+**Advertisers** — organisations paying to promote messages.
+**advertising** — paid promotion of goods or ideas.
+**advertising revenue** — income earned from advertisements.
+**affected** — influenced or changed.
+**Affective polarisation** — personal hostility between political groups.
+**agencies** — organisations performing official functions.
+**Algorithmic Amplification** — automated increase in content reach.
+**altered** — changed from an earlier form.
+**alternative explanation** — different account of why something occurred.
+**analysis** — detailed examination.
+**anonymity** — state of an identity being concealed.
+**appeal** — formal request to reconsider.
+**appearances** — instances of becoming visible.
+**architecture** — design of buildings or systems.
+**archive** — collection of preserved records.
+**argument** — reason offered for a conclusion.
+**Artificial intelligence** — computer systems performing intelligent tasks.
+**artistic experimentation** — creative testing of unfamiliar methods.
+**attached** — connected to something.
+**attitudes** — settled ways of thinking.
+**audience** — people receiving communication.
+**audiences** — groups receiving communication.
+**authentic** — genuine rather than fake.
+**authentication** — verification that material is genuine.
+**authoritarian** — favouring strict concentrated authority.
+**authority** — official power or trusted expertise.
+**automated systems** — technology operating with limited human control.
+**barriers to publishing** — obstacles preventing public distribution.
+**biased sample** — unrepresentative group producing distortion.
+**briefly** — for a short time.
+**broadcasting** — transmission of programmes to audiences.
+**business model** — method by which an organisation creates revenue.
+**camera footage** — video recorded by a camera.
+**candidate** — person seeking election or selection.
+**Captions** — text accompanying images.
+**censorship** — suppression of expression.
+**central railway station** — main urban train terminal.
+**challenges** — difficulties or acts of questioning.
+**changed** — became different.
+**Citizens** — legal members of a state.
+**claim** — statement presented as true.
+**clarify** — make easier to understand.
+**classification** — assignment to a category.
+**clearly** — in an understandable manner.
+**clicking** — selecting digital content.
+**collaborative** — involving joint work.
+**collected** — gathered together.
+**colours** — visual properties of light.
+**commercial promotion** — marketing intended to increase sales.
+**common knowledge** — information widely shared.
+**communication** — exchange of messages.
+**Communicators** — people or organisations conveying information.
+**community life** — shared activity within a locality.
+**commuters** — people travelling regularly to work.
+**comparison groups** — groups used as reference points.
+**competes** — struggles against alternatives.
+**competitive** — involving rivalry.
+**compressed files** — files reduced in digital size.
+**concealment** — act of keeping something hidden.
+**confident claims** — assertions expressed with certainty.
+**confirmation** — evidence that something is true.
+**confirmed** — established as true.
+**confirms** — provides proof of truth.
+**conflict** — serious disagreement.
+**confusion** — lack of clear understanding.
+**Conspiracy theories** — explanations based on secret coordinated plots.
+**constitutional law** — fundamental law governing state power.
+**consult** — seek expert advice.
+**contact** — communicate with or reach.
+**containing** — holding within.
+**context** — circumstances giving meaning.
+**Contradictory messages** — communications giving incompatible guidance.
+**convenient** — easy or suitable.
+**conventional advertisement** — traditional clearly promotional message.
+**Conversation** — exchange of spoken or written ideas.
+**correcting** — removing an error.
+**correction** — statement fixing an error.
+**corrections** — changes fixing errors.
+**corroboration** — confirmation from independent evidence.
+**counterspeech** — expression opposing harmful speech.
+**courts** — institutions administering law.
+**creating** — bringing into existence.
+**Credible outlets** — news organisations deserving trust.
+**crediting** — acknowledging a contributor.
+**criticism** — expression of faults or disagreement.
+**cynicism** — belief that sincerity or truth is absent.
+**damages** — causes harm.
+**Data journalism** — reporting based on data analysis.
+**deceive** — cause someone to believe falsely.
+**deceivers** — people deliberately misleading others.
+**decoration** — visual addition for appearance.
+**deepfake** — synthetic media imitating a real person.
+**defamation** — false statement damaging reputation.
+**defined** — stated the precise meaning.
+**deliberately** — with conscious intention.
+**democratic participation** — involvement in collective government.
+**democratic task** — responsibility necessary for democracy.
+**denominator** — total used as basis for a rate.
+**densely populated** — containing many people per area.
+**description** — account of characteristics.
+**deserves** — is worthy of receiving.
+**desirable** — worth wanting.
+**details** — small specific pieces of information.
+**Detection tools** — methods identifying manipulated material.
+**develops** — grows or changes over time.
+**dialect** — regional or social language variety.
+**digital advertising** — online targeted promotion.
+**digital security** — protection of electronic information.
+**dilemmas** — situations requiring difficult choices.
+**direct evidence** — information closely proving a claim.
+**disciplined** — following a controlled method.
+**disclosure** — act of revealing information.
+**discrimination** — unfair treatment based on identity.
+**Disinformation** — deliberately deceptive information.
+**disproof** — evidence showing a claim false.
+**distorts** — changes into a misleading form.
+**distribution** — process of spreading content.
+**distrust** — lack of confidence in honesty.
+**divisive** — causing conflict between groups.
+**document** — recorded information.
+**documentation** — material providing a formal record.
+**documents** — written or digital records.
+**dominant platforms** — services with substantial market power.
+**donations** — voluntary contributions.
+**donor priorities** — goals preferred by funders.
+**drawing boundaries** — deciding where limits should fall.
+**earlier** — occurring before another time.
+**editorial content** — material selected by editors.
+**editorial decisions** — choices about publication.
+**Editors** — people selecting and preparing content.
+**Emotional awareness** — recognition of one's feelings.
+**emotional content** — material designed to evoke feeling.
+**emotional provocation** — attempt to trigger strong feeling.
+**Encrypted communication** — messages encoded against unauthorised access.
+**endanger** — put at risk.
+**endorsement** — public expression of approval.
+**Engagement** — measurable interaction with content.
+**entertainment** — material intended to amuse.
+**equally** — to the same degree.
+**Errors** — mistakes or inaccuracies.
+**especially** — more than usual or others.
+**establish** — show to be true or create firmly.
+**Ethical graphics** — visuals designed without misleading distortion.
+**ethically** — according to moral principles.
+**Euphemisms** — mild words replacing disturbing ones.
+**evaluate** — judge quality or value.
+**evaluating** — judging systematically.
+**evidence** — information supporting a conclusion.
+**exaggerate** — represent as greater than reality.
+**experts** — people with specialist knowledge.
+**explosion** — violent release of energy.
+**expression** — communication of ideas.
+**extremism** — support for severe political positions.
+**fabricate** — invent false material.
+**Fact-checkers** — specialists verifying public claims.
+**factors** — elements influencing a result.
+**false claim** — untrue statement.
+**false narrative** — misleading connected story.
+**falsehoods** — statements that are untrue.
+**familiarity** — recognition from repeated exposure.
+**filter bubble** — personalised information environment reinforcing preferences.
+**financial scam** — deception intended to steal money.
+**Followers** — people subscribing to an account.
+**formatting** — visual organisation of text.
+**fraud** — deliberate deception for gain.
+**free online news** — reporting accessed without direct payment.
+**Freedom of Expression** — protection of communication from suppression.
+**frightening** — causing fear.
+**funders** — people or bodies providing money.
+**funding** — money supporting activity.
+**general** — applying broadly.
+**genuine evidence** — authentic information supporting a claim.
+**geolocation** — identification of geographic location.
+**governance** — systems of institutional control.
+**grievances** — complaints about unfair treatment.
+**Hate speech** — expression attacking protected groups.
+**headline** — title of a news report.
+**human reviewers** — people evaluating platform content.
+**humour** — communication intended to amuse.
+**identity** — characteristics defining a person.
+**imagery** — visual representation.
+**immediate outrage** — instant intense anger.
+**impersonate** — pretend to be another person.
+**impersonation** — false representation as someone else.
+**inconsistent definitions** — meanings applied differently.
+**Independence** — freedom from political control.
+**individuals** — single people.
+**infestation** — harmful presence in large numbers.
+**INFINITE VOICES** — unlimited speakers or accounts.
+**influence** — power to affect attitudes.
+**Influencers** — online personalities affecting followers.
+**information quality** — accuracy and usefulness of information.
+**information system** — network creating and distributing knowledge.
+**inspect** — examine closely.
+**instantly** — without noticeable delay.
+**institutions** — established social organisations.
+**intending** — planning or aiming.
+**intention** — purpose behind an action.
+**intermediaries** — people carrying messages between parties.
+**interpretation** — explanation of meaning.
+**interpreted** — explained or understood.
+**interrupted** — stopped temporarily.
+**investigations** — systematic inquiries.
+**investigators** — people conducting inquiries.
+**journalism** — work of gathering and reporting news.
+**journalist** — person producing news reports.
+**Journalists** — people producing news reports.
+**justify** — show to be reasonable.
+**landmarks** — recognisable geographic features.
+**Lateral reading** — checking a source through outside references.
+**lawful material** — content permitted by law.
+**Leaked material** — information disclosed without authorisation.
+**liar's dividend** — benefit from dismissing genuine evidence as fake.
+**local broadcasters** — media serving a local area.
+**location** — particular place.
+**manipulated** — changed or controlled unfairly.
+**manipulation** — deliberate hidden influence.
+**manipulative communication** — messaging designed to control unfairly.
+**marginalised voices** — speakers excluded from mainstream power.
+**Media education** — teaching about media systems.
+**Media Literacy** — ability to evaluate media critically.
+**Membership models** — funding through supporting members.
+**messages** — communications sent to audiences.
+**Metadata** — data describing a digital file.
+**Microtargeting** — sending tailored messages to narrow groups.
+**misconduct** — improper or illegal behaviour.
+**Misinformation** — false information shared without necessary intent.
+**misleading** — causing a false understanding.
+**missing** — absent or not included.
+**mistakes** — errors in action or judgement.
+**moderation** — enforcement of content rules.
+**Moderators** — people managing discussion.
+**morning** — early part of the day.
+**motives** — reasons for action.
+**Native advertising** — promotion resembling editorial material.
+**news reporting** — journalistic account of events.
+**newspapers** — publications reporting news.
+**Newsrooms** — organisations producing news.
+**newsworthiness** — quality making an event suitable for news.
+**nonprofit ownership** — control by a non-profit organisation.
+**novel** — new and unusual.
+**Objectivity** — disciplined effort to report fairly.
+**observation** — information gained by watching.
+**occurred** — happened or took place.
+**official guidance** — instructions issued by authorities.
+**officials** — people holding public authority.
+**online material** — content available on the internet.
+**opinion** — view or judgement.
+**opposing argument** — reason supporting a contrary position.
+**opposition** — political or social resistance.
+**organised** — arranged systematically.
+**original evidence** — source material closest to an event.
+**original source** — first creator or publisher.
+**outdated knowledge** — information no longer current.
+**outlets** — organisations publishing media.
+**outrage** — intense anger.
+**paywall** — barrier requiring payment for access.
+**percentage increase** — growth expressed per hundred.
+**perception** — process of interpreting sensory input.
+**personal behaviour** — actions of an individual.
+**Personalisation** — adaptation to individual preferences.
+**persuasion** — communication intended to influence.
+**Philanthropic funding** — charitable financial support.
+**Photograph** — image made with a camera.
+**picture** — visual representation.
+**pixels** — smallest units of digital images.
+**Platform rules** — policies governing online services.
+**platforms** — digital services hosting content.
+**political abuse** — misuse of power for political ends.
+**political goal** — desired outcome involving government.
+**political leadership** — direction provided by political figures.
+**political microtargeting** — tailored political messages to narrow groups.
+**politician** — person active in government.
+**population size** — number of people in a group.
+**Possessing** — having or owning.
+**post** — content published online.
+**Prebunking** — warning about manipulation before exposure.
+**precise targeting** — selection of narrowly defined audiences.
+**presenting** — showing or communicating.
+**presents** — shows or offers.
+**principles** — fundamental rules or beliefs.
+**privacy** — control over personal information.
+**private service** — business-provided platform.
+**problem** — difficulty requiring a solution.
+**Professional appearance** — visual style suggesting expertise.
+**programmes** — broadcast shows or organised activities.
+**promises** — commitments about future action.
+**Propaganda** — organised persuasion serving political goals.
+**protects** — keeps safe from harm.
+**provocative voices** — speakers deliberately triggering reaction.
+**proximity** — nearness in place or relevance.
+**public debate** — open discussion of social issues.
+**public forums** — spaces for collective discussion.
+**public good** — benefit available beyond paying users.
+**public interest** — welfare of society as a whole.
+**public scrutiny** — close examination by citizens.
+**public visibility** — ability to be seen by society.
+**publication** — act of making content public.
+**publish** — make material public.
+**publisher** — organisation distributing content.
+**publishing** — making material publicly available.
+**Punishing** — imposing a penalty.
+**Ranking systems** — algorithms ordering content.
+**raw totals** — numbers not adjusted for population.
+**readers** — people consuming written material.
+**reality** — state of things as they exist.
+**receive** — be given something.
+**recommendation systems** — algorithms suggesting content.
+**record** — stored account of events.
+**redact** — remove sensitive details before release.
+**relevance** — connection to a user's interests.
+**reliability** — consistent accuracy.
+**reliable information** — information deserving confidence.
+**removal** — taking content away.
+**removed** — taken away.
+**Repeating** — saying or doing again.
+**repetition** — repeated presentation.
+**Reporters** — journalists gathering information.
+**reporting** — activity of presenting news.
+**reports** — published accounts.
+**represent** — describe fairly or stand for.
+**reputation** — widely held judgement of credibility.
+**resistant** — opposed or not easily changed.
+**restate** — express again differently.
+**retaliation** — harm in response to disclosure.
+**reveals** — makes hidden information known.
+**Reverse image search** — tool locating earlier image uses.
+**revision** — change made after new evidence.
+**rewards** — provides benefits for behaviour.
+**rhetorically** — using language for persuasive effect.
+**road signs** — visual markers beside roads.
+**Rumour** — unverified widely shared information.
+**satire** — humour using exaggeration for criticism.
+**scales** — measurement ranges used in graphs.
+**scepticism** — questioning attitude seeking evidence.
+**screenshot** — image captured from a display.
+**screenshots** — captured images of digital displays.
+**Searching** — looking carefully for something.
+**secure records** — protected stored information.
+**selected voters** — narrowly chosen political audience.
+**selective truth** — accurate fragments used misleadingly.
+**serious harm** — substantial damage.
+**shadows** — dark areas where light is blocked.
+**shared rules** — standards accepted by participants.
+**sharing** — redistribution of content.
+**showing** — making visible.
+**significance** — importance or meaning.
+**similar** — having shared characteristics.
+**slogans** — short repeated persuasive phrases.
+**slur** — insulting term targeting identity.
+**social division** — separation between groups.
+**Social-media platforms** — services enabling online sharing.
+**society** — people living within shared institutions.
+**source links** — references connecting to original material.
+**Source protection** — safeguards for confidential informants.
+**specialists** — people with expert knowledge.
+**sponsorship** — financial support in exchange for recognition.
+**spreadsheet** — digital table of data.
+**starting points** — initial values on a scale.
+**Statistics** — numerical facts.
+**striking images** — visuals attracting strong attention.
+**Subscriptions** — recurring payments for access.
+**supplied** — provided or furnished.
+**supposedly** — according to an unverified belief.
+**surrounding conversation** — context around a message.
+**surveillance capitalism** — business model monetising behavioural observation.
+**survive** — continue to exist.
+**symbolism** — use of signs to represent ideas.
+**Synthetic media** — computer-generated realistic content.
+**targeted groups** — communities selected for attention.
+**technical traces** — digital signs left by production.
+**technique** — method of performing a task.
+**terms** — conditions of using a service.
+**thousands** — numbers in multiple units of one thousand.
+**threatening** — suggesting possible harm.
+**time-stamped** — marked with recording time.
+**translation** — communication across languages.
+**transparency** — openness allowing examination.
+**travelled** — moved between places.
+**truncated axis** — graph scale cut off above zero.
+**trust** — confidence in reliability.
+**trusted** — regarded as reliable.
+**trustworthy evidence** — support deserving belief.
+**uncertain material** — information not yet verified.
+**uncertainty** — lack of complete knowledge.
+**unclear** — not easy to understand.
+**understood** — comprehended correctly.
+**unlawful action** — behaviour prohibited by law.
+**unlimited** — without a fixed limit.
+**unnamed** — not publicly identified.
+**unnamed source** — informant whose identity is withheld.
+**unpopular ideas** — views lacking broad approval.
+**unrelated** — not connected.
+**unrelated event** — occurrence with no relevant connection.
+**update** — new information added later.
+**users** — people using a service.
+**vehicle** — machine used for transport.
+**verification** — process of checking accuracy.
+**verifying** — checking accuracy.
+**Video** — recorded moving images.
+**viewers** — people watching media.
+**Visual clues** — image details revealing context.
+**Visualisation** — graphical presentation of data.
+**vulnerability** — susceptibility to harm.
+**warning labels** — notices describing risks or uncertainty.
+**Watermarks** — marks indicating origin or authenticity.
+**weather** — atmospheric conditions.
+**whistle-blowers** — insiders revealing wrongdoing.
+**witness** — person observing an event.
+**wrongdoing** — illegal or unethical conduct.
+
+**account** — description of events.
+**accountability** — responsibility for actions.
+**accuracy** — closeness to truth.
+**actionable** — capable of guiding action.
+**Advertisers** — organisations paying to promote messages.
+**advertising** — paid promotion of goods or ideas.
+**advertising revenue** — income earned from advertisements.
+**Affective polarisation** — personal hostility between political groups.
+**agencies** — organisations performing official functions.
+**Algorithmic Amplification** — automated increase in content reach.
+**alternative explanation** — different account of why something occurred.
+**analysis** — detailed examination.
+**anonymity** — state of an identity being concealed.
+**appeal** — formal request to reconsider.
+**appearances** — instances of becoming visible.
+**architecture** — design of buildings or systems.
+**archive** — collection of preserved records.
+**argument** — reason offered for a conclusion.
+**Artificial intelligence** — computer systems performing intelligent tasks.
+**artistic experimentation** — creative testing of unfamiliar methods.
+**attitudes** — settled ways of thinking.
+**audience** — people receiving communication.
+**authentication** — verification that material is genuine.
+**authoritarian** — favouring strict concentrated authority.
+**authority** — official power or trusted expertise.
+**automated systems** — technology operating with limited human control.
+**barriers to publishing** — obstacles preventing public distribution.
+**biased sample** — unrepresentative group producing distortion.
+**broadcasting** — transmission of programmes to audiences.
+**business model** — method by which an organisation creates revenue.
+**camera footage** — video recorded by a camera.
+**candidate** — person seeking election or selection.
+**Captions** — text accompanying images.
+**censorship** — suppression of expression.
+**central railway station** — main urban train terminal.
+**Citizens** — legal members of a state.
+**claim** — statement presented as true.
+**classification** — assignment to a category.
+**clicking** — selecting digital content.
+**commercial promotion** — marketing intended to increase sales.
+**common knowledge** — information widely shared.
+**communication** — exchange of messages.
+**Communicators** — people or organisations conveying information.
+**community life** — shared activity within a locality.
+**comparison groups** — groups used as reference points.
+**compressed files** — files reduced in digital size.
+**concealment** — act of keeping something hidden.
+**confident claims** — assertions expressed with certainty.
+**confirmation** — evidence that something is true.
+**conflict** — serious disagreement.
+**Conspiracy theories** — explanations based on secret coordinated plots.
+**constitutional law** — fundamental law governing state power.
+**contact** — communicate with or reach.
+**context** — circumstances giving meaning.
+**Contradictory messages** — communications giving incompatible guidance.
+**conventional advertisement** — traditional clearly promotional message.
+**correction** — statement fixing an error.
+**corroboration** — confirmation from independent evidence.
+**counterspeech** — expression opposing harmful speech.
+**courts** — institutions administering law.
+**Credible outlets** — news organisations deserving trust.
+**criticism** — expression of faults or disagreement.
+**cynicism** — belief that sincerity or truth is absent.
+**Data journalism** — reporting based on data analysis.
+**deceive** — cause someone to believe falsely.
+**deceivers** — people deliberately misleading others.
+**deepfake** — synthetic media imitating a real person.
+**defamation** — false statement damaging reputation.
+**deliberately** — with conscious intention.
+**democratic participation** — involvement in collective government.
+**democratic task** — responsibility necessary for democracy.
+**denominator** — total used as basis for a rate.
+**Detection tools** — methods identifying manipulated material.
+**dialect** — regional or social language variety.
+**digital advertising** — online targeted promotion.
+**digital security** — protection of electronic information.
+**direct evidence** — information closely proving a claim.
+**disclosure** — act of revealing information.
+**discrimination** — unfair treatment based on identity.
+**Disinformation** — deliberately deceptive information.
+**distorts** — changes into a misleading form.
+**distribution** — process of spreading content.
+**divisive** — causing conflict between groups.
+**document** — recorded information.
+**documentation** — material providing a formal record.
+**dominant platforms** — services with substantial market power.
+**donations** — voluntary contributions.
+**donor priorities** — goals preferred by funders.
+**drawing boundaries** — deciding where limits should fall.
+**editorial content** — material selected by editors.
+**editorial decisions** — choices about publication.
+**Editors** — people selecting and preparing content.
+**Emotional awareness** — recognition of one's feelings.
+**emotional content** — material designed to evoke feeling.
+**emotional provocation** — attempt to trigger strong feeling.
+**Encrypted communication** — messages encoded against unauthorised access.
+**endorsement** — public expression of approval.
+**Engagement** — measurable interaction with content.
+**entertainment** — material intended to amuse.
+**Errors** — mistakes or inaccuracies.
+**Ethical graphics** — visuals designed without misleading distortion.
+**Euphemisms** — mild words replacing disturbing ones.
+**evidence** — information supporting a conclusion.
+**exaggerate** — represent as greater than reality.
+**explosion** — violent release of energy.
+**expression** — communication of ideas.
+**extremism** — support for severe political positions.
+**fabricate** — invent false material.
+**Fact-checkers** — specialists verifying public claims.
+**false claim** — untrue statement.
+**false narrative** — misleading connected story.
+**falsehoods** — statements that are untrue.
+**familiarity** — recognition from repeated exposure.
+**filter bubble** — personalised information environment reinforcing preferences.
+**financial scam** — deception intended to steal money.
+**Followers** — people subscribing to an account.
+**formatting** — visual organisation of text.
+**fraud** — deliberate deception for gain.
+**free online news** — reporting accessed without direct payment.
+**Freedom of Expression** — protection of communication from suppression.
+**frightening** — causing fear.
+**funders** — people or bodies providing money.
+**funding** — money supporting activity.
+**genuine evidence** — authentic information supporting a claim.
+**geolocation** — identification of geographic location.
+**governance** — systems of institutional control.
+**grievances** — complaints about unfair treatment.
+**Hate speech** — expression attacking protected groups.
+**headline** — title of a news report.
+**human reviewers** — people evaluating platform content.
+**humour** — communication intended to amuse.
+**identity** — characteristics defining a person.
+**imagery** — visual representation.
+**immediate outrage** — instant intense anger.
+**impersonate** — pretend to be another person.
+**impersonation** — false representation as someone else.
+**inconsistent definitions** — meanings applied differently.
+**Independence** — freedom from political control.
+**INFINITE VOICES** — unlimited speakers or accounts.
+**influence** — power to affect attitudes.
+**Influencers** — online personalities affecting followers.
+**information quality** — accuracy and usefulness of information.
+**information system** — network creating and distributing knowledge.
+**institutions** — established social organisations.
+**intention** — purpose behind an action.
+**intermediaries** — people carrying messages between parties.
+**interpretation** — explanation of meaning.
+**investigations** — systematic inquiries.
+**investigators** — people conducting inquiries.
+**journalism** — work of gathering and reporting news.
+**journalist** — person producing news reports.
+**Journalists** — people producing news reports.
+**landmarks** — recognisable geographic features.
+**Lateral reading** — checking a source through outside references.
+**lawful material** — content permitted by law.
+**Leaked material** — information disclosed without authorisation.
+**liar's dividend** — benefit from dismissing genuine evidence as fake.
+**local broadcasters** — media serving a local area.
+**manipulation** — deliberate hidden influence.
+**manipulative communication** — messaging designed to control unfairly.
+**marginalised voices** — speakers excluded from mainstream power.
+**Media education** — teaching about media systems.
+**Media Literacy** — ability to evaluate media critically.
+**Membership models** — funding through supporting members.
+**Metadata** — data describing a digital file.
+**Microtargeting** — sending tailored messages to narrow groups.
+**misconduct** — improper or illegal behaviour.
+**Misinformation** — false information shared without necessary intent.
+**misleading** — causing a false understanding.
+**moderation** — enforcement of content rules.
+**Moderators** — people managing discussion.
+**motives** — reasons for action.
+**Native advertising** — promotion resembling editorial material.
+**news reporting** — journalistic account of events.
+**Newsrooms** — organisations producing news.
+**newsworthiness** — quality making an event suitable for news.
+**nonprofit ownership** — control by a non-profit organisation.
+**novel** — new and unusual.
+**Objectivity** — disciplined effort to report fairly.
+**observation** — information gained by watching.
+**official guidance** — instructions issued by authorities.
+**officials** — people holding public authority.
+**online material** — content available on the internet.
+**opinion** — view or judgement.
+**opposing argument** — reason supporting a contrary position.
+**opposition** — political or social resistance.
+**original evidence** — source material closest to an event.
+**original source** — first creator or publisher.
+**outdated knowledge** — information no longer current.
+**outlets** — organisations publishing media.
+**outrage** — intense anger.
+**paywall** — barrier requiring payment for access.
+**percentage increase** — growth expressed per hundred.
+**personal behaviour** — actions of an individual.
+**Personalisation** — adaptation to individual preferences.
+**persuasion** — communication intended to influence.
+**Philanthropic funding** — charitable financial support.
+**pixels** — smallest units of digital images.
+**Platform rules** — policies governing online services.
+**platforms** — digital services hosting content.
+**political abuse** — misuse of power for political ends.
+**political goal** — desired outcome involving government.
+**political leadership** — direction provided by political figures.
+**political microtargeting** — tailored political messages to narrow groups.
+**politician** — person active in government.
+**population size** — number of people in a group.
+**post** — content published online.
+**Prebunking** — warning about manipulation before exposure.
+**precise targeting** — selection of narrowly defined audiences.
+**principles** — fundamental rules or beliefs.
+**privacy** — control over personal information.
+**private service** — business-provided platform.
+**Professional appearance** — visual style suggesting expertise.
+**programmes** — broadcast shows or organised activities.
+**promises** — commitments about future action.
+**Propaganda** — organised persuasion serving political goals.
+**provocative voices** — speakers deliberately triggering reaction.
+**proximity** — nearness in place or relevance.
+**public debate** — open discussion of social issues.
+**public forums** — spaces for collective discussion.
+**public good** — benefit available beyond paying users.
+**public interest** — welfare of society as a whole.
+**public scrutiny** — close examination by citizens.
+**public visibility** — ability to be seen by society.
+**publication** — act of making content public.
+**publisher** — organisation distributing content.
+**publishing** — making material publicly available.
+**Punishing** — imposing a penalty.
+**Ranking systems** — algorithms ordering content.
+**raw totals** — numbers not adjusted for population.
+**readers** — people consuming written material.
+**recommendation systems** — algorithms suggesting content.
+**record** — stored account of events.
+**redact** — remove sensitive details before release.
+**relevance** — connection to a user's interests.
+**reliability** — consistent accuracy.
+**reliable information** — information deserving confidence.
+**removal** — taking content away.
+**repetition** — repeated presentation.
+**Reporters** — journalists gathering information.
+**reporting** — activity of presenting news.
+**represent** — describe fairly or stand for.
+**reputation** — widely held judgement of credibility.
+**retaliation** — harm in response to disclosure.
+**Reverse image search** — tool locating earlier image uses.
+**revision** — change made after new evidence.
+**road signs** — visual markers beside roads.
+**Rumour** — unverified widely shared information.
+**satire** — humour using exaggeration for criticism.
+**scales** — measurement ranges used in graphs.
+**scepticism** — questioning attitude seeking evidence.
+**screenshots** — captured images of digital displays.
+**secure records** — protected stored information.
+**selected voters** — narrowly chosen political audience.
+**selective truth** — accurate fragments used misleadingly.
+**serious harm** — substantial damage.
+**shared rules** — standards accepted by participants.
+**sharing** — redistribution of content.
+**significance** — importance or meaning.
+**slur** — insulting term targeting identity.
+**social division** — separation between groups.
+**Social-media platforms** — services enabling online sharing.
+**source links** — references connecting to original material.
+**Source protection** — safeguards for confidential informants.
+**specialists** — people with expert knowledge.
+**sponsorship** — financial support in exchange for recognition.
+**spreadsheet** — digital table of data.
+**starting points** — initial values on a scale.
+**Statistics** — numerical facts.
+**striking images** — visuals attracting strong attention.
+**Subscriptions** — recurring payments for access.
+**surrounding conversation** — context around a message.
+**surveillance capitalism** — business model monetising behavioural observation.
+**symbolism** — use of signs to represent ideas.
+**Synthetic media** — computer-generated realistic content.
+**targeted groups** — communities selected for attention.
+**technical traces** — digital signs left by production.
+**terms** — conditions of using a service.
+**time-stamped** — marked with recording time.
+**translation** — communication across languages.
+**transparency** — openness allowing examination.
+**truncated axis** — graph scale cut off above zero.
+**trust** — confidence in reliability.
+**trustworthy evidence** — support deserving belief.
+**uncertain material** — information not yet verified.
+**uncertainty** — lack of complete knowledge.
+**unlawful action** — behaviour prohibited by law.
+**unnamed source** — informant whose identity is withheld.
+**unpopular ideas** — views lacking broad approval.
+**unrelated event** — occurrence with no relevant connection.
+**update** — new information added later.
+**users** — people using a service.
+**verification** — process of checking accuracy.
+**Video** — recorded moving images.
+**viewers** — people watching media.
+**Visual clues** — image details revealing context.
+**Visualisation** — graphical presentation of data.
+**vulnerability** — susceptibility to harm.
+**warning labels** — notices describing risks or uncertainty.
+**Watermarks** — marks indicating origin or authenticity.
+**whistle-blowers** — insiders revealing wrongdoing.
+**witness** — person observing an event.
+**wrongdoing** — illegal or unethical conduct.
+
+REVIEW PROMPTS
+
+1. Why can a genuine photograph still support a false claim?
+2. How does algorithmic amplification differ from deliberate political censorship?
+3. What is the liar's dividend, and why can it be more damaging than a single deepfake?
+4. Why does exposure to opposing views not automatically reduce polarisation?
+5. Why is media literacy insufficient without institutional responsibility?
+
+VOCABULARY PRACTICE
+
+Choose thirty target items and write a 350-word media policy for an online platform. Address verification, recommendation systems, advertising, synthetic media, free expression, moderation, and appeals.

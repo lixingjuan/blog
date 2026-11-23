@@ -1,0 +1,8 @@
+CHAPTER 01 VALIDATION
+
+File: chapters/01_education/article.txt
+Body word count: 3430
+Unique highlighted target items: 311
+Glossary entries: 311
+Highlighted items without definitions: none
+Definitions without highlighted body items: none

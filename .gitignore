@@ -7,7 +7,7 @@ node_modules
 # Generated files
 .docusaurus
 .cache-loader
-index.html
+/index.html
 structure.json
 _site/
 

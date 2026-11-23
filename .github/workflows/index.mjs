@@ -259,6 +259,34 @@ const extractMarkdownMeta = (filePath, relativePath, baseUrl) => {
   }
 };
 
+const extractHtmlMeta = (filePath, relativePath, baseUrl) => {
+  try {
+    const content = fs.readFileSync(filePath, "utf8");
+    const titleMatch =
+      content.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i) ||
+      content.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i);
+    const title = titleMatch
+      ? titleMatch[1].replace(/<[^>]+>/g, "").trim()
+      : null;
+
+    const imageMatch = content.match(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/i);
+    const explicitCover = imageMatch
+      ? normalizeAssetPath(imageMatch[1], relativePath, baseUrl)
+      : null;
+
+    return {
+      title,
+      standalone: /<html\b[^>]*\bdata-standalone-page\b/i.test(content),
+      cover:
+        explicitCover ||
+        findFirstImageAsset(path.dirname(filePath), path.dirname(relativePath)),
+    };
+  } catch (error) {
+    console.warn(`Failed to read html metadata for ${filePath}:`, error.message);
+    return { title: null, cover: null, standalone: false };
+  }
+};
+
 const shouldIgnoreDirectory = (fileName) => {
   return ignoreFolders.has(fileName);
 };
@@ -277,7 +305,7 @@ const shouldIgnore = (file, isRoot) => {
   return false;
 };
 
-function generateDirectoryStructure(dir, baseUrl, isRoot = false) {
+function generateDirectoryStructure(dir, baseUrl, isRoot = false, depth = 0) {
   const files = fs.readdirSync(dir, { withFileTypes: true });
 
   // 根目录，需要将README, 放在最上面
@@ -306,8 +334,15 @@ function generateDirectoryStructure(dir, baseUrl, isRoot = false) {
 
       // 如果是目录
       if (file.isDirectory()) {
-        const children = generateDirectoryStructure(fullPath, baseUrl);
+        const children = generateDirectoryStructure(fullPath, baseUrl, false, depth + 1);
         if (children.length === 0) return null;
+
+        // 只有一个独立 index 页面的目录只是页面容器，不应成为博客里的额外导航层级。
+        const standaloneIndex = children.length === 1
+          && children[0].type === "file"
+          && children[0].name.toLowerCase() === "index.html"
+          && children[0].standalone;
+        if (depth > 0 && standaloneIndex) return children[0];
 
         return {
           type: "directory",
@@ -325,10 +360,13 @@ function generateDirectoryStructure(dir, baseUrl, isRoot = false) {
         baseUrl,
         shouldPreferContentHistory
       );
+      const lowercaseFileType = fileType.toLowerCase();
       const markdownMeta =
-        fileType.toLowerCase() === ".md"
+        lowercaseFileType === ".md"
           ? extractMarkdownMeta(fullPath, relativePath, baseUrl)
-          : { title: null, cover: null };
+          : lowercaseFileType === ".html"
+            ? extractHtmlMeta(fullPath, relativePath, baseUrl)
+            : { title: null, cover: null, standalone: false };
       const pathDate = extractPathDate(relativePath);
 
       return {
@@ -338,6 +376,7 @@ function generateDirectoryStructure(dir, baseUrl, isRoot = false) {
         fileType: fileType,
         title: markdownMeta.title,
         cover: markdownMeta.cover,
+        standalone: Boolean(markdownMeta.standalone),
         date: pathDate || createdAt || updatedAt,
         pathDate: pathDate,
         createdAt: createdAt,
