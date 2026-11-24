@@ -33,6 +33,19 @@
       {
         "type": "file",
         "name": "index.html",
+        "path": "历史/宋朝皇室族谱/index.html",
+        "fileType": ".html",
+        "title": "大宋帝系",
+        "cover": null,
+        "standalone": true,
+        "date": "2026-11-24",
+        "pathDate": null,
+        "createdAt": "2026-11-24",
+        "updatedAt": "2026-11-24"
+      },
+      {
+        "type": "file",
+        "name": "index.html",
         "path": "历史/中国历史线路图/index.html",
         "fileType": ".html",
         "title": "中国历史",
@@ -3323,6 +3336,19 @@
             "updatedAt": "2026-11-23"
           }
         ]
+      },
+      {
+        "type": "file",
+        "name": "index.html",
+        "path": "展览/2026_11_23_风格转盘/index.html",
+        "fileType": ".html",
+        "title": "风格转盘 · The Style Wheel",
+        "cover": "展览/2026_11_23_风格转盘/cover.svg",
+        "standalone": true,
+        "date": "2026-11-24",
+        "pathDate": null,
+        "createdAt": "2026-11-24",
+        "updatedAt": "2026-11-24"
       },
       {
         "type": "directory",
