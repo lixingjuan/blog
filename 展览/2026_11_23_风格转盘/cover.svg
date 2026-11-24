@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">风格转盘</title>
+  <desc id="desc">由十六种颜色组成的设计风格转盘</desc>
+  <rect width="1200" height="900" fill="#eee8dc"/>
+  <path d="M0 112h1200M0 225h1200M0 337h1200M0 450h1200M0 562h1200M0 675h1200M0 787h1200M150 0v900M300 0v900M450 0v900M600 0v900M750 0v900M900 0v900M1050 0v900" stroke="#11110f" stroke-opacity=".08"/>
+  <g transform="translate(212 690)">
+    <circle r="282" fill="#f9f2e3" stroke="#11110f" stroke-width="8"/>
+    <path d="M0 0V-282A282 282 0 0 1 108-260Z" fill="#e2382a"/>
+    <path d="M0 0 108-260a282 282 0 0 1 91 61Z" fill="#f0c52f"/>
+    <path d="M0 0 199-199a282 282 0 0 1 61 91Z" fill="#ce1825"/>
+    <path d="M0 0 260-108A282 282 0 0 1 282 0Z" fill="#ef875b"/>
+    <path d="M0 0h282a282 282 0 0 1-22 108Z" fill="#e8dfce"/>
+    <path d="M0 0 260 108a282 282 0 0 1-61 91Z" fill="#d6b48d"/>
+    <path d="M0 0 199 199a282 282 0 0 1-91 61Z" fill="#ee4da4"/>
+    <path d="M0 0 108 260A282 282 0 0 1 0 282Z" fill="#242424"/>
+    <path d="M0 0v282a282 282 0 0 1-108-22Z" fill="#eee9df"/>
+    <path d="M0 0-108 260a282 282 0 0 1-91-61Z" fill="#d43b31"/>
+    <path d="M0 0-199 199a282 282 0 0 1-61-91Z" fill="#d6cfbd"/>
+    <path d="M0 0-260 108A282 282 0 0 1-282 0Z" fill="#e7e3d4"/>
+    <path d="M0 0h-282a282 282 0 0 1 22-108Z" fill="#f4f100"/>
+    <path d="M0 0-260-108a282 282 0 0 1 61-91Z" fill="#79ffef"/>
+    <path d="M0 0-199-199a282 282 0 0 1 91-61Z" fill="#ec89d8"/>
+    <path d="M0 0-108-260A282 282 0 0 1 0-282Z" fill="#68bfe4"/>
+    <circle r="86" fill="#f9f2e3" stroke="#11110f" stroke-width="8"/>
+    <text y="-5" text-anchor="middle" fill="#11110f" font-family="Arial Black, sans-serif" font-size="28">STYLE</text>
+    <text y="32" text-anchor="middle" fill="#11110f" font-family="Arial Black, sans-serif" font-size="28">WHEEL</text>
+  </g>
+  <text x="545" y="260" fill="#11110f" font-family="Arial Black, Noto Sans SC, sans-serif" font-size="94" letter-spacing="-5">风格转盘</text>
+  <text x="550" y="330" fill="#df392a" font-family="Arial, sans-serif" font-size="30" letter-spacing="8">THE STYLE WHEEL</text>
+  <text x="550" y="580" fill="#11110f" font-family="Arial Black, Noto Sans SC, sans-serif" font-size="50">十六种观看</text>
+  <text x="550" y="642" fill="#11110f" font-family="Arial Black, Noto Sans SC, sans-serif" font-size="50">同一内容的方式</text>
+  <path d="M550 690h430" stroke="#11110f" stroke-width="5"/>
+  <text x="550" y="738" fill="#5d594f" font-family="Arial, Noto Sans SC, sans-serif" font-size="24">INTERACTIVE DESIGN EXHIBITION · 2026</text>
+</svg>
