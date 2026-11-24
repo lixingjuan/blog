@@ -688,6 +688,40 @@
       font-size: .8rem;
     }
 
+    .detail-life {
+      margin: 3px 0 0;
+      color: var(--cinnabar);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .76rem;
+      letter-spacing: .04em;
+    }
+
+    .detail-durations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 12px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .72rem;
+    }
+
+    .detail-durations span {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 4px;
+      padding: 4px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink-soft);
+      background: rgba(255, 255, 255, .2);
+    }
+
+    .detail-durations strong {
+      color: var(--blue);
+      font-size: .82rem;
+      font-weight: 500;
+    }
+
     .seal {
       display: grid;
       flex: 0 0 62px;
@@ -1093,6 +1127,16 @@
       gongdi: "2年", duanzong: "2年", bing: "1年"
     };
 
+    const lifeSpans = {
+      taizu: "927—976", taizong: "939—997", zhenzong: "968—1022", renzong: "1010—1063",
+      zhaoyunrang: "995—1059", yingzong: "1032—1067", shenzong: "1048—1085",
+      zhezong: "1077—1100", huizong: "1082—1135", qinzong: "1100—1161",
+      gaozong: "1107—1187", zhaozicheng: "生年不详—1144", xiaozong: "1127—1194",
+      guangzong: "1147—1200", ningzong: "1168—1224", zhaoxilu: "生年不详—1217",
+      lizong: "1205—1264", zhaoyurui: "1207—1287", duzong: "1240—1274",
+      gongdi: "1271—1323", duanzong: "1269—1278", bing: "1272—1279"
+    };
+
     const svg = document.getElementById("family-tree");
     const detailPanel = document.getElementById("detail-panel");
     const familyView = document.getElementById("family-view");
@@ -1148,6 +1192,11 @@
     function highlightRelated() { svg.querySelectorAll(".tree-edge").forEach(edge => edge.classList.toggle("is-related", edge.dataset.from === selectedId || edge.dataset.to === selectedId)); }
     function dramaSearchUrl(title) { return `https://search.douban.com/movie/subject_search?search_text=${encodeURIComponent(title)}`; }
 
+    function lifeAge(id) {
+      const years = lifeSpans[id].match(/^(\d{3,4})—(\d{3,4})$/);
+      return years ? `约${Number(years[2]) - Number(years[1])}岁` : "不详";
+    }
+
     function renderFamilyMap(id) {
       const person = people[id], links = imperialChildLinks[id] || {};
       const path = navigationTrail.map((trailId, index) => `${index ? '<span class="family-path-separator">/</span>' : ""}<button type="button" data-trail-index="${index}" ${index === navigationTrail.length - 1 ? 'aria-current="page"' : ""}>${people[trailId].name}</button>`).join("");
@@ -1163,7 +1212,7 @@
       const person = people[id];
       const consorts = person.consorts.map(item => `<div class="consort-group"><div class="consort-name"><strong>${item.name}</strong><span class="consort-rank">${item.rank}</span></div><ul class="children-list">${item.children.map(child => `<li>${child}</li>`).join("")}</ul>${item.note ? `<p class="${item.uncertain ? "uncertainty" : "consort-note"}">${item.uncertain ? "存疑：" : ""}${item.note}</p>` : ""}</div>`).join("");
       const dramas = person.dramas.length ? person.dramas.map(drama => `<a class="drama-card" href="${dramaSearchUrl(drama.title)}" target="_blank" rel="noreferrer"><span class="drama-title"><strong>《${drama.title}》</strong><span class="drama-year">${drama.year}</span></span><span class="drama-note">${drama.note}</span></a>`).join("") : '<p class="consort-note">暂未收录代表作品。</p>';
-      detailPanel.innerHTML = `<div class="detail-hero"><div class="detail-title-row"><div><p class="detail-kicker">${person.temple}</p><h2 class="detail-title">${person.name}</h2><p class="detail-reign">${person.era} · ${person.reign}</p></div><span class="seal" aria-hidden="true">${person.era.slice(0, 2)}<br>之印</span></div><p class="detail-summary">${person.summary}</p></div><div class="detail-body"><div class="facts"><div class="fact"><span class="fact-label">父亲 / 嗣父</span><span class="fact-value">${person.father}</span></div><div class="fact"><span class="fact-label">母亲</span><span class="fact-value">${person.mother}</span></div><div class="fact"><span class="fact-label">年号 / 身份</span><span class="fact-value">${person.era}</span></div><div class="fact"><span class="fact-label">皇位路径</span><span class="fact-value">${person.succession}</span></div></div><section class="detail-section"><h3>后妃与继承近支</h3>${consorts}</section><section class="detail-section"><h3>相关电视剧</h3><div class="drama-list">${dramas}</div></section></div>`;
+      detailPanel.innerHTML = `<div class="detail-hero"><div class="detail-title-row"><div><p class="detail-kicker">${person.temple}</p><h2 class="detail-title">${person.name}</h2><p class="detail-reign">${person.era} · 在位 / 身份 ${person.reign}</p><p class="detail-life">生卒 ${lifeSpans[id]}</p><div class="detail-durations"><span>在位 <strong>${reignDurations[id] || "未即位"}</strong></span><span>享年 <strong>${lifeAge(id)}</strong></span></div></div><span class="seal" aria-hidden="true">${person.era.slice(0, 2)}<br>之印</span></div><p class="detail-summary">${person.summary}</p></div><div class="detail-body"><div class="facts"><div class="fact"><span class="fact-label">父亲 / 嗣父</span><span class="fact-value">${person.father}</span></div><div class="fact"><span class="fact-label">母亲</span><span class="fact-value">${person.mother}</span></div><div class="fact"><span class="fact-label">年号 / 身份</span><span class="fact-value">${person.era}</span></div><div class="fact"><span class="fact-label">皇位路径</span><span class="fact-value">${person.succession}</span></div></div><section class="detail-section"><h3>后妃与继承近支</h3>${consorts}</section><section class="detail-section"><h3>相关电视剧</h3><div class="drama-list">${dramas}</div></section></div>`;
     }
     function setViewMode(mode) { viewMode = mode; const family = mode === "family"; familyView.hidden = !family; treeScroll.hidden = family; familyModeButton.setAttribute("aria-pressed", String(family)); dynastyModeButton.setAttribute("aria-pressed", String(!family)); if (family) { renderFamilyMap(selectedId); viewHint.textContent = "可沿高亮子女继续进入下一代"; } else { viewTitle.textContent = "两宋帝系与皇位路线"; viewHint.textContent = "点击人物查看详情；黛青虚线表示收养入继"; } }
     function updateSelected(id) { selectedId = id; svg.querySelectorAll(".tree-node").forEach(node => node.classList.toggle("is-selected", node.dataset.id === id)); highlightRelated(); renderDetail(id); if (viewMode === "family") renderFamilyMap(id); }
