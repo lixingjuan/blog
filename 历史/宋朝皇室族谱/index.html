@@ -1,432 +1,1179 @@
 <!doctype html>
 <html lang="zh-CN" data-standalone-page>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="一张可交互的宋朝皇室族谱：从北宋到南宋，查看赵氏帝系、收养入继与皇位流转。" />
-    <title>大宋帝系·宋朝皇室族谱</title>
-    <style>
-      :root {
-        color-scheme: light;
-        --paper: #eee7d6;
-        --paper-deep: #ded2b8;
-        --ink: #242923;
-        --ink-soft: #4e554b;
-        --mist: #8b968c;
-        --blue: #405e65;
-        --blue-soft: #6f898b;
-        --ochre: #9b7141;
-        --cinnabar: #a34235;
-        --line: rgba(52, 61, 53, 0.22);
-        --panel: rgba(247, 242, 229, 0.82);
-        --shadow: 0 24px 70px rgba(61, 51, 34, 0.13);
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="一张可交互的宋朝皇室族谱：从北宋到南宋，查看赵氏帝系、收养入继与皇位流转。" />
+  <title>大宋帝系·宋朝皇室族谱</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #eee7d6;
+      --paper-deep: #ded2b8;
+      --ink: #242923;
+      --ink-soft: #4e554b;
+      --mist: #8b968c;
+      --blue: #405e65;
+      --blue-soft: #6f898b;
+      --ochre: #9b7141;
+      --cinnabar: #a34235;
+      --line: rgba(52, 61, 53, 0.22);
+      --panel: rgba(247, 242, 229, 0.82);
+      --shadow: 0 24px 70px rgba(61, 51, 34, 0.13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      max-width: 100%;
+      overflow-x: hidden;
+      background:
+        linear-gradient(rgba(255, 255, 255, .16), rgba(255, 255, 255, 0)),
+        repeating-linear-gradient(8deg, rgba(71, 62, 42, .018) 0 1px, transparent 1px 5px),
+        var(--paper);
+      color: var(--ink);
+      font-family: "Songti SC", "Noto Serif CJK SC", "STSong", serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+      background:
+        radial-gradient(circle at 84% 10%, rgba(64, 94, 101, .11), transparent 28rem),
+        radial-gradient(circle at 12% 58%, rgba(155, 113, 65, .08), transparent 30rem);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 64px;
+      padding: 10px clamp(18px, 4vw, 62px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(238, 231, 214, .88);
+      backdrop-filter: blur(18px);
+    }
+
+    .back-link,
+    .topbar-index {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      text-decoration: none;
+      color: var(--ink-soft);
+    }
+
+    .back-link {
+      gap: 9px;
+    }
+
+    .back-link:hover,
+    .topbar-index:hover {
+      color: var(--cinnabar);
+    }
+
+    .back-mark {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+    }
+
+    .topbar-title {
+      color: var(--blue);
+      letter-spacing: .2em;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(76px, 11vw, 144px) clamp(22px, 7vw, 110px) clamp(70px, 9vw, 116px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero::before {
+      position: absolute;
+      right: -5vw;
+      bottom: -110px;
+      width: min(680px, 70vw);
+      height: 350px;
+      content: "";
+      opacity: .5;
+      background:
+        radial-gradient(ellipse at 20% 85%, transparent 0 32%, rgba(64, 94, 101, .15) 33% 34%, transparent 35%),
+        radial-gradient(ellipse at 58% 100%, transparent 0 42%, rgba(64, 94, 101, .12) 43% 44%, transparent 45%),
+        radial-gradient(ellipse at 92% 90%, transparent 0 37%, rgba(155, 113, 65, .12) 38% 39%, transparent 40%);
+    }
+
+    .hero::after {
+      position: absolute;
+      top: 35px;
+      right: clamp(24px, 8vw, 130px);
+      width: 118px;
+      height: 118px;
+      border: 1px solid rgba(163, 66, 53, .32);
+      border-radius: 50%;
+      color: rgba(163, 66, 53, .4);
+      content: "宋\A室\A谱";
+      white-space: pre;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-size: 1.35rem;
+      line-height: 1.3;
+      letter-spacing: .16em;
+      transform: rotate(-7deg);
+    }
+
+    .hero-inner {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .eyebrow,
+    .section-kicker,
+    .detail-kicker {
+      margin: 0 0 14px;
+      color: var(--cinnabar);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .8rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin-bottom: 26px;
+      font-size: clamp(3.2rem, 9vw, 7.8rem);
+      font-weight: 400;
+      letter-spacing: .12em;
+      line-height: .96;
+    }
+
+    .hero-lead {
+      max-width: 720px;
+      margin-bottom: 34px;
+      color: var(--ink-soft);
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: var(--ink-soft);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .84rem;
+    }
+
+    .hero-meta span {
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .17);
+    }
+
+    .main {
+      max-width: 1580px;
+      margin: 0 auto;
+      padding: clamp(50px, 7vw, 92px) clamp(16px, 4vw, 60px) 100px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 28px;
+    }
+
+    .section-head h2,
+    .note-section h2,
+    .sources h2 {
+      margin-bottom: 8px;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      font-weight: 400;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin-bottom: 0;
+      color: var(--ink-soft);
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 12px 18px;
+      color: var(--ink-soft);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .78rem;
+    }
+
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+    }
+
+    .legend i {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .legend .branch-dot {
+      background: var(--ochre);
+    }
+
+    .legend .blood-line,
+    .legend .succession-line,
+    .legend .adopt-line {
+      width: 24px;
+      height: 0;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .legend .blood-line {
+      border-top: 1px solid var(--ink-soft);
+    }
+
+    .legend .succession-line {
+      border-top: 2px solid var(--cinnabar);
+    }
+
+    .legend .adopt-line {
+      border-top: 2px dashed var(--blue-soft);
+    }
+
+    .explorer {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(330px, .9fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .tree-panel,
+    .detail-panel {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .tree-panel {
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .tree-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 76px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .tree-toolbar strong {
+      display: block;
+      color: var(--blue);
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    .tree-toolbar span {
+      display: block;
+      color: var(--ink-soft);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .76rem;
+    }
+
+    .view-switch {
+      display: inline-flex;
+      flex-shrink: 0;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(69, 80, 70, .04);
+    }
+
+    .view-switch button {
+      min-height: 36px;
+      padding: 4px 14px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--ink-soft);
+      cursor: pointer;
+    }
+
+    .view-switch button[aria-pressed="true"] {
+      background: var(--blue);
+      color: #f5efe0;
+      box-shadow: 0 5px 15px rgba(64, 94, 101, .22);
+    }
+
+    .tree-scroll {
+      overflow: auto;
+      max-height: min(76vh, 920px);
+      background: rgba(255, 255, 255, .12);
+      scrollbar-color: rgba(64, 94, 101, .4) transparent;
+    }
+
+    #family-tree {
+      display: block;
+      width: max(100%, 760px);
+      min-height: 1320px;
+    }
+
+    .era-band {
+      fill: rgba(64, 94, 101, .045);
+    }
+
+    .era-band.southern {
+      fill: rgba(155, 113, 65, .05);
+    }
+
+    .era-label {
+      fill: var(--blue);
+      font-size: 16px;
+      letter-spacing: .32em;
+    }
+
+    .turning-line {
+      stroke: rgba(163, 66, 53, .28);
+      stroke-width: 1;
+      stroke-dasharray: 5 8;
+    }
+
+    .turning-label {
+      fill: var(--cinnabar);
+      font-size: 13px;
+      letter-spacing: .12em;
+    }
+
+    .tree-edge {
+      fill: none;
+      stroke: rgba(52, 61, 53, .36);
+      stroke-width: 1.4;
+    }
+
+    .tree-edge.succession {
+      stroke: var(--cinnabar);
+      stroke-width: 2.2;
+    }
+
+    .tree-edge.adopted {
+      stroke: var(--blue-soft);
+      stroke-width: 2.2;
+      stroke-dasharray: 8 6;
+    }
+
+    .tree-edge.is-related {
+      stroke-width: 3.5;
+      filter: drop-shadow(0 0 3px rgba(163, 66, 53, .2));
+    }
+
+    .tree-node {
+      cursor: pointer;
+      outline: none;
+    }
+
+    .tree-node rect {
+      fill: rgba(247, 242, 229, .97);
+      stroke: var(--blue-soft);
+      stroke-width: 1.2;
+      transition: .18s ease;
+    }
+
+    .tree-node.branch rect {
+      stroke: var(--ochre);
+      stroke-dasharray: 4 3;
+    }
+
+    .tree-node:hover rect,
+    .tree-node:focus rect,
+    .tree-node.is-selected rect {
+      fill: var(--blue);
+      stroke: var(--blue);
+      filter: drop-shadow(0 8px 11px rgba(45, 60, 58, .2));
+    }
+
+    .tree-node.branch:hover rect,
+    .tree-node.branch:focus rect,
+    .tree-node.branch.is-selected rect {
+      fill: var(--ochre);
+      stroke: var(--ochre);
+    }
+
+    .node-name {
+      fill: var(--ink);
+      text-anchor: middle;
+      font-size: 14px;
+    }
+
+    .node-meta {
+      fill: var(--ink-soft);
+      text-anchor: middle;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 9px;
+    }
+
+    .tree-node:hover text,
+    .tree-node:focus text,
+    .tree-node.is-selected text {
+      fill: #f8f0df;
+    }
+
+    .branch-caption {
+      fill: var(--ochre);
+      font-size: 12px;
+      letter-spacing: .08em;
+    }
+
+    .family-view {
+      min-height: 650px;
+      overflow: auto;
+      padding: 32px 26px 38px;
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .family-root {
+      min-width: 720px;
+    }
+
+    .family-path {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 26px;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .75rem;
+    }
+
+    .family-path-label {
+      color: var(--mist);
+    }
+
+    .family-path button {
+      padding: 0;
+      border: 0;
+      border-bottom: 1px solid transparent;
+      background: none;
+      color: var(--blue);
+      cursor: pointer;
+    }
+
+    .family-path button:hover {
+      border-bottom-color: currentColor;
+    }
+
+    .family-path-separator {
+      color: var(--mist);
+    }
+
+    .family-emperor {
+      position: relative;
+      width: 210px;
+      margin: 0 auto 66px;
+      padding: 17px;
+      border: 1px solid var(--blue);
+      background: rgba(247, 242, 229, .95);
+      text-align: center;
+    }
+
+    .family-emperor::after {
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      width: 1px;
+      height: 44px;
+      background: var(--line);
+      content: "";
+    }
+
+    .family-emperor strong,
+    .family-emperor small {
+      display: block;
+    }
+
+    .family-emperor strong {
+      color: var(--blue);
+      font-size: 1.45rem;
+      font-weight: 500;
+    }
+
+    .family-emperor small {
+      color: var(--ink-soft);
+    }
+
+    .mother-branches {
+      display: grid;
+      grid-template-columns: repeat(var(--branch-count), minmax(230px, 1fr));
+      gap: 20px;
+      align-items: start;
+    }
+
+    .mother-branch {
+      position: relative;
+      padding-top: 28px;
+    }
+
+    .mother-branch::before {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1px;
+      height: 28px;
+      background: var(--line);
+      content: "";
+    }
+
+    .mother-card {
+      min-height: 82px;
+      padding: 14px;
+      border: 1px solid rgba(155, 113, 65, .45);
+      background: rgba(255, 255, 255, .18);
+      text-align: center;
+    }
+
+    .mother-card strong,
+    .mother-card span {
+      display: block;
+    }
+
+    .mother-card strong {
+      color: var(--ochre);
+      font-weight: 500;
+    }
+
+    .mother-card span {
+      color: var(--ink-soft);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .75rem;
+    }
+
+    .family-children {
+      display: grid;
+      gap: 8px;
+      margin: 16px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .family-child {
+      min-height: 42px;
+      padding: 9px 11px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .14);
+      color: var(--ink-soft);
+      font-size: .86rem;
+    }
+
+    .family-child.is-emperor {
+      padding: 0;
+      border-color: rgba(64, 94, 101, .48);
+    }
+
+    .imperial-child-link {
+      width: 100%;
+      min-height: 54px;
+      padding: 9px 11px;
+      border: 0;
+      background: rgba(64, 94, 101, .07);
+      color: var(--blue);
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .imperial-child-link:hover {
+      background: var(--blue);
+      color: #f8f0df;
+    }
+
+    .imperial-child-name,
+    .imperial-child-meta {
+      display: block;
+    }
+
+    .imperial-child-meta {
+      opacity: .72;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .68rem;
+    }
+
+    .family-note {
+      max-width: 860px;
+      margin: 30px auto 0;
+      color: var(--ink-soft);
+      font-size: .82rem;
+      text-align: center;
+    }
+
+    .detail-panel {
+      position: sticky;
+      top: 84px;
+      max-height: calc(100vh - 104px);
+      overflow: auto;
+    }
+
+    .detail-hero {
+      padding: 30px 30px 25px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .detail-title-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .detail-title {
+      margin-bottom: 4px;
+      font-size: 2.35rem;
+      font-weight: 400;
+      letter-spacing: .08em;
+    }
+
+    .detail-reign {
+      color: var(--ink-soft);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .8rem;
+    }
+
+    .seal {
+      display: grid;
+      flex: 0 0 62px;
+      width: 62px;
+      height: 62px;
+      place-items: center;
+      border: 2px solid rgba(163, 66, 53, .68);
+      color: var(--cinnabar);
+      text-align: center;
+      font-size: .72rem;
+      line-height: 1.25;
+      transform: rotate(-5deg);
+    }
+
+    .detail-summary {
+      margin: 20px 0 0;
+      color: var(--ink-soft);
+    }
+
+    .detail-body {
+      padding: 25px 30px 32px;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .fact {
+      padding: 11px;
+      border: 1px solid var(--line);
+    }
+
+    .fact-label,
+    .fact-value {
+      display: block;
+    }
+
+    .fact-label {
+      color: var(--mist);
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .68rem;
+      letter-spacing: .1em;
+    }
+
+    .fact-value {
+      margin-top: 2px;
+      color: var(--ink);
+      font-size: .88rem;
+    }
+
+    .detail-section {
+      margin-top: 28px;
+    }
+
+    .detail-section h3 {
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .consort-group {
+      padding: 13px 0;
+      border-bottom: 1px dotted var(--line);
+    }
+
+    .consort-name {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .consort-name strong {
+      color: var(--ochre);
+      font-weight: 500;
+    }
+
+    .consort-rank {
+      color: var(--mist);
+      font-size: .72rem;
+    }
+
+    .children-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 9px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .children-list li {
+      padding: 3px 7px;
+      background: rgba(64, 94, 101, .07);
+      color: var(--ink-soft);
+      font-size: .76rem;
+    }
+
+    .consort-note,
+    .uncertainty {
+      margin: 8px 0 0;
+      color: var(--mist);
+      font-size: .75rem;
+    }
+
+    .uncertainty {
+      color: var(--cinnabar);
+    }
+
+    .drama-list {
+      display: grid;
+      gap: 9px;
+    }
+
+    .drama-card {
+      display: block;
+      padding: 11px 13px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      transition: .15s ease;
+    }
+
+    .drama-card:hover {
+      border-color: var(--blue);
+      transform: translateY(-1px);
+    }
+
+    .drama-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .drama-title strong {
+      color: var(--blue);
+      font-weight: 500;
+    }
+
+    .drama-year,
+    .drama-note {
+      color: var(--mist);
+      font-size: .72rem;
+    }
+
+    .drama-note {
+      display: block;
+      margin-top: 3px;
+    }
+
+    .note-section,
+    .sources {
+      max-width: 980px;
+      margin: 74px auto 0;
+      padding-top: 34px;
+      border-top: 1px solid var(--line);
+    }
+
+    .note-section p,
+    .sources p,
+    .sources li {
+      color: var(--ink-soft);
+    }
+
+    .sources ul {
+      padding-left: 1.2em;
+    }
+
+    .sources a {
+      text-decoration-color: rgba(64, 94, 101, .4);
+      text-underline-offset: 3px;
+    }
+
+    .sources a:hover {
+      color: var(--cinnabar);
+    }
+
+    .footer {
+      padding: 34px 20px 46px;
+      border-top: 1px solid var(--line);
+      color: var(--mist);
+      text-align: center;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: .76rem;
+      letter-spacing: .12em;
+    }
+
+    @media (max-width: 1080px) {
+      .explorer {
+        grid-template-columns: minmax(0, 1fr);
       }
 
-      * { box-sizing: border-box; }
-      html { scroll-behavior: smooth; }
-      body {
-        margin: 0;
-        min-width: 320px;
-        max-width: 100%;
-        overflow-x: hidden;
-        background:
-          linear-gradient(rgba(255,255,255,.16), rgba(255,255,255,0)),
-          repeating-linear-gradient(8deg, rgba(71,62,42,.018) 0 1px, transparent 1px 5px),
-          var(--paper);
-        color: var(--ink);
-        font-family: "Songti SC", "Noto Serif CJK SC", "STSong", serif;
-        font-size: 16px;
-        line-height: 1.7;
+      .tree-panel,
+      .detail-panel {
+        width: 100%;
+        min-width: 0;
       }
-      body::before {
-        position: fixed; inset: 0; z-index: -1; pointer-events: none; content: "";
-        background:
-          radial-gradient(circle at 84% 10%, rgba(64,94,101,.11), transparent 28rem),
-          radial-gradient(circle at 12% 58%, rgba(155,113,65,.08), transparent 30rem);
-      }
-      a { color: inherit; }
-      button, a { -webkit-tap-highlight-color: transparent; }
-      button { font: inherit; }
-      h1, h2, h3, p { margin-top: 0; }
 
-      .topbar {
-        position: sticky; top: 0; z-index: 50; display: flex; align-items: center;
-        justify-content: space-between; gap: 18px; min-height: 64px;
-        padding: 10px clamp(18px, 4vw, 62px); border-bottom: 1px solid var(--line);
-        background: rgba(238,231,214,.88); backdrop-filter: blur(18px);
+      .detail-panel {
+        position: static;
+        max-height: none;
       }
-      .back-link, .topbar-index { display: inline-flex; align-items: center; min-height: 42px; text-decoration: none; color: var(--ink-soft); }
-      .back-link { gap: 9px; }
-      .back-link:hover, .topbar-index:hover { color: var(--cinnabar); }
-      .back-mark { display: grid; width: 30px; height: 30px; place-items: center; border: 1px solid var(--line); border-radius: 50%; }
-      .topbar-title { color: var(--blue); letter-spacing: .2em; }
+    }
 
-      .hero {
-        position: relative; overflow: hidden; padding: clamp(76px, 11vw, 144px) clamp(22px, 7vw, 110px) clamp(70px, 9vw, 116px);
-        border-bottom: 1px solid var(--line);
+    @media (max-width: 720px) {
+      .topbar-title {
+        display: none;
       }
-      .hero::before {
-        position: absolute; right: -5vw; bottom: -110px; width: min(680px, 70vw); height: 350px; content: ""; opacity: .5;
-        background:
-          radial-gradient(ellipse at 20% 85%, transparent 0 32%, rgba(64,94,101,.15) 33% 34%, transparent 35%),
-          radial-gradient(ellipse at 58% 100%, transparent 0 42%, rgba(64,94,101,.12) 43% 44%, transparent 45%),
-          radial-gradient(ellipse at 92% 90%, transparent 0 37%, rgba(155,113,65,.12) 38% 39%, transparent 40%);
-      }
+
       .hero::after {
-        position: absolute; top: 35px; right: clamp(24px, 8vw, 130px); width: 118px; height: 118px;
-        border: 1px solid rgba(163,66,53,.32); border-radius: 50%; color: rgba(163,66,53,.4);
-        content: "宋\A室\A谱"; white-space: pre; display: grid; place-items: center; text-align: center;
-        font-size: 1.35rem; line-height: 1.3; letter-spacing: .16em; transform: rotate(-7deg);
+        width: 80px;
+        height: 80px;
+        font-size: .92rem;
       }
-      .hero-inner { position: relative; max-width: 1000px; margin: 0 auto; }
-      .eyebrow, .section-kicker, .detail-kicker { margin: 0 0 14px; color: var(--cinnabar); font-family: ui-sans-serif, system-ui, sans-serif; font-size: .8rem; letter-spacing: .22em; text-transform: uppercase; }
-      h1 { max-width: 850px; margin-bottom: 26px; font-size: clamp(3.2rem, 9vw, 7.8rem); font-weight: 400; letter-spacing: .12em; line-height: .96; }
-      .hero-lead { max-width: 720px; margin-bottom: 34px; color: var(--ink-soft); font-size: clamp(1rem, 1.8vw, 1.25rem); }
-      .hero-meta { display: flex; flex-wrap: wrap; gap: 10px; color: var(--ink-soft); font-family: ui-sans-serif, system-ui, sans-serif; font-size: .84rem; }
-      .hero-meta span { padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.17); }
 
-      .main { max-width: 1580px; margin: 0 auto; padding: clamp(50px, 7vw, 92px) clamp(16px, 4vw, 60px) 100px; }
-      .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 28px; }
-      .section-head h2, .note-section h2, .sources h2 { margin-bottom: 8px; font-size: clamp(1.8rem, 3vw, 3rem); font-weight: 400; }
-      .section-intro { max-width: 760px; margin-bottom: 0; color: var(--ink-soft); }
-      .legend { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px 18px; color: var(--ink-soft); font-family: ui-sans-serif, system-ui, sans-serif; font-size: .78rem; }
-      .legend span { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
-      .legend i { width: 11px; height: 11px; border-radius: 50%; background: var(--blue); }
-      .legend .branch-dot { background: var(--ochre); }
-      .legend .blood-line, .legend .succession-line, .legend .adopt-line { width: 24px; height: 0; border-radius: 0; background: transparent; }
-      .legend .blood-line { border-top: 1px solid var(--ink-soft); }
-      .legend .succession-line { border-top: 2px solid var(--cinnabar); }
-      .legend .adopt-line { border-top: 2px dashed var(--blue-soft); }
-
-      .explorer { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(330px, .9fr); gap: 20px; align-items: start; }
-      .tree-panel, .detail-panel { border: 1px solid var(--line); background: var(--panel); box-shadow: var(--shadow); }
-      .tree-panel { min-width: 0; overflow: hidden; }
-      .tree-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 76px; padding: 14px 18px; border-bottom: 1px solid var(--line); }
-      .tree-toolbar strong { display: block; color: var(--blue); font-size: 1.05rem; font-weight: 500; }
-      .tree-toolbar span { display: block; color: var(--ink-soft); font-family: ui-sans-serif, system-ui, sans-serif; font-size: .76rem; }
-      .view-switch { display: inline-flex; flex-shrink: 0; padding: 4px; border: 1px solid var(--line); border-radius: 999px; background: rgba(69,80,70,.04); }
-      .view-switch button { min-height: 36px; padding: 4px 14px; border: 0; border-radius: 999px; background: transparent; color: var(--ink-soft); cursor: pointer; }
-      .view-switch button[aria-pressed="true"] { background: var(--blue); color: #f5efe0; box-shadow: 0 5px 15px rgba(64,94,101,.22); }
-
-      .tree-scroll { overflow: auto; max-height: min(76vh, 920px); background: rgba(255,255,255,.12); scrollbar-color: rgba(64,94,101,.4) transparent; }
-      #family-tree { display: block; width: max(100%, 760px); min-height: 1320px; }
-      .era-band { fill: rgba(64,94,101,.045); }
-      .era-band.southern { fill: rgba(155,113,65,.05); }
-      .era-label { fill: var(--blue); font-size: 16px; letter-spacing: .32em; }
-      .turning-line { stroke: rgba(163,66,53,.28); stroke-width: 1; stroke-dasharray: 5 8; }
-      .turning-label { fill: var(--cinnabar); font-size: 13px; letter-spacing: .12em; }
-      .tree-edge { fill: none; stroke: rgba(52,61,53,.36); stroke-width: 1.4; }
-      .tree-edge.succession { stroke: var(--cinnabar); stroke-width: 2.2; }
-      .tree-edge.adopted { stroke: var(--blue-soft); stroke-width: 2.2; stroke-dasharray: 8 6; }
-      .tree-edge.is-related { stroke-width: 3.5; filter: drop-shadow(0 0 3px rgba(163,66,53,.2)); }
-      .tree-node { cursor: pointer; outline: none; }
-      .tree-node rect { fill: rgba(247,242,229,.97); stroke: var(--blue-soft); stroke-width: 1.2; transition: .18s ease; }
-      .tree-node.branch rect { stroke: var(--ochre); stroke-dasharray: 4 3; }
-      .tree-node:hover rect, .tree-node:focus rect, .tree-node.is-selected rect { fill: var(--blue); stroke: var(--blue); filter: drop-shadow(0 8px 11px rgba(45,60,58,.2)); }
-      .tree-node.branch:hover rect, .tree-node.branch:focus rect, .tree-node.branch.is-selected rect { fill: var(--ochre); stroke: var(--ochre); }
-      .node-name { fill: var(--ink); text-anchor: middle; font-size: 17px; }
-      .node-meta { fill: var(--ink-soft); text-anchor: middle; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 11px; }
-      .tree-node:hover text, .tree-node:focus text, .tree-node.is-selected text { fill: #f8f0df; }
-      .branch-caption { fill: var(--ochre); font-size: 12px; letter-spacing: .08em; }
-
-      .family-view { min-height: 650px; overflow: auto; padding: 32px 26px 38px; background: rgba(255,255,255,.1); }
-      .family-root { min-width: 720px; }
-      .family-path { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; margin-bottom: 26px; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .75rem; }
-      .family-path-label { color: var(--mist); }
-      .family-path button { padding: 0; border: 0; border-bottom: 1px solid transparent; background: none; color: var(--blue); cursor: pointer; }
-      .family-path button:hover { border-bottom-color: currentColor; }
-      .family-path-separator { color: var(--mist); }
-      .family-emperor { position: relative; width: 210px; margin: 0 auto 66px; padding: 17px; border: 1px solid var(--blue); background: rgba(247,242,229,.95); text-align: center; }
-      .family-emperor::after { position: absolute; left: 50%; top: 100%; width: 1px; height: 44px; background: var(--line); content: ""; }
-      .family-emperor strong, .family-emperor small { display: block; }
-      .family-emperor strong { color: var(--blue); font-size: 1.45rem; font-weight: 500; }
-      .family-emperor small { color: var(--ink-soft); }
-      .mother-branches { display: grid; grid-template-columns: repeat(var(--branch-count), minmax(230px, 1fr)); gap: 20px; align-items: start; }
-      .mother-branch { position: relative; padding-top: 28px; }
-      .mother-branch::before { position: absolute; left: 50%; top: 0; width: 1px; height: 28px; background: var(--line); content: ""; }
-      .mother-card { min-height: 82px; padding: 14px; border: 1px solid rgba(155,113,65,.45); background: rgba(255,255,255,.18); text-align: center; }
-      .mother-card strong, .mother-card span { display: block; }
-      .mother-card strong { color: var(--ochre); font-weight: 500; }
-      .mother-card span { color: var(--ink-soft); font-family: ui-sans-serif, system-ui, sans-serif; font-size: .75rem; }
-      .family-children { display: grid; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
-      .family-child { min-height: 42px; padding: 9px 11px; border: 1px solid var(--line); background: rgba(255,255,255,.14); color: var(--ink-soft); font-size: .86rem; }
-      .family-child.is-emperor { padding: 0; border-color: rgba(64,94,101,.48); }
-      .imperial-child-link { width: 100%; min-height: 54px; padding: 9px 11px; border: 0; background: rgba(64,94,101,.07); color: var(--blue); text-align: left; cursor: pointer; }
-      .imperial-child-link:hover { background: var(--blue); color: #f8f0df; }
-      .imperial-child-name, .imperial-child-meta { display: block; }
-      .imperial-child-meta { opacity: .72; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .68rem; }
-      .family-note { max-width: 860px; margin: 30px auto 0; color: var(--ink-soft); font-size: .82rem; text-align: center; }
-
-      .detail-panel { position: sticky; top: 84px; max-height: calc(100vh - 104px); overflow: auto; }
-      .detail-hero { padding: 30px 30px 25px; border-bottom: 1px solid var(--line); }
-      .detail-title-row { display: flex; justify-content: space-between; gap: 22px; }
-      .detail-title { margin-bottom: 4px; font-size: 2.35rem; font-weight: 400; letter-spacing: .08em; }
-      .detail-reign { color: var(--ink-soft); font-family: ui-sans-serif, system-ui, sans-serif; font-size: .8rem; }
-      .seal { display: grid; flex: 0 0 62px; width: 62px; height: 62px; place-items: center; border: 2px solid rgba(163,66,53,.68); color: var(--cinnabar); text-align: center; font-size: .72rem; line-height: 1.25; transform: rotate(-5deg); }
-      .detail-summary { margin: 20px 0 0; color: var(--ink-soft); }
-      .detail-body { padding: 25px 30px 32px; }
-      .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 28px; }
-      .fact { padding: 11px; border: 1px solid var(--line); }
-      .fact-label, .fact-value { display: block; }
-      .fact-label { color: var(--mist); font-family: ui-sans-serif, system-ui, sans-serif; font-size: .68rem; letter-spacing: .1em; }
-      .fact-value { margin-top: 2px; color: var(--ink); font-size: .88rem; }
-      .detail-section { margin-top: 28px; }
-      .detail-section h3 { padding-bottom: 8px; border-bottom: 1px solid var(--line); font-size: 1rem; font-weight: 500; }
-      .consort-group { padding: 13px 0; border-bottom: 1px dotted var(--line); }
-      .consort-name { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
-      .consort-name strong { color: var(--ochre); font-weight: 500; }
-      .consort-rank { color: var(--mist); font-size: .72rem; }
-      .children-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 9px 0 0; padding: 0; list-style: none; }
-      .children-list li { padding: 3px 7px; background: rgba(64,94,101,.07); color: var(--ink-soft); font-size: .76rem; }
-      .consort-note, .uncertainty { margin: 8px 0 0; color: var(--mist); font-size: .75rem; }
-      .uncertainty { color: var(--cinnabar); }
-      .drama-list { display: grid; gap: 9px; }
-      .drama-card { display: block; padding: 11px 13px; border: 1px solid var(--line); text-decoration: none; transition: .15s ease; }
-      .drama-card:hover { border-color: var(--blue); transform: translateY(-1px); }
-      .drama-title { display: flex; justify-content: space-between; gap: 14px; }
-      .drama-title strong { color: var(--blue); font-weight: 500; }
-      .drama-year, .drama-note { color: var(--mist); font-size: .72rem; }
-      .drama-note { display: block; margin-top: 3px; }
-
-      .note-section, .sources { max-width: 980px; margin: 74px auto 0; padding-top: 34px; border-top: 1px solid var(--line); }
-      .note-section p, .sources p, .sources li { color: var(--ink-soft); }
-      .sources ul { padding-left: 1.2em; }
-      .sources a { text-decoration-color: rgba(64,94,101,.4); text-underline-offset: 3px; }
-      .sources a:hover { color: var(--cinnabar); }
-      .footer { padding: 34px 20px 46px; border-top: 1px solid var(--line); color: var(--mist); text-align: center; font-family: ui-sans-serif, system-ui, sans-serif; font-size: .76rem; letter-spacing: .12em; }
-
-      @media (max-width: 1080px) {
-        .explorer { grid-template-columns: minmax(0, 1fr); }
-        .tree-panel, .detail-panel { width: 100%; min-width: 0; }
-        .detail-panel { position: static; max-height: none; }
+      .section-head {
+        display: block;
       }
-      @media (max-width: 720px) {
-        .topbar-title { display: none; }
-        .hero::after { width: 80px; height: 80px; font-size: .92rem; }
-        .section-head { display: block; }
-        .legend { justify-content: flex-start; margin-top: 20px; }
-        .main, .section-head, .legend, .tree-scroll { max-width: 100%; }
-        .tree-toolbar { align-items: flex-start; flex-direction: column; }
-        .detail-body, .detail-hero { padding-right: 18px; padding-left: 18px; }
-        .facts { grid-template-columns: 1fr; }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
-        *, *::before, *::after { transition-duration: .01ms !important; }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="site-shell">
-      <nav class="topbar" aria-label="页面导航">
-        <a class="back-link" href="../../"><span class="back-mark" aria-hidden="true">←</span><span>返回知识宫殿</span></a>
-        <span class="topbar-title">大宋帝系</span>
-        <a class="topbar-index" href="#genealogy">展开长卷</a>
-      </nav>
 
-      <header class="hero">
-        <div class="hero-inner">
-          <p class="eyebrow">960—1279 · House of Zhao</p>
-          <h1>大宋帝系</h1>
-          <p class="hero-lead">从汴京到临安，皇位数次越过亲子与近支。沿着血缘、收养与继承三类线索，读懂太祖系、太宗系如何分合，又如何在靖康之后重接。</p>
-          <div class="hero-meta" aria-label="族谱范围"><span>两宋 18 位皇帝</span><span>北宋 9 帝 · 南宋 9 帝</span><span>4 次关键旁支入继</span><span>319 年帝系长卷</span></div>
+      .legend {
+        justify-content: flex-start;
+        margin-top: 20px;
+      }
+
+      .main,
+      .section-head,
+      .legend,
+      .tree-scroll {
+        max-width: 100%;
+      }
+
+      .tree-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .detail-body,
+      .detail-hero {
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+
+      .facts {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-shell">
+    <nav class="topbar" aria-label="页面导航">
+      <a class="back-link" href="../../"><span class="back-mark" aria-hidden="true">←</span><span>返回知识宫殿</span></a>
+      <span class="topbar-title">大宋帝系</span>
+      <a class="topbar-index" href="#genealogy">展开长卷</a>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">960—1279 · House of Zhao</p>
+        <h1>大宋帝系</h1>
+        <p class="hero-lead">从汴京到临安，皇位数次越过亲子与近支。沿着血缘、收养与继承三类线索，读懂太祖系、太宗系如何分合，又如何在靖康之后重接。</p>
+        <div class="hero-meta" aria-label="族谱范围"><span>两宋 18 位皇帝</span><span>北宋 9 帝 · 南宋 9 帝</span><span>4
+            次关键旁支入继</span><span>319 年帝系长卷</span></div>
+      </div>
+    </header>
+
+    <main class="main" id="genealogy">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Imperial genealogy</p>
+          <h2>一卷看见两宋皇位流转</h2>
+          <p class="section-intro">默认展开皇位路线。朱线表示实际继位，墨线表示血缘，黛青虚线表示收养入继；“靖康之变”将北宋、南宋分为上下两卷。</p>
         </div>
-      </header>
-
-      <main class="main" id="genealogy">
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">Imperial genealogy</p>
-            <h2>一卷看见两宋皇位流转</h2>
-            <p class="section-intro">默认展开皇位路线。朱线表示实际继位，墨线表示血缘，黛青虚线表示收养入继；“靖康之变”将北宋、南宋分为上下两卷。</p>
-          </div>
-          <div class="legend" aria-label="图例">
-            <span><i></i>皇帝</span><span><i class="branch-dot"></i>宗室转支</span>
-            <span><i class="blood-line"></i>血缘</span><span><i class="succession-line"></i>皇位传承</span><span><i class="adopt-line"></i>收养入继</span>
-          </div>
+        <div class="legend" aria-label="图例">
+          <span><i></i>皇帝</span><span><i class="branch-dot"></i>宗室转支</span>
+          <span><i class="blood-line"></i>血缘</span><span><i class="succession-line"></i>皇位传承</span><span><i
+              class="adopt-line"></i>收养入继</span>
         </div>
+      </div>
 
-        <div class="explorer">
-          <section class="tree-panel" aria-label="宋朝帝系族谱图">
-            <div class="tree-toolbar">
-              <div><strong id="view-title">两宋帝系与皇位路线</strong><span id="view-hint">点击人物查看详情；黛青虚线表示收养入继</span></div>
-              <div class="view-switch" aria-label="族谱视图">
-                <button id="dynasty-mode" type="button" aria-pressed="true">皇位路线</button>
-                <button id="family-mode" type="button" aria-pressed="false">家庭族谱</button>
-              </div>
+      <div class="explorer">
+        <section class="tree-panel" aria-label="宋朝帝系族谱图">
+          <div class="tree-toolbar">
+            <div><strong id="view-title">两宋帝系与皇位路线</strong><span id="view-hint">点击人物查看详情；黛青虚线表示收养入继</span></div>
+            <div class="view-switch" aria-label="族谱视图">
+              <button id="dynasty-mode" type="button" aria-pressed="true">皇位路线</button>
+              <button id="family-mode" type="button" aria-pressed="false">家庭族谱</button>
             </div>
-            <div class="tree-scroll" id="tree-scroll">
-              <svg id="family-tree" viewBox="0 0 1100 1940" role="img" aria-labelledby="tree-title tree-desc">
-                <title id="tree-title">宋朝皇帝世系图</title>
-                <desc id="tree-desc">从宋太祖赵匡胤到帝昺赵昺的北宋、南宋帝系，包含血缘、皇位传承与收养入继关系。</desc>
-              </svg>
-            </div>
-            <div class="family-view" id="family-view" hidden></div>
-          </section>
-          <aside class="detail-panel" id="detail-panel" aria-live="polite"></aside>
-        </div>
-
-        <section class="note-section">
-          <p class="section-kicker">Reading note</p>
-          <h2>这张图如何取舍</h2>
-          <p>皇位路线收录两宋正式在位的 18 位皇帝，并加入濮王赵允让、秀王赵子偁、荣王赵希瓐及嗣荣王赵与芮等关键转支人物。长距离宗室世系用“太祖后裔”概括，避免把大量未参与继承的宗室塞入主图。</p>
-          <p>家庭视图以解释皇位继承为目标，优先列出皇后、帝王生母、继承人及在继承史上重要的皇子女，并不宣称是完整玉牒。收养关系与生父关系会同时标明。</p>
+          </div>
+          <div class="tree-scroll" id="tree-scroll">
+            <svg id="family-tree" viewBox="0 0 1100 1940" role="img" aria-labelledby="tree-title tree-desc">
+              <title id="tree-title">宋朝皇帝世系图</title>
+              <desc id="tree-desc">从宋太祖赵匡胤到帝昺赵昺的北宋、南宋帝系，包含血缘、皇位传承与收养入继关系。</desc>
+            </svg>
+          </div>
+          <div class="family-view" id="family-view" hidden></div>
         </section>
+        <aside class="detail-panel" id="detail-panel" aria-live="polite"></aside>
+      </div>
 
-        <section class="sources">
-          <p class="section-kicker">Sources</p>
-          <h2>参考与说明</h2>
-          <ul>
-            <li><a href="https://zh.wikisource.org/wiki/宋史" target="_blank" rel="noreferrer">《宋史》本纪、宗室世系表与宗室列传</a></li>
-            <li><a href="https://ygx.sxu.edu.cn/portals/16s" target="_blank" rel="noreferrer">山西大学云冈学·宋代历史纪年</a></li>
-            <li><a href="https://www.cssn.cn/lsx/lsx_zgs/202303/t20230320_5614268.shtml" target="_blank" rel="noreferrer">中国社会科学网·从南宋帝位传承看梦境的作用</a></li>
-            <li><a href="https://www.dpm.org.cn/journal_detail/113410.html" target="_blank" rel="noreferrer">故宫博物院·富有个性的大宋天子</a></li>
-          </ul>
-          <p>影视作品只用于建立观剧索引，不作为史实依据；点击作品卡片会打开资料搜索。</p>
-        </section>
-      </main>
-      <footer class="footer">宋朝皇室族谱 · LXJ Blog · 资料会随考证继续补充</footer>
-    </div>
 
-    <script>
-      const people = {
-        taizu: { id:"taizu", name:"赵匡胤", temple:"宋太祖", era:"建隆·乾德·开宝", reign:"960—976", type:"emperor", father:"赵弘殷", mother:"昭宪太后杜氏", succession:"陈桥兵变后建立宋朝", summary:"北宋开国皇帝。其死后，皇位没有传给儿子，而是转给弟弟赵光义；南宋孝宗以后，帝位又回到太祖后裔。", consorts:[{name:"孝惠皇后贺氏",rank:"元配，追册皇后",children:["赵德昭·燕王","秦国公主","晋国公主"]},{name:"孝明皇后王氏",rank:"继室皇后",children:["三名子女均早夭"]},{name:"生母失载",rank:"赵德芳生母，后世有王氏说",children:["赵德芳·秦王"],note:"宋代官修史书未载赵德芳生母；现代学者据墓志等材料提出王皇后说。",uncertain:true},{name:"孝章皇后宋氏",rank:"皇后",children:["无可确认亲生子女"]}], dramas:[{title:"大宋传奇之赵匡胤",year:"2015",note:"以开国与宋初政局为主线"},{title:"问君能有几多愁",year:"2005",note:"涉及宋灭南唐与宋初宫廷"}] },
-        taizong: { id:"taizong", name:"赵光义", temple:"宋太宗", era:"太平兴国·雍熙·端拱·淳化·至道", reign:"976—997", type:"emperor", father:"赵弘殷", mother:"昭宪太后杜氏", succession:"兄终弟及", summary:"宋太祖之弟，原名赵匡义，后改光义、炅。皇位自此长期由太宗后裔承袭，直到南宋孝宗入继。", consorts:[{name:"元德皇后李氏",rank:"追册皇后",children:["赵恒·宋真宗","赵元份·商王"]},{name:"明德皇后李氏",rank:"皇后",children:["抚育真宗"]},{name:"其他后妃",rank:"据《宋史》简录",children:["赵元佐·楚王","赵元侃等诸王"]}], dramas:[{title:"大宋宫词",year:"2021",note:"前段涉及太宗晚年与诸子继承"}] },
-        zhenzong: { id:"zhenzong", name:"赵恒", temple:"宋真宗", era:"咸平·景德·大中祥符·天禧·乾兴", reign:"997—1022", type:"emperor", father:"赵光义", mother:"元德皇后李氏", succession:"皇太子继位", summary:"在位前期与辽订立澶渊之盟，后期热衷天书封禅。其子赵祯即宋仁宗。", consorts:[{name:"章穆皇后郭氏",rank:"皇后",children:["赵祐·悼献太子"]},{name:"章献明肃皇后刘氏",rank:"皇后、皇太后",children:["无亲生子女，抚育赵祯"]},{name:"章懿皇后李氏",rank:"宸妃，仁宗生母",children:["赵祯·宋仁宗","惠国公主"]}], dramas:[{title:"大宋宫词",year:"2021",note:"真宗与刘娥为核心人物"},{title:"清平乐",year:"2020",note:"开篇涉及仁宗身世与刘太后"}] },
-        renzong: { id:"renzong", name:"赵祯", temple:"宋仁宗", era:"天圣·明道·景祐·宝元·康定·庆历·皇祐·至和·嘉祐", reign:"1022—1063", type:"emperor", father:"赵恒", mother:"章懿皇后李氏（由刘太后抚育）", succession:"皇太子继位", summary:"在位四十二年，三名亲生皇子均早夭。晚年立宗室子赵宗实为皇子，即后来的宋英宗。", consorts:[{name:"慈圣光献皇后曹氏",rank:"皇后",children:["无亲生子女"]},{name:"温成皇后张氏",rank:"贵妃，追册皇后",children:["安寿公主","宝和公主","唐国公主"]},{name:"昭节贵妃苗氏",rank:"贵妃",children:["福康公主","赵昕·雍王"]},{name:"其他后妃",rank:"据《宋史》简录",children:["赵昉·褒王","赵曦·荆王","诸位公主"]}], dramas:[{title:"清平乐",year:"2020",note:"以仁宗朝宫廷与士大夫政治为主线"},{title:"开封府",year:"2017",note:"以包拯故事串联仁宗朝"}] },
-        zhaoyunrang: { id:"zhaoyunrang", name:"赵允让", temple:"濮安懿王", era:"宗室", reign:"995—1059", type:"branch", father:"赵元份（太宗之孙）", mother:"不详", succession:"其子过继仁宗后即位", summary:"宋太宗曾孙，濮王。第十三子赵宗实被仁宗收养，后来即宋英宗；英宗即位后引发濮议。", consorts:[{name:"仙游县君任氏",rank:"英宗生母",children:["赵宗实·宋英宗"]},{name:"濮王诸夫人",rank:"宗室家庭",children:["赵允让共有多子，主图仅列入继者"]}], dramas:[{title:"清平乐",year:"2020",note:"后段涉及宗室入继安排"}] },
-        yingzong: { id:"yingzong", name:"赵曙", temple:"宋英宗", era:"治平", reign:"1063—1067", type:"emperor", father:"生父赵允让；嗣父宋仁宗", mother:"仙游县君任氏", succession:"仁宗养子入继", summary:"原名赵宗实，是太宗后裔、濮王赵允让之子。仁宗无存活皇子，他以养子身份继位。", consorts:[{name:"宣仁圣烈皇后高氏",rank:"皇后",children:["赵顼·宋神宗","赵颢·吴荣王","赵颜·润王","赵頵·益王","宝安公主","寿康公主"]}], dramas:[{title:"清平乐",year:"2020",note:"结尾触及英宗入继"}] },
-        shenzong: { id:"shenzong", name:"赵顼", temple:"宋神宗", era:"熙宁·元丰", reign:"1067—1085", type:"emperor", father:"赵曙", mother:"宣仁圣烈皇后高氏", succession:"皇太子继位", summary:"任用王安石变法。其子哲宗继位时年幼，后来皇位又转给哲宗异母弟赵佶。", consorts:[{name:"钦圣宪肃皇后向氏",rank:"皇后",children:["无存活亲生子"]},{name:"钦成皇后朱氏",rank:"德妃，追册皇后",children:["赵煦·宋哲宗","赵似·简王"]},{name:"钦慈皇后陈氏",rank:"美人，追册皇后",children:["赵佶·宋徽宗"]},{name:"其他后妃",rank:"据《宋史》简录",children:["多位皇子与公主"]}], dramas:[{title:"新安家族",year:"2010",note:"故事背景涉及王安石变法时期"}] },
-        zhezong: { id:"zhezong", name:"赵煦", temple:"宋哲宗", era:"元祐·绍圣·元符", reign:"1085—1100", type:"emperor", father:"赵顼", mother:"钦成皇后朱氏", succession:"皇太子继位", summary:"幼年由高太皇太后临朝，亲政后转向绍述。无存活皇子，死后由异母弟赵佶继位。", consorts:[{name:"昭慈圣献皇后孟氏",rank:"皇后，曾两度被废复位",children:["洵美帝姬"]},{name:"昭怀皇后刘氏",rank:"皇后",children:["赵茂·献愍太子","淑慎帝姬"]}], dramas:[{title:"清平乐",year:"2020",note:"非主线人物，作为仁宗以后时代延伸"}] },
-        huizong: { id:"huizong", name:"赵佶", temple:"宋徽宗", era:"建中靖国·崇宁·大观·政和·重和·宣和", reign:"1100—1126", type:"emperor", father:"赵顼", mother:"钦慈皇后陈氏", succession:"哲宗无子，弟继兄位", summary:"艺术修养卓著，政治上任用蔡京等。金兵南下后传位赵桓，靖康之变中与钦宗一同被俘。", consorts:[{name:"显恭皇后王氏",rank:"皇后",children:["赵桓·宋钦宗","荣德帝姬"]},{name:"显肃皇后郑氏",rank:"皇后",children:["多位皇女"]},{name:"显仁皇后韦氏",rank:"贤妃，追册皇后",children:["赵构·宋高宗"]},{name:"其他后妃",rank:"据《宋史》简录",children:["皇子、帝姬众多"]}], dramas:[{title:"水浒传",year:"1998 / 2011",note:"以徽宗朝为时代背景"},{title:"精忠岳飞",year:"2013",note:"开篇涉及靖康之变"}] },
-        qinzong: { id:"qinzong", name:"赵桓", temple:"宋钦宗", era:"靖康", reign:"1126—1127", type:"emperor", father:"赵佶", mother:"显恭皇后王氏", succession:"徽宗内禅", summary:"北宋末代皇帝。在位一年余，汴京陷落后与徽宗及大量宗室被金军北迁。", consorts:[{name:"仁怀皇后朱氏",rank:"皇后",children:["赵谌·皇太子","柔嘉公主"]},{name:"慎德妃朱氏",rank:"妃",children:["皇子女，靖康后命运多舛"]}], dramas:[{title:"精忠岳飞",year:"2013",note:"涉及靖康之变与高宗即位"},{title:"大宋碑歌",year:"2005",note:"以北宋末年政局为背景"}] },
-        gaozong: { id:"gaozong", name:"赵构", temple:"宋高宗", era:"建炎·绍兴", reign:"1127—1162", type:"emperor", father:"赵佶", mother:"显仁皇后韦氏", succession:"靖康后在南京应天府即位", summary:"徽宗第九子，建立南宋。唯一亲生皇子赵旉早夭，后来从太祖赵德芳后裔中选养赵昚并传位。", consorts:[{name:"宪节皇后邢氏",rank:"元配，追册皇后",children:["无存活子女"]},{name:"宪圣慈烈皇后吴氏",rank:"皇后",children:["无亲生子，参与抚育养子"]},{name:"潘贤妃",rank:"贤妃",children:["赵旉·元懿太子"]},{name:"张贤妃",rank:"贤妃",children:["养育赵伯琮（后为孝宗）"]}], dramas:[{title:"精忠岳飞",year:"2013",note:"高宗朝和战之争为重要主线"},{title:"射雕英雄传",year:"多版",note:"虚构故事以南宋中期为背景"}] },
-        zhaozicheng: { id:"zhaozicheng", name:"赵子偁", temple:"秀安僖王", era:"太祖后裔", reign:"？—1144", type:"branch", father:"赵令譮（赵德芳后裔）", mother:"不详", succession:"其子被高宗收养后即位", summary:"宋太祖第四子赵德芳的后裔，宋孝宗生父。孝宗入继意味着帝位在约一百八十年后回到太祖后裔。", consorts:[{name:"秀王夫人张氏",rank:"孝宗生母",children:["赵伯琮·宋孝宗","赵伯圭·崇王"]}], dramas:[{title:"精忠岳飞",year:"2013",note:"时代与高宗择嗣相近"}] },
-        xiaozong: { id:"xiaozong", name:"赵昚", temple:"宋孝宗", era:"隆兴·乾道·淳熙", reign:"1162—1189", type:"emperor", father:"生父赵子偁；嗣父宋高宗", mother:"秀王夫人张氏", succession:"高宗养子受禅", summary:"太祖赵德芳后裔，原名赵伯琮，被高宗收养后即位。锐意北伐、整顿政务，是南宋较有作为的皇帝。", consorts:[{name:"成穆皇后郭氏",rank:"原配，追册皇后",children:["赵愭·庄文太子","赵恺·魏惠宪王","赵惇·宋光宗","赵恪·邵悼肃王"]},{name:"成恭皇后夏氏",rank:"皇后",children:["无亲生子女"]},{name:"成肃皇后谢氏",rank:"皇后",children:["无亲生子女"]}], dramas:[{title:"射雕英雄传",year:"多版",note:"故事开端设置于南宋宁宗年间，承接孝宗以后局势"}] },
-        guangzong: { id:"guangzong", name:"赵惇", temple:"宋光宗", era:"绍熙", reign:"1189—1194", type:"emperor", father:"赵昚", mother:"成穆皇后郭氏", succession:"皇太子受禅", summary:"受禅即位后与太上皇孝宗关系紧张，史称绍熙内禅前后的宫廷危机。", consorts:[{name:"慈懿皇后李氏",rank:"皇后",children:["赵扩·宋宁宗","赵梃·保宁军节度使","文安公主","和政公主"]}], dramas:[{title:"射雕英雄传",year:"多版",note:"时代背景紧接光宗、宁宗之际"}] },
-        ningzong: { id:"ningzong", name:"赵扩", temple:"宋宁宗", era:"庆元·嘉泰·开禧·嘉定", reign:"1194—1224", type:"emperor", father:"赵惇", mother:"慈懿皇后李氏", succession:"绍熙内禅后即位", summary:"亲生皇子均早夭，曾立宗室子赵竑为嗣。宁宗死后，史弥远另立远支宗室赵贵诚，即宋理宗。", consorts:[{name:"恭淑皇后韩氏",rank:"皇后",children:["赵埈·兖冲惠王","赵坦·邠冲温王"]},{name:"恭圣仁烈皇后杨氏",rank:"皇后",children:["赵增·郢冲英王","赵埛·华冲穆王"]},{name:"其他后妃",rank:"据《宋史》简录",children:["多名皇子均早夭","宗室嗣子赵竑"]}], dramas:[{title:"射雕英雄传",year:"多版",note:"故事开端处于宁宗庆元年间"},{title:"神雕侠侣",year:"多版",note:"虚构故事跨越南宋中期"}] },
-        zhaoxilu: { id:"zhaoxilu", name:"赵希瓐", temple:"追封荣王", era:"太祖后裔", reign:"？—1217", type:"branch", father:"赵师意（赵德昭后裔）", mother:"不详", succession:"其子赵与莒被拥立为帝", summary:"太祖次子赵德昭后裔，官至山阴县尉。其子赵与莒出身远支宗室，后被史弥远拥立为宋理宗。", consorts:[{name:"全氏",rank:"理宗、赵与芮生母",children:["赵与莒·宋理宗","赵与芮·嗣荣王"]}], dramas:[{title:"神雕侠侣",year:"多版",note:"时代背景与理宗朝相交"}] },
-        lizong: { id:"lizong", name:"赵昀", temple:"宋理宗", era:"宝庆·绍定·端平·嘉熙·淳祐·宝祐·开庆·景定", reign:"1224—1264", type:"emperor", father:"生父赵希瓐；名义上入嗣宁宗", mother:"慈宪夫人全氏", succession:"远支宗室被史弥远拥立", summary:"原名赵与莒，是太祖赵德昭后裔。宁宗死后越过原定继承人赵竑即位，亲子早夭，后来立侄赵禥为皇子。", consorts:[{name:"谢道清",rank:"皇后、皇太后",children:["无存活亲生子"]},{name:"贾贵妃",rank:"贵妃",children:["周汉国公主"]},{name:"阎贵妃",rank:"贵妃",children:["赵缉·齐王，早夭"]}], dramas:[{title:"神雕侠侣",year:"多版",note:"襄阳相关故事设置于理宗朝"}] },
-        zhaoyurui: { id:"zhaoyurui", name:"赵与芮", temple:"嗣荣王", era:"宗室", reign:"1207—1287", type:"branch", father:"赵希瓐", mother:"慈宪夫人全氏", succession:"其子入继理宗", summary:"宋理宗胞弟。理宗亲子早夭，其子赵禥被立为皇子、皇太子，后即宋度宗。", consorts:[{name:"隆国夫人黄氏",rank:"度宗生母",children:["赵禥·宋度宗"]},{name:"李氏",rank:"王妃",children:["宗室子女"]}], dramas:[{title:"神雕侠侣",year:"多版",note:"时代背景处于理宗、度宗之际"}] },
-        duzong: { id:"duzong", name:"赵禥", temple:"宋度宗", era:"咸淳", reign:"1264—1274", type:"emperor", father:"生父赵与芮；嗣父宋理宗", mother:"隆国夫人黄氏", succession:"理宗侄子，收为皇子后继位", summary:"宋理宗之侄，被收为皇子并立为太子。其死后，南宋在数年内连续出现三位幼主。", consorts:[{name:"全皇后",rank:"皇后",children:["赵㬎·宋恭帝"]},{name:"杨淑妃",rank:"淑妃，后为杨太后",children:["赵昰·宋端宗"]},{name:"俞修容",rank:"修容",children:["赵昺·宋末帝"]},{name:"其他后妃",rank:"据《宋史》简录",children:["赵焯等皇子","信安公主等皇女"]}], dramas:[{title:"再生缘",year:"2002",note:"虚构故事借用南宋末年背景"}] },
-        gongdi: { id:"gongdi", name:"赵㬎", temple:"宋恭帝", era:"德祐", reign:"1274—1276", type:"emperor", father:"赵禥", mother:"全皇后", succession:"度宗幼子继位", summary:"四岁即位。元军进逼临安后，谢太皇太后奉表投降；此后南宋流亡政权继续拥立其兄弟。", consorts:[{name:"幼年即位",rank:"无后妃",children:["无子女"]}], dramas:[{title:"南宋传奇之蟋蟀宰相",year:"2003",note:"以南宋末年贾似道时期为背景"}] },
-        duanzong: { id:"duanzong", name:"赵昰", temple:"宋端宗", era:"景炎", reign:"1276—1278", type:"emperor", father:"赵禥", mother:"杨淑妃", succession:"临安陷落后被拥立", summary:"宋恭帝降元后，南逃群臣拥立赵昰。流亡途中屡经海难，年仅十岁去世。", consorts:[{name:"幼年即位",rank:"无后妃",children:["无子女"]}], dramas:[{title:"南宋传奇之蟋蟀宰相",year:"2003",note:"时代延伸至南宋覆亡前夕"}] },
-        bing: { id:"bing", name:"赵昺", temple:"宋末帝", era:"祥兴", reign:"1278—1279", type:"emperor", father:"赵禥", mother:"俞修容", succession:"端宗死后被拥立", summary:"南宋最后一位皇帝。崖山海战失败后，陆秀夫负帝投海，宋朝终结。", consorts:[{name:"幼年即位",rank:"无后妃",children:["无子女"]}], dramas:[{title:"南宋传奇之蟋蟀宰相",year:"2003",note:"南宋末年题材作品"}] }
-      };
+      <section class="sources">
+        <p class="section-kicker">Sources</p>
+        <h2>参考与说明</h2>
+        <ul>
+          <li><a href="https://zh.wikisource.org/wiki/宋史" target="_blank" rel="noreferrer">《宋史》本纪、宗室世系表与宗室列传</a></li>
+          <li><a href="https://ygx.sxu.edu.cn/portals/16s" target="_blank" rel="noreferrer">山西大学云冈学·宋代历史纪年</a></li>
+          <li><a href="https://www.cssn.cn/lsx/lsx_zgs/202303/t20230320_5614268.shtml" target="_blank"
+              rel="noreferrer">中国社会科学网·从南宋帝位传承看梦境的作用</a></li>
+          <li><a href="https://www.dpm.org.cn/journal_detail/113410.html" target="_blank"
+              rel="noreferrer">故宫博物院·富有个性的大宋天子</a></li>
+        </ul>
+        <p>影视作品只用于建立观剧索引，不作为史实依据；点击作品卡片会打开资料搜索。</p>
+      </section>
+    </main>
+    <footer class="footer">宋朝皇室族谱 · LXJ Blog · 资料会随考证继续补充</footer>
+  </div>
 
-      const graphNodes = [
-        {id:"taizu",x:280,y:55},{id:"taizong",x:560,y:175},{id:"zhenzong",x:560,y:295},
-        {id:"renzong",x:395,y:415},{id:"zhaoyunrang",x:735,y:415},{id:"yingzong",x:560,y:535},
-        {id:"shenzong",x:560,y:655},{id:"zhezong",x:405,y:775},{id:"huizong",x:715,y:775},
-        {id:"qinzong",x:600,y:895},{id:"gaozong",x:830,y:895},
-        {id:"zhaozicheng",x:260,y:1115},{id:"xiaozong",x:470,y:1235},{id:"guangzong",x:470,y:1355},
-        {id:"ningzong",x:470,y:1475},{id:"zhaoxilu",x:800,y:1475},{id:"lizong",x:650,y:1595},
-        {id:"zhaoyurui",x:900,y:1595},{id:"duzong",x:780,y:1715},{id:"gongdi",x:570,y:1835},
-        {id:"duanzong",x:780,y:1835},{id:"bing",x:990,y:1835}
-      ];
+  <script>
+    const people = {
+      taizu: { id: "taizu", name: "赵匡胤", temple: "宋太祖", era: "建隆·乾德·开宝", reign: "960—976", type: "emperor", father: "赵弘殷", mother: "昭宪太后杜氏", succession: "陈桥兵变后建立宋朝", summary: "北宋开国皇帝。其死后，皇位没有传给儿子，而是转给弟弟赵光义；南宋孝宗以后，帝位又回到太祖后裔。", consorts: [{ name: "孝惠皇后贺氏", rank: "元配，追册皇后", children: ["赵德昭·燕王", "秦国公主", "晋国公主"] }, { name: "孝明皇后王氏", rank: "继室皇后", children: ["三名子女均早夭"] }, { name: "生母失载", rank: "赵德芳生母，后世有王氏说", children: ["赵德芳·秦王"], note: "宋代官修史书未载赵德芳生母；现代学者据墓志等材料提出王皇后说。", uncertain: true }, { name: "孝章皇后宋氏", rank: "皇后", children: ["无可确认亲生子女"] }], dramas: [{ title: "大宋传奇之赵匡胤", year: "2015", note: "以开国与宋初政局为主线" }, { title: "问君能有几多愁", year: "2005", note: "涉及宋灭南唐与宋初宫廷" }] },
+      taizong: { id: "taizong", name: "赵光义", temple: "宋太宗", era: "太平兴国·雍熙·端拱·淳化·至道", reign: "976—997", type: "emperor", father: "赵弘殷", mother: "昭宪太后杜氏", succession: "兄终弟及", summary: "宋太祖之弟，原名赵匡义，后改光义、炅。皇位自此长期由太宗后裔承袭，直到南宋孝宗入继。", consorts: [{ name: "元德皇后李氏", rank: "追册皇后", children: ["赵恒·宋真宗", "赵元份·商王"] }, { name: "明德皇后李氏", rank: "皇后", children: ["抚育真宗"] }, { name: "其他后妃", rank: "据《宋史》简录", children: ["赵元佐·楚王", "赵元侃等诸王"] }], dramas: [{ title: "大宋宫词", year: "2021", note: "前段涉及太宗晚年与诸子继承" }] },
+      zhenzong: { id: "zhenzong", name: "赵恒", temple: "宋真宗", era: "咸平·景德·大中祥符·天禧·乾兴", reign: "997—1022", type: "emperor", father: "赵光义", mother: "元德皇后李氏", succession: "皇太子继位", summary: "在位前期与辽订立澶渊之盟，后期热衷天书封禅。其子赵祯即宋仁宗。", consorts: [{ name: "章穆皇后郭氏", rank: "皇后", children: ["赵祐·悼献太子"] }, { name: "章献明肃皇后刘氏", rank: "皇后、皇太后", children: ["无亲生子女，抚育赵祯"] }, { name: "章懿皇后李氏", rank: "宸妃，仁宗生母", children: ["赵祯·宋仁宗", "惠国公主"] }], dramas: [{ title: "大宋宫词", year: "2021", note: "真宗与刘娥为核心人物" }, { title: "清平乐", year: "2020", note: "开篇涉及仁宗身世与刘太后" }] },
+      renzong: { id: "renzong", name: "赵祯", temple: "宋仁宗", era: "天圣·明道·景祐·宝元·康定·庆历·皇祐·至和·嘉祐", reign: "1022—1063", type: "emperor", father: "赵恒", mother: "章懿皇后李氏（由刘太后抚育）", succession: "皇太子继位", summary: "在位四十二年，三名亲生皇子均早夭。晚年立宗室子赵宗实为皇子，即后来的宋英宗。", consorts: [{ name: "慈圣光献皇后曹氏", rank: "皇后", children: ["无亲生子女"] }, { name: "温成皇后张氏", rank: "贵妃，追册皇后", children: ["安寿公主", "宝和公主", "唐国公主"] }, { name: "昭节贵妃苗氏", rank: "贵妃", children: ["福康公主", "赵昕·雍王"] }, { name: "其他后妃", rank: "据《宋史》简录", children: ["赵昉·褒王", "赵曦·荆王", "诸位公主"] }], dramas: [{ title: "清平乐", year: "2020", note: "以仁宗朝宫廷与士大夫政治为主线" }, { title: "开封府", year: "2017", note: "以包拯故事串联仁宗朝" }] },
+      zhaoyunrang: { id: "zhaoyunrang", name: "赵允让", temple: "濮安懿王", era: "宗室", reign: "995—1059", type: "branch", father: "赵元份（太宗之孙）", mother: "不详", succession: "其子过继仁宗后即位", summary: "宋太宗曾孙，濮王。第十三子赵宗实被仁宗收养，后来即宋英宗；英宗即位后引发濮议。", consorts: [{ name: "仙游县君任氏", rank: "英宗生母", children: ["赵宗实·宋英宗"] }, { name: "濮王诸夫人", rank: "宗室家庭", children: ["赵允让共有多子，主图仅列入继者"] }], dramas: [{ title: "清平乐", year: "2020", note: "后段涉及宗室入继安排" }] },
+      yingzong: { id: "yingzong", name: "赵曙", temple: "宋英宗", era: "治平", reign: "1063—1067", type: "emperor", father: "生父赵允让；嗣父宋仁宗", mother: "仙游县君任氏", succession: "仁宗养子入继", summary: "原名赵宗实，是太宗后裔、濮王赵允让之子。仁宗无存活皇子，他以养子身份继位。", consorts: [{ name: "宣仁圣烈皇后高氏", rank: "皇后", children: ["赵顼·宋神宗", "赵颢·吴荣王", "赵颜·润王", "赵頵·益王", "宝安公主", "寿康公主"] }], dramas: [{ title: "清平乐", year: "2020", note: "结尾触及英宗入继" }] },
+      shenzong: { id: "shenzong", name: "赵顼", temple: "宋神宗", era: "熙宁·元丰", reign: "1067—1085", type: "emperor", father: "赵曙", mother: "宣仁圣烈皇后高氏", succession: "皇太子继位", summary: "任用王安石变法。其子哲宗继位时年幼，后来皇位又转给哲宗异母弟赵佶。", consorts: [{ name: "钦圣宪肃皇后向氏", rank: "皇后", children: ["无存活亲生子"] }, { name: "钦成皇后朱氏", rank: "德妃，追册皇后", children: ["赵煦·宋哲宗", "赵似·简王"] }, { name: "钦慈皇后陈氏", rank: "美人，追册皇后", children: ["赵佶·宋徽宗"] }, { name: "其他后妃", rank: "据《宋史》简录", children: ["多位皇子与公主"] }], dramas: [{ title: "新安家族", year: "2010", note: "故事背景涉及王安石变法时期" }] },
+      zhezong: { id: "zhezong", name: "赵煦", temple: "宋哲宗", era: "元祐·绍圣·元符", reign: "1085—1100", type: "emperor", father: "赵顼", mother: "钦成皇后朱氏", succession: "皇太子继位", summary: "幼年由高太皇太后临朝，亲政后转向绍述。无存活皇子，死后由异母弟赵佶继位。", consorts: [{ name: "昭慈圣献皇后孟氏", rank: "皇后，曾两度被废复位", children: ["洵美帝姬"] }, { name: "昭怀皇后刘氏", rank: "皇后", children: ["赵茂·献愍太子", "淑慎帝姬"] }], dramas: [{ title: "清平乐", year: "2020", note: "非主线人物，作为仁宗以后时代延伸" }] },
+      huizong: { id: "huizong", name: "赵佶", temple: "宋徽宗", era: "建中靖国·崇宁·大观·政和·重和·宣和", reign: "1100—1126", type: "emperor", father: "赵顼", mother: "钦慈皇后陈氏", succession: "哲宗无子，弟继兄位", summary: "艺术修养卓著，政治上任用蔡京等。金兵南下后传位赵桓，靖康之变中与钦宗一同被俘。", consorts: [{ name: "显恭皇后王氏", rank: "皇后", children: ["赵桓·宋钦宗", "荣德帝姬"] }, { name: "显肃皇后郑氏", rank: "皇后", children: ["多位皇女"] }, { name: "显仁皇后韦氏", rank: "贤妃，追册皇后", children: ["赵构·宋高宗"] }, { name: "其他后妃", rank: "据《宋史》简录", children: ["皇子、帝姬众多"] }], dramas: [{ title: "水浒传", year: "1998 / 2011", note: "以徽宗朝为时代背景" }, { title: "精忠岳飞", year: "2013", note: "开篇涉及靖康之变" }] },
+      qinzong: { id: "qinzong", name: "赵桓", temple: "宋钦宗", era: "靖康", reign: "1126—1127", type: "emperor", father: "赵佶", mother: "显恭皇后王氏", succession: "徽宗内禅", summary: "北宋末代皇帝。在位一年余，汴京陷落后与徽宗及大量宗室被金军北迁。", consorts: [{ name: "仁怀皇后朱氏", rank: "皇后", children: ["赵谌·皇太子", "柔嘉公主"] }, { name: "慎德妃朱氏", rank: "妃", children: ["皇子女，靖康后命运多舛"] }], dramas: [{ title: "精忠岳飞", year: "2013", note: "涉及靖康之变与高宗即位" }, { title: "大宋碑歌", year: "2005", note: "以北宋末年政局为背景" }] },
+      gaozong: { id: "gaozong", name: "赵构", temple: "宋高宗", era: "建炎·绍兴", reign: "1127—1162", type: "emperor", father: "赵佶", mother: "显仁皇后韦氏", succession: "靖康后在南京应天府即位", summary: "徽宗第九子，建立南宋。唯一亲生皇子赵旉早夭，后来从太祖赵德芳后裔中选养赵昚并传位。", consorts: [{ name: "宪节皇后邢氏", rank: "元配，追册皇后", children: ["无存活子女"] }, { name: "宪圣慈烈皇后吴氏", rank: "皇后", children: ["无亲生子，参与抚育养子"] }, { name: "潘贤妃", rank: "贤妃", children: ["赵旉·元懿太子"] }, { name: "张贤妃", rank: "贤妃", children: ["养育赵伯琮（后为孝宗）"] }], dramas: [{ title: "精忠岳飞", year: "2013", note: "高宗朝和战之争为重要主线" }, { title: "射雕英雄传", year: "多版", note: "虚构故事以南宋中期为背景" }] },
+      zhaozicheng: { id: "zhaozicheng", name: "赵子偁", temple: "秀安僖王", era: "太祖后裔", reign: "？—1144", type: "branch", father: "赵令譮（赵德芳后裔）", mother: "不详", succession: "其子被高宗收养后即位", summary: "宋太祖第四子赵德芳的后裔，宋孝宗生父。孝宗入继意味着帝位在约一百八十年后回到太祖后裔。", consorts: [{ name: "秀王夫人张氏", rank: "孝宗生母", children: ["赵伯琮·宋孝宗", "赵伯圭·崇王"] }], dramas: [{ title: "精忠岳飞", year: "2013", note: "时代与高宗择嗣相近" }] },
+      xiaozong: { id: "xiaozong", name: "赵昚", temple: "宋孝宗", era: "隆兴·乾道·淳熙", reign: "1162—1189", type: "emperor", father: "生父赵子偁；嗣父宋高宗", mother: "秀王夫人张氏", succession: "高宗养子受禅", summary: "太祖赵德芳后裔，原名赵伯琮，被高宗收养后即位。锐意北伐、整顿政务，是南宋较有作为的皇帝。", consorts: [{ name: "成穆皇后郭氏", rank: "原配，追册皇后", children: ["赵愭·庄文太子", "赵恺·魏惠宪王", "赵惇·宋光宗", "赵恪·邵悼肃王"] }, { name: "成恭皇后夏氏", rank: "皇后", children: ["无亲生子女"] }, { name: "成肃皇后谢氏", rank: "皇后", children: ["无亲生子女"] }], dramas: [{ title: "射雕英雄传", year: "多版", note: "故事开端设置于南宋宁宗年间，承接孝宗以后局势" }] },
+      guangzong: { id: "guangzong", name: "赵惇", temple: "宋光宗", era: "绍熙", reign: "1189—1194", type: "emperor", father: "赵昚", mother: "成穆皇后郭氏", succession: "皇太子受禅", summary: "受禅即位后与太上皇孝宗关系紧张，史称绍熙内禅前后的宫廷危机。", consorts: [{ name: "慈懿皇后李氏", rank: "皇后", children: ["赵扩·宋宁宗", "赵梃·保宁军节度使", "文安公主", "和政公主"] }], dramas: [{ title: "射雕英雄传", year: "多版", note: "时代背景紧接光宗、宁宗之际" }] },
+      ningzong: { id: "ningzong", name: "赵扩", temple: "宋宁宗", era: "庆元·嘉泰·开禧·嘉定", reign: "1194—1224", type: "emperor", father: "赵惇", mother: "慈懿皇后李氏", succession: "绍熙内禅后即位", summary: "亲生皇子均早夭，曾立宗室子赵竑为嗣。宁宗死后，史弥远另立远支宗室赵贵诚，即宋理宗。", consorts: [{ name: "恭淑皇后韩氏", rank: "皇后", children: ["赵埈·兖冲惠王", "赵坦·邠冲温王"] }, { name: "恭圣仁烈皇后杨氏", rank: "皇后", children: ["赵增·郢冲英王", "赵埛·华冲穆王"] }, { name: "其他后妃", rank: "据《宋史》简录", children: ["多名皇子均早夭", "宗室嗣子赵竑"] }], dramas: [{ title: "射雕英雄传", year: "多版", note: "故事开端处于宁宗庆元年间" }, { title: "神雕侠侣", year: "多版", note: "虚构故事跨越南宋中期" }] },
+      zhaoxilu: { id: "zhaoxilu", name: "赵希瓐", temple: "追封荣王", era: "太祖后裔", reign: "？—1217", type: "branch", father: "赵师意（赵德昭后裔）", mother: "不详", succession: "其子赵与莒被拥立为帝", summary: "太祖次子赵德昭后裔，官至山阴县尉。其子赵与莒出身远支宗室，后被史弥远拥立为宋理宗。", consorts: [{ name: "全氏", rank: "理宗、赵与芮生母", children: ["赵与莒·宋理宗", "赵与芮·嗣荣王"] }], dramas: [{ title: "神雕侠侣", year: "多版", note: "时代背景与理宗朝相交" }] },
+      lizong: { id: "lizong", name: "赵昀", temple: "宋理宗", era: "宝庆·绍定·端平·嘉熙·淳祐·宝祐·开庆·景定", reign: "1224—1264", type: "emperor", father: "生父赵希瓐；名义上入嗣宁宗", mother: "慈宪夫人全氏", succession: "远支宗室被史弥远拥立", summary: "原名赵与莒，是太祖赵德昭后裔。宁宗死后越过原定继承人赵竑即位，亲子早夭，后来立侄赵禥为皇子。", consorts: [{ name: "谢道清", rank: "皇后、皇太后", children: ["无存活亲生子"] }, { name: "贾贵妃", rank: "贵妃", children: ["周汉国公主"] }, { name: "阎贵妃", rank: "贵妃", children: ["赵缉·齐王，早夭"] }], dramas: [{ title: "神雕侠侣", year: "多版", note: "襄阳相关故事设置于理宗朝" }] },
+      zhaoyurui: { id: "zhaoyurui", name: "赵与芮", temple: "嗣荣王", era: "宗室", reign: "1207—1287", type: "branch", father: "赵希瓐", mother: "慈宪夫人全氏", succession: "其子入继理宗", summary: "宋理宗胞弟。理宗亲子早夭，其子赵禥被立为皇子、皇太子，后即宋度宗。", consorts: [{ name: "隆国夫人黄氏", rank: "度宗生母", children: ["赵禥·宋度宗"] }, { name: "李氏", rank: "王妃", children: ["宗室子女"] }], dramas: [{ title: "神雕侠侣", year: "多版", note: "时代背景处于理宗、度宗之际" }] },
+      duzong: { id: "duzong", name: "赵禥", temple: "宋度宗", era: "咸淳", reign: "1264—1274", type: "emperor", father: "生父赵与芮；嗣父宋理宗", mother: "隆国夫人黄氏", succession: "理宗侄子，收为皇子后继位", summary: "宋理宗之侄，被收为皇子并立为太子。其死后，南宋在数年内连续出现三位幼主。", consorts: [{ name: "全皇后", rank: "皇后", children: ["赵㬎·宋恭帝"] }, { name: "杨淑妃", rank: "淑妃，后为杨太后", children: ["赵昰·宋端宗"] }, { name: "俞修容", rank: "修容", children: ["赵昺·宋末帝"] }, { name: "其他后妃", rank: "据《宋史》简录", children: ["赵焯等皇子", "信安公主等皇女"] }], dramas: [{ title: "再生缘", year: "2002", note: "虚构故事借用南宋末年背景" }] },
+      gongdi: { id: "gongdi", name: "赵㬎", temple: "宋恭帝", era: "德祐", reign: "1274—1276", type: "emperor", father: "赵禥", mother: "全皇后", succession: "度宗幼子继位", summary: "四岁即位。元军进逼临安后，谢太皇太后奉表投降；此后南宋流亡政权继续拥立其兄弟。", consorts: [{ name: "幼年即位", rank: "无后妃", children: ["无子女"] }], dramas: [{ title: "南宋传奇之蟋蟀宰相", year: "2003", note: "以南宋末年贾似道时期为背景" }] },
+      duanzong: { id: "duanzong", name: "赵昰", temple: "宋端宗", era: "景炎", reign: "1276—1278", type: "emperor", father: "赵禥", mother: "杨淑妃", succession: "临安陷落后被拥立", summary: "宋恭帝降元后，南逃群臣拥立赵昰。流亡途中屡经海难，年仅十岁去世。", consorts: [{ name: "幼年即位", rank: "无后妃", children: ["无子女"] }], dramas: [{ title: "南宋传奇之蟋蟀宰相", year: "2003", note: "时代延伸至南宋覆亡前夕" }] },
+      bing: { id: "bing", name: "赵昺", temple: "宋末帝", era: "祥兴", reign: "1278—1279", type: "emperor", father: "赵禥", mother: "俞修容", succession: "端宗死后被拥立", summary: "南宋最后一位皇帝。崖山海战失败后，陆秀夫负帝投海，宋朝终结。", consorts: [{ name: "幼年即位", rank: "无后妃", children: ["无子女"] }], dramas: [{ title: "南宋传奇之蟋蟀宰相", year: "2003", note: "南宋末年题材作品" }] }
+    };
 
-      const graphEdges = [
-        {from:"taizu",to:"taizong",succession:true,sibling:true},{from:"taizong",to:"zhenzong",blood:true,succession:true},
-        {from:"zhenzong",to:"renzong",blood:true,succession:true},{from:"taizong",to:"zhaoyunrang",blood:true,long:true},
-        {from:"zhaoyunrang",to:"yingzong",blood:true},{from:"renzong",to:"yingzong",succession:true,adopted:true},
-        {from:"yingzong",to:"shenzong",blood:true,succession:true},{from:"shenzong",to:"zhezong",blood:true,succession:true},
-        {from:"shenzong",to:"huizong",blood:true},{from:"zhezong",to:"huizong",succession:true,sibling:true},
-        {from:"huizong",to:"qinzong",blood:true,succession:true},{from:"huizong",to:"gaozong",blood:true},
-        {from:"qinzong",to:"gaozong",succession:true,sibling:true},{from:"taizu",to:"zhaozicheng",blood:true,long:true},
-        {from:"zhaozicheng",to:"xiaozong",blood:true},{from:"gaozong",to:"xiaozong",succession:true,adopted:true,long:true},
-        {from:"xiaozong",to:"guangzong",blood:true,succession:true},{from:"guangzong",to:"ningzong",blood:true,succession:true},
-        {from:"taizu",to:"zhaoxilu",blood:true,long:true},{from:"zhaoxilu",to:"lizong",blood:true},
-        {from:"ningzong",to:"lizong",succession:true,adopted:true},{from:"zhaoxilu",to:"zhaoyurui",blood:true},
-        {from:"zhaoyurui",to:"duzong",blood:true},{from:"lizong",to:"duzong",succession:true,adopted:true},
-        {from:"duzong",to:"gongdi",blood:true,succession:true},{from:"duzong",to:"duanzong",blood:true},
-        {from:"duzong",to:"bing",blood:true},{from:"gongdi",to:"duanzong",succession:true,sibling:true},
-        {from:"duanzong",to:"bing",succession:true,sibling:true}
-      ];
+    const graphNodes = [
+      { id: "taizu", x: 280, y: 55 }, { id: "taizong", x: 560, y: 175 }, { id: "zhenzong", x: 560, y: 295 },
+      { id: "renzong", x: 395, y: 415 }, { id: "zhaoyunrang", x: 735, y: 415 }, { id: "yingzong", x: 560, y: 535 },
+      { id: "shenzong", x: 560, y: 655 }, { id: "zhezong", x: 405, y: 775 }, { id: "huizong", x: 715, y: 775 },
+      { id: "qinzong", x: 600, y: 895 }, { id: "gaozong", x: 830, y: 895 },
+      { id: "zhaozicheng", x: 260, y: 1115 }, { id: "xiaozong", x: 470, y: 1235 }, { id: "guangzong", x: 470, y: 1355 },
+      { id: "ningzong", x: 470, y: 1475 }, { id: "zhaoxilu", x: 800, y: 1475 }, { id: "lizong", x: 650, y: 1595 },
+      { id: "zhaoyurui", x: 900, y: 1595 }, { id: "duzong", x: 780, y: 1715 }, { id: "gongdi", x: 570, y: 1835 },
+      { id: "duanzong", x: 780, y: 1835 }, { id: "bing", x: 990, y: 1835 }
+    ];
 
-      const imperialChildLinks = {
-        taizu:{"赵德芳·秦王":"zhaozicheng"}, taizong:{"赵恒·宋真宗":"zhenzong"}, zhenzong:{"赵祯·宋仁宗":"renzong"},
-        zhaoyunrang:{"赵宗实·宋英宗":"yingzong"}, yingzong:{"赵顼·宋神宗":"shenzong"},
-        shenzong:{"赵煦·宋哲宗":"zhezong","赵佶·宋徽宗":"huizong"}, huizong:{"赵桓·宋钦宗":"qinzong","赵构·宋高宗":"gaozong"},
-        zhaozicheng:{"赵伯琮·宋孝宗":"xiaozong"}, xiaozong:{"赵惇·宋光宗":"guangzong"}, guangzong:{"赵扩·宋宁宗":"ningzong"},
-        zhaoxilu:{"赵与莒·宋理宗":"lizong","赵与芮·嗣荣王":"zhaoyurui"}, zhaoyurui:{"赵禥·宋度宗":"duzong"},
-        duzong:{"赵㬎·宋恭帝":"gongdi","赵昰·宋端宗":"duanzong","赵昺·宋末帝":"bing"}
-      };
+    const graphEdges = [
+      { from: "taizu", to: "taizong", succession: true, sibling: true }, { from: "taizong", to: "zhenzong", blood: true, succession: true },
+      { from: "zhenzong", to: "renzong", blood: true, succession: true }, { from: "taizong", to: "zhaoyunrang", blood: true, long: true },
+      { from: "zhaoyunrang", to: "yingzong", blood: true }, { from: "renzong", to: "yingzong", succession: true, adopted: true },
+      { from: "yingzong", to: "shenzong", blood: true, succession: true }, { from: "shenzong", to: "zhezong", blood: true, succession: true },
+      { from: "shenzong", to: "huizong", blood: true }, { from: "zhezong", to: "huizong", succession: true, sibling: true },
+      { from: "huizong", to: "qinzong", blood: true, succession: true }, { from: "huizong", to: "gaozong", blood: true },
+      { from: "qinzong", to: "gaozong", succession: true, sibling: true }, { from: "taizu", to: "zhaozicheng", blood: true, long: true },
+      { from: "zhaozicheng", to: "xiaozong", blood: true }, { from: "gaozong", to: "xiaozong", succession: true, adopted: true, long: true },
+      { from: "xiaozong", to: "guangzong", blood: true, succession: true }, { from: "guangzong", to: "ningzong", blood: true, succession: true },
+      { from: "taizu", to: "zhaoxilu", blood: true, long: true }, { from: "zhaoxilu", to: "lizong", blood: true },
+      { from: "ningzong", to: "lizong", succession: true, adopted: true }, { from: "zhaoxilu", to: "zhaoyurui", blood: true },
+      { from: "zhaoyurui", to: "duzong", blood: true }, { from: "lizong", to: "duzong", succession: true, adopted: true },
+      { from: "duzong", to: "gongdi", blood: true, succession: true }, { from: "duzong", to: "duanzong", blood: true },
+      { from: "duzong", to: "bing", blood: true }, { from: "gongdi", to: "duanzong", succession: true, sibling: true },
+      { from: "duanzong", to: "bing", succession: true, sibling: true }
+    ];
 
-      const svg = document.getElementById("family-tree");
-      const detailPanel = document.getElementById("detail-panel");
-      const familyView = document.getElementById("family-view");
-      const treeScroll = document.getElementById("tree-scroll");
-      const familyModeButton = document.getElementById("family-mode");
-      const dynastyModeButton = document.getElementById("dynasty-mode");
-      const viewTitle = document.getElementById("view-title");
-      const viewHint = document.getElementById("view-hint");
-      const nodeWidth = 158, nodeHeight = 72;
-      let selectedId = "taizu", viewMode = "dynasty", navigationTrail = ["taizu"];
+    const imperialChildLinks = {
+      taizu: { "赵德芳·秦王": "zhaozicheng" }, taizong: { "赵恒·宋真宗": "zhenzong" }, zhenzong: { "赵祯·宋仁宗": "renzong" },
+      zhaoyunrang: { "赵宗实·宋英宗": "yingzong" }, yingzong: { "赵顼·宋神宗": "shenzong" },
+      shenzong: { "赵煦·宋哲宗": "zhezong", "赵佶·宋徽宗": "huizong" }, huizong: { "赵桓·宋钦宗": "qinzong", "赵构·宋高宗": "gaozong" },
+      zhaozicheng: { "赵伯琮·宋孝宗": "xiaozong" }, xiaozong: { "赵惇·宋光宗": "guangzong" }, guangzong: { "赵扩·宋宁宗": "ningzong" },
+      zhaoxilu: { "赵与莒·宋理宗": "lizong", "赵与芮·嗣荣王": "zhaoyurui" }, zhaoyurui: { "赵禥·宋度宗": "duzong" },
+      duzong: { "赵㬎·宋恭帝": "gongdi", "赵昰·宋端宗": "duanzong", "赵昺·宋末帝": "bing" }
+    };
 
-      function nodeById(id){ return graphNodes.find(node => node.id === id); }
-      function createSvgElement(tag, attributes={}){ const el=document.createElementNS("http://www.w3.org/2000/svg",tag); Object.entries(attributes).forEach(([k,v])=>el.setAttribute(k,v)); return el; }
-      function edgePath(edge){
-        const from=nodeById(edge.from), to=nodeById(edge.to);
-        if(edge.sibling){ const sx=from.x+nodeWidth/2, sy=from.y+nodeHeight/2, ex=to.x-nodeWidth/2, ey=to.y+nodeHeight/2; return `M ${sx} ${sy} C ${Math.max(sx,ex)+80} ${sy}, ${Math.max(sx,ex)+80} ${ey}, ${ex} ${ey}`; }
-        if(edge.long){ const lane=edge.to==="zhaozicheng"?100:edge.to==="zhaoxilu"?1040:1010; return `M ${from.x} ${from.y+nodeHeight} C ${lane} ${from.y+140}, ${lane} ${to.y-110}, ${to.x} ${to.y}`; }
-        const sy=from.y+nodeHeight, ey=to.y, mid=sy+(ey-sy)/2; return `M ${from.x} ${sy} V ${mid} H ${to.x} V ${ey}`;
-      }
+    const reignDurations = {
+      taizu: "16年", taizong: "21年", zhenzong: "25年", renzong: "41年", yingzong: "4年",
+      shenzong: "18年", zhezong: "15年", huizong: "25年", qinzong: "1年", gaozong: "35年",
+      xiaozong: "27年", guangzong: "5年", ningzong: "30年", lizong: "40年", duzong: "10年",
+      gongdi: "2年", duanzong: "2年", bing: "1年"
+    };
 
-      function renderTree(){
-        svg.querySelectorAll(".generated").forEach(el=>el.remove());
-        const backdrop=createSvgElement("g",{class:"generated"});
-        backdrop.appendChild(createSvgElement("rect",{x:20,y:20,width:1060,height:970,rx:8,class:"era-band"}));
-        backdrop.appendChild(createSvgElement("rect",{x:20,y:1050,width:1060,height:850,rx:8,class:"era-band southern"}));
-        const north=createSvgElement("text",{x:58,y:62,class:"era-label"}); north.textContent="北宋 · 汴京"; backdrop.appendChild(north);
-        const south=createSvgElement("text",{x:58,y:1092,class:"era-label"}); south.textContent="南宋 · 临安"; backdrop.appendChild(south);
-        backdrop.appendChild(createSvgElement("line",{x1:35,y1:1020,x2:1065,y2:1020,class:"turning-line"}));
-        const turn=createSvgElement("text",{x:550,y:1010,class:"turning-label","text-anchor":"middle"}); turn.textContent="1127 · 靖康之变 / 建炎南渡"; backdrop.appendChild(turn);
-        svg.appendChild(backdrop);
+    const svg = document.getElementById("family-tree");
+    const detailPanel = document.getElementById("detail-panel");
+    const familyView = document.getElementById("family-view");
+    const treeScroll = document.getElementById("tree-scroll");
+    const familyModeButton = document.getElementById("family-mode");
+    const dynastyModeButton = document.getElementById("dynasty-mode");
+    const viewTitle = document.getElementById("view-title");
+    const viewHint = document.getElementById("view-hint");
+    const nodeWidth = 130, nodeHeight = 58;
+    let selectedId = "taizu", viewMode = "dynasty", navigationTrail = ["taizu"];
 
-        const edges=createSvgElement("g",{class:"generated"});
-        graphEdges.forEach(edge=>edges.appendChild(createSvgElement("path",{d:edgePath(edge),class:`tree-edge${edge.succession?" succession":""}${edge.adopted?" adopted":""}`,"data-from":edge.from,"data-to":edge.to})));
-        svg.appendChild(edges);
+    function nodeById(id) { return graphNodes.find(node => node.id === id); }
+    function createSvgElement(tag, attributes = {}) { const el = document.createElementNS("http://www.w3.org/2000/svg", tag); Object.entries(attributes).forEach(([k, v]) => el.setAttribute(k, v)); return el; }
+    function edgePath(edge) {
+      const from = nodeById(edge.from), to = nodeById(edge.to);
+      if (edge.sibling) { const sx = from.x + nodeWidth / 2, sy = from.y + nodeHeight / 2, ex = to.x - nodeWidth / 2, ey = to.y + nodeHeight / 2; return `M ${sx} ${sy} C ${Math.max(sx, ex) + 80} ${sy}, ${Math.max(sx, ex) + 80} ${ey}, ${ex} ${ey}`; }
+      if (edge.long) { const lane = edge.to === "zhaozicheng" ? 100 : edge.to === "zhaoxilu" ? 1040 : 1010; return `M ${from.x} ${from.y + nodeHeight} C ${lane} ${from.y + 140}, ${lane} ${to.y - 110}, ${to.x} ${to.y}`; }
+      const sy = from.y + nodeHeight, ey = to.y, mid = sy + (ey - sy) / 2; return `M ${from.x} ${sy} V ${mid} H ${to.x} V ${ey}`;
+    }
 
-        const labels=createSvgElement("g",{class:"generated"});
-        [[145,1090,"太祖赵德芳后裔"],[850,1450,"太祖赵德昭后裔"],[742,385,"太宗远支"]].forEach(([x,y,label])=>{ const t=createSvgElement("text",{x,y,class:"branch-caption"}); t.textContent=label; labels.appendChild(t); });
-        svg.appendChild(labels);
+    function renderTree() {
+      svg.querySelectorAll(".generated").forEach(el => el.remove());
+      const backdrop = createSvgElement("g", { class: "generated" });
+      backdrop.appendChild(createSvgElement("rect", { x: 20, y: 20, width: 1060, height: 970, rx: 8, class: "era-band" }));
+      backdrop.appendChild(createSvgElement("rect", { x: 20, y: 1050, width: 1060, height: 850, rx: 8, class: "era-band southern" }));
+      const north = createSvgElement("text", { x: 58, y: 62, class: "era-label" }); north.textContent = "北宋 · 汴京"; backdrop.appendChild(north);
+      const south = createSvgElement("text", { x: 58, y: 1092, class: "era-label" }); south.textContent = "南宋 · 临安"; backdrop.appendChild(south);
+      backdrop.appendChild(createSvgElement("line", { x1: 35, y1: 1020, x2: 1065, y2: 1020, class: "turning-line" }));
+      const turn = createSvgElement("text", { x: 550, y: 1010, class: "turning-label", "text-anchor": "middle" }); turn.textContent = "1127 · 靖康之变 / 建炎南渡"; backdrop.appendChild(turn);
+      svg.appendChild(backdrop);
 
-        const nodes=createSvgElement("g",{class:"generated"});
-        graphNodes.forEach(node=>{ const person=people[node.id], g=createSvgElement("g",{class:`tree-node ${person.type}${selectedId===node.id?" is-selected":""}`,transform:`translate(${node.x-nodeWidth/2} ${node.y})`,role:"button",tabindex:"0","aria-label":`${person.temple}${person.name}，点击查看详情`,"data-id":node.id});
-          g.appendChild(createSvgElement("rect",{width:nodeWidth,height:nodeHeight,rx:2}));
-          const name=createSvgElement("text",{x:nodeWidth/2,y:29,class:"node-name"}); name.textContent=person.name; g.appendChild(name);
-          const meta=createSvgElement("text",{x:nodeWidth/2,y:52,class:"node-meta"}); meta.textContent=`${person.temple} · ${person.era.split("·")[0]}`; g.appendChild(meta);
-          g.addEventListener("click",()=>selectPerson(node.id)); g.addEventListener("keydown",event=>{ if(event.key==="Enter"||event.key===" "){event.preventDefault();selectPerson(node.id);} }); nodes.appendChild(g);
-        }); svg.appendChild(nodes); highlightRelated();
-      }
-      function highlightRelated(){ svg.querySelectorAll(".tree-edge").forEach(edge=>edge.classList.toggle("is-related",edge.dataset.from===selectedId||edge.dataset.to===selectedId)); }
-      function dramaSearchUrl(title){ return `https://search.douban.com/movie/subject_search?search_text=${encodeURIComponent(title)}`; }
+      const edges = createSvgElement("g", { class: "generated" });
+      graphEdges.forEach(edge => edges.appendChild(createSvgElement("path", { d: edgePath(edge), class: `tree-edge${edge.succession ? " succession" : ""}${edge.adopted ? " adopted" : ""}`, "data-from": edge.from, "data-to": edge.to })));
+      svg.appendChild(edges);
 
-      function renderFamilyMap(id){
-        const person=people[id], links=imperialChildLinks[id]||{};
-        const path=navigationTrail.map((trailId,index)=>`${index?'<span class="family-path-separator">/</span>':""}<button type="button" data-trail-index="${index}" ${index===navigationTrail.length-1?'aria-current="page"':""}>${people[trailId].name}</button>`).join("");
-        const branches=person.consorts.map(consort=>`<section class="mother-branch"><div class="mother-card"><strong>${consort.name}</strong><span>${consort.rank}</span></div><ul class="family-children">${consort.children.map(child=>{ const target=links[child]; return target?`<li class="family-child is-emperor"><button class="imperial-child-link" type="button" data-emperor-id="${target}"><span class="imperial-child-name">${child}</span><span class="imperial-child-meta">继续查看这一支</span></button></li>`:`<li class="family-child">${child}</li>`; }).join("")}</ul></section>`).join("");
-        familyView.innerHTML=`<div class="family-root"><nav class="family-path" aria-label="当前人物路径"><span class="family-path-label">人物路径</span>${path}</nav><div class="family-emperor"><strong>${person.name}</strong><small>${person.temple} · ${person.era}</small></div><div class="mother-branches" style="--branch-count:${Math.max(1,person.consorts.length)}">${branches}</div><p class="family-note">本视图优先列出与继承相关的后妃和子女，不等同于完整宗室玉牒；收养入继者会同时保留生父与嗣父信息。</p></div>`;
-        familyView.querySelectorAll("[data-emperor-id]").forEach(button=>button.addEventListener("click",()=>navigateToChild(button.dataset.emperorId)));
-        familyView.querySelectorAll("[data-trail-index]").forEach(button=>button.addEventListener("click",()=>navigateToTrail(Number(button.dataset.trailIndex))));
-        requestAnimationFrame(()=>{familyView.scrollLeft=Math.max(0,(familyView.scrollWidth-familyView.clientWidth)/2);});
-        viewTitle.textContent=`${person.name}·家庭与继承近支`;
-      }
+      const labels = createSvgElement("g", { class: "generated" });
+      [[145, 1090, "太祖赵德芳后裔"], [850, 1450, "太祖赵德昭后裔"], [742, 385, "太宗远支"]].forEach(([x, y, label]) => { const t = createSvgElement("text", { x, y, class: "branch-caption" }); t.textContent = label; labels.appendChild(t); });
+      svg.appendChild(labels);
 
-      function renderDetail(id){
-        const person=people[id];
-        const consorts=person.consorts.map(item=>`<div class="consort-group"><div class="consort-name"><strong>${item.name}</strong><span class="consort-rank">${item.rank}</span></div><ul class="children-list">${item.children.map(child=>`<li>${child}</li>`).join("")}</ul>${item.note?`<p class="${item.uncertain?"uncertainty":"consort-note"}">${item.uncertain?"存疑：":""}${item.note}</p>`:""}</div>`).join("");
-        const dramas=person.dramas.length?person.dramas.map(drama=>`<a class="drama-card" href="${dramaSearchUrl(drama.title)}" target="_blank" rel="noreferrer"><span class="drama-title"><strong>《${drama.title}》</strong><span class="drama-year">${drama.year}</span></span><span class="drama-note">${drama.note}</span></a>`).join(""):'<p class="consort-note">暂未收录代表作品。</p>';
-        detailPanel.innerHTML=`<div class="detail-hero"><div class="detail-title-row"><div><p class="detail-kicker">${person.temple}</p><h2 class="detail-title">${person.name}</h2><p class="detail-reign">${person.era} · ${person.reign}</p></div><span class="seal" aria-hidden="true">${person.era.slice(0,2)}<br>之印</span></div><p class="detail-summary">${person.summary}</p></div><div class="detail-body"><div class="facts"><div class="fact"><span class="fact-label">父亲 / 嗣父</span><span class="fact-value">${person.father}</span></div><div class="fact"><span class="fact-label">母亲</span><span class="fact-value">${person.mother}</span></div><div class="fact"><span class="fact-label">年号 / 身份</span><span class="fact-value">${person.era}</span></div><div class="fact"><span class="fact-label">皇位路径</span><span class="fact-value">${person.succession}</span></div></div><section class="detail-section"><h3>后妃与继承近支</h3>${consorts}</section><section class="detail-section"><h3>相关电视剧</h3><div class="drama-list">${dramas}</div></section></div>`;
-      }
-      function setViewMode(mode){ viewMode=mode; const family=mode==="family"; familyView.hidden=!family; treeScroll.hidden=family; familyModeButton.setAttribute("aria-pressed",String(family)); dynastyModeButton.setAttribute("aria-pressed",String(!family)); if(family){renderFamilyMap(selectedId);viewHint.textContent="可沿高亮子女继续进入下一代";}else{viewTitle.textContent="两宋帝系与皇位路线";viewHint.textContent="点击人物查看详情；黛青虚线表示收养入继";} }
-      function updateSelected(id){ selectedId=id; svg.querySelectorAll(".tree-node").forEach(node=>node.classList.toggle("is-selected",node.dataset.id===id)); highlightRelated(); renderDetail(id); if(viewMode==="family")renderFamilyMap(id); }
-      function selectPerson(id){ navigationTrail=[id]; updateSelected(id); if(window.innerWidth<=1080)detailPanel.scrollIntoView({behavior:"smooth",block:"start"}); }
-      function navigateToChild(id){ navigationTrail.push(id); selectedId=id; renderDetail(id); renderFamilyMap(id); }
-      function navigateToTrail(index){ navigationTrail=navigationTrail.slice(0,index+1); selectedId=navigationTrail[index]; renderDetail(selectedId); renderFamilyMap(selectedId); }
-      familyModeButton.addEventListener("click",()=>setViewMode("family"));
-      dynastyModeButton.addEventListener("click",()=>setViewMode("dynasty"));
-      renderTree(); renderDetail(selectedId);
-    </script>
-  </body>
+      const nodes = createSvgElement("g", { class: "generated" });
+      graphNodes.forEach(node => {
+        const person = people[node.id], g = createSvgElement("g", { class: `tree-node ${person.type}${selectedId === node.id ? " is-selected" : ""}`, transform: `translate(${node.x - nodeWidth / 2} ${node.y})`, role: "button", tabindex: "0", "aria-label": `${person.temple}${person.name}，点击查看详情`, "data-id": node.id });
+        g.appendChild(createSvgElement("rect", { width: nodeWidth, height: nodeHeight, rx: 2 }));
+        const name = createSvgElement("text", { x: nodeWidth / 2, y: 23, class: "node-name" }); name.textContent = person.name; g.appendChild(name);
+        const meta = createSvgElement("text", { x: nodeWidth / 2, y: 43, class: "node-meta" });
+        meta.textContent = reignDurations[node.id]
+          ? `${person.temple} · 在位${reignDurations[node.id]}`
+          : `${person.temple} · 宗室转支`;
+        g.appendChild(meta);
+        g.addEventListener("click", () => selectPerson(node.id)); g.addEventListener("keydown", event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); selectPerson(node.id); } }); nodes.appendChild(g);
+      }); svg.appendChild(nodes); highlightRelated();
+    }
+    function highlightRelated() { svg.querySelectorAll(".tree-edge").forEach(edge => edge.classList.toggle("is-related", edge.dataset.from === selectedId || edge.dataset.to === selectedId)); }
+    function dramaSearchUrl(title) { return `https://search.douban.com/movie/subject_search?search_text=${encodeURIComponent(title)}`; }
+
+    function renderFamilyMap(id) {
+      const person = people[id], links = imperialChildLinks[id] || {};
+      const path = navigationTrail.map((trailId, index) => `${index ? '<span class="family-path-separator">/</span>' : ""}<button type="button" data-trail-index="${index}" ${index === navigationTrail.length - 1 ? 'aria-current="page"' : ""}>${people[trailId].name}</button>`).join("");
+      const branches = person.consorts.map(consort => `<section class="mother-branch"><div class="mother-card"><strong>${consort.name}</strong><span>${consort.rank}</span></div><ul class="family-children">${consort.children.map(child => { const target = links[child]; return target ? `<li class="family-child is-emperor"><button class="imperial-child-link" type="button" data-emperor-id="${target}"><span class="imperial-child-name">${child}</span><span class="imperial-child-meta">继续查看这一支</span></button></li>` : `<li class="family-child">${child}</li>`; }).join("")}</ul></section>`).join("");
+      familyView.innerHTML = `<div class="family-root"><nav class="family-path" aria-label="当前人物路径"><span class="family-path-label">人物路径</span>${path}</nav><div class="family-emperor"><strong>${person.name}</strong><small>${person.temple} · ${person.era}</small></div><div class="mother-branches" style="--branch-count:${Math.max(1, person.consorts.length)}">${branches}</div><p class="family-note">本视图优先列出与继承相关的后妃和子女，不等同于完整宗室玉牒；收养入继者会同时保留生父与嗣父信息。</p></div>`;
+      familyView.querySelectorAll("[data-emperor-id]").forEach(button => button.addEventListener("click", () => navigateToChild(button.dataset.emperorId)));
+      familyView.querySelectorAll("[data-trail-index]").forEach(button => button.addEventListener("click", () => navigateToTrail(Number(button.dataset.trailIndex))));
+      requestAnimationFrame(() => { familyView.scrollLeft = Math.max(0, (familyView.scrollWidth - familyView.clientWidth) / 2); });
+      viewTitle.textContent = `${person.name}·家庭与继承近支`;
+    }
+
+    function renderDetail(id) {
+      const person = people[id];
+      const consorts = person.consorts.map(item => `<div class="consort-group"><div class="consort-name"><strong>${item.name}</strong><span class="consort-rank">${item.rank}</span></div><ul class="children-list">${item.children.map(child => `<li>${child}</li>`).join("")}</ul>${item.note ? `<p class="${item.uncertain ? "uncertainty" : "consort-note"}">${item.uncertain ? "存疑：" : ""}${item.note}</p>` : ""}</div>`).join("");
+      const dramas = person.dramas.length ? person.dramas.map(drama => `<a class="drama-card" href="${dramaSearchUrl(drama.title)}" target="_blank" rel="noreferrer"><span class="drama-title"><strong>《${drama.title}》</strong><span class="drama-year">${drama.year}</span></span><span class="drama-note">${drama.note}</span></a>`).join("") : '<p class="consort-note">暂未收录代表作品。</p>';
+      detailPanel.innerHTML = `<div class="detail-hero"><div class="detail-title-row"><div><p class="detail-kicker">${person.temple}</p><h2 class="detail-title">${person.name}</h2><p class="detail-reign">${person.era} · ${person.reign}</p></div><span class="seal" aria-hidden="true">${person.era.slice(0, 2)}<br>之印</span></div><p class="detail-summary">${person.summary}</p></div><div class="detail-body"><div class="facts"><div class="fact"><span class="fact-label">父亲 / 嗣父</span><span class="fact-value">${person.father}</span></div><div class="fact"><span class="fact-label">母亲</span><span class="fact-value">${person.mother}</span></div><div class="fact"><span class="fact-label">年号 / 身份</span><span class="fact-value">${person.era}</span></div><div class="fact"><span class="fact-label">皇位路径</span><span class="fact-value">${person.succession}</span></div></div><section class="detail-section"><h3>后妃与继承近支</h3>${consorts}</section><section class="detail-section"><h3>相关电视剧</h3><div class="drama-list">${dramas}</div></section></div>`;
+    }
+    function setViewMode(mode) { viewMode = mode; const family = mode === "family"; familyView.hidden = !family; treeScroll.hidden = family; familyModeButton.setAttribute("aria-pressed", String(family)); dynastyModeButton.setAttribute("aria-pressed", String(!family)); if (family) { renderFamilyMap(selectedId); viewHint.textContent = "可沿高亮子女继续进入下一代"; } else { viewTitle.textContent = "两宋帝系与皇位路线"; viewHint.textContent = "点击人物查看详情；黛青虚线表示收养入继"; } }
+    function updateSelected(id) { selectedId = id; svg.querySelectorAll(".tree-node").forEach(node => node.classList.toggle("is-selected", node.dataset.id === id)); highlightRelated(); renderDetail(id); if (viewMode === "family") renderFamilyMap(id); }
+    function selectPerson(id) { navigationTrail = [id]; updateSelected(id); if (window.innerWidth <= 1080) detailPanel.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    function navigateToChild(id) { navigationTrail.push(id); selectedId = id; renderDetail(id); renderFamilyMap(id); }
+    function navigateToTrail(index) { navigationTrail = navigationTrail.slice(0, index + 1); selectedId = navigationTrail[index]; renderDetail(selectedId); renderFamilyMap(selectedId); }
+    familyModeButton.addEventListener("click", () => setViewMode("family"));
+    dynastyModeButton.addEventListener("click", () => setViewMode("dynasty"));
+    renderTree(); renderDetail(selectedId);
+  </script>
+</body>
+
 </html>
