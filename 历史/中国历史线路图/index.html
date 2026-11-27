@@ -225,7 +225,7 @@
       .dialog-close { display: grid; flex: 0 0 auto; width: 42px; height: 42px; place-items: center; border: 1px solid var(--line); background: transparent; color: var(--paper-muted); cursor: pointer; }
       .dialog-close:hover { color: var(--gold-bright); border-color: var(--gold); }
       .detail-body { min-height: 0; padding: 22px 24px 26px; overflow-y: auto; overscroll-behavior-y: contain; }
-      .detail-body:focus-visible, .ruler-section:focus-visible { outline-offset: -3px; }
+      .detail-body:focus-visible, .detail-overview:focus-visible, .detail-panel:focus-visible { outline-offset: -3px; }
       .detail-years { margin-bottom: 16px; color: var(--gold); font-family: ui-sans-serif, system-ui, sans-serif; }
       .detail-summary { color: var(--paper-muted); }
       .detail-capital { margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--line); }
@@ -234,10 +234,22 @@
       .capital-list dt { color: var(--paper); font-weight: 600; }
       .capital-list dd, .capital-note { margin: 0; color: var(--paper-muted); font-size: 0.78rem; }
       .ruler-route > .capital-list { margin-bottom: 10px; padding: 6px 8px; border-left: 2px solid var(--line); background: #f5f7fa; }
+      .people-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+      .people-list li { padding: 12px 14px; border: 1px solid var(--line); border-radius: 4px; background: #f7f9fc; }
+      .people-name { display: block; color: var(--paper); font-size: 0.95rem; }
+      .people-period { display: block; margin-top: 2px; color: #245cad; font-size: 0.78rem; }
+      .people-event, .people-empty { margin: 6px 0 0; color: var(--paper-muted); font-size: 0.84rem; }
+      .people-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 16px; }
+      .people-group h4 { margin: 0 0 6px; color: #245cad; font-size: 0.84rem; }
+      .people-group .people-list { grid-template-columns: 1fr; }
       .detail-tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 20px 0 0; }
       .detail-tags span { padding: 5px 9px; border: 1px solid rgba(199, 164, 90, 0.25); color: var(--paper-muted); font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.78rem; }
-      .ruler-section { margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(199, 164, 90, 0.18); }
-      .ruler-heading { margin: 0 0 12px; color: var(--gold-bright); font-size: 1rem; font-weight: 600; }
+      .detail-content { min-width: 0; margin-top: 24px; }
+      .detail-tabs { display: flex; position: sticky; top: 0; z-index: 1; gap: 6px; padding: 4px 0; border-bottom: 1px solid var(--line); background: var(--panel); }
+      .detail-tab { min-height: 42px; padding: 5px 12px; border: 0; border-radius: 3px; background: transparent; color: var(--paper-muted); font-weight: 600; font-size: 0.85rem; cursor: pointer; }
+      .detail-tab[aria-selected="true"] { background: #edf3fb; color: #245cad; box-shadow: inset 0 -2px #2d67bd; }
+      .detail-tab:focus-visible { outline-offset: -2px; }
+      .detail-panel { padding-top: 14px; }
       .ruler-empty { margin: 0; padding: 14px; background: rgba(199, 164, 90, 0.06); color: var(--paper-muted); font-size: 0.86rem; }
       .ruler-routes { display: grid; gap: 14px; }
       .ruler-routes.is-parallel { grid-auto-flow: column; grid-auto-columns: minmax(152px, 1fr); align-items: start; overflow-x: auto; padding: 3px 2px 12px; }
@@ -521,8 +533,6 @@
       .detail-years { margin-bottom: 12px; color: #687589; font-weight: 600; }
       .detail-summary { color: #536277; }
       .detail-tags span { border: 0; border-radius: 3px; background: #edf3fb; color: #476485; }
-      .ruler-section { border-top-color: #dce2e9; }
-      .ruler-heading { color: #245cad; }
       .ruler-route-label { color: #6b7788; }
       .ruler-empty { background: #f5f7fa; color: #667489; }
       .ruler-node { border-color: #cdd7e4; border-radius: 4px; background: #f7f9fc; }
@@ -542,9 +552,11 @@
           padding: 0;
           overflow: hidden;
         }
-        .detail-overview, .ruler-section { padding: 20px 22px 24px; overflow-y: auto; overscroll-behavior-y: contain; }
+        .detail-overview, .detail-panel { padding: 20px 22px 24px; overflow-y: auto; overscroll-behavior-y: contain; }
         .detail-overview { background: #f7f9fc; border-right: 1px solid #dce2e9; }
-        .ruler-section { margin: 0; border-top: 0; }
+        .detail-content { display: flex; flex-direction: column; min-height: 0; margin: 0; }
+        .detail-tabs { position: static; flex-shrink: 0; padding: 8px 22px; }
+        .detail-panel { min-height: 0; padding-top: 16px; }
       }
 
       footer {
@@ -643,7 +655,7 @@
         <button class="dialog-close" id="dialog-close" type="button" aria-label="关闭详情" autofocus>×</button>
       </div>
       <div class="detail-body" id="detail-body" role="region" aria-label="朝代详情" tabindex="0">
-        <div class="detail-overview">
+        <div class="detail-overview" id="detail-overview" role="region" aria-label="朝代简介" tabindex="0">
           <p class="detail-years" id="detail-years"></p>
           <p class="detail-summary" id="detail-summary"></p>
           <section class="detail-capital" aria-labelledby="capital-title">
@@ -653,12 +665,18 @@
           <div class="detail-tags" id="detail-tags"></div>
           <a class="detail-link" id="detail-link" href="../明朝皇室族谱/index.html" hidden>进入明朝皇室族谱</a>
         </div>
-        <section class="ruler-section" id="ruler-section" aria-labelledby="ruler-title" tabindex="0">
-          <h4 class="ruler-heading" id="ruler-title">统治者线路图</h4>
-          <p class="ruler-note" id="ruler-note" hidden>无确切时长的条目按起止年份估算，复位分段计算。大事为选录。</p>
-          <p class="ruler-note" id="parallel-note" hidden>各政权分列，君主按本国即位顺序从上到下排列。窄屏可左右滑动查看其他政权。</p>
-          <div class="ruler-routes" id="ruler-routes"></div>
-        </section>
+        <div class="detail-content">
+          <div class="detail-tabs" id="detail-tabs" role="tablist" aria-label="浏览朝代详情">
+            <button class="detail-tab" id="ruler-tab" type="button" role="tab" aria-controls="ruler-section" aria-selected="true">统治者线路图</button>
+            <button class="detail-tab" id="people-tab" type="button" role="tab" aria-controls="detail-people" aria-selected="false" tabindex="-1">代表人物</button>
+          </div>
+          <section class="detail-panel" id="ruler-section" role="tabpanel" aria-labelledby="ruler-tab" tabindex="0">
+            <p class="ruler-note" id="ruler-note" hidden>无确切时长的条目按起止年份估算，复位分段计算。大事为选录。</p>
+            <p class="ruler-note" id="parallel-note" hidden>各政权分列，君主按本国即位顺序从上到下排列。窄屏可左右滑动查看其他政权。</p>
+            <div class="ruler-routes" id="ruler-routes"></div>
+          </section>
+          <section class="detail-panel" id="detail-people" role="tabpanel" aria-labelledby="people-tab" tabindex="0" hidden></section>
+        </div>
       </div>
     </dialog>
 
@@ -1305,6 +1323,207 @@
         "永历政权": [["肇庆（即位地）","广东肇庆市端州区一带"],["昆明（后期驻地之一）","云南昆明市中心城区一带"]],
       };
 
+      // 人物条目依次为姓名、所处统治时期、代表性事迹和可选的分组名称。
+      const notablePeopleById = {
+        "xia": [
+          ["伯益", "相传为禹在位时期", "据传统文献记载，曾协助禹治水。有关经历属于早期传说。"],
+          ["后羿", "相传为夏太康前后", "据传统文献记载，有穷氏首领后羿曾取代失国的太康掌权。相关叙述尚难考实。"],
+        ],
+        "shang": [
+          ["伊尹", "商汤至太甲时期（传统记载）", "辅佐商汤灭夏。传统文献另有伊尹放太甲于桐、后迎其复位的记载。"],
+          ["妇好", "商王武丁时期", "甲骨卜辞记载她主持祭祀并率军征伐。安阳殷墟妇好墓于1976年发掘。"],
+        ],
+        "western-zhou": [
+          ["周公旦", "周武王、周成王时期", "成王年幼时摄政，平定三监之乱。"],
+          ["召公奭", "周武王至周康王时期", "参与营建东都洛邑，辅佐周初王室。"],
+        ],
+        "spring-autumn": [
+          ["管仲", "齐桓公时期", "主持齐国改革，帮助齐桓公建立霸业。"],
+          ["伍子胥", "吴王阖闾、夫差时期", "辅佐吴王阖闾。前506年，吴军在柏举之战后攻入楚都郢。"],
+          ["孔子", "鲁定公、鲁哀公时期", "曾在鲁国任职，后周游列国并从事教育。"],
+        ],
+        "warring-states": [
+          ["商鞅", "秦孝公时期", "主持变法，改革户籍、军功爵和县制，使秦国国力增强。", "秦"],
+          ["白起", "秦昭襄王时期", "前260年率秦军在长平击败赵军。", "秦"],
+          ["孙膑", "齐威王时期", "辅佐田忌对魏作战，桂陵之战留下围魏救赵的典故。", "齐"],
+          ["屈原", "楚怀王、楚顷襄王时期", "曾在楚国任职。传统记载称他遭放逐后投汨罗江。", "楚"],
+          ["蔺相如", "赵惠文王时期", "《史记》记载他出使秦国并带和氏璧返回赵国，后世称完璧归赵。", "赵"],
+          ["李悝", "魏文侯时期", "在魏国推行变法，主张以平籴调节粮价。", "魏"],
+          ["申不害", "韩昭侯时期", "任韩国相，推行官僚管理改革。", "韩"],
+          ["乐毅", "燕昭王时期", "前284年率联军攻齐，攻入齐都临淄。", "燕"],
+        ],
+        "qin": [
+          ["李斯", "秦始皇、秦二世时期", "参与推行郡县制和统一文字。秦二世时期被杀。"],
+          ["蒙恬", "秦始皇时期", "北击匈奴，并主持修筑北方长城。"],
+          ["陈胜、吴广", "秦二世时期", "前209年在大泽乡起兵。"],
+        ],
+        "western-han": [
+          ["萧何", "汉高祖时期", "在楚汉战争中留守关中、筹措军需，西汉建立后担任丞相。"],
+          ["张骞", "汉武帝时期", "两次出使西域，推动汉朝与西域诸国往来。"],
+          ["卫青、霍去病", "汉武帝时期", "前119年分兵北进，在漠北之战中重创匈奴。"],
+          ["司马迁", "汉武帝时期", "任太史令，撰写《史记》。"],
+          ["霍光", "汉武帝末年至汉宣帝时期", "受命辅佐汉昭帝。昭帝死后参与废刘贺、立汉宣帝。"],
+        ],
+        "xin": [
+          ["刘秀", "王莽末年、东汉光武帝时期", "23年参加昆阳之战击败新军，后于25年建立东汉。"],
+          ["王凤", "王莽末年", "绿林军首领之一，与王匡等起兵反新。"],
+        ],
+        "eastern-han": [
+          ["班超", "汉明帝至汉和帝时期", "73年出使西域，后任西域都护。"],
+          ["蔡伦", "汉和帝时期", "105年向朝廷呈报改进的造纸方法。"],
+          ["张衡", "汉顺帝时期", "132年制成候风地动仪。"],
+          ["张角", "汉灵帝时期", "184年发动黄巾起义。"],
+        ],
+        "wei": [
+          ["司马懿", "曹魏文帝至齐王曹芳时期", "249年发动高平陵之变，夺取朝廷实际控制权。"],
+          ["钟会、邓艾", "魏元帝时期", "263年分路攻蜀。邓艾偷渡阴平后进逼成都，刘禅投降。"],
+        ],
+        "shu": [
+          ["诸葛亮", "刘备、刘禅时期", "辅佐刘备建立蜀汉，后以丞相身份主持北伐。"],
+          ["姜维", "后主刘禅时期", "多次率蜀军北伐曹魏，蜀亡后试图利用钟会兵变恢复蜀汉。"],
+        ],
+        "wu": [
+          ["陆逊", "吴大帝孙权时期", "222年统率吴军在夷陵击败刘备。"],
+          ["诸葛恪", "孙权晚年、孙亮时期", "252年主持东兴防御并击败魏军，次年在政变中被杀。"],
+        ],
+        "western-jin": [
+          ["杜预", "晋武帝时期", "参与280年的灭吴之战，率军攻取江陵等地。"],
+          ["张华", "晋武帝、晋惠帝时期", "曾参与谋划伐吴，后在八王之乱中遇害。"],
+        ],
+        "eastern-jin": [
+          ["王导", "晋元帝至晋成帝时期", "辅佐司马睿在建康建立东晋，协调南渡士族与江南士族。"],
+          ["谢安", "晋简文帝、晋孝武帝时期", "383年主持对前秦的防御部署，谢玄等在淝水击败秦军。"],
+          ["陶渊明", "东晋末年", "曾任彭泽县令，辞官归田后创作田园诗文。"],
+        ],
+        "sixteen": [
+          ["王猛", "前秦苻坚时期", "辅佐苻坚整顿吏治，并主持灭前燕的战争。"],
+          ["鸠摩罗什", "后秦姚兴时期", "由后秦迎至长安，主持翻译多部佛教经典。"],
+        ],
+        "liu-song": [
+          ["檀道济", "刘宋武帝至文帝时期", "参加北伐，粮尽退兵时以计迷惑北魏追军。"],
+          ["祖冲之", "刘宋后期至南齐", "推算圆周率，并在刘宋时编成《大明历》。"],
+        ],
+        "southern-qi": [
+          ["谢朓", "齐武帝至齐明帝时期", "参与永明诗坛的声律探索，曾出任宣城太守。"],
+          ["沈约", "南齐至梁武帝时期", "参与永明体诗歌创作，撰写《宋书》。"],
+        ],
+        "liang": [
+          ["陶弘景", "南齐至梁武帝时期", "隐居茅山，整理本草和道教典籍。《本草经集注》是其代表作。"],
+          ["韦叡", "梁武帝时期", "在钟离之战中与曹景宗等击败北魏军。"],
+        ],
+        "chen": [
+          ["吴明彻", "陈宣帝时期", "573年率军北伐北齐，攻取寿阳等地。"],
+          ["徐陵", "陈武帝至陈宣帝时期", "长期从事朝廷文书、外交与文学创作，是南朝骈文名家。"],
+        ],
+        "northern-wei": [
+          ["崔浩", "北魏明元帝、太武帝时期", "参与北魏统一北方的谋划，后因国史案获罪被杀。"],
+          ["冯太后", "北魏献文帝、孝文帝时期", "在孝文帝早期主持朝政，推动均田制等改革。"],
+          ["郦道元", "北魏后期", "撰写《水经注》，系统记录河流及沿岸地理。"],
+        ],
+        "east-west-wei": [
+          ["高欢", "东魏孝静帝时期", "拥立元善见，掌握东魏军政，在沙苑、玉壁等地与西魏争战。"],
+          ["宇文泰", "西魏文帝、废帝、恭帝时期", "主持西魏政务与军事改革，为北周建国奠定基础。"],
+        ],
+        "qi-zhou": [
+          ["斛律光", "北齐后主高纬时期", "多次率军抵御北周，后被高纬下令杀害。"],
+          ["杨坚", "北周静帝时期", "以辅政掌握朝廷，581年受禅建立隋朝。"],
+        ],
+        "sui": [
+          ["高颎", "隋文帝时期", "参与制定伐陈计划并协助指挥，推动隋统一南北。"],
+          ["杨素", "隋文帝至隋炀帝初年", "率水军参与平陈，后率军平定汉王杨谅之乱。"],
+        ],
+        "tang": [
+          ["魏征", "唐太宗时期", "担任谏官，以直言劝谏著称。"],
+          ["玄奘", "唐太宗、唐高宗时期", "赴印度求法，归国后主持译经，并口述《大唐西域记》。"],
+          ["郭子仪", "唐肃宗、唐代宗时期", "参与平定安史之乱，在收复长安、洛阳等战事中发挥作用。"],
+          ["杜甫", "唐玄宗至唐代宗时期", "亲历安史之乱，写下《春望》和“三吏”“三别”等作品。"],
+          ["韩愈", "唐宪宗时期", "上《论佛骨表》劝阻迎奉佛骨，被贬潮州。"],
+        ],
+        "wu-zhou": [
+          ["狄仁杰", "武则天时期", "任宰相并进谏，推动召回庐陵王李显。"],
+          ["张柬之", "武则天晚期", "705年参与发动神龙政变，促成李显复位。"],
+        ],
+        "five": [
+          ["冯道", "后唐、后晋、后汉至后周时期", "曾在多个中原政权任职。后唐任宰相时推动校刻《九经》。"],
+          ["王朴", "后周世宗柴荣时期", "撰《平边策》，为后周统一事业提出方略。"],
+        ],
+        "ten": [
+          ["徐温", "南吴杨渥、杨隆演至杨溥时期", "掌握南吴朝政，其养子徐知诰后来代吴建立南唐。"],
+          ["冯延巳", "南唐中主李璟时期", "曾任南唐宰相，也以《鹊踏枝》等词作闻名。"],
+        ],
+        "north-song": [
+          ["范仲淹", "宋仁宗时期", "1043年参与推动庆历新政。"],
+          ["王安石", "宋神宗时期", "1069年起主持变法，推行青苗法等新政。"],
+          ["司马光", "宋英宗至宋哲宗时期", "主持编修《资治通鉴》，于1084年进呈。"],
+          ["苏轼", "宋神宗、宋哲宗时期", "因乌台诗案被贬黄州，写下《赤壁赋》等名篇。"],
+        ],
+        "liao": [
+          ["萧绰", "辽景宗、辽圣宗时期", "辽圣宗即位后摄政，在澶渊之盟期间主持辽朝军政。"],
+          ["韩德让", "辽景宗、辽圣宗时期", "协助萧太后辅政，后获赐姓名耶律隆运。"],
+        ],
+        "western-xia": [
+          ["野利仁荣", "夏景宗李元昊时期", "参与创制西夏文字。"],
+          ["任得敬", "西夏仁宗李仁孝时期", "由宋朝地方官归附西夏，后任西夏国相，曾试图分割西夏领土自立。"],
+        ],
+        "south-song": [
+          ["岳飞", "宋高宗时期", "1140年北伐并在郾城击败金军，后被朝廷召回并遇害。"],
+          ["辛弃疾", "宋孝宗至宋宁宗时期", "南归后多次上书主张恢复北方，留下《美芹十论》和大量词作。"],
+          ["朱熹", "宋孝宗至宋宁宗时期", "重修白鹿洞书院，编著《四书章句集注》。"],
+          ["文天祥", "南宋末年", "临安失守后继续组织抗元，被俘后写下《过零丁洋》。"],
+        ],
+        "jin": [
+          ["完颜宗弼（金兀术）", "金太宗、金熙宗时期", "多次率军南下，曾在郾城与岳飞所部交战。"],
+          ["元好问", "金末至蒙古国时期", "金亡后搜集金代史料，并编选《中州集》。"],
+        ],
+        "west-liao": [
+          ["耶律普速完", "西辽仁宗耶律夷列去世后", "以承天太后的身份摄政。西辽留存史料较少。"],
+        ],
+        "mongol-yuan": [
+          ["耶律楚材", "成吉思汗、窝阔台时期", "参与蒙古国早期治理，并建议建立较稳定的赋税制度。"],
+          ["郭守敬", "元世祖忽必烈时期", "参与编制《授时历》，并在大都主持开通通惠河。"],
+          ["关汉卿", "元代前期（生卒年有争议）", "创作《窦娥冤》等杂剧。"],
+        ],
+        "ming": [
+          ["刘基", "朱元璋起兵至明太祖时期", "参与建明谋划，辅佐朱元璋处理军政事务。"],
+          ["郑和", "明成祖至明宣宗时期", "1405至1433年间先后七下西洋。"],
+          ["于谦", "明英宗、明代宗时期", "1449年土木之变后组织北京保卫战。"],
+          ["张居正", "明神宗万历初年", "任内阁首辅，推行考成法并推动一条鞭法。"],
+          ["袁崇焕", "明熹宗、明思宗时期", "参加辽东防务，在宁远之战中击退后金军。"],
+        ],
+        "north-yuan": [
+          ["扩廓帖木儿（王保保）", "元顺帝、北元昭宗时期", "北撤后继续统兵抵抗明军，1372年参与击退明军北征。"],
+        ],
+        "qing": [
+          ["多尔衮", "清世祖顺治初年", "以摄政王身份率清军入关，迁都北京。"],
+          ["施琅", "清圣祖康熙时期", "1683年率水师攻占澎湖，随后郑氏政权归降。"],
+          ["林则徐", "清宣宗道光时期", "1839年主持虎门销烟。"],
+          ["曾国藩", "清文宗咸丰、清穆宗同治时期", "组建湘军，其部于1864年攻破天京。"],
+          ["康有为、梁启超", "清德宗光绪时期", "1898年参与推动戊戌变法。"],
+        ],
+        "south-ming": [
+          ["史可法", "南明弘光时期", "1645年负责扬州防守，城破后遇害。"],
+          ["李定国", "南明永历时期", "率军抗清，1652年先后在桂林、衡州取得战果。"],
+          ["郑成功", "南明隆武至永历时期", "长期抗清，1661至1662年驱逐荷兰殖民者，取得台湾。"],
+        ],
+        "roc-mainland": [
+          ["孙中山", "清末民初；南京临时政府时期", "推动辛亥革命，并于1912年出任临时大总统。"],
+          ["蔡元培", "民国北京政府时期", "任北京大学校长，引入多元学术力量，推动学校改革。"],
+        ],
+        "prc": [
+          ["钱学森", "新中国成立后的科技建设时期", "1955年回国，参与创建和领导中国早期导弹、航天事业。"],
+          ["袁隆平", "20世纪后半叶", "与科研团队开展杂交水稻研究，推动其育种与推广。"],
+        ],
+        "roc-taiwan": [
+          ["李国鼎", "20世纪后半叶，台湾地区经济转型时期", "参与推动新竹科学园区设立及科技产业发展。"],
+          ["蒋经国", "1970年代末至1980年代", "任内于1987年解除台湾戒严。"],
+        ],
+      };
+
+      const noNotablePeopleMessage = {
+        paleolithic: "暂无可确定姓名、统治时期和事迹的个人记录。",
+        neolithic: "考古可以辨认聚落与文化，但暂无可确定姓名和事迹的人物记录。",
+      };
+
       const noRulerMessage = {
         paleolithic: "史前时代尚未形成可考的王朝统治者世系。",
         neolithic: "新石器时代包含多种区域文化，尚无可连续考证的王朝统治者世系。",
@@ -1381,13 +1600,17 @@
       const grid = document.getElementById("timeline-grid");
       const dialog = document.getElementById("detail-dialog");
       const detailBody = document.getElementById("detail-body");
+      const detailOverview = document.getElementById("detail-overview");
       const detailEra = document.getElementById("detail-era");
       const detailTitle = document.getElementById("detail-title");
       const detailYears = document.getElementById("detail-years");
       const detailSummary = document.getElementById("detail-summary");
       const detailCapital = document.getElementById("detail-capital");
+      const detailPeople = document.getElementById("detail-people");
       const detailTags = document.getElementById("detail-tags");
       const rulerSection = document.getElementById("ruler-section");
+      const detailTabs = document.getElementById("detail-tabs");
+      const tabButtons = [...detailTabs.querySelectorAll('[role="tab"]')];
       const rulerRoutesElement = document.getElementById("ruler-routes");
       const rulerNote = document.getElementById("ruler-note");
       const parallelNote = document.getElementById("parallel-note");
@@ -1431,6 +1654,87 @@
         note.textContent = capitalNotesById[item.id] || "各政权的主要都城及今址列在线路图的政权名称下方。";
         detailCapital.replaceChildren(note);
       }
+
+      function renderNotablePeople(item) {
+        const people = notablePeopleById[item.id];
+        if (!people) {
+          const note = document.createElement("p");
+          note.className = "people-empty";
+          note.textContent = noNotablePeopleMessage[item.id] || "暂未收录该时期的代表人物。";
+          detailPeople.replaceChildren(note);
+          return;
+        }
+
+        if (!people.some((person) => person[3])) {
+          detailPeople.replaceChildren(createPeopleList(people));
+          return;
+        }
+
+        const peopleByPolity = new Map();
+        people.forEach((person) => {
+          const polity = person[3] || "其他人物";
+          if (!peopleByPolity.has(polity)) peopleByPolity.set(polity, []);
+          peopleByPolity.get(polity).push(person);
+        });
+        const groups = document.createElement("div");
+        groups.className = "people-groups";
+        for (const [polity, members] of peopleByPolity) {
+          const section = document.createElement("section");
+          section.className = "people-group";
+          const heading = document.createElement("h4");
+          heading.textContent = polity;
+          section.append(heading, createPeopleList(members));
+          groups.appendChild(section);
+        }
+        detailPeople.replaceChildren(groups);
+      }
+
+      function createPeopleList(people) {
+        const list = document.createElement("ul");
+        list.className = "people-list";
+        list.setAttribute("role", "list");
+        people.forEach(([name, period, event]) => {
+          const row = document.createElement("li");
+          const nameElement = document.createElement("strong");
+          nameElement.className = "people-name";
+          nameElement.textContent = name;
+          const periodElement = document.createElement("span");
+          periodElement.className = "people-period";
+          periodElement.textContent = period;
+          const eventElement = document.createElement("p");
+          eventElement.className = "people-event";
+          eventElement.textContent = event;
+          row.append(nameElement, periodElement, eventElement);
+          list.appendChild(row);
+        });
+        return list;
+      }
+
+      function selectDetailTab(selectedTab) {
+        tabButtons.forEach((tab) => {
+          const selected = tab === selectedTab;
+          tab.setAttribute("aria-selected", String(selected));
+          tab.tabIndex = selected ? 0 : -1;
+          document.getElementById(tab.getAttribute("aria-controls")).hidden = !selected;
+        });
+      }
+
+      tabButtons.forEach((tab) => tab.addEventListener("click", () => selectDetailTab(tab)));
+      detailTabs.addEventListener("keydown", (event) => {
+        const current = tabButtons.indexOf(event.target);
+        if (current === -1) return;
+        let next;
+        switch (event.key) {
+          case "ArrowLeft": next = (current + tabButtons.length - 1) % tabButtons.length; break;
+          case "ArrowRight": next = (current + 1) % tabButtons.length; break;
+          case "Home": next = 0; break;
+          case "End": next = tabButtons.length - 1; break;
+          default: return;
+        }
+        event.preventDefault();
+        selectDetailTab(tabButtons[next]);
+        tabButtons[next].focus();
+      });
 
       function renderRulerRoutes(item) {
         const routes = rulerRoutes[item.id];
@@ -1557,6 +1861,7 @@
         detailYears.textContent = `${item.years} · 历时${getDuration(item)}`;
         detailSummary.textContent = item.summary;
         renderCapitalOverview(item);
+        renderNotablePeople(item);
         detailTags.replaceChildren(...item.tags.map((tag) => {
           const span = document.createElement("span");
           span.textContent = tag;
@@ -1569,9 +1874,12 @@
         } else {
           detailLink.hidden = true;
         }
+        selectDetailTab(tabButtons[0]);
         dialog.showModal();
         detailBody.scrollTop = 0;
+        detailOverview.scrollTop = 0;
         rulerSection.scrollTop = 0;
+        detailPeople.scrollTop = 0;
         rulerRoutesElement.scrollLeft = 0;
       }
 
